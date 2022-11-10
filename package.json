@@ -1,0 +1,19 @@
+{
+  "name": "statue-status",
+  "version": "1.0.0",
+  "description": "Cool Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TDG-Org/Statue-Status.git"
+  },
+  "author": "Nate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TDG-Org/Statue-Status/issues"
+  },
+  "homepage": "https://github.com/TDG-Org/Statue-Status#readme"
+}

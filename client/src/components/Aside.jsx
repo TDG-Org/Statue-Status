@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Aside = () => {
   return (
     <div>Aside</div>
-  )
-}
+  );
+};
 
-export default Aside
+export default Aside;

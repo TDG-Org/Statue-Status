@@ -1,3 +1,3 @@
 # Statue Status
 
-Project
+MERN Stack Project

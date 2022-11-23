@@ -9,15 +9,22 @@
 
 --------
 
-### Settings
-- User's can change their theme (light, dark)
+### Pages
 
---------
+-Profile
+  - User's can change pfp, bio, and link up social links.
+  - Statue will be displayed to the right (if they create one)
+  - Stats will display for that user (followers on statue status, etc.)
 
+- Settings
+  - User's can change their theme (light, dark)
+  -
 
-### About app
-- General info of app for intro
-- Usage and how to use
+- About Statue Status
+  - General info of app for intro
+  - Usage and how to use
+
+- 
 
 --------
 

@@ -3,13 +3,13 @@
 // Import 
 import Aside from "./Aside";
 import Footer from "./Footer";
-import Model from "./Model";
 import Nav from "./Nav";
+import User from "./User";
 
 // Export 
 export {
   Aside,
   Footer,
-  Model,
-  Nav
+  Nav,
+  User
 };

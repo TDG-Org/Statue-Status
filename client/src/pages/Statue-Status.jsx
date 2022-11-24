@@ -27,9 +27,17 @@ const PortfolioContainer = () => {
       return <Home currentPage={currentPage} handlePageChange={handlePageChange} />; 
     }
 
-    // if (currentPage === "MoreProjects") {
-    //   return <MoreProjects />;
-    // }
+    if (currentPage === "Discover") {
+      return <Discover />;
+    }
+
+    if (currentPage === "Profile") {
+      return <Profile />;
+    }
+
+    if (currentPage === "Settings") {
+      return <Settings />;
+    }
 
     if (currentPage === "About") {
       return <About currentPage={currentPage} handlePageChange={handlePageChange}/>;

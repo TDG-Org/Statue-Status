@@ -11,20 +11,30 @@
 
 ### Pages
 
--Profile
+*(And Aside layout)*
+
+- Home #1
+  - Shows off the charts
+  - Date and time on the top
+
+- Profile #2
   - User's can change pfp, bio, and link up social links.
   - Statue will be displayed to the right (if they create one)
   - Stats will display for that user (followers on statue status, etc.)
 
-- Settings
+- Discover #3
+
+
+- Settings #4
   - User's can change their theme (light, dark)
   -
 
-- About Statue Status
+- About #5
   - General info of app for intro
   - Usage and how to use
+  
 
-- 
+  (Loggout Button at the botton)
 
 --------
 

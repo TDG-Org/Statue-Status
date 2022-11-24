@@ -17,7 +17,7 @@ import {
   Settings
 } from "./index";
 
-const PortfolioContainer = () => {
+const StatueStatus = () => {
 
   const [currentPage, setCurrentPage] = useState("Home");
 
@@ -63,4 +63,4 @@ const PortfolioContainer = () => {
   );
 };
 
-export default PortfolioContainer;
+export default StatueStatus;

@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import {
   Aside,
   Footer,
-  Model,
-  Nav
+  Nav,
+  User
 } from "../components";
 
 // Pages 
@@ -23,22 +23,28 @@ const PortfolioContainer = () => {
 
   // check which page the user is currently on 
   const renderPage = () => {
+
+    // Render Home page 
     if (currentPage === "Home") {
       return <Home currentPage={currentPage} handlePageChange={handlePageChange} />; 
     }
 
+    // Render Discover page 
     if (currentPage === "Discover") {
       return <Discover />;
     }
 
+    // Render Profile page 
     if (currentPage === "Profile") {
       return <Profile />;
     }
 
+    // Render Settings page 
     if (currentPage === "Settings") {
       return <Settings />;
     }
 
+    // Render About page 
     if (currentPage === "About") {
       return <About currentPage={currentPage} handlePageChange={handlePageChange}/>;
     }

@@ -10,11 +10,11 @@ import {
 
 // Pages 
 import {
-  About,
-  Discover,
-  Home,
-  Profile,
-  Settings
+  AboutPage,
+  DiscoverPage,
+  HomePage,
+  ProfilePage,
+  SettingsPage
 } from "./index";
 
 const StatueStatus = () => {
@@ -26,27 +26,27 @@ const StatueStatus = () => {
 
     // Render Home page 
     if (currentPage === "Home") {
-      return <Home currentPage={currentPage} handlePageChange={handlePageChange} />; 
+      return <HomePage currentPage={currentPage} handlePageChange={handlePageChange} />; 
     }
 
     // Render Discover page 
     if (currentPage === "Discover") {
-      return <Discover />;
+      return <DiscoverPage />;
     }
 
     // Render Profile page 
     if (currentPage === "Profile") {
-      return <Profile />;
+      return <ProfilePage />;
     }
 
     // Render Settings page 
     if (currentPage === "Settings") {
-      return <Settings />;
+      return <SettingsPage />;
     }
 
     // Render About page 
     if (currentPage === "About") {
-      return <About currentPage={currentPage} handlePageChange={handlePageChange}/>;
+      return <AboutPage currentPage={currentPage} handlePageChange={handlePageChange}/>;
     }
   };
 

@@ -8,5 +8,8 @@ import Nav from "./Nav";
 
 // Export 
 export {
-  Aside, Footer, Model, Nav
+  Aside,
+  Footer,
+  Model,
+  Nav
 };

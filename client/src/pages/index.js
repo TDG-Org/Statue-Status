@@ -6,16 +6,16 @@ import DiscoverPage from "./Discover/DiscoverPage";
 import HomePage from "./Home/HomePage";
 import ProfilePage from "./Profile/ProfilePage";
 import SettingsPage from "./Settings/SettingsPage";
- 
-// Wrapper For Pages 
-// import StatueStatus from "./Statue-Status";
 
-// // Export
-// export {
-//   About,
-//   Discover,
-//   Home,
-//   Profile,
-//   Settings,
-//   StatueStatus
-// };
+// Wrapper For Pages 
+import StatueStatus from "./Statue-Status";
+
+// Export
+export {
+  AboutPage,
+  DiscoverPage,
+  HomePage,
+  ProfilePage,
+  SettingsPage,
+  StatueStatus
+};

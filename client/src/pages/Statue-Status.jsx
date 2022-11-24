@@ -3,9 +3,7 @@ import React, { useState } from "react";
 // Components
 import {
   Aside,
-  Footer,
-  Nav,
-  User
+  Footer
 } from "../components";
 
 // Pages 
@@ -54,7 +52,7 @@ const StatueStatus = () => {
 
   return (
     <>
-      {/* <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />  */}
+      <Aside currentPage={currentPage} handlePageChange={handlePageChange} />
 
       {renderPage()}
 

@@ -2,7 +2,11 @@ import React from "react";
 
 const User = () => {
   return (
-    <div>User</div>
+    <div>
+            <div className="user-avatar-section">
+
+</div>
+    </div>
   );
 };
 

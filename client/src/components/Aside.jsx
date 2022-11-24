@@ -2,7 +2,13 @@ import React from "react";
 
 const Aside = () => {
   return (
-    <div>Aside</div>
+    <aside className="aside-comp">
+
+      {/* User's Avatar and info Section  */}
+
+      {/* Navbar Section  */}
+
+    </aside>
   );
 };
 

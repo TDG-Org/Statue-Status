@@ -52,10 +52,13 @@ const StatueStatus = () => {
 
   return (
     <>
+      {/* Left Side (User Avatar and Navbar)  */}
       <Aside currentPage={currentPage} handlePageChange={handlePageChange} />
 
+      {/* Renders the Current/Selected Page  */}
       {renderPage()}
 
+      {/* Footer Section  */}
       <Footer currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
   );

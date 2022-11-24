@@ -12,6 +12,8 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   return (
+
+    // Statue Status Wrapper 
     <StatueStatus />
   );
 }

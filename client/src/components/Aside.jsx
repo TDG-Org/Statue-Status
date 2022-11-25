@@ -9,8 +9,10 @@ const Aside = () => {
     <aside className="aside-comp">
 
       {/* User's Avatar and info Section  */}
+      <User />
 
       {/* Navbar Section  */}
+      <Nav />
 
     </aside>
   );

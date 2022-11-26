@@ -6,7 +6,7 @@ const Footer = () => {
 
       {/* Logo  */}
       <div className="logo">
-        <h3>Statue Status</h3>
+        <h3><a href="#">Statue Status</a></h3>
       </div>
 
       {/* Links  */}

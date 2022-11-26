@@ -1,7 +1,12 @@
 // Main SASS file 
 
-// Font 
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&family=Roboto:wght@300;500;900&display=swap');
+// Fonts
+
+// Kanit 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+
+// Manrope 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap');
 
 // Var Colors 
 @import "./variables/variables.scss";
@@ -21,4 +26,12 @@ li {
 
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kanit', sans-serif;
+}
+
+p, span, em, li, a, i {
+  font-family: 'Manrope', sans-serif;
 }

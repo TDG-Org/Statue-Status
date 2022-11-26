@@ -1,5 +1,8 @@
 import React from "react";
 
+// Styles
+import "../sass/components/Nav.scss";
+
 const Nav = () => {
   return (
     <nav>

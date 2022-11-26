@@ -1,5 +1,8 @@
 import React from "react";
 
+// Styles
+import "../sass/components/User.scss";
+
 const User = () => {
   return (
     <div className="user-avatar-section">

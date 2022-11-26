@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import User from "./User";
 
 // Styles
-import "../sass/components/Aside";
+import "../sass/components/Aside.scss";
 
 const Aside = () => {
   return (

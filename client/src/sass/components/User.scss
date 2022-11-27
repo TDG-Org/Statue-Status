@@ -93,10 +93,35 @@
   color: $light-clr;
   text-decoration: none;
 
-  &:hover {
-    cursor: pointer;
-    color: $light-clr;
-    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+      color: $light-clr;
+      text-decoration: underline;
+    }
   }
+}
+
+.user-bio {
+  padding: 0rem 1.3rem;
+}
+
+.follow-count-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  padding: .8rem 0;
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: $mid-light-clr;
+  }
+
+  #userFollowersCount, #userFollowingCount {
+    color: $light-clr;
   }
 }

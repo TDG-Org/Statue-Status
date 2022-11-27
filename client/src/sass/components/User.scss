@@ -70,7 +70,7 @@
 
     &:hover {
       cursor: pointer;
-      filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.386));
+      filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.14));
     }
   }
 }
@@ -102,7 +102,7 @@
 
     &:hover {
       cursor: pointer;
-      color: $light-clr;
+      color: $second-clr;
       text-decoration: underline;
     }
   }
@@ -110,6 +110,15 @@
 
 .user-bio {
   padding: 0rem 1.3rem;
+}
+
+// Follow Count 
+
+.following-count {
+  cursor: pointer;
+  &:hover span, .following-count  {
+    color: $second-clr !important;
+  }
 }
 
 .follow-count-wrapper {
@@ -128,7 +137,7 @@
     color: $mid-light-clr;
   }
 
-  #userFollowersCount, #userFollowingCount {
-    color: $light-clr;
-  }
+  // #userFollowersCount, #userFollowingCount {
+  //   color: $light-clr; 
+  // }
 }

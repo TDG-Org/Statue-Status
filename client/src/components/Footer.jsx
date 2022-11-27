@@ -9,10 +9,22 @@ const Footer = () => {
 
       {/* Logo  */}
       <div className="logo">
-        <h3><a href="#">Statue Status</a></h3>
+        <h3><a href="#">&#169; 2022 TDG</a></h3>
       </div>
 
       {/* Links  */}
+      <ul className="footer-links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Discover</a>
+        </li>
+      </ul>
+
       <ul className="footer-links">
         <li>
           <a href="#">Extra</a>

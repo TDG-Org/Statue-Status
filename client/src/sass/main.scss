@@ -60,3 +60,16 @@ p, span, em, li, a, i {
   display: flex;
   flex-direction: row;
 }
+
+// Page Styles 
+
+.page {
+  padding: 2rem .8rem;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+// Media Queries 

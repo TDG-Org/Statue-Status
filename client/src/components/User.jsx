@@ -32,7 +32,7 @@ const User = () => {
       <div className="user-avatar-sect-bottom">
 
         {/* Username  */}
-        <h3 className="username"><a href="#" id="username">Nate</a></h3>
+        <h3 className="username"><span className="the-at">@</span><a href="#" id="username">Nate</a></h3>
         
         {/* User bio section  */}
         <p className="user-bio" id="userBio">

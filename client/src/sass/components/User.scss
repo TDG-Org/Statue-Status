@@ -88,6 +88,13 @@
 
 .username {
   margin: 1rem 0;
+  color: $mid-light-clr;
+  width: 100%;
+
+  .the-at {
+    color: $mid-light-clr;
+    margin-right: .2rem;
+  }
 
   a {
   color: $light-clr;

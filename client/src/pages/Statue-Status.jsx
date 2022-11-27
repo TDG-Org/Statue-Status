@@ -20,7 +20,7 @@ import "../sass/main.scss";
 
 const StatueStatus = () => {
 
-  const [currentPage, setCurrentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState("About");
 
   // check which page the user is currently on 
   const renderPage = () => {

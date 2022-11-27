@@ -12,6 +12,7 @@ const AboutPage = () => {
 
       <div className="container">
 
+        {/* intro  */}
         <div className="about-sect about-intro-sect" id="introduction">
           <h1>What is Statue Status?</h1>
           <div className="about-sect-content about-intro-sect-content">
@@ -22,11 +23,19 @@ const AboutPage = () => {
             </div>
         </div>
 
+        {/* Getting Started  */}
         <div className="about-sect">
           <h2>Lets Get Started</h2>
-
           <div className="about-sect-content">
             <p>You can begin browsing in the discover section or you can go to your profile and begin personalizing your look! Additionally, you can make your own Statue from there. But what is it exactly, and how can I use it?</p>
+            </div>
+        </div>
+
+        {/* What are Statues? */}
+        <div className="about-sect">
+          <h2>What are Statues?</h2>
+          <div className="about-sect-content">
+            <p></p>
             </div>
         </div>
 

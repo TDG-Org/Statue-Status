@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import "../sass/components/User.scss";
 
-import TempUserPfp from "../assets/imgs/brilliance.png";
+import { Bravery, Brilliance, Pancake } from "../assets/imgs";
 
 const User = () => {
   return (
@@ -16,14 +16,19 @@ const User = () => {
       <ul className="badge-sect">
         <li className="badge">
             <a href="#">
-              <img src={TempUserPfp} alt="" />
+              <img src={Brilliance} alt="" />
+          </a>
+        </li>
+        <li className="badge">
+            <a href="#">
+              <img src={Bravery} alt="" />
           </a>
         </li>
       </ul>
 
       {/* Avatar Section  */}
       <div className="avatar-sect">
-          <img src={TempUserPfp} alt="" />   
+          <img src={Pancake} alt="" />   
       </div>
 
       </div>

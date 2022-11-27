@@ -2,8 +2,40 @@
 
 .AboutPage {
   background-image: url("../../assets/svgs/aboutpage-background.svg");
+
+  h1 {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-sect {
+    width: 95%;
+    margin: 1.5rem 0;
+
+    .about-sect-content  {
+      justify-content: space-evenly;
+    }
+  }
 }
 
-.AboutPage h1 {
-  text-align: center;
+.about-intro-sect-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5%;
+
+  p {
+    width: 50%;
+  }
+
+  img {
+    width: 40%;
+  }
 }

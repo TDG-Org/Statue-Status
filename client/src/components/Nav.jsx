@@ -10,7 +10,7 @@ const Nav = () => {
       {/* Personal Section */}
       <ul className="nav-sect">
         <li>
-          <a href="#" className="ss-nav-link ss-active">Home</a>
+          <a href="#home" className="ss-nav-link ss-active">Home</a>
         </li>
         <li>
           <a href="#" className="ss-nav-link">Profile</a>

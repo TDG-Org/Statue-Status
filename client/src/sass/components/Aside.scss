@@ -1,5 +1,7 @@
 // Aside Style Sheet 
 
+@import "../variables.scss";
+
 .aside-comp {
-  background-color: pink;
+  background-color: $mid-dark-clr;
 }

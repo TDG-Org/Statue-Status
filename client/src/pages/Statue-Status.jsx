@@ -15,7 +15,11 @@ import {
   SettingsPage
 } from "./index";
 
+// Styles 
 import "../sass/main.scss";
+
+// Images/SVGs 
+// import bodyBg from "../assets/svgs"; 
 
 const StatueStatus = () => {
 

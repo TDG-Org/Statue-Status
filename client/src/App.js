@@ -7,6 +7,9 @@ import { StatueStatus } from "./pages";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+// Styles 
+import "./sass/main.scss";
+
 function App() {
   return (
 

@@ -77,6 +77,16 @@ p, span, em, li, a, i, div {
 
 // Box pallets 
 
+.pallet {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: $mid-dark-clr;
+  border: 1px solid rgba(43, 43, 43, 0.714);
+  border-radius: 8px;
+}
+
+// Alert 
+
 .ss-alert {
   background: linear-gradient(to right, red, purple);
   padding: .8rem;

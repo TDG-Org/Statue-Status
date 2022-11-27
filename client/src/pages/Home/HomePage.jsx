@@ -1,4 +1,5 @@
 import React from "react";
+import { format } from "date-fns";
 
 // Styles
 import "./HomePage.scss";
@@ -9,14 +10,17 @@ const HomePage = () => {
 
   return (
     <div className="HomePage page">
-      <h1>Wednesday, 12 2022</h1>
+      <h1 className="homepage-title">
+        {format(new Date(), "EEEE, d MMMM yyyy")}
+      </h1>
 
-      <div className="ss-alert">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corporis eaque alias consectetur voluptas. Iste at suscipit rem, aperiam laborum beatae eum placeat numquam doloremque illo nulla ducimus, magnam quasi.
+      <div className="pallet">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, aut? Aut, quo deserunt dignissimos ipsa atque accusantium unde voluptas nulla. Mollitia ipsum quidem, deserunt numquam nesciunt nulla molestias non nihil?
       </div>
 
-
-
+      <div className="pallet">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, aut? Aut, quo deserunt dignissimos ipsa atque accusantium unde voluptas nulla. Mollitia ipsum quidem, deserunt numquam nesciunt nulla molestias non nihil?
+      </div>
 
     </div>
   );

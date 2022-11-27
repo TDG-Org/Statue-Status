@@ -1,6 +1,7 @@
 import React from "react";
 
-// Styles 
+// Styles
+import "./ProfilePage.scss";
 
 const ProfilePage = () => {
   return (

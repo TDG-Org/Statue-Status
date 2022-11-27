@@ -1,6 +1,7 @@
 import React from "react";
 
-// Styles 
+// Styles
+import "./HomePage.scss";
 
 const HomePage = () => {
   return (

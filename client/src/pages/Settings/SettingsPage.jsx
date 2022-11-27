@@ -1,6 +1,7 @@
 import React from "react";
 
-// Styles 
+// Styles
+import "./SettingsPage.scss";
 
 const SettingsPage = () => {
   return (

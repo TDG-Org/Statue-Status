@@ -5,33 +5,37 @@ import "../sass/components/Nav.scss";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="nav-comp">
 
       {/* Personal Section */}
       <ul className="nav-sect">
         <li>
-          <a href="#">Home</a>
+          <a href="#" className="ss-nav-link">Home</a>
         </li>
         <li>
-          <a href="#">Profile</a>
+          <a href="#" className="ss-nav-link">Profile</a>
         </li>
         <li>
-          <a href="#">Discover</a>
+          <a href="#"
+          className="ss-nav-link">Discover</a>
         </li>
       </ul>
 
       <hr className="nav-divider" />
 
       {/* General Section  */}
-      <ul className="nav-sect">
+      <ul className="ss-nav-sect">
         <li>
-          <a href="#">Settings</a>
+          <a href="#"
+          className="ss-nav-link">Settings</a>
         </li>
         <li>
-          <a href="#">About Statue Status</a>
+          <a href="#"
+          className="ss-nav-link">About Statue Status</a>
         </li>
         <li>
-          <a href="#">Logout</a>
+          <a href="#"
+          className="ss-nav-link">Logout</a>
         </li>
       </ul>
 

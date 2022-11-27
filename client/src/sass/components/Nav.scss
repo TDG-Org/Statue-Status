@@ -1,0 +1,27 @@
+// Nav Section For Aside 
+
+// SCSS Variables 
+@import "../variables.scss";
+
+nav {
+  width: 100%;
+
+  ul {
+    text-align: center;
+    margin: 0;
+    padding: .5rem;
+
+    li {
+      margin: .5rem 0;
+
+      a {
+        color: $light-clr;
+
+        &:hover {
+          cursor: pointer;
+          color: $prime-clr;
+        }
+      }
+    }
+  }
+}

@@ -48,3 +48,10 @@ h1, h2, h3, h4, h5, h6 {
 p, span, em, li, a, i {
   font-family: 'Manrope', sans-serif;
 }
+
+// Core Statue Status Wrapper 
+
+.Statue-Status-Wrapper {
+  display: flex;
+  flex-direction: row;
+}

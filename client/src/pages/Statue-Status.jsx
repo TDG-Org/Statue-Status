@@ -15,6 +15,8 @@ import {
   SettingsPage
 } from "./index";
 
+import "../sass/main.scss";
+
 const StatueStatus = () => {
 
   const [currentPage, setCurrentPage] = useState("Home");
@@ -51,16 +53,22 @@ const StatueStatus = () => {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <>
+    <div className="Statue-Status-Wrapper">
       {/* Left Side (User Avatar and Navbar)  */}
       <Aside currentPage={currentPage} handlePageChange={handlePageChange} />
 
-      {/* Renders the Current/Selected Page  */}
-      {renderPage()}
+      <div className="container">
 
-      {/* Footer Section  */}
-      <Footer currentPage={currentPage} handlePageChange={handlePageChange} />
-    </>
+        {/* Renders the Current/Selected Page  */}
+        <div className="wrapper-page-sect">
+          {renderPage()}
+        </div>
+
+        {/* Footer Section  */}
+        <Footer currentPage={currentPage} handlePageChange={handlePageChange} />
+        
+      </div>
+    </div>
   );
 };
 

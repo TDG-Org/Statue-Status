@@ -12,16 +12,23 @@ nav {
     padding: .5rem;
 
     li {
-      margin: .5rem 0;
+      margin: .6rem 0;
 
-      a {
-        color: $light-clr;
+      .ss-nav-link {
+        color: $light-clr; 
 
         &:hover {
           cursor: pointer;
           color: $prime-clr;
         }
       }
+
     }
   }
+}
+
+
+.ss-nav-link .ss-active {
+  color: pink !important;
+  text-decoration: underline !important;
 }

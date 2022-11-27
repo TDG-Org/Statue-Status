@@ -75,4 +75,15 @@ p, span, em, li, a, i, div {
   background-size: cover;
 }
 
+// Box pallets 
+
+.ss-alert {
+  background: linear-gradient(to right, red, purple);
+  padding: .8rem;
+  border: 1px solid white !important;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+
 // Media Queries 

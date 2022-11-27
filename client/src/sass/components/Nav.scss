@@ -12,7 +12,7 @@ nav {
     padding: .5rem;
 
     li {
-      margin: .6rem 0;
+      margin: .75rem 0;
 
       .ss-nav-link {
         color: $light-clr; 
@@ -20,6 +20,7 @@ nav {
         &:hover {
           cursor: pointer;
           color: $prime-clr;
+          text-decoration: underline !important;
         }
       }
 
@@ -27,8 +28,12 @@ nav {
   }
 }
 
+// logout 
 
-.ss-nav-link .ss-active {
-  color: pink !important;
-  text-decoration: underline !important;
+#logoutBtn {
+  color: rgb(255, 134, 134);
+
+  &:hover {
+    color: red;
+  }
 }

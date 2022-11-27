@@ -21,7 +21,7 @@ const Nav = () => {
         </li>
       </ul>
 
-      <hr className="nav-divider" />
+      <hr className="aside-divider" />
 
       {/* General Section  */}
       <ul className="ss-nav-sect">
@@ -35,7 +35,7 @@ const Nav = () => {
         </li>
         <li>
           <a href="#"
-          className="ss-nav-link">Logout</a>
+          className="ss-nav-link" id="logoutBtn">Logout</a>
         </li>
       </ul>
 

@@ -76,9 +76,22 @@ p, span, em, li, a, i, div {
   position: relative;
 }
 
+.page-side-wrapper {
+height: auto;
+}
+
 // Page Styles 
 
 .page {
+  padding: 2rem .8rem;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.pagebg {
   padding: 2rem .8rem;
   min-height: 100vh;
   width: 100%;

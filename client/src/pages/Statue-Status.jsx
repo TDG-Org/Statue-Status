@@ -20,7 +20,7 @@ import "../sass/main.scss";
 
 const StatueStatus = () => {
 
-  const [currentPage, setCurrentPage] = useState("About");
+  const [currentPage, setCurrentPage] = useState("Home");
 
   // check which page the user is currently on 
   const renderPage = () => {
@@ -58,7 +58,7 @@ const StatueStatus = () => {
       {/* Left Side (User Avatar and Navbar)  */}
       <Aside currentPage={currentPage} handlePageChange={handlePageChange} />
 
-      <div className="container">
+      <div className="page-side-wrapper">
 
         {/* Renders the Current/Selected Page  */}
         <div className="wrapper-page-sect">

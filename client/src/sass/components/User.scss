@@ -1,0 +1,55 @@
+// User Section For Aside 
+
+// SCSS Variables 
+@import "../variables.scss";
+
+.user-avatar-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.user-avatar-sect-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.badge-sect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  max-width: 95px;
+  max-height: auto;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0; 
+
+  .badge {
+    width: 32px;
+    margin: 4px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0;
+    transition: all 200ms ease;
+
+    a {
+      img {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $accent-clr;
+
+      img {
+        filter: contrast(175%);
+      }
+    }
+  }
+}

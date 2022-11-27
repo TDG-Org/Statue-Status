@@ -3,6 +3,8 @@ import React from "react";
 // Styles
 import "../sass/components/User.scss";
 
+import TempUserPfp from "../assets/imgs/brilliance.png";
+
 const User = () => {
   return (
     <div className="user-avatar-section">
@@ -13,13 +15,15 @@ const User = () => {
       {/* badge section  */}
       <ul className="badge-sect">
         <li className="badge">
-
+            <a href="#">
+              <img src={TempUserPfp} alt="" />
+          </a>
         </li>
       </ul>
 
       {/* Avatar Section  */}
       <div className="avatar-sect">
-        <img src="" alt="" />   
+          <img src={TempUserPfp} alt="" />   
       </div>
 
       </div>

@@ -17,7 +17,7 @@ const AboutPage = () => {
           <h1>What is Statue Status?</h1>
           <div className="about-sect-content about-intro-sect-content">
             <p>
-            We compile data to show who the richest, most powerful, and most popular people in the world are right now. On the explore page, users may also view specific notable people or other users who have accounts here.
+            We compile data to show who the richest, most powerful, and most popular people in the world are right now. On the Discover page, users may also view specific notable people or other users who have accounts here.
             </p>
             <img src={Ranking} alt="ranking image" />
             </div>
@@ -35,7 +35,7 @@ const AboutPage = () => {
         <div className="about-sect">
           <h2>What are Statues?</h2>
           <div className="about-sect-content">
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum necessitatibus dolorum dignissimos aliquid assumenda, cupiditate est exercitationem inventore? Fugit architecto iste ex quos saepe facere quod eius maxime nihil et!</p>
             </div>
         </div>
 

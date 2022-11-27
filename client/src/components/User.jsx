@@ -3,6 +3,7 @@ import React from "react";
 // Styles
 import "../sass/components/User.scss";
 
+// Images/SVGs 
 import { Bravery, Brilliance, Pancake } from "../assets/imgs";
 
 const User = () => {
@@ -50,7 +51,7 @@ const User = () => {
           <p className="following-count"><span id="userFollowingCount">15k</span> Following</p>
         </div>
 
-        {/* Link  */}
+        {/* Links (Future)  */}
 
       </div>
 

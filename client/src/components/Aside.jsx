@@ -8,7 +8,7 @@ import User from "./User";
 import "../sass/components/Aside.scss";
 
 // Images/SVGs 
-// import TempUserPfp from "../assets/imgs";
+
 
 const Aside = () => {
   return (

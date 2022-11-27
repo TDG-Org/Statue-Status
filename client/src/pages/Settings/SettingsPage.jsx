@@ -5,7 +5,9 @@ import "./SettingsPage.scss";
 
 const SettingsPage = () => {
   return (
-    <div>SettingsPage</div>
+    <div className="SettingsPage page">
+      SettingsPage
+    </div>
   );
 };
 

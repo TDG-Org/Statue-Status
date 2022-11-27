@@ -5,7 +5,9 @@ import "./HomePage.scss";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div className="HomePage page">
+      HomePage
+    </div>
   );
 };
 

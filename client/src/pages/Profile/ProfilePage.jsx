@@ -5,7 +5,9 @@ import "./ProfilePage.scss";
 
 const ProfilePage = () => {
   return (
-    <div>ProfilePage</div>
+    <div className="ProfilePage page">
+      ProfilePage
+    </div>
   );
 };
 

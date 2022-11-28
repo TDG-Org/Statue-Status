@@ -6,6 +6,9 @@ import {
   Footer
 } from "../components";
 
+// Router
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
 // Pages 
 import {
   AboutPage,
@@ -53,6 +56,8 @@ const StatueStatus = () => {
 
   const handlePageChange = (page) => setCurrentPage(page);
 
+  const location = useLocation();
+
   return (
     <div className="Statue-Status-Wrapper">
       {/* Left Side (User Avatar and Navbar)  */}
@@ -62,7 +67,16 @@ const StatueStatus = () => {
 
         {/* Renders the Current/Selected Page  */}
         <div className="wrapper-page-sect">
-          {renderPage()}
+          {/* {renderPage()} */}
+          
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/discover" element={<DiscoverPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+
         </div>
 
         {/* Footer Section  */}

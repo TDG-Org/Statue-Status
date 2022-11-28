@@ -6,7 +6,8 @@
 .aside-comp {
   display: flex;
   background-color: $mid-dark-clr;
-  width: 45%;
+  width: 35%;
+  max-width: 425px;
   flex-direction: column;
   align-items: center;
   padding: 1.25rem 1rem;

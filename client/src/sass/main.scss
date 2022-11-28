@@ -73,11 +73,13 @@ p, span, em, li, a, i, div {
 .Statue-Status-Wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   position: relative;
 }
 
 .page-side-wrapper {
-height: auto;
+  height: auto;
+  width: 65%;
 }
 
 // Page Styles 

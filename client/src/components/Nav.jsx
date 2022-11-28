@@ -3,6 +3,9 @@ import React from "react";
 // Styles
 import "../sass/components/Nav.scss";
 
+// Link 
+import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
     <nav className="nav-comp">
@@ -10,14 +13,14 @@ const Nav = () => {
       {/* Personal Section */}
       <ul className="nav-sect">
         <li>
-          <a href="#home" className="ss-nav-link ss-active">Home</a>
+          <Link to="/" className="ss-nav-link ss-active">Home</Link>
         </li>
         <li>
-          <a href="#" className="ss-nav-link">Profile</a>
+          <Link to="/profile" className="ss-nav-link">Profile</Link>
         </li>
         <li>
-          <a href="#"
-          className="ss-nav-link">Discover</a>
+          <Link to="/discover"
+          className="ss-nav-link">Discover</Link>
         </li>
       </ul>
 
@@ -26,12 +29,12 @@ const Nav = () => {
       {/* General Section  */}
       <ul className="ss-nav-sect">
         <li>
-          <a href="#"
-          className="ss-nav-link">Settings</a>
+          <Link to="settings"
+          className="ss-nav-link">Settings</Link>
         </li>
         <li>
-          <a href="#"
-          className="ss-nav-link">About Statue Status</a>
+          <Link to="about"
+          className="ss-nav-link">About Statue Status</Link>
         </li>
         <li>
           <a href="#"

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
 
-      <div className="logo">
+      <div className='logo'>
         <h3><a href="#">&#169; 2022 TDG</a></h3>
       </div>
 

@@ -1,5 +1,7 @@
 // About Page SASS file 
 
+@import "../../sass/variables.scss";
+
 .AboutPage {
   background-image: url("../../assets/svgs/aboutpage-background.svg");
 
@@ -19,7 +21,17 @@
     margin: 1.5rem 0;
 
     .about-sect-content  {
+      border-radius: 8px;
+      padding: 1rem;
       justify-content: space-evenly;
+      border: 1px solid rgba(128, 128, 128, 0.181);
+      background-color: $mid-dark-clr;
+
+      p {
+        margin: 0;
+        padding: 0;
+        line-height: 1.75rem; 
+      }
     }
   }
 }

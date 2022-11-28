@@ -37,8 +37,11 @@ const AboutPage = () => {
         <div className="about-sect">
           <h2>What are Statues?</h2>
           <div className="about-sect-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum necessitatibus dolorum dignissimos aliquid assumenda, cupiditate est exercitationem inventore? Fugit architecto iste ex quos saepe facere quod eius maxime nihil et!</p>
-
+            <p>
+            A Statue is a page that is exclusively yours and includes connections to all of your social media accounts, as well as information about you such as your display name, bio, personalization, and the total amount of followers you have across all platforms (if you wish). It will also have a clear background and a full-body photo of you; it can be an illustration, but it must resemble you. You may share your polished web presence with only one link after building and personalizing your Statue.
+            </p>
+            <br />
+            <p>The Statue&apos;s photo will be utilized to display on the Home page&apos;s Charts.</p>
             </div>
         </div>
 

@@ -15,12 +15,13 @@ nav {
       margin: .75rem 0;
 
       .ss-nav-link {
+        border-bottom: 1px solid transparent;
         color: $light-clr; 
 
         &:hover {
+        border-bottom: 1px solid $second-clr;
           cursor: pointer;
-          color: $prime-clr;
-          text-decoration: underline !important;
+          color: $second-clr;
         }
       }
 

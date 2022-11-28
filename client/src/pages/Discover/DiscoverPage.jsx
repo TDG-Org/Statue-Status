@@ -19,7 +19,7 @@ const DiscoverPage = () => {
             {/* Search Tool  */}
             <div className="discover-search-tool">
              <input type="text" className="search-bar" />
-              <button className="search-bar-btn"><i className="bi-alarm"></i></button>
+              <button className="search-bar-btn"><i className="bi-search"></i></button>
             </div>
 
             {/* Search Results  */}

@@ -17,6 +17,7 @@ nav {
       .ss-nav-link {
         border-bottom: 1px solid transparent;
         color: $light-clr; 
+        transition: all 200ms ease;
 
         &:hover {
         border-bottom: 1px solid $second-clr;

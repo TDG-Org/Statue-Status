@@ -10,6 +10,14 @@ footer {
   min-height: 150px;
   justify-content: space-around;
 
+  .footer-sect {
+    h4 {
+      text-align: start;
+      font-size: 1.4rem;
+      margin: .5rem 0 !important;
+    }
+  }
+
   .logo {
     h3 {
       a {

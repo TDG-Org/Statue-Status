@@ -3,6 +3,9 @@ import React from "react";
 // Styles
 import "../sass/components/Footer.scss";
 
+// Link 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer>
@@ -12,29 +15,38 @@ const Footer = () => {
       </div>
 
       {/* Links  */}
-      <ul className="footer-links">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Discover</a>
-        </li>
-      </ul>
 
-      <ul className="footer-links">
-        <li>
-          <a href="#">Extra</a>
-        </li>
-        <li>
-          <a href="#">Extra</a>
-        </li>
-        <li>
-          <a href="#">Extra</a>
-        </li>
-      </ul>
+      <div className="footer-sect">
+        <h4>Page</h4>
+        <ul className="footer-links">
+          <li>
+          <Link to="/">Home</Link>
+          </li>
+          <li>
+          <Link to="about">About</Link>
+          </li>
+          <li>
+          <Link to="/discover">Discover</Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Extra  */}
+
+      <div className="footer-sect">
+        <h4>Extra</h4>
+        <ul className="footer-links">
+          <li>
+            <a href="#">Extra</a>
+          </li>
+          <li>
+            <a href="#">Extra</a>
+          </li>
+          <li>
+            <a href="#">Extra</a>
+          </li>
+        </ul>
+      </div>
 
     </footer>
   );

@@ -75,11 +75,12 @@ p, span, em, li, a, i, div {
   flex-direction: row;
   flex-wrap: nowrap;
   position: relative;
+  width: 100%;
 }
 
 .page-side-wrapper {
-  height: auto;
-  width: 65%;
+  height: auto; 
+  width: 100%;
 }
 
 // Page Styles 

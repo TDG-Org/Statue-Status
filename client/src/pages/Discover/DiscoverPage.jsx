@@ -4,6 +4,7 @@ import React from "react";
 import "./DiscoverPage.scss";
 
 // Images/SVGs 
+import { Planet } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
 
 const DiscoverPage = () => {
@@ -42,8 +43,12 @@ const DiscoverPage = () => {
 
             {/* List of friends  */}
             <ul className="friends-list">
-              <li>
-                <div className="friend-name">john</div>
+              <li className="friend">
+                <div className="friend-left">
+                  <img src={Planet} alt="" className="friend-avatar" />
+                  <p className="friend-username">Luke</p>
+                </div>
+                <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
               </li>
             </ul>
           </div>

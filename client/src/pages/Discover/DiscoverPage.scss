@@ -81,4 +81,52 @@
 
 .discover-user-friends {
   width: 30%;
+
+  .friends-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    .friend {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding:.5rem .2rem;
+      // background-color: pink;
+
+      .friend-left {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .friend-avatar {
+          border: 1px solid $prime-clr;
+          padding: .2rem;
+          border-radius: 50%;
+          width: 45px;
+        }
+  
+        .friend-username {
+          font-weight: bold;
+          margin: 0 1rem;
+        }
+      }
+  
+      button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        i {
+          font-size: 1.5rem;
+          color: $light-clr;
+        }
+      }
+    }
+  }
+
 }

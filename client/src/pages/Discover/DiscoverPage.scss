@@ -12,7 +12,40 @@
 }
 
 .discover-search-sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 65%;
+
+  .discover-search-tool {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    background: pink;
+    padding: 1rem;
+
+    .search-bar {
+      padding: .8rem;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      background: green;
+      width: 85%;
+    }
+
+    .search-bar-btn {
+      width: 10%;
+      padding: .8rem;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+    }
+  }
 }
 
 // Friends 

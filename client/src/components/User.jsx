@@ -47,8 +47,8 @@ const User = () => {
 
         {/* User's Followers and Following Count  */}
         <div className="follow-count-wrapper">
-          <p className="following-count"><span id="userFollowersCount">10k</span> Followers</p>
-          <p className="following-count"><span id="userFollowingCount">15k</span> Following</p>
+          <p className="following-count"><span id="userFollowersCount">287m</span> Followers</p>
+          <p className="following-count"><span id="userFollowingCount">1</span> Following</p>
         </div>
 
         {/* Links (Future)  */}

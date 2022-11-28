@@ -3,6 +3,9 @@ import React from "react";
 // Styles 
 import "./DiscoverPage.scss";
 
+// Images/SVGs 
+import Search from "../../assets/svgs/search.svg";
+
 const DiscoverPage = () => {
   return (
     <div className="DiscoverPage page">
@@ -18,7 +21,7 @@ const DiscoverPage = () => {
 
             {/* Search Tool  */}
             <div className="discover-search-tool">
-             <input type="text" className="search-bar" />
+             <input type="text" className="search-bar" placeholder="John Doe" />
               <button className="search-bar-btn"><i className="bi-search"></i></button>
             </div>
 
@@ -28,6 +31,8 @@ const DiscoverPage = () => {
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
+
+            <img src={Search} alt="search" className="search-svg" />
 
           </div>
 

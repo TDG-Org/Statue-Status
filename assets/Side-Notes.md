@@ -1,6 +1,8 @@
 # Statue Status Application (Notes)
 
-## Statue
+## Client
+
+### Statue
 
 - Statues will be it's own model but can link up to an account (each account can have one statue)
   - Button on profile "Create your status" if they are logged in
@@ -9,7 +11,7 @@
 
 ---
 
-## Pages
+### Pages
 
 _(And Aside layout)_
 
@@ -26,6 +28,9 @@ _(And Aside layout)_
 
 - Discover #3
 
+  - search specific users
+  - view friends (more options)
+
 - Settings #4
 
   - User's can change their theme (light, dark)
@@ -35,8 +40,31 @@ _(And Aside layout)_
 
   - General info of app for intro
   - Usage and how to use
+  - Explain Statues
 
 <br>
   (Loggout Button at the bottom)
 
 ---
+
+## Server
+
+### Models
+
+- User
+
+  - username
+  - email
+  - password
+  - followers & following count
+  - preferences (light & dark theme)
+  - Satue (if they create one)
+
+- Statues
+
+  - image
+  - Display Name
+  - social Links
+  - Following Count (links to all Person's medias)
+  - prefered design
+  - Link to an account (optional)

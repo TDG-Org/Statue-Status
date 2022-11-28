@@ -1,7 +1,6 @@
 import React from "react";
 
 // Components 
-import Accordion from "../../components/Accordion";
 
 // Styles
 import "./AboutPage.scss";
@@ -39,8 +38,6 @@ const AboutPage = () => {
           <h2>What are Statues?</h2>
           <div className="about-sect-content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum necessitatibus dolorum dignissimos aliquid assumenda, cupiditate est exercitationem inventore? Fugit architecto iste ex quos saepe facere quod eius maxime nihil et!</p>
-            
-            <Accordion />
 
             </div>
         </div>

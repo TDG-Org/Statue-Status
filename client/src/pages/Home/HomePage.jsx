@@ -18,12 +18,12 @@ const HomePage = () => {
       .then((data) => {
         // console.log(data); 
         for (let i = 0; i < data.length; i++) {
-          console.log(data[i].person.name, data[i].archivedWorth);
+          console.log(data[i].person.name, data[i].finalWorth * 1000000, data[i].person.squareImage);
         }
       });
   }
 
-  retrieveRichest();
+  // retrieveRichest(); 
 
   let today = new Date();
 

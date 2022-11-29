@@ -9,11 +9,15 @@ import "./HomePage.scss";
 const HomePage = () => {
 
   setInterval(() => {
-    
+    // Will put here later 
+
   }, 21600000);
 
+  let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+
+  // Retrieves Data for Richesting People  
   function retrieveRichest() {
-    fetch("https://forbes400.herokuapp.com/api/forbes400?limit=5")
+    fetch(forbesAPI)
       .then(res => res.json())
       .then((data) => {
         // console.log(data); 

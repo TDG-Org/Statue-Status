@@ -18,7 +18,9 @@ _(And Aside layout)_
 - Home #1
 
   - Shows off the charts
-  - Date and time on the top
+    - Display richest/powerful/ and trending people today
+    - Display another pallet below chart that shows more individuals and avatar
+  - Current Date displays at the top
 
 - Profile #2
 

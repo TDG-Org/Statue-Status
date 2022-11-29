@@ -36,6 +36,7 @@ nav {
   color: rgb(255, 111, 111);
 
   &:hover {
+    border-bottom: 1px solid red;
     color: red;
   }
 }

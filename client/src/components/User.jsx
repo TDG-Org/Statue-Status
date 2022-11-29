@@ -4,7 +4,7 @@ import React from "react";
 import "../sass/components/User.scss";
 
 // Images/SVGs 
-import { Bravery, Brilliance, Pancake } from "../assets/imgs";
+import { Bravery, Brilliance, Pancake, Planet } from "../assets/imgs";
 
 const User = () => {
   return (

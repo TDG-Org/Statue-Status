@@ -41,7 +41,9 @@
     border-radius: 50%; 
     border: 1px solid transparent;
     padding: 0;
-    transition: all 200ms ease;
+    padding-bottom: .4rem;
+    padding-top: .55rem;
+    transition: all 275ms ease;
 
     a {
       img {
@@ -51,10 +53,11 @@
 
     &:hover {
       cursor: pointer;
-      border: 1px solid $accent-clr;
+      border-bottom: 1px solid $accent-clr; 
+      border-top: 1px solid $accent-clr; 
 
       img {
-        filter: contrast(175%);
+        filter: contrast(195%);
       }
     }
   }
@@ -64,11 +67,15 @@
 
 .avatar-sect {
   img {
-    max-width: 128px;
-    transition: all 200ms ease;
+    width: 128px;
+    transition: all 250ms ease;
     filter: drop-shadow(0 0 0px);
+    border-radius: 50%;
+    border: 1px solid $light-clr;
+    padding: .35rem;
 
     &:hover {
+      border: 1px solid $prime-clr;
       cursor: pointer;
       filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.14));
     }

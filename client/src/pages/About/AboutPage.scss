@@ -20,7 +20,7 @@
     width: 95%;
     margin: 1.5rem 0;
 
-    .about-sect-content  {
+    .about-sect-content {
       border-radius: 8px;
       padding: 1rem;
       justify-content: space-evenly;
@@ -31,6 +31,15 @@
         margin: 0;
         padding: 0;
         line-height: 1.75rem; 
+      }
+    }
+
+    .about-link {
+      color: $second-clr;
+      transition: all 200ms ease;
+
+      &:hover {
+      text-decoration: underline !important;
       }
     }
   }

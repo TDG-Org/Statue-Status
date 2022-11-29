@@ -1,10 +1,29 @@
 import React from "react";
+
+// Time 
 import { format } from "date-fns";
 
 // Styles
 import "./HomePage.scss";
 
 const HomePage = () => {
+
+  setInterval(() => {
+    
+  }, 21600000);
+
+  function retrieveRichest() {
+    fetch("https://forbes400.herokuapp.com/api/forbes400?limit=5")
+      .then(res => res.json())
+      .then((data) => {
+        // console.log(data); 
+        for (let i = 0; i < data.length; i++) {
+          console.log(data[i].person.name, data[i].archivedWorth);
+        }
+      });
+  }
+
+  retrieveRichest();
 
   let today = new Date();
 

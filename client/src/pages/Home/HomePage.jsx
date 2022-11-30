@@ -11,11 +11,11 @@ import "./HomePage.scss";
 
 // temp 
 const data = [
-  {name: "Nate M", money: 43000, image: "helo"},
-  {name: "Luke M", money: 58430, image: "fasd"},
-  {name: "Cesar I", money: 49864, image: "aaaa"},
-  {name: "Gil E", money: 49718, image: "heccddlo"},
-  {name: "Tony Q", money: 49135, image: "helaaaaao"},
+  {rank: 1, name: "Nate M", money: 43000, country: "United States", image: "helo"},
+  {rank: 2, name: "Luke M", money: 58430, country: "United States", image: "fasd"},
+  {rank: 3, name: "Cesar I", money: 49864, country: "United States", image: "aaaa"},
+  {rank: 4, name: "Gil E", money: 49718, country: "United States", image: "heccddlo"},
+  {rank: 5, name: "Tony Q", money: 49135, country: "United States", image: "helaaaaao"},
 ];
 
 // Funtion that sorts Data my property (money) 
@@ -36,6 +36,8 @@ const HomePage = () => {
 
   const [richestData, setRichestData] = useState(data);
 
+  const [allRichestData, setAllRichestData] = useState(data);
+
   setInterval(() => {
     // Will put here later 
     retrieveRichest();  
@@ -52,7 +54,8 @@ const HomePage = () => {
     setTimeout(() => {
       fetch(forbesAPILimit)
       .then(res => res.json())
-      .then((data) => {
+        .then((data) => {
+        console.log(data);
         let richPeople = [];
 
         // loops through all the richest people, and creates objects for each one to store into array for the charts
@@ -128,7 +131,7 @@ const HomePage = () => {
       <div className="pallet">
 
         {/* The Richest People List  */}
-        <RichList/>
+        <RichList allRichestData={allRichestData} />
 
       </div>
 

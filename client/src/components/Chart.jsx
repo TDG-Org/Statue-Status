@@ -9,21 +9,14 @@ import "../sass/components/Chart.scss";
 // Props 
 import PropTypes from "prop-types";
 
-// temp 
-// const data = [
-//   {quarter: 1, earnings: 13000},
-//   {quarter: 2, earnings: 16500},
-//   {quarter: 3, earnings: 14250},
-//   {quarter: 4, earnings: 29000},
-//   {quarter: 5, earnings: 4000},
-// ];
+const Chart = ({ richestData }) => {
 
-const Chart = ({richestData}) => {
-
+  // Validate Prop 
   Chart.propTypes = {
     richestData: PropTypes.array.isRequired
   };
 
+  // Function to Format the Money 
   function formatMoney(n) {
     if (n < 1e3) return n;
     if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + "K";
@@ -62,7 +55,6 @@ const Chart = ({richestData}) => {
         {/* X Axis  */}
         <VictoryAxis
           tickValues={[1, 2, 3, 4, 5]}
-          // tickFormat={richestData.name} 
           style={{
             axis: {stroke: "#a8a8a8"},
             tickLabels: {

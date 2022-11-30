@@ -3,9 +3,6 @@ import React, { useState } from "react";
 // Components
 import Chart from "../../components/Chart";
 
-// import _debounce from "lodash/debounce"; 
-var debounce = require("lodash.debounce");
-
 // Time 
 import { format } from "date-fns";
 
@@ -21,14 +18,6 @@ const data = [
   {name: "Tony Q", money: 79135, image: "helaaaaao"},
 ];
 
-// const data = [
-//   {name: "Nate M", money: 2000},
-//   {name: "Luke M", money: 1430},
-//   {name: "Cesar I", money: 986},
-//   {name: "Gil E", money: 918},
-//   {name: "Tony Q", money: 1305}
-// ];
-
 const HomePage = () => {
 
   const [richestData, setRichestData] = useState(data);
@@ -39,6 +28,7 @@ const HomePage = () => {
 
   }, 21600000);
 
+  // Richest People API 
   let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
 
   // Retrieves Data for Richesting People  
@@ -48,9 +38,9 @@ const HomePage = () => {
       fetch(forbesAPI)
       .then(res => res.json())
       .then((data) => {
-        // console.log(data); 
         let richPeople = [];
 
+        // loops through all the richest people, and creates objects for each one to store into array for the charts
         for (let i = 0; i < data.length; i++) {
 
           let name = data[i].person.name;
@@ -70,29 +60,25 @@ const HomePage = () => {
             }
           }
           
+          // Creates Object 
           let newObj = {
             name: name,
             money: money,
             image: image
           };
 
+          // Push to Array 
           richPeople.push(newObj);
         }
+
+        // Update State 
         setRichestData(richPeople);
-        console.log(richestData);
       });
     }, 3000);
     
   }
 
   // retrieveRichest(); 
-
-  // function truncate(str){
-  //   return (str.length > 15) ? str.slice(0, 20-1) + "&hellip;" : str;
-  // };
-
-
-  let today = new Date();
 
   return (
     <div className="HomePage page">

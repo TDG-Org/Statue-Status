@@ -128,3 +128,14 @@ p, span, em, li, a, i, div {
 
 
 // Media Queries 
+
+@media screen and (max-width: 950px) {
+  .Statue-Status-Wrapper {
+    flex-direction: column;
+  }
+
+  .page {
+    padding-top: 3.25rem;
+  }
+
+}

@@ -3,6 +3,9 @@ import React, { useState } from "react";
 // Components
 import Chart from "../../components/Chart";
 
+// import _debounce from "lodash/debounce"; 
+var debounce = require("lodash.debounce");
+
 // Time 
 import { format } from "date-fns";
 
@@ -39,28 +42,49 @@ const HomePage = () => {
   let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
 
   // Retrieves Data for Richesting People  
-  function retrieveRichest() {
+  // function retrieveRichest() {
 
-      fetch(forbesAPI)
-      .then(res => res.json())
-      .then((data) => {
-        // console.log(data); 
-        let richPeople = [];
-        for (let i = 0; i < data.length; i++) {
-          let newObj = {
-            name: data[i].person.name,
-            money: data[i].finalWorth * 1000000,
-            image: data[i].person.squareImage
-          };
+  //     fetch(forbesAPI)
+  //     .then(res => res.json())
+  //     .then((data) => {
+  //       // console.log(data); 
+  //       let richPeople = [];
+  //       for (let i = 0; i < data.length; i++) {
+  //         let newObj = {
+  //           name: data[i].person.name,
+  //           money: data[i].finalWorth * 1000000,
+  //           image: data[i].person.squareImage
+  //         };
 
-          richPeople.push(newObj);
-        }
-        setRichestData(richPeople);
+  //         richPeople.push(newObj);
+  //       }
+  //       setRichestData(richPeople);
 
-        console.log(richestData);
-      });
+  //       console.log(richestData);
+  //     });
     
-  }
+  // }
+
+  const retrieveRichest = React.useRef(
+    debounce(async () => {
+      const response = await fetch(forbesAPI);
+      const body = await response.json();
+      const data = body;
+
+      let richPeople = [];
+      for (let i = 0; i < data.length; i++) {
+        let newObj = {
+          name: data[i].person.name,
+          money: data[i].finalWorth * 1000000,
+          image: data[i].person.squareImage
+        };
+
+        richPeople.push(newObj);
+      }
+      setRichestData(richPeople);
+      console.log(richestData);
+    }, 300)
+  ).current;
 
   // retrieveRichest();  
 

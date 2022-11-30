@@ -42,14 +42,15 @@ const HomePage = () => {
 
   }, 21600000);
 
-  // Richest People API 
-  let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+  // APIs 
+  let forbesAPILimit = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+  let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400/";
 
   // Retrieves Data for Richesting People  
   function retrieveRichest() {
 
     setTimeout(() => {
-      fetch(forbesAPI)
+      fetch(forbesAPILimit)
       .then(res => res.json())
       .then((data) => {
         let richPeople = [];
@@ -93,7 +94,22 @@ const HomePage = () => {
     
   }
 
-  // retrieveRichest(); 
+  // retrieveRichest();
+
+  function retrieveAllRichest() {
+
+    setTimeout(() => {
+      fetch(forbesAPILimit)
+        .then(res => res.json())
+        .then((data) => { 
+          console.log(data);
+        });
+    }, 3000);
+
+  }
+
+  // retrieveAllRichest(); 
+
 
   return (
     <div className="HomePage page">

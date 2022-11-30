@@ -11,20 +11,12 @@ import "./HomePage.scss";
 
 // temp 
 const data = [
-  {name: "Nate M", money: 629087000, image: "helo"},
-  {name: "Luke M", money: 120243430, image: "fasd"},
-  {name: "Cesar I", money: 111543864, image: "aaaa"},
-  {name: "Gil E", money: 80735018, image: "heccddlo"},
-  {name: "Tony Q", money: 79982135, image: "helaaaaao"},
-];
-
-// const data = [
-//   {name: "Nate M", money: 2000},
-//   {name: "Luke M", money: 1430},
-//   {name: "Cesar I", money: 986},
-//   {name: "Gil E", money: 918},
-//   {name: "Tony Q", money: 1305}
-// ];
+  {name: "Nate M", money: 687000, image: "helo"},
+  {name: "Luke M", money: 120430, image: "fasd"},
+  {name: "Cesar I", money: 111864, image: "aaaa"},
+  {name: "Gil E", money: 80718, image: "heccddlo"},
+  {name: "Tony Q", money: 79135, image: "helaaaaao"},
+].reverse();
 
 const HomePage = () => {
 
@@ -32,34 +24,62 @@ const HomePage = () => {
 
   setInterval(() => {
     // Will put here later 
+    retrieveRichest();  
 
   }, 21600000);
 
+  // Richest People API 
   let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
 
   // Retrieves Data for Richesting People  
   function retrieveRichest() {
-    fetch(forbesAPI)
+
+    setTimeout(() => {
+      fetch(forbesAPI)
       .then(res => res.json())
       .then((data) => {
-        // console.log(data); 
-        for (let i = 0; i < data.length; i++) {
-          console.log(data[i].person.name, data[i].finalWorth * 1000000, data[i].person.squareImage);
+        let richPeople = [];
 
+        // loops through all the richest people, and creates objects for each one to store into array for the charts
+        for (let i = 0; i < data.length; i++) {
+
+          let name = data[i].person.name;
+          let money = data[i].finalWorth * 1000000;
+          let image = data[i].person.squareImage;
+
+          // Check if name is above 20 Characters 
+          if (name.length > 16) {
+            let fullName = name.split(" ");
+
+            if (fullName.length >= 3) {
+              let shortName = fullName.splice(0, 2).join(" ");
+              name = `${shortName}`;
+            } else {
+              let lastInitials = fullName.pop().charAt(0);
+              name = `${fullName[0]} ${lastInitials.toUpperCase()}`;
+            }
+          }
+          
+          // Creates Object 
           let newObj = {
-            name: data[i].person.name,
-            money: data[i].finalWorth * 1000000,
-            image: data[i].person.squareImage
+            name: name,
+            money: money,
+            image: image
           };
 
-          setRichestData(newObj);
+          // Push to Array 
+          richPeople.push(newObj);
         }
+
+        // Update State 
+        setRichestData(richPeople.reverse());
+        console.log(richestData);
       });
+    }, 3000);
+    
   }
 
   // retrieveRichest(); 
-
-  let today = new Date();
 
   return (
     <div className="HomePage page">
@@ -69,6 +89,7 @@ const HomePage = () => {
 
       <div className="pallet">
         <Chart richestData={richestData} />
+
       </div>
 
       <div className="pallet">

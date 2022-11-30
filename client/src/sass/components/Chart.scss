@@ -4,7 +4,7 @@
 @import "../variables.scss";
 
 .chart {
-  margin: .5rem auto;
+  margin: 1rem auto;
   width: 100%; 
   max-width: 700px;
   min-width: 500px;
@@ -65,4 +65,14 @@
       filter: drop-shadow(0px 0px 5px rgb(74, 74, 74));
     }
   }
+}
+
+// Pie 
+
+.victory-pie {
+  max-width: 375px;
+  min-width: 325px;
+  margin: 1rem auto;
+  padding: .8rem;
+  width: 35% !important;
 }

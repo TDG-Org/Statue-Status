@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Components
-import { Chart, RichList } from "../../components/Rich";
+import { Chart, RichList, Pie } from "../../components/Rich";
 
 // Time 
 import { format } from "date-fns";
@@ -46,6 +46,7 @@ const HomePage = () => {
 
   // APIs 
   let forbesAPILimit = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+
   let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400/";
 
   // Retrieves Data for Richesting People  
@@ -103,7 +104,9 @@ const HomePage = () => {
   function retrieveAllRichest() {
 
     setTimeout(() => {
-      fetch(forbesAPI)
+      fetch(forbesAPI, {
+        mode: "no-cors",
+      })
         .then(res => res.json())
         .then((data) => {
           let allRichPeople = [];
@@ -164,6 +167,8 @@ const HomePage = () => {
 
         {/* Chart */}
           <Chart richestData={richestData} />
+
+          <Pie richestData={richestData} />
           
         </div>
         

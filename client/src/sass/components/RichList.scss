@@ -1,0 +1,75 @@
+// RichList Style Sheet 
+
+// SCSS Variables 
+@import "../variables.scss";
+
+.rich-list {
+  padding: 1rem;
+  // background-color: red; 
+}
+
+// person 
+.top-user {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem;
+  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
+  border-radius: 8px;
+  border: 1px solid $mid-light-clr;
+  transition: all 2000ms ease !important;
+
+  &:hover {
+    background-image: linear-gradient(to top, #dafff616, #1111113c);
+
+    .top-user-name {
+      color: $prime-clr;
+    }
+
+    .top-user-avatar {
+      border: 1px solid $prime-clr;
+      filter: contrast(115%);
+    }
+  }
+
+    // User Left 
+    .top-user-left {
+      .top-user-rank {
+        padding: 0 1rem;
+      }
+    
+      .top-user-avatar {
+        width: 60px;
+        border: 1px solid $mid-light-clr;
+        padding: .135rem;
+        border-radius: 50%;
+        margin: 0 .8rem;
+      }
+    
+      .top-user-name {
+        font-weight: bold;
+        padding: 0 1rem;
+      }
+    }
+
+    // User Right 
+  .top-user-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3rem;
+
+    .top-user-country {
+      padding: 0 1rem;
+    }
+
+    .top-user-money {
+      padding: 0 1rem;
+    }
+
+  }
+
+}

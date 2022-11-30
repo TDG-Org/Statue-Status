@@ -47,8 +47,8 @@ const Chart = ({richestData}) => {
 
         {/* X Axis  */}
         <VictoryAxis
-          tickValues={[1, 2, 3, 4, 5]}   
-          tickFormat={["Nate", "Luke", "Tony", "Gil", "Cesar"]} 
+          tickValues={[1, 2, 3, 4, 5]}
+          tickFormat={richestData.name} 
           style={{
             axis: {stroke: "#a8a8a8"},
             tickLabels: {fill: "#a8a8a8"} 

@@ -33,58 +33,53 @@ const HomePage = () => {
 
   const [richestData, setRichestData] = useState(data);
 
-  // setInterval(() => {
-  //   // Will put here later 
-  //   retrieveRichest();  
+  setInterval(() => {
+    // Will put here later 
+    retrieveRichest();  
 
-  // }, 21600000);
+  }, 21600000);
 
   let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
 
   // Retrieves Data for Richesting People  
-  // function retrieveRichest() {
+  function retrieveRichest() {
 
-  //     fetch(forbesAPI)
-  //     .then(res => res.json())
-  //     .then((data) => {
-  //       // console.log(data); 
-  //       let richPeople = [];
-  //       for (let i = 0; i < data.length; i++) {
-  //         let newObj = {
-  //           name: data[i].person.name,
-  //           money: data[i].finalWorth * 1000000,
-  //           image: data[i].person.squareImage
-  //         };
+    setTimeout(() => {
+      fetch(forbesAPI)
+      .then(res => res.json())
+      .then((data) => {
+        // console.log(data); 
+        let richPeople = [];
 
-  //         richPeople.push(newObj);
-  //       }
-  //       setRichestData(richPeople);
+        for (let i = 0; i < data.length; i++) {
+          
+          let name = data[i].person.name;
+          let money = data[i].finalWorth * 1000000;
+          let image = data[i].person.squareImage;
 
-  //       console.log(richestData);
-  //     });
+          // Check if name is above 20 Characters 
+          if (name.length > 16) {
+            name = name.slice(0, 16 - 1) + "..";
+          }
+          
+          let newObj = {
+            name: name,
+            money: money,
+            image: image
+          };
+
+          richPeople.push(newObj);
+        }
+        setRichestData(richPeople);
+        console.log(richestData);
+      });
+    }, 3000);
     
-  // }
+  }
 
-  const retrieveRichest = React.useRef(
-    debounce(async () => {
-      const response = await fetch(forbesAPI);
-      const body = await response.json();
-      const data = body;
-
-      let richPeople = [];
-      for (let i = 0; i < data.length; i++) {
-        let newObj = {
-          name: data[i].person.name,
-          money: data[i].finalWorth * 1000000,
-          image: data[i].person.squareImage
-        };
-
-        richPeople.push(newObj);
-      }
-      setRichestData(richPeople);
-      console.log(richestData);
-    }, 300)
-  ).current;
+  // function truncate(str){
+  //   return (str.length > 15) ? str.slice(0, 20-1) + "&hellip;" : str;
+  // };
 
   // retrieveRichest();  
 

@@ -56,4 +56,32 @@
   }
 }
 
+// Media Query 
 
+@media screen and (max-width: 1255px) {
+  
+  .homepage-pallet-chart-bottom {
+    flex-direction: column;
+  }
+
+  .victory-pie {
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+}
+
+@media screen and (max-width: 1165px) {
+  
+  .top-user {
+    width: 100%;
+    padding: .25rem;
+    margin: .75rem auto;
+    font-size: .9rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  
+
+}

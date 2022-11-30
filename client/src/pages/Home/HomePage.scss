@@ -8,8 +8,15 @@
   font-size: 2.75rem;
   letter-spacing: 3px;
   text-align: center;
-  margin: 1.5rem 0 2.5rem 0;
-  color: rgba(171, 171, 171, 0.705);
+  margin: 2rem 0 3rem 0 !important;
+  color: rgba(171, 171, 171, 0.313);
+}
+
+.HomePage {
+  h2 {
+    margin-bottom: 0 !important;
+    margin-top: 3.5rem !important;
+  }
 }
 
 .homepage-pallet-chart-bottom {

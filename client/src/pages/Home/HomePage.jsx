@@ -16,6 +16,7 @@ const data = [
   {rank: 3, name: "Cesar I", money: 49864, country: "United States", image: "aaaa"},
   {rank: 4, name: "Gil E", money: 49718, country: "United States", image: "https://images.theconversation.com/files/393210/original/file-20210401-13-z6rl6z.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop"},
   {rank: 5, name: "Tony Q", money: 49135, country: "United States", image: "helaaaaao"},
+  // {rank: 6, name: "Hello", money: 29135, country: "United States", image: "testing"}
 ];
 
 // Funtion that sorts Data my property (money) 
@@ -159,8 +160,12 @@ const HomePage = () => {
         {format(new Date(), "EEEE, d MMMM yyyy")}
       </h1>
 
+      <hr />
+      
+      <h2>Top 5 Richest</h2>
+
       <div className="pallet">
-        <h2>Top 5 Chart</h2>
+
         {/* Tabs  */}
 
         <div className="homepage-pallet-chart-bottom">

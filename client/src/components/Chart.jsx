@@ -24,6 +24,13 @@ const Chart = ({richestData}) => {
     richestData: PropTypes.array.isRequired
   };
 
+  function formatMoney(n) {
+    if (n < 1e3) return n;
+    if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + "K";
+    if (n >= 1e6 && n < 1e9) return +(n / 1e6).toFixed(1) + "M";
+    if (n >= 1e9 && n < 1e12) return +(n / 1e9).toFixed(1) + "B";
+    if (n >= 1e12) return +(n / 1e12).toFixed(1);
+  }
 
   return (
     <div className="chart">
@@ -49,7 +56,7 @@ const Chart = ({richestData}) => {
               fontSize: 10
             },
           }}
-          tickFormat={(x) => (`${parseInt(x)}b`)}
+          tickFormat={(x) => (`${parseInt(x) / 1000000000}${x.toString().length > 9 ? "b" : "" }`)}
         />
 
         {/* X Axis  */}
@@ -80,7 +87,7 @@ const Chart = ({richestData}) => {
           x="name"
           y="money"
           labels={
-            ({ datum }) => (datum.money * 1000000)
+            ({ datum }) => (formatMoney(datum.money))
           }
         />
 

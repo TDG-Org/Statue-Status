@@ -52,14 +52,22 @@ const HomePage = () => {
         let richPeople = [];
 
         for (let i = 0; i < data.length; i++) {
-          
+
           let name = data[i].person.name;
           let money = data[i].finalWorth * 1000000;
           let image = data[i].person.squareImage;
 
           // Check if name is above 20 Characters 
           if (name.length > 16) {
-            name = name.slice(0, 16 - 1) + "..";
+            let fullName = name.split(" ");
+
+            if (fullName.length >= 3) {
+              let shortName = fullName.splice(0, 2).join(" ");
+              name = `${shortName}`;
+            } else {
+              let lastInitials = fullName.pop().charAt(0);
+              name = `${fullName[0]} ${lastInitials.toUpperCase()}`;
+            }
           }
           
           let newObj = {
@@ -77,11 +85,12 @@ const HomePage = () => {
     
   }
 
+  // retrieveRichest(); 
+
   // function truncate(str){
   //   return (str.length > 15) ? str.slice(0, 20-1) + "&hellip;" : str;
   // };
 
-  // retrieveRichest();  
 
   let today = new Date();
 

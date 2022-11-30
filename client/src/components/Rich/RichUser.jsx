@@ -28,7 +28,9 @@ const RichUser = ({rank, name, money, country, image}) => {
       {/* User Left side  */}
       <div className="top-user-left">
         <span className="top-user-rank">#<span className="top-user-rank-value">{rank}</span></span>
-        <img src={image} alt="top user" className="top-user-avatar" />
+        <div className="top-user-avatar-wrapper">
+          <img src={image} alt="" className="top-user-avatar" />
+        </div>
         <span className="top-user-name">{name}</span>
       </div>
 

@@ -38,17 +38,29 @@
 
     // User Left 
     .top-user-left {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
       .top-user-rank {
         padding: 0 1rem;
       }
-    
-      .top-user-avatar {
-        height: 60px;
+
+      .top-user-avatar-wrapper {
+        height: 60px; 
         width: 60px;
-        border: 1px solid $mid-light-clr;
-        padding: .135rem;
         border-radius: 50%;
         margin: 0 .8rem;
+      }
+    
+      .top-user-avatar {
+        padding: .135rem;
+        border: 1px solid $mid-light-clr; 
+        height: 100%;
+        width: 100%;
+        border-radius: 50%; 
       }
     
       .top-user-name {

@@ -15,10 +15,8 @@ const RichList = ({ allRichestData }) => {
   RichList.propTypes = {
     allRichestData: PropTypes.array.isRequired
   };
-
-  const { rank, name, money, country, image } = allRichestData[0];
   
-  console.log(rank, name);
+  // console.log(rank, name); 
   
   return (
     <div className="rich-list">
@@ -26,13 +24,26 @@ const RichList = ({ allRichestData }) => {
       <h3>All Richest Individuals Globally</h3>
       
       {/* Person  */}
-      <RichUser
+      {/* <RichUser
         rank={rank}
         name={name}
         money={money}
         country={country}
         image={image}
-      />
+      /> */}
+
+      {allRichestData.map((item, index) => {
+        return (
+          <RichUser
+          key={index}
+          rank={item.rank}
+          name={item.name}
+          money={item.money}
+          country={item.country}
+          image={item.image}
+          />
+        );
+      })}
 
     </div>
   );

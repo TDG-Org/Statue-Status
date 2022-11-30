@@ -15,6 +15,7 @@
     "react-scripts": "5.0.1",
     "sass": "^1.55.0",
     "sweetalert": "^2.1.2",
+    "victory": "^36.6.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

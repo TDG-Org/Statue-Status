@@ -1,5 +1,8 @@
 import React from "react";
 
+// Components
+import Chart from "../../components/Chart";
+
 // Time 
 import { format } from "date-fns";
 
@@ -38,7 +41,7 @@ const HomePage = () => {
       </h1>
 
       <div className="pallet">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, aut? Aut, quo deserunt dignissimos ipsa atque accusantium unde voluptas nulla. Mollitia ipsum quidem, deserunt numquam nesciunt nulla molestias non nihil?
+        <Chart />
       </div>
 
       <div className="pallet">

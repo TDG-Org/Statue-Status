@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import {
@@ -25,10 +25,16 @@ import {
 
 // Styles 
 import "../sass/main.scss"; 
+import "../sass/utils/animations.scss";
+
+// animations 
+import { RevealY } from "../utils/animations";
 
 const StatueStatus = () => {
 
   const location = useLocation();
+
+  // window.addEventListener("scroll", console.log("hello"));
 
   return (
     <div className="Statue-Status-Wrapper">

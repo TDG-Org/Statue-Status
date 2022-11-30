@@ -4,12 +4,18 @@
 @import "../variables.scss";
 
 .chart {
-  margin: 1rem auto;
-  max-width: 650px;
+  margin: .5rem auto;
+  width: 100%; 
+  max-width: 700px;
+  min-width: 500px;
   background-color: #00000077;
   border-radius: 8px;
   border-right: 1px solid #222222;
   border-top: 1px solid  #222222;
+
+  &:hover {
+    cursor: crosshair;
+  }
 
   .chart-title {
     color: $light-clr;

@@ -11,3 +11,41 @@
   margin: 1.5rem 0 2.5rem 0;
   color: rgba(171, 171, 171, 0.705);
 }
+
+.homepage-pallet-chart-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  // justify-content: space-evenly; 
+  align-items: center;
+
+  .homepage-pallet-chart-img-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20%;
+    flex-wrap: wrap-reverse;
+    margin: 0 auto;
+  }
+
+  .top-people-img {
+    width: 100%;
+    margin: 0 auto; 
+    border-radius: 8px;
+    box-shadow:
+      -10px -10px 0px -3.5px $second-clr,
+      10px 10px 0 -3.5px $prime-clr;
+      transition: all 500ms ease;
+
+      &:hover {
+        filter: contrast(110%);
+        box-shadow:
+          -10px -10px 0px -5px $prime-clr,
+          10px 10px 0 -5px $second-clr;
+      }
+  }
+}
+
+

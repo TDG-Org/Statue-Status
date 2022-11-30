@@ -160,15 +160,19 @@ const HomePage = () => {
         <h2>Top 5 Chart</h2>
         {/* Tabs  */}
 
-        {/* Chart */}
-        <Chart richestData={richestData} />
+        <div className="homepage-pallet-chart-bottom">
 
+        {/* Chart */}
+          <Chart richestData={richestData} />
+          
+        </div>
+        
       </div>
 
       <div className="pallet">
 
         {/* The Richest People List  */}
-        <RichList allRichestData={allRichestData} />
+        <RichList allRichestData={allRichestData} className="reveal"/>
 
       </div>
 

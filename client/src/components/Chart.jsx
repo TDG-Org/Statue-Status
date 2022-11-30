@@ -54,7 +54,6 @@ const Chart = ({ richestData }) => {
 
         {/* X Axis  */}
         <VictoryAxis
-          tickValues={[1, 2, 3, 4, 5]}
           style={{
             axis: {stroke: "#a8a8a8"},
             tickLabels: {
@@ -84,6 +83,14 @@ const Chart = ({ richestData }) => {
         />
 
       </VictoryChart>
+
+      <ul className="ranking-numbers">
+        <li className="rank-num">#5</li>
+        <li className="rank-num">#4</li>
+        <li className="rank-num rank-num-3">#3</li>
+        <li className="rank-num rank-num-2">#2</li>
+        <li className="rank-num rank-num-1">#1</li>
+      </ul>
 
     </div>
   );

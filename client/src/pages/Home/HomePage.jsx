@@ -16,7 +16,7 @@ const data = [
   {name: "Cesar I", money: 111864, image: "aaaa"},
   {name: "Gil E", money: 80718, image: "heccddlo"},
   {name: "Tony Q", money: 79135, image: "helaaaaao"},
-];
+].reverse();
 
 const HomePage = () => {
 
@@ -72,7 +72,8 @@ const HomePage = () => {
         }
 
         // Update State 
-        setRichestData(richPeople);
+        setRichestData(richPeople.reverse());
+        console.log(richestData);
       });
     }, 3000);
     
@@ -88,6 +89,7 @@ const HomePage = () => {
 
       <div className="pallet">
         <Chart richestData={richestData} />
+
       </div>
 
       <div className="pallet">

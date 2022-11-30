@@ -3,24 +3,23 @@ import React from "react";
 // Props 
 import PropTypes from "prop-types";
 
-const RichUser = ({rank, name, money, country, image}) => {
+// Images/SVGs 
+import { Brilliance } from "../../assets/imgs";
+
+const RichUser = ({rank, name, money, image, country}) => {
+
+  function numberFormatter(num) {
+    return String(num).replace(/(.)(?=(\d{3})+$)/g,"$1,");
+  }
 
   // Validate Prop 
   RichUser.propTypes = {
     rank: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     money: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
   };
-
-  // User Properties
-
-  // - Rank 
-  // - Image 
-  // - Name 
-  // - Country 
-  // - Money 
 
   return (
     <div className="top-user">
@@ -37,7 +36,7 @@ const RichUser = ({rank, name, money, country, image}) => {
       {/* User Right side  */}
       <div className="top-user-right">
         <span className="top-user-country">{country}</span>
-        <span className="top-user-money"> $<span>{money}</span></span>
+        <span className="top-user-money"> $<span>{numberFormatter(money)}</span></span>
       </div>
 
   </div>

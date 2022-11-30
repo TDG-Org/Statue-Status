@@ -5,23 +5,22 @@
 
 .rich-list {
   padding: 1rem;
-  // background-color: red; 
 }
 
 // person 
 .top-user {
   width: 90%;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  padding: .5rem;
+  margin: 1rem auto;
   flex-wrap: nowrap;
+  border-radius: 8px;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: .5rem;
-  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
-  border-radius: 8px;
-  border: 1px solid $mid-light-clr;
   transition: all 2000ms ease !important;
+  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
+  border: 1px solid $mid-light-clr;
 
   &:hover {
     background-image: linear-gradient(to top, #dafff616, #1111113c);

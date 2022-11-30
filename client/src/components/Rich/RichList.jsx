@@ -16,8 +16,6 @@ const RichList = ({ allRichestData }) => {
     allRichestData: PropTypes.array.isRequired
   };
   
-  // console.log(rank, name); 
-  
   return (
     <div className="rich-list">
 

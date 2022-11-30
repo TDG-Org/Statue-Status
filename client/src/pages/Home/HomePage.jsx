@@ -55,8 +55,9 @@ const HomePage = () => {
       fetch(forbesAPILimit)
       .then(res => res.json())
         .then((data) => {
-        console.log(data);
-        let richPeople = [];
+          console.log(data);
+          
+        let allRichPeople = [];
 
         // loops through all the richest people, and creates objects for each one to store into array for the charts
         for (let i = 0; i < data.length; i++) {
@@ -102,10 +103,48 @@ const HomePage = () => {
   function retrieveAllRichest() {
 
     setTimeout(() => {
-      fetch(forbesAPILimit)
+      fetch(forbesAPI)
         .then(res => res.json())
         .then((data) => {
-          console.log(data);
+          let allRichPeople = [];
+
+          // console.log(data); 
+
+          for (let i = 0; i < data.length; i++) {
+            // console.log(data[i].person.name); 
+            let rank = data[i].rank;
+            let name = data[i].person.name;
+            let image = data[i].person.squareImage;
+            let money = data[i].finalWorth * 1000000;
+            let country = data[i].countryOfCitizenship;
+  
+            // Check if name is above 20 Characters 
+            if (name.length > 16) {
+              let fullName = name.split(" ");
+  
+              if (fullName.length >= 3) {
+                let shortName = fullName.splice(0, 2).join(" ");
+                name = `${shortName}`;
+              } else {
+                let lastInitials = fullName.pop().charAt(0);
+                name = `${fullName[0]} ${lastInitials.toUpperCase()}`;
+              }
+            }
+            
+            // Creates Object 
+            let newObj = {
+              rank: rank,
+              name: name,
+              money: money,
+              image: image,
+              country: country,
+            };
+  
+            // Push to Array 
+            allRichPeople.push(newObj);
+          }
+          setAllRichestData(allRichPeople);  
+          console.log(allRichestData);
         });
     }, 3000);
 

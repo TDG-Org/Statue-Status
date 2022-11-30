@@ -16,7 +16,7 @@ const Aside = () => {
   const handleToggle = (e) => {
 
     // if the screen size is mobile, then apply the active class 
-    if (window.innerWidth < 830) {
+    if (window.innerWidth < 950) {
 
       setActive(!isActive);
 
@@ -24,7 +24,7 @@ const Aside = () => {
   };
 
   return (
-    <aside className="aside-comp">
+    <aside className={`aside-comp ${isActive ? "" : "active"}`}>
       <div className="container">
         <div className="nav-logo"><a href="#">SS</a></div>
 
@@ -32,7 +32,7 @@ const Aside = () => {
         <User />
 
         {/* Navbar Section  */}
-        <Nav />
+        <Nav isActive={ isActive } />
 
           {/* Hamburger  */}
         <div className={`hamburger ${isActive ? "" : "active"}`} onClick={handleToggle}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Components
-import Chart from "../../components/Chart";
+import { Chart } from "../../components/Rich";
 
 // Time 
 import { format } from "date-fns";

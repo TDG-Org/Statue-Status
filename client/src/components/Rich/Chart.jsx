@@ -4,7 +4,7 @@ import React from "react";
 import { VictoryBar, VictoryChart, VictoryAxis } from "victory";
 
 // Styles
-import "../sass/components/Chart.scss";
+import "../../sass/components/Chart.scss";
 
 // Props 
 import PropTypes from "prop-types";

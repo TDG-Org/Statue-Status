@@ -1,6 +1,15 @@
 import React from "react";
 
 const RichUser = () => {
+
+  // User Properties
+
+  // - Rank 
+  // - Image 
+  // - Name 
+  // - Country 
+  // - Money 
+
   return (
     <div className="top-user">
 

@@ -10,6 +10,8 @@
 
 // person 
 .top-user {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -29,7 +31,7 @@
     }
 
     .top-user-avatar {
-      border: 1px solid $prime-clr;
+      border: 1px solid $prime-clr !important;
       filter: contrast(115%);
     }
   }

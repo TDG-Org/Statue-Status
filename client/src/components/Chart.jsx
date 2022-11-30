@@ -28,6 +28,8 @@ const Chart = ({ richestData }) => {
   return (
     <div className="chart">
 
+      <h4 className="chart-title">Richest Individuals</h4>
+
       {/* The Chart  */}
       <VictoryChart
         domainPadding={30}

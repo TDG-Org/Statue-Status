@@ -101,7 +101,7 @@ const HomePage = () => {
     setTimeout(() => {
       fetch(forbesAPILimit)
         .then(res => res.json())
-        .then((data) => { 
+        .then((data) => {
           console.log(data);
         });
     }, 3000);
@@ -110,7 +110,6 @@ const HomePage = () => {
 
   // retrieveAllRichest(); 
 
-
   return (
     <div className="HomePage page">
       <h1 className="homepage-title">
@@ -118,12 +117,22 @@ const HomePage = () => {
       </h1>
 
       <div className="pallet">
+        <h2>Top 5 Chart</h2>
+        {/* Tabs  */}
+
+        {/* Chart */}
         <Chart richestData={richestData} />
 
       </div>
 
       <div className="pallet">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, aut? Aut, quo deserunt dignissimos ipsa atque accusantium unde voluptas nulla. Mollitia ipsum quidem, deserunt numquam nesciunt nulla molestias non nihil?
+        <div className="top-user">
+          <span className="top-user-rank">#1</span>
+          <img src="https://thumbor.forbes.com/thumbor/200x200/smart/filters:format(jpeg)/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F62d700cd6094d2c180f269b9%2F416x416.jpg%3Fbackground%3D000000%26cropX1%3D0%26cropX2%3D959%26cropY1%3D0%26cropY2%3D959" alt="top user" className="top-user-avatar" />
+          <span className="top-user-name">Elon Musk</span>
+          <span className="top-user-country">United States</span>
+          <span className="top-user-money">100,000,000,000</span>
+        </div>
       </div>
 
     </div>

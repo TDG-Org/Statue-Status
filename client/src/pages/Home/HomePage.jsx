@@ -11,12 +11,26 @@ import "./HomePage.scss";
 
 // temp 
 const data = [
-  {name: "Nate M", money: 687000, image: "helo"},
-  {name: "Luke M", money: 120430, image: "fasd"},
-  {name: "Cesar I", money: 111864, image: "aaaa"},
-  {name: "Gil E", money: 80718, image: "heccddlo"},
-  {name: "Tony Q", money: 79135, image: "helaaaaao"},
-].reverse();
+  {name: "Nate M", money: 43000, image: "helo"},
+  {name: "Luke M", money: 58430, image: "fasd"},
+  {name: "Cesar I", money: 49864, image: "aaaa"},
+  {name: "Gil E", money: 49718, image: "heccddlo"},
+  {name: "Tony Q", money: 49135, image: "helaaaaao"},
+];
+
+// Funtion that sorts Data my property (money) 
+function compare( a, b ) {
+  if ( a.money < b.money ){
+    return -1;
+  }
+  if ( a.money > b.money ){
+    return 1;
+  }
+  return 0;
+}
+
+// Sorts Data 
+data.sort( compare );
 
 const HomePage = () => {
 

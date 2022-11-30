@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Components
-import Chart from "../../components/Chart";
+import { Chart, RichList } from "../../components/Rich";
 
 // Time 
 import { format } from "date-fns";
@@ -11,12 +11,26 @@ import "./HomePage.scss";
 
 // temp 
 const data = [
-  {name: "Nate M", money: 687000, image: "helo"},
-  {name: "Luke M", money: 120430, image: "fasd"},
-  {name: "Cesar I", money: 111864, image: "aaaa"},
-  {name: "Gil E", money: 80718, image: "heccddlo"},
-  {name: "Tony Q", money: 79135, image: "helaaaaao"},
-].reverse();
+  {name: "Nate M", money: 43000, image: "helo"},
+  {name: "Luke M", money: 58430, image: "fasd"},
+  {name: "Cesar I", money: 49864, image: "aaaa"},
+  {name: "Gil E", money: 49718, image: "heccddlo"},
+  {name: "Tony Q", money: 49135, image: "helaaaaao"},
+];
+
+// Funtion that sorts Data my property (money) 
+function compare( a, b ) {
+  if ( a.money < b.money ){
+    return -1;
+  }
+  if ( a.money > b.money ){
+    return 1;
+  }
+  return 0;
+}
+
+// Sorts Data 
+data.sort( compare );
 
 const HomePage = () => {
 
@@ -28,14 +42,15 @@ const HomePage = () => {
 
   }, 21600000);
 
-  // Richest People API 
-  let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+  // APIs 
+  let forbesAPILimit = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+  let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400/";
 
   // Retrieves Data for Richesting People  
   function retrieveRichest() {
 
     setTimeout(() => {
-      fetch(forbesAPI)
+      fetch(forbesAPILimit)
       .then(res => res.json())
       .then((data) => {
         let richPeople = [];
@@ -79,7 +94,21 @@ const HomePage = () => {
     
   }
 
-  // retrieveRichest(); 
+  // retrieveRichest();
+
+  function retrieveAllRichest() {
+
+    setTimeout(() => {
+      fetch(forbesAPILimit)
+        .then(res => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+    }, 3000);
+
+  }
+
+  // retrieveAllRichest(); 
 
   return (
     <div className="HomePage page">
@@ -88,12 +117,19 @@ const HomePage = () => {
       </h1>
 
       <div className="pallet">
+        <h2>Top 5 Chart</h2>
+        {/* Tabs  */}
+
+        {/* Chart */}
         <Chart richestData={richestData} />
 
       </div>
 
       <div className="pallet">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, aut? Aut, quo deserunt dignissimos ipsa atque accusantium unde voluptas nulla. Mollitia ipsum quidem, deserunt numquam nesciunt nulla molestias non nihil?
+
+        {/* The Richest People List  */}
+        <RichList/>
+
       </div>
 
     </div>

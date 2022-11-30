@@ -10,6 +10,12 @@
   border-radius: 8px;
   border-right: 1px solid #222222;
   border-top: 1px solid  #222222;
+
+  .chart-title {
+    color: $light-clr;
+    font-weight: normal !important;
+    margin-bottom: -3.5rem !important;
+  }
 }
 
 // Ranking Badges 

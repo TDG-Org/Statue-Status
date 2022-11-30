@@ -21,16 +21,9 @@ const RichList = ({ allRichestData }) => {
 
       <h3>All Richest Individuals Globally</h3>
       
-      {/* Person  */}
-      {/* <RichUser
-        rank={rank}
-        name={name}
-        money={money}
-        country={country}
-        image={image}
-      /> */}
 
       {allRichestData.map((item, index) => {
+        {/* Person  */}
         return (
           <RichUser
           key={index}

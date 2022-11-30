@@ -17,8 +17,21 @@ const RichUser = ({rank, name, money, image, country}) => {
     rank: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     money: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
     country: PropTypes.string.isRequired,
+  };
+
+  // Function to check the rank and return the right color 
+  const checkRank = (rank) => {
+    if (rank == 1) {
+      return "top-user-rank-1";
+    } else if (rank == 2) {
+      return "top-user-rank-2";
+    } else if (rank == 3) {
+      return "top-user-rank-3";
+    } else {
+      return;
+    }
   };
 
   return (
@@ -26,7 +39,7 @@ const RichUser = ({rank, name, money, image, country}) => {
 
       {/* User Left side  */}
       <div className="top-user-left">
-        <span className="top-user-rank">#<span className="top-user-rank-value">{rank}</span></span>
+        <span className={`top-user-rank ${checkRank(rank)}`}>#<span className="top-user-rank-value">{rank}</span></span>
         <div className="top-user-avatar-wrapper">
           <img src={image} alt="" className="top-user-avatar" />
         </div>

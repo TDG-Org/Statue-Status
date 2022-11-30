@@ -33,6 +33,14 @@
       border: 1px solid $prime-clr !important;
       filter: contrast(115%);
     }
+
+    .top-user-money {
+      color: $second-clr;
+
+      span {
+      color: $second-clr;
+      }
+    }
   }
 
     // User Left 
@@ -45,6 +53,11 @@
 
       .top-user-rank {
         padding: 0 1rem;
+        color: $mid-light-clr;
+
+        .top-user-rank-value {
+          color: $mid-light-clr;
+        }
       }
 
       .top-user-avatar-wrapper {
@@ -65,6 +78,26 @@
       .top-user-name {
         font-weight: bold;
         padding: 0 1rem;
+      }
+
+      // Ranking Table 
+      .top-user-rank-1 {
+        color: #ebc817;
+        .top-user-rank-value {
+          color: #ebc817;
+        }
+      }
+      .top-user-rank-2 {
+        color: #e4e4e4;
+        .top-user-rank-value {
+          color: #e4e4e4;
+        }
+      }
+      .top-user-rank-3 {
+        color: #c59041;
+        .top-user-rank-value {
+          color: #c59041;
+        }
       }
     }
 

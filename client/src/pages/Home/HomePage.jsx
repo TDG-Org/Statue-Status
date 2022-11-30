@@ -55,9 +55,9 @@ const HomePage = () => {
       fetch(forbesAPILimit)
       .then(res => res.json())
         .then((data) => {
-          console.log(data);
+          // console.log(data); 
           
-        let allRichPeople = [];
+        let richPeople = [];
 
         // loops through all the richest people, and creates objects for each one to store into array for the charts
         for (let i = 0; i < data.length; i++) {
@@ -92,13 +92,13 @@ const HomePage = () => {
 
         // Update State 
         setRichestData(richPeople.reverse());
-        console.log(richestData);
+        // console.log(richestData); 
       });
     }, 3000);
     
   }
 
-  // retrieveRichest();
+  // retrieveRichest(); 
 
   function retrieveAllRichest() {
 
@@ -109,9 +109,7 @@ const HomePage = () => {
           let allRichPeople = [];
 
           // console.log(data); 
-
           for (let i = 0; i < data.length; i++) {
-            // console.log(data[i].person.name); 
             let rank = data[i].rank;
             let name = data[i].person.name;
             let image = data[i].person.squareImage;
@@ -144,13 +142,13 @@ const HomePage = () => {
             allRichPeople.push(newObj);
           }
           setAllRichestData(allRichPeople);  
-          console.log(allRichestData);
+          // console.log(allRichestData);
         });
     }, 3000);
 
   }
 
-  // retrieveAllRichest(); 
+  // retrieveAllRichest();
 
   return (
     <div className="HomePage page">

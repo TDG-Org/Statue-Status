@@ -20,15 +20,10 @@ const Chart = () => {
   
   return (
     <div className="chart">
+
+      {/* The Chart  */}
       <VictoryChart
-        style={{
-          parent: {
-            border: "1px solid transparent"
-          },
-          background: {
-            fill: "transparent"
-          }
-        }}
+        width="600" 
         domainPadding={30}
         animate={{
           duration: 1000,
@@ -38,15 +33,10 @@ const Chart = () => {
 
         {/* X Axis  */}
         <VictoryAxis
-          // tickValues specifies both the number of ticks and where
-          // they are placed on the axis
           tickValues={[1, 2, 3, 4, 5]}  
           tickFormat={["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4", "Quarter 4"]} 
           style={{
-            axis: {stroke: "#fff"},
-            // axisLabel: {fontSize: 20, padding: 30}, 
-            // grid: {stroke: ({ tick }) => tick > 0.5 ? "red" : "grey"}, 
-            // ticks: {stroke: "#fff", size: 5}, 
+            axis: {stroke: "#a8a8a8"},
             tickLabels: {fill: "#a8a8a8"} 
           }}
         />
@@ -55,10 +45,9 @@ const Chart = () => {
         <VictoryAxis
           dependentAxis
           style={{
-            axis: { stroke: "#fff" },
+            axis: { stroke: "#a8a8a8" },
             tickLabels: { fill: "#a8a8a8", fontSize: 11 },
           }}
-          // tickFormat specifies how ticks should be displayed
           tickFormat={(x) => (`$${x / 1000}k`)}
         />
 
@@ -69,15 +58,12 @@ const Chart = () => {
             data: { fill: "#0084ff" },
             labels: {
               fontSize: 12,
-              fill: "#a8a8a8"
+              fill: "#fff"
             }
           }}
-          // barRatio={0.7} 
           alignment="middle"
           barWidth={35}
-          // data accessor for x values
           x="quarter"
-          // data accessor for y values
           y="earnings"
           labels={
             ({ datum }) => datum.earnings
@@ -85,6 +71,7 @@ const Chart = () => {
         />
 
       </VictoryChart>
+      
     </div>
   );
 };

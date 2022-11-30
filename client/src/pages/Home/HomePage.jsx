@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Components
 import Chart from "../../components/Chart";
@@ -9,7 +9,28 @@ import { format } from "date-fns";
 // Styles
 import "./HomePage.scss";
 
+// temp 
+// const data = [
+//   {name: "Nate M", money: 629087000, image: "helo"},
+//   {name: "Luke M", money: 120243430, image: "fasd"},
+//   {name: "Cesar I", money: 111543864, image: "aaaa"},
+//   {name: "Gil E", money: 80735018, image: "heccddlo"},
+//   {name: "Tony Q", money: 79982135, image: "helaaaaao"},
+// ];
+
+const data = [
+  {name: "Nate M", money: 800},
+  {name: "Luke M", money: 1430},
+  {name: "Cesar I", money: 986},
+  {name: "Gil E", money: 918},
+  {name: "Tony Q", money: 1305}
+];
+
 const HomePage = () => {
+
+  const [richestData, setRichestData] = useState(data);
+
+  console.log(richestData);
 
   setInterval(() => {
     // Will put here later 
@@ -26,6 +47,14 @@ const HomePage = () => {
         // console.log(data); 
         for (let i = 0; i < data.length; i++) {
           console.log(data[i].person.name, data[i].finalWorth * 1000000, data[i].person.squareImage);
+
+          let newObj = {
+            name: data[i].person.name,
+            money: data[i].finalWorth * 1000000,
+            image: data[i].person.squareImage
+          };
+
+          setRichestData(newObj);
         }
       });
   }
@@ -41,7 +70,7 @@ const HomePage = () => {
       </h1>
 
       <div className="pallet">
-        <Chart />
+        <Chart richestData={richestData} />
       </div>
 
       <div className="pallet">

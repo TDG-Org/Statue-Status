@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // Victory 
 import { VictoryBar, VictoryChart, VictoryAxis } from "victory";
@@ -6,7 +6,9 @@ import { VictoryBar, VictoryChart, VictoryAxis } from "victory";
 // Styles
 import "../sass/components/Chart.scss";
 
+// Props 
 import PropTypes from "prop-types";
+
 // temp 
 // const data = [
 //   {quarter: 1, earnings: 13000},
@@ -39,19 +41,27 @@ const Chart = ({richestData}) => {
         <VictoryAxis
           dependentAxis
           style={{
-            axis: { stroke: "#a8a8a8" },
-            tickLabels: { fill: "#a8a8a8", fontSize: 11 },
+            axis: {
+              stroke: "#a8a8a8"
+            },
+            tickLabels: {
+              fill: "#a8a8a8",
+              fontSize: 10
+            },
           }}
-          tickFormat={(x) => (`${parseInt(x)}k`)}
+          tickFormat={(x) => (`${parseInt(x)}b`)}
         />
 
         {/* X Axis  */}
         <VictoryAxis
           tickValues={[1, 2, 3, 4, 5]}
-          tickFormat={richestData.name} 
+          // tickFormat={richestData.name} 
           style={{
             axis: {stroke: "#a8a8a8"},
-            tickLabels: {fill: "#a8a8a8"} 
+            tickLabels: {
+              fill: "#a8a8a8",
+              fontSize: 10
+            } 
           }}
         />
 
@@ -61,16 +71,16 @@ const Chart = ({richestData}) => {
           style={{
             data: { fill: "#0084ff" },
             labels: {
-              fontSize: 12,
+              fontSize: 10,
               fill: "#fff"
             }
           }}
           alignment="middle" 
-          barWidth={35} 
+          barWidth={32} 
           x="name"
           y="money"
           labels={
-            ({ datum }) => datum.name
+            ({ datum }) => (datum.money * 1000000)
           }
         />
 

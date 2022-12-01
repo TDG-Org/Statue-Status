@@ -3,20 +3,23 @@
 // SCSS Variables 
 @import "../../sass/variables.scss";
 
-.homepage-title {
-  font-weight: bold;
-  font-size: 2.75rem;
-  letter-spacing: 3px;
-  text-align: center;
-  margin: 2rem 0 3rem 0 !important;
-  color: rgba(171, 171, 171, 0.324);
-}
-
 .HomePage {
+  z-index: 1;
+
+  .homepage-title {
+    font-weight: bold;
+    font-size: 2.75rem;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 2rem 0 3rem 0 !important;
+    color: rgba(171, 171, 171, 0.324);
+  }
+
   h2 {
     margin-bottom: 0 !important;
     margin-top: 3.5rem !important;
   }
+
 }
 
 .homepage-pallet-chart-bottom {

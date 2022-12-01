@@ -54,7 +54,9 @@ const HomePage = () => {
   function retrieveRichest() {
 
     setTimeout(() => {
-      fetch(forbesAPILimit)
+      fetch(forbesAPILimit, {
+        mode: "no-cors",
+      })
       .then(res => res.json())
         .then((data) => {
           // console.log(data); 
@@ -152,7 +154,7 @@ const HomePage = () => {
 
   }
 
-  // retrieveAllRichest();
+  // retrieveAllRichest(); 
 
   return (
     <div className="HomePage page">

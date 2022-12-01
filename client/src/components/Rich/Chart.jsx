@@ -59,8 +59,8 @@ const Chart = ({ richestData }) => {
           style={{
             axis: {stroke: "#a8a8a8"},
             tickLabels: {
-              fill: "#a8a8a8",
-              fontSize: 10
+              fill: "#fff",
+              fontSize: 11.5
             } 
           }}
         />
@@ -71,7 +71,7 @@ const Chart = ({ richestData }) => {
           style={{
             data: { fill: "#0084ff" },
             labels: {
-              fontSize: 10,
+              fontSize: 11,
               fill: "#fff"
             }
           }}

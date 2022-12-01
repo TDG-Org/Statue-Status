@@ -62,3 +62,10 @@
     width: 40%;
   }
 }
+
+.hellofdsa {
+  mix-blend-mode:luminosity;
+  box-shadow:
+    -50px -50px 0 -40px $accent-clr,
+    50px 50px 0 -40px $accent-clr;
+}

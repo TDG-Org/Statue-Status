@@ -6,14 +6,49 @@ import RichUser from "./RichUser";
 // Styles
 import "../../sass/components/RichList.scss";
 
-const RichList = () => {
+// Props 
+import PropTypes from "prop-types";
+
+const RichList = ({ allRichestData }) => {
+  
+  // Validate Prop 
+  RichList.propTypes = {
+    allRichestData: PropTypes.array.isRequired
+  };
+
+  // Funtion that sorts Data my property (money) 
+  // function compare( a, b ) {
+  //   if ( a.money < b.money ){
+  //     return -1;
+  //   }
+  //   if ( a.money > b.money ){
+  //     return 1;
+  //   }
+  //   return 0;
+  // }
+
+  // Sorts Data
+  // let dataList = allRichestData.sort(compare); 
+  
   return (
     <div className="rich-list">
 
       <h3>All Richest Individuals Globally</h3>
       
-      {/* Person  */}
-      <RichUser />
+
+      {allRichestData.map((item, index) => {
+        {/* Person  */}
+        return (
+          <RichUser
+          key={index}
+          rank={item.rank}
+          name={item.name}
+          money={item.money}
+          country={item.country}
+          image={item.image}
+          />
+        );
+      })}
 
     </div>
   );

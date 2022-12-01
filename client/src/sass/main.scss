@@ -89,10 +89,12 @@ p, span, em, li, a, i, div {
 .page {
   padding: 2rem .8rem;
   min-height: 100vh;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .pagebg {
@@ -126,3 +128,18 @@ p, span, em, li, a, i, div {
 
 
 // Media Queries 
+
+@media screen and (max-width: 950px) {
+  .Statue-Status-Wrapper {
+    flex-direction: column;
+  }
+
+  .page {
+    padding-top: 3.25rem;
+  }
+
+  nav {
+    z-index: 2;
+  }
+
+}

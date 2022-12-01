@@ -5,11 +5,17 @@
 
 .chart {
   margin: 1rem auto;
-  max-width: 650px;
+  width: 100%; 
+  max-width: 700px;
+  min-width: 500px;
   background-color: #00000077;
   border-radius: 8px;
   border-right: 1px solid #222222;
   border-top: 1px solid  #222222;
+
+  &:hover {
+    cursor: crosshair;
+  }
 
   .chart-title {
     color: $light-clr;
@@ -27,7 +33,7 @@
   width: 100%;
   padding: 0 1.8rem 1rem 1.8rem;
   margin: 0 auto;
-  margin-top: -1.5rem;
+  margin-top: -1.25rem;
   justify-content: space-evenly;
 
   .rank-num-1 {
@@ -59,4 +65,14 @@
       filter: drop-shadow(0px 0px 5px rgb(74, 74, 74));
     }
   }
+}
+
+// Pie 
+
+.victory-pie {
+  max-width: 375px;
+  min-width: 280px;
+  margin: 1rem auto;
+  padding: .8rem;
+  width: 35% !important;
 }

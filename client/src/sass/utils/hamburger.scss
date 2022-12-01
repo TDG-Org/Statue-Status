@@ -1,0 +1,61 @@
+/* Navbar hamburger CSS */
+
+@import "../variables.scss";
+
+.hamburger {
+	display: none;
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: $light-clr !important;
+}
+
+/* Media Query (Mobile Size)  */
+
+@media screen and (max-width: 950px) {
+
+	.hamburger {
+		display: block;
+    padding: 0;
+    z-index: 5;
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.ss-nav-link {
+		margin: 1rem 0;
+	}
+
+	.aside-comp .active {
+		right: 0;
+    height: 100%;
+
+    hr {
+      display: none;
+    }
+	}
+
+	.nav-comp .active {
+		background-color: rgb(0, 0, 0);
+		height: 100vh !important;
+		overflow: hidden;
+		z-index: 5;
+	}
+}

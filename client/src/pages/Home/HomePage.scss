@@ -3,11 +3,87 @@
 // SCSS Variables 
 @import "../../sass/variables.scss";
 
-.homepage-title {
-  font-weight: bold;
-  font-size: 2.75rem;
-  letter-spacing: 3px;
-  text-align: center;
-  margin: 1.5rem 0 2.5rem 0;
-  color: rgba(171, 171, 171, 0.705);
+.HomePage {
+  z-index: 1;
+
+  .homepage-title {
+    font-weight: bold;
+    font-size: 2.75rem;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 2rem 0 3rem 0 !important;
+    color: rgba(171, 171, 171, 0.324);
+  }
+
+  h2 {
+    margin-bottom: 0 !important;
+    margin-top: 3.5rem !important;
+  }
+
+}
+
+.homepage-pallet-chart-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+
+  .homepage-pallet-chart-img-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20%;
+    flex-wrap: wrap-reverse;
+    margin: 0 auto;
+  }
+
+  .top-people-img {
+    width: 100%;
+    margin: 0 auto; 
+    border-radius: 8px;
+    box-shadow:
+      -10px -10px 0px -3.5px $second-clr,
+      10px 10px 0 -3.5px $prime-clr;
+      transition: all 500ms ease;
+
+      &:hover {
+        filter: contrast(110%);
+        box-shadow:
+          -10px -10px 0px -5px $prime-clr,
+          10px 10px 0 -5px $second-clr;
+      }
+  }
+}
+
+// Media Query 
+
+@media screen and (max-width: 1255px) {
+  
+  .homepage-pallet-chart-bottom {
+    flex-direction: column;
+  }
+
+  .victory-pie {
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+}
+
+@media screen and (max-width: 1165px) {
+  
+  .top-user {
+    width: 100%;
+    padding: .25rem;
+    margin: .75rem auto;
+    font-size: .9rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+
 }

@@ -6,9 +6,18 @@ import "../sass/components/Nav.scss";
 // Link 
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+// Props 
+import PropTypes from "prop-types";
+
+const Nav = ({ isActive }) => {
+
+  // Validate Prop 
+  Nav.propTypes = {
+    isActive: PropTypes.bool.isRequired
+  };
+  
   return (
-    <nav className="nav-comp">
+    <nav className={`nav-comp ${isActive ? "" : "active"}`}>
 
       {/* Personal Section */}
       <ul className="nav-sect">

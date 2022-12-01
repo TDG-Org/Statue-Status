@@ -28,7 +28,7 @@ const Chart = ({ richestData }) => {
   return (
     <div className="chart">
 
-      <h4 className="chart-title">Richest Individuals</h4>
+      <h4 className="chart-title">Individuals</h4>
 
       {/* The Chart  */}
       <VictoryChart
@@ -59,8 +59,8 @@ const Chart = ({ richestData }) => {
           style={{
             axis: {stroke: "#a8a8a8"},
             tickLabels: {
-              fill: "#a8a8a8",
-              fontSize: 10
+              fill: "#fff",
+              fontSize: 11.5
             } 
           }}
         />
@@ -71,7 +71,7 @@ const Chart = ({ richestData }) => {
           style={{
             data: { fill: "#0084ff" },
             labels: {
-              fontSize: 10,
+              fontSize: 11,
               fill: "#fff"
             }
           }}
@@ -87,11 +87,11 @@ const Chart = ({ richestData }) => {
       </VictoryChart>
 
       <ul className="ranking-numbers">
-        <li className="rank-num">#5</li>
-        <li className="rank-num">#4</li>
-        <li className="rank-num rank-num-3">#3</li>
-        <li className="rank-num rank-num-2">#2</li>
         <li className="rank-num rank-num-1">#1</li>
+        <li className="rank-num rank-num-2">#2</li>
+        <li className="rank-num rank-num-3">#3</li>
+        <li className="rank-num ">#4</li>
+        <li className="rank-num ">#5</li>
       </ul>
 
     </div>

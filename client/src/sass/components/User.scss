@@ -144,3 +144,24 @@
     }
   }
 }
+
+// Media Queries 
+
+@media screen and (max-width: 950px) {
+
+  .user-avatar-section {
+    padding: .5rem;
+  }
+
+  .avatar-sect {
+    width: 75px;
+    padding: .5rem;
+    img {
+      width: 55px;
+    }
+  }
+  
+  .badge-sect, .user-avatar-sect-bottom {
+    display: none;
+  }
+}

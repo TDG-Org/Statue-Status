@@ -5,23 +5,22 @@
 
 .rich-list {
   padding: 1rem;
-  // background-color: red; 
 }
 
 // person 
 .top-user {
   width: 90%;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  padding: .5rem;
+  margin: 1rem auto;
   flex-wrap: nowrap;
+  border-radius: 8px;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: .5rem;
-  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
-  border-radius: 8px;
-  border: 1px solid $mid-light-clr;
   transition: all 2000ms ease !important;
+  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
+  border: 1px solid $mid-light-clr;
 
   &:hover {
     background-image: linear-gradient(to top, #dafff616, #1111113c);
@@ -34,25 +33,71 @@
       border: 1px solid $prime-clr !important;
       filter: contrast(115%);
     }
+
+    .top-user-money {
+      color: $second-clr;
+
+      span {
+      color: $second-clr;
+      }
+    }
   }
 
     // User Left 
     .top-user-left {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
       .top-user-rank {
         padding: 0 1rem;
+        color: $mid-light-clr;
+
+        .top-user-rank-value {
+          color: $mid-light-clr;
+        }
+      }
+
+      .top-user-avatar-wrapper {
+        height: 60px; 
+        width: 60px;
+        border-radius: 50%;
+        margin: 0 .8rem;
       }
     
       .top-user-avatar {
-        width: 60px;
-        border: 1px solid $mid-light-clr;
         padding: .135rem;
-        border-radius: 50%;
-        margin: 0 .8rem;
+        border: 1px solid $mid-light-clr; 
+        height: 100%;
+        width: 100%;
+        border-radius: 50%; 
       }
     
       .top-user-name {
         font-weight: bold;
         padding: 0 1rem;
+      }
+
+      // Ranking Table 
+      .top-user-rank-1 {
+        color: #ebc817;
+        .top-user-rank-value {
+          color: #ebc817;
+        }
+      }
+      .top-user-rank-2 {
+        color: #e4e4e4;
+        .top-user-rank-value {
+          color: #e4e4e4;
+        }
+      }
+      .top-user-rank-3 {
+        color: #c59041;
+        .top-user-rank-value {
+          color: #c59041;
+        }
       }
     }
 
@@ -62,10 +107,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 
     .top-user-country {
-      padding: 0 1rem;
+      padding: 0 .75rem;
     }
 
     .top-user-money {

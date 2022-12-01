@@ -1,30 +1,57 @@
 import React from "react";
 
-const RichUser = () => {
+// Props 
+import PropTypes from "prop-types";
 
-  // User Properties
+// Images/SVGs 
+import { Brilliance } from "../../assets/imgs";
 
-  // - Rank 
-  // - Image 
-  // - Name 
-  // - Country 
-  // - Money 
+const RichUser = ({rank, name, money, image, country}) => {
+
+  function numberFormatter(num) {
+    return String(num).replace(/(.)(?=(\d{3})+$)/g,"$1,");
+  }
+
+  // Validate Prop 
+  RichUser.propTypes = {
+    rank: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    money: PropTypes.number.isRequired,
+    image: PropTypes.string,
+    country: PropTypes.string.isRequired,
+  };
+
+  // Function to check the rank and return the right color 
+  const checkRank = (rank) => {
+    if (rank == 1) {
+      return "top-user-rank-1";
+    } else if (rank == 2) {
+      return "top-user-rank-2";
+    } else if (rank == 3) {
+      return "top-user-rank-3";
+    } else {
+      return;
+    }
+  };
 
   return (
     <div className="top-user">
 
       {/* User Left side  */}
       <div className="top-user-left">
-        <span className="top-user-rank">#1</span>
-        <img src="https://thumbor.forbes.com/thumbor/200x200/smart/filters:format(jpeg)/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F62d700cd6094d2c180f269b9%2F416x416.jpg%3Fbackground%3D000000%26cropX1%3D0%26cropX2%3D959%26cropY1%3D0%26cropY2%3D959" alt="top user" className="top-user-avatar" />
-        <span className="top-user-name">Elon Musk</span>
+        <span className={`top-user-rank ${checkRank(rank)}`}>#<span className="top-user-rank-value">{rank}</span></span>
+        <div className="top-user-avatar-wrapper">
+          <img src={image} alt="" className="top-user-avatar" />
+        </div>
+        <span className="top-user-name">{name}</span>
       </div>
 
       {/* User Right side  */}
       <div className="top-user-right">
-        <span className="top-user-country">United States</span>
-        <span className="top-user-money"> $<span>100,000,000,000</span></span>
-        </div>
+        <span className="top-user-country">{country}</span>
+        <span className="top-user-money"> $<span>{numberFormatter(money)}</span></span>
+      </div>
+
   </div>
   );
 };

@@ -30,6 +30,17 @@ nav {
   }
 }
 
+.nav-logo {
+  display: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $light-clr;
+
+  &:hover {
+    color: $second-clr !important;
+  }
+}
+
 // logout 
 
 #logoutBtn {
@@ -38,5 +49,13 @@ nav {
   &:hover {
     border-bottom: 1px solid red;
     color: red;
+  }
+}
+
+// Media Queries 
+
+@media screen and (max-width: 950px) {
+  .nav-logo {
+    display: block;
   }
 }

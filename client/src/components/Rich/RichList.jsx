@@ -15,6 +15,20 @@ const RichList = ({ allRichestData }) => {
   RichList.propTypes = {
     allRichestData: PropTypes.array.isRequired
   };
+
+  // Funtion that sorts Data my property (money) 
+  // function compare( a, b ) {
+  //   if ( a.money < b.money ){
+  //     return -1;
+  //   }
+  //   if ( a.money > b.money ){
+  //     return 1;
+  //   }
+  //   return 0;
+  // }
+
+  // Sorts Data
+  // let dataList = allRichestData.sort(compare); 
   
   return (
     <div className="rich-list">

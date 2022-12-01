@@ -87,11 +87,11 @@ const Chart = ({ richestData }) => {
       </VictoryChart>
 
       <ul className="ranking-numbers">
-        <li className="rank-num">#5</li>
-        <li className="rank-num">#4</li>
-        <li className="rank-num rank-num-3">#3</li>
-        <li className="rank-num rank-num-2">#2</li>
         <li className="rank-num rank-num-1">#1</li>
+        <li className="rank-num rank-num-2">#2</li>
+        <li className="rank-num rank-num-3">#3</li>
+        <li className="rank-num ">#4</li>
+        <li className="rank-num ">#5</li>
       </ul>
 
     </div>

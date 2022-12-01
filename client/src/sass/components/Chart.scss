@@ -76,3 +76,49 @@
   padding: .8rem;
   width: 35% !important;
 }
+
+// Media Queries 
+
+@media screen and (max-width: 620px) {
+
+  // The Chart 
+  .chart {
+    min-width: 325px !important;
+    font-size: 1rem;
+    border: none;
+
+    g {
+      text {
+        tspan {
+          font-size: 1rem !important;
+        }
+      }
+    }
+
+    .ranking-numbers {
+      padding: .5rem 1.8rem 1rem 1.8rem;
+      font-size: .8rem !important;
+
+      .rank-num {
+        background-color: rgb(10, 10, 10);
+        padding: .48rem;
+        border-radius: 50%;
+        border: 1px solid rgb(46, 46, 46);
+        color: $mid-light-clr;
+        transition: all 250ms ease;
+      }
+    }
+  }  
+
+  // Pie 
+  .victory-pie {
+    min-width: 215px !important;
+    margin: .65rem !important;
+
+    text {
+      tspan {
+        font-size: 1.25rem !important;
+      }
+    }
+  }
+}

@@ -145,3 +145,9 @@ p, span, em, li, a, i, div {
   }
 
 }
+
+@media screen and (max-width: 620px) {
+  .pallet {
+    padding: 1.5rem .5rem; 
+  }
+}

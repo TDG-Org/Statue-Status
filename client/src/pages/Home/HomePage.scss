@@ -7,10 +7,10 @@
 
   .homepage-title {
     font-weight: bold;
-    font-size: 2.25rem;
+    font-size: 3.25rem;
     letter-spacing: 3px;
     text-align: center;
-    margin: 0rem 0 !important;
+    margin: .5rem 0 2.5rem 0 !important;
     color: rgba(171, 171, 171, 0.324);
   }
 
@@ -74,7 +74,6 @@
 }
 
 @media screen and (max-width: 1165px) {
-  
   .top-user {
     width: 100%;
     padding: .25rem;
@@ -84,6 +83,11 @@
 }
 
 @media screen and (max-width: 950px) {
+  .homepage-title {
+    font-size: 2rem !important;
+    margin: .25rem 0 2rem 0 !important;
+  }
+
   .homepage-pallet-chart-bottom {
     padding: 0rem;
     gap: 0;

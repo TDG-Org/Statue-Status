@@ -4,6 +4,7 @@
 @import "../variables.scss";
 
 .aside-comp {
+  z-index: 5;
   display: flex;
   background-color: $mid-dark-clr;
   min-width: 325px;

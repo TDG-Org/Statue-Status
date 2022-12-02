@@ -4,20 +4,19 @@
 @import "../../sass/variables.scss";
 
 .HomePage {
-  z-index: 1;
 
   .homepage-title {
     font-weight: bold;
-    font-size: 2.75rem;
+    font-size: 2.25rem;
     letter-spacing: 3px;
     text-align: center;
-    margin: 2rem 0 3rem 0 !important;
+    margin: 0rem 0 !important;
     color: rgba(171, 171, 171, 0.324);
   }
 
   h2 {
     margin-bottom: 0 !important;
-    margin-top: 3.5rem !important;
+    margin-top: 2rem !important;
   }
 
 }

@@ -18,13 +18,14 @@
   border-radius: 8px;
   flex-direction: row;
   align-items: center;
+  transition: all 850ms ease;
   justify-content: space-between;
-  transition: all 2000ms ease !important;
   background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
   border: 1px solid $mid-light-clr;
 
   &:hover {
-    background-image: linear-gradient(to top, #dafff616, #1111113c);
+    background-image: linear-gradient(to top, #00000013, #ffffff05);
+    border: 1px solid $light-clr;
 
     .top-user-name {
       color: $prime-clr;
@@ -84,6 +85,7 @@
       // Ranking Table 
       .top-user-rank-1 {
         color: #ebc817;
+
         .top-user-rank-value {
           color: #ebc817;
         }
@@ -170,14 +172,22 @@
 
 @media screen and (max-width: 620px) {
   .top-user {
+    width: 80% !important;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1.8rem .8rem !important;
-    font-size: 1rem !important;
+    gap: 1.25rem;
+    padding: 1.75rem .5rem .75rem .5rem !important;
+    margin-bottom: 1.6rem !important;
+    font-size: 1.15rem !important;
   }
 
   .top-user-left {
-    gap: .35rem;
+    flex-direction: column !important;
+    gap: .8rem;
+  }
+
+  .top-user-right {
+    flex-direction: column-reverse !important;
+    gap: .25rem !important;
   }
 
   .top-user-rank {

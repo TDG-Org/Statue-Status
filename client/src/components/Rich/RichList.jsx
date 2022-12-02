@@ -18,8 +18,6 @@ const RichList = ({ allRichestData }) => {
   
   return (
     <div className="rich-list">
-
-      <h3>All Richest Individuals Globally</h3>
       
       {allRichestData.map((item, index) => {
         {/* Person  */}

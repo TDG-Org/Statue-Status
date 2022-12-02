@@ -46,10 +46,10 @@ a {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: 'Kanit', sans-serif;
   color: $light-clr;
-  margin: 1.5rem 0 2.5rem 0 !important;
+  margin: 2.5rem 0 1rem 0 !important; 
   font-weight: bold !important;
   text-align: center;
 
@@ -80,7 +80,6 @@ p, span, em, li, a, i, div {
   flex-wrap: nowrap;
   position: relative;
   width: 100%;
-  overflow: hidden !important;
 }
 
 .page-side-wrapper {
@@ -91,6 +90,8 @@ p, span, em, li, a, i, div {
 // Page Styles 
 
 .page {
+  display: flex;
+  flex-direction: column;
   padding: 2rem .8rem;
   min-height: 100vh;
   width: 95%;
@@ -113,7 +114,7 @@ p, span, em, li, a, i, div {
 
 .pallet {
   padding: 1rem;
-  margin: 2rem 0;
+  margin: .75rem 0 3rem 0;
   background-color: $mid-dark-clr;
   border: 1px solid rgba(43, 43, 43, 0.714);
   border-radius: 8px;
@@ -134,7 +135,7 @@ p, span, em, li, a, i, div {
 
 @media screen and (max-width: 950px) {
   .Statue-Status-Wrapper {
-    flex-direction: column;
+    flex-direction: column; 
     width: 100% !important;
   }
 

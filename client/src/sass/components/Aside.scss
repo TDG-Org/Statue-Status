@@ -4,6 +4,7 @@
 @import "../variables.scss";
 
 .aside-comp {
+  position: sticky !important;
   z-index: 5;
   display: flex;
   background-color: $mid-dark-clr;
@@ -13,7 +14,6 @@
   align-items: center;
   padding: 1.25rem 1rem;
   height: 100vh;
-  position: sticky;
   top: 0;
   left: 0;
 }

@@ -18,7 +18,7 @@ footer {
     .footer-sect {
       h4 {
         text-align: start;
-        font-size: 1.25rem;
+        font-size: 1.3rem;
         margin: .5rem 0 !important;
       }
     }
@@ -27,7 +27,7 @@ footer {
       h3 {
         a {
           color: $prime-clr;
-          font-size: 1.25rem;
+          font-size: 1.3rem;
         }
       }
     }
@@ -38,7 +38,7 @@ footer {
 
       li {
         a {
-          color: $light-clr;
+          color: $mid-light-clr;
 
           &:hover {
           color: $second-clr;

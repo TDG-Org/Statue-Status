@@ -163,7 +163,7 @@ const HomePage = () => {
 
       <hr />
       
-      <h2>Top 5 Richest</h2>
+      <h2>Top 5 Global</h2>
 
       <div className="pallet">
 
@@ -180,6 +180,8 @@ const HomePage = () => {
         
       </div>
 
+      <h2>All Individuals</h2>
+      
       <div className="pallet">
 
         {/* The Richest People List  */}

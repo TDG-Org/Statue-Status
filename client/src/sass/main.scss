@@ -80,6 +80,7 @@ p, span, em, li, a, i, div {
   flex-wrap: nowrap;
   position: relative;
   width: 100%;
+  overflow: hidden !important;
 }
 
 .page-side-wrapper {
@@ -97,7 +98,6 @@ p, span, em, li, a, i, div {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  overflow: hidden;
 }
 
 .pagebg {
@@ -135,9 +135,11 @@ p, span, em, li, a, i, div {
 @media screen and (max-width: 950px) {
   .Statue-Status-Wrapper {
     flex-direction: column;
+    width: 100% !important;
   }
 
   .page {
+    width: 100% !important;
     padding-top: 3.25rem;
   }
 
@@ -145,4 +147,16 @@ p, span, em, li, a, i, div {
     z-index: 2;
   }
 
+}
+
+@media screen and (max-width: 620px) {
+
+  .page {
+    padding-top: 2rem;
+  }
+
+  .pallet {
+    padding: 1.5rem .5rem;
+    margin: .5rem 0; 
+  }
 }

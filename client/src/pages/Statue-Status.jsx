@@ -34,8 +34,6 @@ const StatueStatus = () => {
 
   const location = useLocation();
 
-  // window.addEventListener("scroll", console.log("hello"));
-
   return (
     <div className="Statue-Status-Wrapper">
 

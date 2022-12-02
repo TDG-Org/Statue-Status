@@ -43,7 +43,7 @@ const Nav = ({ isActive }) => {
         </li>
         <li>
           <Link to="about"
-          className="ss-nav-link">About Statue Status</Link>
+          className="ss-nav-link">Learn More</Link>
         </li>
         <li>
           <a href="#"

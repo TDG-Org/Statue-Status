@@ -3,6 +3,9 @@ import React from "react";
 // Styles
 import "./SettingsPage.scss";
 
+// Link 
+import { Link } from "react-router-dom";
+
 const SettingsPage = () => {
   return (
     <div className="SettingsPage page">
@@ -12,7 +15,7 @@ const SettingsPage = () => {
 
       {/* Account Section  */}
       <div className="account-sect">
-        <h3>My Account</h3>
+        <h3><i className="bi bi-person-fill"></i> My Account</h3>
 
         <div className="pallet">
 
@@ -20,17 +23,25 @@ const SettingsPage = () => {
 
           {/* Username  */}
           <div className="account-sect-username">
-            <h4>Username <i className="bi bi-pen"></i></h4>
+            <h4>Username</h4>
             
-              <div className="edit-username-sect">
-                <p className="display-username">TDGNate</p>
-                <button className="edit-username-btn"></button>
+            <div className="edit-username-sect">
+              <p className="display-username">TDGNate</p>
+              <button className="edit-username-btn"></button>
             </div>
-          </div>
+              
+            <Link
+              to="/profile"
+              className="ss-nav-link"
+              >Edit Profile
+          </Link>
+            </div>
+            
+            <hr />
 
           {/* Password  */}
           <div className="account-sect-pass">
-            <h4>Password <i className="bi bi-person-fill-lock"></i></h4>
+            <h4>Password</h4>
             
             <button className="change-password-btn">Change Password</button>
           </div>
@@ -42,7 +53,7 @@ const SettingsPage = () => {
 
       {/* General Settings  */}
       <div className="settings-sect">
-        <h3>General</h3>
+        <h3><i className="bi bi-tools"></i> General</h3>
 
         <div className="pallet">
 
@@ -50,7 +61,7 @@ const SettingsPage = () => {
 
           {/* Appearance  */}
           <div className="settings-sect-appear">
-            <h4>Appearance <i className="bi bi-cloud-moon"></i></h4>
+            <h4>Appearance</h4>
           </div>
 
           {/* logout  */}

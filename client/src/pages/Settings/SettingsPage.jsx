@@ -14,7 +14,8 @@ const SettingsPage = () => {
       <hr />
 
       {/* Account Section  */}
-      <div className="account-sect">
+      <div className="account-sect settings-sect">
+
         <h3><i className="bi bi-person-fill"></i> My Account</h3>
 
         <div className="pallet">
@@ -27,15 +28,17 @@ const SettingsPage = () => {
             
             <div className="edit-username-sect">
               <p className="display-username">TDGNate</p>
-              <button className="edit-username-btn"></button>
+              <button className="edit-username-btn">
+                <i className="bi bi-pen"></i>
+              </button>
             </div>
               
             <Link
               to="/profile"
               className="ss-nav-link"
               >Edit Profile
-          </Link>
-            </div>
+            </Link>
+          </div>
             
             <hr />
 
@@ -52,7 +55,8 @@ const SettingsPage = () => {
       </div>
 
       {/* General Settings  */}
-      <div className="settings-sect">
+      <div className="general-sect settings-sect">
+
         <h3><i className="bi bi-tools"></i> General</h3>
 
         <div className="pallet">
@@ -60,11 +64,11 @@ const SettingsPage = () => {
           <div className="container">
 
           {/* Appearance  */}
-          <div className="settings-sect-appear">
+          <div className="general-sect-appear">
               <h4>Appearance</h4>
               
               <div className="appearance-btns">
-                
+
               </div>
             </div>
 
@@ -83,7 +87,7 @@ const SettingsPage = () => {
             </div>
 
           {/* logout  */}
-          <div className="settings-sect-logout">
+          <div className="general-sect-logout">
             
             <hr />
 

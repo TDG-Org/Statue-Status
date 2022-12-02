@@ -10,42 +10,32 @@ const SettingsPage = () => {
       
       <hr />
 
-      {/* Profile Section  */}
-      <div className="profile-sect">
-        <h3>Edit Profile</h3>
-
-        <div className="pallet">
-
-          {/* Avatar  */}
-          <div className="profile-sect-avatar">
-            <h4>Avatar</h4>
-          </div>
-
-          {/* Username  */}
-          <div className="profile-sect-name">
-            <h4>Username</h4>
-          </div>
-
-          {/* Bio  */}
-          <div className="profile-sect-bio">
-            <h4>Bio</h4>
-          </div>
-
-        </div>
-
-      </div>
-
       {/* Account Section  */}
       <div className="account-sect">
         <h3>My Account</h3>
 
         <div className="pallet">
 
-          {/* Password  */}
-          <div className="account-sect-pass">
-           <h4>Password</h4>
+          <div className="container">
+
+          {/* Username  */}
+          <div className="account-sect-username">
+            <h4>Username <i className="bi bi-pen"></i></h4>
+            
+              <div className="edit-username-sect">
+                <p className="display-username">TDGNate</p>
+                <button className="edit-username-btn"></button>
+            </div>
           </div>
 
+          {/* Password  */}
+          <div className="account-sect-pass">
+            <h4>Password <i className="bi bi-person-fill-lock"></i></h4>
+            
+            <button className="change-password-btn">Change Password</button>
+          </div>
+
+          </div>
         </div>
 
       </div>
@@ -56,9 +46,11 @@ const SettingsPage = () => {
 
         <div className="pallet">
 
+          <div className="container">
+
           {/* Appearance  */}
           <div className="settings-sect-appear">
-            <h4>Appearance</h4>
+            <h4>Appearance <i className="bi bi-cloud-moon"></i></h4>
           </div>
 
           {/* logout  */}
@@ -66,9 +58,10 @@ const SettingsPage = () => {
             
             <hr />
 
-            <a href="#">logout</a>
+            <a href="#">Log Out <i className="bi bi-box-arrow-in-right"></i></a>
           </div>
 
+          </div>
         </div>
 
       </div>

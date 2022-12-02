@@ -13,6 +13,8 @@ const DiscoverPage = () => {
 
       <h1>Discover</h1>
 
+      <hr />
+
       <div className="discover-content">
 
         {/* Discovering Search Section  */}

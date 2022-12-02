@@ -61,8 +61,26 @@ const SettingsPage = () => {
 
           {/* Appearance  */}
           <div className="settings-sect-appear">
-            <h4>Appearance</h4>
-          </div>
+              <h4>Appearance</h4>
+              
+              <div className="appearance-btns">
+                
+              </div>
+            </div>
+
+            <hr />
+            
+            <div className="report-bug-sect">
+              <h4>Report Bug</h4>
+
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores natus illo dignissimos, debitis nesciunt vitae.</p>
+
+              <div className="report-bug-btns">
+              <button className="report-bug-btn">Report Bug</button>
+              <button className="support-btn">Support</button>
+              </div>
+
+            </div>
 
           {/* logout  */}
           <div className="settings-sect-logout">

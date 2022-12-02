@@ -154,10 +154,14 @@
   }
 
   .avatar-sect {
+    justify-content: center;
+    align-items: center;
     width: 75px;
     padding: .5rem;
+    
     img {
-      width: 55px;
+      width: 75%;
+      padding: .15rem;
     }
   }
   

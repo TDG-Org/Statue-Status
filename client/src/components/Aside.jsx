@@ -32,7 +32,7 @@ const Aside = () => {
         <User />
 
         {/* Navbar Section  */}
-        <Nav isActive={ isActive } />
+        <Nav isActive={isActive} handleToggle={handleToggle}  />
 
           {/* Hamburger  */}
         <div className={`hamburger ${isActive ? "" : "active"}`} onClick={handleToggle}>

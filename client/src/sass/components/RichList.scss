@@ -14,16 +14,18 @@
   padding: .5rem;
   margin: 1rem auto;
   flex-wrap: nowrap;
+  position: relative;
   border-radius: 8px;
   flex-direction: row;
   align-items: center;
+  transition: all 850ms ease;
   justify-content: space-between;
-  transition: all 2000ms ease !important;
   background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
   border: 1px solid $mid-light-clr;
 
   &:hover {
-    background-image: linear-gradient(to top, #dafff616, #1111113c);
+    background-image: linear-gradient(to top, #00000013, #ffffff05);
+    border: 1px solid $light-clr;
 
     .top-user-name {
       color: $prime-clr;
@@ -83,6 +85,7 @@
       // Ranking Table 
       .top-user-rank-1 {
         color: #ebc817;
+
         .top-user-rank-value {
           color: #ebc817;
         }
@@ -119,4 +122,77 @@
 
   }
 
+}
+
+// Media Query 
+
+@media screen and (max-width: 950px) {
+
+  .rich-list {
+    padding: .5rem;
+  }
+
+  // User 
+  .top-user {
+    width: 100%; 
+    padding: .5rem 1rem !important;
+
+    .top-user-rank {
+      padding: 0 .55rem !important;
+    }
+
+    .top-user-avatar-wrapper {
+      height: 50px !important; 
+      width: 50px !important;
+      padding: .1rem;
+    }
+  
+    .top-user-name {
+      font-weight: bold;
+      padding: 0 !important;
+    }
+  }
+  
+    // User Right 
+    .top-user-right {
+      gap: .35rem;
+  
+      .top-user-country {
+        text-align: center;
+        padding: 0 !important;
+      }
+  
+      .top-user-money {
+        text-align: center;
+        padding: 0 !important;
+      }
+  
+    }
+}
+
+@media screen and (max-width: 620px) {
+  .top-user {
+    width: 95% !important;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.75rem .5rem .75rem .5rem !important;
+    margin-bottom: 1.6rem !important;
+    font-size: 1.15rem !important;
+  }
+
+  .top-user-left {
+    flex-direction: column !important;
+    gap: .8rem;
+  }
+
+  .top-user-right {
+    flex-direction: column-reverse !important;
+    gap: .25rem !important;
+  }
+
+  .top-user-rank {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
 }

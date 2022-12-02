@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 1.5rem;
+  gap: 2.5%;
 }
 
 .discover-search-sect {
@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   width: 65%;
+  min-width: 225px;
 
   .discover-search-tool {
     display: flex;
@@ -49,8 +50,9 @@
 
     .search-bar-btn {
       width: 11%;
+      min-width: 45px;  
       height: 100%;
-      padding: .8rem;
+      padding: .5rem;
       border-radius: 8px;
       outline: none;
       border: none;
@@ -82,6 +84,7 @@
 
 .discover-user-friends {
   width: 30%;
+  min-width: 200px;
 
   .friends-list {
     display: flex;
@@ -96,7 +99,6 @@
       justify-content: space-between;
       width: 100%;
       padding:.5rem .2rem;
-      // background-color: pink;
 
       .friend-left {
         display: flex;
@@ -130,4 +132,23 @@
     }
   }
 
+}
+
+// Media Queries 
+
+@media screen and (max-width: 740px) {
+  .discover-content {
+    flex-direction: column;
+    align-items: center;
+
+    .discover-search-sect {
+      width: 100%;
+    }
+
+    // Friends 
+
+    .discover-user-friends {
+       width: 100%;
+    }
+  }
 }

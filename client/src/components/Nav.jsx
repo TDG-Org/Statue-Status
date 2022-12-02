@@ -60,7 +60,7 @@ const Nav = ({ isActive, handleToggle }) => {
           <Link
             to="about"
             className="ss-nav-link"
-            onClick={handleToggle}>About Statue Status
+            onClick={handleToggle}>Learn More
           </Link>
         </li>
         <li>

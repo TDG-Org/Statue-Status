@@ -17,21 +17,18 @@ const SettingsPage = () => {
         <div className="pallet">
 
           {/* Avatar  */}
-          <h4>Avatar</h4>
           <div className="profile-sect-avatar">
-
+            <h4>Avatar</h4>
           </div>
 
           {/* Username  */}
-          <h4>Username</h4>
           <div className="profile-sect-name">
-
+            <h4>Username</h4>
           </div>
 
           {/* Bio  */}
-          <h4>Bio</h4>
           <div className="profile-sect-bio">
-
+            <h4>Bio</h4>
           </div>
 
         </div>
@@ -44,11 +41,10 @@ const SettingsPage = () => {
 
         <div className="pallet">
 
-          {/* Appearance  */}
-          <h4>Appearance</h4>
-
           {/* Password  */}
-          <h4>Password</h4>
+          <div className="account-sect-pass">
+           <h4>Password</h4>
+          </div>
 
         </div>
 
@@ -60,9 +56,18 @@ const SettingsPage = () => {
 
         <div className="pallet">
 
-          <h4>Test</h4>
-          
-          <h4>Test</h4>
+          {/* Appearance  */}
+          <div className="settings-sect-appear">
+            <h4>Appearance</h4>
+          </div>
+
+          {/* logout  */}
+          <div className="settings-sect-logout">
+            
+            <hr />
+
+            <a href="#">logout</a>
+          </div>
 
         </div>
 

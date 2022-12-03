@@ -17,7 +17,7 @@ const ProfilePage = () => {
       
       <hr />
 
-        {/* Profile Section  */}
+      {/* Profile Section  */}
       <div className="profile-sect">
         <h3>Edit Profile</h3>
 
@@ -25,26 +25,30 @@ const ProfilePage = () => {
 
           <div className="container">
 
-            {/* Avatar  */}
-            <div className="profile-sect-avatar">
-              <div className="profile-sect-avatar-content">
-                <img src={Pancake} alt="" />
-                <div className="avatar-edit-overlay"></div>
-              </div>
-              <h4>Avatar</h4>
-            </div>
+            <div className="user-edit">
 
-            {/* Right Side  */}
-            <div className="text-edit-side">
-
-              {/* Username  */}
-              <div className="profile-sect-name">
-                <h4>Username</h4>
+              {/* Avatar  */}
+              <div className="profile-sect-avatar">
+                <div className="profile-sect-avatar-content">
+                  <img src={Pancake} alt="" />
+                  <div className="avatar-edit-overlay"></div>
+                </div>
+                <h4>Avatar</h4>
               </div>
 
-              {/* Bio  */}
-              <div className="profile-sect-bio">
-                <h4>Bio</h4>
+              {/* Right Side  */}
+              <div className="text-edit-side">
+
+                {/* Username  */}
+                <div className="profile-sect-name">
+                  <h4 id="profileUsername">TDGNate</h4>
+                </div>
+
+                {/* Bio  */}
+                <div className="profile-sect-bio">
+                  <h4>Bio</h4>
+                  <input type="text" className="bio-input" disabled />
+                </div>
               </div>
             </div>
 
@@ -78,7 +82,7 @@ const ProfilePage = () => {
                 <h3>Christian Nathaniel McIlvenny</h3>
                 <div className="badges-sect">
                   <div className="badge">
-                    
+
                   </div>
                 </div>
               </div>        

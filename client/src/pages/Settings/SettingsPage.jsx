@@ -6,7 +6,18 @@ import "./SettingsPage.scss";
 // Link 
 import { Link } from "react-router-dom";
 
+// Emailjs 
+import emailjs from "@emailjs/browser";
+
+// Sweet Alert 
+import swal from "sweetalert";
+
 const SettingsPage = () => {
+
+  const support = () => {
+    swal("Here's the title!", "...and here's the text!");
+  };
+
   return (
     <div className="SettingsPage page">
       <h1>Settings</h1>
@@ -46,7 +57,9 @@ const SettingsPage = () => {
           <div className="account-sect-pass">
               <h4>Password</h4>
               
-              <p className="settings-p">Make sure you Statue Status account is protected and secure by having your password contain <span className="pass-fff">upper-case</span>, <span className="pass-fff">lower-case</span>, <span className="pass-fff">numbers</span>, and <span className="pass-fff">special characters</span> </p>
+              <p className="settings-p">
+                Make sure your password contains <span className="pass-fff">uppercase</span>, <span className="pass-fff">lowercase</span>, <span className="pass-fff">digits</span>, and <span className="pass-fff">special characters</span> to keep your account <span className="pass-fff">safe</span> and <span className="pass-fff">secure</span>.
+              </p>
             
             <button className="change-password-btn">Change Password</button>
           </div>
@@ -84,7 +97,7 @@ const SettingsPage = () => {
 
               <div className="report-bug-btns">
               <button className="report-bug-btn">Report Bug</button>
-              <button className="support-btn">Support</button>
+              <button className="support-btn" onClick={support}>Support</button>
               </div>
 
             </div>

@@ -50,7 +50,7 @@
           }
         }
 
-      // Right Side of Profile 
+      // left Side of Profile 
       .text-edit-side {
         display: flex;
         flex-direction: column;
@@ -58,10 +58,34 @@
         h4 {
           text-align: start;
         }
-        .bio-input {
-          min-width: 300px;
-          min-height: 100px;
-          width: 90% !important;
+        .profile-sect-bio {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .bio-input {
+            min-width: 300px;
+            min-height: 80px;
+            width: 90% !important;
+            background-color: $mid-dark-clr;
+            resize: none;
+            padding: .25rem;
+            outline: none;
+            border-radius: 8px;
+            border: 1px solid $low-dark-clr;
+          }
+          .edit-bio-btn {
+            width: 100%;
+            margin: .75rem auto;
+            padding: .35rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            border: 1px solid $low-dark-clr;
+            background-color: $mid-dark-clr;
+            &:hover {
+              border: 1px solid $accent-clr;
+              background-color: $low-dark-clr;
+            }
+          }
         }
       }
      }

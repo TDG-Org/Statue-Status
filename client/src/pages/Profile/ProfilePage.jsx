@@ -48,7 +48,8 @@ const ProfilePage = () => {
                 {/* Bio  */}
                 <div className="profile-sect-bio">
                   <h4>Bio</h4>
-                  <input type="text" className="bio-input" disabled />
+                  <textarea type="text" className="bio-input" value="This is some test values" disabled></textarea>
+                  <button className="edit-bio-btn"><i className="bi bi-pen"></i></button>
                 </div>
               </div>
             </div>
@@ -82,6 +83,9 @@ const ProfilePage = () => {
               <div className="profile-sect-statue">
                 <h4>Statue</h4>
                 <Link>Christian McIlvenny</Link>
+
+                {/* If user does not have a statue  */}
+                <p className="no-statue">NA</p>
               </div>
             </div>
 

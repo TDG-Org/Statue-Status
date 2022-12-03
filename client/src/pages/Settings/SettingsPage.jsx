@@ -101,9 +101,6 @@ const SettingsPage = () => {
               </button>
               </div>
               
-              <hr />
-            
-            <h4>My Profile</h4>
             <Link
               to="/profile"
               className="edit-profile-link"

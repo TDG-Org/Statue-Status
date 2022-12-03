@@ -42,11 +42,11 @@
         flex-direction: row;
         justify-content: center;
         flex-wrap: nowrap; 
-        margin: .5rem 0; 
+        margin: .5rem 0 1.25rem 0; 
         padding: 1rem;
         gap: .5rem;
-        // border-bottom: .5px solid rgba(52, 52, 52, 0.349);
         position: relative;
+        border-bottom: .5px solid rgba(52, 52, 52, 0.349);
 
         .display-username {
           width: 75%;

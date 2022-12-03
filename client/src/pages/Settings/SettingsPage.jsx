@@ -75,7 +75,8 @@ const SettingsPage = () => {
             </div>
 
             <hr />
-            
+
+            {/* Bugs Section  */}
             <div className="report-bug-sect">
               <h4>Report Bug</h4>
 

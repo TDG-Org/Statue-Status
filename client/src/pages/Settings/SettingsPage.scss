@@ -130,5 +130,53 @@
         }
       }
     }
+
+    // General Section 
+
+    // Appearance 
+
+    // Report Bugs
+    .report-bug-sect {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .report-bug-btns {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: center;
+        gap: 1rem;
+
+        .report-bug-btn, .support-btn {
+          background: transparent;
+          color: $mid-light-clr;
+          width: 30%; 
+          max-width: 325px;
+          padding: .5rem;
+          border: 1px solid $low-dark-clr;
+          transition: all 250ms ease;   
+    
+          &:hover {
+            background: $low-dark-clr;
+            color: $light-clr;
+          }
+        }
+        
+        .report-bug-btn {
+          &:hover {
+            border: 1px solid $mid-yellow-clr;
+          }
+        }
+        
+        .support-btn {
+          &:hover {
+            border: 1px solid $prime-clr;
+          }
+        }
+      }
+    }       
+
   }
 }

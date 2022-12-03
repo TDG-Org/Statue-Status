@@ -84,6 +84,48 @@ const SettingsPage = () => {
               
               <div className="appearance-btns">
 
+                {/* default Themes  */}
+                
+                <div className="defaut-themes">
+
+                  {/* Light  */}
+                  <div className="light-theme-btn theme-btn">
+                    <input type="radio" id="lightTheme" name="theme" value="light"/>
+                    <label htmlFor="lightTheme">Light</label>
+                  </div>
+
+                  {/* Dark  */}
+                  <div className="dark-theme-btn theme-btn">
+                    <input type="radio" id="darkTheme" name="theme" value="dark"/>
+                    <label htmlFor="darkTheme">Dark</label>
+                  </div>
+
+                </div>
+
+                {/* Special Theme  */}
+
+                <div className="special-themes">
+
+                  {/* Red Wine  */}
+                  <div className="red-theme-btn theme-btn">
+                    <input type="radio" id="redTheme" name="theme" value="red" disabled/>
+                    <label htmlFor="redTheme">Red Wine</label>
+                  </div>
+
+                  {/* Earth Tone  */}
+                  <div className="Earth-theme-btn theme-btn">
+                    <input type="radio" id="earthTheme" name="theme" value="earth"/>
+                    <label htmlFor="earthTheme">Earth Tone</label>
+                  </div>
+
+                  {/* Blue Ocean  */}
+                  <div className="blue-theme-btn theme-btn">
+                    <input type="radio" id="blueTheme" name="theme" value="blue"/>
+                    <label htmlFor="blueTheme">Blue Ocean</label>
+                  </div>
+
+                </div>
+
               </div>
             </div>
 

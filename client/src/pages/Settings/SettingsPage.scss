@@ -121,7 +121,7 @@
         text-align: center;
         padding: .5rem;
         border: 1px solid $low-dark-clr;
-        transition: all 250ms ease;   
+        transition: all 250ms ease;
   
         &:hover {
           border: 1px solid $second-clr;
@@ -134,6 +134,70 @@
     // General Section 
 
     // Appearance 
+    .appearance-btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 1rem auto;
+      padding: .8rem;
+      background: $mid-dark-clr;
+      border-radius: 8px;
+      border: 1px solid $low-dark-clr;
+
+      .theme-btn {
+        padding: .8rem 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all 250ms ease;
+
+        &:hover {
+
+          label {
+            color: $light-clr;
+            cursor: pointer;
+          }
+
+          input {
+            margin: 0 .5rem;
+            cursor: pointer;
+          }
+        }
+
+        input {
+          margin: 0 .5rem;
+        }
+        
+        label {
+          color: $mid-light-clr;
+        }
+      }
+
+      // Light 
+      .light-theme-btn {
+        &:hover {
+          border: 1px solid $light-clr;
+        }
+      }
+
+      // Dark 
+      .dark-theme-btn {
+        &:hover {
+          border: 1px solid $mid-light-clr;
+        }
+      }
+
+      // Red 
+      .red-theme-btn {
+        &:hover {
+          border: 1px solid $red-clr;
+        }
+      }
+    }
 
     // Report Bugs
     .report-bug-sect {

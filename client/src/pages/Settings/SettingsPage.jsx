@@ -33,18 +33,43 @@ const SettingsPage = () => {
       buttons: ["Cancel", "Ok"]
     })
       .then((name) => {
-        console.log(name);
+
+        // check if value is null, then close model 
+        if (name == null) {
+          swal.close();
+          return;
+        }
+
+        // Update Object with Values 
         newUsername.name = name;
+
+        // Ask for Password 
         swal({
           text: "Type in your password below to update your username.",
           content: "input",
           buttons: ["Cancel", "Update"]
         })
           .then((password) => {
-            console.log(password);
+
+            if (password == null) {
+              swal.close();
+              return;
+            }
+
+            // Update Object with Values 
             newUsername.password = password;
           })
           .then(() => {
+            swal({
+              title: newUsername.name + ", you're updated!",
+              icon: "success",
+              button: false
+            });
+
+            setTimeout(() => {
+              swal.close();
+            }, 1750);
+
              console.log(newUsername);
         });
       });    

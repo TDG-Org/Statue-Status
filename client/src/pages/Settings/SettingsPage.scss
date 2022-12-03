@@ -185,24 +185,6 @@
 
         input {
           margin: 0 .5rem;
-
-          &:disabled {
-            color: pink;
-          }
-
-          &:before {
-            content: "";
-            width: 0.65em !important;
-            height: 0.65em !important;
-            border-radius: 50% !important;
-            transform: scale(0) !important;
-            transition: 120ms transform ease-in-out !important;
-            box-shadow: inset 1em 1em blue !important;
-          }
-
-          &:checked {
-            transform: scale(1) !important;
-          }
         }
         
         label {

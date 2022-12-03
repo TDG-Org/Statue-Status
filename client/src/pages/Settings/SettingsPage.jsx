@@ -14,9 +14,22 @@ import swal from "sweetalert";
 
 const SettingsPage = () => {
 
+  // Support Function 
   const support = () => {
     swal("Here's the title!", "...and here's the text!");
   };
+
+  // Changing username function 
+  function updateUsername() {
+    // swal("Write something here:", {
+    //   content: "input",
+    // })
+    // .then((value) => {
+    //   swal(`You typed: ${value}`);
+    // });
+
+    swal("Good job!", "You clicked the button!", "success");
+  }
 
   return (
     <div className="SettingsPage page">
@@ -37,9 +50,9 @@ const SettingsPage = () => {
           <div className="account-sect-username">
             <h4>Username</h4>
             
-            <div className="edit-username-sect">
+              <div className="edit-username-sect">
               <p className="display-username">TDGNate</p>
-              <button className="edit-username-btn">
+              <button className="edit-username-btn" onClick={updateUsername}>
                 <i className="bi bi-pen"></i>
               </button>
             </div>
@@ -96,7 +109,7 @@ const SettingsPage = () => {
 
                   {/* Dark  */}
                   <div className="dark-theme-btn theme-btn">
-                    <input type="radio" id="darkTheme" name="theme" value="dark" checked />
+                    <input type="radio" id="darkTheme" name="theme" value="dark" defaultChecked />
                     <label htmlFor="darkTheme">Dark</label>
                   </div>
 

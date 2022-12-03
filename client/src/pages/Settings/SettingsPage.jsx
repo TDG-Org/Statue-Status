@@ -79,7 +79,7 @@ const SettingsPage = () => {
             <div className="report-bug-sect">
               <h4>Report Bug</h4>
 
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores natus illo dignissimos, debitis nesciunt vitae.</p>
+              <p className="settings-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores natus illo dignissimos, debitis nesciunt vitae.</p>
 
               <div className="report-bug-btns">
               <button className="report-bug-btn">Report Bug</button>

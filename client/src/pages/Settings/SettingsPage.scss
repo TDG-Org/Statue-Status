@@ -320,3 +320,41 @@
 
   }
 }
+
+
+// Media Queries 
+
+@media screen and (max-width: 950px) {
+  .SettingsPage {
+    background-image: url("../../assets/svgs/settingspage-background.svg");
+  
+    .pallet {
+  
+      .settings-p {
+        width: 90%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .appearance-btns, button {
+    font-size: .9rem !important;
+
+    .default-themes, .special-themes {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .report-bug-btns {
+    padding: 1.5rem 0 !important;
+    flex-direction: column  !important;
+
+    button {
+      width: 80% !important;
+      margin: 0 auto;
+    }
+  }
+}

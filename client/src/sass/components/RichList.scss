@@ -18,18 +18,14 @@
   border-radius: 8px;
   flex-direction: row;
   align-items: center;
-  transition: all 850ms ease;
+  transition: all 500ms ease;
   justify-content: space-between;
   background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
-  border: 1px solid $mid-light-clr;
+  border: 1px solid $low-dark-clr;
 
   &:hover {
     background-image: linear-gradient(to top, #00000013, #ffffff05);
-    border: 1px solid $light-clr;
-
-    .top-user-name {
-      color: $prime-clr;
-    }
+    border: 1px solid $mid-light-clr;
 
     .top-user-avatar {
       border: 1px solid $prime-clr !important;

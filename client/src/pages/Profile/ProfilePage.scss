@@ -8,17 +8,26 @@
   .pallet {
     width: 100%;
     .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      // justify-content: space-around; 
+      .profile-sect-divider {
+        background: $low-dark-clr;
+        height: 200px;
+        width: 1.5px;
+        margin: auto 2.5rem;
+      }
       .user-edit {
         display: flex;
         flex-direction: row;
-        // align-items: center; 
-        gap: 1rem;
+        gap: 1.5rem;
+        width: 60%;
         .profile-sect-avatar {
           display: flex;
           flex-direction: column;
           .profile-sect-avatar-content {
             display: flex;
-            // justify-content: center; 
             align-items: center;
             position: relative;
             width: 150px;
@@ -54,6 +63,20 @@
           min-height: 100px;
           width: 90% !important;
         }
+      }
+     }
+
+    // User info 
+    .other-user-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: start;
+      width: 20%;
+
+      h4, p {
+        margin: 0 !important;
       }
      }
     }

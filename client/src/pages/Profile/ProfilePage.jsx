@@ -25,6 +25,7 @@ const ProfilePage = () => {
 
           <div className="container">
 
+            {/* User can edit  */}
             <div className="user-edit">
 
               {/* Avatar  */}
@@ -49,6 +50,30 @@ const ProfilePage = () => {
                   <h4>Bio</h4>
                   <input type="text" className="bio-input" disabled />
                 </div>
+              </div>
+            </div>
+
+            <div className="profile-sect-divider"></div>
+
+            {/* User info  */}
+            <div className="other-user-info">
+
+              {/* Badges  */}
+              <div className="profile-sect-badges">
+                <div className="profile-sect-badge">
+
+                </div>
+              </div>
+
+              {/* Reputations  */}
+              <div className="profile-sect-reps">
+                <h4>Reputations</h4>
+                <p>1.5k</p>
+              </div>
+
+              {/* Reputations  */}
+              <div className="profile-sect-statue">
+                <Link>Christian McIlvenny</Link>
               </div>
             </div>
 

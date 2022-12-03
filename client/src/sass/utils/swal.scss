@@ -4,16 +4,16 @@
 @import "../variables.scss";
 
 .swal-modal {
-	background-color: var(--sub-purp-clr);
-	border: 1px solid var(--blue-clr);
+	background-color: rgba(0, 0, 0, 0.936);
+	border: 1px solid $mid-light-clr;
 }
 
-.swal-title {
-	color: var(--light-clr);
+.swal-title { 
+	color: $light-clr;
 }
 
 .swal-text {
-	color: var(--light-clr);
+	color: $light-clr;
 }
 
 /* Sweet Alert button  */
@@ -24,39 +24,44 @@
 	font-size: 15px;
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 	outline: none;
-	border: 1px solid var(--dark-clr);
+	border: 1px solid $dark-clr; 
 	padding: 0.7rem 1.5rem;
 	border-radius: 5px;
-	transition: all 400ms ease;
-	color: white;
-	background-color: rgba(45, 127, 178, 0.325);
+	transition: all 250ms ease;
+	color: $dark-clr;
+	background-color: $second-clr;
+
+		&:hover {
+			color: $light-clr !important;
+			background-color: $prime-clr !important;	
+		}
 }
 
 .swal-button:hover {
-	color: black;
+	color: $dark-clr;
 	background-color: transparent;
 }
 
 /* Sweet Alert Overlays  */
 
 .swal-overlay {
-	background-color: rgba(0, 0, 0, 0.682);
+	background-color: rgba(0, 0, 0, 0.728);
 }
 
 /* Sweet Alert Icons  */
 
 .swal-icon {
-	background-color: var(--sub-purp-clr);
+	background-color: $mid-dark-clr;
 	gap: 0;
 }
 .swal-icon::after {
-	background-color: var(--sub-purp-clr);
+	background-color: $mid-dark-clr;
 }
 .swal-icon::before {
-	background-color: var(--sub-purp-clr);
+	background-color: $mid-dark-clr;
 }
 .swal-icon--success__hide-corners {
-	background-color: var(--sub-purp-clr);
+	background-color: $mid-dark-clr;
 	padding: 0;
 	top: -13px;
 	width: 25px;

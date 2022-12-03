@@ -10,13 +10,13 @@
     .container {
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
       flex-wrap: nowrap;
-      // justify-content: space-around; 
       .profile-sect-divider {
         background: $low-dark-clr;
         height: 200px;
         width: 1.5px;
-        margin: auto 2.5rem;
+        margin: auto 3rem;
       }
       .user-edit {
         display: flex;
@@ -70,14 +70,61 @@
     .other-user-info {
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      text-align: start;
+      justify-content: space-evenly; 
+      align-items: flex-start;
+      text-align: center;
       width: 20%;
-
       h4, p {
+        text-align: start;
         margin: 0 !important;
+        margin-bottom: .8rem !important;
       }
+      .profile-sect-badges {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        .profile-sect-badge {
+          width: 30px;
+          img {
+            width: 100%;
+          }
+        }
+       }
+       .profile-sect-reps {
+        .rep {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          font-size: 1.1rem;
+          &:hover {
+            p, span {
+              cursor: pointer;
+              color: $accent-clr !important;
+            }
+            i {
+              color: rgb(255, 166, 0);
+            }
+          }
+          p {
+            color: $mid-light-clr;
+          }
+          i {
+            margin-left: .8rem;
+          }
+        }
+       }
+       .profile-sect-statue {
+        a {
+          color: $mid-light-clr !important;
+          &:hover {
+            cursor: pointer;
+            color: $accent-clr !important;
+            text-decoration: underline !important;
+          }
+        }
+       }
      }
     }
   }

@@ -7,7 +7,7 @@ import "./ProfilePage.scss";
 import { Link } from "react-router-dom";
 
 // Images/SVGs 
-import { Pancake } from "../../assets/imgs/";
+import { Pancake, Brilliance, Bravery } from "../../assets/imgs/";
 
 const ProfilePage = () => {
   return (
@@ -61,18 +61,26 @@ const ProfilePage = () => {
               {/* Badges  */}
               <div className="profile-sect-badges">
                 <div className="profile-sect-badge">
-
+                  <img src={Brilliance} alt="" />
+                </div>
+                <div className="profile-sect-badge">
+                  <img src={Bravery} alt="" />
                 </div>
               </div>
 
               {/* Reputations  */}
               <div className="profile-sect-reps">
                 <h4>Reputations</h4>
-                <p>1.5k</p>
+                <div className="rep">
+                  <span>+</span>
+                  <p id="repCount">1,583</p>
+                  <i className="bi bi-fire"></i>
+                </div>
               </div>
 
               {/* Reputations  */}
               <div className="profile-sect-statue">
+                <h4>Statue</h4>
                 <Link>Christian McIlvenny</Link>
               </div>
             </div>

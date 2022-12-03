@@ -70,6 +70,20 @@ const ProfilePage = () => {
               <button className="create-statue-btn">Create Statue</button>
             </div>
 
+            {/* if the user has a statue  */}
+            <div className="statue">
+              <div className="primary-sect">
+                {/* Full picture of user  */}
+                <img src="" alt="" className="statue-img" />
+                <h3>Christian Nathaniel McIlvenny</h3>
+                <div className="badges-sect">
+                  <div className="badge">
+                    
+                  </div>
+                </div>
+              </div>        
+            </div>
+
           </div>
 
         </div>

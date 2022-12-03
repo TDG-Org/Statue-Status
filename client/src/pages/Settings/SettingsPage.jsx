@@ -21,14 +21,33 @@ const SettingsPage = () => {
 
   // Changing username function 
   function updateUsername() {
-    // swal("Write something here:", {
-    //   content: "input",
-    // })
-    // .then((value) => {
-    //   swal(`You typed: ${value}`);
-    // });
+    let newUsername = {
+      name: "",
+      password: ""
+    };
 
-    swal("Good job!", "You clicked the button!", "success");
+    swal({
+      title: ["New Username"],
+      text: "Type in your new username below!",
+      content: "input",
+      buttons: ["Cancel", "Ok"]
+    })
+      .then((name) => {
+        console.log(name);
+        newUsername.name = name;
+        swal({
+          text: "Type in your password below to update your username.",
+          content: "input",
+          buttons: ["Cancel", "Update"]
+        })
+          .then((password) => {
+            console.log(password);
+            newUsername.password = password;
+          })
+          .then(() => {
+             console.log(newUsername);
+        });
+      });    
   }
 
   return (
@@ -50,13 +69,16 @@ const SettingsPage = () => {
           <div className="account-sect-username">
             <h4>Username</h4>
             
-              <div className="edit-username-sect">
+            <div className="edit-username-sect">
               <p className="display-username">TDGNate</p>
               <button className="edit-username-btn" onClick={updateUsername}>
                 <i className="bi bi-pen"></i>
               </button>
-            </div>
+              </div>
               
+              <hr />
+            
+            <h4>My Profile</h4>
             <Link
               to="/profile"
               className="edit-profile-link"

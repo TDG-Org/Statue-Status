@@ -4,16 +4,30 @@
 @import "../variables.scss";
 
 .swal-modal {
-	background-color: rgba(0, 0, 0, 0.936);
+	background-color: rgba(0, 0, 0, 0.827);
 	border: 1px solid $mid-light-clr;
-}
+	padding: 1.5rem .75rem;
 
-.swal-title { 
-	color: $light-clr;
-}
+	.swal-title { 
+		color: $light-clr;
+	}
 
-.swal-text {
-	color: $light-clr;
+	.swal-text {
+		text-align: center;
+		color: $light-clr;
+	}
+
+	input {
+		background-color: $mid-dark-clr;
+		border-bottom: 1px solid $second-clr;
+		color: $light-clr;
+		border-radius: 8px;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $second-clr;
+		}
+	}
 }
 
 /* Sweet Alert button  */
@@ -32,14 +46,23 @@
 	background-color: $second-clr;
 
 		&:hover {
-			color: $light-clr !important;
-			background-color: $prime-clr !important;	
+			color: $light-clr;
+			background-color: transparent !important;
+			border-bottom: 1px solid $second-clr;
+			border-top: 1px solid $second-clr;
 		}
 }
 
-.swal-button:hover {
-	color: $dark-clr;
+.swal-button--cancel {
 	background-color: transparent;
+	color: $light-clr;
+	border: 1px solid transparent;
+
+	&:hover {
+		background-color: transparent !important;
+		border-bottom: 1px solid $red-clr;
+		border-top: 1px solid $red-clr;
+	}
 }
 
 /* Sweet Alert Overlays  */

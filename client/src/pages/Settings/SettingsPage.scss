@@ -5,7 +5,9 @@
 
 .SettingsPage {
   background-image: url("../../assets/svgs/settingspage-background.svg");
+
   .pallet {
+
     hr {
       width: 75%;
       margin: 1.25rem auto;
@@ -30,7 +32,7 @@
         margin: .5rem 0; 
         padding: 1rem;
         gap: .5rem;
-        border-bottom: .5px solid rgba(19, 19, 19, 0.278);
+        border-bottom: .5px solid rgba(19, 19, 19, 0.349);
 
         .display-username {
           width: 75%;
@@ -38,12 +40,11 @@
           margin: 0;
           background-color: $mid-dark-clr;
           border-radius: 8px;
-          border: 1px solid $high-dark-clr;
+          border: 1px solid $low-dark-clr;
           cursor: not-allowed;
         }
 
         .edit-username-btn {
-          color: $light-clr;
           border: none;
           margin: 0;
           width: 25%;
@@ -51,14 +52,41 @@
           padding: .5rem;
           background-color: $mid-dark-clr;
           border-radius: 8px;
-          border: 1px solid $high-dark-clr;
+          border: 1px solid $low-dark-clr;
           transition: all 250ms ease;
+
+          i {
+            color: $mid-light-clr;
+          }
 
           &:hover {
             border: 1px solid $second-clr;
-            background-color: rgba(17, 17, 17, 0.468);
+            background-color: $low-dark-clr;
+            color: $light-clr;
+
+            i {
+              color: $light-clr;
+            }
           }
         }
+      }
+    }
+
+    // Edit profile link 
+    .edit-profile-link {
+      color: $mid-light-clr;
+      width: 45%;
+      max-width: 325px;
+      margin: .2rem auto;
+      text-align: center;
+      padding: .5rem;
+      border: 1px solid $low-dark-clr;
+      transition: all 250ms ease;
+
+      &:hover {
+        border: 1px solid $second-clr;
+        background: $low-dark-clr;
+        color: $light-clr;
       }
     }
   }

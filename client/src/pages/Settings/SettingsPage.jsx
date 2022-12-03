@@ -35,7 +35,7 @@ const SettingsPage = () => {
               
             <Link
               to="/profile"
-              className="ss-nav-link"
+              className="edit-profile-link"
               >Edit Profile
             </Link>
           </div>

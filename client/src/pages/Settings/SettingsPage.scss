@@ -45,7 +45,7 @@
         margin: .5rem 0; 
         padding: 1rem;
         gap: .5rem;
-        border-bottom: .5px solid rgba(19, 19, 19, 0.349);
+        border-bottom: .5px solid rgba(52, 52, 52, 0.349);
 
         .display-username {
           width: 75%;
@@ -155,7 +155,7 @@
       hr {
         width: 100px;
         color: $mid-light-clr;
-        margin: 0;
+        margin: .25rem 0;
       }
 
       .theme-btn {
@@ -170,9 +170,7 @@
         transition: all 250ms ease;
 
         &:hover {
-
           border: 1px solid transparent;
-
 
           label {
             color: $light-clr;
@@ -187,6 +185,24 @@
 
         input {
           margin: 0 .5rem;
+
+          &:disabled {
+            color: pink;
+          }
+
+          &:before {
+            content: "";
+            width: 0.65em !important;
+            height: 0.65em !important;
+            border-radius: 50% !important;
+            transform: scale(0) !important;
+            transition: 120ms transform ease-in-out !important;
+            box-shadow: inset 1em 1em blue !important;
+          }
+
+          &:checked {
+            transform: scale(1) !important;
+          }
         }
         
         label {
@@ -215,6 +231,22 @@
         &:hover {
           border-bottom: 1px solid $red-clr;
           border-top: 1px solid $red-clr;
+        }
+      }
+
+      // Earth 
+      .earth-theme-btn {
+        &:hover {
+          border-bottom: 1px solid rgb(255, 230, 155);
+          border-top: 1px solid rgb(255, 230, 155);
+        }
+      }
+
+      // Blue 
+      .blue-theme-btn {
+        &:hover {
+          border-bottom: 1px solid $prime-clr;
+          border-top: 1px solid $prime-clr;
         }
       }
     }

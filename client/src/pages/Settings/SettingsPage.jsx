@@ -96,7 +96,7 @@ const SettingsPage = () => {
 
                   {/* Dark  */}
                   <div className="dark-theme-btn theme-btn">
-                    <input type="radio" id="darkTheme" name="theme" value="dark"/>
+                    <input type="radio" id="darkTheme" name="theme" value="dark" checked />
                     <label htmlFor="darkTheme">Dark</label>
                   </div>
 
@@ -110,19 +110,19 @@ const SettingsPage = () => {
 
                   {/* Red Wine  */}
                   <div className="red-theme-btn theme-btn">
-                    <input type="radio" id="redTheme" name="theme" value="red" disabled/>
+                    <input type="radio" id="redTheme" name="theme" value="red" disabled />
                     <label htmlFor="redTheme">Red Wine</label>
                   </div>
 
                   {/* Earth Tone  */}
-                  <div className="Earth-theme-btn theme-btn">
-                    <input type="radio" id="earthTheme" name="theme" value="earth"/>
+                  <div className="earth-theme-btn theme-btn">
+                    <input type="radio" id="earthTheme" name="theme" value="earth" disabled />
                     <label htmlFor="earthTheme">Earth Tone</label>
                   </div>
 
                   {/* Blue Ocean  */}
                   <div className="blue-theme-btn theme-btn">
-                    <input type="radio" id="blueTheme" name="theme" value="blue"/>
+                    <input type="radio" id="blueTheme" name="theme" value="blue" disabled />
                     <label htmlFor="blueTheme">Blue Ocean</label>
                   </div>
 

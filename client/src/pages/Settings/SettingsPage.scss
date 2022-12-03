@@ -172,11 +172,41 @@
         
         .support-btn {
           &:hover {
-            border: 1px solid $prime-clr;
+            border: 1px solid $second-clr;
           }
         }
       }
-    }       
+    } 
+    
+    // Loggout 
+
+    .general-sect-logout {
+      display: flex;
+      padding: 1rem;
+      justify-content: center;
+      flex-direction: column;
+
+      .settings-loggout-btn {
+        margin: 1rem auto;
+        text-align: center;
+        font-size: 1.1rem;
+        color: $mid-red-clr;
+        width: fit-content;
+
+        i {
+          color: $mid-light-clr;
+        }
+
+        &:hover {
+         color: $red-clr;
+          text-decoration: underline !important;
+
+          i {
+            color: $light-clr;
+          }
+        }
+      }
+    }
 
   }
 }

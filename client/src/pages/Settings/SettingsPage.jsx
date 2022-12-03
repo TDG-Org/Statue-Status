@@ -94,7 +94,7 @@ const SettingsPage = () => {
             
             <hr />
 
-            <a href="#">Log Out <i className="bi bi-box-arrow-in-right"></i></a>
+            <a href="#" className="settings-loggout-btn">Log Out <i className="bi bi-box-arrow-in-right"></i></a>
           </div>
 
           </div>

@@ -44,7 +44,9 @@ const SettingsPage = () => {
 
           {/* Password  */}
           <div className="account-sect-pass">
-            <h4>Password</h4>
+              <h4>Password</h4>
+              
+              <p className="settings-p">Make sure you Statue Status account is protected and secure by having your password contain <span className="pass-fff">upper-case</span>, <span className="pass-fff">lower-case</span>, <span className="pass-fff">numbers</span>, and <span className="pass-fff">special characters</span> </p>
             
             <button className="change-password-btn">Change Password</button>
           </div>

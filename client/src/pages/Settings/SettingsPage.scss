@@ -143,12 +143,26 @@
       margin: 1rem auto;
       padding: .8rem;
       background: $mid-dark-clr;
-      border-radius: 8px;
+      border-radius: 8px; 
       border: 1px solid $low-dark-clr;
+
+      .default-themes, .special-themes {
+        display: flex;
+        flex-direction: row;
+        margin: .75rem 0;
+      }
+
+      hr {
+        width: 100px;
+        color: $mid-light-clr;
+        margin: 0;
+      }
 
       .theme-btn {
         padding: .8rem 1rem;
-        border-radius: 8px;
+        margin: 0 .5rem;
+        border-radius: 10px;
+        border: 1px solid transparent;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -156,6 +170,9 @@
         transition: all 250ms ease;
 
         &:hover {
+
+          border: 1px solid transparent;
+
 
           label {
             color: $light-clr;
@@ -180,21 +197,24 @@
       // Light 
       .light-theme-btn {
         &:hover {
-          border: 1px solid $light-clr;
+          border-bottom: 1px solid $light-clr;
+          border-top: 1px solid $light-clr;
         }
       }
 
       // Dark 
       .dark-theme-btn {
         &:hover {
-          border: 1px solid $mid-light-clr;
+          border-bottom: 1px solid $mid-light-clr;
+          border-top: 1px solid $mid-light-clr;
         }
       }
 
       // Red 
       .red-theme-btn {
         &:hover {
-          border: 1px solid $red-clr;
+          border-bottom: 1px solid $red-clr;
+          border-top: 1px solid $red-clr;
         }
       }
     }

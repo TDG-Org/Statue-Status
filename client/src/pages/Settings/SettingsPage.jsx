@@ -86,7 +86,7 @@ const SettingsPage = () => {
 
                 {/* default Themes  */}
                 
-                <div className="defaut-themes">
+                <div className="default-themes">
 
                   {/* Light  */}
                   <div className="light-theme-btn theme-btn">
@@ -101,6 +101,8 @@ const SettingsPage = () => {
                   </div>
 
                 </div>
+
+                <hr />
 
                 {/* Special Theme  */}
 

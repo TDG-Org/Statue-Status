@@ -44,11 +44,11 @@ nav {
 // logout 
 
 #logoutBtn {
-  color: rgb(255, 111, 111);
+  color: $mid-red-clr;
 
   &:hover {
-    border-bottom: 1px solid red;
-    color: red;
+    border-bottom: 1px solid $red-clr;
+    color: $red-clr;
   }
 }
 

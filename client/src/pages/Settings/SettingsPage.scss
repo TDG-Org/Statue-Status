@@ -2,3 +2,359 @@
 
 // SCSS Variables 
 @import "../../sass/variables.scss";
+
+.SettingsPage {
+  background-image: url("../../assets/svgs/settingspage-background.svg");
+
+  .pallet {
+
+    hr {
+      width: 75%;
+      margin: .75rem auto;
+      margin-top: 2.25rem;
+    }
+
+    .settings-p {
+      width: 80%;
+      padding: 0 .5rem;
+      margin: 0 auto;
+      color: $mid-light-clr;
+
+      .pass-fff {
+        color: $light-clr;
+      }
+    }
+  }
+
+  // Main Settings Section 
+  .settings-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // Username 
+    .account-sect-username {
+      display: flex;
+      flex-direction: column;
+    
+      .edit-username-sect {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap; 
+        margin: .5rem 0 1.25rem 0; 
+        padding: 1rem;
+        gap: .5rem;
+        position: relative;
+        border-bottom: .5px solid rgba(52, 52, 52, 0.349);
+
+        .display-username {
+          width: 75%;
+          max-width: 515px;
+          padding: .5rem;
+          margin: 0;
+          background-color: $mid-dark-clr;
+          border-radius: 8px;
+          border: 1px solid $low-dark-clr;
+          cursor: not-allowed;
+
+          &:before {
+            position: absolute;
+            top: -1.5rem;
+            left: 4.5%; 
+            content: "Edit Username";
+            padding: .8rem;
+            font-size: .9rem;
+            color: $mid-light-clr;
+          }
+        }
+
+        .edit-username-btn {
+          border: none;
+          margin: 0;
+          width: 25%;
+          max-width: 100px;
+          padding: .5rem;
+          background-color: $mid-dark-clr;
+          border-radius: 8px;
+          border: 1px solid $low-dark-clr;
+          transition: all 250ms ease;
+
+          i {
+            color: $mid-light-clr;
+          }
+
+          &:hover {
+            border: 1px solid $second-clr;
+            background-color: $low-dark-clr;
+            color: $light-clr;
+
+            i {
+              color: $light-clr;
+            }
+          }
+        }
+      }
+    }
+
+    // Edit profile link 
+    .edit-profile-link {
+      background: transparent;
+      color: $mid-light-clr;
+      width: 45%;
+      max-width: 325px;
+      margin: .2rem auto;
+      text-align: center;
+      padding: .5rem;
+      border: 1px solid $low-dark-clr;
+      transition: all 250ms ease;
+
+      &:hover {
+        border: 1px solid $second-clr;
+        background: $low-dark-clr;
+        color: $light-clr;
+      }
+    }
+
+    // Password 
+    .account-sect-pass {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      // Password Button 
+      .change-password-btn {
+        background: transparent;
+        color: $mid-light-clr;
+        width: 45%;
+        max-width: 325px;
+        margin: 1rem auto;
+        text-align: center;
+        padding: .5rem;
+        border: 1px solid $low-dark-clr;
+        transition: all 250ms ease;
+  
+        &:hover {
+          border: 1px solid $second-clr;
+          background: $low-dark-clr;
+          color: $light-clr;
+        }
+      }
+    }
+
+    // General Section 
+
+    // Appearance 
+    .appearance-btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 1rem auto;
+      padding: .8rem;
+      background: $mid-dark-clr;
+      border-radius: 8px; 
+      border: 1px solid $low-dark-clr;
+
+      .default-themes, .special-themes {
+        display: flex;
+        flex-direction: row;
+        margin: .75rem 0;
+      }
+
+      hr {
+        width: 100px;
+        color: $mid-light-clr;
+        margin: .25rem 0;
+      }
+
+      .theme-btn {
+        padding: .8rem 1rem;
+        margin: 0 .5rem;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all 250ms ease;
+
+        &:hover {
+          border: 1px solid transparent;
+
+          label {
+            color: $light-clr;
+            cursor: pointer;
+          }
+
+          input {
+            margin: 0 .5rem;
+            cursor: pointer;
+          }
+        }
+
+        input {
+          margin: 0 .5rem;
+        }
+        
+        label {
+          color: $mid-light-clr;
+        }
+      }
+
+      // Light 
+      .light-theme-btn {
+        &:hover {
+          border-bottom: 1px solid $light-clr;
+          border-top: 1px solid $light-clr;
+        }
+      }
+
+      // Dark 
+      .dark-theme-btn {
+        &:hover {
+          border-bottom: 1px solid $mid-light-clr;
+          border-top: 1px solid $mid-light-clr;
+        }
+      }
+
+      // Red 
+      .red-theme-btn {
+        &:hover {
+          border-bottom: 1px solid $red-clr;
+          border-top: 1px solid $red-clr;
+        }
+      }
+
+      // Earth 
+      .earth-theme-btn {
+        &:hover {
+          border-bottom: 1px solid rgb(255, 230, 155);
+          border-top: 1px solid rgb(255, 230, 155);
+        }
+      }
+
+      // Blue 
+      .blue-theme-btn {
+        &:hover {
+          border-bottom: 1px solid $prime-clr;
+          border-top: 1px solid $prime-clr;
+        }
+      }
+    }
+
+    // Report Bugs
+    .report-bug-sect {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .report-bug-btns {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: center;
+        gap: 1rem;
+
+        .report-bug-btn, .support-btn {
+          background: transparent;
+          color: $mid-light-clr;
+          width: 30%; 
+          max-width: 325px;
+          padding: .5rem;
+          border: 1px solid $low-dark-clr;
+          transition: all 250ms ease;   
+    
+          &:hover {
+            background: $low-dark-clr;
+            color: $light-clr;
+          }
+        }
+        
+        .report-bug-btn {
+          &:hover {
+            border: 1px solid $mid-yellow-clr;
+          }
+        }
+        
+        .support-btn {
+          &:hover {
+            border: 1px solid $second-clr;
+          }
+        }
+      }
+    } 
+    
+    // Loggout 
+
+    .general-sect-logout {
+      display: flex;
+      padding: 1rem;
+      justify-content: center;
+      flex-direction: column;
+
+      .settings-loggout-btn {
+        margin: 1rem auto;
+        text-align: center;
+        font-size: 1.1rem;
+        color: $mid-red-clr;
+        width: fit-content;
+
+        i {
+          color: $mid-light-clr;
+        }
+
+        &:hover {
+         color: $red-clr;
+          text-decoration: underline !important;
+
+          i {
+            color: $light-clr;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+// Media Queries 
+
+@media screen and (max-width: 950px) {
+  .SettingsPage {
+    background-image: url("../../assets/svgs/settingspage-background.svg");
+  
+    .pallet {
+  
+      .settings-p {
+        width: 90%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .appearance-btns, button {
+    font-size: .9rem !important;
+
+    .default-themes, .special-themes {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .report-bug-btns {
+    padding: 1.5rem 0 !important;
+    flex-direction: column  !important;
+
+    button {
+      width: 80% !important;
+      margin: 0 auto;
+    }
+  }
+}

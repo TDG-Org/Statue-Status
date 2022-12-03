@@ -1,0 +1,92 @@
+/* Sweet Alert Styles  */
+
+// SCSS Variables 
+@import "../variables.scss";
+
+.swal-modal {
+	background-color: rgba(0, 0, 0, 0.827);
+	border: 1px solid $mid-light-clr;
+	padding: 1.5rem .75rem;
+
+	.swal-title { 
+		color: $light-clr;
+	}
+
+	.swal-text {
+		text-align: center;
+		color: $light-clr;
+	}
+
+	input {
+		background-color: $mid-dark-clr;
+		border-bottom: 1px solid $second-clr;
+		color: $light-clr;
+		border-radius: 8px;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $second-clr;
+		}
+	}
+}
+
+/* Sweet Alert button  */
+
+.swal-button {
+	padding: 7px 19px;
+	border-radius: 2px;
+	font-size: 15px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+	outline: none;
+	border: 1px solid $dark-clr; 
+	padding: 0.7rem 1.5rem;
+	border-radius: 5px;
+	transition: all 250ms ease;
+	color: $dark-clr;
+	background-color: $second-clr;
+
+		&:hover {
+			color: $light-clr;
+			background-color: transparent !important;
+			border-bottom: 1px solid $second-clr;
+			border-top: 1px solid $second-clr;
+		}
+}
+
+.swal-button--cancel {
+	background-color: transparent;
+	color: $light-clr;
+	border: 1px solid transparent;
+
+	&:hover {
+		background-color: transparent !important;
+		border-bottom: 1px solid $red-clr;
+		border-top: 1px solid $red-clr;
+	}
+}
+
+/* Sweet Alert Overlays  */
+
+.swal-overlay {
+	background-color: rgba(0, 0, 0, 0.728);
+}
+
+/* Sweet Alert Icons  */
+
+.swal-icon {
+	background-color: $mid-dark-clr;
+	gap: 0;
+}
+.swal-icon::after {
+	background-color: $mid-dark-clr;
+}
+.swal-icon::before {
+	background-color: $mid-dark-clr;
+}
+.swal-icon--success__hide-corners {
+	background-color: $mid-dark-clr;
+	padding: 0;
+	top: -13px;
+	width: 25px;
+	height: 128px;
+}

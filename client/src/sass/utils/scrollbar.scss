@@ -1,0 +1,25 @@
+/* scroll bar  */
+
+// SCSS Variables 
+@import "../variables.scss";
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgb(42, 42, 42);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $mid-light-clr;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+	background: rgb(230, 239, 255);
+}

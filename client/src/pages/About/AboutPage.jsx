@@ -20,6 +20,9 @@ const AboutPage = () => {
         {/* intro  */}
         <div className="about-sect about-intro-sect" id="introSect">
           <h1>What is Statue Status?</h1>
+
+          <hr />
+
           <div className="about-sect-content about-intro-sect-content">
             <p>
             We compile data to show who the richest, most powerful, and most popular people in the world are right now. On the <Link to="/discover" className="about-link">Discover</Link> page, users may also view specific notable people or other users who have accounts here.

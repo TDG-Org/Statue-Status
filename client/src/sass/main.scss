@@ -17,7 +17,10 @@
 @import "./components/User.scss";
 
 // Swal 
-@import "./swal/swal.scss";
+@import "./utils/swal.scss";
+
+// Scrollbar 
+@import "./utils/scrollbar.scss";
 
 // Resets 
 
@@ -116,7 +119,7 @@ p, span, em, li, a, i, div {
   padding: 1rem;
   margin: .75rem 0 3rem 0;
   background-color: $mid-dark-clr;
-  border: 1px solid rgba(43, 43, 43, 0.714);
+  border: 1px solid $low-dark-clr;
   border-radius: 8px;
 }
 

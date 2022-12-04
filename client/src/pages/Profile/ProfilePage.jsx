@@ -65,7 +65,13 @@ const ProfilePage = () => {
                   <img src={Brilliance} alt="" />
                 </div>
                 <div className="profile-sect-badge">
-                  <img src={Bravery} alt="" />
+                  <img src={Brilliance} alt="" />
+                </div>
+                <div className="profile-sect-badge">
+                  <img src={Brilliance} alt="" />
+                </div>
+                <div className="profile-sect-badge">
+                  <img src={Brilliance} alt="" />
                 </div>
               </div>
 

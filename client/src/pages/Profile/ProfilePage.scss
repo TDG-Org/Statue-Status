@@ -204,6 +204,12 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    a {
+      color: $accent-clr;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
     .create-statue-btn {
       color: $mid-light-clr;
       width: 100%;

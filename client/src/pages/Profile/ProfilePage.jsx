@@ -32,9 +32,9 @@ const ProfilePage = () => {
               <div className="profile-sect-avatar">
                 <div className="profile-sect-avatar-content">
                   <img src={Pancake} alt="" />
-                  <div className="avatar-edit-overlay"></div>
+                  <div className="avatar-edit-overlay">Edit</div>
                 </div>
-                <h4>Avatar</h4>
+                <button className="change-avatar">Change Avatar</button>
               </div>
 
               {/* Right Side  */}
@@ -85,7 +85,7 @@ const ProfilePage = () => {
                 <Link>Christian McIlvenny</Link>
 
                 {/* If user does not have a statue  */}
-                <p className="no-statue">NA</p>
+                {/* <p className="no-statue">NA</p>  */}
               </div>
             </div>
 
@@ -107,7 +107,7 @@ const ProfilePage = () => {
               <h4>It appears that you don&apos;t have a statue yet!</h4>
               <p>Let&apos;s create one</p>
               <br />
-              <p>Click here to learn more about statues if you&apos;re unfamiliar.</p>
+              <p>Click <Link to="/about#statuesSect">here</Link> to learn more about statues if you&apos;re unfamiliar.</p>
               <button className="create-statue-btn">Create Statue</button>
             </div>
 

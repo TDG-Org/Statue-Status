@@ -32,9 +32,9 @@ const ProfilePage = () => {
               <div className="profile-sect-avatar">
                 <div className="profile-sect-avatar-content">
                   <img src={Pancake} alt="" />
-                  <div className="avatar-edit-overlay"></div>
+                  <div className="avatar-edit-overlay">Edit</div>
                 </div>
-                <h4>Avatar</h4>
+                <button className="change-avatar">Change Avatar</button>
               </div>
 
               {/* Right Side  */}
@@ -47,7 +47,7 @@ const ProfilePage = () => {
 
                 {/* Bio  */}
                 <div className="profile-sect-bio">
-                  <h4>Bio</h4>
+                  <h4 id="bioTitle">Bio</h4>
                   <textarea type="text" className="bio-input" value="This is some test values" disabled></textarea>
                   <button className="edit-bio-btn"><i className="bi bi-pen"></i></button>
                 </div>
@@ -65,12 +65,18 @@ const ProfilePage = () => {
                   <img src={Brilliance} alt="" />
                 </div>
                 <div className="profile-sect-badge">
-                  <img src={Bravery} alt="" />
+                  <img src={Brilliance} alt="" />
+                </div>
+                <div className="profile-sect-badge">
+                  <img src={Brilliance} alt="" />
+                </div>
+                <div className="profile-sect-badge">
+                  <img src={Brilliance} alt="" />
                 </div>
               </div>
 
               {/* Reputations  */}
-              <div className="profile-sect-reps">
+              <div className="profile-sect-reps" id="profileSectReps">
                 <h4>Reputations</h4>
                 <div className="rep">
                   <span>+</span>
@@ -85,7 +91,7 @@ const ProfilePage = () => {
                 <Link>Christian McIlvenny</Link>
 
                 {/* If user does not have a statue  */}
-                <p className="no-statue">NA</p>
+                {/* <p className="no-statue">NA</p>  */}
               </div>
             </div>
 
@@ -107,7 +113,7 @@ const ProfilePage = () => {
               <h4>It appears that you don&apos;t have a statue yet!</h4>
               <p>Let&apos;s create one</p>
               <br />
-              <p>Click here to learn more about statues if you&apos;re unfamiliar.</p>
+              <p>Click <Link to="/about#statuesSect">here</Link> to learn more about statues if you&apos;re unfamiliar.</p>
               <button className="create-statue-btn">Create Statue</button>
             </div>
 

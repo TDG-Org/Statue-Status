@@ -63,7 +63,6 @@
             img {
               width: 100%;
             }
-
             &:hover {
               border: 1.25px solid $accent-clr;
               .avatar-edit-overlay {
@@ -222,8 +221,6 @@
   }
 }
 
-// 1365 
-
 // Media Queries 
 
 @media screen and (max-width: 1365px) {
@@ -252,7 +249,7 @@
           width: 100%;
           justify-content: space-evenly;
           .text-edit-side {
-            width: 65% !important;
+            width: 65%;
           }
         }
           // User info 
@@ -286,5 +283,46 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .user-edit {
+    flex-direction: column !important;
+    gap: 0 !important;
+    #profileUsername {
+      border-bottom: 1px solid $mid-light-clr;
+    }
+    .change-avatar {
+      margin: 0 !important;
+      margin-top: .75rem !important;
+    }
+    .profile-sect-badge {
+      img {
+        width: 25px !important;
+      }
+    }
+    .profile-sect-avatar, .text-edit-side {
+      width: 100% !important;
+      align-items: center  !important;
+      #bioTitle {
+        text-align: center;
+        margin: 1rem auto !important;
+      }
+    }
+    .profile-sect-reps, .profile-sect-statue {
+      width:80% !important;
+    }
+    .bio-input {
+      min-width: 100% !important;
+    }
+  }
+  .other-user-info {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  .no-statue {
+    text-align: center;
   }
 }

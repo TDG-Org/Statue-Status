@@ -47,7 +47,7 @@ const ProfilePage = () => {
 
                 {/* Bio  */}
                 <div className="profile-sect-bio">
-                  <h4>Bio</h4>
+                  <h4 id="bioTitle">Bio</h4>
                   <textarea type="text" className="bio-input" value="This is some test values" disabled></textarea>
                   <button className="edit-bio-btn"><i className="bi bi-pen"></i></button>
                 </div>
@@ -70,7 +70,7 @@ const ProfilePage = () => {
               </div>
 
               {/* Reputations  */}
-              <div className="profile-sect-reps">
+              <div className="profile-sect-reps" id="profileSectReps">
                 <h4>Reputations</h4>
                 <div className="rep">
                   <span>+</span>

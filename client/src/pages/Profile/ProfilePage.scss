@@ -74,7 +74,7 @@
           }
         }
 
-      // left Side of Profile 
+      // Right User Side of Profile 
       .text-edit-side {
         display: flex;
         flex-direction: column;
@@ -105,6 +105,7 @@
             border: 1px solid $low-dark-clr;
           }
           .edit-bio-btn {
+            color: $mid-light-clr;
             width: 100%;
             max-width: 425px;
             margin: .75rem 0;
@@ -114,6 +115,7 @@
             border: 1px solid $low-dark-clr;
             background-color: $mid-dark-clr;
             &:hover {
+              color: $light-clr;
               border: 1px solid $accent-clr;
               background-color: $low-dark-clr;
             }
@@ -156,9 +158,9 @@
           flex-wrap: nowrap;
           font-size: 1.1rem;
           &:hover {
+            cursor: default;
             p, span {
-              cursor: pointer;
-              color: $accent-clr !important;
+              color: $light-clr !important;
             }
             i {
               color: rgb(255, 166, 0);
@@ -196,6 +198,22 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    .create-statue-btn {
+      color: $mid-light-clr;
+      width: 100%;
+      max-width: 425px;
+      margin: .75rem 0;
+      padding: .35rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border: 1px solid $low-dark-clr;
+      background-color: $mid-dark-clr;
+      &:hover {
+        color: $light-clr;
+        border: 1px solid $accent-clr;
+        background-color: $low-dark-clr;
+      }
+    }
   }
 
   // Has Statue 
@@ -207,3 +225,66 @@
 // 1365 
 
 // Media Queries 
+
+@media screen and (max-width: 1365px) {
+
+  // Profile Section 
+  .profile-sect {
+    .pallet {
+      padding: 1.75rem 1rem;
+      .container {
+        display: flex;
+        flex-direction: column;
+        .profile-sect-divider {
+          background: $low-dark-clr;
+          height: 1.5px;
+          width: 75%;
+          margin: .5rem auto;
+        }
+        .profile-sect-avatar {
+          width: 30%;
+          align-items: center;
+          .profile-sect-avatar-content {
+            width: 125px !important;
+          }
+        }
+        .user-edit {
+          width: 100%;
+          justify-content: space-evenly;
+          .text-edit-side {
+            width: 65% !important;
+          }
+        }
+          // User info 
+        .other-user-info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly; 
+          align-items: center;
+          width: 100%;
+          padding: 1.75rem 1rem;
+          .profile-sect-badges {
+            width: 15%;
+          }
+          .profile-sect-reps, .profile-sect-statue {
+            width:33.3%;
+            text-align: center;
+            justify-content: center;
+            gap: 1rem;
+            h4 {
+              text-align: center;
+            }
+            .rep {
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              #repCount {
+                margin: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

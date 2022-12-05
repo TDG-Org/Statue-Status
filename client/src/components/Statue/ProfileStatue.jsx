@@ -22,10 +22,20 @@ const ProfileStatue = () => {
           
          {/* if the user has a statue  */}
          <div className="statue">
-           <div className="primary-sect">
-             {/* Full picture of user  */}
-             <img src={NatePfp} alt="" className="statue-img" />
-             <h3 className="statue-name">Christian McIlvenny</h3>
+            <div className="primary-sect">
+              
+             {/* Picture */}
+              <img src={NatePfp} alt="" className="statue-img" />
+              
+             {/* Statue Name */}
+              <div className="statue-name-sect">
+                <input type="text" className="statue-name" value="Christian McIlvenny" disabled />
+                <button className="statue-name-edit">
+                   <i className="bi bi-pen"></i>
+                </button>
+            </div>
+              
+              {/* Badge Section  */}
              <div className="badges-sect">
                <div className="statue-badge">
                 <img src={Bravery} alt="" />

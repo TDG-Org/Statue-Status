@@ -57,8 +57,39 @@
         min-width: 175px;
         border-bottom: 1px solid $low-dark-clr;
       }
-      h3 {
-        margin: 1rem auto !important;
+      .statue-name-sect {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        .statue-name {
+          color: $light-clr;
+          font-size: 1.25rem;
+          font-weight: bold;
+          background: $mid-dark-clr;
+          padding: .75rem;
+          text-align: center;
+          border-radius: 8px;
+          border: 1px solid $low-dark-clr;
+          margin: .75rem 0 !important;
+        }
+        .statue-name-edit {
+          width: 55px;
+          text-align: center;
+          justify-content: center;
+          padding: .75rem;
+          background: $mid-dark-clr;
+          border-radius: 8px;
+          border: 1px solid $low-dark-clr;
+          margin: .75rem 0 !important;
+          &:hover {
+            border: 1px solid $accent-clr;
+            background: $low-dark-clr;
+            color: $light-clr;
+          }
+        }
       }
       .badges-sect {
         display: flex;
@@ -72,7 +103,6 @@
           img {
             width: 100%;
           }
-
         }
       }
     }

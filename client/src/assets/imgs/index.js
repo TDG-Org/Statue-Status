@@ -7,3 +7,4 @@ export const Planet = require("./blue-planet.png");
 export const Male = require("./male.png");
 export const Female = require("./female.png");
 export const Logo = require("./logo.png");
+export const NatePfp = require("./Nate-Portrait.jpg");

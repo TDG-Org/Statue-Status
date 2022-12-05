@@ -7,7 +7,7 @@ import "./ProfilePage.scss";
 import { Link } from "react-router-dom";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery } from "../../assets/imgs/";
+import { Pancake, Brilliance, Bravery, NatePfp } from "../../assets/imgs/";
 
 const ProfilePage = () => {
   return (
@@ -62,13 +62,13 @@ const ProfilePage = () => {
               {/* Badges  */}
               <div className="profile-sect-badges">
                 <div className="profile-sect-badge">
-                  <img src={Brilliance} alt="" />
+                  <img src={Bravery} alt="" />
                 </div>
                 <div className="profile-sect-badge">
                   <img src={Brilliance} alt="" />
                 </div>
                 <div className="profile-sect-badge">
-                  <img src={Brilliance} alt="" />
+                  <img src={Pancake} alt="" />
                 </div>
                 <div className="profile-sect-badge">
                   <img src={Brilliance} alt="" />
@@ -121,14 +121,95 @@ const ProfilePage = () => {
             <div className="statue">
               <div className="primary-sect">
                 {/* Full picture of user  */}
-                <img src="" alt="" className="statue-img" />
-                <h3>Christian Nathaniel McIlvenny</h3>
+                <img src={NatePfp} alt="" className="statue-img" />
+                <h3>Christian McIlvenny</h3>
                 <div className="badges-sect">
-                  <div className="badge">
-
+                  <div className="statue-badge">
+                   <img src={Bravery} alt="" />
+                  </div>
+                  <div className="statue-badge">
+                   <img src={Brilliance} alt="" />
+                  </div>
+                  <div className="statue-badge">
+                   <img src={Pancake} alt="" />
                   </div>
                 </div>
-              </div>        
+              </div> 
+              <div className="secondary-sect">
+                {/* Socials  */}
+                <div className="secondary-sect-socials">
+                  <h4>Socials</h4>
+                  <ul className="social-list">
+
+                    <li>
+                      <a
+                        href=""><i className="bi bi-instagram"></i> Instagram/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-github"></i> Github/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-facebook"></i> Facebook/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-envelope"></i> email/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-snapchat"></i> Snapchat/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-twitter"></i> Twitter/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-tiktok"></i> Tiktok/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-youtube"></i> Youtube/
+                        <span className="social-username">TDGNate</span>
+                      </a> 
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-linkedin"></i> LinkedIn/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-discord"></i> Discord/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a className="more-socials-btn"
+                        href=""><i className="bi bi-chevron-down"></i>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
             </div>
 
           </div>

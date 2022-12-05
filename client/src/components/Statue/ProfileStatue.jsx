@@ -3,7 +3,6 @@ import React, { useState } from "react";
 // Components 
 import ProfileNoStatue from "./ProfileNoStatue";
 import ProfileStatueSecondary from "./ProfileStatueSecondary";
-import DatePicker from "../DatePicker";
 
 // Styles
 import "../../sass/components/ProfileStatue.scss";
@@ -51,8 +50,6 @@ const ProfileStatue = () => {
               </div>
 
               <hr />
-
-              <DatePicker /> 
 
               <div className="bottom-editable-sect">
                 <p className="statue-sect-label">Accessory</p>

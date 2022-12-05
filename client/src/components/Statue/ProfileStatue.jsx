@@ -39,6 +39,7 @@ const ProfileStatue = () => {
               
               {/* About Statue Section  */}
               <div className="statue-about-sect">
+                <p className="statue-sect-label">Who Am I?</p>
                 <textarea className="statue-about" disabled>
                   You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.
                 </textarea>
@@ -48,6 +49,11 @@ const ProfileStatue = () => {
               </div>
 
               <hr />
+
+              <div className="bottom-editable-sect">
+                <p className="statue-sect-label">Accessory</p>
+                <button className="edit-accessories">Edit Accessories</button>
+              </div>
               
               {/* Badge Section  */}
              <div className="badges-sect">

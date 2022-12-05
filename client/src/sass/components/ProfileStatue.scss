@@ -47,6 +47,11 @@
       background-color: $mid-light-clr;
       width: 80%;
     }
+    .statue-sect-label {
+      text-align: center;
+      margin-left: .5rem;
+      margin-bottom: -.5rem;
+    }
     .primary-sect {
       position: relative;
       display: flex;
@@ -91,10 +96,16 @@
           border-radius: 8px;
           border: 1px solid $low-dark-clr;
           margin: .75rem 0 !important;
+          i {
+            color: $mid-light-clr;
+          }
           &:hover {
             border: 1px solid $accent-clr;
             background: $low-dark-clr;
             color: $light-clr;
+            i {
+              color: $light-clr;
+            }
           }
         }
       }
@@ -122,6 +133,32 @@
           border-radius: 8px;
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
+          i {
+            color: $mid-light-clr;
+          }
+          &:hover {
+            border: 1px solid $accent-clr;
+            background: $low-dark-clr;
+            color: $light-clr;
+            i {
+              color: $light-clr;
+            }
+          }
+        }
+      }
+
+      .bottom-editable-sect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .edit-accessories {
+          padding: .35rem 1.75rem;
+          color: $mid-light-clr;
+          border-radius: 8px;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          margin: 1.25rem auto;
           &:hover {
             border: 1px solid $accent-clr;
             background: $low-dark-clr;

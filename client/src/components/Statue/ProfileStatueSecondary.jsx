@@ -106,8 +106,7 @@ const ProfileStatueSecondary = () => {
           <a
             className="social-extra-link"
             href=""><i className="bi bi-link-45deg"></i>
-            <span className="social-extra-link-platform">Platform</span>/
-            <span className="social-username">TDGNate</span>
+            <span className="social-extra-link-platform">Platform</span>/<span className="social-username">TDGNate</span>
           </a>
         </li>
 

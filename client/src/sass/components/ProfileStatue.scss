@@ -1,0 +1,236 @@
+// Profile Statue Section
+
+// SCSS Variables 
+@import "../variables.scss";
+
+.statue-sect {
+  width: 100%;
+  // No Statue 
+  .no-statue {
+    // flex or none 
+    display: none;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      color: $accent-clr;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+    .create-statue-btn {
+      width: 100%;
+      padding: .35rem;
+      margin: .75rem 0;
+      max-width: 425px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      color: $mid-light-clr;
+      border: 1px solid $low-dark-clr;
+      background-color: $mid-dark-clr;
+      &:hover {
+        color: $light-clr;
+        border: 1px solid $accent-clr;
+        background-color: $low-dark-clr;
+      }
+    }
+  }
+
+  // Has Statue 
+  .statue {
+    width: 100%;
+    display: flex;
+    padding: .5rem;
+    flex-direction: row;
+    hr {
+      width: 80%;
+      background-color: $mid-light-clr;
+    }
+    .statue-sect-label {
+      text-align: center;
+      margin-left: .5rem;
+      margin-bottom: -.5rem;
+    }
+    .primary-sect {
+      width: 45%;
+      display: flex;
+      position: relative;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      // Statue Image 
+      .statue-img {
+        width: 90%;
+        max-width: 250px;
+        min-width: 175px;
+        border-top: 1px solid $low-dark-clr;
+        border-bottom: 1px solid $low-dark-clr;
+      }
+
+        // Statue Name 
+      .statue-name-sect {
+        gap: 1rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .statue-name {
+          padding: .35rem; 
+          font-weight: bold;
+          color: $light-clr;
+          font-size: 1.25rem;
+          text-align: center;
+          border-radius: 8px;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          margin: 1.25rem 0 .75rem 0 !important;
+        }
+        .statue-name-edit {
+          width: 55px;
+          min-width: 50px;
+          border-radius: 8px;
+          text-align: center;
+          padding: .5rem .35rem;
+          justify-content: center;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          margin: 1.25rem 0 .75rem 0 !important;
+          i {
+            color: $mid-light-clr;
+          }
+          &:hover {
+            border: 1px solid $accent-clr;
+            background: $low-dark-clr;
+            color: $light-clr;
+            i {
+              color: $light-clr;
+            }
+          }
+        }
+      }
+
+      // Statue About 
+      .statue-about-sect {
+        width: 90%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        .statue-about {
+          width: 100%;
+          height: 125px;
+          padding: .8rem;
+          border-radius: 8px;
+          color: $mid-light-clr;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+        }
+        .statue-about-edit {
+          padding: .35rem;
+          border-radius: 8px;
+          color: $mid-light-clr;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          i {
+            color: $mid-light-clr;
+          }
+          &:hover {
+            color: $light-clr;
+            background: $low-dark-clr;
+            border: 1px solid $accent-clr;
+            i {
+              color: $light-clr;
+            }
+          }
+        }
+      }
+
+      .bottom-editable-sect {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        .edit-accessories {
+          border-radius: 8px;
+          margin: 1.25rem auto;
+          color: $mid-light-clr;
+          padding: .35rem 1.75rem;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          &:hover {
+            color: $light-clr;
+            background: $low-dark-clr;
+            border: 1px solid $accent-clr;
+          }
+        }
+      }
+
+      // Statue Badges 
+      .badges-sect {
+        top: -.75rem;
+        display: flex;
+        left: -1.25rem;
+        position: absolute;
+        flex-direction: column;
+        .statue-badge {
+          width: 25px;
+          margin-bottom: .5rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // Second Section For Statue 
+    .secondary-sect {
+      width: 55%;
+      h4 {
+        margin: .15rem 0 .25rem 0 !important;
+      }
+      .social-list {
+        margin: 0;
+        width: 100%;
+        padding: .5rem;
+        li {
+          width: 80%;
+          text-align: center;
+          margin: .5rem auto;
+          border-radius: 8px;
+          padding: .5rem 1rem;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          a {
+            gap: .5rem;
+            display: flex;
+            flex-wrap: nowrap;
+            text-align: center;
+            flex-direction: row;
+            color: $mid-light-clr;
+            justify-content: start;
+            .social-username {
+              margin: 0 .75rem;
+            }
+          }
+          .more-socials-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          &:hover {
+            background: $low-dark-clr;
+            border: 1px solid $accent-clr;
+          }
+        }
+        .social-extra-link-platform {
+          color: $mid-light-clr;
+        }
+      }
+    }
+  }
+}

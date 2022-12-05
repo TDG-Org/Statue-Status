@@ -86,6 +86,7 @@
         }
         #profileUsername {
           margin: 1.25rem 0 1rem 0 !important;
+          border-bottom: 1px solid $low-dark-clr;
         }
         .profile-sect-bio {
           width: 100%;
@@ -195,45 +196,6 @@
   }
 }
 
-.statue-sect {
-  width: 100%;
-  // No Statue 
-  .no-statue {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    a {
-      color: $accent-clr;
-      &:hover {
-        text-decoration: underline !important;
-      }
-    }
-    .create-statue-btn {
-      color: $mid-light-clr;
-      width: 100%;
-      max-width: 425px;
-      margin: .75rem 0;
-      padding: .35rem;
-      font-size: 1.1rem;
-      border-radius: 8px;
-      border: 1px solid $low-dark-clr;
-      background-color: $mid-dark-clr;
-      &:hover {
-        color: $light-clr;
-        border: 1px solid $accent-clr;
-        background-color: $low-dark-clr;
-      }
-    }
-  }
-
-  // Has Statue 
-  .statue {
-    display: none;
-  }
-}
-
 // Media Queries 
 
 @media screen and (max-width: 1365px) {
@@ -246,10 +208,10 @@
         display: flex;
         flex-direction: column;
         .profile-sect-divider {
-          background: $low-dark-clr;
-          height: 1.5px;
           width: 75%;
+          height: 1.5px;
           margin: .5rem auto;
+          background: $low-dark-clr;
         }
         .profile-sect-avatar {
           width: 30%;
@@ -267,23 +229,23 @@
         }
           // User info 
         .other-user-info {
+          width: 100%;
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly; 
           align-items: center;
-          width: 100%;
           padding: 1.75rem 1rem;
+          justify-content: space-evenly; 
           .profile-sect-reps, .profile-sect-statue {
+            gap: 1rem;
             text-align: center;
             justify-content: center;
-            gap: 1rem;
             h4 {
               text-align: center;
             }
             .rep {
-              justify-content: center;
-              align-items: center;
               text-align: center;
+              align-items: center;
+              justify-content: center;
               #repCount {
                 margin: 0 !important;
               }
@@ -297,8 +259,8 @@
 
 @media screen and (max-width: 625px) {
   .user-edit {
-    flex-direction: column !important;
     gap: 0 !important;
+    flex-direction: column !important;
     #profileUsername {
       border-bottom: 1px solid $mid-light-clr;
     }
@@ -310,7 +272,6 @@
       margin-top: .75rem !important;
     }
     .profile-sect-badges {
-      // max-width: 100%; 
       .profile-sect-badge {
         margin: 0 .5rem !important;
         img {

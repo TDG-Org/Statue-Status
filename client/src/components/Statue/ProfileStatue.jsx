@@ -52,6 +52,12 @@ const ProfileStatue = () => {
 
               <div className="bottom-editable-sect">
                 <p className="statue-sect-label">Accessory</p>
+
+                {/* The Editable  */}
+                <div className="bottom-editable-sect-content">
+                  <div className="accessories-birthday"></div>
+                </div>
+
                 <button className="edit-accessories">Edit Accessories</button>
               </div>
               

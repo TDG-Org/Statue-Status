@@ -161,7 +161,7 @@ const ProfilePage = () => {
                     </li>
                     <li>
                       <a
-                        href=""><i className="bi bi-envelope"></i> email/
+                        href=""><i className="bi bi-envelope"></i> Email/
                         <span className="social-username">TDGNate</span>
                       </a>
                     </li>
@@ -201,6 +201,33 @@ const ProfilePage = () => {
                         <span className="social-username">TDGNate</span>
                       </a>
                     </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-reddit"></i> Reddit/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-spotify"></i> Spotify/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-steam"></i> Steam/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-stack-overflow"></i>
+                        Stack overflow/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+
+                    {/* The More Socials button  */}
                     <li>
                       <a className="more-socials-btn"
                         href=""><i className="bi bi-chevron-down"></i>

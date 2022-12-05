@@ -3,6 +3,12 @@
 // SCSS Variables 
 @import "../../sass/variables.scss";
 
+.react-datepicker-wrapper {
+  background-color: pink !important;
+  display: flex;
+  justify-content: center;
+}
+
 // Edit Profile Section 
 .profile-sect {
   .pallet {

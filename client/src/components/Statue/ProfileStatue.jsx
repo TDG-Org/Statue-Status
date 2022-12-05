@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Components 
 import ProfileNoStatue from "./ProfileNoStatue";
 import ProfileStatueSecondary from "./ProfileStatueSecondary";
+import DatePicker from "../DatePicker";
 
 // Styles
 import "../../sass/components/ProfileStatue.scss";
@@ -11,6 +12,7 @@ import "../../sass/components/ProfileStatue.scss";
 import { Pancake, Brilliance, Bravery, NatePfp } from "../../assets/imgs";
 
 const ProfileStatue = () => {
+  
   return (
      <div className="statue-sect">
      <h3>My Statue</h3>
@@ -50,12 +52,16 @@ const ProfileStatue = () => {
 
               <hr />
 
+              <DatePicker /> 
+
               <div className="bottom-editable-sect">
                 <p className="statue-sect-label">Accessory</p>
 
                 {/* The Editable  */}
                 <div className="bottom-editable-sect-content">
-                  <div className="accessories-birthday"></div>
+                  <div className="accessories-birthday">
+
+                  </div>
                 </div>
 
                 <button className="edit-accessories">Edit Accessories</button>

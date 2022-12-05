@@ -226,6 +226,23 @@ const ProfilePage = () => {
                         <span className="social-username">TDGNate</span>
                       </a>
                     </li>
+                    <li>
+                      <a
+                        href=""><i className="bi bi-pinterest"></i>
+                        Pinterest/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
+
+                    {/* Extra Links  */}
+                    <li>
+                      <a
+                        className="social-extra-link"
+                        href=""><i className="bi bi-link-45deg"></i>
+                        <span className="social-extra-link-platform">Platform</span>/
+                        <span className="social-username">TDGNate</span>
+                      </a>
+                    </li>
 
                     {/* The More Socials button  */}
                     <li>

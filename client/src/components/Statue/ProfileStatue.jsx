@@ -4,6 +4,9 @@ import React from "react";
 import ProfileNoStatue from "./ProfileNoStatue";
 import ProfileStatueSecondary from "./ProfileStatueSecondary";
 
+// Styles
+import "../../sass/components/ProfileStatue.scss";
+
 // Images/SVGs 
 import { Pancake, Brilliance, Bravery, NatePfp } from "../../assets/imgs";
 
@@ -22,7 +25,7 @@ const ProfileStatue = () => {
            <div className="primary-sect">
              {/* Full picture of user  */}
              <img src={NatePfp} alt="" className="statue-img" />
-             <h3>Christian McIlvenny</h3>
+             <h3 className="statue-name">Christian McIlvenny</h3>
              <div className="badges-sect">
                <div className="statue-badge">
                 <img src={Bravery} alt="" />

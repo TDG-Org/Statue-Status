@@ -41,9 +41,12 @@
   .statue {
     display: flex;
     flex-direction: row;
-    // justify-content: space-around; 
     padding: .5rem;
     width: 100%;
+    hr {
+      background-color: $mid-light-clr;
+      width: 80%;
+    }
     .primary-sect {
       position: relative;
       display: flex;
@@ -51,12 +54,16 @@
       justify-content: center;
       align-items: center;
       width: 45%;
+
+      // Statue Image 
       .statue-img {
         width: 90%;
         max-width: 250px;
         min-width: 175px;
         border-bottom: 1px solid $low-dark-clr;
       }
+
+        // Statue Name 
       .statue-name-sect {
         display: flex;
         flex-direction: row;
@@ -69,7 +76,7 @@
           font-size: 1.25rem;
           font-weight: bold;
           background: $mid-dark-clr;
-          padding: .75rem;
+          padding: .35rem;
           text-align: center;
           border-radius: 8px;
           border: 1px solid $low-dark-clr;
@@ -79,7 +86,7 @@
           width: 55px;
           text-align: center;
           justify-content: center;
-          padding: .75rem;
+          padding: .35rem;
           background: $mid-dark-clr;
           border-radius: 8px;
           border: 1px solid $low-dark-clr;
@@ -91,6 +98,39 @@
           }
         }
       }
+
+      // Statue About 
+      .statue-about-sect {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 90%;
+        justify-content: center;
+        gap: 1rem;
+        .statue-about {
+          color: $mid-light-clr;
+          border-radius: 8px;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          padding: .8rem;
+          width: 100%;
+          height: 125px;
+        }
+        .statue-about-edit {
+          padding: .35rem;
+          color: $mid-light-clr;
+          border-radius: 8px;
+          background: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
+          &:hover {
+            border: 1px solid $accent-clr;
+            background: $low-dark-clr;
+            color: $light-clr;
+          }
+        }
+      }
+
+      // Statue Badges 
       .badges-sect {
         display: flex;
         flex-direction: column;

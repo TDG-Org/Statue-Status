@@ -33,7 +33,21 @@ const ProfileStatue = () => {
                 <button className="statue-name-edit">
                    <i className="bi bi-pen"></i>
                 </button>
-            </div>
+              </div>
+
+              <hr />
+              
+              {/* About Statue Section  */}
+              <div className="statue-about-sect">
+                <textarea className="statue-about" disabled>
+                  You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.
+                </textarea>
+                <button className="statue-about-edit">
+                  <i className="bi bi-pen"></i>
+                </button>
+              </div>
+
+              <hr />
               
               {/* Badge Section  */}
              <div className="badges-sect">

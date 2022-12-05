@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import ProfileNoStatue from "./ProfileNoStatue";
 import ProfileStatueSecondary from "./ProfileStatueSecondary";
 
+// Datepicker 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 // Styles
 import "../../sass/components/ProfileStatue.scss";
 
@@ -12,6 +16,8 @@ import { Pancake, Brilliance, Bravery, NatePfp } from "../../assets/imgs";
 
 const ProfileStatue = () => {
   
+  const [selectedDate, setSelectedDate] = useState(null);
+
   return (
      <div className="statue-sect">
      <h3>My Statue</h3>
@@ -50,6 +56,12 @@ const ProfileStatue = () => {
               </div>
 
               <hr />
+
+              <DatePicker
+                selected={selectedDate}
+                onChange={(date) => setSelectedDate(date)}
+                dateFormat="MMM d, yyyy"
+              />
 
               <div className="bottom-editable-sect">
                 <p className="statue-sect-label">Accessory</p>

@@ -20,7 +20,7 @@ const ProfileStatue = () => {
   const [editStatueName, setEditStatueName] = useState("Christian McIlvenny");
 
   // Current Name input 
-  const [statueNameCurrent, setStatueNameCurrent] = useState("hi");
+  const [statueNameCurrent, setStatueNameCurrent] = useState(editStatueName);
   
   // Toggle function to activate Statue Name edit
   function handleToggleStatueName(e) {

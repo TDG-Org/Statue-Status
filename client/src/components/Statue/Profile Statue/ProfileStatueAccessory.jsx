@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 
 // Datepicker 
 import DatePicker from "react-datepicker";
+import { dateFormat } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; 
 
 // Demo Data 
@@ -17,6 +18,9 @@ const ProfileStatueAccessory = () => {
 
   // Date 
   const [selectedDate, setSelectedDate] = useState(null);
+  // Final Date 
+  const [finalSelectedDate, setFinalSelectedDate] = useState(selectedDate);
+  // console.log(finalSelectedDate); 
 
     // Check if Editing is active
     const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
@@ -37,6 +41,9 @@ const ProfileStatueAccessory = () => {
 
   // Check which elements wants update 
   function updateAccessory(e) {
+    // const theFinalFormattedBirthdayDate = selectedDate.split(" ").slice(0, 4);
+    console.log(selectedDate);
+    setFinalSelectedDate(selectedDate);
     setAccessoriesValues(accessoriesValuesCurrent);
   }
 
@@ -83,6 +90,12 @@ const ProfileStatueAccessory = () => {
 
   // Update the display 
   function displayStatueAccessory() {
+
+    const theDatePicker = document.getElementById("theDatePicker");
+
+    setTimeout(() => {
+      theDatePicker.value = finalSelectedDate; 
+    }, 200);
 
     // Getting the elements to update their display value 
     const headlineEl = document.querySelector(".headline-input");
@@ -135,13 +148,15 @@ const ProfileStatueAccessory = () => {
       <div className="accessories-birthday">
         <i className="bi bi-balloon-heart-fill"></i>
         <DatePicker
-          selected={selectedDate}
-          onChange={
-            (date) => setSelectedDate(date)
-          }
+          id="theDatePicker"
+          selected={selectedDate} 
+            onChange={(date) => {
+              setSelectedDate(date);
+            }}
           dateFormat="MMM d, yyyy"
           className="the-datepicker"
           placeholderText="Birthday"
+          defaultValue={finalSelectedDate}
           disabled={editStatueAccessoryActive ? false : true}
         />
         </div>

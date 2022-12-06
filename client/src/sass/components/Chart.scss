@@ -4,14 +4,14 @@
 @import "../variables.scss";
 
 .chart {
-  margin: 1rem auto;
   width: 100%; 
   max-width: 700px;
   min-width: 500px;
-  background-color: #00000077;
+  margin: 1rem auto;
   border-radius: 8px;
-  border-right: 1px solid #222222;
+  background-color: #00000077;
   border-top: 1px solid  #222222;
+  border-right: 1px solid #222222;
 
   &:hover {
     cursor: crosshair;
@@ -27,38 +27,38 @@
 // Ranking Badges 
 
 .ranking-numbers {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   width: 100%;
-  padding: 0 1.8rem 1rem 1.8rem;
+  display: flex;
   margin: 0 auto;
+  flex-wrap: nowrap;
+  flex-direction: row;
   margin-top: -1.25rem;
   justify-content: space-evenly;
+  padding: 0 1.8rem 1rem 1.8rem;
 
   .rank-num-1 {
-    border: 1px solid #ebc817 !important;
     color: #ebc817 !important; 
+    border: 1px solid #ebc817 !important;
   }
 
   .rank-num-2 {
-    border: 1px solid #e4e4e4 !important;
     color: #e4e4e4 !important;
+    border: 1px solid #e4e4e4 !important;
   
   }
 
   .rank-num-3 {
-    border: 1px solid #c59041 !important;
     color: #c59041 !important;
+    border: 1px solid #c59041 !important;
   }
 
   .rank-num {
-    background-color: rgb(10, 10, 10);
     padding: .48rem;
     border-radius: 50%;
-    border: 1px solid rgb(46, 46, 46);
     color: $mid-light-clr;
     transition: all 250ms ease;
+    border: 1px solid rgb(46, 46, 46);
+    background-color: rgb(10, 10, 10);
 
     &:hover {
       cursor: default;
@@ -70,10 +70,10 @@
 // Pie 
 
 .victory-pie {
+  padding: .8rem;
   max-width: 375px;
   min-width: 280px;
   margin: 1rem auto;
-  padding: .8rem;
   width: 35% !important;
 }
 
@@ -83,9 +83,9 @@
 
   // The Chart 
   .chart {
-    min-width: 325px !important;
-    font-size: 1rem;
     border: none;
+    font-size: 1rem;
+    min-width: 325px !important;
 
     g {
       text {
@@ -100,24 +100,24 @@
     }
 
     .ranking-numbers {
-      padding: .5rem 1.8rem 1rem 1.8rem;
       font-size: .8rem !important;
+      padding: .5rem 1.8rem 1rem 1.8rem;
 
       .rank-num {
-        background-color: rgb(10, 10, 10);
         padding: .48rem;
         border-radius: 50%;
-        border: 1px solid rgb(46, 46, 46);
         color: $mid-light-clr;
         transition: all 250ms ease;
+        border: 1px solid rgb(46, 46, 46);
+        background-color: rgb(10, 10, 10);
       }
     }
   }  
 
   // Pie 
   .victory-pie {
-    min-width: 215px !important;
     margin: .65rem !important;
+    min-width: 215px !important;
 
     text {
       tspan {

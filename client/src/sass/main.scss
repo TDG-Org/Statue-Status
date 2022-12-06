@@ -32,13 +32,13 @@
 }
 
 body {
-  font-family: 'Manrope', sans-serif; 
   width: 100%;
   min-height: 100vh; 
-  background-image: url("../assets/svgs/body-background.svg") !important;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  font-family: 'Manrope', sans-serif; 
+  background-image: url("../assets/svgs/body-background.svg") !important;
 }
 
 li {
@@ -50,16 +50,16 @@ a {
 }
 
 textarea {
-  resize: none !important;
   outline: none;
+  resize: none !important;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Kanit', sans-serif;
   color: $light-clr;
-  margin: 2.5rem 0 1rem 0 !important; 
-  font-weight: bold !important;
   text-align: center;
+  font-weight: bold !important;
+  font-family: 'Kanit', sans-serif;
+  margin: 2.5rem 0 1rem 0 !important; 
 
 }
 h1 {
@@ -76,37 +76,37 @@ h4 {
 }
 
 p, span, em, li, a, i, div {
-  font-family: 'Manrope', sans-serif;
   color: $light-clr;
+  font-family: 'Manrope', sans-serif;
 }
 
 // Core Statue Status Wrapper 
 
 .Statue-Status-Wrapper {
+  width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
   position: relative;
-  width: 100%;
+  flex-direction: row;
 }
 
 .page-side-wrapper {
-  height: auto; 
   width: 100%;
+  height: auto; 
 }
 
 // Page Styles 
 
 .page {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem .8rem;
-  min-height: 100vh;
   width: 95%;
+  display: flex;
   margin: 0 auto;
+  min-height: 100vh;
+  padding: 2rem .8rem;
+  flex-direction: column;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
 }
 
 .hide {
@@ -114,32 +114,32 @@ p, span, em, li, a, i, div {
 }
 
 .pagebg {
-  padding: 2rem .8rem;
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
+  padding: 2rem .8rem;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
 }
 
 // Box pallets 
 
 .pallet {
   padding: 1rem;
+  border-radius: 8px;
   margin: .75rem 0 3rem 0;
   background-color: $mid-dark-clr;
   border: 1px solid $low-dark-clr;
-  border-radius: 8px;
 }
 
 // Alert 
 
 .ss-alert {
-  background: linear-gradient(to right, red, purple);
   padding: .8rem;
-  border: 1px solid white !important;
-  border-radius: 8px;
   margin: 2rem 0;
+  border-radius: 8px;
+  border: 1px solid white !important;
+  background: linear-gradient(to right, red, purple);
 }
 
 
@@ -152,8 +152,8 @@ p, span, em, li, a, i, div {
   }
 
   .page {
-    width: 100% !important;
     padding-top: 3.25rem;
+    width: 100% !important;
   }
 
   nav {
@@ -169,7 +169,7 @@ p, span, em, li, a, i, div {
   }
 
   .pallet {
-    padding: 1.5rem .5rem;
     margin: .5rem 0; 
+    padding: 1.5rem .5rem;
   }
 }

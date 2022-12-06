@@ -20,16 +20,16 @@
   align-items: center;
   transition: all 500ms ease;
   justify-content: space-between;
-  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
   border: 1px solid $low-dark-clr;
+  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
 
   &:hover {
-    background-image: linear-gradient(to top, #00000013, #ffffff05);
     border: 1px solid $mid-light-clr;
+    background-image: linear-gradient(to top, #00000013, #ffffff05);
 
     .top-user-avatar {
-      border: 1px solid $prime-clr !important;
       filter: contrast(115%);
+      border: 1px solid $prime-clr !important;
     }
 
     .top-user-money {
@@ -44,10 +44,10 @@
     // User Left 
     .top-user-left {
       display: flex;
-      flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: center;
+      flex-direction: row;
       align-items: center;
+      justify-content: center;
 
       .top-user-rank {
         padding: 0 1rem;
@@ -59,23 +59,23 @@
       }
 
       .top-user-avatar-wrapper {
-        height: 60px; 
         width: 60px;
-        border-radius: 50%;
+        height: 60px; 
         margin: 0 .8rem;
+        border-radius: 50%;
       }
     
       .top-user-avatar {
-        padding: .135rem;
-        border: 1px solid $mid-light-clr; 
-        height: 100%;
         width: 100%;
+        height: 100%;
+        padding: .135rem;
         border-radius: 50%; 
+        border: 1px solid $mid-light-clr; 
       }
     
       .top-user-name {
-        font-weight: bold;
         padding: 0 1rem;
+        font-weight: bold;
       }
 
       // Ranking Table 
@@ -102,11 +102,11 @@
 
     // User Right 
   .top-user-right {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
     gap: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
 
     .top-user-country {
       padding: 0 .75rem;
@@ -117,7 +117,6 @@
     }
 
   }
-
 }
 
 // Media Query 
@@ -138,9 +137,9 @@
     }
 
     .top-user-avatar-wrapper {
-      height: 50px !important; 
-      width: 50px !important;
       padding: .1rem;
+      width: 50px !important;
+      height: 50px !important; 
     }
   
     .top-user-name {
@@ -168,27 +167,27 @@
 
 @media screen and (max-width: 620px) {
   .top-user {
+    gap: 1.25rem;
     width: 95% !important;
     flex-direction: column;
-    gap: 1.25rem;
-    padding: 1.75rem .5rem .75rem .5rem !important;
-    margin-bottom: 1.6rem !important;
     font-size: 1.15rem !important;
+    margin-bottom: 1.6rem !important;
+    padding: 1.75rem .5rem .75rem .5rem !important;
   }
 
   .top-user-left {
-    flex-direction: column !important;
     gap: .8rem;
+    flex-direction: column !important;
   }
 
   .top-user-right {
-    flex-direction: column-reverse !important;
     gap: .25rem !important;
+    flex-direction: column-reverse !important;
   }
 
   .top-user-rank {
-    position: absolute;
     top: 5px;
     left: 5px;
+    position: absolute;
   }
 }

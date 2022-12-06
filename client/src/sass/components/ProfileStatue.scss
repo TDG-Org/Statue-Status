@@ -248,7 +248,8 @@
     // Accessory Buttons 
 
     // Edit Statue Name Buttons 
-    .statue-name-edit-btns, .statue-about-edit-btns {
+    .statue-name-edit-btns,
+     .statue-about-edit-btns {
     gap: 1rem;
     width: 100%;
     display: flex;
@@ -257,10 +258,12 @@
     justify-content: space-evenly;
   }
 
-    .statue-name-edit, .statue-name-save, .statue-about-save {
+    .statue-name-edit, 
+    .statue-name-save, 
+    .statue-about-save {
       width: 80%;
-      max-width: 225px;
       min-width: 50px;
+      max-width: 225px;
       border-radius: 8px;
       text-align: center;
       color: $mid-light-clr;
@@ -294,8 +297,8 @@
         padding: .5rem;
         li {
           width: 80%;
-          text-align: center;
           margin: .5rem auto;
+          text-align: center;
           border-radius: 8px;
           padding: .5rem 1rem;
           background: $mid-dark-clr;

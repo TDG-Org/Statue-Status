@@ -5,45 +5,45 @@
 
 .user-avatar-section {
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
   padding: 2.5rem 0;
+  flex-direction: column;
 }
 
 // Top Section 
 
 .user-avatar-sect-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 // Badge 
 
 .badge-sect {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   max-width: 95px;
   max-height: auto;
-  justify-content: center;
-  align-items: center;
   position: absolute;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   left: 0; 
 
   .badge {
+    padding: 0;
     width: 32px;
     margin: 4px;
     border-radius: 50%; 
-    border: 1px solid transparent;
-    padding: 0;
-    padding-bottom: .4rem;
     padding-top: .55rem;
+    padding-bottom: .4rem;
     transition: all 275ms ease;
+    border: 1px solid transparent;
 
     a {
       img {
@@ -53,8 +53,8 @@
 
     &:hover {
       cursor: pointer;
-      border-bottom: 1px solid $accent-clr; 
       border-top: 1px solid $accent-clr; 
+      border-bottom: 1px solid $accent-clr; 
 
       img {
         filter: contrast(195%);
@@ -68,15 +68,15 @@
 .avatar-sect {
   img {
     width: 128px;
-    transition: all 250ms ease;
-    filter: drop-shadow(0 0 0px);
-    border-radius: 50%;
-    border: 1px solid $light-clr;
     padding: .35rem;
+    border-radius: 50%;
+    transition: all 250ms ease;
+    border: 1px solid $light-clr;
+    filter: drop-shadow(0 0 0px);
 
     &:hover {
-      border: 1px solid $prime-clr;
       cursor: pointer;
+      border: 1px solid $prime-clr;
       filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.14));
     }
   }
@@ -85,22 +85,22 @@
 // Bottom Section 
 
 .user-avatar-sect-bottom {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  position: relative;
   width: 100%;
+  display: flex;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
 }
 
 .username {
+  width: 100%;
   margin: 1rem 0;
   color: $mid-light-clr;
-  width: 100%;
 
   .the-at {
-    color: $mid-light-clr;
     margin-right: .2rem;
+    color: $mid-light-clr;
   }
 
   a {
@@ -122,14 +122,14 @@
 // Follow Count 
 
 .follow-count-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   gap: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
   padding-top: .5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   p {
     margin: 0;
@@ -154,10 +154,10 @@
   }
 
   .avatar-sect {
-    justify-content: center;
-    align-items: center;
     width: 75px;
     padding: .5rem;
+    align-items: center;
+    justify-content: center;
     
     img {
       width: 75%;

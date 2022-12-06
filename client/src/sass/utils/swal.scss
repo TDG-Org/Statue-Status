@@ -4,9 +4,9 @@
 @import "../variables.scss";
 
 .swal-modal {
-	background-color: rgba(0, 0, 0, 0.827);
-	border: 1px solid $mid-light-clr;
 	padding: 1.5rem .75rem;
+	border: 1px solid $mid-light-clr;
+	background-color: rgba(0, 0, 0, 0.827);
 
 	.swal-title { 
 		color: $light-clr;
@@ -18,10 +18,10 @@
 	}
 
 	input {
-		background-color: $mid-dark-clr;
-		border-bottom: 1px solid $second-clr;
 		color: $light-clr;
 		border-radius: 8px;
+		background-color: $mid-dark-clr;
+		border-bottom: 1px solid $second-clr;
 
 		&:focus {
 			outline: none;
@@ -33,35 +33,35 @@
 /* Sweet Alert button  */
 
 .swal-button {
+	outline: none;
+	font-size: 15px;
+	color: $dark-clr;
 	padding: 7px 19px;
 	border-radius: 2px;
-	font-size: 15px;
-	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-	outline: none;
-	border: 1px solid $dark-clr; 
-	padding: 0.7rem 1.5rem;
 	border-radius: 5px;
+	padding: 0.7rem 1.5rem;
 	transition: all 250ms ease;
-	color: $dark-clr;
+	border: 1px solid $dark-clr; 
 	background-color: $second-clr;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 
 		&:hover {
 			color: $light-clr;
-			background-color: transparent !important;
-			border-bottom: 1px solid $second-clr;
 			border-top: 1px solid $second-clr;
+			border-bottom: 1px solid $second-clr;
+			background-color: transparent !important;
 		}
 }
 
 .swal-button--cancel {
-	background-color: transparent;
 	color: $light-clr;
+	background-color: transparent;
 	border: 1px solid transparent;
 
 	&:hover {
-		background-color: transparent !important;
-		border-bottom: 1px solid $red-clr;
 		border-top: 1px solid $red-clr;
+		border-bottom: 1px solid $red-clr;
+		background-color: transparent !important;
 	}
 }
 
@@ -84,9 +84,9 @@
 	background-color: $mid-dark-clr;
 }
 .swal-icon--success__hide-corners {
-	background-color: $mid-dark-clr;
 	padding: 0;
 	top: -13px;
 	width: 25px;
 	height: 128px;
+	background-color: $mid-dark-clr;
 }

@@ -4,19 +4,19 @@
 @import "../variables.scss";
 
 .hamburger {
+	z-index: 6;
 	display: none;
 	cursor: pointer;
-	z-index: 6;
 }
 
 .bar {
-	display: block;
 	width: 25px;
 	height: 3px;
+	display: block;
 	margin: 5px auto; 
-	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	background-color: $light-clr !important;
+	-webkit-transition: all 0.3s ease-in-out;
 }
 
 /* Media Query (Mobile Size)  */
@@ -24,8 +24,8 @@
 @media screen and (max-width: 950px) {
 
 	.hamburger {
-		display: block;
     padding: 0;
+		display: block;
 	}
 
 	.hamburger.active .bar:nth-child(2) {
@@ -55,10 +55,10 @@
 	}
 
 	.nav-comp .active {
-		background-color: rgb(0, 0, 0);
-		height: 100vh !important;
-		overflow: hidden;
 		z-index: 5;
+		overflow: hidden;
+		height: 100vh !important;
 		margin-top: -1rem !important;
+		background-color: rgb(0, 0, 0);
 	}
 }

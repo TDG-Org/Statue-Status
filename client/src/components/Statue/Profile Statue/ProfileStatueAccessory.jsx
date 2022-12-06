@@ -45,53 +45,45 @@ const ProfileStatueAccessory = () => {
     // Function that always listens for input changes 
   function handleAccessoriesInputChange(e) {
 
+    // Get Name of Element and the user input 
     const elName = e.target.name;
     let elValue = e.target.value;
 
-    let newObj = {
-      headline: accessoriesValues?.headline,
-      location: accessoriesValues?.location,
-      company: accessoriesValues?.company,
-    };
-
+    // Check which key value we need to update 
     switch(elName) {
       case "headline":
         // code block
-        newObj.headline = elValue;
+        let headline = elValue;
         setAccessoriesValuesCurrent(current => {
           return {
             ...current,
-            headline: newObj.headline,
+            headline,
           };
         });
         break;
       case "location":
         // code block
-        newObj.location = elValue;
+        let location = elValue;
         setAccessoriesValuesCurrent(current => {
           return {
             ...current,
-            location: newObj.location,
+            location,
           };
         });
         break;
       case "company":
         // code block
-        newObj.company = elValue;
+        let company = elValue;
         setAccessoriesValuesCurrent(current => {
           return {
             ...current,
-            company: newObj.company,
+            company,
           };
         });
     }
 
-    // console.log(newObj); 
-
-    // setAccessoriesValuesCurrent(newObj); 
-
     console.log(accessoriesValuesCurrent);
-    }
+  }
 
   return (
     <div className="bottom-editable-sect">

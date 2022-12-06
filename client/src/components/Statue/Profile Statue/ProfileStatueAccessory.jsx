@@ -30,8 +30,6 @@ const ProfileStatueAccessory = () => {
   // Toggle function to activate Statue Accessory edit
   function handleToggleStatueAccessory(e) {
     setEditStatueAccessoryActive(!editStatueAccessoryActive);
-
-
     setTimeout(() => {
       statueAccessoryHeadlineRef.current.focus();
     }, 50);
@@ -81,8 +79,34 @@ const ProfileStatueAccessory = () => {
           };
         });
     }
+  }
 
-    console.log(accessoriesValuesCurrent);
+  // Update the display 
+  function displayStatueAccessory() {
+
+    // Getting the elements to update their display value 
+    const headlineEl = document.querySelector(".headline-input");
+    const locationEl = document.querySelector(".location-input");
+    const companyEl = document.querySelector(".company-input");
+    
+    // Update headline 
+    if (accessoriesValues?.headline === undefined) {
+      headlineEl.value = "";
+    } else {
+      headlineEl.value = accessoriesValues?.headline;
+    }
+    // Update location 
+    if (accessoriesValues?.location === undefined) {
+      locationEl.value = "";
+    } else {
+      locationEl.value = accessoriesValues?.location;
+    }
+    // Update company 
+    if (accessoriesValues?.company === undefined) {
+      locationEl.value = "";
+    } else {
+      companyEl.value = accessoriesValues?.company;
+    }
   }
 
   return (
@@ -165,7 +189,11 @@ const ProfileStatueAccessory = () => {
           {/* Cancel Button  */}
           <button
             className="cancel-accessories"
-            onClick={handleToggleStatueAccessory}
+            onClick={() => {
+              handleToggleStatueAccessory();
+              displayStatueAccessory();
+            }
+            }
           >
           Cancel 
         </button>

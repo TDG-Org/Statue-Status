@@ -45,33 +45,52 @@ const ProfileStatueAccessory = () => {
     // Function that always listens for input changes 
   function handleAccessoriesInputChange(e) {
 
-    const el = e.target;
+    const elName = e.target.name;
+    let elValue = e.target.value;
 
     let newObj = {
       headline: accessoriesValues?.headline,
       location: accessoriesValues?.location,
       company: accessoriesValues?.company,
     };
-    
-    // console.log(typeof e.target.name); 
 
-    switch(e.target.name) {
+    switch(elName) {
       case "headline":
         // code block
-        console.log("headline", e.target.value);
+        newObj.headline = elValue;
+        setAccessoriesValuesCurrent(current => {
+          return {
+            ...current,
+            headline: newObj.headline,
+          };
+        });
         break;
       case "location":
         // code block
-        console.log("location", e.target.value);
+        newObj.location = elValue;
+        setAccessoriesValuesCurrent(current => {
+          return {
+            ...current,
+            location: newObj.location,
+          };
+        });
         break;
       case "company":
         // code block
-        console.log("company", e.target.value);
+        newObj.company = elValue;
+        setAccessoriesValuesCurrent(current => {
+          return {
+            ...current,
+            company: newObj.company,
+          };
+        });
     }
-      
-      const target = e.target;
-      let value = target.value;
-      setAccessoriesValuesCurrent(value);
+
+    // console.log(newObj); 
+
+    // setAccessoriesValuesCurrent(newObj); 
+
+    console.log(accessoriesValuesCurrent);
     }
 
   return (

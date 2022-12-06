@@ -1,7 +1,7 @@
 import React from "react";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery, NatePfp } from "../../assets/imgs";
+import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";
 
 const ProfileStatueBages = () => {
   return (

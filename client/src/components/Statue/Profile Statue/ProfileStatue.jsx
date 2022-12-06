@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 
 // Components 
-import ProfileNoStatue from "./ProfileNoStatue";
-import ProfileStatueSecondary from "./ProfileStatueSecondary";
-import ProfileStatueAccessory from "./ProfileStatueAccessory";
-import ProfileStatueBages from "./ProfileStatueBages";
+import { ProfileNoStatue, ProfileStatueSecondary, ProfileStatueAccessory, ProfileStatueBages } from "./";
 
 // Styles
-import "../../sass/components/ProfileStatue.scss";
+import "../../../sass/components/ProfileStatue.scss";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery, NatePfp } from "../../assets/imgs";
+import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";
 
 const ProfileStatue = () => {
   

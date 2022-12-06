@@ -78,7 +78,7 @@ const ProfileStatue = () => {
                   {/* Location  */}
                   <div className="accessories-location">
                     <i className="bi bi-geo-alt"></i>
-                    <input type="text" className="location-input" />
+                    <input type="text" className="location-input" placeholder="Location"/>
                   </div>
                 </div>
 

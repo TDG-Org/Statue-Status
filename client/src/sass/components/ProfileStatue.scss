@@ -157,6 +157,19 @@
         flex-direction: column;
         // Accessories
 
+        .react-datepicker {
+          color: $light-clr;
+          font-size: .95rem; 
+          background: $mid-light-clr;
+          border: 1px solid $accent-clr;
+          .react-datepicker__header  {
+            background: $mid-dark-clr;
+            .react-datepicker__day-names .react-datepicker__day-name, .react-datepicker__current-month {
+              color: $light-clr !important;
+            }
+          }
+        }
+
         .the-datepicker, .location-input {
           width: 100%;
           outline: none !important;

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
 // Components 
-import { ProfileNoStatue, ProfileStatueSecondary, ProfileStatueAccessory, ProfileStatueBages } from "./";
+import { ProfileNoStatue, ProfileStatueSecondary, ProfileStatueAccessory, ProfileStatueBages, ProfileStatueAbout } from "./";
 
 // Styles
 import "../../../sass/components/ProfileStatue.scss";
@@ -20,7 +20,7 @@ const ProfileStatue = () => {
   const [editStatueName, setEditStatueName] = useState("Christian McIlvenny");
 
   // Current Name input 
-  const [statueNameCurrent, setStatueNameCurrent] = useState("hi");
+  const [statueNameCurrent, setStatueNameCurrent] = useState(editStatueName);
   
   // Toggle function to activate Statue Name edit
   function handleToggleStatueName(e) {
@@ -32,7 +32,6 @@ const ProfileStatue = () => {
 
   // Update the input text 
   function updateStatueName(e) {
-    console.log(statueNameCurrent);
     setEditStatueName(statueNameCurrent);
   }
 
@@ -74,7 +73,7 @@ const ProfileStatue = () => {
                   ref={statueNameRef}
                   onChange={handleStatueNameInputChange} 
                 />
-                
+
                 {/* Edit button  */}
                 <button
                   className={`statue-name-edit ${editStatueNameActive ? "hide" : ""}`}
@@ -103,40 +102,27 @@ const ProfileStatue = () => {
                     onClick={() => {
                       handleToggleStatueName();
                       displayStatueName();
-                    }
+                      }
                     }
                   >
                     Cancel
                   </button>
 
                 </div>
-
               </div>
 
               <hr />
-              
               {/* About Statue Section  */}
-              <div className="statue-about-sect">
-                <p className="statue-sect-label">Who Am I?</p>
-                <textarea className="statue-about" disabled value=" You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.">
-                 
-                </textarea>
-                <button className="statue-about-edit">
-                  <i className="bi bi-pen"></i>
-                </button>
-              </div>
-
+              <ProfileStatueAbout />
               <hr />
-
               {/* Accessory Section  */}
               <ProfileStatueAccessory />
-              
               {/* Badge Section  */}
               <ProfileStatueBages /> 
 
             </div> 
             
-            {/* Secondary Section  */}
+            {/* - Secondary Section - */}
             <ProfileStatueSecondary />
          </div>
 

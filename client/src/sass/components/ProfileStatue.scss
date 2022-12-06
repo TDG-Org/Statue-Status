@@ -79,8 +79,8 @@
         gap: 1rem;
         width: 100%;
         display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
+        // flex-wrap: nowrap; 
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
         border: 1px solid transparent;
@@ -93,26 +93,29 @@
           border-radius: 8px;
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
-          margin: 1.25rem 0 .75rem 0 !important;
+          margin: 1.25rem 0 .25rem 0 !important;
           &:focus {
             background-color: $low-dark-clr;
             border: 1px solid;
           }
         }
-        .statue-name-edit {
-          width: 55px;
+        .statue-name-edit, .statue-name-save {
+          width: 80%;
+          max-width: 225px;
           min-width: 50px;
+          color: $mid-light-clr;
           border-radius: 8px;
           text-align: center;
           padding: .5rem .35rem;
           justify-content: center;
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
-          margin: 1.25rem 0 .75rem 0 !important;
+          // margin: 1.25rem 0 .75rem 0 !important; 
           i {
             color: $mid-light-clr;
           }
           &:hover {
+            color: $light-clr;
             border: 1px solid $accent-clr;
             background: $low-dark-clr;
             color: $light-clr;
@@ -120,6 +123,16 @@
               color: $light-clr;
             }
           }
+        }
+
+        // Edit Statue Name Buttons 
+        .statue-name-edit-btns {
+          gap: 1rem;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+
         }
       }
 

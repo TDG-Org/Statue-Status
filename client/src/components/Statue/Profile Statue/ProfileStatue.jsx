@@ -122,7 +122,7 @@ const ProfileStatue = () => {
 
             </div> 
             
-            {/* Secondary Section  */}
+            {/* - Secondary Section - */}
             <ProfileStatueSecondary />
          </div>
 

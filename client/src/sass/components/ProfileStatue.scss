@@ -78,6 +78,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        border: 1px solid transparent;
         .statue-name {
           padding: .35rem; 
           font-weight: bold;
@@ -88,6 +89,9 @@
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
           margin: 1.25rem 0 .75rem 0 !important;
+        }
+        .statue-name .active {
+          background-color: pink !important;
         }
         .statue-name-edit {
           width: 55px;

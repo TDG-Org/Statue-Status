@@ -9,7 +9,7 @@ const ProfileStatueAccessory = () => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   return (
-    <div className="bottom-editable-sect">
+    <div className="bottom-editable-sect hide">
     <p className="statue-sect-label">Accessory</p>
 
     {/* The Editable  */}

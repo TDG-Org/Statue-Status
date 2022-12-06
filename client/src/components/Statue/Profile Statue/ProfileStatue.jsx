@@ -10,6 +10,16 @@ import "../../../sass/components/ProfileStatue.scss";
 import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";
 
 const ProfileStatue = () => {
+
+  // editing statue name section
+  const [editStatueNameActive, setEditStatueNameActive] = useState(false);
+
+  // edit name 
+  const [editStatueName, setEditStatueName] = useState("John Doe");
+
+  function handleToggleStatueName() {
+    setEditStatueNameActive(!editStatueNameActive);
+  } 
   
   return (
      <div className="statue-sect">
@@ -29,8 +39,16 @@ const ProfileStatue = () => {
               
              {/* Statue Name */}
               <div className="statue-name-sect">
-                <input type="text" className="statue-name" value="Christian McIlvenny" disabled />
-                <button className="statue-name-edit">
+                <input
+                  type="text"
+                  className="statue-name"
+                  value={editStatueName}
+                  disabled={editStatueNameActive ? false : true}
+                />
+                <button
+                  className="statue-name-edit"
+                  onClick={handleToggleStatueName}
+                >
                    <i className="bi bi-pen"></i>
                 </button>
               </div>
@@ -40,8 +58,8 @@ const ProfileStatue = () => {
               {/* About Statue Section  */}
               <div className="statue-about-sect">
                 <p className="statue-sect-label">Who Am I?</p>
-                <textarea className="statue-about" disabled>
-                  You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.
+                <textarea className="statue-about" disabled value=" You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.">
+                 
                 </textarea>
                 <button className="statue-about-edit">
                   <i className="bi bi-pen"></i>

@@ -6,7 +6,15 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const ProfileStatueAccessory = () => {
 
+  // Date 
   const [selectedDate, setSelectedDate] = useState(null);
+
+  // Other Values 
+  const [accessoriesValues, setAccessoriesValues] = useState({
+    headline: "Software Engineer",
+    location: "Perris, CA",
+    company: "TDG"
+  });
 
   return (
     <div className="bottom-editable-sect hide">
@@ -14,11 +22,18 @@ const ProfileStatueAccessory = () => {
 
     {/* The Editable  */}
     <div className="bottom-editable-sect-content">
+        
       {/* Headline  */}
       <div className="accessories-headline">
         <i className="bi bi-card-heading"></i>
-        <input type="text" className="headline-input" placeholder="Headline"/>
-      </div>
+          <input
+            type="text"
+            name="headline"
+            placeholder="Headline"
+            className="headline-input"
+          />
+        </div>
+        
       {/* Birthday  */}
       <div className="accessories-birthday">
         <i className="bi bi-balloon-heart-fill"></i>
@@ -31,16 +46,28 @@ const ProfileStatueAccessory = () => {
           dateFormat="MMM d, yyyy"
           placeholderText="Birthday"
         />
-      </div>
+        </div>
+        
       {/* Location  */}
       <div className="accessories-location">
         <i className="bi bi-geo-alt"></i>
-        <input type="text" className="location-input" placeholder="Location"/>
-      </div>
+          <input
+            type="text"
+            name="location"
+            placeholder="Location"
+            className="location-input"
+          />
+        </div>
+        
       {/* Company  */}
       <div className="accessories-company">
         <i className="bi bi-building"></i>
-        <input type="text" className="company-input" placeholder="Company"/>
+          <input
+            type="text"
+            name="company"
+            placeholder="Company"
+            className="company-input"
+          />
       </div>
 
       <div className="bottom-editable-sect-content-btns">

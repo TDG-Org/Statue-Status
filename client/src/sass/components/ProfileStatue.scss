@@ -197,6 +197,26 @@
           }
         }
 
+        .bottom-editable-sect-content-btns {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-evenly;
+          button {
+            padding: .35rem 1.25rem;
+            border-radius: 8px;
+            color: $mid-light-clr;
+            background: $mid-dark-clr;
+            border: 1px solid $low-dark-clr;
+            &:hover {
+              color: $light-clr;
+              background: $low-dark-clr;
+              border: 1px solid $accent-clr;
+            }
+          }
+
+        }
+
         // Edit Button 
         .edit-accessories {
           border-radius: 8px;

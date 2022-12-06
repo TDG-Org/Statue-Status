@@ -90,6 +90,16 @@ const ProfileStatue = () => {
                     <i className="bi bi-building"></i>
                     <input type="text" className="company-input" placeholder="Company"/>
                   </div>
+
+                  <div className="bottom-editable-sect-content-btns">
+                    <button className="save-accessories">
+                      Save
+                    </button>
+                    <button className="cancel-accessories">
+                      Cancel 
+                    </button>
+                  </div>
+                  
                 </div>
 
                 <button className="edit-accessories">Edit Accessories</button>

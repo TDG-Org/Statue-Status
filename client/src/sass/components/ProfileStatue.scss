@@ -150,11 +150,39 @@
         }
       }
 
+      // Bottom Section 
       .bottom-editable-sect {
         display: flex;
         align-items: center;
         flex-direction: column;
-        
+        // Accessories
+
+        .the-datepicker, .location-input {
+          width: 100%;
+          outline: none !important;
+          border: none;
+          padding: .35rem 1rem;
+          background: $low-dark-clr;
+          border: 1px solid $low-dark-clr;
+          border-radius: 2.75px;
+          color: $mid-light-clr;
+          &:focus {
+            color: $light-clr;
+            border: 1px solid $mid-light-clr;
+          }
+        }
+
+        // Birthday 
+        .accessories-birthday, .accessories-location {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin: 1rem auto;
+          gap: .75rem;
+          align-items: center;
+        }
+
+        // Edit Button 
         .edit-accessories {
           border-radius: 8px;
           margin: 1.25rem auto;

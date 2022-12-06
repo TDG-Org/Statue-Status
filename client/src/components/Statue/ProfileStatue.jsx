@@ -6,7 +6,7 @@ import ProfileStatueSecondary from "./ProfileStatueSecondary";
 
 // Datepicker 
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker.css"; 
 
 // Styles
 import "../../sass/components/ProfileStatue.scss";
@@ -57,19 +57,28 @@ const ProfileStatue = () => {
 
               <hr />
 
-              <DatePicker
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-                dateFormat="MMM d, yyyy"
-              />
-
               <div className="bottom-editable-sect">
                 <p className="statue-sect-label">Accessory</p>
 
                 {/* The Editable  */}
                 <div className="bottom-editable-sect-content">
+                  {/* Birthday  */}
                   <div className="accessories-birthday">
-
+                    <i className="bi bi-balloon-heart-fill"></i>
+                    <DatePicker
+                      selected={selectedDate}
+                      onChange={
+                        (date) => setSelectedDate(date)
+                      }
+                      className="the-datepicker"
+                      dateFormat="MMM d, yyyy"
+                      placeholderText="Birthday"
+                    />
+                  </div>
+                  {/* Location  */}
+                  <div className="accessories-location">
+                    <i className="bi bi-geo-alt"></i>
+                    <input type="text" className="location-input" />
                   </div>
                 </div>
 

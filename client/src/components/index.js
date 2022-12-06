@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Nav from "./Nav";
 import User from "./User";
 import EditProfile from "./EditProfile";
-import { ProfileStatue } from "./Statue/";
+import { ProfileStatue } from "./Statue";
 
 // Export 
 export {

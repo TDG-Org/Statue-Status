@@ -1,5 +1,5 @@
 // Import 
-import ProfileStatue from "./ProfileStatue";
+import { ProfileStatue } from "./Profile Statue";
 
 // Export 
 export {

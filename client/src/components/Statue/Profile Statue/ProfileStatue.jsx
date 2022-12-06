@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 // Components 
 import { ProfileNoStatue, ProfileStatueSecondary, ProfileStatueAccessory, ProfileStatueBages } from "./";
@@ -11,16 +11,24 @@ import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";
 
 const ProfileStatue = () => {
 
+  const statueNameRef = useRef(null);
+
   // editing statue name section
   const [editStatueNameActive, setEditStatueNameActive] = useState(false);
-
+  
   // edit name 
   const [editStatueName, setEditStatueName] = useState("John Doe");
-
+  
   function handleToggleStatueName() {
     setEditStatueNameActive(!editStatueNameActive);
-  } 
-  
+
+    setTimeout(() => {
+      statueNameRef.current.focus();
+    }, 100);
+  }
+
+
+
   return (
      <div className="statue-sect">
      <h3>My Statue</h3>
@@ -38,13 +46,14 @@ const ProfileStatue = () => {
               <img src={NatePfp} alt="" className="statue-img" />
               
              {/* Statue Name */}
-              <div className="statue-name-sect">
+              <div className={`statue-name-sect ${editStatueNameActive ? "active" : ""}`}>
                 <input
                   type="text"
                   className="statue-name"
                   value={editStatueName}
                   disabled={editStatueNameActive ? false : true}
-                />
+                  ref={statueNameRef}
+                  />
                 <button
                   className="statue-name-edit"
                   onClick={handleToggleStatueName}

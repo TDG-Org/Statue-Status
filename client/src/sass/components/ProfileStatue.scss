@@ -3,6 +3,11 @@
 // SCSS Variables 
 @import "../variables.scss";
 
+.statue-name-sect .active {
+  display: none;
+  border: 1px solid white !important;
+}
+
 .statue-sect {
   width: 100%;
   // No Statue 
@@ -89,9 +94,10 @@
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
           margin: 1.25rem 0 .75rem 0 !important;
-        }
-        .statue-name .active {
-          background-color: pink !important;
+          &:focus {
+            background-color: $low-dark-clr;
+            border: 1px solid;
+          }
         }
         .statue-name-edit {
           width: 55px;

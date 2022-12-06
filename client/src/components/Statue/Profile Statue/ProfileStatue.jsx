@@ -102,7 +102,7 @@ const ProfileStatue = () => {
                     onClick={() => {
                       handleToggleStatueName();
                       displayStatueName();
-                    }
+                      }
                     }
                   >
                     Cancel

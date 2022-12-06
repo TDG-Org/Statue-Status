@@ -2,7 +2,11 @@ import React, { useState, useRef } from "react";
 
 // Datepicker 
 import DatePicker from "react-datepicker";
-import { dateFormat } from "react-datepicker";
+
+// Moment 
+import moment from "moment";
+moment().format();
+
 import "react-datepicker/dist/react-datepicker.css"; 
 
 // Demo Data 
@@ -19,9 +23,7 @@ const ProfileStatueAccessory = () => {
   // Date 
   const [selectedDate, setSelectedDate] = useState(null);
   // Final Date 
-  const [finalSelectedDate, setFinalSelectedDate] = useState(selectedDate);
-  // console.log(finalSelectedDate); 
-
+  const [finalSelectedDate, setFinalSelectedDate] = useState(null);
     // Check if Editing is active
     const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
 
@@ -41,8 +43,6 @@ const ProfileStatueAccessory = () => {
 
   // Check which elements wants update 
   function updateAccessory(e) {
-    // const theFinalFormattedBirthdayDate = selectedDate.split(" ").slice(0, 4);
-    console.log(selectedDate);
     setFinalSelectedDate(selectedDate);
     setAccessoriesValues(accessoriesValuesCurrent);
   }
@@ -92,10 +92,7 @@ const ProfileStatueAccessory = () => {
   function displayStatueAccessory() {
 
     const theDatePicker = document.getElementById("theDatePicker");
-
-    setTimeout(() => {
-      theDatePicker.value = finalSelectedDate; 
-    }, 200);
+    theDatePicker.value = moment(finalSelectedDate).format("MMM D, YYYY");
 
     // Getting the elements to update their display value 
     const headlineEl = document.querySelector(".headline-input");
@@ -119,6 +116,17 @@ const ProfileStatueAccessory = () => {
       locationEl.value = "";
     } else {
       companyEl.value = accessoriesValues?.company;
+    }
+    // Update bday 
+    if (moment(finalSelectedDate).format("MMM D, YYYY") === "Invalid date") {
+      setTimeout(() => {
+        theDatePicker.value = "";
+      }, 100);
+    } else {
+      setTimeout(() => {
+        theDatePicker.value = moment(finalSelectedDate).format("MMM D, YYYY");
+        // console.log(finalSelectedDate, moment(finalSelectedDate).format("MMM D, YYYY"));
+      }, 100);
     }
   }
 

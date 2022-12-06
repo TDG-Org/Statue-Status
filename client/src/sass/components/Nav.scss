@@ -7,25 +7,24 @@ nav {
   width: 100%;
 
   ul {
-    text-align: center;
     margin: 0;
     padding: .5rem;
+    text-align: center;
 
     li {
       margin: .75rem 0;
 
       .ss-nav-link {
-        border-bottom: 1px solid transparent;
         color: $light-clr; 
         transition: all 200ms ease;
+        border-bottom: 1px solid transparent;
 
         &:hover {
-        border-bottom: 1px solid $second-clr;
           cursor: pointer;
           color: $second-clr;
+          border-bottom: 1px solid $second-clr;
         }
       }
-
     }
   }
 }
@@ -47,8 +46,8 @@ nav {
   color: $mid-red-clr;
 
   &:hover {
-    border-bottom: 1px solid $red-clr;
     color: $red-clr;
+    border-bottom: 1px solid $red-clr;
   }
 }
 

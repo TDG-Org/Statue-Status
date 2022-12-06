@@ -1,21 +1,26 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect  } from "react";
 
 // Datepicker 
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css"; 
 
 // Moment 
 import moment from "moment";
-
-import "react-datepicker/dist/react-datepicker.css"; 
 
 // Demo Data 
 const NateData = {
   headline: "Software Engineer",
   location: "Perris, CA",
   company: "TDG",
+  bday: "Apr 8, 2003"
 };
 
 const ProfileStatueAccessory = () => {
+
+  // Update Birthday on render 
+  useEffect(() => {
+    displayStatueAccessory();
+  }, []);
 
   const statueAccessoryHeadlineRef = useRef(null);
 
@@ -23,7 +28,7 @@ const ProfileStatueAccessory = () => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   // Final Date 
-  const [finalSelectedDate, setFinalSelectedDate] = useState(null);
+  const [finalSelectedDate, setFinalSelectedDate] = useState(NateData.bday);
 
     // Check if Editing is active
     const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
@@ -221,6 +226,7 @@ const ProfileStatueAccessory = () => {
       
     </div>
 
+      {/* Edit Accessories button  */}
       <button
         className={`edit-accessories ${editStatueAccessoryActive ? "hide" : ""}`}
         onClick={handleToggleStatueAccessory}

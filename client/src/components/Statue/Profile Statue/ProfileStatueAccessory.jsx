@@ -5,7 +5,6 @@ import DatePicker from "react-datepicker";
 
 // Moment 
 import moment from "moment";
-moment().format();
 
 import "react-datepicker/dist/react-datepicker.css"; 
 
@@ -13,7 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const NateData = {
   headline: "Software Engineer",
   location: "Perris, CA",
-  company: "TDG"
+  company: "TDG",
 };
 
 const ProfileStatueAccessory = () => {
@@ -22,13 +21,15 @@ const ProfileStatueAccessory = () => {
 
   // Date 
   const [selectedDate, setSelectedDate] = useState(null);
+
   // Final Date 
   const [finalSelectedDate, setFinalSelectedDate] = useState(null);
+
     // Check if Editing is active
     const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
 
   // Other Values 
-  const [accessoriesValues, setAccessoriesValues] = useState();
+  const [accessoriesValues, setAccessoriesValues] = useState(NateData);
 
   // Current Accessory Values input 
   const [accessoriesValuesCurrent, setAccessoriesValuesCurrent] = useState(accessoriesValues);
@@ -57,7 +58,6 @@ const ProfileStatueAccessory = () => {
     // Check which key value we need to update 
     switch(elName) {
       case "headline":
-        // code block
         let headline = elValue;
         setAccessoriesValuesCurrent(current => {
           return {
@@ -67,7 +67,6 @@ const ProfileStatueAccessory = () => {
         });
         break;
       case "location":
-        // code block
         let location = elValue;
         setAccessoriesValuesCurrent(current => {
           return {
@@ -77,7 +76,6 @@ const ProfileStatueAccessory = () => {
         });
         break;
       case "company":
-        // code block
         let company = elValue;
         setAccessoriesValuesCurrent(current => {
           return {
@@ -125,7 +123,6 @@ const ProfileStatueAccessory = () => {
     } else {
       setTimeout(() => {
         theDatePicker.value = moment(finalSelectedDate).format("MMM D, YYYY");
-        // console.log(finalSelectedDate, moment(finalSelectedDate).format("MMM D, YYYY"));
       }, 100);
     }
   }

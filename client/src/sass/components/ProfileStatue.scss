@@ -65,8 +65,8 @@
         width: 90%;
         max-width: 250px;
         min-width: 175px;
-        border-top: 1px solid $low-dark-clr;
-        border-bottom: 1px solid $low-dark-clr;
+        border: 1px solid $low-dark-clr;
+        padding: .25rem;
       }
 
         // Statue Name 
@@ -172,7 +172,7 @@
         }
 
         // Accessories Sections  
-        .accessories-birthday, .accessories-location, .accessories-company {
+        .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
@@ -182,7 +182,7 @@
         }
 
         // The inputs 
-        .the-datepicker, .location-input, .company-input {
+        .headline-input, .the-datepicker, .location-input, .company-input {
           width: 100%;
           outline: none !important;
           border: none;

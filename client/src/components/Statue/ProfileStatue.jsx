@@ -62,6 +62,11 @@ const ProfileStatue = () => {
 
                 {/* The Editable  */}
                 <div className="bottom-editable-sect-content">
+                  {/* Headline  */}
+                  <div className="accessories-headline">
+                    <i className="bi bi-card-heading"></i>
+                    <input type="text" className="headline-input" placeholder="Headline"/>
+                  </div>
                   {/* Birthday  */}
                   <div className="accessories-birthday">
                     <i className="bi bi-balloon-heart-fill"></i>

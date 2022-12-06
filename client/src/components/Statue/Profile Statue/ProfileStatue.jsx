@@ -13,16 +13,16 @@ const ProfileStatue = () => {
 
   const statueNameRef = useRef(null);
 
-  // editing statue name section
+  // Check if Editing is active
   const [editStatueNameActive, setEditStatueNameActive] = useState(false);
   
-  // edit name 
-  const [editStatueName, setEditStatueName] = useState("John Doe");
+  // Official Name 
+  const [editStatueName, setEditStatueName] = useState("Christian McIlvenny");
 
-  // Current Statue Name input 
+  // Current Name input 
   const [statueNameCurrent, setStatueNameCurrent] = useState("hi");
   
-  // Toggle function to activate and let users edit statue name 
+  // Toggle function to activate Statue Name edit
   function handleToggleStatueName(e) {
     setEditStatueNameActive(!editStatueNameActive);
     setTimeout(() => {
@@ -36,12 +36,12 @@ const ProfileStatue = () => {
     setEditStatueName(statueNameCurrent);
   }
 
+  // Function that always listens for input changes 
   function handleStatueNameInputChange(e) {
     const target = e.target;
     let value = target.value;
     setStatueNameCurrent(value);
   }
-
 
   // Update the display 
   function displayStatueName() {
@@ -54,14 +54,14 @@ const ProfileStatue = () => {
      <div className="pallet">
        <div className="container">
 
-         {/* if user does not have a statute  */}
+         {/* If No Statue  */}
          <ProfileNoStatue />
           
-         {/* if the user has a statue  */}
+         {/* If they have a Statue  */}
          <div className="statue">
             <div className="primary-sect">
               
-             {/* Picture */}
+             {/* Statue Picture */}
               <img src={NatePfp} alt="" className="statue-img" />
               
              {/* Statue Name */}
@@ -74,6 +74,7 @@ const ProfileStatue = () => {
                   ref={statueNameRef}
                   onChange={handleStatueNameInputChange} 
                 />
+                
                 {/* Edit button  */}
                 <button
                   className={`statue-name-edit ${editStatueNameActive ? "hide" : ""}`}
@@ -81,7 +82,10 @@ const ProfileStatue = () => {
                 >
                    <i className="bi bi-pen"></i>
                 </button>
+
+                {/* The Save and Cancel Buttons  */}
                 <div className="statue-name-edit-btns">
+
                   {/* Save button  */}
                   <button
                     className={`statue-name-save ${editStatueNameActive ? "" : "hide"}`}
@@ -92,6 +96,7 @@ const ProfileStatue = () => {
                   >
                     Save
                   </button>
+
                   {/* Cancel button  */}
                   <button
                     className={`statue-name-save ${editStatueNameActive ? "" : "hide"}`}
@@ -103,6 +108,7 @@ const ProfileStatue = () => {
                   >
                     Cancel
                   </button>
+
                 </div>
 
               </div>

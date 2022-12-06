@@ -4,6 +4,13 @@ import React, { useState, useRef } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; 
 
+// Demo Data 
+const NateData = {
+  headline: "Software Engineer",
+  location: "Perris, CA",
+  company: "TDG"
+};
+
 const ProfileStatueAccessory = () => {
 
   const statueAccessoryHeadlineRef = useRef(null);
@@ -15,19 +22,57 @@ const ProfileStatueAccessory = () => {
     const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
 
   // Other Values 
-  const [accessoriesValues, setAccessoriesValues] = useState({
-    headline: "Software Engineer",
-    location: "Perris, CA",
-    company: "TDG"
-  });
+  const [accessoriesValues, setAccessoriesValues] = useState();
+
+  // Current Accessory Values input 
+  const [accessoriesValuesCurrent, setAccessoriesValuesCurrent] = useState(accessoriesValues);
 
   // Toggle function to activate Statue Accessory edit
   function handleToggleStatueAccessory(e) {
     setEditStatueAccessoryActive(!editStatueAccessoryActive);
+
+
     setTimeout(() => {
       statueAccessoryHeadlineRef.current.focus();
     }, 50);
   } 
+
+  // Check which elements wants update 
+  function updateAccessory(e) {
+    setAccessoriesValues(accessoriesValuesCurrent);
+  }
+
+    // Function that always listens for input changes 
+  function handleAccessoriesInputChange(e) {
+
+    const el = e.target;
+
+    let newObj = {
+      headline: accessoriesValues?.headline,
+      location: accessoriesValues?.location,
+      company: accessoriesValues?.company,
+    };
+    
+    // console.log(typeof e.target.name); 
+
+    switch(e.target.name) {
+      case "headline":
+        // code block
+        console.log("headline", e.target.value);
+        break;
+      case "location":
+        // code block
+        console.log("location", e.target.value);
+        break;
+      case "company":
+        // code block
+        console.log("company", e.target.value);
+    }
+      
+      const target = e.target;
+      let value = target.value;
+      setAccessoriesValuesCurrent(value);
+    }
 
   return (
     <div className="bottom-editable-sect">
@@ -45,6 +90,8 @@ const ProfileStatueAccessory = () => {
             placeholder="Headline"
             className="headline-input"
             ref={statueAccessoryHeadlineRef}
+            onChange={handleAccessoriesInputChange}
+            defaultValue={accessoriesValues?.headline}
             disabled={editStatueAccessoryActive ? false : true}
           />
         </div>
@@ -57,8 +104,8 @@ const ProfileStatueAccessory = () => {
           onChange={
             (date) => setSelectedDate(date)
           }
-          className="the-datepicker"
           dateFormat="MMM d, yyyy"
+          className="the-datepicker"
           placeholderText="Birthday"
           disabled={editStatueAccessoryActive ? false : true}
         />
@@ -72,6 +119,8 @@ const ProfileStatueAccessory = () => {
             name="location"
             placeholder="Location"
             className="location-input"
+            onChange={handleAccessoriesInputChange}
+            defaultValue={accessoriesValues?.location}
             disabled={editStatueAccessoryActive ? false : true}
           />
         </div>
@@ -84,6 +133,8 @@ const ProfileStatueAccessory = () => {
             name="company"
             placeholder="Company"
             className="company-input"
+            onChange={handleAccessoriesInputChange}
+            defaultValue={accessoriesValues?.company}
             disabled={editStatueAccessoryActive ? false : true}
           />
       </div>
@@ -92,7 +143,11 @@ const ProfileStatueAccessory = () => {
           {/* Save Button  */}
           <button
             className="save-accessories"
-            onClick={handleToggleStatueAccessory}
+            onClick={() => {
+              updateAccessory();
+              handleToggleStatueAccessory();
+            }
+            }
           >
           Save
           </button>

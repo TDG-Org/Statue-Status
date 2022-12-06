@@ -23,7 +23,6 @@ const ProfileStatueAbout = () => {
 
   // Update the input text 
   function updateStatueAbout(e) {
-    console.log(statueAboutCurrent);
     setEditStatueAbout(statueAboutCurrent);
   }
 
@@ -36,7 +35,7 @@ const ProfileStatueAbout = () => {
 
   // Update the display 
   function displayStatueAbout() {
-    document.querySelector(".statue-About").value = editStatueAbout;
+    document.querySelector(".statue-about").value = editStatueAbout;
   }
 
   return (
@@ -49,10 +48,44 @@ const ProfileStatueAbout = () => {
         ref={statueAboutRef}
         onChange={handleStatueAboutInputChange} 
       >
-    </textarea>
-    <button className="statue-about-edit">
+      </textarea>
+      
+    {/* Edit button  */}
+      <button
+        className={`statue-about-edit ${editStatueAboutActive ? "hide" : ""}`}
+        onClick={handleToggleStatueAbout}
+      >
       <i className="bi bi-pen"></i>
-    </button>
+      </button>
+      
+      
+    {/* The Save and Cancel Buttons  */}
+    <div className="statue-about-edit-btns">
+
+      {/* Save button  */}
+      <button
+        className={`statue-about-save ${editStatueAboutActive ? "" : "hide"}`}
+        onClick={(e) => {
+          updateStatueAbout();
+          handleToggleStatueAbout(); 
+        }}
+      >
+        Save
+      </button>
+
+      {/* Cancel button  */}
+      <button
+        className={`statue-about-save ${editStatueAboutActive ? "" : "hide"}`}
+        onClick={() => {
+          handleToggleStatueAbout();
+          displayStatueAbout();
+        }
+        }
+      >
+        Cancel
+      </button>
+
+    </div>
   </div>
   );
 };

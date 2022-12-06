@@ -32,7 +32,6 @@ const ProfileStatue = () => {
 
   // Update the input text 
   function updateStatueName(e) {
-    console.log(statueNameCurrent);
     setEditStatueName(statueNameCurrent);
   }
 

@@ -157,6 +157,7 @@
         flex-direction: column;
         // Accessories
 
+        // Date Picker 
         .react-datepicker {
           color: $light-clr;
           font-size: .95rem; 
@@ -170,7 +171,18 @@
           }
         }
 
-        .the-datepicker, .location-input {
+        // Accessories Sections  
+        .accessories-birthday, .accessories-location, .accessories-company {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin: 1rem auto;
+          gap: .75rem;
+          align-items: center;
+        }
+
+        // The inputs 
+        .the-datepicker, .location-input, .company-input {
           width: 100%;
           outline: none !important;
           border: none;
@@ -183,16 +195,6 @@
             color: $light-clr;
             border: 1px solid $mid-light-clr;
           }
-        }
-
-        // Birthday 
-        .accessories-birthday, .accessories-location {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          margin: 1rem auto;
-          gap: .75rem;
-          align-items: center;
         }
 
         // Edit Button 

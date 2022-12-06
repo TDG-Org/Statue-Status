@@ -80,6 +80,11 @@ const ProfileStatue = () => {
                     <i className="bi bi-geo-alt"></i>
                     <input type="text" className="location-input" placeholder="Location"/>
                   </div>
+                  {/* Company  */}
+                  <div className="accessories-company">
+                    <i className="bi bi-building"></i>
+                    <input type="text" className="company-input" placeholder="Company"/>
+                  </div>
                 </div>
 
                 <button className="edit-accessories">Edit Accessories</button>

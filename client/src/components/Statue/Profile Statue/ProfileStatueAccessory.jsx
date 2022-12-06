@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 // Datepicker 
 import DatePicker from "react-datepicker";
@@ -6,8 +6,13 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const ProfileStatueAccessory = () => {
 
+  const statueAccessoryHeadlineRef = useRef(null);
+
   // Date 
   const [selectedDate, setSelectedDate] = useState(null);
+
+    // Check if Editing is active
+    const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
 
   // Other Values 
   const [accessoriesValues, setAccessoriesValues] = useState({
@@ -16,8 +21,16 @@ const ProfileStatueAccessory = () => {
     company: "TDG"
   });
 
+  // Toggle function to activate Statue Accessory edit
+  function handleToggleStatueAccessory(e) {
+    setEditStatueAccessoryActive(!editStatueAccessoryActive);
+    setTimeout(() => {
+      statueAccessoryHeadlineRef.current.focus();
+    }, 50);
+  } 
+
   return (
-    <div className="bottom-editable-sect hide">
+    <div className="bottom-editable-sect">
     <p className="statue-sect-label">Accessory</p>
 
     {/* The Editable  */}
@@ -31,6 +44,8 @@ const ProfileStatueAccessory = () => {
             name="headline"
             placeholder="Headline"
             className="headline-input"
+            ref={statueAccessoryHeadlineRef}
+            disabled={editStatueAccessoryActive ? false : true}
           />
         </div>
         
@@ -45,6 +60,7 @@ const ProfileStatueAccessory = () => {
           className="the-datepicker"
           dateFormat="MMM d, yyyy"
           placeholderText="Birthday"
+          disabled={editStatueAccessoryActive ? false : true}
         />
         </div>
         
@@ -56,6 +72,7 @@ const ProfileStatueAccessory = () => {
             name="location"
             placeholder="Location"
             className="location-input"
+            disabled={editStatueAccessoryActive ? false : true}
           />
         </div>
         
@@ -67,21 +84,35 @@ const ProfileStatueAccessory = () => {
             name="company"
             placeholder="Company"
             className="company-input"
+            disabled={editStatueAccessoryActive ? false : true}
           />
       </div>
 
-      <div className="bottom-editable-sect-content-btns">
-        <button className="save-accessories">
+        <div className={`bottom-editable-sect-content-btns ${editStatueAccessoryActive ? "" : "hide"}`}>
+          {/* Save Button  */}
+          <button
+            className="save-accessories"
+            onClick={handleToggleStatueAccessory}
+          >
           Save
-        </button>
-        <button className="cancel-accessories">
+          </button>
+          {/* Cancel Button  */}
+          <button
+            className="cancel-accessories"
+            onClick={handleToggleStatueAccessory}
+          >
           Cancel 
         </button>
       </div>
       
     </div>
 
-    <button className="edit-accessories">Edit Accessories</button>
+      <button
+        className={`edit-accessories ${editStatueAccessoryActive ? "hide" : ""}`}
+        onClick={handleToggleStatueAccessory}
+      >
+        Edit Accessories
+      </button>
   </div>
   );
 };

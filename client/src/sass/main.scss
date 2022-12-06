@@ -110,7 +110,7 @@ p, span, em, li, a, i, div {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .pagebg {

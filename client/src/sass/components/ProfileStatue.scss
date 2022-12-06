@@ -65,8 +65,8 @@
         width: 90%;
         max-width: 250px;
         min-width: 175px;
-        border-top: 1px solid $low-dark-clr;
-        border-bottom: 1px solid $low-dark-clr;
+        border: 1px solid $low-dark-clr;
+        padding: .25rem;
       }
 
         // Statue Name 
@@ -150,11 +150,54 @@
         }
       }
 
+      // Bottom Section 
       .bottom-editable-sect {
         display: flex;
         align-items: center;
         flex-direction: column;
-        
+        // Accessories
+
+        // Date Picker 
+        .react-datepicker {
+          color: $light-clr;
+          font-size: .95rem; 
+          background: $mid-light-clr;
+          border: 1px solid $accent-clr;
+          .react-datepicker__header  {
+            background: $mid-dark-clr;
+            .react-datepicker__day-names .react-datepicker__day-name, .react-datepicker__current-month {
+              color: $light-clr !important;
+            }
+          }
+        }
+
+        // Accessories Sections  
+        .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin: 1rem auto;
+          gap: .75rem;
+          align-items: center;
+        }
+
+        // The inputs 
+        .headline-input, .the-datepicker, .location-input, .company-input {
+          width: 100%;
+          outline: none !important;
+          border: none;
+          padding: .35rem 1rem;
+          background: $low-dark-clr;
+          border: 1px solid $low-dark-clr;
+          border-radius: 2.75px;
+          color: $mid-light-clr;
+          &:focus {
+            color: $light-clr;
+            border: 1px solid $mid-light-clr;
+          }
+        }
+
+        // Edit Button 
         .edit-accessories {
           border-radius: 8px;
           margin: 1.25rem auto;

@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery } from "../assets/imgs";
+import { Pancake, Brilliance, Bravery } from "../../assets/imgs";
 
 const EditProfile = () => {
 

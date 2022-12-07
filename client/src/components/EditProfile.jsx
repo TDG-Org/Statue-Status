@@ -76,6 +76,7 @@ const EditProfile = () => {
             <div className="profile-sect-bio">
               <h4 id="bioTitle">Bio</h4>
                 <textarea
+                  placeholder="You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing."
                   type="text"
                   className="bio-input"
                   defaultValue={editProfileAbout} 
@@ -86,16 +87,21 @@ const EditProfile = () => {
 
               {/* Edit button  */}
                 <button
-                  className="edit-bio-btn"
+                  className={`edit-bio-btn ${editProfileAboutActive ? "hide" : ""}`}
+                  onClick={handleToggleProfileAbout}
                 ><i className="bi bi-pen"></i>
                 </button>
 
                 {/* The Save and Cancel Buttons  */}
-                <div className="profile-bio-about-btns">
+                <div className={`profile-bio-about-btns ${editProfileAboutActive ? "" : "hide"}`}>
 
                   {/* Save button  */}
                   <button
                     className="profile-bio-save"
+                    onClick={(e) => {
+                      updateProfileAbout();
+                      handleToggleProfileAbout(); 
+                    }}
                   >
                     Save
                   </button>
@@ -103,6 +109,10 @@ const EditProfile = () => {
                   {/* Cancel button  */}
                   <button
                     className="profile-bio-cancel"
+                    onClick={() => {
+                      handleToggleProfileAbout();
+                      displayProfileAbout();
+                    }}
                   >
                     Cancel
                   </button>

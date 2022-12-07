@@ -98,18 +98,24 @@
             outline: none;
             padding: .5rem;
             min-width: 200px;
-            min-height: 80px;
             max-width: 425px;
+            min-height: 115px;
+            color: $light-clr;
             border-radius: 8px;
             width: 100% !important;
             background-color: $mid-dark-clr;
             border: 1px solid $low-dark-clr;
+            margin-bottom: .75rem;
+            &:focus {
+              background-color: $low-dark-clr;
+              border: 1px solid $mid-light-clr;
+            }
           }
           .edit-bio-btn {
             width: 100%;
             padding: .35rem;
             max-width: 425px;
-            margin: .75rem 0;
+            margin-bottom: .75rem;
             font-size: 1.1rem;
             border-radius: 8px;
             color: $mid-light-clr;

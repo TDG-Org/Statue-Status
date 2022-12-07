@@ -90,8 +90,8 @@
           border: 1px solid $low-dark-clr;
           margin: 1.25rem 0 0rem 0 !important;
           &:focus {
-            border: 1px solid;
             background-color: $low-dark-clr;
+            border: 1px solid $mid-light-clr;
           }
         }
         .statue-name-edit {
@@ -118,7 +118,7 @@
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
           &:focus {
-            border: 1px solid;
+            border: 1px solid $mid-light-clr;
             background-color: $low-dark-clr;
           }
         }

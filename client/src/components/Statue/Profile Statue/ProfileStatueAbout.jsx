@@ -42,6 +42,7 @@ const ProfileStatueAbout = () => {
     <div className="statue-about-sect">
     <p className="statue-sect-label">Who Am I?</p>
       <textarea
+        placeholder="Who am I? I'm a mystery... ✨"
         className="statue-about"
         defaultValue={editStatueAbout} 
         disabled={editStatueAboutActive ? false : true}
@@ -79,8 +80,7 @@ const ProfileStatueAbout = () => {
         onClick={() => {
           handleToggleStatueAbout();
           displayStatueAbout();
-        }
-        }
+        }}
       >
         Cancel
       </button>

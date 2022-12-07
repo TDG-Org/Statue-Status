@@ -8,9 +8,9 @@ const ProfileStatueAbout = () => {
   const [editStatueAboutActive, setEditStatueAboutActive] = useState(false);
 
   // Official About 
-  const [editStatueAbout, setEditStatueAbout] = useState(" You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.");
+  const [editStatueAbout, setEditStatueAbout] = useState("You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.");
   
-    // Current About input 
+  // Current About input 
   const [statueAboutCurrent, setStatueAboutCurrent] = useState(editStatueAbout);
   
   // Toggle function to activate Statue About edit
@@ -42,6 +42,7 @@ const ProfileStatueAbout = () => {
     <div className="statue-about-sect">
     <p className="statue-sect-label">Who Am I?</p>
       <textarea
+        placeholder="Who am I? I'm a mystery... ✨"
         className="statue-about"
         defaultValue={editStatueAbout} 
         disabled={editStatueAboutActive ? false : true}
@@ -79,8 +80,7 @@ const ProfileStatueAbout = () => {
         onClick={() => {
           handleToggleStatueAbout();
           displayStatueAbout();
-        }
-        }
+        }}
       >
         Cancel
       </button>

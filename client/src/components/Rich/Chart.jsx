@@ -32,7 +32,7 @@ const Chart = ({ richestData }) => {
 
       {/* The Chart  */}
       <VictoryChart
-        domainPadding={30}
+        domainPadding={26}
         animate={{
           duration: 1000,
           onLoad: { duration: 300 }
@@ -60,7 +60,7 @@ const Chart = ({ richestData }) => {
             axis: {stroke: "#a8a8a8"},
             tickLabels: {
               fill: "#fff",
-              fontSize: 11.5
+              fontSize: 10.75
             } 
           }}
         />

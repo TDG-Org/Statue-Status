@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import { Chart, RichList, Pie } from "../../components/Rich";
@@ -45,16 +45,16 @@ const HomePage = () => {
   }, 21600000);
 
   // APIs 
-  let forbesAPILimit = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+  let forbesAPILimit = "https://forbes400.onrender.com/api/forbes400?limit=5";
 
-  let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400/";
+  let forbesAPI = "https://forbes400.onrender.com/api/forbes400/";
 
   // Retrieves Data for Richesting People  
   function retrieveRichest() {
 
     setTimeout(() => {
       fetch(forbesAPILimit, {
-        mode: "no-cors",
+        // mode: "no-cors", 
       })
       .then(res => res.json())
         .then((data) => {
@@ -94,7 +94,7 @@ const HomePage = () => {
         }
 
         // Update State 
-        setRichestData(richPeople.reverse());
+        setRichestData(richPeople);
         // console.log(richestData); 
       });
     }, 3000);
@@ -107,7 +107,7 @@ const HomePage = () => {
 
     setTimeout(() => {
       fetch(forbesAPI, {
-        mode: "no-cors",
+        // mode: "no-cors", 
       })
         .then(res => res.json())
         .then((data) => {
@@ -153,7 +153,29 @@ const HomePage = () => {
 
   }
 
-  // retrieveAllRichest(); 
+  // retrieveAllRichest();
+
+  function startRichestPeopleCalls() {
+    console.log("calls richest people APIs");
+
+    // calls the top 5 richest people 
+    retrieveRichest();
+
+    // calls all the richest people 
+    retrieveAllRichest();
+    
+    // call back 
+    setTimeout(() => {
+      startRichestPeopleCalls();
+    }, 14400000);
+  }
+
+  // Update charts and displays on render 
+  useEffect(() => {
+    startRichestPeopleCalls();
+  }, []);
+
+  // startRichestPeopleCalls() 
 
   return (
     <div className="HomePage page">

@@ -1,11 +1,15 @@
 // Core Components File to Export as bundle
 
-// Import 
+// Import General Components
 import Aside from "./Aside";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import User from "./User";
-import EditProfile from "./EditProfile";
+
+// Profile Page 
+import { EditProfile } from "./Profile";
+
+// Statue Related 
 import { ProfileStatue } from "./Statue";
 
 // Export 

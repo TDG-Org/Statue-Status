@@ -15,14 +15,34 @@ const EditProfile = () => {
 
   // OffProfileAbout 
   const [editProfileAbout, setEditProfileAbout] = useState("");
+
+  // Current About input 
+  const [ProfileAboutCurrent, setProfileAboutCurrent] = useState(editProfileAbout);
   
-    // Toggle function to activate profile about edit
-    function handleToggleProfileAbout(e) {
-      setEditProfileAboutActive(!editProfileAboutActive);
-      setTimeout(() => {
-        ProfileAboutRef.current.focus();
-      }, 50);
-    } 
+  // Toggle function to activate profile about edit
+  function handleToggleProfileAbout(e) {
+    setEditProfileAboutActive(!editProfileAboutActive);
+    setTimeout(() => {
+      ProfileAboutRef.current.focus();
+    }, 50);
+  } 
+
+    // Update the input text 
+    function updateProfileAbout(e) {
+      setEditProfileAbout(ProfileAboutCurrent);
+    }
+  
+    // Function that always listens for input changes 
+    function handleProfileAboutInputChange(e) {
+      const target = e.target;
+      let value = target.value;
+      setProfileAboutCurrent(value);
+    }
+  
+    // Update the display 
+    function displayProfileAbout() {
+      document.querySelector(".bio-input").value = editProfileAbout;
+    }
 
   return (
     <div className="profile-sect">

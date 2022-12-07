@@ -8,7 +8,7 @@ const ProfileStatueAbout = () => {
   const [editStatueAboutActive, setEditStatueAboutActive] = useState(false);
 
   // Official About 
-  const [editStatueAbout, setEditStatueAbout] = useState(" You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.");
+  const [editStatueAbout, setEditStatueAbout] = useState("You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.");
   
     // Current About input 
   const [statueAboutCurrent, setStatueAboutCurrent] = useState(editStatueAbout);

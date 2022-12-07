@@ -7,6 +7,23 @@ import { Link } from "react-router-dom";
 import { Pancake, Brilliance, Bravery } from "../assets/imgs";
 
 const EditProfile = () => {
+
+  const ProfileAboutRef = useRef(null);
+
+  // Check if Editing is active
+  const [editProfileAboutActive, setEditProfileAboutActive] = useState(false);
+
+  // OffProfileAbout 
+  const [editProfileAbout, setEditProfileAbout] = useState("");
+  
+    // Toggle function to activate profile about edit
+    function handleToggleProfileAbout(e) {
+      setEditProfileAboutActive(!editProfileAboutActive);
+      setTimeout(() => {
+        ProfileAboutRef.current.focus();
+      }, 50);
+    } 
+
   return (
     <div className="profile-sect">
     <h3>Edit Profile</h3>

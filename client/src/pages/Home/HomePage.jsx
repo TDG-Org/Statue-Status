@@ -38,12 +38,6 @@ const HomePage = () => {
 
   const [allRichestData, setAllRichestData] = useState(data);
 
-  setInterval(() => {
-    // Will put here later 
-    retrieveRichest();  
-
-  }, 21600000);
-
   // APIs 
   let forbesAPILimit = "https://forbes400.onrender.com/api/forbes400?limit=5";
 
@@ -58,7 +52,6 @@ const HomePage = () => {
       })
       .then(res => res.json())
         .then((data) => {
-          // console.log(data); 
           
         let richPeople = [];
 
@@ -95,13 +88,10 @@ const HomePage = () => {
 
         // Update State 
         setRichestData(richPeople);
-        // console.log(richestData); 
       });
     }, 3000);
     
   }
-
-  // retrieveRichest(); 
 
   function retrieveAllRichest() {
 
@@ -113,7 +103,6 @@ const HomePage = () => {
         .then((data) => {
           let allRichPeople = [];
 
-          // console.log(data); 
           for (let i = 0; i < data.length; i++) {
             let rank = data[i].rank;
             let name = data[i].person.name;
@@ -147,35 +136,32 @@ const HomePage = () => {
             allRichPeople.push(newObj);
           }
           setAllRichestData(allRichPeople);  
-          // console.log(allRichestData);
         });
     }, 3000);
 
   }
 
-  // retrieveAllRichest();
-
   function startRichestPeopleCalls() {
     console.log("calls richest people APIs");
 
-    // calls the top 5 richest people 
-    retrieveRichest();
+    // // calls the top 5 richest people 
+    // retrieveRichest();
 
-    // calls all the richest people 
-    retrieveAllRichest();
+    // // calls all the richest people 
+    // retrieveAllRichest();
     
     // call back 
-    setTimeout(() => {
-      startRichestPeopleCalls();
-    }, 14400000);
+    setInterval(() => {
+      // startRichestPeopleCalls(); 
+      retrieveAllRichest(); 
+      retrieveRichest(); 
+    }, 21600000);
   }
 
   // Update charts and displays on render 
   useEffect(() => {
     startRichestPeopleCalls();
   }, []);
-
-  // startRichestPeopleCalls() 
 
   return (
     <div className="HomePage page">

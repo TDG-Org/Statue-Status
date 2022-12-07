@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import { Chart, RichList, Pie } from "../../components/Rich";
@@ -9,7 +9,7 @@ import { format } from "date-fns";
 // Styles
 import "./HomePage.scss";
 
-// temp 
+// temp data 
 const data = [
   {rank: 5, name: "Nate M", money: 43000, country: "United States", image: "https://natemci.com/static/media/Nate1.8cbd5164f1a9ecaea636.png"},
   {rank: 1, name: "Luke M", money: 67430, country: "United States", image: "https://natemci.com/static/media/insomnia.ce01d16f9e95615eacda.png"},
@@ -38,27 +38,20 @@ const HomePage = () => {
 
   const [allRichestData, setAllRichestData] = useState(data);
 
-  setInterval(() => {
-    // Will put here later 
-    retrieveRichest();  
-
-  }, 21600000);
-
   // APIs 
-  let forbesAPILimit = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
+  let forbesAPILimit = "https://forbes400.onrender.com/api/forbes400?limit=5";
 
-  let forbesAPI = "https://forbes400.herokuapp.com/api/forbes400/";
+  let forbesAPI = "https://forbes400.onrender.com/api/forbes400/";
 
   // Retrieves Data for Richesting People  
   function retrieveRichest() {
 
     setTimeout(() => {
       fetch(forbesAPILimit, {
-        mode: "no-cors",
+        // mode: "no-cors", 
       })
       .then(res => res.json())
         .then((data) => {
-          // console.log(data); 
           
         let richPeople = [];
 
@@ -94,26 +87,22 @@ const HomePage = () => {
         }
 
         // Update State 
-        setRichestData(richPeople.reverse());
-        // console.log(richestData); 
+        setRichestData(richPeople);
       });
     }, 3000);
     
   }
 
-  // retrieveRichest(); 
-
   function retrieveAllRichest() {
 
     setTimeout(() => {
       fetch(forbesAPI, {
-        mode: "no-cors",
+        // mode: "no-cors", 
       })
         .then(res => res.json())
         .then((data) => {
           let allRichPeople = [];
 
-          // console.log(data); 
           for (let i = 0; i < data.length; i++) {
             let rank = data[i].rank;
             let name = data[i].person.name;
@@ -147,13 +136,24 @@ const HomePage = () => {
             allRichPeople.push(newObj);
           }
           setAllRichestData(allRichPeople);  
-          // console.log(allRichestData);
         });
     }, 3000);
 
   }
 
-  // retrieveAllRichest(); 
+  // Calls APIs every 4 hours / 6 times a day 
+  function startRichestPeopleCalls() {
+    console.log("calls richest people APIs");
+    setInterval(() => {
+      retrieveAllRichest(); 
+      retrieveRichest(); 
+    }, 14400000);
+  }
+
+  // Calls startRichestPeopleCalls on Render 
+  useEffect(() => {
+    startRichestPeopleCalls();
+  }, []);
 
   return (
     <div className="HomePage page">

@@ -151,9 +151,9 @@ const HomePage = () => {
   }
 
   // Calls startRichestPeopleCalls on Render 
-  useEffect(() => {
-    startRichestPeopleCalls();
-  }, []);
+  // useEffect(() => {
+  //   startRichestPeopleCalls();
+  // }, []);
 
   return (
     <div className="HomePage page">

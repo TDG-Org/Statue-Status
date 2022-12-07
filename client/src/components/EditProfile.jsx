@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 // Link 
 import { Link } from "react-router-dom";

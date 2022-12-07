@@ -12,7 +12,7 @@ import "../sass/utils/hamburger.scss";
 
 const Aside = () => {
 
-  const [isActive, setActive] = useState("true");
+  const [isActive, setActive] = useState(true);
   const handleToggle = (e) => {
 
     // if the screen size is mobile, then apply the active class 

@@ -9,7 +9,7 @@ import { format } from "date-fns";
 // Styles
 import "./HomePage.scss";
 
-// temp 
+// temp data 
 const data = [
   {rank: 5, name: "Nate M", money: 43000, country: "United States", image: "https://natemci.com/static/media/Nate1.8cbd5164f1a9ecaea636.png"},
   {rank: 1, name: "Luke M", money: 67430, country: "United States", image: "https://natemci.com/static/media/insomnia.ce01d16f9e95615eacda.png"},
@@ -141,24 +141,16 @@ const HomePage = () => {
 
   }
 
+  // Calls APIs every 4 hours / 6 times a day 
   function startRichestPeopleCalls() {
     console.log("calls richest people APIs");
-
-    // // calls the top 5 richest people 
-    // retrieveRichest();
-
-    // // calls all the richest people 
-    // retrieveAllRichest();
-    
-    // call back 
     setInterval(() => {
-      // startRichestPeopleCalls(); 
       retrieveAllRichest(); 
       retrieveRichest(); 
-    }, 21600000);
+    }, 14400000);
   }
 
-  // Update charts and displays on render 
+  // Calls startRichestPeopleCalls on Render 
   useEffect(() => {
     startRichestPeopleCalls();
   }, []);

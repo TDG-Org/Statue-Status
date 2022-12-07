@@ -67,6 +67,7 @@ const ProfileStatue = () => {
               <div className="statue-name-sect">
                 <input
                   type="text"
+                  placeholder="Your Name"
                   className="statue-name"
                   defaultValue={editStatueName} 
                   disabled={editStatueNameActive ? false : true}

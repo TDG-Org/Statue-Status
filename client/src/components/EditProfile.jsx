@@ -76,7 +76,7 @@ const EditProfile = () => {
             <div className="profile-sect-bio">
               <h4 id="bioTitle">Bio</h4>
                 <textarea
-                  placeholder="You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing."
+                  placeholder="What interests you? Please tell us more about yourself!"
                   type="text"
                   className="bio-input"
                   defaultValue={editProfileAbout} 

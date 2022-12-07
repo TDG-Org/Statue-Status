@@ -121,6 +121,39 @@
               background-color: $low-dark-clr;
             }
           }
+
+          // The other editing buttons for bio 
+          .profile-bio-about-btns {
+            gap: 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            transition: all 300ms ease;
+
+            .profile-bio-save, .profile-bio-cancel {
+              width: 80%;
+              min-width: 50px;
+              max-width: 205px;
+              border-radius: 8px;
+              text-align: center;
+              color: $mid-light-clr;
+              padding: .5rem .35rem;
+              justify-content: center;
+              background: $mid-dark-clr;
+              border: 1px solid $low-dark-clr;
+              i {
+                color: $mid-light-clr;
+              }
+              &:hover {
+                color: $light-clr;
+                background: $low-dark-clr;
+                border: 1px solid $accent-clr;
+                i {
+                  color: $light-clr;
+                }
+              }
+            }
+          }
         }
       }
      }

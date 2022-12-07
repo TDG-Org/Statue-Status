@@ -249,14 +249,14 @@
 
     // Edit Statue Name Buttons 
     .statue-name-edit-btns,
-     .statue-about-edit-btns {
-    gap: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    transition: all 300ms ease;
-    justify-content: space-evenly;
-  }
+    .statue-about-edit-btns {
+      gap: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      transition: all 300ms ease;
+      justify-content: space-evenly;
+    }
 
     .statue-name-edit, 
     .statue-name-save, 

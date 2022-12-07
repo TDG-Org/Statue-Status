@@ -75,8 +75,40 @@ const EditProfile = () => {
             {/* Bio  */}
             <div className="profile-sect-bio">
               <h4 id="bioTitle">Bio</h4>
-              <textarea type="text" className="bio-input" value="This is some test values" disabled></textarea>
-              <button className="edit-bio-btn"><i className="bi bi-pen"></i></button>
+                <textarea
+                  type="text"
+                  className="bio-input"
+                  defaultValue={editProfileAbout} 
+                  disabled={editProfileAboutActive ? false : true}
+                  ref={ProfileAboutRef}
+                  onChange={handleProfileAboutInputChange} 
+                ></textarea>
+
+              {/* Edit button  */}
+                <button
+                  className="edit-bio-btn"
+                ><i className="bi bi-pen"></i>
+                </button>
+
+                {/* The Save and Cancel Buttons  */}
+                <div className="profile-bio-about-btns">
+
+                  {/* Save button  */}
+                  <button
+                    className="profile-bio-save"
+                  >
+                    Save
+                  </button>
+
+                  {/* Cancel button  */}
+                  <button
+                    className="profile-bio-cancel"
+                  >
+                    Cancel
+                  </button>
+
+                </div>
+                
             </div>
           </div>
         </div>

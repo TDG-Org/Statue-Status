@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import { socialLinksArray } from "./";
 
 const ProfileStatueSecondary = () => {
-  console.log(socialLinksArray[0].name);
+  // console.log(socialLinksArray[0].icon); 
 
   const statueSocialLinkRef = useRef(null);
 
@@ -70,11 +70,11 @@ const ProfileStatueSecondary = () => {
     {/* Socials  */}
     <div className="secondary-sect-socials">
       <h4>Socials</h4>
-      <ul className="social-list">
+        <ul className="social-list">
 
         <li>
           <a
-            href=""><i className="bi bi-instagram"></i> Instagram/
+            href=""><i className={socialLinksArray[0].iconClass}></i> Instagram/
             <span className="social-username">TDGNate</span>
             </a>
             <i className="bi bi-x-lg statue-social-x"></i>

@@ -9,6 +9,9 @@ import "../../../sass/components/ProfileStatue.scss";
 // Images/SVGs 
 import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";
 
+// Sweet Alert 
+import swal from "sweetalert";
+
 const ProfileStatue = () => {
 
   const statueNameRef = useRef(null);
@@ -45,6 +48,32 @@ const ProfileStatue = () => {
   // Update the display 
   function displayStatueName() {
     document.querySelector(".statue-name").value = editStatueName;
+  }
+
+  // Swal Functions 
+  function handleDeleteStatue() {
+    swal({
+      text: "deleting...",
+      button: false
+    });
+
+    setTimeout(() => {
+      swal.close();
+
+      deleteStatue();
+    }, 1200);
+  }
+
+  // Delete Statue 
+  function deleteStatue() {
+    swal({
+      icon: "success",
+      button: false
+    });
+
+    setTimeout(() => {
+      swal.close();
+    }, 1550);
   }
 
   return (
@@ -130,7 +159,10 @@ const ProfileStatue = () => {
           
           {/* Delete Statue Button  */}
           <div className="delete-statue-btn-wrapper">
-            <button className="delete-statue-btn">
+            <button
+              className="delete-statue-btn"
+              onClick={handleDeleteStatue}
+            >
               Delete Statue
             </button>
           </div>

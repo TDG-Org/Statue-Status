@@ -342,6 +342,24 @@
             }
           }
         }
+        .add-social-link-li {
+          display: flex;
+          flex-direction: row;
+          span {
+            width: 100px;
+          }
+          .add-social-link {
+            margin: 0 auto;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $mid-light-clr;
+            &:focus {
+              border-radius: 0;
+              border-top: 1px solid $mid-light-clr;
+            }
+          }
+        }
         .more-socials-btn {
           display: flex;
           align-items: center;

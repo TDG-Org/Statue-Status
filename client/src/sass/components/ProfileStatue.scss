@@ -96,7 +96,7 @@
         }
         .statue-name-edit {
           width: 100%;
-          padding: .35rem;
+          padding: .5rem .35rem;
           max-width: unset;
         }
       }
@@ -123,8 +123,10 @@
           }
         }
         .statue-about-edit {
-          padding: .35rem;
+          width: 100%;
+          max-width: unset;
           border-radius: 8px;
+          padding: .5rem .35rem;
           color: $mid-light-clr;
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
@@ -197,13 +199,14 @@
           display: flex;
           flex-direction: row;
           margin: 2.25rem auto;
-          justify-content: space-evenly;
+          justify-content: center;
+          gap: 1.5rem;
           button {
-            border-radius: 8px;
             color: $mid-light-clr;
             padding: .35rem 1.25rem;
-            background: $mid-dark-clr;
-            border: 1px solid $low-dark-clr;
+            background: transparent;
+            border: 1px solid transparent;
+            border-bottom: 1px solid $low-dark-clr;
             &:hover {
               color: $light-clr;
               background: $low-dark-clr;
@@ -214,12 +217,12 @@
 
         // Edit Button 
         .edit-accessories {
-          border-radius: 8px;
           margin: 1.25rem auto;
           color: $mid-light-clr;
-          padding: .35rem 1.75rem;
-          background: $mid-dark-clr;
-          border: 1px solid $low-dark-clr;
+          padding: .35rem 1.25rem;
+          background: transparent;
+          border: 1px solid transparent;
+          border-bottom: 1px solid $low-dark-clr;
           &:hover {
             color: $light-clr;
             background: $low-dark-clr;
@@ -258,7 +261,8 @@
       justify-content: space-evenly;
     }
 
-    .statue-name-edit, 
+    .statue-name-edit,
+    .statue-about-edit, 
     .statue-name-save, 
     .statue-about-save {
       width: 80%;
@@ -296,6 +300,10 @@
         width: 100%;
         padding: .5rem;
         li {
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          position: relative;
           width: 80%;
           margin: .5rem auto;
           text-align: center;
@@ -312,23 +320,234 @@
             color: $mid-light-clr;
             justify-content: start;
             .social-username {
-              margin: 0 .75rem;
+              margin: 0 .2rem;
             }
           }
-          .more-socials-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          .statue-social-x {
+            display: none;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            &:hover {
+              cursor: pointer;
+              color: $mid-red-clr;
+            }
           }
+
           &:hover {
             background: $low-dark-clr;
             border: 1px solid $accent-clr;
+            .statue-social-x {
+              display: block;
+            }
           }
         }
+
+        // btn to add link 
+        .add-social-link-btn-wrapper {
+          padding: 0;
+          .social-add-link-btn {
+            padding: .5rem 1rem;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            color: $light-clr;
+            border: none;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+
+        // Adding a New Social 
+        .add-social-link-li {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          input {
+            color: $light-clr;
+            margin: .5rem 0 !important;
+          }
+
+          span {
+            width: 100%;
+            margin: .25rem 0;
+          }
+
+          .add-social-link-sect,
+           .add-social-platform-sect {
+            margin: .75rem 0;
+          }
+
+          .add-social-link,
+           .add-social-platform {
+            padding: .25rem;
+            width: 100%;
+            border: none;
+            margin: 0 auto;
+            background-color: transparent;
+            border-bottom: 1px solid $mid-light-clr;
+          }
+
+          .add-social-btns {
+            margin: .75rem 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            button {
+              border: none;
+              padding: .15rem 1rem;
+              border-bottom: 1px solid $mid-light-clr;
+              border-top: 1px solid transparent;
+              background: transparent;
+              color: $light-clr;
+              &:hover {
+                background: $low-dark-clr;
+                border-top: 1px solid $accent-clr;
+                border-bottom: 1px solid $accent-clr;
+              }
+            }
+          }
+          &:hover {
+            border: 1px solid $low-dark-clr;
+            background-color: $mid-dark-clr;
+          }
+        }
+
+        .more-socials-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
         .social-extra-link-platform {
           color: $mid-light-clr;
         }
       }
     }
   }
+
+  // Delete button 
+  .delete-statue-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.75rem 0 1rem 0;
+
+    .delete-statue-btn {
+      background: transparent;
+      color: $mid-red-clr;
+      width: 30%; 
+      max-width: 325px;
+      padding: .5rem;
+      border: 1px solid $low-dark-clr;
+      transition: all 250ms ease;   
+
+      &:hover {
+        background: $low-dark-clr;
+        color: $red-clr;
+        border: 1px solid $red-clr;
+      }
+    }
+  }
+}
+
+.smaller-size-screen-display-divider {
+  display: none;
+}
+
+// 1230px 
+
+// Media Queries 
+
+@media screen and (max-width: 1230px) {
+  .statue-sect {
+    .statue {
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      .smaller-size-screen-display-divider {
+        display: block;
+      }
+
+      // Prime Sect 
+      .primary-sect {
+        width: 100%;
+        gap: 1rem;
+
+        .statue-name, .statue-name-edit, .statue-about, .statue-about-edit {
+          width: 75% !important;
+          margin: 0 auto;
+        }
+
+        // Edit Statue Name Buttons 
+        .statue-name-edit-btns,
+        .statue-about-edit-btns {
+          width: 75%;
+          margin: 0 auto;
+        }
+
+        // Bottom Section 
+        .bottom-editable-sect {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          .bottom-editable-sect-content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            justify-content: center;
+
+            .bottom-editable-sect-content-btns {
+              margin: 1.25rem auto;
+            }
+
+          // Accessories Sections  
+          .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
+              gap: .5rem;
+              margin: 1.25rem .5rem;
+            }
+          }
+        }
+      }
+
+      // ---- Second Section ---- 
+
+      .secondary-sect {
+        width: 100%;
+        h4 {
+          margin: 1rem auto !important;
+        }
+
+        // Social List 
+        .social-list {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          li {
+            width: 45%;
+            margin: .5rem .35rem;
+            min-width: 285px;
+            a {
+              margin: auto auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }

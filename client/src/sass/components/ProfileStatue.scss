@@ -96,7 +96,7 @@
         }
         .statue-name-edit {
           width: 100%;
-          padding: .35rem;
+          padding: .5rem .35rem;
           max-width: unset;
         }
       }
@@ -123,8 +123,10 @@
           }
         }
         .statue-about-edit {
-          padding: .35rem;
+          width: 100%;
+          max-width: unset;
           border-radius: 8px;
+          padding: .5rem .35rem;
           color: $mid-light-clr;
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
@@ -197,13 +199,14 @@
           display: flex;
           flex-direction: row;
           margin: 2.25rem auto;
-          justify-content: space-evenly;
+          justify-content: center;
+          gap: 1.5rem;
           button {
-            border-radius: 8px;
             color: $mid-light-clr;
             padding: .35rem 1.25rem;
-            background: $mid-dark-clr;
-            border: 1px solid $low-dark-clr;
+            background: transparent;
+            border: 1px solid transparent;
+            border-bottom: 1px solid $low-dark-clr;
             &:hover {
               color: $light-clr;
               background: $low-dark-clr;
@@ -214,12 +217,12 @@
 
         // Edit Button 
         .edit-accessories {
-          border-radius: 8px;
           margin: 1.25rem auto;
           color: $mid-light-clr;
-          padding: .35rem 1.75rem;
-          background: $mid-dark-clr;
-          border: 1px solid $low-dark-clr;
+          padding: .35rem 1.25rem;
+          background: transparent;
+          border: 1px solid transparent;
+          border-bottom: 1px solid $low-dark-clr;
           &:hover {
             color: $light-clr;
             background: $low-dark-clr;
@@ -258,7 +261,8 @@
       justify-content: space-evenly;
     }
 
-    .statue-name-edit, 
+    .statue-name-edit,
+    .statue-about-edit, 
     .statue-name-save, 
     .statue-about-save {
       width: 80%;
@@ -387,6 +391,13 @@
           margin: 0 auto;
         }
 
+        // Edit Statue Name Buttons 
+        .statue-name-edit-btns,
+        .statue-about-edit-btns {
+          width: 75%;
+          margin: 0 auto;
+        }
+
         // Bottom Section 
         .bottom-editable-sect {
           display: flex;
@@ -399,12 +410,24 @@
             margin-top: 1rem;
             justify-content: center;
 
+            .bottom-editable-sect-content-btns {
+              margin: 1.25rem auto;
+            }
+
           // Accessories Sections  
           .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
               gap: .5rem;
               margin: 1.25rem .5rem;
             }
           }
+        }
+      }
+
+      // ---- Second Section ---- 
+
+      .secondary-sect {
+        h4 {
+          margin: 1rem auto !important;
         }
       }
     }

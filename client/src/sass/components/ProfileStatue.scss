@@ -300,6 +300,9 @@
         width: 100%;
         padding: .5rem;
         li {
+          display: flex;
+          flex-direction: row;
+          position: relative;
           width: 80%;
           margin: .5rem auto;
           text-align: center;
@@ -324,9 +327,23 @@
             align-items: center;
             justify-content: center;
           }
+          .statue-social-x {
+            display: none;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            &:hover {
+              cursor: pointer;
+              color: $mid-red-clr;
+            }
+          }
+
           &:hover {
             background: $low-dark-clr;
             border: 1px solid $accent-clr;
+            .statue-social-x {
+              display: block;
+            }
           }
         }
         .social-extra-link-platform {
@@ -426,8 +443,22 @@
       // ---- Second Section ---- 
 
       .secondary-sect {
+        width: 100%;
         h4 {
           margin: 1rem auto !important;
+        }
+
+        // Social List 
+        .social-list {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          li {
+            width: 45%;
+            margin: .75rem;
+            min-width: 285px;
+          }
         }
       }
     }

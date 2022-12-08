@@ -5,26 +5,26 @@ import { Pancake, Brilliance, Bravery, Male } from "../../assets/imgs";
 
 const Avatar = () => {
 
-  const [image, setImage] = useState(null);
+  const [profileImage, setProfileImage] = useState(null);
   const inputProfileAvatarRef = useRef();
   const profileImgRef = useRef();
 
   const handleProfileImageChange = (event) => {
-    setImage(event.target.files[0]);
+    setProfileImage(event.target.files[0]);
     profileImgRef.current.src = URL.createObjectURL(event.target.files[0]);
   };
 
-  const handleClick = () => {
+  const handleProfileAvatarInputClick = () => {
     console.log("hello");
     inputProfileAvatarRef.current.click();
   };
   
   return (
     <div className="profile-sect-avatar">
-      <div className="profile-sect-avatar-content" onClick={() => handleClick()}>
+      <div className="profile-sect-avatar-content" onClick={() => handleProfileAvatarInputClick()}>
         <img
-          alt=""
-          src=""
+          alt="User Avatar"
+          src={Male}
           ref={profileImgRef}
           className="profile-avatar"
         />
@@ -36,7 +36,7 @@ const Avatar = () => {
       {/* Change Avatar button  */}
       <button
         className="change-avatar"
-        onClick={handleClick}
+        onClick={handleProfileAvatarInputClick}
       >Change Avatar
       </button>
       

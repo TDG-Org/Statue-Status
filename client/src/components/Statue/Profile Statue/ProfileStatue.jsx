@@ -125,7 +125,15 @@ const ProfileStatue = () => {
             
             {/* - Secondary Section - */}
             <ProfileStatueSecondary />
-         </div>
+
+          </div>
+          
+          {/* Delete Statue Button  */}
+          <div className="delete-statue-btn-wrapper">
+            <button className="delete-statue-btn">
+              Delete Statue
+            </button>
+          </div>
 
        </div>
      </div>

@@ -8,7 +8,7 @@ const ProfileStatueSecondary = () => {
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
   
   // Official Social Link 
-  const [editStatueSocialLink, setEditStatueSocialLink] = useState("Christian McIlvenny");
+  const [editStatueSocialLink, setEditStatueSocialLink] = useState(null);
 
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
@@ -28,14 +28,40 @@ const ProfileStatueSecondary = () => {
 
   // Function that always listens for input changes 
   function handleStatueSocialLinkInputChange(e) {
-    const target = e.target;
-    let value = target.value;
-    setStatueSocialLinkCurrent(value);
+
+    // Get name of Element and the user input 
+    const elName = e.target.name;
+    let elValue = e.target.value;
+
+    // check which key value that matches to update 
+    switch (elName) {
+      case "socialLink":
+        let link = elValue;
+        setStatueSocialLinkCurrent(current => {
+          return {
+            ...current,
+            link,
+          };
+        });
+        break;
+      case "socialPlatform":
+        let platform = elValue;
+        setStatueSocialLinkCurrent(current => {
+          return {
+            ...current,
+            platform,
+          };
+        });
+    }
   }
+
+  console.log(editStatueSocialLink);
 
   // Update the display 
   function displayStatueSocialLink() {
+
     document.querySelector(".add-social-link").value = "";
+
     document.querySelector(".add-social-platform").value = "";
   }
 
@@ -180,9 +206,9 @@ const ProfileStatueSecondary = () => {
           </li>
 
           {/* add link button  */}
-          <li className="add-social-link-btn-wrapper">
+          <li className={`add-social-link-btn-wrapper ${editStatueSocialLinkActive ? "hide" : ""}`}>
             <button
-              className={`social-add-link-btn ${editStatueSocialLinkActive ? "hide" : ""}`}
+              className="social-add-link-btn"
               onClick={handleToggleStatueSocialLink}
             >
               Add Link <i className="bi bi-plus-lg"></i>
@@ -190,23 +216,28 @@ const ProfileStatueSecondary = () => {
           </li>
           
           {/* Add a Social Link with platform */}
-          <li className="add-social-link-li">
+          <li className={`add-social-link-li ${editStatueSocialLinkActive ? "" : "hide"}`}>
             {/* social link  */}
             <div className="add-social-link-sect">
               <span>Add Link:</span>
               <input
+                name="socialLink"
+                ref={statueSocialLinkRef}
                 type="text"
                 placeholder="https://..."
                 className="add-social-link"
+                onChange={handleStatueSocialLinkInputChange}
               />
             </div>
             {/* social Platform  */}
             <div className="add-social-platform-sect">
               <span>Platform:</span>
               <input
+                name="socialPlatform"
                 type="text"
                 placeholder="What platform?"
                 className="add-social-platform"
+                onChange={handleStatueSocialLinkInputChange}
               />
             </div>
             {/* social link add or cancel  */}
@@ -214,11 +245,21 @@ const ProfileStatueSecondary = () => {
               {/* add  */}
               <button
                 className="add-social-btn"
+                onClick={(e) => {
+                  updateStatueSocialLink();
+                  handleToggleStatueSocialLink(); 
+                  displayStatueSocialLink();
+                }}
               >Add
               </button>
               {/* cancel  */}
               <button
                 className="cancel-social-btn"
+                onClick={() => {
+                  handleToggleStatueSocialLink();
+                  displayStatueSocialLink();
+                  }
+                }
               >Cancel
               </button>
             </div>

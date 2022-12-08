@@ -100,6 +100,7 @@ const ProfileStatueSecondary = () => {
               key={index}
               link={item.userSocialLink}
               platform={item.userSocialPlatform}
+              username={item.userSocialName}
               />
             );
           })}

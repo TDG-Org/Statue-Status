@@ -1,6 +1,16 @@
 import React from "react";
 
-const ProfileStatueSocialLink = () => {
+// Proptypes 
+import PropTypes from "prop-types";
+
+const ProfileStatueSocialLink = ({ link, platform, username }) => {
+  
+  ProfileStatueSocialLink.propTypes = {
+    link: PropTypes.string.isRequired,
+    platform: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+  };
+
   return (
     <li>
       <a

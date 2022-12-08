@@ -11,19 +11,23 @@ const NateData = {
 const natesSocialLinks = [
   {
     userSocialLink: "https://github.com/TDGNate",
-    userSocialPlatform: "github"
+    userSocialPlatform: "github",
+    userSocialName: "TDGNate"
   },
   {
     userSocialLink: "https://www.linkedin.com/in/christian-mcilvenny/",
-    userSocialPlatform: "linkedin"
+    userSocialPlatform: "linkedin",
+    userSocialName: "christian-mcilvenny"
   },
   {
     userSocialLink: "https://discord.com/channels/@me",
-    userSocialPlatform: "discord"
+    userSocialPlatform: "discord",
+    userSocialName: "Nate#2000"
   },
   {
     userSocialLink: "https://www.instagram.com/imnzte/",
-    userSocialPlatform: "instagram"
+    userSocialPlatform: "instagram",
+    userSocialName: "imnzte"
   },
   {
     userSocialLink: "itsnzte@gmail.com",
@@ -31,7 +35,8 @@ const natesSocialLinks = [
   },
   {
     userSocialLink: "https://www.facebook.com/tdg.nate.7/",
-    userSocialPlatform: "facebook"
+    userSocialPlatform: "facebook",
+    userSocialName: "tdgnate"
   },
 ];
 

@@ -5,34 +5,33 @@ import { Pancake, Brilliance, Bravery, Male } from "../../assets/imgs";
 
 const Avatar = () => {
 
-  const [image, setImage] = useState(Male);
-  const inputRef = useRef();
-  const imgRef = useRef();
+  const [image, setImage] = useState(null);
+  const inputProfileAvatarRef = useRef();
+  const profileImgRef = useRef();
 
-  const handleImageChange = (event) => {
+  const handleProfileImageChange = (event) => {
     setImage(event.target.files[0]);
-    imgRef.current.src = URL.createObjectURL(event.target.files[0]);
+    profileImgRef.current.src = URL.createObjectURL(event.target.files[0]);
   };
 
   const handleClick = () => {
-    inputRef.current.click();
-    console.log(image);
+    console.log("hello");
+    inputProfileAvatarRef.current.click();
   };
   
   return (
     <div className="profile-sect-avatar">
-      <div className="profile-sect-avatar-content">
+      <div className="profile-sect-avatar-content" onClick={() => handleClick()}>
         <img
           alt=""
           src=""
-          ref={imgRef} 
-          onClick={handleClick}
+          ref={profileImgRef}
           className="profile-avatar"
         />
         <div className="avatar-edit-overlay">Edit</div>
       </div>
 
-      <input type="file" ref={inputRef} onChange={handleImageChange} hidden />
+      <input type="file" ref={inputProfileAvatarRef} onChange={handleProfileImageChange} hidden />
 
       {/* Change Avatar button  */}
       <button

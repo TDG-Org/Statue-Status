@@ -46,12 +46,12 @@
             height: 135px;
             display: flex;
             margin: .8rem;
-            // padding: .25rem; 
             margin-bottom: 0;
             overflow: hidden;
             border-radius: 50%;
             position: relative;
             align-items: center;
+            justify-content: center;
             border: 1px solid $low-dark-clr;
             .avatar-edit-overlay {
               top: 0;
@@ -256,23 +256,8 @@
           background: $low-dark-clr;
         }
         .profile-sect-avatar {
-          width: 30%;
           align-items: center;
-          padding: 0;
-
-          .profile-sect-avatar-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 130px;
-            height: 130px;
-            // max-width: 140px; 
-            .profile-avatar {
-              width: 110%;
-              height: 110%;
-            }
-          }
+          width: 30%;
         }
         .user-edit {
           width: 100%;

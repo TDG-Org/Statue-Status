@@ -343,13 +343,31 @@
           }
         }
 
+        // btn to add link 
+        .add-social-link-btn-wrapper {
+          padding: 0;
+          .social-add-link-btn {
+            padding: .5rem 1rem;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            color: $light-clr;
+            border: none;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+
         // Adding a New Social 
         .add-social-link-li {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          
+
           span {
             width: 100%;
             margin: .25rem 0;

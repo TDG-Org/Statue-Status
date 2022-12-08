@@ -140,8 +140,15 @@ const ProfileStatueSecondary = () => {
             <i className="bi bi-x-lg statue-social-x"></i>
             
           </li>
+
+          {/* add link button  */}
+          <li className="add-social-link-btn-wrapper">
+            <button className="social-add-link-btn">
+              Add Link <i className="bi bi-plus-lg"></i>
+            </button>
+          </li>
           
-          {/* Add a Social Link  */}
+          {/* Add a Social Link with platform */}
           <li className="add-social-link-li">
             {/* social link  */}
             <div className="add-social-link-sect">

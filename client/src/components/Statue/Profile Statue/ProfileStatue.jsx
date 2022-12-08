@@ -151,11 +151,15 @@ const ProfileStatue = () => {
               <ProfileStatueBages /> 
 
             </div> 
+
+            <hr className="smaller-size-screen-display-divider"/> 
             
             {/* - Secondary Section - */}
             <ProfileStatueSecondary />
 
           </div>
+
+          <hr />
           
           {/* Delete Statue Button  */}
           <div className="delete-statue-btn-wrapper">

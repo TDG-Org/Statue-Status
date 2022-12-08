@@ -338,7 +338,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem auto;
+    margin: 1.75rem 0 1rem 0;
 
     .delete-statue-btn {
       background: transparent;
@@ -356,4 +356,58 @@
       }
     }
   }
+}
+
+.smaller-size-screen-display-divider {
+  display: none;
+}
+
+// 1230px 
+
+// Media Queries 
+
+@media screen and (max-width: 1230px) {
+  .statue-sect {
+    .statue {
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      .smaller-size-screen-display-divider {
+        display: block;
+      }
+
+      // Prime Sect 
+      .primary-sect {
+        width: 100%;
+        gap: 1rem;
+
+        .statue-name, .statue-name-edit, .statue-about, .statue-about-edit {
+          width: 75% !important;
+          margin: 0 auto;
+        }
+
+        // Bottom Section 
+        .bottom-editable-sect {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          .bottom-editable-sect-content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            justify-content: center;
+
+          // Accessories Sections  
+          .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
+              gap: .5rem;
+              margin: 1.25rem .5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }

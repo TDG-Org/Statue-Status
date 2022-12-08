@@ -8,12 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
 
 // Demo Data 
-const NateData = {
-  headline: "Software Engineer",
-  location: "Perris, CA",
-  company: "TDG",
-  bday: "Apr 8, 2003"
-};
+import { NateData } from "../../../DemoData";
 
 const ProfileStatueAccessory = () => {
 

@@ -13,7 +13,7 @@ const ProfileStatueSecondary = () => {
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
 
-  // Toggle function to activate Statue SocialLink edit
+  // Toggle function to activate Statue Social Link edit
   function handleToggleStatueSocialLink(e) {
     setEditStatueSocialLinkActive(!editStatueSocialLinkActive);
     setTimeout(() => {
@@ -55,13 +55,9 @@ const ProfileStatueSecondary = () => {
     }
   }
 
-  console.log(editStatueSocialLink);
-
   // Update the display 
   function displayStatueSocialLink() {
-
     document.querySelector(".add-social-link").value = "";
-
     document.querySelector(".add-social-platform").value = "";
   }
 

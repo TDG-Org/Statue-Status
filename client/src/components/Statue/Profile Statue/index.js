@@ -6,6 +6,7 @@ import ProfileStatueBages from "./ProfileStatueBages";
 import ProfileStatueAbout from "./ProfileStatueAbout";
 import ProfileStatueAccessory from "./ProfileStatueAccessory";
 import ProfileStatueSecondary from "./ProfileStatueSecondary";
+import ProfileStatueSocialLink from "./ProfileStatueSocialLink";
 
 // Export 
 export {
@@ -16,4 +17,5 @@ export {
   ProfileStatueBages,
   ProfileStatueAccessory,
   ProfileStatueSecondary,
+  ProfileStatueSocialLink,
 };

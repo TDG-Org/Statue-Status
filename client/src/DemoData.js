@@ -46,5 +46,6 @@ const data = [
 
 export {
   NateData,
-  data
+  data,
+  natesSocialLinks
 };

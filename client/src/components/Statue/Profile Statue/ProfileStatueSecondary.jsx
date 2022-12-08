@@ -1,19 +1,45 @@
 import React, { useState, useRef } from "react";
 
+// Components 
+import { ProfileStatueSocialLink } from "./";
+
 // social links array
 import { socialLinksArray } from "./";
 
+// Nate's Social Links data 
+import { natesSocialLinks } from "../../../DemoData";
+
 const ProfileStatueSecondary = () => {
-  // console.log(socialLinksArray[0].icon); 
+
+  const [displayedSocialLinksCount, setDisplayedSocialLinksCount] = useState(6);
+  const [hideMoreSocialLinksBtn, setHideMoreSocialLinksBtn] = useState(false);
+
+  // function to load more projects 
+  function loadMoreSocialLinks() {
+    setDisplayedSocialLinksCount(displayedSocialLinksCount + 6);
+
+    toggleShowMoreSocialLinksBtn();
+  }
+
+  function toggleShowMoreSocialLinksBtn() {
+    setTimeout(() => {
+      let totalNumberOfSocialLinks = ProfileStatueSocialLink.length;
+      if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
+        setHideMoreSocialLinksBtn(true);
+        } else {
+        setHideMoreSocialLinksBtn(false);
+      }
+      }, 500);
+  }
+
+  const slSliced = natesSocialLinks.slice(0, displayedSocialLinksCount);
+  
 
   const statueSocialLinkRef = useRef(null);
-
   // Check if Editing is active
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
-  
   // Official Social Link 
   const [editStatueSocialLink, setEditStatueSocialLink] = useState(null);
-
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
 
@@ -24,19 +50,15 @@ const ProfileStatueSecondary = () => {
       statueSocialLinkRef.current.focus();
     }, 50);
   } 
-
   // Update the input text 
   function updateStatueSocialLink(e) {
     setEditStatueSocialLink(statueSocialLinkCurrent);
   }
-
   // Function that always listens for input changes 
   function handleStatueSocialLinkInputChange(e) {
-
     // Get name of Element and the user input 
     const elName = e.target.name;
     let elValue = e.target.value;
-
     // check which key value that matches to update 
     switch (elName) {
       case "socialLink":
@@ -58,7 +80,6 @@ const ProfileStatueSecondary = () => {
         });
     }
   }
-
   // Update the display 
   function displayStatueSocialLink() {
     document.querySelector(".add-social-link").value = "";
@@ -71,6 +92,17 @@ const ProfileStatueSecondary = () => {
     <div className="secondary-sect-socials">
       <h4>Socials</h4>
         <ul className="social-list">
+
+          {/* Loop through data and create social links  */}
+          {slSliced.map((item, index) => {
+            return (
+              <ProfileStatueSocialLink
+              key={index}
+              link={item.userSocialLink}
+              platform={item.userSocialPlatform}
+              />
+            );
+          })}
 
         <li>
           <a
@@ -266,7 +298,10 @@ const ProfileStatueSecondary = () => {
           </li>
 
         {/* The More Socials button  */}
-        <li className="more-socials-btn">
+          <li
+            onClick={loadMoreSocialLinks}
+            className={`more-socials-btn ${hideMoreSocialLinksBtn ? "hide" : ""}`}
+          >
           <a className=""
             href=""><i className="bi bi-chevron-down"></i>
           </a>

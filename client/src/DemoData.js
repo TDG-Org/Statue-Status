@@ -31,7 +31,8 @@ const natesSocialLinks = [
   },
   {
     userSocialLink: "itsnzte@gmail.com",
-    userSocialPlatform: "email"
+    userSocialPlatform: "email",
+    userSocialName: "itsnzte"
   },
   {
     userSocialLink: "https://www.facebook.com/tdg.nate.7/",

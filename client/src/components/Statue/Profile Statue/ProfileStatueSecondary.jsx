@@ -78,12 +78,23 @@ const ProfileStatueSecondary = () => {
             platform,
           };
         });
+        break;
+      case "socialUsername":
+        let username = elValue;
+        setStatueSocialLinkCurrent(current => {
+          return {
+            ...current,
+            username,
+          };
+        });
+        break;
     }
   }
   // Update the display 
   function displayStatueSocialLink() {
     document.querySelector(".add-social-link").value = "";
     document.querySelector(".add-social-platform").value = "";
+    document.querySelector(".add-social-username").value = "";
   }
 
   return (
@@ -250,29 +261,44 @@ const ProfileStatueSecondary = () => {
           
           {/* Add a Social Link with platform */}
           <li className={`add-social-link-li ${editStatueSocialLinkActive ? "" : "hide"}`}>
+
             {/* social link  */}
             <div className="add-social-link-sect">
               <span>Add Link:</span>
               <input
+                type="text"
                 name="socialLink"
                 ref={statueSocialLinkRef}
-                type="text"
                 placeholder="https://..."
                 className="add-social-link"
                 onChange={handleStatueSocialLinkInputChange}
               />
             </div>
+
             {/* social Platform  */}
             <div className="add-social-platform-sect">
               <span>Platform:</span>
               <input
-                name="socialPlatform"
                 type="text"
+                name="socialPlatform"
                 placeholder="What platform?"
                 className="add-social-platform"
                 onChange={handleStatueSocialLinkInputChange}
               />
             </div>
+
+            {/* social username  */}
+            <div className="add-social-username-sect">
+              <span>Username:</span>
+              <input
+                type="text"
+                name="socialUsername"
+                className="add-social-username"
+                placeholder="What is your username there?"
+                onChange={handleStatueSocialLinkInputChange}
+              />
+            </div>
+            
             {/* social link add or cancel  */}
             <div className="add-social-btns">
               {/* add  */}

@@ -148,16 +148,31 @@ const ProfileStatueSecondary = () => {
               <span>Add Link:</span>
               <input
                 type="text"
+                placeholder="https://..."
                 className="add-social-link"
               />
             </div>
             {/* social Platform  */}
             <div className="add-social-platform-sect">
-
+              <span>Platform:</span>
+              <input
+                type="text"
+                placeholder="What platform?"
+                className="add-social-platform"
+              />
             </div>
             {/* social link add or cancel  */}
             <div className="add-social-btns">
-              
+              {/* add  */}
+              <button
+                className="add-social-btn"
+              >Add
+              </button>
+              {/* cancel  */}
+              <button
+                className="cancel-social-btn"
+              >Cancel
+              </button>
             </div>
           </li>
 

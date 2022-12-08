@@ -45,6 +45,7 @@ const HomePage = () => {
 
   // Retrieves Data for Richesting People  
   function retrieveRichest() {
+    console.log("Getting Top 5 Richest");
 
     setTimeout(() => {
       fetch(forbesAPILimit, {
@@ -52,6 +53,7 @@ const HomePage = () => {
       })
       .then(res => res.json())
         .then((data) => {
+          console.log(data);
           
         let richPeople = [];
 
@@ -94,6 +96,7 @@ const HomePage = () => {
   }
 
   function retrieveAllRichest() {
+    console.log("Getting All Richest");
 
     setTimeout(() => {
       fetch(forbesAPI, {
@@ -101,6 +104,7 @@ const HomePage = () => {
       })
         .then(res => res.json())
         .then((data) => {
+          console.log(data);
           let allRichPeople = [];
 
           for (let i = 0; i < data.length; i++) {
@@ -140,10 +144,11 @@ const HomePage = () => {
     }, 3000);
 
   }
+  
 
   // Calls APIs every 4 hours / 6 times a day 
   function startRichestPeopleCalls() {
-    console.log("calls richest people APIs");
+    console.log("calls APIs");
     setInterval(() => {
       retrieveAllRichest(); 
       retrieveRichest(); 
@@ -151,9 +156,9 @@ const HomePage = () => {
   }
 
   // Calls startRichestPeopleCalls on Render 
-  // useEffect(() => {
-  //   startRichestPeopleCalls();
-  // }, []);
+  useEffect(() => {
+    startRichestPeopleCalls();
+  }, []);
 
   return (
     <div className="HomePage page">

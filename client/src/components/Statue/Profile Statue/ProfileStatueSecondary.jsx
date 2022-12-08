@@ -1,6 +1,44 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 const ProfileStatueSecondary = () => {
+
+  const statueSocialLinkRef = useRef(null);
+
+  // Check if Editing is active
+  const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
+  
+  // Official Social Link 
+  const [editStatueSocialLink, setEditStatueSocialLink] = useState("Christian McIlvenny");
+
+  // Current Social link input 
+  const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
+
+  // Toggle function to activate Statue SocialLink edit
+  function handleToggleStatueSocialLink(e) {
+    setEditStatueSocialLinkActive(!editStatueSocialLinkActive);
+    setTimeout(() => {
+      statueSocialLinkRef.current.focus();
+    }, 50);
+  } 
+
+  // Update the input text 
+  function updateStatueSocialLink(e) {
+    setEditStatueSocialLink(statueSocialLinkCurrent);
+  }
+
+  // Function that always listens for input changes 
+  function handleStatueSocialLinkInputChange(e) {
+    const target = e.target;
+    let value = target.value;
+    setStatueSocialLinkCurrent(value);
+  }
+
+  // Update the display 
+  function displayStatueSocialLink() {
+    document.querySelector(".add-social-link").value = "";
+    document.querySelector(".add-social-platform").value = "";
+  }
+
   return (
     <div className="secondary-sect">
     {/* Socials  */}
@@ -143,7 +181,10 @@ const ProfileStatueSecondary = () => {
 
           {/* add link button  */}
           <li className="add-social-link-btn-wrapper">
-            <button className="social-add-link-btn">
+            <button
+              className={`social-add-link-btn ${editStatueSocialLinkActive ? "hide" : ""}`}
+              onClick={handleToggleStatueSocialLink}
+            >
               Add Link <i className="bi bi-plus-lg"></i>
             </button>
           </li>

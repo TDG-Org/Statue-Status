@@ -1,6 +1,10 @@
 import React, { useState, useRef } from "react";
 
+// social links array
+import { socialLinksArray } from "./";
+
 const ProfileStatueSecondary = () => {
+  console.log(socialLinksArray[0].name);
 
   const statueSocialLinkRef = useRef(null);
 

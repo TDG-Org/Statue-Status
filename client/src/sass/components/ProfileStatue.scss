@@ -300,6 +300,7 @@
         width: 100%;
         padding: .5rem;
         li {
+          overflow: hidden;
           display: flex;
           flex-direction: row;
           position: relative;
@@ -319,13 +320,8 @@
             color: $mid-light-clr;
             justify-content: start;
             .social-username {
-              margin: 0 .75rem;
+              margin: 0 .2rem;
             }
-          }
-          .more-socials-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
           }
           .statue-social-x {
             display: none;
@@ -344,6 +340,14 @@
             .statue-social-x {
               display: block;
             }
+          }
+        }
+        .more-socials-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            cursor: pointer;
           }
         }
         .social-extra-link-platform {
@@ -456,8 +460,11 @@
           justify-content: space-evenly;
           li {
             width: 45%;
-            margin: .75rem;
+            margin: .5rem .35rem;
             min-width: 285px;
+            a {
+              margin: auto auto;
+            }
           }
         }
       }

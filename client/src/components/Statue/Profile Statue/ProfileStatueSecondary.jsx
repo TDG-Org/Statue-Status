@@ -142,8 +142,8 @@ const ProfileStatueSecondary = () => {
         </li>
 
         {/* The More Socials button  */}
-        <li>
-          <a className="more-socials-btn"
+        <li className="more-socials-btn">
+          <a className=""
             href=""><i className="bi bi-chevron-down"></i>
           </a>
         </li>

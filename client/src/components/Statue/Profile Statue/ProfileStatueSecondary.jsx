@@ -273,7 +273,11 @@ const ProfileStatueSecondary = () => {
         </li>
 
       </ul>
-    </div>
+      </div>
+      
+      {/* Connections  */}
+
+      <div className="connections"></div>
   </div>
   );
 };

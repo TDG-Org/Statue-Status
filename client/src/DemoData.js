@@ -7,6 +7,34 @@ const NateData = {
   bday: "Apr 8, 2003"
 };
 
+// Nate's demo social links data
+const natesSocialLinks = [
+  {
+    userSocialLink: "https://github.com/TDGNate",
+    userSocialPlatform: "github"
+  },
+  {
+    userSocialLink: "https://www.linkedin.com/in/christian-mcilvenny/",
+    userSocialPlatform: "linkedin"
+  },
+  {
+    userSocialLink: "https://discord.com/channels/@me",
+    userSocialPlatform: "discord"
+  },
+  {
+    userSocialLink: "https://www.instagram.com/imnzte/",
+    userSocialPlatform: "instagram"
+  },
+  {
+    userSocialLink: "itsnzte@gmail.com",
+    userSocialPlatform: "email"
+  },
+  {
+    userSocialLink: "https://www.facebook.com/tdg.nate.7/",
+    userSocialPlatform: "facebook"
+  },
+];
+
 // Home page data 
 const data = [
   { rank: 5, name: "Nate M", money: 43000, country: "United States", image: "https://natemci.com/static/media/Nate1.8cbd5164f1a9ecaea636.png" },

@@ -44,7 +44,7 @@ const AboutPage = () => {
           <h2>What are Statues?</h2>
           <div className="about-sect-content">
             <p>
-            A Statue is a page that is exclusively yours and includes connections to all of your social media accounts, as well as information about you such as your display name, bio, personalization, and the total amount of followers you have across all platforms (if you wish). It will also have a clear background and a full-body photo of you; it can be an illustration, but it must resemble you. You may share your polished web presence with only one link after building and personalizing your Statue.
+            A Statue is a page that is exclusively yours and includes links to all of your connected social media accounts, as well as general information about you that you choose to share, such as your display name, bio, and the people connected to you. Additionally, it will have a transparent background with photo of you; it can be an illustration, but it should resemble you. After creating and customizing your Statue, you can share your polished online presence with just a single link.
             </p>
             <p>The Statue&apos;s photo will be utilized to display on the <Link to="/" className="about-link">Home</Link> page&apos;s Charts.</p>
             </div>

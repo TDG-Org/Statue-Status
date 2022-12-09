@@ -291,7 +291,7 @@ const ProfileStatueSecondary = () => {
                 type="text"
                 name="socialUsername"
                 className="add-social-username"
-                placeholder="What is your username there?"
+                placeholder="What's your username?"
                 onChange={handleStatueSocialLinkInputChange}
               />
             </div>

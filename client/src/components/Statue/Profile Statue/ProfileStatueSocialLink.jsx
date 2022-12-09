@@ -28,11 +28,19 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
     return Platform;
   }
 
+  function checkSocialLink() {
+    if (platform === "email") {
+      let email = `mailto:${link}`;
+      return email;
+    } else return link;
+  }
+
   return (
     <li>
       {/* The social link  */}
       <a
-        href={link}
+        href={checkSocialLink()}
+        
       >
 
         {/* platform icon  */}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 // Proptypes 
 import PropTypes from "prop-types";
@@ -15,6 +15,11 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
     platform: PropTypes.string.isRequired,
   };
 
+  const [currentSocialLinks, setCurrentSocialLinks] = useState(socialLinksArray);
+
+  const oneSocialLinkRef = useRef();
+
+  // Returns an Icon that matches the current passed in platform 
   function socialIconTag() {
     let matchFound = false;
 
@@ -30,12 +35,13 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
     }
   }
   
-
+  // Function to uppercase the first letter of the passed in platform 
   function upperCaseFirstLetterOnPlatform() {
     let Platform = platform.charAt(0).toUpperCase() + platform.slice(1);
     return Platform;
   }
 
+  // this checks the social links and filters the email to return a specific value 
   function checkSocialLink() {
     if (platform === "email") {
       let email = `mailto:${link}`;
@@ -43,8 +49,16 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
     } else return link;
   }
 
+  function handleClickRemoveSocialLink() {
+    oneSocialLinkRef.current.remove();
+    // Update the socialLinks state variable to exclude the element that was removed
+    setCurrentSocialLinks(currentSocialLinks.filter(item => item.userSocialName !== username));
+  }
+
   return (
-    <li>
+    <li
+      ref={oneSocialLinkRef}
+    >
       {/* The social link  */}
       <a
         href={checkSocialLink()}
@@ -64,7 +78,12 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
       </a>
 
       {/* The Delete social link button  */}
-      <i className="bi bi-x-lg statue-social-x"></i>
+      <i
+        className="bi bi-x-lg statue-social-x"
+        onClick={handleClickRemoveSocialLink}
+      >
+
+      </i>
       
     </li>
   );

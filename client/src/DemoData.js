@@ -7,6 +7,45 @@ const NateData = {
   bday: "Apr 8, 2003"
 };
 
+// Nate's demo social links data
+const natesSocialLinks = [
+  {
+    userSocialLink: "https://github.com/TDGNate",
+    userSocialPlatform: "github",
+    userSocialName: "TDGNate"
+  },
+  {
+    userSocialLink: "https://www.linkedin.com/in/christian-mcilvenny/",
+    userSocialPlatform: "linkedin",
+    userSocialName: "christian-mcilvenny"
+  },
+  {
+    userSocialLink: "https://discord.com/channels/@me",
+    userSocialPlatform: "discord",
+    userSocialName: "Nate#2000"
+  },
+  {
+    userSocialLink: "https://www.instagram.com/imnzte/",
+    userSocialPlatform: "instagram",
+    userSocialName: "imnzte"
+  },
+  {
+    userSocialLink: "itsnzte@gmail.com",
+    userSocialPlatform: "email",
+    userSocialName: "itsnzte"
+  },
+  {
+    userSocialLink: "https://www.facebook.com/tdg.nate.7/",
+    userSocialPlatform: "facebook",
+    userSocialName: "tdgnate"
+  },
+  {
+    userSocialLink: "https://natemci.com/",
+    userSocialPlatform: "jeff",
+    userSocialName: "Nate"
+  },
+];
+
 // Home page data 
 const data = [
   { rank: 5, name: "Nate M", money: 43000, country: "United States", image: "https://natemci.com/static/media/Nate1.8cbd5164f1a9ecaea636.png" },
@@ -18,5 +57,6 @@ const data = [
 
 export {
   NateData,
-  data
+  data,
+  natesSocialLinks
 };

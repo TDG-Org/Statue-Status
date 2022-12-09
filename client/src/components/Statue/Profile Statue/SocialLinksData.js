@@ -4,82 +4,82 @@ const socialLinksArray = [
   // insta 
   {
     name: "instagram",
-    iconClass: "bi bi-instagram"
+    iconClass: "bi-instagram"
   },
   // github 
   {
     name: "github",
-    iconClass: "bi bi-github"
+    iconClass: "bi-github"
   },
   // facebook 
   {
     name: "facebook",
-    iconClass: "bi bi-facebook"
+    iconClass: "bi-facebook"
   },
   // email 
   {
     name: "email",
-    iconClass: "bi bi-envelope"
+    iconClass: "bi-envelope"
   },
   // snap 
   {
     name: "snapchat",
-    iconClass: "bi bi-snapchat"
+    iconClass: "bi-snapchat"
   },
   // twitter 
   {
     name: "twitter",
-    iconClass: "bi bi-twitter"
+    iconClass: "bi-twitter"
   },
   // tiktok 
   {
     name: "tiktok",
-    iconClass: "bi bi-tiktok"
+    iconClass: "bi-tiktok"
   },
   // youtube 
   {
     name: "youtube",
-    iconClass: "bi bi-youtube"
+    iconClass: "bi-youtube"
   },
   // linkedIn 
   {
     name: "linkedin",
-    iconClass: "bi bi-linkedin"
+    iconClass: "bi-linkedin"
   },
   // discord 
   {
     name: "discord",
-    iconClass: "bi bi-discord"
+    iconClass: "bi-discord"
   },
   // reddit 
   {
     name: "reddit",
-    iconClass: "bi bi-reddit"
+    iconClass: "bi-reddit"
   },
   // spotify 
   {
     name: "spotify",
-    iconClass: "bi bi-spotify"
+    iconClass: "bi-spotify"
   },
   // steam 
   {
     name: "steam",
-    iconClass: "bi bi-steam"
+    iconClass: "bi-steam"
   },
   // stack overflow 
   {
     name: "stack-overflow",
-    iconClass: "bi bi-stack-overflow"
+    iconClass: "bi-stack-overflow"
   },
   // pinterest 
   {
     name: "pinterest",
-    iconClass: "bi bi-pinterest"
+    iconClass: "bi-pinterest"
   },
   // extra link 
   {
     name: "extra",
-    iconClass: "bi bi-link-45deg"
+    iconClass: "bi-link-45deg"
   },
 ];
 

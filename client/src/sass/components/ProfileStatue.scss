@@ -319,6 +319,7 @@
             flex-direction: row;
             color: $mid-light-clr;
             justify-content: start;
+            align-items: center;
             .social-username {
               margin: 0 .2rem;
             }
@@ -379,34 +380,36 @@
           }
 
           .add-social-link-sect,
-           .add-social-platform-sect {
+           .add-social-platform-sect,
+           .add-social-username-sect {
             margin: .75rem 0;
           }
 
           .add-social-link,
-           .add-social-platform {
-            padding: .25rem;
-            width: 100%;
-            border: none;
-            margin: 0 auto;
+           .add-social-platform,
+           .add-social-username {
+             width: 100%;
+             border: none;
+             margin: 0 auto;
+             padding: .25rem;
             background-color: transparent;
             border-bottom: 1px solid $mid-light-clr;
           }
 
           .add-social-btns {
-            margin: .75rem 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
             gap: 1.25rem;
+            display: flex;
+            margin: .75rem 0;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             button {
               border: none;
-              padding: .15rem 1rem;
-              border-bottom: 1px solid $mid-light-clr;
-              border-top: 1px solid transparent;
-              background: transparent;
               color: $light-clr;
+              padding: .15rem 1rem;
+              background: transparent;
+              border-top: 1px solid transparent;
+              border-bottom: 1px solid $mid-light-clr;
               &:hover {
                 background: $low-dark-clr;
                 border-top: 1px solid $accent-clr;
@@ -440,22 +443,22 @@
   .delete-statue-btn-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin: 1.75rem 0 1rem 0;
 
     .delete-statue-btn {
-      background: transparent;
-      color: $mid-red-clr;
       width: 30%; 
-      max-width: 325px;
       padding: .5rem;
-      border: 1px solid $low-dark-clr;
+      max-width: 325px;
+      color: $mid-red-clr;
+      background: transparent;
       transition: all 250ms ease;   
+      border: 1px solid $low-dark-clr;
 
       &:hover {
-        background: $low-dark-clr;
         color: $red-clr;
+        background: $low-dark-clr;
         border: 1px solid $red-clr;
       }
     }
@@ -465,8 +468,6 @@
 .smaller-size-screen-display-divider {
   display: none;
 }
-
-// 1230px 
 
 // Media Queries 
 
@@ -487,8 +488,8 @@
         gap: 1rem;
 
         .statue-name, .statue-name-edit, .statue-about, .statue-about-edit {
-          width: 75% !important;
           margin: 0 auto;
+          width: 75% !important;
         }
 
         // Edit Statue Name Buttons 
@@ -505,9 +506,9 @@
           flex-direction: column;
           .bottom-editable-sect-content {
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
             margin-top: 1rem;
+            flex-direction: row;
             justify-content: center;
 
             .bottom-editable-sect-content-btns {
@@ -534,13 +535,13 @@
         // Social List 
         .social-list {
           display: flex;
-          flex-direction: row;
           flex-wrap: wrap;
+          flex-direction: row;
           justify-content: space-evenly;
           li {
             width: 45%;
-            margin: .5rem .35rem;
             min-width: 285px;
+            margin: .5rem .35rem;
             a {
               margin: auto auto;
             }

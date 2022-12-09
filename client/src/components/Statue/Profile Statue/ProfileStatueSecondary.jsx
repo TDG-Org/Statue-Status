@@ -1,19 +1,43 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
-// social links array
-import { socialLinksArray } from "./";
+// Components 
+import { ProfileStatueSocialLink } from "./";
+
+// Nate's Social Links data 
+import { natesSocialLinks } from "../../../DemoData";
 
 const ProfileStatueSecondary = () => {
-  // console.log(socialLinksArray[0].icon); 
+
+  const [displayedSocialLinksCount, setDisplayedSocialLinksCount] = useState(6);
+  const [hideMoreSocialLinksBtn, setHideMoreSocialLinksBtn] = useState(false);
+
+  useEffect(() => {
+    // Call the toggleShowMoreSocialLinksBtn() function after the displayedSocialLinksCount state has been updated
+    toggleShowMoreSocialLinksBtn();
+  }, [displayedSocialLinksCount]);
+  
+  // function to load more projects
+  function loadMoreSocialLinks() {
+    setDisplayedSocialLinksCount(displayedSocialLinksCount + 6);
+  }
+  
+  function toggleShowMoreSocialLinksBtn() {
+    let totalNumberOfSocialLinks = natesSocialLinks.length;
+    if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
+      setHideMoreSocialLinksBtn(true);
+    } else {
+      setHideMoreSocialLinksBtn(false);
+    }
+  }
+
+  const slSliced = natesSocialLinks.slice(0, displayedSocialLinksCount);
+  
 
   const statueSocialLinkRef = useRef(null);
-
   // Check if Editing is active
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
-  
   // Official Social Link 
   const [editStatueSocialLink, setEditStatueSocialLink] = useState(null);
-
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
 
@@ -24,19 +48,15 @@ const ProfileStatueSecondary = () => {
       statueSocialLinkRef.current.focus();
     }, 50);
   } 
-
   // Update the input text 
   function updateStatueSocialLink(e) {
     setEditStatueSocialLink(statueSocialLinkCurrent);
   }
-
   // Function that always listens for input changes 
   function handleStatueSocialLinkInputChange(e) {
-
     // Get name of Element and the user input 
     const elName = e.target.name;
     let elValue = e.target.value;
-
     // check which key value that matches to update 
     switch (elName) {
       case "socialLink":
@@ -56,14 +76,28 @@ const ProfileStatueSecondary = () => {
             platform,
           };
         });
+        break;
+      case "socialUsername":
+        let username = elValue;
+        setStatueSocialLinkCurrent(current => {
+          return {
+            ...current,
+            username,
+          };
+        });
+        break;
     }
   }
-
   // Update the display 
   function displayStatueSocialLink() {
     document.querySelector(".add-social-link").value = "";
     document.querySelector(".add-social-platform").value = "";
+    document.querySelector(".add-social-username").value = "";
   }
+
+  useEffect(() => {
+    console.log(editStatueSocialLink);
+  }, [editStatueSocialLink]);
 
   return (
     <div className="secondary-sect">
@@ -72,127 +106,17 @@ const ProfileStatueSecondary = () => {
       <h4>Socials</h4>
         <ul className="social-list">
 
-        <li>
-          <a
-            href=""><i className={socialLinksArray[0].iconClass}></i> Instagram/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-github"></i> Github/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-facebook"></i> Facebook/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-envelope"></i> Email/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-snapchat"></i> Snapchat/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-twitter"></i> Twitter/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-tiktok"></i> Tiktok/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-youtube"></i> Youtube/
-            <span className="social-username">TDGNate</span>
-            </a> 
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-linkedin"></i> LinkedIn/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-discord"></i> Discord/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-reddit"></i> Reddit/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-spotify"></i> Spotify/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-steam"></i> Steam/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-stack-overflow"></i>
-            Stack overflow/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-pinterest"></i>
-            Pinterest/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
+          {/* Loop through data and create social links  */}
+          {slSliced.map((item, index) => {
+            return (
+              <ProfileStatueSocialLink
+              key={index}
+              link={item.userSocialLink}
+              username={item.userSocialName}
+              platform={item.userSocialPlatform}
+              />
+            );
+          })}
 
         {/* Extra Links  */}
         <li>
@@ -217,29 +141,44 @@ const ProfileStatueSecondary = () => {
           
           {/* Add a Social Link with platform */}
           <li className={`add-social-link-li ${editStatueSocialLinkActive ? "" : "hide"}`}>
+
             {/* social link  */}
             <div className="add-social-link-sect">
               <span>Add Link:</span>
               <input
+                type="text"
                 name="socialLink"
                 ref={statueSocialLinkRef}
-                type="text"
                 placeholder="https://..."
                 className="add-social-link"
                 onChange={handleStatueSocialLinkInputChange}
               />
             </div>
+
             {/* social Platform  */}
             <div className="add-social-platform-sect">
               <span>Platform:</span>
               <input
-                name="socialPlatform"
                 type="text"
+                name="socialPlatform"
                 placeholder="What platform?"
                 className="add-social-platform"
                 onChange={handleStatueSocialLinkInputChange}
               />
             </div>
+
+            {/* social username  */}
+            <div className="add-social-username-sect">
+              <span>Username:</span>
+              <input
+                type="text"
+                name="socialUsername"
+                className="add-social-username"
+                placeholder="What's your username?"
+                onChange={handleStatueSocialLinkInputChange}
+              />
+            </div>
+
             {/* social link add or cancel  */}
             <div className="add-social-btns">
               {/* add  */}
@@ -266,14 +205,21 @@ const ProfileStatueSecondary = () => {
           </li>
 
         {/* The More Socials button  */}
-        <li className="more-socials-btn">
+          <li
+            onClick={loadMoreSocialLinks}
+            className={`more-socials-btn ${hideMoreSocialLinksBtn ? "hide" : ""}`}
+          >
           <a className=""
             href=""><i className="bi bi-chevron-down"></i>
           </a>
         </li>
 
       </ul>
-    </div>
+      </div>
+      
+      {/* Connections  */}
+
+      <div className="connections"></div>
   </div>
   );
 };

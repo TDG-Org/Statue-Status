@@ -95,6 +95,10 @@ const ProfileStatueSecondary = () => {
     document.querySelector(".add-social-username").value = "";
   }
 
+  useEffect(() => {
+    console.log(editStatueSocialLink);
+  }, [editStatueSocialLink]);
+
   return (
     <div className="secondary-sect">
     {/* Socials  */}

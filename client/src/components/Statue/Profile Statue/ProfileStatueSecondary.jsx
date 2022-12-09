@@ -3,9 +3,6 @@ import React, { useState, useRef } from "react";
 // Components 
 import { ProfileStatueSocialLink } from "./";
 
-// social links array
-import { socialLinksArray } from "./";
-
 // Nate's Social Links data 
 import { natesSocialLinks } from "../../../DemoData";
 
@@ -23,7 +20,7 @@ const ProfileStatueSecondary = () => {
 
   function toggleShowMoreSocialLinksBtn() {
     setTimeout(() => {
-      let totalNumberOfSocialLinks = ProfileStatueSocialLink.length;
+      let totalNumberOfSocialLinks = natesSocialLinks.length;
       if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
         setHideMoreSocialLinksBtn(true);
         } else {
@@ -110,15 +107,15 @@ const ProfileStatueSecondary = () => {
               <ProfileStatueSocialLink
               key={index}
               link={item.userSocialLink}
-              platform={item.userSocialPlatform}
               username={item.userSocialName}
+              platform={item.userSocialPlatform}
               />
             );
           })}
 
         <li>
           <a
-            href=""><i className={socialLinksArray[0].iconClass}></i> Instagram/
+            href=""><i className="bi bi-instagram"></i> Instagram/
             <span className="social-username">TDGNate</span>
             </a>
             <i className="bi bi-x-lg statue-social-x"></i>
@@ -298,7 +295,7 @@ const ProfileStatueSecondary = () => {
                 onChange={handleStatueSocialLinkInputChange}
               />
             </div>
-            
+
             {/* social link add or cancel  */}
             <div className="add-social-btns">
               {/* add  */}

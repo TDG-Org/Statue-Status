@@ -22,24 +22,33 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
 
   function socialIconTag() {
     for (let i = 0; i < socialLinksArray.length; i++) {
-      console.log(platform.toLowerCase(), socialLinksArray[i].name.toLowerCase());
       if (platform.toLowerCase() === socialLinksArray[i].name.toLowerCase()) {
         return socialLinksArray[i].iconClass;
       }
     }
   }
 
-  // console.log(socialIconTag()); 
+  function upperCaseFirstLetterOnPlatform() {
+    let Platform = platform.charAt(0).toUpperCase() + platform.slice(1);
+    return Platform;
+  }
+
+  console.log(upperCaseFirstLetterOnPlatform()); 
 
   return (
     <li>
-
       {/* The social link  */}
       <a
+        // Link of user 
         href={link}>
 
+        {/* platform icon  */}
         <i className={`b ${socialIconTag()}`}></i>
-        {platform}/
+
+        {/* The Platform, uppercased first letter  */}
+        {upperCaseFirstLetterOnPlatform()}/
+
+        {/* the user name  */}
         <span className="social-username">
           {username}
         </span>

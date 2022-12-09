@@ -319,6 +319,7 @@
             flex-direction: row;
             color: $mid-light-clr;
             justify-content: start;
+            align-items: center;
             .social-username {
               margin: 0 .2rem;
             }
@@ -467,8 +468,6 @@
 .smaller-size-screen-display-divider {
   display: none;
 }
-
-// 1230px 
 
 // Media Queries 
 

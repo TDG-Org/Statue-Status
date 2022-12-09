@@ -8,17 +8,12 @@ import { socialLinksArray } from "./";
 
 const ProfileStatueSocialLink = ({ link, platform, username }) => {
   
+  // Validate Component's Props 
   ProfileStatueSocialLink.propTypes = {
     link: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     platform: PropTypes.string.isRequired,
   };
-
-  // const socialIconTag = socialLinksArray.map(socialLink => {
-  //   if (platform.toLowerCase().trim() === socialLink.name.toLowerCase().trim()) {
-  //     return socialLink.iconClass;
-  //   }
-  // });
 
   function socialIconTag() {
     for (let i = 0; i < socialLinksArray.length; i++) {
@@ -33,14 +28,12 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
     return Platform;
   }
 
-  console.log(upperCaseFirstLetterOnPlatform()); 
-
   return (
     <li>
       {/* The social link  */}
       <a
-        // Link of user 
-        href={link}>
+        href={link}
+      >
 
         {/* platform icon  */}
         <i className={`b ${socialIconTag()}`}></i>

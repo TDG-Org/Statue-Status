@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 // Components 
 import { ProfileStatueSocialLink } from "./";
@@ -11,22 +11,23 @@ const ProfileStatueSecondary = () => {
   const [displayedSocialLinksCount, setDisplayedSocialLinksCount] = useState(6);
   const [hideMoreSocialLinksBtn, setHideMoreSocialLinksBtn] = useState(false);
 
-  // function to load more projects 
+  useEffect(() => {
+    // Call the toggleShowMoreSocialLinksBtn() function after the displayedSocialLinksCount state has been updated
+    toggleShowMoreSocialLinksBtn();
+  }, [displayedSocialLinksCount]);
+  
+  // function to load more projects
   function loadMoreSocialLinks() {
     setDisplayedSocialLinksCount(displayedSocialLinksCount + 6);
-
-    toggleShowMoreSocialLinksBtn();
   }
-
+  
   function toggleShowMoreSocialLinksBtn() {
-    setTimeout(() => {
-      let totalNumberOfSocialLinks = natesSocialLinks.length;
-      if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
-        setHideMoreSocialLinksBtn(true);
-        } else {
-        setHideMoreSocialLinksBtn(false);
-      }
-      }, 500);
+    let totalNumberOfSocialLinks = natesSocialLinks.length;
+    if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
+      setHideMoreSocialLinksBtn(true);
+    } else {
+      setHideMoreSocialLinksBtn(false);
+    }
   }
 
   const slSliced = natesSocialLinks.slice(0, displayedSocialLinksCount);
@@ -112,128 +113,6 @@ const ProfileStatueSecondary = () => {
               />
             );
           })}
-
-        <li>
-          <a
-            href=""><i className="bi bi-instagram"></i> Instagram/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-github"></i> Github/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-facebook"></i> Facebook/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-envelope"></i> Email/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-snapchat"></i> Snapchat/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-twitter"></i> Twitter/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-tiktok"></i> Tiktok/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-youtube"></i> Youtube/
-            <span className="social-username">TDGNate</span>
-            </a> 
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-linkedin"></i> LinkedIn/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-discord"></i> Discord/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-reddit"></i> Reddit/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-spotify"></i> Spotify/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-steam"></i> Steam/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-stack-overflow"></i>
-            Stack overflow/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
-        <li>
-          <a
-            href=""><i className="bi bi-pinterest"></i>
-            Pinterest/
-            <span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-        </li>
 
         {/* Extra Links  */}
         <li>

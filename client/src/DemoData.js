@@ -39,6 +39,11 @@ const natesSocialLinks = [
     userSocialPlatform: "facebook",
     userSocialName: "tdgnate"
   },
+  {
+    userSocialLink: "https://natemci.com/",
+    userSocialPlatform: "jeff",
+    userSocialName: "Nate"
+  },
 ];
 
 // Home page data 

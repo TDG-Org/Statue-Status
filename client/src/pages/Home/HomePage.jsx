@@ -141,18 +141,28 @@ const HomePage = () => {
   
 
   // Calls APIs every 4 hours / 6 times a day 
-  function startRichestPeopleCalls() {
-    console.log("calls APIs");
-    setInterval(() => {
-      retrieveAllRichest(); 
-      retrieveRichest(); 
-    }, 14400000);
+  // function startRichestPeopleCalls() {
+  //   console.log("calls APIs");
+  //   setInterval(() => {
+  //     retrieveAllRichest(); 
+  //     retrieveRichest(); 
+  //   }, 14400000);
+  // }
+
+  function setupInterval(func, interval) {
+    setInterval(func, interval);
   }
+  
+  useEffect(() => {
+    console.log("Calling function retrieveAllRichest every 14400000 milliseconds");
+    setupInterval(retrieveAllRichest, 14400000);
+  
+    console.log("Calling function retrieveRichest every 14400000 milliseconds");
+    setupInterval(retrieveRichest, 14400000);
+  }, []);
 
   // Calls startRichestPeopleCalls on Render 
-  useEffect(() => {
-    startRichestPeopleCalls();
-  }, []);
+  // useEffect(startRichestPeopleCalls, []);
 
   return (
     <div className="HomePage page">

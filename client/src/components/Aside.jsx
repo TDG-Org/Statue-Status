@@ -4,11 +4,15 @@ import React, { useState } from "react";
 import Nav from "./Nav";
 import User from "./User";
 
+// Link 
+import { Link } from "react-router-dom";
+
 // Styles
 import "../sass/components/Aside.scss";
 import "../sass/utils/hamburger.scss";
 
 // Images/SVGs 
+import { Logo } from "../assets/imgs";
 
 const Aside = () => {
 
@@ -26,7 +30,15 @@ const Aside = () => {
   return (
     <aside className={`aside-comp ${isActive ? "" : "active"}`}>
       <div className="container">
-        <div className="nav-logo"><a href="#">SS</a></div>
+        <div className="nav-logo">
+          <Link to="/">
+            <img
+              src={Logo}
+              alt="Statue Status"
+              className="nav-logo-img"
+            />
+          </Link>
+        </div>
 
         {/* User's Avatar and info Section  */}
         <User />

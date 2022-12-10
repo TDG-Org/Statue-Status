@@ -8,3 +8,4 @@ export const Male = require("./male.png");
 export const Female = require("./female.png");
 export const Logo = require("./logo.png");
 export const NatePfp = require("./Nate-Portrait.jpg");
+export const TdgWhite = require("./tdg-white.png");

@@ -8,12 +8,14 @@ import { natesSocialLinks } from "../../../DemoData";
 
 const ProfileStatueSecondary = () => {
   
-
   const statueSocialLinkRef = useRef(null);
+  
   // Check if Editing is active
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
+
   // Official Social Link 
   const [editStatueSocialLink, setEditStatueSocialLink] = useState(natesSocialLinks);
+
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
 
@@ -25,14 +27,14 @@ const ProfileStatueSecondary = () => {
     }, 50);
   } 
 
-  // Update the display 
+  // Update the display / Removes values for the inputs
   function displayStatueSocialLink() {
     document.querySelector(".add-social-link").value = "";
     document.querySelector(".add-social-platform").value = "";
     document.querySelector(".add-social-username").value = "";
   }
   
-  // Update the input text 
+  // Update the input text, but check if the input fields are empty before moving forward
   function updateStatueSocialLink(e) {
     if (document.querySelector(".add-social-link").value == "" || document.querySelector(".add-social-platform").value == "" || document.querySelector(".add-social-username").value == "") {
       return;
@@ -42,6 +44,8 @@ const ProfileStatueSecondary = () => {
       handleToggleStatueSocialLink(); 
     }
   }
+
+  // After the check above, this will create object and set the state 
   function updateStatueSocialLinkOfficial() {
     let newStatueLinkObj = {
       userSocialLink: statueSocialLinkCurrent.link,
@@ -89,24 +93,28 @@ const ProfileStatueSecondary = () => {
     }
   }
 
+  // Displaying a number of links state 
   const [displayedSocialLinksCount, setDisplayedSocialLinksCount] = useState(4);
+
+  // Hide button if number is above set limit 
   const [hideMoreSocialLinksBtn, setHideMoreSocialLinksBtn] = useState(false);
 
+  // Once component is rendered Call the toggleShowMoreSocialLinksBtn()
   useEffect(() => {
-    // Call the toggleShowMoreSocialLinksBtn() function after the displayedSocialLinksCount state has been updated
     toggleShowMoreSocialLinksBtn();
   }, [displayedSocialLinksCount]);
   
-  // function to load more projects
+  // function to load more Social Links
   function loadMoreSocialLinks() {
     setDisplayedSocialLinksCount(displayedSocialLinksCount + 4);
   }
 
-  // function to load more projects
+  // function to load less Social Links
   function loadLessSocialLinks() {
     setDisplayedSocialLinksCount(displayedSocialLinksCount - (displayedSocialLinksCount  - 4));
   }
   
+  // Checks if the limit has been reached to hide show more links button 
   function toggleShowMoreSocialLinksBtn() {
     let totalNumberOfSocialLinks = editStatueSocialLink.length;
     if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
@@ -116,8 +124,10 @@ const ProfileStatueSecondary = () => {
     }
   }
 
+  // The Social Links that are going to show 
   const slSliced = editStatueSocialLink.slice(0, displayedSocialLinksCount);
 
+  // On Render, this tracks the social links 
   useEffect(() => {
     console.log(editStatueSocialLink);
   }, [editStatueSocialLink]);

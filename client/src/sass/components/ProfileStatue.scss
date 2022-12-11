@@ -306,6 +306,7 @@
           position: relative;
           width: 80%;
           margin: .5rem auto;
+          max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
           padding: .5rem 1rem;
@@ -328,7 +329,7 @@
             display: none;
             position: absolute;
             top: .5rem;
-            right: .5rem;
+            right: .5rem;More
             &:hover {
               cursor: pointer;
               color: $mid-red-clr;
@@ -368,6 +369,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          max-height: unset;
 
           input {
             color: $light-clr;

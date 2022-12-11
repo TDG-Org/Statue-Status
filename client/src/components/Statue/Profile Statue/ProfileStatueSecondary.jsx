@@ -6,10 +6,13 @@ import { ProfileStatueSocialLink } from "./";
 // Nate's Social Links data 
 import { natesSocialLinks } from "../../../DemoData";
 
+// Sweet Alert 
+import swal from "sweetalert";
+
 const ProfileStatueSecondary = () => {
   
   const statueSocialLinkRef = useRef(null);
-  
+
   // Check if Editing is active
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
 
@@ -37,6 +40,19 @@ const ProfileStatueSecondary = () => {
   // Update the input text, but check if the input fields are empty before moving forward
   function updateStatueSocialLink(e) {
     if (document.querySelector(".add-social-link").value == "" || document.querySelector(".add-social-platform").value == "" || document.querySelector(".add-social-username").value == "") {
+
+      // Send Swal message 
+      swal({
+        text: "Please fill in all input fields",
+        button: false
+      });
+  
+      setTimeout(() => {
+        swal.close();
+  
+        deleteStatue();
+      }, 1150);
+
       return;
     } else {
       loadMoreSocialLinks();

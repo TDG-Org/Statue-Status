@@ -36,9 +36,17 @@ const ProfileStatueSecondary = () => {
     document.querySelector(".add-social-platform").value = "";
     document.querySelector(".add-social-username").value = "";
   }
+
+  // Function to check passed in URLs are valid
+  function checkInputURL(url) {
+    let regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+    return regex.test(url);
+};
   
-  // Update the input text, but check if the input fields are empty before moving forward
+  // Update the input text, but checks the inputs before moving forward
   function updateStatueSocialLink(e) {
+
+    // check if the input values are empty 
     if (document.querySelector(".add-social-link").value == "" || document.querySelector(".add-social-platform").value == "" || document.querySelector(".add-social-username").value == "") {
 
       // Send Swal message 
@@ -49,16 +57,31 @@ const ProfileStatueSecondary = () => {
   
       setTimeout(() => {
         swal.close();
-  
-        deleteStatue();
       }, 1150);
 
       return;
-    } else {
-      loadMoreSocialLinks();
-      updateStatueSocialLinkOfficial();
-      handleToggleStatueSocialLink(); 
     }
+
+    const checkInputURLValue = checkInputURL(document.querySelector(".add-social-link").value);
+
+    // check if the URL is valid 
+    if (checkInputURLValue == false) {
+      // Send Swal message 
+      swal({
+        text: "URL Invalid, please check the link",
+        button: false
+      });
+  
+      setTimeout(() => {
+        swal.close();
+      }, 1150);
+
+      return;
+    }
+
+    loadMoreSocialLinks();
+    updateStatueSocialLinkOfficial();
+    handleToggleStatueSocialLink(); 
   }
 
   // After the check above, this will create object and set the state 

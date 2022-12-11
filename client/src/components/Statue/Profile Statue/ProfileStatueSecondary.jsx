@@ -7,37 +7,13 @@ import { ProfileStatueSocialLink } from "./";
 import { natesSocialLinks } from "../../../DemoData";
 
 const ProfileStatueSecondary = () => {
-
-  const [displayedSocialLinksCount, setDisplayedSocialLinksCount] = useState(6);
-  const [hideMoreSocialLinksBtn, setHideMoreSocialLinksBtn] = useState(false);
-
-  useEffect(() => {
-    // Call the toggleShowMoreSocialLinksBtn() function after the displayedSocialLinksCount state has been updated
-    toggleShowMoreSocialLinksBtn();
-  }, [displayedSocialLinksCount]);
-  
-  // function to load more projects
-  function loadMoreSocialLinks() {
-    setDisplayedSocialLinksCount(displayedSocialLinksCount + 6);
-  }
-  
-  function toggleShowMoreSocialLinksBtn() {
-    let totalNumberOfSocialLinks = natesSocialLinks.length;
-    if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
-      setHideMoreSocialLinksBtn(true);
-    } else {
-      setHideMoreSocialLinksBtn(false);
-    }
-  }
-
-  const slSliced = natesSocialLinks.slice(0, displayedSocialLinksCount);
   
 
   const statueSocialLinkRef = useRef(null);
   // Check if Editing is active
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
   // Official Social Link 
-  const [editStatueSocialLink, setEditStatueSocialLink] = useState(null);
+  const [editStatueSocialLink, setEditStatueSocialLink] = useState(natesSocialLinks);
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
 
@@ -48,10 +24,33 @@ const ProfileStatueSecondary = () => {
       statueSocialLinkRef.current.focus();
     }, 50);
   } 
+
+  // Update the display 
+  function displayStatueSocialLink() {
+    document.querySelector(".add-social-link").value = "";
+    document.querySelector(".add-social-platform").value = "";
+    document.querySelector(".add-social-username").value = "";
+  }
+  
   // Update the input text 
   function updateStatueSocialLink(e) {
-    setEditStatueSocialLink(statueSocialLinkCurrent);
+    if (document.querySelector(".add-social-link").value == "" || document.querySelector(".add-social-platform").value == "" || document.querySelector(".add-social-username").value == "") {
+      return;
+    } else {
+      updateStatueSocialLinkOfficial();
+      handleToggleStatueSocialLink(); 
+    }
   }
+  function updateStatueSocialLinkOfficial() {
+    let newStatueLinkObj = {
+      userSocialLink: statueSocialLinkCurrent.link,
+      userSocialPlatform: statueSocialLinkCurrent.platform,
+      userSocialName: statueSocialLinkCurrent.username
+    };
+    setEditStatueSocialLink([...editStatueSocialLink, newStatueLinkObj]);
+    displayStatueSocialLink();
+  }
+
   // Function that always listens for input changes 
   function handleStatueSocialLinkInputChange(e) {
     // Get name of Element and the user input 
@@ -88,12 +87,30 @@ const ProfileStatueSecondary = () => {
         break;
     }
   }
-  // Update the display 
-  function displayStatueSocialLink() {
-    document.querySelector(".add-social-link").value = "";
-    document.querySelector(".add-social-platform").value = "";
-    document.querySelector(".add-social-username").value = "";
+
+  const [displayedSocialLinksCount, setDisplayedSocialLinksCount] = useState(4);
+  const [hideMoreSocialLinksBtn, setHideMoreSocialLinksBtn] = useState(false);
+
+  useEffect(() => {
+    // Call the toggleShowMoreSocialLinksBtn() function after the displayedSocialLinksCount state has been updated
+    toggleShowMoreSocialLinksBtn();
+  }, [displayedSocialLinksCount]);
+  
+  // function to load more projects
+  function loadMoreSocialLinks() {
+    setDisplayedSocialLinksCount(displayedSocialLinksCount + 6);
   }
+  
+  function toggleShowMoreSocialLinksBtn() {
+    let totalNumberOfSocialLinks = editStatueSocialLink.length;
+    if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
+      setHideMoreSocialLinksBtn(true);
+    } else {
+      setHideMoreSocialLinksBtn(false);
+    }
+  }
+
+  const slSliced = editStatueSocialLink.slice(0, displayedSocialLinksCount);
 
   useEffect(() => {
     console.log(editStatueSocialLink);
@@ -146,6 +163,7 @@ const ProfileStatueSecondary = () => {
             <div className="add-social-link-sect">
               <span>Add Link:</span>
               <input
+                required
                 type="text"
                 name="socialLink"
                 ref={statueSocialLinkRef}
@@ -159,6 +177,7 @@ const ProfileStatueSecondary = () => {
             <div className="add-social-platform-sect">
               <span>Platform:</span>
               <input
+                required
                 type="text"
                 name="socialPlatform"
                 placeholder="What platform?"
@@ -171,7 +190,9 @@ const ProfileStatueSecondary = () => {
             <div className="add-social-username-sect">
               <span>Username:</span>
               <input
+                required
                 type="text"
+                maxLength="30"
                 name="socialUsername"
                 className="add-social-username"
                 placeholder="What's your username?"
@@ -186,8 +207,6 @@ const ProfileStatueSecondary = () => {
                 className="add-social-btn"
                 onClick={(e) => {
                   updateStatueSocialLink();
-                  handleToggleStatueSocialLink(); 
-                  displayStatueSocialLink();
                 }}
               >Add
               </button>

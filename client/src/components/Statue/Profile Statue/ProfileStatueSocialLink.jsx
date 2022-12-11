@@ -6,16 +6,15 @@ import PropTypes from "prop-types";
 // social links array
 import { socialLinksArray } from "./";
 
-const ProfileStatueSocialLink = ({ link, platform, username }) => {
+const ProfileStatueSocialLink = ({ link, platform, username, onRemoveSocialLink }) => {
   
   // Validate Component's Props 
   ProfileStatueSocialLink.propTypes = {
     link: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     platform: PropTypes.string.isRequired,
+    onRemoveSocialLink: PropTypes.func.isRequired,
   };
-
-  const [currentSocialLinks, setCurrentSocialLinks] = useState(socialLinksArray);
 
   const oneSocialLinkRef = useRef();
 
@@ -49,12 +48,6 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
     } else return link;
   }
 
-  function handleClickRemoveSocialLink() {
-    oneSocialLinkRef.current.remove();
-    // Update the socialLinks state variable to exclude the element that was removed
-    setCurrentSocialLinks(currentSocialLinks.filter(item => item.userSocialName !== username));
-  }
-
   return (
     <li
       ref={oneSocialLinkRef}
@@ -80,7 +73,9 @@ const ProfileStatueSocialLink = ({ link, platform, username }) => {
       {/* The Delete social link button  */}
       <i
         className="bi bi-x-lg statue-social-x"
-        onClick={handleClickRemoveSocialLink}
+        onClick={() => {
+          onRemoveSocialLink(username);
+        }}
       >
 
       </i>

@@ -39,15 +39,20 @@ const ProfileStatueSecondary = () => {
 
   // Function to check passed in URLs are valid
   function checkInputURL(url) {
-    let regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+    let regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?(\?([\w\.-]*)=([\w\.-]*))?(#([\w\.-]*))?$/;
     return regex.test(url);
 };
   
   // Update the input text, but checks the inputs before moving forward
   function updateStatueSocialLink(e) {
 
+    // get the input values 
+    let socialLinkInput = document.querySelector(".add-social-link").value;
+    let socialPlatformInput = document.querySelector(".add-social-platform").value;
+    let socialUsernameInput = document.querySelector(".add-social-username").value;
+
     // check if the input values are empty 
-    if (document.querySelector(".add-social-link").value == "" || document.querySelector(".add-social-platform").value == "" || document.querySelector(".add-social-username").value == "") {
+    if (socialLinkInput == "" || socialPlatformInput == "" || socialUsernameInput == "") {
 
       // Send Swal message 
       swal({
@@ -62,10 +67,11 @@ const ProfileStatueSecondary = () => {
       return;
     }
 
-    const checkInputURLValue = checkInputURL(document.querySelector(".add-social-link").value);
+    const checkInputURLValue = checkInputURL(socialLinkInput);
 
     // check if the URL is valid 
-    if (checkInputURLValue == false) {
+    if (!checkInputURLValue) {
+
       // Send Swal message 
       swal({
         text: "URL Invalid, please check the link",
@@ -171,6 +177,12 @@ const ProfileStatueSecondary = () => {
     console.log(editStatueSocialLink);
   }, [editStatueSocialLink]);
 
+  // Function to remove an element from the editStatueSocialLink state variable
+  function handleRemoveSocialLink(username) {
+    // Update the currentSocialLinks state variable to exclude the element that was removed
+    setEditStatueSocialLink(editStatueSocialLink.filter(item => item.userSocialName !== username));
+  };
+
   return (
     <div className="secondary-sect">
     {/* Socials  */}
@@ -186,6 +198,7 @@ const ProfileStatueSecondary = () => {
               link={item.userSocialLink}
               username={item.userSocialName}
               platform={item.userSocialPlatform}
+              onRemoveSocialLink={handleRemoveSocialLink}
               />
             );
           })}
@@ -234,6 +247,7 @@ const ProfileStatueSecondary = () => {
               <input
                 required
                 type="text"
+                maxLength="35"
                 name="socialPlatform"
                 placeholder="What platform?"
                 className="add-social-platform"
@@ -247,7 +261,7 @@ const ProfileStatueSecondary = () => {
               <input
                 required
                 type="text"
-                maxLength="30"
+                maxLength="35"
                 name="socialUsername"
                 className="add-social-username"
                 placeholder="What's your username?"

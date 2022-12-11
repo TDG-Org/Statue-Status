@@ -203,17 +203,6 @@ const ProfileStatueSecondary = () => {
             );
           })}
 
-        {/* Extra Links  */}
-        <li>
-          <a
-            className="social-extra-link"
-            href=""><i className="bi bi-link-45deg"></i>
-            <span className="social-extra-link-platform">Platform</span>/<span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-          </li>
-
           {/* add link button  */}
           <li className={`add-social-link-btn-wrapper ${editStatueSocialLinkActive ? "hide" : ""}`}>
             <button

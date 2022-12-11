@@ -6,14 +6,19 @@ import { ProfileStatueSocialLink } from "./";
 // Nate's Social Links data 
 import { natesSocialLinks } from "../../../DemoData";
 
+// Sweet Alert 
+import swal from "sweetalert";
+
 const ProfileStatueSecondary = () => {
   
-
   const statueSocialLinkRef = useRef(null);
+
   // Check if Editing is active
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
+
   // Official Social Link 
   const [editStatueSocialLink, setEditStatueSocialLink] = useState(natesSocialLinks);
+
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);
 
@@ -25,23 +30,67 @@ const ProfileStatueSecondary = () => {
     }, 50);
   } 
 
-  // Update the display 
+  // Update the display / Removes values for the inputs
   function displayStatueSocialLink() {
     document.querySelector(".add-social-link").value = "";
     document.querySelector(".add-social-platform").value = "";
     document.querySelector(".add-social-username").value = "";
   }
+
+  // Function to check passed in URLs are valid
+  function checkInputURL(url) {
+    let regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?(\?([\w\.-]*)=([\w\.-]*))?(#([\w\.-]*))?$/;
+    return regex.test(url);
+};
   
-  // Update the input text 
+  // Update the input text, but checks the inputs before moving forward
   function updateStatueSocialLink(e) {
-    if (document.querySelector(".add-social-link").value == "" || document.querySelector(".add-social-platform").value == "" || document.querySelector(".add-social-username").value == "") {
+
+    // get the input values 
+    let socialLinkInput = document.querySelector(".add-social-link").value;
+    let socialPlatformInput = document.querySelector(".add-social-platform").value;
+    let socialUsernameInput = document.querySelector(".add-social-username").value;
+
+    // check if the input values are empty 
+    if (socialLinkInput == "" || socialPlatformInput == "" || socialUsernameInput == "") {
+
+      // Send Swal message 
+      swal({
+        text: "Please fill in all input fields",
+        button: false
+      });
+  
+      setTimeout(() => {
+        swal.close();
+      }, 1150);
+
       return;
-    } else {
-      loadMoreSocialLinks();
-      updateStatueSocialLinkOfficial();
-      handleToggleStatueSocialLink(); 
     }
+
+    const checkInputURLValue = checkInputURL(socialLinkInput);
+
+    // check if the URL is valid 
+    if (!checkInputURLValue) {
+
+      // Send Swal message 
+      swal({
+        text: "URL Invalid, please check the link",
+        button: false
+      });
+  
+      setTimeout(() => {
+        swal.close();
+      }, 1150);
+
+      return;
+    }
+
+    loadMoreSocialLinks();
+    updateStatueSocialLinkOfficial();
+    handleToggleStatueSocialLink(); 
   }
+
+  // After the check above, this will create object and set the state 
   function updateStatueSocialLinkOfficial() {
     let newStatueLinkObj = {
       userSocialLink: statueSocialLinkCurrent.link,
@@ -89,24 +138,28 @@ const ProfileStatueSecondary = () => {
     }
   }
 
+  // Displaying a number of links state 
   const [displayedSocialLinksCount, setDisplayedSocialLinksCount] = useState(4);
+
+  // Hide button if number is above set limit 
   const [hideMoreSocialLinksBtn, setHideMoreSocialLinksBtn] = useState(false);
 
+  // Once component is rendered Call the toggleShowMoreSocialLinksBtn()
   useEffect(() => {
-    // Call the toggleShowMoreSocialLinksBtn() function after the displayedSocialLinksCount state has been updated
     toggleShowMoreSocialLinksBtn();
   }, [displayedSocialLinksCount]);
   
-  // function to load more projects
+  // function to load more Social Links
   function loadMoreSocialLinks() {
     setDisplayedSocialLinksCount(displayedSocialLinksCount + 4);
   }
 
-  // function to load more projects
+  // function to load less Social Links
   function loadLessSocialLinks() {
     setDisplayedSocialLinksCount(displayedSocialLinksCount - (displayedSocialLinksCount  - 4));
   }
   
+  // Checks if the limit has been reached to hide show more links button 
   function toggleShowMoreSocialLinksBtn() {
     let totalNumberOfSocialLinks = editStatueSocialLink.length;
     if (totalNumberOfSocialLinks <= displayedSocialLinksCount) {
@@ -116,11 +169,19 @@ const ProfileStatueSecondary = () => {
     }
   }
 
+  // The Social Links that are going to show 
   const slSliced = editStatueSocialLink.slice(0, displayedSocialLinksCount);
 
+  // On Render, this tracks the social links 
   useEffect(() => {
     console.log(editStatueSocialLink);
   }, [editStatueSocialLink]);
+
+  // Function to remove an element from the editStatueSocialLink state variable
+  function handleRemoveSocialLink(username) {
+    // Update the currentSocialLinks state variable to exclude the element that was removed
+    setEditStatueSocialLink(editStatueSocialLink.filter(item => item.userSocialName !== username));
+  };
 
   return (
     <div className="secondary-sect">
@@ -137,20 +198,10 @@ const ProfileStatueSecondary = () => {
               link={item.userSocialLink}
               username={item.userSocialName}
               platform={item.userSocialPlatform}
+              onRemoveSocialLink={handleRemoveSocialLink}
               />
             );
           })}
-
-        {/* Extra Links  */}
-        <li>
-          <a
-            className="social-extra-link"
-            href=""><i className="bi bi-link-45deg"></i>
-            <span className="social-extra-link-platform">Platform</span>/<span className="social-username">TDGNate</span>
-            </a>
-            <i className="bi bi-x-lg statue-social-x"></i>
-            
-          </li>
 
           {/* add link button  */}
           <li className={`add-social-link-btn-wrapper ${editStatueSocialLinkActive ? "hide" : ""}`}>
@@ -185,6 +236,7 @@ const ProfileStatueSecondary = () => {
               <input
                 required
                 type="text"
+                maxLength="35"
                 name="socialPlatform"
                 placeholder="What platform?"
                 className="add-social-platform"
@@ -198,7 +250,7 @@ const ProfileStatueSecondary = () => {
               <input
                 required
                 type="text"
-                maxLength="30"
+                maxLength="35"
                 name="socialUsername"
                 className="add-social-username"
                 placeholder="What's your username?"

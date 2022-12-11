@@ -306,10 +306,12 @@
           position: relative;
           width: 80%;
           margin: .5rem auto;
+          max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
           padding: .5rem 1rem;
           background: $mid-dark-clr;
+          transition: all 250ms ease-in;
           border: 1px solid $low-dark-clr;
           a {
             gap: .5rem;
@@ -368,6 +370,9 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          max-height: unset;
+          margin: auto;
+          border: 1px solid $mid-light-clr;
 
           input {
             color: $light-clr;
@@ -418,7 +423,7 @@
             }
           }
           &:hover {
-            border: 1px solid $low-dark-clr;
+            border: 1px solid $light-clr;
             background-color: $mid-dark-clr;
           }
         }
@@ -545,6 +550,9 @@
             a {
               margin: auto auto;
             }
+          }
+          .add-social-link-li {
+            width: 55%;
           }
         }
       }

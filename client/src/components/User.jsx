@@ -3,6 +3,9 @@ import React from "react";
 // Styles
 import "../sass/components/User.scss";
 
+// Link 
+import { Link } from "react-router-dom";
+
 // Images/SVGs 
 import { Bravery, Brilliance, Pancake, Planet } from "../assets/imgs";
 
@@ -28,9 +31,9 @@ const User = () => {
       </ul>
 
       {/* Avatar Section  */}
-      <div className="avatar-sect">
+      <Link to="/profile" className="avatar-sect">
           <img src={Pancake} alt="" />   
-      </div>
+      </Link>
 
       </div>
 

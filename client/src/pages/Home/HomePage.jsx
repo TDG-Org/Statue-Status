@@ -138,20 +138,17 @@ const HomePage = () => {
     }, 3000);
 
   }
-  
 
-  // Calls APIs every 4 hours / 6 times a day 
-  function startRichestPeopleCalls() {
-    console.log("calls APIs");
-    setInterval(() => {
-      retrieveAllRichest(); 
-      retrieveRichest(); 
-    }, 14400000);
+  function setupInterval(func, interval) {
+    setInterval(func, interval);
   }
-
-  // Calls startRichestPeopleCalls on Render 
+  
   useEffect(() => {
-    startRichestPeopleCalls();
+    console.log("Calling function retrieveAllRichest");
+    setupInterval(retrieveAllRichest, 14400000);
+  
+    console.log("Calling function retrieveRichest");
+    setupInterval(retrieveRichest, 14400000);
   }, []);
 
   return (

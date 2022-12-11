@@ -37,6 +37,7 @@ const ProfileStatueSecondary = () => {
     if (document.querySelector(".add-social-link").value == "" || document.querySelector(".add-social-platform").value == "" || document.querySelector(".add-social-username").value == "") {
       return;
     } else {
+      loadMoreSocialLinks();
       updateStatueSocialLinkOfficial();
       handleToggleStatueSocialLink(); 
     }
@@ -98,7 +99,12 @@ const ProfileStatueSecondary = () => {
   
   // function to load more projects
   function loadMoreSocialLinks() {
-    setDisplayedSocialLinksCount(displayedSocialLinksCount + 6);
+    setDisplayedSocialLinksCount(displayedSocialLinksCount + 4);
+  }
+
+  // function to load more projects
+  function loadLessSocialLinks() {
+    setDisplayedSocialLinksCount(displayedSocialLinksCount - (displayedSocialLinksCount  - 4));
   }
   
   function toggleShowMoreSocialLinksBtn() {
@@ -228,8 +234,20 @@ const ProfileStatueSecondary = () => {
             onClick={loadMoreSocialLinks}
             className={`more-socials-btn ${hideMoreSocialLinksBtn ? "hide" : ""}`}
           >
-          <a className=""
-            href=""><i className="bi bi-chevron-down"></i>
+            <a
+              className=""
+              ><i className="bi bi-chevron-down"></i>
+          </a>
+        </li>
+
+        {/* The show less Socials button  */}
+          <li
+            onClick={loadLessSocialLinks}
+            className={`more-socials-btn ${hideMoreSocialLinksBtn ? "" : "hide"}`}
+          >
+            <a
+              className=""
+              ><i className="bi bi-chevron-compact-up"></i>
           </a>
         </li>
 

@@ -2,9 +2,8 @@
 import ProfileStatue from "./ProfileStatue";
 import ProfileNoStatue from "./ProfileNoStatue";
 import { ProfileStatuePrimary } from "./Primary";
+import { ProfileStatueSecondary } from "./Secondary";
 import { socialLinksArray } from "./SocialLinksData";
-import ProfileStatueSecondary from "./ProfileStatueSecondary";
-import ProfileStatueSocialLink from "./ProfileStatueSocialLink";
 
 // Export 
 export {
@@ -13,5 +12,4 @@ export {
   socialLinksArray,
   ProfileStatuePrimary,
   ProfileStatueSecondary,
-  ProfileStatueSocialLink,
 };

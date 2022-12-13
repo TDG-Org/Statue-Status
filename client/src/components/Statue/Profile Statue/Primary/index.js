@@ -1,4 +1,4 @@
-// import 
+// Import 
 import ProfileStatueBages from "./ProfileStatueBages";
 import ProfileStatueAbout from "./ProfileStatueAbout";
 import ProfileStatuePrimary from "./ProfileStatuePrimary";

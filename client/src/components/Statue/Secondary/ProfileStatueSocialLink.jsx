@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 
 // social links array
-import { socialLinksArray } from "./";
+import { socialLinksArray } from "../..";
 
 const ProfileStatueSocialLink = ({ link, platform, username, onRemoveSocialLink }) => {
   

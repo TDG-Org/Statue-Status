@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { ProfileStatueSocialLink } from "./";
 
 // Nate's Social Links data 
-import { natesSocialLinks } from "../../../DemoData";
+import { natesSocialLinks } from "../../../../DemoData.js";
 
 // Sweet Alert 
 import swal from "sweetalert";

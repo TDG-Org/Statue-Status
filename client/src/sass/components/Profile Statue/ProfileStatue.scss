@@ -300,7 +300,7 @@
     .secondary-sect {
       width: 55%;
       h4 {
-        margin: .15rem 0 .25rem 0 !important;
+        margin: .75rem 0 .35rem 0 !important;
       }
       .social-list {
         margin: 0;
@@ -371,7 +371,6 @@
           }
         }
 
-
         // Adding a New Social 
         .add-social-link-li {
           display: flex;
@@ -379,7 +378,7 @@
           justify-content: center;
           align-items: center;
           max-height: unset;
-          margin: auto;
+          margin: .75rem auto;
           border: 1px solid $mid-light-clr;
 
           input {
@@ -396,6 +395,7 @@
            .add-social-platform-sect,
            .add-social-username-sect {
             margin: .75rem 0;
+            width: 90%;
           }
 
           .add-social-link,
@@ -416,6 +416,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            width: 100%;
             button {
               border: none;
               color: $light-clr;

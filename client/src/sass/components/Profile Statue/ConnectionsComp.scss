@@ -6,9 +6,182 @@
 .statue-sect {
   .statue {
     .secondary-sect-connections {
-      // a peer 
-      .statue-peer {
-        background-color: pink;
+      .statue-peer-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: .5rem;
+        margin-top: .5rem;
+
+
+        // a peer 
+        .statue-peer {
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          align-items: center;
+          padding: .2rem .65rem; 
+          margin: .25rem;
+          width: 80%;
+          border-bottom: 1px solid transparent;
+
+          .statue-peer-img-wrapper {
+            width: 40px;
+            margin: 0 .75rem;
+            img {
+              width: 100%;
+            }
+          }
+          .statue-peer-name-wrapper {
+            .statue-peer-name {
+              color: $mid-light-clr;
+              &:hover {
+                color: $second-clr;
+                text-decoration: underline !important;
+              }
+            }
+          }
+
+          .statue-peer-x {
+            display: none;
+            position: absolute;
+            right: .5rem;
+            &:hover {
+              cursor: pointer;
+              color: $mid-red-clr;
+            }
+          }
+
+          &:hover {
+            border-bottom: 1px solid $low-dark-clr;
+            .statue-peer-x {
+              display: block;
+            }
+          }
+        }
+      }
+
+      // Adding A new Connection Section 
+      .statue-add-connection-section {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 78%;
+        margin: .75rem auto;
+        max-height: unset;
+        text-align: center;
+        border-radius: 8px;
+        padding: .5rem 1rem;
+        background: $mid-dark-clr;
+        transition: all 250ms ease-in;
+        border: 1px solid $mid-light-clr;
+
+        input {
+          color: $light-clr;
+          margin: .5rem 0 !important;
+          width: 90%;
+          border: none;
+          margin: 0 auto;
+          padding: .25rem;
+         background-color: transparent;
+         border-bottom: 1px solid $mid-light-clr;
+        }
+
+        p {
+          width: 100%;
+          margin: .25rem 0;
+        }
+
+        .peer-pic-sect,
+        .peer-name-sect,
+        .peer-link-sect {
+          margin: .75rem 0;
+        }
+
+        // The add / cancel buttons 
+        .peer-btns {
+          gap: 1.25rem;
+          display: flex;
+          margin: .75rem 0;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          button {
+            border: none;
+            color: $light-clr;
+            padding: .15rem 1rem;
+            background: transparent;
+            transition: all 250ms ease-in;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid $mid-light-clr;
+            &:hover {
+              background: $low-dark-clr;
+              border-top: 1px solid $accent-clr;
+              border-bottom: 1px solid $accent-clr;
+            }
+          }
+        }
+
+        .peer-pic-sect-content {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          color: $light-clr;
+          height: 50px;
+          justify-content: center;
+          gap: 2rem;
+          margin: .5rem auto;
+          padding: .25rem;
+          align-items: center;
+
+          img {
+            width: 45px;
+            height: 45px;
+          }
+
+          .peer-pic-add-btn {
+            width: 60%;
+            padding: .25rem;
+            border: none;
+            color: $light-clr;
+            padding: .25rem 1rem;
+            background: transparent;
+            transition: all 250ms ease-in;
+            border: 1px solid $low-dark-clr;
+            &:hover {
+              border: 1px solid $accent-clr;
+            }
+          }
+        }
+      }
+
+      // Add New Connections Button 
+      .statue-add-peer-button-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        .statue-add-peer-btn {
+          color: $light-clr;
+          display: flex;
+          justify-content: center;
+          width: 78%;
+          margin: .5rem auto;
+          max-height: 66.5px;
+          text-align: center;
+          border-radius: 8px;
+          padding: .5rem 1rem;
+          background: $mid-dark-clr;
+          transition: all 250ms ease-in;
+          border: 1px solid $low-dark-clr;
+          &:hover {
+            background: $low-dark-clr;
+            border: 1px solid $accent-clr;
+          }
+        }
       }
     }
   }

@@ -1,0 +1,15 @@
+// Connections Component 
+
+// SCSS Variables 
+@import "../../variables.scss";
+
+.statue-sect {
+  .statue {
+    .secondary-sect-connections {
+      // a peer 
+      .statue-peer {
+        background-color: pink;
+      }
+    }
+  }
+}

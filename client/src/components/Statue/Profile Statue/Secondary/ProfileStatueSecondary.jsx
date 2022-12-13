@@ -3,6 +3,9 @@ import React, { useState, useRef, useEffect } from "react";
 // Components 
 import { ProfileStatueSocial, ProfileStatueConnections } from "./";
 
+// Styles
+import "../../../../sass/components/Profile Statue/ConnectionsComp.scss";
+
 const ProfileStatueSecondary = () => {
 
   return (

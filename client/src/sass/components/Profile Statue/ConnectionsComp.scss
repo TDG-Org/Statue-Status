@@ -12,6 +12,8 @@
         flex-wrap: wrap;
         justify-content: center;
         padding: .5rem;
+        margin-top: .5rem;
+
 
         // a peer 
         .statue-peer {
@@ -19,14 +21,13 @@
           position: relative;
           flex-direction: row;
           align-items: center;
-          border-radius: 8px;
-          padding: .5rem .65rem;
+          padding: .2rem .65rem; 
           margin: .25rem;
-          border: 1px solid $low-dark-clr;
           width: 80%;
+          border-bottom: 1px solid transparent;
 
           .statue-peer-img-wrapper {
-            width: 45px;
+            width: 40px;
             margin: 0 .75rem;
             img {
               width: 100%;
@@ -34,10 +35,10 @@
           }
           .statue-peer-name-wrapper {
             .statue-peer-name {
-              color: $light-clr;
+              color: $mid-light-clr;
               &:hover {
                 color: $second-clr;
-                text-decoration: underline;
+                text-decoration: underline !important;
               }
             }
           }
@@ -45,7 +46,6 @@
           .statue-peer-x {
             display: none;
             position: absolute;
-            // top: .5rem;
             right: .5rem;
             &:hover {
               cursor: pointer;
@@ -54,6 +54,7 @@
           }
 
           &:hover {
+            border-bottom: 1px solid $low-dark-clr;
             .statue-peer-x {
               display: block;
             }

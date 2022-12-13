@@ -27,52 +27,49 @@ const ProfileStatueConnections = () => {
           {/* The X button  */}
           <i className="bi bi-x-lg statue-peer-x"></i>
         </div>
-        
                 
       {/* peer  */}
       <div className="statue-peer">
         {/* Image  */}
         <div className="statue-peer-img-wrapper">
-          <img src={Brilliance} alt="" />
+          <img src={Pancake} alt="" />
         </div>
         {/* Name  */}
         <div className="statue-peer-name-wrapper">
           <a href="" className="statue-peer-name">
-            Luke McIlvenny
+            Frank McIlvenny
           </a>
         </div>
           {/* The X button  */}
           <i className="bi bi-x-lg statue-peer-x"></i>
         </div>
-        
-                
-      {/* peer  */}
-      <div className="statue-peer">
+
+        {/* peer  */}
+       <div className="statue-peer">
         {/* Image  */}
         <div className="statue-peer-img-wrapper">
-          <img src={Brilliance} alt="" />
+          <img src={Bravery} alt="" />
         </div>
         {/* Name  */}
         <div className="statue-peer-name-wrapper">
           <a href="" className="statue-peer-name">
-            Luke McIlvenny
+            Rose McIlvenny
           </a>
         </div>
           {/* The X button  */}
           <i className="bi bi-x-lg statue-peer-x"></i>
-        </div>
-        
-                
+      </div>
+             
       {/* peer  */}
       <div className="statue-peer">
         {/* Image  */}
         <div className="statue-peer-img-wrapper">
-          <img src={Brilliance} alt="" />
+          <img src={NatePfp} alt="" />
         </div>
         {/* Name  */}
         <div className="statue-peer-name-wrapper">
           <a href="" className="statue-peer-name">
-            Luke McIlvenny
+            Christian Nathaniel McIlvenny
           </a>
         </div>
           {/* The X button  */}

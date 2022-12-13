@@ -6,9 +6,42 @@
 .statue-sect {
   .statue {
     .secondary-sect-connections {
-      // a peer 
-      .statue-peer {
-        background-color: pink;
+      .statue-peer-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: .5rem;
+
+        // a peer 
+        .statue-peer {
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          align-items: center;
+          border-radius: 8px;
+          padding: .5rem .65rem;
+          margin: .25rem;
+          border: 1px solid $low-dark-clr;
+          width: 80%;
+
+          .statue-peer-img-wrapper {
+            width: 45px;
+            margin: 0 .75rem;
+            img {
+              width: 100%;
+            }
+          }
+          .statue-peer-name-wrapper {
+            .statue-peer-name {
+              color: $light-clr;
+              &:hover {
+                color: $second-clr;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -11,8 +11,7 @@ const ProfileStatueSecondary = () => {
       <ProfileStatueSocial />
       
       {/* Connections  */}
-
-      <div className="connections"></div>
+      <ProfileStatueConnections />
   </div>
   );
 };

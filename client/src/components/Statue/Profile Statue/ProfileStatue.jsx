@@ -4,7 +4,7 @@ import React from "react";
 import { ProfileNoStatue, ProfileStatuePrimary, ProfileStatueSecondary } from "./";
 
 // Styles
-import "../../../sass/components/ProfileStatue.scss";
+import "../../../sass/components/Profile Statue/ProfileStatue.scss";
 
 // Images/SVGs 
 import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";

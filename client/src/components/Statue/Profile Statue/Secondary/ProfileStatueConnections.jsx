@@ -11,21 +11,7 @@ const ProfileStatueConnections = () => {
       <h4>Connections</h4>
 
       <div className="statue-peer-wrapper">
-{/* peer  */}
-<div className="statue-peer">
-        {/* Image  */}
-        <div className="statue-peer-img-wrapper">
-          <img src={Brilliance} alt="" />
-        </div>
-        {/* Name  */}
-        <div className="statue-peer-name-wrapper">
-          <a href="" className="statue-peer-name">
-            Luke McIlvenny
-          </a>
-        </div>
-        {/* The X button  */}
-      </div>
-
+        
       {/* peer  */}
       <div className="statue-peer">
         {/* Image  */}
@@ -38,9 +24,11 @@ const ProfileStatueConnections = () => {
             Luke McIlvenny
           </a>
         </div>
-        {/* The X button  */}
-      </div>
-
+          {/* The X button  */}
+          <i className="bi bi-x-lg statue-peer-x"></i>
+        </div>
+        
+                
       {/* peer  */}
       <div className="statue-peer">
         {/* Image  */}
@@ -53,9 +41,11 @@ const ProfileStatueConnections = () => {
             Luke McIlvenny
           </a>
         </div>
-        {/* The X button  */}
-      </div>
-
+          {/* The X button  */}
+          <i className="bi bi-x-lg statue-peer-x"></i>
+        </div>
+        
+                
       {/* peer  */}
       <div className="statue-peer">
         {/* Image  */}
@@ -68,8 +58,27 @@ const ProfileStatueConnections = () => {
             Luke McIlvenny
           </a>
         </div>
-        {/* The X button  */}
-      </div>
+          {/* The X button  */}
+          <i className="bi bi-x-lg statue-peer-x"></i>
+        </div>
+        
+                
+      {/* peer  */}
+      <div className="statue-peer">
+        {/* Image  */}
+        <div className="statue-peer-img-wrapper">
+          <img src={Brilliance} alt="" />
+        </div>
+        {/* Name  */}
+        <div className="statue-peer-name-wrapper">
+          <a href="" className="statue-peer-name">
+            Luke McIlvenny
+          </a>
+        </div>
+          {/* The X button  */}
+          <i className="bi bi-x-lg statue-peer-x"></i>
+        </div>
+        
       </div>
 
     </div>

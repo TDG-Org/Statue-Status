@@ -41,6 +41,23 @@
               }
             }
           }
+
+          .statue-peer-x {
+            display: none;
+            position: absolute;
+            // top: .5rem;
+            right: .5rem;
+            &:hover {
+              cursor: pointer;
+              color: $mid-red-clr;
+            }
+          }
+
+          &:hover {
+            .statue-peer-x {
+              display: block;
+            }
+          }
         }
       }
     }

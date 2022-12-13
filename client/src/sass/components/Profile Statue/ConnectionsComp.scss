@@ -8,21 +8,21 @@
     .secondary-sect-connections {
       .statue-peer-wrapper {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
         padding: .5rem;
+        flex-wrap: wrap;
         margin-top: .5rem;
+        flex-direction: row;
+        justify-content: center;
 
         // a peer 
         .statue-peer {
+          width: 80%;
           display: flex;
+          margin: .25rem;
           position: relative;
           flex-direction: row;
           align-items: center;
           padding: .2rem .65rem; 
-          margin: .25rem;
-          width: 80%;
           border-bottom: 1px solid transparent;
 
           .statue-peer-img-wrapper {
@@ -64,27 +64,27 @@
 
       // Adding A new Connection Section 
       .statue-add-connection-section {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         width: 78%;
-        margin: .75rem auto;
+        display: flex;
+        overflow: hidden;
         max-height: unset;
         text-align: center;
         border-radius: 8px;
+        margin: .75rem auto;
         padding: .5rem 1rem;
+        flex-direction: column;
+        justify-content: center;
         background: $mid-dark-clr;
         transition: all 250ms ease-in;
         border: 1px solid $mid-light-clr;
 
         input {
-          color: $light-clr;
-          margin: .5rem 0 !important;
           width: 90%;
           border: none;
           margin: 0 auto;
           padding: .25rem;
+          color: $light-clr;
+          margin: .5rem 0 !important;
          background-color: transparent;
          border-bottom: 1px solid $mid-light-clr;
         }
@@ -126,21 +126,21 @@
         }
 
         .peer-pic-sect-content {
+          gap: 2rem;
+          height: 50px;
           display: flex;
-          flex-direction: row;
+          padding: .25rem;
           flex-wrap: nowrap;
           color: $light-clr;
-          height: 50px;
-          justify-content: center;
-          gap: 2rem;
           margin: .5rem auto;
-          padding: .25rem;
+          flex-direction: row;
           align-items: center;
+          justify-content: center;
 
           img {
-            border-radius: 50%;
             width: 55px;
             height: 55px;
+            border-radius: 50%;
           }
 
           .peer-pic-add-btn {
@@ -161,20 +161,20 @@
 
       // Add New Connections Button 
       .statue-add-peer-button-wrapper {
+        gap: 1rem;
         width: 100%;
         display: flex;
         flex-direction: row;
-        gap: 1rem;
         .statue-add-peer-btn {
-          color: $light-clr;
-          display: flex;
-          justify-content: center;
           width: 78%;
+          display: flex;
+          color: $light-clr;
           margin: .5rem auto;
           max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
           padding: .5rem 1rem;
+          justify-content: center;
           background: $mid-dark-clr;
           transition: all 250ms ease-in;
           border: 1px solid $low-dark-clr;

@@ -3,11 +3,11 @@ import React, { useState, useRef } from "react";
 // Proptypes 
 import PropTypes from "prop-types";
 
-import { Pancake, Brilliance, Bravery, NatePfp } from "../../../../assets/imgs";
+import { Pancake, Brilliance, Bravery, NatePfp, Male } from "../../../../assets/imgs";
 
 const ProfileStatueConnections = () => {
 
-  const [connectionsImage, setConnectionsImage] = useState(null);
+  const [connectionsImage, setConnectionsImage] = useState(Male);
   const inputConnectionsAvatarRef = useRef();
   const connectionsImgRef = useRef();
 
@@ -99,10 +99,10 @@ const ProfileStatueConnections = () => {
           <p>Person&apos;s Image:</p>
           <div className="peer-pic-sect-content">
             <img
-              alt=""
-              src={Pancake}
+              src={Male}
               ref={connectionsImgRef}
               className="peer-pic-display"
+              alt="choosen connection image"
             />
             <input type="file" ref={inputConnectionsAvatarRef} onChange={handleConnectionsImageChange} hidden />
             <button

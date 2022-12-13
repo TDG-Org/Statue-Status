@@ -61,6 +61,34 @@
           }
         }
       }
+
+      // Add New Connections Button 
+      .statue-add-peer-button-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        .statue-add-peer-btn {
+          color: $light-clr;
+          display: flex;
+          justify-content: center;
+          // flex-direction: row;
+          // position: relative;
+          width: 78%;
+          margin: .5rem auto;
+          max-height: 66.5px;
+          text-align: center;
+          border-radius: 8px;
+          padding: .5rem 1rem;
+          background: $mid-dark-clr;
+          transition: all 250ms ease-in;
+          border: 1px solid $low-dark-clr;
+          &:hover {
+            background: $low-dark-clr;
+            border: 1px solid $accent-clr;
+          }
+        }
+      }
     }
   }
 }

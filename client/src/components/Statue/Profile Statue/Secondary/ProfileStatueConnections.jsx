@@ -78,6 +78,46 @@ const ProfileStatueConnections = () => {
         
       </div>
 
+      {/* The adding connection section  */}
+      <div className="statue-add-connection-section">
+        {/* peer's picture  */}
+        <div className="peer-pic-sect">
+          <p>Person&apos;s Image</p>
+          <div className="peer-pic-sect-content">
+            <img src="" alt="" className="peer-pic-display" />
+            <button
+              className="peer-pic-add-btn"
+            >
+              Choose Image
+            </button>
+          </div>
+        </div>
+        {/* peer's name  */}
+        <div className="peer-name-sect">
+          <p>Person&apos;s Name</p>
+          <input
+            required
+            type="text"
+            className="peer-name-input"
+          />
+        </div>
+        {/* peer's link  */}
+        <div className="peer-link-sect">
+          <p>Person&apos;s social link (optional)</p>
+          <input
+            type="text"
+            className="peer-link-input"
+          />
+        </div>
+      </div>
+
+      {/* The add connections button  */}
+      <div className="statue-add-peer-button-wrapper">
+        <button className="statue-add-peer-btn">
+          Add Connections
+        </button>
+      </div>
+
     </div>
   );
 };

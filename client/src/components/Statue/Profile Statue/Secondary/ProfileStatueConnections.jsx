@@ -98,6 +98,7 @@ const ProfileStatueConnections = () => {
           <input
             required
             type="text"
+            placeholder="John Doe"
             className="peer-name-input"
           />
         </div>
@@ -106,8 +107,23 @@ const ProfileStatueConnections = () => {
           <p>Person&apos;s Social Link (optional):</p>
           <input
             type="text"
+            placeholder="https://..."
             className="peer-link-input"
           />
+        </div>
+
+        {/* The cancel and add buttons  */}
+        <div className="peer-btns">
+          {/* add  */}
+          <button
+            className="add-peer-btn">
+            Add
+          </button>
+          {/* cancel  */}
+          <button
+            className="cancel-peer-btn">
+            Cancel
+          </button>
         </div>
       </div>
 

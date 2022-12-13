@@ -378,7 +378,7 @@
           justify-content: center;
           align-items: center;
           max-height: unset;
-          margin: auto;
+          margin: .75rem auto;
           border: 1px solid $mid-light-clr;
 
           input {
@@ -416,6 +416,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            width: 100%;
             button {
               border: none;
               color: $light-clr;

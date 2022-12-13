@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import { ProfileStatueAccessory, ProfileStatueBages, ProfileStatueAbout } from "./";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";
+import { Pancake, Brilliance, Bravery, NatePfp } from "../../../../assets/imgs";
 
 const ProfileStatuePrimary = () => {
 

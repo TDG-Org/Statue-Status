@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
 
 // Demo Data 
-import { NateData } from "../../../DemoData";
+import { NateData } from "../../../../DemoData";
 
 const ProfileStatueAccessory = () => {
 

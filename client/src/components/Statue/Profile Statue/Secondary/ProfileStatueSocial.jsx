@@ -4,13 +4,13 @@ import React, { useState, useRef, useEffect } from "react";
 import { ProfileStatueSocialLink } from "./";
 
 // Nate's Social Links data 
-import { natesSocialLinks } from "../../../DemoData";
+import { natesSocialLinks } from "../../../../DemoData.js";
 
 // Sweet Alert 
 import swal from "sweetalert";
 
-const ProfileStatueSecondary = () => {
-  
+const ProfileStatueSocial = () => {
+
   const statueSocialLinkRef = useRef(null);
 
   // Check if Editing is active
@@ -184,8 +184,6 @@ const ProfileStatueSecondary = () => {
   };
 
   return (
-    <div className="secondary-sect">
-    {/* Socials  */}
     <div className="secondary-sect-socials">
       <h4>Socials</h4>
         <ul className="social-list">
@@ -304,13 +302,8 @@ const ProfileStatueSecondary = () => {
         </li>
 
       </ul>
-      </div>
-      
-      {/* Connections  */}
-
-      <div className="connections"></div>
-  </div>
+    </div>
   );
 };
 
-export default ProfileStatueSecondary;
+export default ProfileStatueSocial;

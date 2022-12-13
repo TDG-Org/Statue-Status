@@ -1,7 +1,7 @@
 // Profile Statue Section
 
 // SCSS Variables 
-@import "../variables.scss";
+@import "../../variables.scss";
 
 .statue-sect {
   width: 100%;
@@ -27,9 +27,9 @@
       font-size: 1.1rem;
       border-radius: 8px;
       color: $mid-light-clr;
+      transition: all 250ms ease-in;
       border: 1px solid $low-dark-clr;
       background-color: $mid-dark-clr;
-      transition: all 250ms ease-in;
       &:hover {
         color: $light-clr;
         border: 1px solid $accent-clr;

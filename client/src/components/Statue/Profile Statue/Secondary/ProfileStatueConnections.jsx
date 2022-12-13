@@ -6,6 +6,20 @@ import PropTypes from "prop-types";
 import { Pancake, Brilliance, Bravery, NatePfp } from "../../../../assets/imgs";
 
 const ProfileStatueConnections = () => {
+
+  const [connectionsImage, setConnectionsImage] = useState(null);
+  const inputConnectionsAvatarRef = useRef();
+  const connectionsImgRef = useRef();
+
+  const handleConnectionsImageChange = (event) => {
+    setConnectionsImage(event.target.files[0]);
+    connectionsImgRef.current.src = URL.createObjectURL(event.target.files[0]);
+  };
+
+  const handleConnectionsAvatarInputClick = () => {
+    inputConnectionsAvatarRef.current.click();
+  };
+
   return (
     <div className="secondary-sect-connections">
       <h4>Connections</h4>
@@ -84,9 +98,16 @@ const ProfileStatueConnections = () => {
         <div className="peer-pic-sect">
           <p>Person&apos;s Image:</p>
           <div className="peer-pic-sect-content">
-            <img src={Pancake} alt="" className="peer-pic-display" />
+            <img
+              alt=""
+              src={Pancake}
+              ref={connectionsImgRef}
+              className="peer-pic-display"
+            />
+            <input type="file" ref={inputConnectionsAvatarRef} onChange={handleConnectionsImageChange} hidden />
             <button
               className="peer-pic-add-btn"
+              onClick={() => handleConnectionsAvatarInputClick()}
             >
               Choose Image
             </button>

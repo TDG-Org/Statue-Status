@@ -15,7 +15,6 @@ const Avatar = () => {
   };
 
   const handleProfileAvatarInputClick = () => {
-    console.log("hello");
     inputProfileAvatarRef.current.click();
   };
   

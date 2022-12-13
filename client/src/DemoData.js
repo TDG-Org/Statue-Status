@@ -20,7 +20,7 @@ const natesSocialLinks = [
     userSocialName: "christian-mcilvenny"
   },
   {
-    userSocialLink: "https://discord.com/channels/@me",
+    userSocialLink: "https://discordapp.com/users/276568445796220928",
     userSocialPlatform: "discord",
     userSocialName: "Nate#2000"
   },

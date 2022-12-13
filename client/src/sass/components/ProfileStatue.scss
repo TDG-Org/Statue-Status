@@ -29,6 +29,7 @@
       color: $mid-light-clr;
       border: 1px solid $low-dark-clr;
       background-color: $mid-dark-clr;
+      transition: all 250ms ease-in;
       &:hover {
         color: $light-clr;
         border: 1px solid $accent-clr;
@@ -96,8 +97,9 @@
         }
         .statue-name-edit {
           width: 100%;
-          padding: .5rem .35rem;
           max-width: unset;
+          padding: .5rem .35rem;
+          transition: all 250ms ease-in;
         }
       }
 
@@ -129,6 +131,7 @@
           padding: .5rem .35rem;
           color: $mid-light-clr;
           background: $mid-dark-clr;
+          transition: all 250ms ease-in;
           border: 1px solid $low-dark-clr;
           i {
             color: $mid-light-clr;
@@ -206,6 +209,7 @@
             padding: .35rem 1.25rem;
             background: transparent;
             border: 1px solid transparent;
+            transition: all 250ms ease-in;
             border-bottom: 1px solid $low-dark-clr;
             &:hover {
               color: $light-clr;
@@ -222,6 +226,7 @@
           padding: .35rem 1.25rem;
           background: transparent;
           border: 1px solid transparent;
+          transition: all 250ms ease-in;
           border-bottom: 1px solid $low-dark-clr;
           &:hover {
             color: $light-clr;
@@ -275,6 +280,8 @@
       justify-content: center;
       background: $mid-dark-clr;
       border: 1px solid $low-dark-clr;
+      transition: all 250ms ease-in;
+
       i {
         color: $mid-light-clr;
       }
@@ -350,13 +357,14 @@
         .add-social-link-btn-wrapper {
           padding: 0;
           .social-add-link-btn {
-            padding: .5rem 1rem;
-            margin: 0 auto;
-            height: 100%;
             width: 100%;
-            background-color: transparent;
-            color: $light-clr;
+            height: 100%;
             border: none;
+            margin: 0 auto;
+            color: $light-clr;
+            padding: .5rem 1rem;
+            background-color: transparent;
+            transition: all 250ms ease-in;
           }
           &:hover {
             cursor: pointer;
@@ -413,6 +421,7 @@
               color: $light-clr;
               padding: .15rem 1rem;
               background: transparent;
+              transition: all 250ms ease-in;
               border-top: 1px solid transparent;
               border-bottom: 1px solid $mid-light-clr;
               &:hover {
@@ -432,6 +441,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 250ms ease-in;
           &:hover {
             cursor: pointer;
           }

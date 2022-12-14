@@ -7,15 +7,35 @@ import { Pancake, Brilliance, Bravery, NatePfp, Male } from "../../../../assets/
 
 const ProfileStatueConnections = () => {
 
+  // Add Connection state
+  const statueConnectionsRef = useRef(null);
+
+  // Check if Editing is active
+  const [editStatueConnectionsActive, setEditStatueConnectionsActive] = useState(false);
+
+  // Official Social Link 
+  const [editStatueConnections, setEditStatueConnections] = useState(null);
+
+  // Current Social link input 
+  const [statueConnectionsCurrent, setStatueConnectionsCurrent] = useState(editStatueConnections);
+
+  // Toggle function to activate Statue Social Link edit
+  function handleToggleStatueConnections(e) {
+    setEditStatueConnectionsActive(!editStatueConnectionsActive);
+    setTimeout(() => {
+      statueConnectionsRef.current.focus();
+    }, 50);
+  } 
+  
+
+  // Images 
   const [connectionsImage, setConnectionsImage] = useState(Male);
   const inputConnectionsAvatarRef = useRef();
   const connectionsImgRef = useRef();
-
   const handleConnectionsImageChange = (event) => {
     setConnectionsImage(event.target.files[0]);
     connectionsImgRef.current.src = URL.createObjectURL(event.target.files[0]);
   };
-
   const handleConnectionsAvatarInputClick = () => {
     inputConnectionsAvatarRef.current.click();
   };
@@ -104,7 +124,11 @@ const ProfileStatueConnections = () => {
               className="peer-pic-display"
               alt="choosen connection image"
             />
-            <input type="file" ref={inputConnectionsAvatarRef} onChange={handleConnectionsImageChange} hidden />
+            <input
+              type="file"
+              ref={inputConnectionsAvatarRef}
+              onChange={handleConnectionsImageChange}
+              hidden />
             <button
               className="peer-pic-add-btn"
               onClick={() => handleConnectionsAvatarInputClick()}
@@ -120,6 +144,7 @@ const ProfileStatueConnections = () => {
             required
             type="text"
             placeholder="John Doe"
+            ref={statueConnectionsRef}
             className="peer-name-input"
           />
         </div>

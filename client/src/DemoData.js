@@ -1,3 +1,63 @@
+import { Pancake, Bravery, Brilliance, Male, Female, Planet, Logo, NatePfp } from "./assets/imgs";
+
+// Nate's Connections
+const natesConnections = [
+  {
+    peerImg: Pancake,
+    peerName: "Naughty Bear",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Bravery,
+    peerName: "John AAA",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Brilliance,
+    peerName: "Fred fasdfsdfsd",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Male,
+    peerName: "The Who Man",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Pancake,
+    peerName: "when where",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Female,
+    peerName: "look over there",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Planet,
+    peerName: "hello Dude",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Logo,
+    peerName: "There Mre",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Bravery,
+    peerName: "The A J",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: NatePfp,
+    peerName: "Frank G",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+  {
+    peerImg: Brilliance,
+    peerName: "Pual M",
+    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+  },
+];
 
 // Nate's Data for profile Statue 
 const NateData = {
@@ -58,5 +118,6 @@ const data = [
 export {
   NateData,
   data,
-  natesSocialLinks
+  natesSocialLinks,
+  natesConnections
 };

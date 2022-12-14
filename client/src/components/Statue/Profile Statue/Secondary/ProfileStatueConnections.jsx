@@ -40,7 +40,6 @@ const ProfileStatueConnections = () => {
   };
 
   function updateStatueConnections() {
-
   // get the input values 
   let peerNameValue = document.querySelector(".peer-name-input").value;
   let peerLinkValue = document.querySelector(".peer-link-input").value;
@@ -72,7 +71,6 @@ const ProfileStatueConnections = () => {
       }, 1150);
       return;
     }
-
     updateStatueConnectionsOfficial(); 
     handleToggleStatueConnections(); 
   }
@@ -253,12 +251,18 @@ const ProfileStatueConnections = () => {
         <div className="peer-btns">
           {/* add  */}
           <button
-            onClick={updateStatueConnections}
+            onClick={() => {
+              updateStatueConnections();
+            }}
             className="add-peer-btn">
             Add
           </button>
           {/* cancel  */}
           <button
+            onClick={() => {
+              handleToggleStatueConnections();
+              displayStatueConnections();
+            }}
             className="cancel-peer-btn">
             Cancel
           </button>

@@ -15,7 +15,6 @@ const Avatar = () => {
   };
 
   const handleProfileAvatarInputClick = () => {
-    console.log("hello");
     inputProfileAvatarRef.current.click();
   };
   
@@ -23,8 +22,8 @@ const Avatar = () => {
     <div className="profile-sect-avatar">
       <div className="profile-sect-avatar-content" onClick={() => handleProfileAvatarInputClick()}>
         <img
-          alt="User Avatar"
           src={Male}
+          alt="User Avatar"
           ref={profileImgRef}
           className="profile-avatar"
         />

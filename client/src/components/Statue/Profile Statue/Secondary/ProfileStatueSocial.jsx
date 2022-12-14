@@ -174,7 +174,7 @@ const ProfileStatueSocial = () => {
 
   // On Render, this tracks the social links 
   useEffect(() => {
-    console.log(editStatueSocialLink);
+    // console.log(editStatueSocialLink); 
   }, [editStatueSocialLink]);
 
   // Function to remove an element from the editStatueSocialLink state variable

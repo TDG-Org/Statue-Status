@@ -61,39 +61,38 @@ const ProfileStatueConnections = () => {
   };
 
   function updateStatueConnections() {
-  // get the input values 
-  let peerNameValue = document.querySelector(".peer-name-input").value;
-  let peerLinkValue = document.querySelector(".peer-link-input").value;
-
-  // check if the input values are empty 
-    if (peerNameValue == "" || peerLinkValue == "") {
-      // Send Swal message 
-      swal({
-        text: "Please fill in all input fields",
-        button: false
-      });
-      setTimeout(() => {
-        swal.close();
-      }, 1150);
-      return;
+    if (!limitConnectionsReached) {
+      // get the input values 
+      let peerNameValue = document.querySelector(".peer-name-input").value;
+      let peerLinkValue = document.querySelector(".peer-link-input").value;
+      // check if the input values are empty 
+      if (peerNameValue == "" || peerLinkValue == "") {
+        // Send Swal message 
+        swal({
+          text: "Please fill in all input fields",
+          button: false
+        });
+        setTimeout(() => {
+          swal.close();
+        }, 1150);
+        return;
+      }
+      const checkInputURLValue = checkInputURL(peerLinkValue);
+      // Check if the URL is valid 
+      if (!checkInputURLValue) {
+        // Send Swal message 
+        swal({
+          text: "URL Invalid, please check the link",
+          button: false
+        });
+        setTimeout(() => {
+          swal.close();
+        }, 1150);
+        return;
+      }
+      updateStatueConnectionsOfficial(); 
+      handleToggleStatueConnections(); 
     }
-
-    const checkInputURLValue = checkInputURL(peerLinkValue);
-
-    // Check if the URL is valid 
-    if (!checkInputURLValue) {
-      // Send Swal message 
-      swal({
-        text: "URL Invalid, please check the link",
-        button: false
-      });
-      setTimeout(() => {
-        swal.close();
-      }, 1150);
-      return;
-    }
-    updateStatueConnectionsOfficial(); 
-    handleToggleStatueConnections(); 
   }
 
   function updateStatueConnectionsOfficial() {

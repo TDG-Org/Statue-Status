@@ -1,7 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Proptypes 
 import PropTypes from "prop-types";
+
+// Nate's Connections Data 
+import { natesConnections } from "../../../../DemoData";
+
+// Components 
+import { ProfileStatuePeer } from "./";
 
 import { Pancake, Brilliance, Bravery, NatePfp, Male } from "../../../../assets/imgs";
 
@@ -14,7 +20,7 @@ const ProfileStatueConnections = () => {
   const [editStatueConnectionsActive, setEditStatueConnectionsActive] = useState(false);
 
   // Official Connections 
-  const [editStatueConnections, setEditStatueConnections] = useState([]);
+  const [editStatueConnections, setEditStatueConnections] = useState(natesConnections);
 
   // Current Connections input 
   const [statueConnectionsCurrent, setStatueConnectionsCurrent] = useState(editStatueConnections);
@@ -125,6 +131,17 @@ const ProfileStatueConnections = () => {
     inputConnectionsAvatarRef.current.click();
   };
 
+  // On Render, this tracks the social links 
+  useEffect(() => {
+    console.log(editStatueConnections);
+  }, [editStatueConnections]);
+
+  // Function to remove an element from the editStatueSocialLink state variable
+  function handleRemovePeer(name) {
+    // Update the currentSocialLinks state variable to exclude the element that was removed
+    setEditStatueConnections(editStatueConnections.filter(item => item.peerName !== name));
+};
+  
   return (
     <div className="secondary-sect-connections">
       <h4>Connections</h4>
@@ -132,20 +149,17 @@ const ProfileStatueConnections = () => {
       <div className="statue-peer-wrapper">
         
       {/* peer  */}
-      <div className="statue-peer">
-        {/* Image  */}
-        <div className="statue-peer-img-wrapper">
-          <img src={Brilliance} alt="" />
-        </div>
-        {/* Name  */}
-        <div className="statue-peer-name-wrapper">
-          <a href="" className="statue-peer-name">
-            Luke McIlvenny
-          </a>
-        </div>
-          {/* The X button  */}
-          <i className="bi bi-x-lg statue-peer-x"></i>
-        </div>
+        {editStatueConnections.map((item, index) => {
+          return (
+            <ProfileStatuePeer
+              key={index}
+              peerImg={item.peerImg}
+              peerName={item.peerName}
+              peerLink={item.peerLink}
+              onRemovePeer={handleRemovePeer}
+            />
+        );
+      })}
                 
       {/* peer  */}
       <div className="statue-peer">

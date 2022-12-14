@@ -147,8 +147,7 @@ const ProfileStatueConnections = () => {
       <h4>Connections</h4>
 
       <div className="statue-peer-wrapper">
-        
-      {/* peer  */}
+      {/* loop to display each peer  */}
         {editStatueConnections.map((item, index) => {
           return (
             <ProfileStatuePeer
@@ -160,55 +159,6 @@ const ProfileStatueConnections = () => {
             />
         );
       })}
-                
-      {/* peer  */}
-      <div className="statue-peer">
-        {/* Image  */}
-        <div className="statue-peer-img-wrapper">
-          <img src={Pancake} alt="" />
-        </div>
-        {/* Name  */}
-        <div className="statue-peer-name-wrapper">
-          <a href="" className="statue-peer-name">
-            Frank McIlvenny
-          </a>
-        </div>
-          {/* The X button  */}
-          <i className="bi bi-x-lg statue-peer-x"></i>
-        </div>
-
-        {/* peer  */}
-       <div className="statue-peer">
-        {/* Image  */}
-        <div className="statue-peer-img-wrapper">
-          <img src={Bravery} alt="" />
-        </div>
-        {/* Name  */}
-        <div className="statue-peer-name-wrapper">
-          <a href="" className="statue-peer-name">
-            Rose McIlvenny
-          </a>
-        </div>
-          {/* The X button  */}
-          <i className="bi bi-x-lg statue-peer-x"></i>
-      </div>
-             
-      {/* peer  */}
-      <div className="statue-peer">
-        {/* Image  */}
-        <div className="statue-peer-img-wrapper">
-          <img src={NatePfp} alt="" />
-        </div>
-        {/* Name  */}
-        <div className="statue-peer-name-wrapper">
-          <a href="" className="statue-peer-name">
-            Christian Nathaniel McIlvenny
-          </a>
-        </div>
-          {/* The X button  */}
-          <i className="bi bi-x-lg statue-peer-x"></i>
-        </div>
-        
       </div>
 
       {/* The adding connection section  */}

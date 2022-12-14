@@ -26,7 +26,10 @@ const ProfileStatuePeer = ({ peerImg, peerName, peerLink, onRemovePeer }) => {
     {/* Name  */}
       <div className="statue-peer-name-wrapper">
         
-      <a href="" className="statue-peer-name">
+        <a
+          target="blank"
+          href={peerLink}
+          className="statue-peer-name">
         {peerName}
         </a>
         
@@ -40,7 +43,7 @@ const ProfileStatuePeer = ({ peerImg, peerName, peerLink, onRemovePeer }) => {
         }}
       > 
       </i>
-      
+
     </div>
   );
 };

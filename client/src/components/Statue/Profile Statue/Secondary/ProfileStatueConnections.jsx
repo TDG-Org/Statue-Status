@@ -27,6 +27,12 @@ const ProfileStatueConnections = () => {
     }, 50);
   } 
 
+  // Function to check passed in URLs are valid
+  function checkInputURL(url) {
+    let regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?(\?([\w\.-]*)=([\w\.-]*))?(#([\w\.-]*))?$/;
+    return regex.test(url);
+  };
+
   function updateStatueConnections() {
 
   // get the input values 
@@ -45,6 +51,33 @@ const ProfileStatueConnections = () => {
       }, 1150);
       return;
     }
+
+    const checkInputURLValue = checkInputURL(peerLinkValue);
+
+    // Check if the URL is valid 
+    if (!checkInputURLValue) {
+      // Send Swal message 
+      swal({
+        text: "URL Invalid, please check the link",
+        button: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1150);
+      return;
+    }
+
+    // updateStatueConnectionsOfficial();
+    // handleToggleStatueConnections(); 
+  }
+
+  function updateStatueConnectionsOfficial() {
+    let newStatuePeerObj = {
+      peerImg: connectionsImage,
+      peerName: statueConnectionsCurrent.peerName,
+      peerLink: statueConnectionsCurrent.peerLink
+    };
+    setEditStatueConnections([...editStatueConnections, setEditStatueConnections]);
   }
 
   // Function that always listens for input changes 

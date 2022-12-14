@@ -50,6 +50,8 @@ const ProfileStatueConnections = () => {
   function displayStatueConnections() {
     document.querySelector(".peer-name-input").value = "";
     document.querySelector(".peer-link-input").value = "";
+    document.querySelector(".peer-pic-display").src = Male;
+    setConnectionsImage(Male);
   }
 
   // Function to check passed in URLs are valid
@@ -102,10 +104,6 @@ const ProfileStatueConnections = () => {
     };
     setEditStatueConnections([...editStatueConnections, newStatuePeerObj]);
     displayStatueConnections();
-
-    // setTimeout(() => {
-    //   URL.revokeObjectURL();
-    // }, 150);
   }
 
   // Function that always listens for input changes 

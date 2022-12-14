@@ -13,6 +13,19 @@ import { Pancake, Brilliance, Bravery, NatePfp, Male } from "../../../../assets/
 
 const ProfileStatueConnections = () => {
 
+  // Images 
+  const [connectionsImage, setConnectionsImage] = useState(Male);
+  const inputConnectionsAvatarRef = useRef();
+  const connectionsImgRef = useRef();
+  const handleConnectionsImageChange = (event) => {
+    setConnectionsImage(event.target.files[0]); 
+    console.log(typeof event.target.files[0]);
+    connectionsImgRef.current.src = URL.createObjectURL(event.target.files[0]);
+  };
+  const handleConnectionsAvatarInputClick = () => {
+    inputConnectionsAvatarRef.current.click();
+  };
+
   // Add Connection state
   const statueConnectionsRef = useRef(null);
 
@@ -90,9 +103,9 @@ const ProfileStatueConnections = () => {
     setEditStatueConnections([...editStatueConnections, newStatuePeerObj]);
     displayStatueConnections();
 
-    setTimeout(() => {
-      URL.revokeObjectURL();
-    }, 150);
+    // setTimeout(() => {
+    //   URL.revokeObjectURL();
+    // }, 150);
   }
 
   // Function that always listens for input changes 
@@ -122,18 +135,6 @@ const ProfileStatueConnections = () => {
         break;
     }
   }
-  
-  // Images 
-  const [connectionsImage, setConnectionsImage] = useState(Male);
-  const inputConnectionsAvatarRef = useRef();
-  const connectionsImgRef = useRef();
-  const handleConnectionsImageChange = (event) => {
-    setConnectionsImage(event.target.files[0]);
-    connectionsImgRef.current.src = URL.createObjectURL(event.target.files[0]);
-  };
-  const handleConnectionsAvatarInputClick = () => {
-    inputConnectionsAvatarRef.current.click();
-  };
 
   // On Render, this tracks the social links 
   useEffect(() => {

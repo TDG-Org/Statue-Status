@@ -19,23 +19,24 @@ const DiscoverPage = () => {
 
         {/* Discovering Search Section  */}
         <div className="discover-search-sect pallet">
-          <h4>Explore</h4>
+          <div className="container">
+            <h4>Explore</h4>
 
-          {/* Search Tool  */}
-          <div className="discover-search-tool">
-          <input type="text" className="search-bar" placeholder="John Doe" />
-            <button className="search-bar-btn"><i className="bi-search"></i></button>
-          </div>
-
-          {/* Search Results  */}
-          <div className="discover-search-results">
-            <div className="discover-result">
-              <p>Lorem ipsum dolor sit amet.</p>
+            {/* Search Tool  */}
+            <div className="discover-search-tool">
+            <input type="text" className="search-bar" placeholder="John Doe" />
+              <button className="search-bar-btn"><i className="bi-search"></i></button>
             </div>
+
+            {/* Search Results  */}
+            <div className="discover-search-results">
+              <div className="discover-result">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+
+            <img src={Search} alt="search" className="search-svg" />
           </div>
-
-          <img src={Search} alt="search" className="search-svg" />
-
         </div>
 
         {/* User's Friends  */}

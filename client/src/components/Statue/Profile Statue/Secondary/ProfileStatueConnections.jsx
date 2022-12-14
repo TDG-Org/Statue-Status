@@ -26,8 +26,38 @@ const ProfileStatueConnections = () => {
       statueConnectionsRef.current.focus();
     }, 50);
   } 
-  
 
+  // Function that always listens for input changes 
+  function handleStatueConnectionsInputChange(e) {
+    // Get name of Element and the user input 
+    const elName = e.target.name;
+    let elValue = e.target.value;
+    // check which key value that matches to update 
+    // console.log(elName, elValue); 
+    switch (elName) {
+      case "peerName":
+        let peerName = elValue;
+        setStatueConnectionsCurrent(current => {
+          return {
+            ...current,
+            peerName,
+          };
+        });
+        break;
+      case "peerLink":
+        let peerLink = elValue;
+        setStatueConnectionsCurrent(current => {
+          return {
+            ...current,
+            peerLink,
+          };
+        });
+        break;
+    }
+
+    console.log(statueConnectionsCurrent);
+  }
+  
   // Images 
   const [connectionsImage, setConnectionsImage] = useState(Male);
   const inputConnectionsAvatarRef = useRef();
@@ -141,6 +171,8 @@ const ProfileStatueConnections = () => {
         <div className="peer-name-sect">
           <p>Person&apos;s Name:</p>
           <input
+            name="peerName"
+            onChange={handleStatueConnectionsInputChange}
             required
             type="text"
             placeholder="John Doe"
@@ -152,6 +184,8 @@ const ProfileStatueConnections = () => {
         <div className="peer-link-sect">
           <p>Person&apos;s Social Link (optional):</p>
           <input
+            name="peerLink"
+             onChange={handleStatueConnectionsInputChange}
             type="text"
             placeholder="https://..."
             className="peer-link-input"

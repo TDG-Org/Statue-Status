@@ -27,13 +27,32 @@ const ProfileStatueConnections = () => {
     }, 50);
   } 
 
+  function updateStatueConnections() {
+
+  // get the input values 
+  let peerNameValue = document.querySelector(".peer-name-input").value;
+  let peerLinkValue = document.querySelector(".peer-link-input").value;
+
+  // check if the input values are empty 
+    if (peerNameValue == "" || peerLinkValue == "") {
+      // Send Swal message 
+      swal({
+        text: "Please fill in all input fields",
+        button: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1150);
+      return;
+    }
+  }
+
   // Function that always listens for input changes 
   function handleStatueConnectionsInputChange(e) {
     // Get name of Element and the user input 
     const elName = e.target.name;
     let elValue = e.target.value;
     // check which key value that matches to update 
-    // console.log(elName, elValue); 
     switch (elName) {
       case "peerName":
         let peerName = elValue;
@@ -54,8 +73,6 @@ const ProfileStatueConnections = () => {
         });
         break;
     }
-
-    console.log(statueConnectionsCurrent);
   }
   
   // Images 
@@ -196,6 +213,7 @@ const ProfileStatueConnections = () => {
         <div className="peer-btns">
           {/* add  */}
           <button
+            onClick={updateStatueConnections}
             className="add-peer-btn">
             Add
           </button>

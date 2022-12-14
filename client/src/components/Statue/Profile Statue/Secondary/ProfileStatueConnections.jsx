@@ -113,7 +113,7 @@ const ProfileStatueConnections = () => {
       </div>
 
       {/* The adding connection section  */}
-      <div className="statue-add-connection-section">
+      <div className={`statue-add-connection-section ${editStatueConnectionsActive ? "" : "hide"}`}>
         {/* peer's picture  */}
         <div className="peer-pic-sect">
           <p>Person&apos;s Image:</p>
@@ -174,9 +174,12 @@ const ProfileStatueConnections = () => {
       </div>
 
       {/* The add connections button  */}
-      <div className="statue-add-peer-button-wrapper">
+      <div
+        className={`statue-add-peer-button-wrapper ${editStatueConnectionsActive ? "hide" : ""}`}
+        onClick={handleToggleStatueConnections}  
+      >
         <button className="statue-add-peer-btn">
-          Add Connections
+          Add Connections<i className="bi bi-plus-lg"></i>
         </button>
       </div>
 

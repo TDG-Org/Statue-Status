@@ -15,6 +15,13 @@ const ProfileStatuePeer = ({ peerImg, peerName, peerLink, onRemovePeer }) => {
     peerLink: PropTypes.string.isRequired,
     onRemovePeer: PropTypes.func.isRequired,
   };
+
+  // Function that checks if the image is a object to display correctly 
+  function convertImgToString(img) {
+    if (typeof img !== "string") {
+      return URL.createObjectURL(img);
+    } else return img;
+  }
   
   return (
     <div className="statue-peer">
@@ -22,7 +29,11 @@ const ProfileStatuePeer = ({ peerImg, peerName, peerLink, onRemovePeer }) => {
     {/* Image  */}
       <div className="statue-peer-img-wrapper">
         
-        <img src={peerImg} alt={`${peerName}`} title={`${peerName}`} />
+        <img
+          alt={`${peerName}`}
+          title={`${peerName}`}
+          src={convertImgToString(peerImg)}
+        />
         
       </div>
       

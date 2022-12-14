@@ -13,19 +13,25 @@ const ProfileStatueConnections = () => {
   // Check if Editing is active
   const [editStatueConnectionsActive, setEditStatueConnectionsActive] = useState(false);
 
-  // Official Social Link 
-  const [editStatueConnections, setEditStatueConnections] = useState(null);
+  // Official Connections 
+  const [editStatueConnections, setEditStatueConnections] = useState([]);
 
-  // Current Social link input 
+  // Current Connections input 
   const [statueConnectionsCurrent, setStatueConnectionsCurrent] = useState(editStatueConnections);
 
-  // Toggle function to activate Statue Social Link edit
+  // Toggle function to activate Statue Connections edit
   function handleToggleStatueConnections(e) {
     setEditStatueConnectionsActive(!editStatueConnectionsActive);
     setTimeout(() => {
       statueConnectionsRef.current.focus();
     }, 50);
   } 
+
+  // update the display / remove the input values 
+  function displayStatueConnections() {
+    document.querySelector(".peer-name-input").value = "";
+    document.querySelector(".peer-link-input").value = "";
+  }
 
   // Function to check passed in URLs are valid
   function checkInputURL(url) {
@@ -67,8 +73,8 @@ const ProfileStatueConnections = () => {
       return;
     }
 
-    // updateStatueConnectionsOfficial();
-    // handleToggleStatueConnections(); 
+    updateStatueConnectionsOfficial(); 
+    handleToggleStatueConnections(); 
   }
 
   function updateStatueConnectionsOfficial() {
@@ -77,7 +83,8 @@ const ProfileStatueConnections = () => {
       peerName: statueConnectionsCurrent.peerName,
       peerLink: statueConnectionsCurrent.peerLink
     };
-    setEditStatueConnections([...editStatueConnections, setEditStatueConnections]);
+    setEditStatueConnections([...editStatueConnections, newStatuePeerObj]);
+    displayStatueConnections();
   }
 
   // Function that always listens for input changes 

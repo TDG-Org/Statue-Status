@@ -7,7 +7,10 @@ const ProfileStatuePeer = ({ peerImg, peerName, peerLink, onRemovePeer }) => {
 
   // Validate Component's Props 
   ProfileStatuePeer.propTypes = {
-    peerImg: PropTypes.string.isRequired,
+    peerImg: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object
+    ]),
     peerName: PropTypes.string.isRequired,
     peerLink: PropTypes.string.isRequired,
     onRemovePeer: PropTypes.func.isRequired,
@@ -19,7 +22,7 @@ const ProfileStatuePeer = ({ peerImg, peerName, peerLink, onRemovePeer }) => {
     {/* Image  */}
       <div className="statue-peer-img-wrapper">
         
-        <img src={peerImg} alt="" />
+        <img src={peerImg} alt={`${peerName}`} title={`${peerName}`} />
         
       </div>
       

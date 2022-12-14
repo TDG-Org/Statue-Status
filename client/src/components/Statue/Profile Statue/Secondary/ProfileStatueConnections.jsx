@@ -89,6 +89,10 @@ const ProfileStatueConnections = () => {
     };
     setEditStatueConnections([...editStatueConnections, newStatuePeerObj]);
     displayStatueConnections();
+
+    setTimeout(() => {
+      URL.revokeObjectURL();
+    }, 150);
   }
 
   // Function that always listens for input changes 

@@ -134,20 +134,34 @@ const ProfileStatueConnections = () => {
     }
   }
 
-  // On Render, this tracks the social links 
-  useEffect(() => {
-    console.log(editStatueConnections);
-  }, [editStatueConnections]);
-
   // Function to remove an element from the editStatueSocialLink state variable
   function handleRemovePeer(name) {
     // Update the currentSocialLinks state variable to exclude the element that was removed
     setEditStatueConnections(editStatueConnections.filter(item => item.peerName !== name));
-};
-  
+  };
+
+  // Limit of Connections 
+  const [limitConnectionsReached, setLimitConnectionsReached] = useState(false);
+
+  // Function to check Connections limit 
+  function checkConnectionsLimit() {
+    if (editStatueConnections.length <= 9) {
+      setLimitConnectionsReached(false);
+    } else {
+      setLimitConnectionsReached(true);
+    }
+  }
+
+  // On Render, this tracks the social links 
+  useEffect(() => {
+    checkConnectionsLimit();
+    console.log(editStatueConnections);
+  }, [editStatueConnections]);
+
   return (
     <div className="secondary-sect-connections">
-      <h4>Connections</h4>
+      <h4>Connections</h4> 
+      <p className="connections-sub-title">(max 10)</p>
 
       <div className="statue-peer-wrapper">
       {/* loop to display each peer  */}
@@ -238,7 +252,7 @@ const ProfileStatueConnections = () => {
 
       {/* The add connections button  */}
       <div
-        className={`statue-add-peer-button-wrapper ${editStatueConnectionsActive ? "hide" : ""}`}
+        className={`statue-add-peer-button-wrapper ${editStatueConnectionsActive ? "hide" : "" || limitConnectionsReached ? "hide" : ""}`}
         onClick={handleToggleStatueConnections}  
       >
         <button className="statue-add-peer-btn">

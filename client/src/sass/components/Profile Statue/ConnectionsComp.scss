@@ -6,6 +6,12 @@
 .statue-sect {
   .statue {
     .secondary-sect-connections {
+      .connections-sub-title {
+        font-size: .889rem;
+        text-align: center;
+        margin: .4rem auto;
+        color: $mid-light-clr;
+      }
       .statue-peer-wrapper {
         display: flex;
         padding: .5rem;

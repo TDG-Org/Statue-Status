@@ -12,6 +12,9 @@
         margin: .4rem auto;
         color: $mid-light-clr;
       }
+      .max-limit-reached {
+        color: $red-clr;
+      }
       .statue-peer-wrapper {
         display: flex;
         padding: .5rem;
@@ -170,20 +173,43 @@
 
       // Add New Connections Button 
       .statue-add-peer-button-wrapper {
-        gap: 1rem;
+        gap: 0rem;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         .statue-add-peer-btn {
           gap: .2rem;
           width: 78%;
           display: flex;
           color: $light-clr;
-          margin: .5rem auto;
+          margin: .25rem auto;
           max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
           padding: .5rem 1rem;
+          justify-content: center;
+          background: $mid-dark-clr;
+          transition: all 250ms ease-in;
+          border: 1px solid $low-dark-clr;
+          &:hover {
+            background: $low-dark-clr;
+            border: 1px solid $accent-clr;
+          }
+        }
+
+        // Show more connections 
+        .show-more-connections, 
+        .show-less-connections {
+          gap: .2rem;
+          width: 78%;
+          display: flex;
+          color: $light-clr;
+          margin: .25rem auto;
+          max-height: 66.5px;
+          text-align: center;
+          border-radius: 8px;
+          padding: .5rem 1rem;
+          align-items: center;
           justify-content: center;
           background: $mid-dark-clr;
           transition: all 250ms ease-in;

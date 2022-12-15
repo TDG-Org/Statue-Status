@@ -40,10 +40,14 @@ const ProfileStatueConnections = () => {
 
   // Toggle function to activate Statue Connections edit
   function handleToggleStatueConnections(e) {
+    if (e?.target?.name === "showMoreBtn" || e?.target?.name === "showLessBtn") {
+      return;
+    }
     setEditStatueConnectionsActive(!editStatueConnectionsActive);
     setTimeout(() => {
       statueConnectionsRef.current.focus();
     }, 50);
+    loadMoreConnections();
   } 
 
   // update the display / remove the input values 
@@ -198,11 +202,12 @@ const ProfileStatueConnections = () => {
   return (
     <div className="secondary-sect-connections">
       <h4>Connections</h4> 
-      <p className="connections-sub-title">(max 10)</p>
+      <p className="connections-sub-title max-limit-reached">(max 10)</p>
+      {/* <p className="max-limit-reached">Reached!</p>  */}
 
       <div className="statue-peer-wrapper">
       {/* loop to display each peer  */}
-        {editStatueConnections.map((item, index) => {
+        {connectionsSliced.map((item, index) => {
           return (
             <ProfileStatuePeer
               key={index}
@@ -294,6 +299,24 @@ const ProfileStatueConnections = () => {
       >
         <button className="statue-add-peer-btn">
           Add Connections<i className="bi bi-plus-lg"></i>
+        </button>
+
+        {/* The More Socials button  */}
+        <button
+          name="showMoreBtn"
+          onClick={loadMoreConnections}
+          className={`show-more-connections ${hideMoreConnectionsBtn ? "hide" : ""}`}
+        >
+         <i className="bi bi-chevron-down"></i>
+        </button>
+
+        {/* The less Socials button  */}
+        <button
+          name="showLessBtn"
+          onClick={loadLessConnections}
+          className={`show-less-connections ${hideMoreConnectionsBtn ? "" : "hide"}`}
+        >
+         <i className="bi bi-chevron-compact-up"></i>
         </button>
       </div>
 

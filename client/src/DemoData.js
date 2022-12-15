@@ -33,11 +33,6 @@ const natesConnections = [
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
-    peerImg: Planet,
-    peerName: "Marry Jone",
-    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
-  },
-  {
     peerImg: Logo,
     peerName: "Tony Q",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
@@ -50,11 +45,6 @@ const natesConnections = [
   {
     peerImg: Male,
     peerName: "Cesar I",
-    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
-  },
-  {
-    peerImg: Brilliance,
-    peerName: "Jeb Ronnie",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
 ];

@@ -144,6 +144,12 @@ const ProfileStatueAccessory = () => {
     }
   }
 
+  const [otherRelationshipValue, setOtherRelationshipValue] = useState("");
+
+  function handleOtherRelationshipValueChange(event) {
+    setOtherRelationshipValue(event.target.value);
+  }
+
   return (
     <div className="bottom-editable-sect">
     <p className="statue-sect-label">Accessory</p>
@@ -213,8 +219,9 @@ const ProfileStatueAccessory = () => {
         
       {/* Relationship  */}
       <div className="accessories-relationship">
-        <i className="bi bi-heart-fill"></i>
-        <select
+          <i className="bi bi-heart-fill"></i>
+          <div className="accessories-relationship-content">
+          <select
           name="relationship"
           defaultValue="Single"
           className="relationship-input"
@@ -227,6 +234,17 @@ const ProfileStatueAccessory = () => {
           <option value="married">Married</option>
           <option value="other">Other</option>
         </select>
+          {accessoriesValuesCurrent?.relationship === "other" && editStatueAccessoryActive == true && (
+            <input
+              className="relationship-input-other"
+              type="text"
+              placeholder="Enter relationship status"
+              value={otherRelationshipValue}
+                onChange={handleOtherRelationshipValueChange}
+                disabled={editStatueAccessoryActive ? false : true} 
+            />
+          )}
+          </div>
       </div>
 
         <div className={`bottom-editable-sect-content-btns ${editStatueAccessoryActive ? "" : "hide"}`}>

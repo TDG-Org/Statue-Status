@@ -161,20 +161,31 @@
         flex-direction: column;
 
         // Icons Colors 
+        .bi {
+          transition: all 250ms ease;
+        }
         .besc-blue {
           color: $prime-clr;
+
         }
         .besc-purple {
           color: rgb(231, 122, 255);
+          transition: all 250ms ease 215ms;
+
         }
         .besc-green {
           color: $second-clr;
+          transition: all 250ms ease 378.5ms;
+
         }
         .besc-orange {
           color: rgb(255, 176, 96);
+          transition: all 250ms ease 620ms;
+
         }
         .besc-red {
           color: $red-clr;
+          transition: all 250ms ease 700ms;
         }
 
         // Accessories

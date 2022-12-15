@@ -60,6 +60,7 @@ const ProfileStatueConnections = () => {
     return regex.test(url);
   };
 
+  // Function that checks everything before updating state 
   function updateStatueConnections() {
     if (!limitConnectionsReached) {
       // get the input values 
@@ -95,6 +96,7 @@ const ProfileStatueConnections = () => {
     }
   }
 
+  // Function that finally updates the state 
   function updateStatueConnectionsOfficial() {
     let newStatuePeerObj = {
       peerImg: connectionsImage,

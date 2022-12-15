@@ -83,6 +83,16 @@ const ProfileStatueAccessory = () => {
             company,
           };
         });
+        break;
+        case "relationship":
+          let relationship = elValue;
+          setAccessoriesValuesCurrent(current => {
+            return {
+              ...current,
+              relationship,
+            };
+          });
+
     }
   }
 
@@ -96,6 +106,7 @@ const ProfileStatueAccessory = () => {
     const headlineEl = document.querySelector(".headline-input");
     const locationEl = document.querySelector(".location-input");
     const companyEl = document.querySelector(".company-input");
+    const relationshipEl = document.querySelector(".relationship-input");
     
     // Update headline 
     if (accessoriesValues?.headline === undefined) {
@@ -111,9 +122,15 @@ const ProfileStatueAccessory = () => {
     }
     // Update company 
     if (accessoriesValues?.company === undefined) {
-      locationEl.value = "";
+      companyEl.value = "";
     } else {
       companyEl.value = accessoriesValues?.company;
+    }
+    // Relationship company 
+    if (accessoriesValues?.relationship === undefined) {
+      relationshipEl.value = "";
+    } else {
+      relationshipEl.value = accessoriesValues?.relationship;
     }
     // Update bday 
     if (moment(finalSelectedDate).format("MMM D, YYYY") === "Invalid date") {
@@ -197,18 +214,19 @@ const ProfileStatueAccessory = () => {
       {/* Relationship  */}
       <div className="accessories-relationship">
         <i className="bi bi-heart-fill"></i>
-          <select
-            name="relationship"
-            className="relationship-input"
-            onChange={handleAccessoriesInputChange}
-            defaultValue={accessoriesValues?.relationship}
-            disabled={editStatueAccessoryActive ? false : true}
-          >
-            <option value="single">Single</option>
-            <option value="taken">Taken</option>
-            <option value="married">Married</option>
-            <option value="other">Other</option>
-          </select>
+        <select
+          name="relationship"
+          defaultValue="Single"
+          className="relationship-input"
+          onChange={handleAccessoriesInputChange}
+          value={accessoriesValues?.relationship} 
+          disabled={editStatueAccessoryActive ? false : true} 
+        >
+          <option value="single">Single</option>
+          <option value="taken">Taken</option>
+          <option value="married">Married</option>
+          <option value="other">Other</option>
+        </select>
       </div>
 
         <div className={`bottom-editable-sect-content-btns ${editStatueAccessoryActive ? "" : "hide"}`}>

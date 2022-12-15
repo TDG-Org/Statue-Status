@@ -95,6 +95,9 @@
             background-color: $low-dark-clr;
             border: 1px solid $mid-light-clr;
           }
+          &:disabled {
+            cursor: not-allowed;
+          }
         }
         .statue-name-edit {
           width: 100%;
@@ -123,6 +126,9 @@
           &:focus {
             border: 1px solid $mid-light-clr;
             background-color: $low-dark-clr;
+          }
+          &:disabled {
+            cursor: not-allowed;
           }
         }
         .statue-about-edit {
@@ -204,6 +210,9 @@
           &:focus {
             color: $light-clr;
             border: 1px solid $mid-light-clr;
+          }
+          &:disabled {
+            cursor: not-allowed;
           }
         }
 

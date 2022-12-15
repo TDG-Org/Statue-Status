@@ -19,7 +19,7 @@ const ProfileStatueConnections = () => {
   const connectionsImgRef = useRef();
   const handleConnectionsImageChange = (event) => {
     setConnectionsImage(event.target.files[0]); 
-    console.log(typeof event.target.files[0]);
+    // console.log(typeof event.target.files[0]); 
     connectionsImgRef.current.src = URL.createObjectURL(event.target.files[0]);
   };
   const handleConnectionsAvatarInputClick = () => {
@@ -160,7 +160,7 @@ const ProfileStatueConnections = () => {
   // On Render, this tracks the social links 
   useEffect(() => {
     checkConnectionsLimit();
-    console.log(editStatueConnections);
+    // console.log(editStatueConnections); 
   }, [editStatueConnections]);
 
   // Slice / Show More button

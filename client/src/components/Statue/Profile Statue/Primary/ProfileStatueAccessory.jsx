@@ -9,6 +9,7 @@ import moment from "moment";
 
 // Demo Data 
 import { NateData } from "../../../../DemoData";
+import swal from "sweetalert";
 
 const ProfileStatueAccessory = () => {
 
@@ -42,10 +43,35 @@ const ProfileStatueAccessory = () => {
     }, 50);
   } 
 
+  function handleRelationShipCheckEmptyValues() {
+    console.log(document.querySelector(".relationship-input")?.value);
+    if (document.querySelector(".relationship-input")?.value == "other" &&
+      document.querySelector(".relationship-input-other")?.value == "") {
+      swal({
+        text: "The 'Other' input can't be empty",
+        button: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1200);
+      return false;
+    } else return true;
+  }
+
+  function CompleteAccessories() {
+    let isOtherValGood = handleRelationShipCheckEmptyValues();
+    if (isOtherValGood) {
+      handleToggleStatueAccessory();
+      updateAccessory();
+    } else return;
+  }
+
   // Check which elements wants update 
   function updateAccessory(e) {
+
     setFinalSelectedDate(selectedDate);
     setAccessoriesValues(accessoriesValuesCurrent);
+    console.log(accessoriesValues);
   }
 
     // Function that always listens for input changes 
@@ -83,11 +109,35 @@ const ProfileStatueAccessory = () => {
             company,
           };
         });
+        break;
+      case "relationship":
+        let relationship = elValue;
+        if (relationship === "other") {
+          setRelationshipOtherActive(true);
+      } else  setRelationshipOtherActive(false);
+          setAccessoriesValuesCurrent(current => {
+            return {
+              ...current,
+              relationship,
+            };
+          });
+          break;
+      case "relationshipOther":
+        let relationshipOther = elValue;
+          setAccessoriesValuesCurrent(current => {
+            return {
+              ...current,
+              relationship: relationshipOther,
+            };
+          });
+        
+
     }
   }
 
   // Update the display 
   function displayStatueAccessory() {
+    setRelationshipOtherActive(false);
 
     const theDatePicker = document.getElementById("theDatePicker");
     theDatePicker.value = moment(finalSelectedDate).format("MMM D, YYYY");
@@ -96,6 +146,7 @@ const ProfileStatueAccessory = () => {
     const headlineEl = document.querySelector(".headline-input");
     const locationEl = document.querySelector(".location-input");
     const companyEl = document.querySelector(".company-input");
+    const relationshipEl = document.querySelector(".relationship-input");
     
     // Update headline 
     if (accessoriesValues?.headline === undefined) {
@@ -111,9 +162,15 @@ const ProfileStatueAccessory = () => {
     }
     // Update company 
     if (accessoriesValues?.company === undefined) {
-      locationEl.value = "";
+      companyEl.value = "";
     } else {
       companyEl.value = accessoriesValues?.company;
+    }
+    // Relationship company 
+    if (accessoriesValues?.relationship === undefined) {
+      relationshipEl.value = "";
+    } else {
+      relationshipEl.value = accessoriesValues?.relationship;
     }
     // Update bday 
     if (moment(finalSelectedDate).format("MMM D, YYYY") === "Invalid date") {
@@ -125,6 +182,31 @@ const ProfileStatueAccessory = () => {
         theDatePicker.value = moment(finalSelectedDate).format("MMM D, YYYY");
       }, 100);
     }
+  }
+
+  const [relationshipOtherActive, setRelationshipOtherActive] = useState(false);
+
+  function returnRightRelationshipValue() {
+
+    if (accessoriesValues?.relationship == null) {
+      return;
+    }
+    if (accessoriesValues?.relationship != "single" &&
+      accessoriesValues?.relationship != "taken" && 
+      accessoriesValues?.relationship != "married" && 
+      accessoriesValues?.relationship != " ") {
+      return (<option defaultChecked>{accessoriesValues?.relationship}</option>);
+      }
+  }
+
+  function returnRightRelationshipValueForDisplayingPlaceholder() {
+    if (accessoriesValues?.relationship == "single" ||
+      accessoriesValues?.relationship == "taken" || 
+      accessoriesValues?.relationship == "married" ||
+      accessoriesValues?.relationship == "other" ||
+      accessoriesValues?.relationship == " ") {
+        return "";
+      } else return accessoriesValues?.relationship;
   }
 
   return (
@@ -151,7 +233,7 @@ const ProfileStatueAccessory = () => {
         
       {/* Birthday  */}
       <div className="accessories-birthday">
-        <i className="bi bi-balloon-heart-fill"></i>
+        <i className="bi bi-calendar-event"></i>
         <DatePicker
           id="theDatePicker"
           selected={selectedDate} 
@@ -193,14 +275,45 @@ const ProfileStatueAccessory = () => {
             disabled={editStatueAccessoryActive ? false : true}
           />
       </div>
+        
+      {/* Relationship  */}
+      <div className="accessories-relationship">
+          <i className="bi bi-heart-fill"></i>
+          <div className="accessories-relationship-content">
+          <select
+          name="relationship"
+          className="relationship-input"
+          onChange={handleAccessoriesInputChange}
+          defaultValue={accessoriesValues?.relationship}
+          disabled={editStatueAccessoryActive ? false : true} 
+        >
+          <option value="single">Single</option>
+          <option value="taken">Taken</option>
+          <option value="married">Married</option>
+          <option value="other">Other</option>
+          {returnRightRelationshipValue()}
+        </select>
+          {relationshipOtherActive && editStatueAccessoryActive == true && (
+              <input
+                required
+                type="text"
+                name="relationshipOther"
+              className="relationship-input-other"
+              placeholder="Enter relationship status"
+              defaultValue={returnRightRelationshipValueForDisplayingPlaceholder()}
+              onChange={handleAccessoriesInputChange}
+              disabled={editStatueAccessoryActive ? false : true} 
+            />
+          )}
+          </div>
+      </div>
 
         <div className={`bottom-editable-sect-content-btns ${editStatueAccessoryActive ? "" : "hide"}`}>
           {/* Save Button  */}
           <button
             className="save-accessories"
             onClick={() => {
-              updateAccessory();
-              handleToggleStatueAccessory();
+              CompleteAccessories();
             }
             }
           >

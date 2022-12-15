@@ -95,6 +95,9 @@
             background-color: $low-dark-clr;
             border: 1px solid $mid-light-clr;
           }
+          &:disabled {
+            cursor: not-allowed;
+          }
         }
         .statue-name-edit {
           width: 100%;
@@ -123,6 +126,9 @@
           &:focus {
             border: 1px solid $mid-light-clr;
             background-color: $low-dark-clr;
+          }
+          &:disabled {
+            cursor: not-allowed;
           }
         }
         .statue-about-edit {
@@ -173,7 +179,11 @@
         }
 
         // Accessories Sections  
-        .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
+        .accessories-headline,
+        .accessories-birthday, 
+        .accessories-location, 
+        .accessories-company,
+        .accessories-relationship {
           gap: .75rem;
           display: flex;
           flex-wrap: nowrap;
@@ -183,7 +193,44 @@
         }
 
         // The inputs 
-        .headline-input, .the-datepicker, .location-input, .company-input {
+        .headline-input, 
+        .the-datepicker, 
+        .location-input,
+         .company-input,
+         .relationship-input {
+          flex: 1;
+          min-width: 218px;
+          width: 100%;
+          border: none;
+          padding: .35rem 1rem;
+          border-radius: 2.75px;
+          color: $mid-light-clr;
+          outline: none !important;
+          background: $low-dark-clr;
+          border: 1px solid $low-dark-clr;
+          &:focus {
+            color: $light-clr;
+            border: 1px solid $mid-light-clr;
+          }
+          &:disabled {
+            cursor: not-allowed;
+          }
+        }
+
+        .accessories-relationship-content {
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+        }
+
+        .relationship-input option {
+            background-color: $dark-clr;
+            color: $light-clr;
+        }
+
+        .relationship-input-other {
+          flex: 2;
+          min-width: 218px;
           width: 100%;
           border: none;
           padding: .35rem 1rem;

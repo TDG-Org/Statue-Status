@@ -4,57 +4,47 @@ import { Pancake, Bravery, Brilliance, Male, Female, Planet, Logo, NatePfp } fro
 const natesConnections = [
   {
     peerImg: Pancake,
-    peerName: "Naughty Bear",
-    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
+    peerName: "Luke McIlvenny",
+    peerLink: "https://github.com/TDGLU"
   },
   {
     peerImg: Bravery,
-    peerName: "John AAA",
+    peerName: "Frank McIlvenny",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
     peerImg: Brilliance,
-    peerName: "Fred fasdfsdfsd",
+    peerName: "Rose McIlvenny",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
     peerImg: Male,
-    peerName: "The Who Man",
+    peerName: "Cylde McIlvenny",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
     peerImg: Pancake,
-    peerName: "when where",
+    peerName: "Bonnie McIlvenny",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
     peerImg: Female,
-    peerName: "look over there",
-    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
-  },
-  {
-    peerImg: Planet,
-    peerName: "hello Dude",
+    peerName: "John Doe",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
     peerImg: Logo,
-    peerName: "There Mre",
+    peerName: "Tony Q",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
     peerImg: Bravery,
-    peerName: "The A J",
+    peerName: "Gil E",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
   {
-    peerImg: NatePfp,
-    peerName: "Frank G",
-    peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
-  },
-  {
-    peerImg: Brilliance,
-    peerName: "Pual M",
+    peerImg: Male,
+    peerName: "Cesar I",
     peerLink: "https://en.wikipedia.org/wiki/Naughty_Bear"
   },
 ];

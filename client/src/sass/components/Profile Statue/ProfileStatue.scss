@@ -91,6 +91,7 @@
           border: 1px solid $low-dark-clr;
           margin: 1.25rem 0 0rem 0 !important;
           &:focus {
+            outline: none;
             background-color: $low-dark-clr;
             border: 1px solid $mid-light-clr;
           }

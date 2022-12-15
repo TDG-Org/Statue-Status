@@ -202,8 +202,9 @@ const ProfileStatueConnections = () => {
   return (
     <div className="secondary-sect-connections">
       <h4>Connections</h4> 
-      <p className="connections-sub-title max-limit-reached">(max 10)</p>
-      {/* <p className="max-limit-reached">Reached!</p>  */}
+      <p
+        className={`connections-sub-title ${limitConnectionsReached ? "max-limit-reached" : ""}`}
+      >(max 10)</p>
 
       <div className="statue-peer-wrapper">
       {/* loop to display each peer  */}

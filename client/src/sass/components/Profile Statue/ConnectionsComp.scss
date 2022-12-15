@@ -7,13 +7,16 @@
   .statue {
     .secondary-sect-connections {
       .connections-sub-title {
+        width: fit-content;
         font-size: .889rem;
         text-align: center;
         margin: .4rem auto;
         color: $mid-light-clr;
+        border-bottom: 1px solid transparent;
       }
       .max-limit-reached {
         color: $red-clr;
+        border-bottom: 1px solid $red-clr !important;
       }
       .statue-peer-wrapper {
         display: flex;

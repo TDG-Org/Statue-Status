@@ -160,6 +160,23 @@
         align-items: center;
         flex-direction: column;
 
+        // Icons Colors 
+        .besc-blue {
+          color: $prime-clr;
+        }
+        .besc-purple {
+          color: rgb(231, 122, 255);
+        }
+        .besc-green {
+          color: $second-clr;
+        }
+        .besc-orange {
+          color: rgb(255, 176, 96);
+        }
+        .besc-red {
+          color: $red-clr;
+        }
+
         // Accessories
 
         // Date Picker 

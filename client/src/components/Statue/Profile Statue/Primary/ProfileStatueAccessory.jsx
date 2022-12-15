@@ -218,7 +218,7 @@ const ProfileStatueAccessory = () => {
         
       {/* Headline  */}
       <div className="accessories-headline">
-        <i className="bi bi-card-heading"></i>
+        <i className="bi bi-card-heading besc-blue"></i>
           <input
             type="text"
             name="headline"
@@ -233,7 +233,7 @@ const ProfileStatueAccessory = () => {
         
       {/* Birthday  */}
       <div className="accessories-birthday">
-        <i className="bi bi-calendar-event"></i>
+        <i className="bi bi-calendar-event besc-purple"></i>
         <DatePicker
           id="theDatePicker"
           selected={selectedDate} 
@@ -250,7 +250,7 @@ const ProfileStatueAccessory = () => {
         
       {/* Location  */}
       <div className="accessories-location">
-        <i className="bi bi-geo-alt"></i>
+        <i className="bi bi-geo-alt besc-green"></i>
           <input
             type="text"
             name="location"
@@ -264,7 +264,7 @@ const ProfileStatueAccessory = () => {
         
       {/* Company  */}
       <div className="accessories-company">
-        <i className="bi bi-building"></i>
+        <i className="bi bi-building besc-orange"></i>
           <input
             type="text"
             name="company"
@@ -278,7 +278,7 @@ const ProfileStatueAccessory = () => {
         
       {/* Relationship  */}
       <div className="accessories-relationship">
-          <i className="bi bi-heart-fill"></i>
+          <i className="bi bi-heart-fill besc-red"></i>
           <div className="accessories-relationship-content">
           <select
           name="relationship"

@@ -9,6 +9,7 @@ import moment from "moment";
 
 // Demo Data 
 import { NateData } from "../../../../DemoData";
+import swal from "sweetalert";
 
 const ProfileStatueAccessory = () => {
 
@@ -42,10 +43,35 @@ const ProfileStatueAccessory = () => {
     }, 50);
   } 
 
+  function handleRelationShipCheckEmptyValues() {
+    console.log(document.querySelector(".relationship-input")?.value);
+    if (document.querySelector(".relationship-input")?.value == "other" &&
+      document.querySelector(".relationship-input-other")?.value == "") {
+      swal({
+        text: "The 'Other' input can't be empty",
+        button: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1200);
+      return false;
+    } else return true;
+  }
+
+  function CompleteAccessories() {
+    let isOtherValGood = handleRelationShipCheckEmptyValues();
+    if (isOtherValGood) {
+      handleToggleStatueAccessory();
+      updateAccessory();
+    } else return;
+  }
+
   // Check which elements wants update 
   function updateAccessory(e) {
+
     setFinalSelectedDate(selectedDate);
     setAccessoriesValues(accessoriesValuesCurrent);
+    console.log(accessoriesValues);
   }
 
     // Function that always listens for input changes 
@@ -84,20 +110,34 @@ const ProfileStatueAccessory = () => {
           };
         });
         break;
-        case "relationship":
-          let relationship = elValue;
+      case "relationship":
+        let relationship = elValue;
+        if (relationship === "other") {
+          setRelationshipOtherActive(true);
+      } else  setRelationshipOtherActive(false);
           setAccessoriesValuesCurrent(current => {
             return {
               ...current,
               relationship,
             };
           });
+          break;
+      case "relationshipOther":
+        let relationshipOther = elValue;
+          setAccessoriesValuesCurrent(current => {
+            return {
+              ...current,
+              relationship: relationshipOther,
+            };
+          });
+        
 
     }
   }
 
   // Update the display 
   function displayStatueAccessory() {
+    setRelationshipOtherActive(false);
 
     const theDatePicker = document.getElementById("theDatePicker");
     theDatePicker.value = moment(finalSelectedDate).format("MMM D, YYYY");
@@ -144,10 +184,29 @@ const ProfileStatueAccessory = () => {
     }
   }
 
-  const [otherRelationshipValue, setOtherRelationshipValue] = useState("");
+  const [relationshipOtherActive, setRelationshipOtherActive] = useState(false);
 
-  function handleOtherRelationshipValueChange(event) {
-    setOtherRelationshipValue(event.target.value);
+  function returnRightRelationshipValue() {
+
+    if (accessoriesValues?.relationship == null) {
+      return;
+    }
+    if (accessoriesValues?.relationship != "single" &&
+      accessoriesValues?.relationship != "taken" && 
+      accessoriesValues?.relationship != "married" && 
+      accessoriesValues?.relationship != " ") {
+      return (<option defaultChecked>{accessoriesValues?.relationship}</option>);
+      }
+  }
+
+  function returnRightRelationshipValueForDisplayingPlaceholder() {
+    if (accessoriesValues?.relationship == "single" ||
+      accessoriesValues?.relationship == "taken" || 
+      accessoriesValues?.relationship == "married" ||
+      accessoriesValues?.relationship == "other" ||
+      accessoriesValues?.relationship == " ") {
+        return "";
+      } else return accessoriesValues?.relationship;
   }
 
   return (
@@ -223,25 +282,27 @@ const ProfileStatueAccessory = () => {
           <div className="accessories-relationship-content">
           <select
           name="relationship"
-          defaultValue="Single"
           className="relationship-input"
           onChange={handleAccessoriesInputChange}
-          value={accessoriesValues?.relationship} 
+          defaultValue={accessoriesValues?.relationship}
           disabled={editStatueAccessoryActive ? false : true} 
         >
           <option value="single">Single</option>
           <option value="taken">Taken</option>
           <option value="married">Married</option>
           <option value="other">Other</option>
+          {returnRightRelationshipValue()}
         </select>
-          {accessoriesValuesCurrent?.relationship === "other" && editStatueAccessoryActive == true && (
-            <input
+          {relationshipOtherActive && editStatueAccessoryActive == true && (
+              <input
+                required
+                type="text"
+                name="relationshipOther"
               className="relationship-input-other"
-              type="text"
               placeholder="Enter relationship status"
-              value={otherRelationshipValue}
-                onChange={handleOtherRelationshipValueChange}
-                disabled={editStatueAccessoryActive ? false : true} 
+              defaultValue={returnRightRelationshipValueForDisplayingPlaceholder()}
+              onChange={handleAccessoriesInputChange}
+              disabled={editStatueAccessoryActive ? false : true} 
             />
           )}
           </div>
@@ -252,8 +313,7 @@ const ProfileStatueAccessory = () => {
           <button
             className="save-accessories"
             onClick={() => {
-              updateAccessory();
-              handleToggleStatueAccessory();
+              CompleteAccessories();
             }
             }
           >

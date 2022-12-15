@@ -173,7 +173,11 @@
         }
 
         // Accessories Sections  
-        .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
+        .accessories-headline,
+        .accessories-birthday, 
+        .accessories-location, 
+        .accessories-company,
+        .accessories-relationship {
           gap: .75rem;
           display: flex;
           flex-wrap: nowrap;
@@ -183,7 +187,12 @@
         }
 
         // The inputs 
-        .headline-input, .the-datepicker, .location-input, .company-input {
+        .headline-input, 
+        .the-datepicker, 
+        .location-input,
+         .company-input,
+         .relationship-input {
+          min-width: 218px;
           width: 100%;
           border: none;
           padding: .35rem 1rem;
@@ -196,6 +205,11 @@
             color: $light-clr;
             border: 1px solid $mid-light-clr;
           }
+        }
+
+        .relationship-input option {
+            background-color: $dark-clr;
+            color: $light-clr;
         }
 
         .bottom-editable-sect-content-btns {

@@ -151,7 +151,7 @@ const ProfileStatueAccessory = () => {
         
       {/* Birthday  */}
       <div className="accessories-birthday">
-        <i className="bi bi-balloon-heart-fill"></i>
+        <i className="bi bi-calendar-event"></i>
         <DatePicker
           id="theDatePicker"
           selected={selectedDate} 
@@ -192,6 +192,23 @@ const ProfileStatueAccessory = () => {
             defaultValue={accessoriesValues?.company}
             disabled={editStatueAccessoryActive ? false : true}
           />
+      </div>
+        
+      {/* Relationship  */}
+      <div className="accessories-relationship">
+        <i className="bi bi-heart-fill"></i>
+          <select
+            name="relationship"
+            className="relationship-input"
+            onChange={handleAccessoriesInputChange}
+            defaultValue={accessoriesValues?.relationship}
+            disabled={editStatueAccessoryActive ? false : true}
+          >
+            <option value="single">Single</option>
+            <option value="taken">Taken</option>
+            <option value="married">Married</option>
+            <option value="other">Other</option>
+          </select>
       </div>
 
         <div className={`bottom-editable-sect-content-btns ${editStatueAccessoryActive ? "" : "hide"}`}>

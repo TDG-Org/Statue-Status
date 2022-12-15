@@ -14,18 +14,16 @@ import swal from "sweetalert";
 
 const ProfileStatue = () => {
 
-// Swal Functions 
-function handleDeleteStatue() {
-  swal({
-    text: "deleting...",
-    button: false
-  });
-
-  setTimeout(() => {
-    swal.close();
-
-    deleteStatue();
-  }, 1200);
+  // Swal Functions 
+  function handleDeleteStatue() {
+    swal({
+      text: "deleting...",
+      button: false
+    });
+    setTimeout(() => {
+      swal.close();
+      deleteStatue();
+    }, 1200);
   }
   
   // Delete Statue 
@@ -34,7 +32,6 @@ function handleDeleteStatue() {
       icon: "success",
       button: false
     });
-
     setTimeout(() => {
       swal.close();
     }, 1550);

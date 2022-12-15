@@ -135,9 +135,9 @@ const ProfileStatueConnections = () => {
     }
   }
 
-  // Function to remove an element from the editStatueSocialLink state variable
+  // Function to remove an element from the editStatueConnections state variable
   function handleRemovePeer(name) {
-    // Update the currentSocialLinks state variable to exclude the element that was removed
+    // Update the currentConnectionss state variable to exclude the element that was removed
     setEditStatueConnections(editStatueConnections.filter(item => item.peerName !== name));
   };
 
@@ -158,6 +158,42 @@ const ProfileStatueConnections = () => {
     checkConnectionsLimit();
     console.log(editStatueConnections);
   }, [editStatueConnections]);
+
+  // Slice / Show More button
+
+  // Displaying a number of links state 
+  const [displayedConnectionsCount, setDisplayedConnectionsCount] = useState(5);
+
+  // Hide button if number is above set limit 
+  const [hideMoreConnectionsBtn, setHideMoreConnectionsBtn] = useState(false);
+
+    // Once component is rendered Call the toggleShowMoreConnectionsBtn()
+    useEffect(() => {
+      toggleShowMoreConnectionsBtn();
+    }, [displayedConnectionsCount]);
+    
+    // function to load more Connections Links
+    function loadMoreConnections() {
+      setDisplayedConnectionsCount(displayedConnectionsCount + 5);
+    }
+  
+    // function to load less Connections Links
+    function loadLessConnections() {
+      setDisplayedConnectionsCount(displayedConnectionsCount - (displayedConnectionsCount  - 5));
+  }
+  
+    // Checks if the limit has been reached to hide show more links button 
+    function toggleShowMoreConnectionsBtn() {
+      let totalNumberOfConnections = editStatueConnections.length;
+      if (totalNumberOfConnections <= displayedConnectionsCount) {
+        setHideMoreConnectionsBtn(true);
+      } else {
+        setHideMoreConnectionsBtn(false);
+      }
+    }
+  
+    // The Social Links that are going to show 
+    const connectionsSliced = editStatueConnections.slice(0, displayedConnectionsCount);
 
   return (
     <div className="secondary-sect-connections">

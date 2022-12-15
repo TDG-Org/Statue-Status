@@ -124,8 +124,8 @@
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
           &:focus {
-            border: 1px solid $mid-light-clr;
             background-color: $low-dark-clr;
+            border: 1px solid $mid-light-clr;
           }
           &:disabled {
             cursor: not-allowed;
@@ -218,21 +218,21 @@
         }
 
         .accessories-relationship-content {
+          gap: .5rem;
           display: flex;
           flex-direction: column;
-          gap: .5rem;
         }
 
         .relationship-input option {
+          color: $light-clr;
             background-color: $dark-clr;
-            color: $light-clr;
         }
 
         .relationship-input-other {
           flex: 2;
-          min-width: 218px;
           width: 100%;
           border: none;
+          min-width: 218px;
           padding: .35rem 1rem;
           border-radius: 2.75px;
           color: $mid-light-clr;

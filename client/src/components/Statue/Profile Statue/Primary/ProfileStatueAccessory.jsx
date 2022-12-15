@@ -293,7 +293,9 @@ const ProfileStatueAccessory = () => {
           <option value="other">Other</option>
           {returnRightRelationshipValue()}
         </select>
-          {relationshipOtherActive && editStatueAccessoryActive == true && (
+            {relationshipOtherActive &&
+              editStatueAccessoryActive == true
+              && (
               <input
                 required
                 type="text"

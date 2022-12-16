@@ -124,8 +124,8 @@
           background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
           &:focus {
-            border: 1px solid $mid-light-clr;
             background-color: $low-dark-clr;
+            border: 1px solid $mid-light-clr;
           }
           &:disabled {
             cursor: not-allowed;
@@ -159,6 +159,34 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+
+        // Icons Colors 
+        .bi {
+          transition: all 250ms ease;
+        }
+        .besc-blue {
+          color: $prime-clr;
+
+        }
+        .besc-purple {
+          color: rgb(231, 122, 255);
+          transition: all 250ms ease 215ms;
+
+        }
+        .besc-green {
+          color: $second-clr;
+          transition: all 250ms ease 378.5ms;
+
+        }
+        .besc-orange {
+          color: rgb(255, 176, 96);
+          transition: all 250ms ease 620ms;
+
+        }
+        .besc-red {
+          color: $red-clr;
+          transition: all 250ms ease 700ms;
+        }
 
         // Accessories
 
@@ -218,21 +246,21 @@
         }
 
         .accessories-relationship-content {
+          gap: .5rem;
           display: flex;
           flex-direction: column;
-          gap: .5rem;
         }
 
         .relationship-input option {
+          color: $light-clr;
             background-color: $dark-clr;
-            color: $light-clr;
         }
 
         .relationship-input-other {
           flex: 2;
-          min-width: 218px;
           width: 100%;
           border: none;
+          min-width: 218px;
           padding: .35rem 1rem;
           border-radius: 2.75px;
           color: $mid-light-clr;

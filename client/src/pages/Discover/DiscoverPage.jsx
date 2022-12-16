@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Styles 
 import "./DiscoverPage.scss";
@@ -8,6 +8,22 @@ import { Planet } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
 
 const DiscoverPage = () => {
+
+  const [discoverResults, setDiscoverResults] = useState(0);
+
+  const numOfDiscoverResults = () => {
+    return document.querySelectorAll(".discover-result").length;
+  };
+
+  function setNumOfDiscoverResults() {
+    setDiscoverResults(numOfDiscoverResults());
+  }
+
+  useEffect(() => {
+    setNumOfDiscoverResults();
+    console.log(discoverResults);
+  }, [document.querySelectorAll(".discover-result").length]);
+
   return (
     <div className="DiscoverPage page">
 
@@ -15,8 +31,8 @@ const DiscoverPage = () => {
 
       <hr />
 
+      <h3>Exploration And Connection</h3>
       <div className="discover-content">
-
         {/* Discovering Search Section  */}
         <div className="discover-search-sect pallet">
           <div className="container">
@@ -24,15 +40,64 @@ const DiscoverPage = () => {
 
             {/* Search Tool  */}
             <div className="discover-search-tool">
-            <input type="text" className="search-bar" placeholder="John Doe" />
+               <input type="text" className="search-bar" placeholder="John Doe" />
               <button className="search-bar-btn"><i className="bi-search"></i></button>
             </div>
 
             {/* Search Results  */}
+            <div className="discover-search-results-label">
+              
+            </div>
             <div className="discover-search-results">
+
+              {/* result  */}
               <div className="discover-result">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <div className="discover-result-img-wrapper">
+                  <img src={Planet} alt="" />
+                </div>
+                <div className="discover-result-name">
+                  Christian McIlvenny
+                </div>
+                <a href="" className="discover-result-statue-link">
+                  Christian NathanielMcIlvenny
+                </a>
+                <div className="discover-result-reps">
+                  Reps: <span className="discover-result-rep">1.2k</span>
+                </div>
               </div>
+
+              {/* result  */}
+              <div className="discover-result">
+                <div className="discover-result-img-wrapper">
+                  <img src={Planet} alt="" />
+                </div>
+                <div className="discover-result-name">
+                  Christian McIlvenny
+                </div>
+                <a href="" className="discover-result-statue-link">
+                  Christian NathanielMcIlvenny
+                </a>
+                <div className="discover-result-reps">
+                  Reps: <span className="discover-result-rep">1.2k</span>
+                </div>
+              </div>
+
+              {/* result  */}
+              <div className="discover-result">
+                <div className="discover-result-img-wrapper">
+                  <img src={Planet} alt="" />
+                </div>
+                <div className="discover-result-name">
+                  Christian McIlvenny
+                </div>
+                <a href="" className="discover-result-statue-link">
+                  Christian NathanielMcIlvenny
+                </a>
+                <div className="discover-result-reps">
+                  Reps: <span className="discover-result-rep">1.2k</span>
+                </div>
+              </div>
+
             </div>
 
             <img src={Search} alt="search" className="search-svg" />

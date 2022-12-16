@@ -50,6 +50,38 @@ const DiscoverPage = () => {
                 </div>
               </div>
 
+              {/* result  */}
+              <div className="discover-result">
+                <div className="discover-result-img-wrapper">
+                  <img src={Planet} alt="" />
+                </div>
+                <div className="discover-result-name">
+                  Christian McIlvenny
+                </div>
+                <a href="" className="discover-result-statue-link">
+                  Christian NathanielMcIlvenny
+                </a>
+                <div className="discover-result-reps">
+                  Reps: <span className="discover-result-rep">1.2k</span>
+                </div>
+              </div>
+
+              {/* result  */}
+              <div className="discover-result">
+                <div className="discover-result-img-wrapper">
+                  <img src={Planet} alt="" />
+                </div>
+                <div className="discover-result-name">
+                  Christian McIlvenny
+                </div>
+                <a href="" className="discover-result-statue-link">
+                  Christian NathanielMcIlvenny
+                </a>
+                <div className="discover-result-reps">
+                  Reps: <span className="discover-result-rep">1.2k</span>
+                </div>
+              </div>
+
             </div>
 
             <img src={Search} alt="search" className="search-svg" />

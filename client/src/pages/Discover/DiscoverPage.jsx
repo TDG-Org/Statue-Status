@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 // Styles 
 import "./DiscoverPage.scss";
@@ -8,6 +8,18 @@ import { Planet } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
 
 const DiscoverPage = () => {
+
+  const discoverResultsRef = useRef(null);
+
+  const numOfDiscoverResults = () => {
+      return document.querySelectorAll(".discover-result").length;
+  };
+
+  useEffect(() => {
+    numOfDiscoverResults();
+  }, []);
+
+
   return (
     <div className="DiscoverPage page">
 
@@ -32,7 +44,7 @@ const DiscoverPage = () => {
             <div className="discover-search-results-label">
               
             </div>
-            <div className="discover-search-results">
+            <div ref={discoverResultsRef} className="discover-search-results">
 
               {/* result  */}
               <div className="discover-result">

@@ -9,20 +9,29 @@ import Search from "../../assets/svgs/search.svg";
 
 const DiscoverPage = () => {
 
-  const [discoverResults, setDiscoverResults] = useState(0);
+  const [numDiscoverResults, setNumDiscoverResults] = useState(0);
 
   const numOfDiscoverResults = () => {
     return document.querySelectorAll(".discover-result").length;
   };
-
   function setNumOfDiscoverResults() {
-    setDiscoverResults(numOfDiscoverResults());
+    setNumDiscoverResults(numOfDiscoverResults());
+  }
+
+  function checkResultsAndRemoveSVG() {
+    if (numDiscoverResults > 0) {
+      document.querySelector(".search-svg").classList.add("hide");
+    } else document.querySelector(".search-svg").classList.remove("hide");
   }
 
   useEffect(() => {
     setNumOfDiscoverResults();
-    console.log(discoverResults);
+    console.log(numDiscoverResults);
   }, [document.querySelectorAll(".discover-result").length]);
+
+  useEffect(() => {
+    checkResultsAndRemoveSVG();
+  });
 
   return (
     <div className="DiscoverPage page">
@@ -40,8 +49,16 @@ const DiscoverPage = () => {
 
             {/* Search Tool  */}
             <div className="discover-search-tool">
-               <input type="text" className="search-bar" placeholder="John Doe" />
-              <button className="search-bar-btn"><i className="bi-search"></i></button>
+              <input
+                type="text"
+                className="search-bar"
+                placeholder="John Doe"
+              />
+              <button
+                className="search-bar-btn"
+              >
+                <i className="bi-search"></i>
+              </button>
             </div>
 
             {/* Search Results  */}

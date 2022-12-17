@@ -87,7 +87,7 @@
           font-size: 1.25rem;
           text-align: center;
           border-radius: 8px;
-          background: $mid-dark-clr;
+          background: $low-tp;
           border: 1px solid $low-dark-clr;
           margin: 1.25rem 0 0rem 0 !important;
           &:focus {
@@ -120,8 +120,8 @@
           height: 125px;
           padding: .8rem;
           border-radius: 8px;
+          background: $low-tp;
           color: $mid-light-clr;
-          background: $mid-dark-clr;
           border: 1px solid $low-dark-clr;
           &:focus {
             background-color: $low-dark-clr;
@@ -235,6 +235,7 @@
           color: $mid-light-clr;
           outline: none !important;
           background: $low-dark-clr;
+          transition: all 250ms ease;
           border: 1px solid $low-dark-clr;
           &:focus {
             color: $light-clr;
@@ -242,6 +243,7 @@
           }
           &:disabled {
             cursor: not-allowed;
+            background-color: $low-tp;
           }
         }
 
@@ -439,7 +441,7 @@
             margin: 0 auto;
             color: $light-clr;
             padding: .5rem 1rem;
-            background-color: transparent;
+            background: transparent;
             transition: all 250ms ease-in;
           }
           &:hover {
@@ -579,7 +581,10 @@
         width: 100%;
         gap: 1rem;
 
-        .statue-name, .statue-name-edit, .statue-about, .statue-about-edit {
+        .statue-name,
+         .statue-name-edit, 
+         .statue-about, 
+         .statue-about-edit {
           margin: 0 auto;
           width: 75% !important;
         }
@@ -608,7 +613,10 @@
             }
 
           // Accessories Sections  
-          .accessories-headline, .accessories-birthday, .accessories-location, .accessories-company {
+          .accessories-headline, 
+          .accessories-birthday,
+           .accessories-location, 
+           .accessories-company {
               gap: .5rem;
               margin: 1.25rem .5rem;
             }

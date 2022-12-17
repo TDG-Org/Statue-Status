@@ -111,6 +111,7 @@
             border-radius: 8px;
             margin-bottom: .75rem;
             width: 100% !important;
+            transition: all 250ms ease;
             background-color: $mid-dark-clr;
             border: 1px solid $low-dark-clr;
             &:focus {
@@ -119,6 +120,7 @@
             }
             &:disabled {
               cursor: not-allowed;
+              background-color: $low-tp;
             }
           }
           .edit-bio-btn {

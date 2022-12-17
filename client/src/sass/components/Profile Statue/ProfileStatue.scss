@@ -88,6 +88,7 @@
           text-align: center;
           border-radius: 8px;
           background: $low-tp;
+          transition: all 250ms ease;
           border: 1px solid $low-dark-clr;
           margin: 1.25rem 0 0rem 0 !important;
           &:focus {
@@ -120,14 +121,16 @@
           height: 125px;
           padding: .8rem;
           border-radius: 8px;
-          background: $low-tp;
           color: $mid-light-clr;
+          background: $mid-dark-clr;
+          transition: all 250ms ease;
           border: 1px solid $low-dark-clr;
           &:focus {
             background-color: $low-dark-clr;
             border: 1px solid $mid-light-clr;
           }
           &:disabled {
+            background: $low-tp;
             cursor: not-allowed;
           }
         }

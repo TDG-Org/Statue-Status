@@ -80,12 +80,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 1.75rem;
       .discover-result {
         width: 90%;
         display: flex;
         padding: .5rem 0;
-        margin-top: .75rem;
         flex-wrap: nowrap;
+        margin-top: .75rem;
         text-align: center;
         position: relative;
         border-radius: 8px;

@@ -42,6 +42,15 @@ const User = () => {
 
         {/* Username  */}
         <h3 className="username"><span className="the-at">@</span><a href="#" id="username">Nate</a></h3>
+
+        <div className="user-data">
+          <div className="user-experience">
+            <p>Experience: <span>21894</span></p>
+          </div>
+          <div className="user-gems">
+            <p>Gems: <span>218</span></p>
+          </div>
+        </div>
         
         {/* User bio section  */}
         <p className="user-bio" id="userBio">

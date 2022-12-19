@@ -115,6 +115,27 @@
   }
 }
 
+// User Info 
+.user-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.15rem;
+  padding: .15rem;
+  width: 100%;
+  border-bottom: 1px solid transparent;
+
+  .user-experience p,
+  .user-gems p,
+  span {
+    margin: .15rem auto;
+    color: $mid-light-clr;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $low-dark-clr;
+  }
+}
+
 .user-bio {
   padding: 0rem 1.3rem;
 }

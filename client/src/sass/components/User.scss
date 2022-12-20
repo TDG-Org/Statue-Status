@@ -117,11 +117,11 @@
 
 // User Info 
 .user-data {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.15rem;
-  padding: .15rem;
   width: 100%;
+  display: flex;
+  padding: .15rem;
+  margin-bottom: 1.15rem;
+  flex-direction: column;
   border-bottom: 1px solid transparent;
 
   .user-experience p,

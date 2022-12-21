@@ -11,10 +11,10 @@
 @import "./variables.scss";
 
 // Components 
-@import "./components/Aside.scss";
-@import "./components/Footer.scss";
 @import "./components/Nav.scss";
 @import "./components/User.scss";
+@import "./components/Aside.scss";
+@import "./components/Footer.scss";
 
 // Swal 
 @import "./utils/swal.scss";
@@ -161,6 +161,8 @@ p, span, em, li, a, i, div {
   }
 
 }
+
+// Smaller Phones 
 
 @media screen and (max-width: 620px) {
 

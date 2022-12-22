@@ -25,7 +25,7 @@ const AboutPage = () => {
 
           <div className="about-sect-content about-intro-sect-content">
             <p>
-            We compile data to show who the richest, most powerful, and most popular people in the world are right now. On the <Link to="/discover" className="about-link">Discover</Link> page, users may also view specific notable people or other users who have accounts here.
+            Welcome to Statue Status, the ultimate destination for keeping track of the world&apos;s most influential and successful individuals. With dynamic charts, a discover page, and customizable <a href="#statueSect" className="about-link">Statue</a> page, we offer a variety of features for exploring and showcasing your online presence. Our platform also includes a gamification page where you can earn rewards as you engage with the app. Whether you&apos;re looking to discover new people or create your own professional online presence, Statue Status has something for everyone.
             </p>
             <img src={Ranking} alt="ranking image" />
             </div>
@@ -35,7 +35,7 @@ const AboutPage = () => {
         <div className="about-sect" id="getStartedSect">
           <h2>Lets Get Started</h2>
           <div className="about-sect-content">
-            <p>You can begin browsing in the <Link to="/discover" className="about-link">Discover</Link> section or you can go to your profile and begin personalizing your look! Additionally, you can make your own <a href="#statuesSect" className="about-link">Statue</a> from there. But what is it exactly, and how can I use it?</p>
+            <p>To get started on Statue Status, create an account and set up your profile by uploading your avatar and filling out your bio. You can then discover other users on the <Link to="/discover" className="about-link">Discover</Link> page, or visit the <Link to="/" className="about-link">Home</Link> page to see our dynamic charts showcasing the richest and most powerful people, as well as those who are trending. Create your own <a href="#statueSect" className="about-link">Statue</a> to showcase your professional online presence and share it with others using a single link. Don&apos;t forget to visit the gamification page to earn XP and gems as you engage with the app. Enjoy your time on Statue Status!</p>
             </div>
         </div>
 
@@ -44,7 +44,7 @@ const AboutPage = () => {
           <h2>What are Statues?</h2>
           <div className="about-sect-content">
             <p>
-            A Statue is a page that is exclusively yours and includes links to all of your connected social media accounts, as well as general information about you that you choose to share, such as your display name, bio, and the people connected to you. Additionally, it will have a transparent background with photo of you; it can be an illustration, but it should resemble you. After creating and customizing your Statue, you can share your polished online presence with just a single link.
+            A <a href="#statueSect" className="about-link">Statue</a> on Statue Status is a customizable profile page that is exclusively yours and serves as a professional and organized way to showcase your online presence. It includes links to all of your connected social media accounts, as well as general information about you that you choose to share, such as your display name, bio, and the people connected to you. Additionally, your statue will have a transparent background with a photo of you, which can be an illustration but should resemble you. You have the freedom to choose what information and details you want to include on your statue, and you can access and edit it at any time from your profile page. Once you have created and customized your statue, you can easily share it with others using a single link.
             </p>
             <p>The Statue&apos;s photo will be utilized to display on the <Link to="/" className="about-link">Home</Link> page&apos;s Charts.</p>
             </div>

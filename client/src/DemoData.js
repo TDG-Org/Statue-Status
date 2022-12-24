@@ -1,5 +1,33 @@
 import { Pancake, Bravery, Brilliance, Male, Female, Planet, Logo, NatePfp } from "./assets/imgs";
 
+// Demo Explore Results
+const exploreResults = [
+  {
+    resultAvatar: Planet,
+    resultName: "TDG Nate",
+    resultStatue: "Christian Nathaniel McIlvenny",
+    resultsReps: 1200
+  },
+  {
+    resultAvatar: Bravery,
+    resultName: "Bobby123",
+    resultStatue: "Bob Ross",
+    resultsReps: 1150
+  },
+  {
+    resultAvatar: Pancake,
+    resultName: "Michael2000",
+    resultStatue: "Michael Scott",
+    resultsReps: 1500
+  },
+  {
+    resultAvatar: Female,
+    resultName: "avni0000patel",
+    resultStatue: "Avni Patel",
+    resultsReps: 1250
+  },
+];
+
 // Nate's Connections
 const natesConnections = [
   {

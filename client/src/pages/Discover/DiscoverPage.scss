@@ -16,6 +16,7 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  justify-content: center;
 }
 
 .discover-search-sect {
@@ -30,8 +31,8 @@
     .discover-search-tool {
       gap: 1rem;
       width: 91.5%;
-      padding: 1rem 0;
       display: flex;
+      padding: 1rem 0;
       flex-wrap: nowrap;
       flex-direction: row;
       align-items: center;
@@ -107,14 +108,14 @@
     .discover-search-results {
       width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
       margin-bottom: 1.75rem;
+      flex-direction: column;
+      justify-content: center;
       .discover-result {
         width: 90%;
         display: flex;
-        padding: .5rem 0;
+        padding: .5rem;
         flex-wrap: nowrap;
         margin-top: .75rem;
         text-align: center;
@@ -123,29 +124,51 @@
         flex-direction: row;
         align-items: center;
         transition: all 500ms ease;
-        justify-content: space-evenly;
+        justify-content: space-between;
         border: 1px solid $low-dark-clr;
         background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
 
-        .discover-result-img-wrapper {
-          width: 50px;
-          height: 50px;
-          margin: 0 .8rem;
-          min-width: 50px;
-          border-radius: 50%;
-          img {
-            width: 100%;
-            height: 100%;
-            padding: .135rem;
-            border-radius: 50%; 
-            border: 1px solid $mid-light-clr; 
+        hr {
+          max-width: 115px;
+        }
+
+        // Left Result 
+        .discover-result-left {
+          gap: 1rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+      
+          .discover-result-img-wrapper {
+            width: 50px;
+            height: 50px;
+            margin: 0 .8rem;
+            min-width: 50px;
+            border-radius: 50%;
+            img {
+              width: 100%;
+              height: 100%;
+              padding: .135rem;
+              border-radius: 50%; 
+              border: 1px solid $mid-light-clr; 
+            }
           }
         }
+
+        // Right Result 
+        .discover-result-right {
+          gap: 1rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+
         .discover-result-name, 
         .discover-result-statue-link,
         .discover-result-reps {
-          width: fit-content;
           margin: 0 .75rem;
+          width: fit-content;
           color: $mid-light-clr;
         }
 
@@ -159,10 +182,14 @@
           }
           
           .discover-result-statue-link {
-            color: $accent-clr;
+            color: $light-clr;
             &:hover {
               text-decoration: underline !important;
             }
+          }
+ 
+          hr {
+            color: $second-clr;
           }
         }
       }
@@ -270,14 +297,13 @@
   }
 }
 
-
 @media screen and (max-width: 575px) {
   .discover-search-sect {
     .container {
       .discover-search-results  {
         .discover-result {
-          flex-direction: column;
           font-size: .9rem; 
+          flex-direction: column;
 
           .discover-result-img-wrapper {
             width: 45px;

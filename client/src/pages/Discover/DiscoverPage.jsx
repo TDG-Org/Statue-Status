@@ -138,7 +138,10 @@ const DiscoverPage = () => {
             <li className="friend">
               <div className="friend-left">
                 <img src={Planet} alt="" className="friend-avatar" />
+
                 <p className="friend-username">Luke</p>
+                
+                <i className="bi bi-bookmark-fill" title="bookmark"></i>
               </div>
               <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
             </li>

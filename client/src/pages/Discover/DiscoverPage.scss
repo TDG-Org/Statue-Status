@@ -216,6 +216,10 @@
           margin: 0 1rem;
           font-weight: bold;
         }
+
+        .bi {
+          color: $yellow-clr;
+        }
       }
   
       button {
@@ -252,10 +256,10 @@
     .discover-user-friends {
        width: 100%;
        .friends-list {
+         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-evenly;
         align-items: center;
-        flex-wrap: wrap;
+        justify-content: space-evenly;
         .friend {
           width: 45%;
           min-width: 280px;

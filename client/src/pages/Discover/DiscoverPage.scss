@@ -175,6 +175,12 @@
         &:hover {
           border: 1px solid $mid-light-clr;
           background-image: linear-gradient(to top, #00000013, #ffffff05);
+
+          .discover-result-img-wrapper {
+            img {
+              border: 1px solid $light-clr;
+            }
+          }
           
           .discover-result-name, 
           .discover-result-reps {

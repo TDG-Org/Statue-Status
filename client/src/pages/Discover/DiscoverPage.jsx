@@ -61,6 +61,7 @@ const DiscoverPage = () => {
               </button>
             </div>
 
+            <hr />
             {/* Search Results  */}
             <div className="discover-search-results-label">
               <p>Avatar</p>

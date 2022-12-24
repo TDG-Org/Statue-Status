@@ -12,10 +12,10 @@
 }
 
 .discover-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   gap: 2.5%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .discover-search-sect {
@@ -82,18 +82,24 @@
       }
     }
 
+    hr {
+      width: 100%;
+      margin: .5rem 0;
+    }
+
     // Discover results LABEL 
     .discover-search-results-label {
+      width: 91.5%;
       display: flex;
+      height: 1.7rem;
+      font-size: .875rem;
       flex-direction: row;
       align-items: center;
+      margin-bottom: .25rem;
       justify-content: space-around;
-      width: 91.5%;
-      font-size: .875rem;
-      height: 1.7rem;
       p {
-        color: $light-clr;
         margin: auto;
+        color: $light-clr;
       }
     }
 

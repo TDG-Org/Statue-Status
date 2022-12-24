@@ -128,13 +128,16 @@
         border: 1px solid $low-dark-clr;
         background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
 
+        hr {
+          max-width: 115px;
+        }
+
         // Left Result 
         .discover-result-left {
-          // width: 45%; 
+          gap: 1rem;
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 1rem;
       
           .discover-result-img-wrapper {
             width: 50px;
@@ -154,11 +157,11 @@
 
         // Right Result 
         .discover-result-right {
+          gap: 1rem;
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          // width: 45%; 
         }
 
         .discover-result-name, 
@@ -179,10 +182,14 @@
           }
           
           .discover-result-statue-link {
-            color: $accent-clr;
+            color: $light-clr;
             &:hover {
               text-decoration: underline !important;
             }
+          }
+ 
+          hr {
+            color: $second-clr;
           }
         }
       }

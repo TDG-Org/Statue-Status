@@ -57,7 +57,9 @@ const Explore = () => {
         <p>Statue</p>
         <p></p>
         <p>Reputation</p>
-      </div>
+        </div>
+        
+      {/* All Results  */}
       <div className="discover-search-results">
 
         {/* result  */}
@@ -75,48 +77,82 @@ const Explore = () => {
               </div>
             </div>
 
+            <hr />
+
             {/* Right Result  */}
             <div className="discover-result-right">
               <a href="" className="discover-result-statue-link">
                 Christian NathanielMcIlvenny
               </a>
               <div className="discover-result-reps">
-                Reps: <span className="discover-result-rep">1.2k</span>
+                Reps:
+                <br />
+                <span className="discover-result-rep">1.2k</span>
               </div>
             </div>
 
         </div>
 
         {/* result  */}
-        <div className="discover-result">
-          <div className="discover-result-img-wrapper">
-            <img src={Brilliance} alt="" />
-          </div>
-          <div className="discover-result-name">
-            Bob Ross
-          </div>
-          <a href="" className="discover-result-statue-link">
-            Bobby
-          </a>
-          <div className="discover-result-reps">
-            Reps: <span className="discover-result-rep">1.2k</span>
-          </div>
+          <div className="discover-result">
+
+            {/* Left Result  */}
+            <div className="discover-result-left">
+              {/* Image  */}
+              <div className="discover-result-img-wrapper">
+               <img src={Brilliance} alt="" />
+              </div>
+              {/* Name  */}
+              <div className="discover-result-name">
+               Bob Ross
+              </div>
+            </div>
+
+            <hr />
+
+            {/* Right Result  */}
+            <div className="discover-result-right">
+              <a href="" className="discover-result-statue-link">
+                Bobby
+              </a>
+              <div className="discover-result-reps">
+                Reps:
+                <br />
+                <span className="discover-result-rep">1.25k</span>
+              </div>
+            </div>
+
         </div>
 
         {/* result  */}
-        <div className="discover-result">
-          <div className="discover-result-img-wrapper">
-            <img src={Pancake} alt="" />
-          </div>
-          <div className="discover-result-name">
-            Michael
-          </div>
-          <a href="" className="discover-result-statue-link">
-           Michael Scott
-          </a>
-          <div className="discover-result-reps">
-            Reps: <span className="discover-result-rep">1.2k</span>
-          </div>
+          <div className="discover-result">
+
+            {/* Left Result  */}
+            <div className="discover-result-left">
+              {/* Image  */}
+              <div className="discover-result-img-wrapper">
+               <img src={Pancake} alt="" />
+              </div>
+              {/* Name  */}
+              <div className="discover-result-name">
+                Michael
+              </div>
+            </div>
+
+            <hr />
+
+            {/* Right Result  */}
+            <div className="discover-result-right">
+              <a href="" className="discover-result-statue-link">
+               Michael Scott
+              </a>
+              <div className="discover-result-reps">
+                Reps:
+                <br />
+                <span className="discover-result-rep">1.15k</span>
+              </div>
+            </div>
+
         </div>
 
       </div>

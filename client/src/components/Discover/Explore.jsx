@@ -78,9 +78,6 @@ const Explore = () => {
           <Result />
           <Result />
           <Result />
-          <Result />
-          <Result />
-          <Result />
 
         {/* result  */}
           <div className="discover-result">

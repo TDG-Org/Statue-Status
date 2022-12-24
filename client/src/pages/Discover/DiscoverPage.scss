@@ -20,7 +20,7 @@
 }
 
 .discover-search-sect {
-  max-height: 625px;
+  max-height: 700px;
   .container {
     width: 100%;
     display: flex;
@@ -116,7 +116,8 @@
       margin-bottom: 1.75rem;
       flex-direction: column;
       justify-content: center;
-      padding: 8.5rem 0 1.5rem 0;
+      // margin-top: 2rem; 
+      // padding: 8.5rem 0 1.5rem 0; 
       .discover-result {
         width: 90%;
         display: flex;

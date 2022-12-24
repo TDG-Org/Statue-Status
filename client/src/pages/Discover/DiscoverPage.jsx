@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./DiscoverPage.scss";
 
 // Images/SVGs 
-import { Planet } from "../../assets/imgs";
+import { Planet, Male, Pancake, Bravery, Brilliance } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
 
 const DiscoverPage = () => {
@@ -92,13 +92,13 @@ const DiscoverPage = () => {
               {/* result  */}
               <div className="discover-result">
                 <div className="discover-result-img-wrapper">
-                  <img src={Planet} alt="" />
+                  <img src={Brilliance} alt="" />
                 </div>
                 <div className="discover-result-name">
-                  Christian McIlvenny
+                  Bob Ross
                 </div>
                 <a href="" className="discover-result-statue-link">
-                  Christian NathanielMcIlvenny
+                  Bobby
                 </a>
                 <div className="discover-result-reps">
                   Reps: <span className="discover-result-rep">1.2k</span>
@@ -108,13 +108,13 @@ const DiscoverPage = () => {
               {/* result  */}
               <div className="discover-result">
                 <div className="discover-result-img-wrapper">
-                  <img src={Planet} alt="" />
+                  <img src={Pancake} alt="" />
                 </div>
                 <div className="discover-result-name">
-                  Christian McIlvenny
+                  Michael
                 </div>
                 <a href="" className="discover-result-statue-link">
-                  Christian NathanielMcIlvenny
+                 Michael Scott
                 </a>
                 <div className="discover-result-reps">
                   Reps: <span className="discover-result-rep">1.2k</span>
@@ -149,8 +149,8 @@ const DiscoverPage = () => {
             {/* Friend  */}
             <li className="friend">
               <div className="friend-left">
-                <img src={Planet} alt="" className="friend-avatar" />
-                <p className="friend-username">Luke</p>
+                <img src={Male} alt="" className="friend-avatar" />
+                <p className="friend-username">Jim</p>
               </div>
               <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
             </li>
@@ -158,8 +158,8 @@ const DiscoverPage = () => {
             {/* Friend  */}
             <li className="friend">
               <div className="friend-left">
-                <img src={Planet} alt="" className="friend-avatar" />
-                <p className="friend-username">Luke</p>
+                <img src={Pancake} alt="" className="friend-avatar" />
+                <p className="friend-username">Pam</p>
               </div>
               <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
             </li>
@@ -167,8 +167,8 @@ const DiscoverPage = () => {
             {/* Friend  */}
             <li className="friend">
               <div className="friend-left">
-                <img src={Planet} alt="" className="friend-avatar" />
-                <p className="friend-username">Luke</p>
+                <img src={Bravery} alt="" className="friend-avatar" />
+                <p className="friend-username">Dwight</p>
               </div>
               <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
             </li>

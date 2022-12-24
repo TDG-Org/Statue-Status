@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Images/SVGs 
-import { Planet, Male, Pancake, Bravery, Brilliance } from "../../assets/imgs";
+import { Planet, Pancake, Brilliance } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
 
 const Explore = () => {
@@ -11,16 +11,20 @@ const Explore = () => {
   const numOfDiscoverResults = () => {
     return document.querySelectorAll(".discover-result").length;
   };
+
+  // Function to update the state variable 
   function setNumOfDiscoverResults() {
     setNumDiscoverResults(numOfDiscoverResults());
   }
 
+  // Function that checks Results to remove SVG 
   function checkResultsAndRemoveSVG() {
     if (numDiscoverResults > 0) {
       document.querySelector(".search-svg").classList.add("hide");
     } else document.querySelector(".search-svg").classList.remove("hide");
   }
 
+  // UseEffects 
   useEffect(() => {
     setNumOfDiscoverResults();
     console.log(numDiscoverResults);
@@ -29,6 +33,7 @@ const Explore = () => {
   useEffect(() => {
     checkResultsAndRemoveSVG();
   });
+
   return (
     <div className="discover-search-sect pallet">
      <div className="container">
@@ -54,8 +59,8 @@ const Explore = () => {
         <p>Avatar</p>
         <p>Username</p>
         <p></p>
-        <p>Statue</p>
         <p></p>
+        <p>Statue</p>
         <p>Reputation</p>
         </div>
         

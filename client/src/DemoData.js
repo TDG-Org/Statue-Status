@@ -137,5 +137,6 @@ export {
   NateData,
   data,
   natesSocialLinks,
-  natesConnections
+  natesConnections,
+  exploreResults
 };

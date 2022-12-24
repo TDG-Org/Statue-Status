@@ -7,6 +7,9 @@ import Search from "../../assets/svgs/search.svg";
 // Components 
 import { Result } from "./";
 
+// Demo Data 
+import { exploreResults } from "../../DemoData";
+
 const Explore = () => {
 
   const [numDiscoverResults, setNumDiscoverResults] = useState(0);
@@ -72,6 +75,11 @@ const Explore = () => {
 
         {/* result  */}
 
+          <Result />
+          <Result />
+          <Result />
+          <Result />
+          <Result />
           <Result />
 
         {/* result  */}

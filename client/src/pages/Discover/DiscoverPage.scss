@@ -115,7 +115,7 @@
       .discover-result {
         width: 90%;
         display: flex;
-        padding: .5rem 0;
+        padding: .5rem;
         flex-wrap: nowrap;
         margin-top: .75rem;
         text-align: center;
@@ -124,24 +124,43 @@
         flex-direction: row;
         align-items: center;
         transition: all 500ms ease;
-        justify-content: space-evenly;
+        justify-content: space-between;
         border: 1px solid $low-dark-clr;
         background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
 
-        .discover-result-img-wrapper {
-          width: 50px;
-          height: 50px;
-          margin: 0 .8rem;
-          min-width: 50px;
-          border-radius: 50%;
-          img {
-            width: 100%;
-            height: 100%;
-            padding: .135rem;
-            border-radius: 50%; 
-            border: 1px solid $mid-light-clr; 
+        // Left Result 
+        .discover-result-left {
+          // width: 45%; 
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+      
+          .discover-result-img-wrapper {
+            width: 50px;
+            height: 50px;
+            margin: 0 .8rem;
+            min-width: 50px;
+            border-radius: 50%;
+            img {
+              width: 100%;
+              height: 100%;
+              padding: .135rem;
+              border-radius: 50%; 
+              border: 1px solid $mid-light-clr; 
+            }
           }
         }
+
+        // Right Result 
+        .discover-result-right {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          // width: 45%; 
+        }
+
         .discover-result-name, 
         .discover-result-statue-link,
         .discover-result-reps {

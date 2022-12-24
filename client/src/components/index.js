@@ -10,7 +10,7 @@ import Footer from "./Footer";
 import { EditProfile } from "./Profile";
 
 // Discover Page 
-import { Explore } from "./Discover";
+import { Explore, Friends } from "./Discover";
 
 // Statue Related 
 import { ProfileStatue } from "./Statue";
@@ -21,6 +21,7 @@ export {
   User,
   Aside,
   Footer,
+  Friends,
   Explore,
   EditProfile,
   ProfileStatue

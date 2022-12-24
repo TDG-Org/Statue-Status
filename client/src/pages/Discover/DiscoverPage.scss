@@ -12,10 +12,10 @@
 }
 
 .discover-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   gap: 2.5%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .discover-search-sect {
@@ -29,8 +29,8 @@
 
     .discover-search-tool {
       gap: 1rem;
-      width: 95%;
-      padding: 1rem;
+      width: 91.5%;
+      padding: 1rem 0;
       display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
@@ -45,8 +45,13 @@
         padding: .8rem;
         color: $light-clr;
         border-radius: 8px;
-        background-color: $mid-dark-clr;
-        border: 1px solid rgba(43, 43, 43, 0.714);
+        background-color: $low-tp;
+        transition: all 250ms ease;
+        border: 1px solid $low-dark-clr;
+        &:focus {
+          background-color: $low-dark-clr;
+          border: 1px solid $mid-light-clr;
+        }
       }
 
       .search-bar-btn {
@@ -57,19 +62,44 @@
         padding: .5rem;
         min-width: 45px;  
         border-radius: 8px;
+        transition: all 250ms ease;
         background-color: $mid-dark-clr;
-        border: 1px solid rgba(43, 43, 43, 0.714);
+        border: 1px solid $low-dark-clr;
 
         i {
           color: $prime-clr;
           font-weight: bold;
           font-size: 1.25rem;
           transition: all 300ms ease;
+        }
 
-          &:hover {
+        &:hover {
+          i {
             color: $light-clr;
           }
+          border: 1px solid $accent-clr;
         }
+      }
+    }
+
+    hr {
+      width: 100%;
+      margin: .5rem 0;
+    }
+
+    // Discover results LABEL 
+    .discover-search-results-label {
+      width: 91.5%;
+      display: flex;
+      height: 1.7rem;
+      font-size: .875rem;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: .25rem;
+      justify-content: space-around;
+      p {
+        margin: auto;
+        color: $light-clr;
       }
     }
 
@@ -101,8 +131,8 @@
           width: 50px;
           height: 50px;
           margin: 0 .8rem;
-          border-radius: 50%;
           min-width: 50px;
+          border-radius: 50%;
           img {
             width: 100%;
             height: 100%;
@@ -162,9 +192,11 @@
       width: 100%;
       display: flex;
       flex-wrap: nowrap;
+      border-radius: 8px;
       align-items: center;
       flex-direction: row;
-      padding:.5rem .2rem;
+      padding:.5rem .25rem;
+      border: 1px solid transparent;
       justify-content: space-between;
 
       .friend-left {
@@ -184,6 +216,10 @@
           margin: 0 1rem;
           font-weight: bold;
         }
+
+        .bi {
+          color: $yellow-clr;
+        }
       }
   
       button {
@@ -195,6 +231,10 @@
           font-size: 1.5rem;
           color: $light-clr;
         }
+      }
+
+      &:hover {
+        border: 1px solid $low-dark-clr;
       }
     }
   }
@@ -215,6 +255,37 @@
 
     .discover-user-friends {
        width: 100%;
+       .friends-list {
+         flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        .friend {
+          width: 45%;
+          min-width: 280px;
+          margin-bottom: .25rem;
+        }
+       }
+    }
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+  .discover-search-sect {
+    .container {
+      .discover-search-results  {
+        .discover-result {
+          flex-direction: column;
+          font-size: .9rem; 
+
+          .discover-result-img-wrapper {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+          }
+       }
+      }
     }
   }
 }

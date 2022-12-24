@@ -133,6 +133,8 @@ const DiscoverPage = () => {
 
           {/* List of friends  */}
           <ul className="friends-list">
+
+            {/* Friend  */}
             <li className="friend">
               <div className="friend-left">
                 <img src={Planet} alt="" className="friend-avatar" />
@@ -140,6 +142,34 @@ const DiscoverPage = () => {
               </div>
               <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
             </li>
+
+            {/* Friend  */}
+            <li className="friend">
+              <div className="friend-left">
+                <img src={Planet} alt="" className="friend-avatar" />
+                <p className="friend-username">Luke</p>
+              </div>
+              <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+            </li>
+
+            {/* Friend  */}
+            <li className="friend">
+              <div className="friend-left">
+                <img src={Planet} alt="" className="friend-avatar" />
+                <p className="friend-username">Luke</p>
+              </div>
+              <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+            </li>
+
+            {/* Friend  */}
+            <li className="friend">
+              <div className="friend-left">
+                <img src={Planet} alt="" className="friend-avatar" />
+                <p className="friend-username">Luke</p>
+              </div>
+              <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+            </li>
+
           </ul>
         </div>
 

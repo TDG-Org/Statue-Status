@@ -192,9 +192,11 @@
       width: 100%;
       display: flex;
       flex-wrap: nowrap;
+      border-radius: 8px;
       align-items: center;
       flex-direction: row;
-      padding:.5rem .2rem;
+      padding:.5rem .25rem;
+      border: 1px solid transparent;
       justify-content: space-between;
 
       .friend-left {
@@ -226,6 +228,10 @@
           color: $light-clr;
         }
       }
+
+      &:hover {
+        border: 1px solid $low-dark-clr;
+      }
     }
   }
 }
@@ -245,6 +251,17 @@
 
     .discover-user-friends {
        width: 100%;
+       .friends-list {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .friend {
+          width: 45%;
+          min-width: 280px;
+          margin-bottom: .25rem;
+        }
+       }
     }
   }
 }

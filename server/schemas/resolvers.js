@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { User, Profile } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -9,6 +9,13 @@ const resolvers = {
         },
         user: async (parent, { username }) => {
             return User.findOne({ username });
+        },
+        profiles: async (parent, { username }) => {
+            const params = username ? { username } : {};
+            return Profile.find(params);
+        },
+        profile: async (parent, { postId }) => {
+            return Profile.findOne({ _id: profileId });
         },
         me: async (parent, args, context) => {
             if (context.user) {
@@ -40,6 +47,23 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
+        },
+        addProfile: async (parent, { name, bio, profilePicture }, context) => {
+            if (context.user) {
+                const profile = await Profile.create({
+                    name,
+                    bio,
+                    profilePicture,
+                });
+
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { profiles: profile._id } }
+                );
+
+                return profile;
+            }
+            throw new AuthenticationError("You need to be logged in!");
         },
     },
 };

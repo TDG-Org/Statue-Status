@@ -31,8 +31,8 @@
     .discover-search-tool {
       gap: 1rem;
       width: 91.5%;
-      padding: 1rem 0;
       display: flex;
+      padding: 1rem 0;
       flex-wrap: nowrap;
       flex-direction: row;
       align-items: center;
@@ -108,10 +108,10 @@
     .discover-search-results {
       width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
       margin-bottom: 1.75rem;
+      flex-direction: column;
+      justify-content: center;
       .discover-result {
         width: 90%;
         display: flex;
@@ -145,8 +145,8 @@
         .discover-result-name, 
         .discover-result-statue-link,
         .discover-result-reps {
-          width: fit-content;
           margin: 0 .75rem;
+          width: fit-content;
           color: $mid-light-clr;
         }
 
@@ -271,14 +271,13 @@
   }
 }
 
-
 @media screen and (max-width: 575px) {
   .discover-search-sect {
     .container {
       .discover-search-results  {
         .discover-result {
-          flex-direction: column;
           font-size: .9rem; 
+          flex-direction: column;
 
           .discover-result-img-wrapper {
             width: 45px;

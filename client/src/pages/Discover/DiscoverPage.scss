@@ -29,8 +29,8 @@
 
     .discover-search-tool {
       gap: 1rem;
-      width: 95%;
-      padding: 1rem;
+      width: 91.5%;
+      padding: 1rem 0;
       display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
@@ -79,6 +79,21 @@
           }
           border: 1px solid $accent-clr;
         }
+      }
+    }
+
+    // Discover results LABEL 
+    .discover-search-results-label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 91.5%;
+      font-size: .875rem;
+      height: 1.7rem;
+      p {
+        color: $light-clr;
+        margin: auto;
       }
     }
 

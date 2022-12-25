@@ -109,7 +109,7 @@
     .discover-search-results {
       width: 100%;
       display: flex;
-      max-height: 350px; 
+      max-height: 420px; 
       overflow-y: scroll;
       overflow-x: hidden;
       align-items: center;
@@ -304,11 +304,25 @@
          align-items: center;
          justify-content: space-evenly;
         .friend {
-          width: 80%;
-          min-width: 280px;
+          width: 45%;
+          min-width: 250px; 
+          // max-width: unset; 
           margin-bottom: .25rem;
         }
        }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .discover-content {
+    .discover-user-friends {
+       .friends-list {
+        .friend {
+          width: 50%;
+          max-width: 375px;
+        }
+      }
     }
   }
 }

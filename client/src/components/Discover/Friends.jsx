@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Images/SVGs 
 import { Planet, Male, Pancake, Bravery } from "../../assets/imgs";
@@ -7,6 +7,16 @@ import { Planet, Male, Pancake, Bravery } from "../../assets/imgs";
 import { Friend } from "./";
 
 const Friends = () => {
+
+  // Slice / Show More button
+
+  const [displayedFriendsCount, setDisplayedFriendsCount] = useState(25);
+
+  // function to load more Friends Links
+  function loadMoreFriends() {
+    setDisplayedFriendsCount(displayedFriendsCount + 25);
+  }
+
   return (
   <div className="discover-user-friends pallet">
      <h4>Friends</h4>

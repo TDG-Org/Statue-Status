@@ -2,7 +2,6 @@ import React from "react";
 
 // Images/SVGs 
 import { Planet, Male, Pancake, Bravery, Brilliance } from "../../assets/imgs";
-import Search from "../../assets/svgs/search.svg";
 
 const Friends = () => {
   return (
@@ -37,7 +36,7 @@ const Friends = () => {
       <li className="friend">
         <div className="friend-left">
           <img src={Pancake} alt="" className="friend-avatar" />
-          <p className="friend-username">Pam</p>
+            <p className="friend-username">Pam</p>
         </div>
         <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
       </li>

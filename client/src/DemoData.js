@@ -134,9 +134,9 @@ const data = [
 ];
 
 export {
-  NateData,
   data,
+  NateData,
+  exploreResults,
   natesSocialLinks,
   natesConnections,
-  exploreResults
 };

@@ -9,6 +9,40 @@ import {
   NatePfp
 } from "./assets/imgs";
 
+// Demo Friends 
+const profileFriends = [
+  {
+    friendAvatar: Planet,
+    friendName: "Luke",
+    friendIsFav: true
+  },
+  {
+    friendAvatar: Male,
+    friendName: "Jim",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Pancake,
+    friendName: "Pam",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Bravery,
+    friendName: "Dwight",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Brilliance,
+    friendName: "Halp",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Female,
+    friendName: "Clem",
+    friendIsFav: false
+  },
+];
+
 // Demo Explore Results
 const exploreResults = [
   {

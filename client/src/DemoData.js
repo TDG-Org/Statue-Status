@@ -15,6 +15,12 @@ const exploreResults = [
     resultsReps: 1150
   },
   {
+    resultAvatar: Brilliance,
+    resultName: "TDGLU",
+    resultStatue: "Luke McIlveny",
+    resultsReps: 2300
+  },
+  {
     resultAvatar: Pancake,
     resultName: "Michael2000",
     resultStatue: "Michael Scott",
@@ -25,6 +31,18 @@ const exploreResults = [
     resultName: "avni0000patel",
     resultStatue: "Avni Patel",
     resultsReps: 1250
+  },
+  {
+    resultAvatar: Logo,
+    resultName: "Train123",
+    resultStatue: "Big",
+    resultsReps: 1233
+  },
+  {
+    resultAvatar: NatePfp,
+    resultName: "nate42445",
+    resultStatue: "Real Nate",
+    resultsReps: 1199
   },
 ];
 

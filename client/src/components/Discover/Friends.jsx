@@ -63,6 +63,60 @@ const Friends = () => {
         <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
       </li>
 
+      {/* Friend  */}
+      <li className="friend">
+        <div className="friend-left">
+          <img src={Bravery} alt="" className="friend-avatar" />
+          <p className="friend-username">Dwight</p>
+        </div>
+        <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+      </li>
+
+      {/* Friend  */}
+      <li className="friend">
+        <div className="friend-left">
+          <img src={Bravery} alt="" className="friend-avatar" />
+          <p className="friend-username">Dwight</p>
+        </div>
+        <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+      </li>
+
+      {/* Friend  */}
+      <li className="friend">
+        <div className="friend-left">
+          <img src={Bravery} alt="" className="friend-avatar" />
+          <p className="friend-username">Dwight</p>
+        </div>
+        <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+      </li>
+
+      {/* Friend  */}
+      <li className="friend">
+        <div className="friend-left">
+          <img src={Bravery} alt="" className="friend-avatar" />
+          <p className="friend-username">Dwight</p>
+        </div>
+        <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+      </li>
+
+      {/* Friend  */}
+      <li className="friend">
+        <div className="friend-left">
+          <img src={Bravery} alt="" className="friend-avatar" />
+          <p className="friend-username">Dwight</p>
+        </div>
+        <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+      </li>
+
+      {/* Friend  */}
+      <li className="friend">
+        <div className="friend-left">
+          <img src={Bravery} alt="" className="friend-avatar" />
+          <p className="friend-username">Dwight</p>
+        </div>
+        <button className="view-friend"><i className="bi bi-three-dots-vertical"></i></button>
+      </li>
+
     </ul>
   </div>
   );

@@ -7,7 +7,7 @@
   background-image: url("../../assets/svgs/discoverpage-background.svg");
 
   h3 {
-    margin: 1rem 0 !important;
+    margin: .95rem 0 !important;
   }
 }
 
@@ -20,7 +20,7 @@
 }
 
 .discover-search-sect {
-  max-height: 700px;
+  max-height: 750px;
   .container {
     width: 100%;
     display: flex;
@@ -220,6 +220,8 @@
 .discover-user-friends {
   width: 30%;
   min-width: 275px;
+  max-width: 400px;
+  max-height: 750px;
 
   .friends-list {
     padding: 0;
@@ -229,11 +231,12 @@
     .friend {
       width: 100%;
       display: flex;
+      max-width: 275px;
       flex-wrap: nowrap;
       border-radius: 8px;
       align-items: center;
       flex-direction: row;
-      padding:.5rem .25rem;
+      padding:.4rem .25rem;
       border: 1px solid transparent;
       justify-content: space-between;
 
@@ -293,13 +296,15 @@
 
     .discover-user-friends {
        width: 100%;
+       max-width: unset;
+
        .friends-list {
          flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-evenly;
         .friend {
-          width: 45%;
+          width: 80%;
           min-width: 280px;
           margin-bottom: .25rem;
         }

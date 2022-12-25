@@ -10,7 +10,7 @@ import {
 } from "./assets/imgs";
 
 // Demo Friends 
-const profileFriends = [
+const myFriends = [
   {
     friendAvatar: Planet,
     friendName: "Luke",

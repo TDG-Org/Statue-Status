@@ -1,6 +1,5 @@
 import React from "react";
 
-
 // Proptypes 
 import PropTypes from "prop-types";
 
@@ -21,28 +20,36 @@ const Result = ({ avatar, name, statue, reps }) => {
 
     {/* Left Result  */}
     <div className="discover-result-left">
+        
       {/* Image  */}
       <div className="discover-result-img-wrapper">
-       <img src={Planet} alt="" />
+        <img src={avatar} alt="" />
       </div>
+        
       {/* Name  */}
       <div className="discover-result-name">
-        Christian McIlvenny
+        {name}
       </div>
+        
     </div>
 
     <hr />
 
     {/* Right Result  */}
     <div className="discover-result-right">
+        
+      {/* Statue  */}
       <a href="" className="discover-result-statue-link">
-        Christian NathanielMcIlvenny
+        {statue}
       </a>
+        
+        {/* Reputation  */}
       <div className="discover-result-reps">
         Reps:
         <br />
-        <span className="discover-result-rep">1.2k</span>
+        <span className="discover-result-rep">{reps}</span>
       </div>
+        
     </div>
 
   </div>

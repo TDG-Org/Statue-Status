@@ -14,8 +14,6 @@ import { Result } from "./";
 import { exploreResults } from "../../DemoData";
 
 const Explore = () => {
-console.log(exploreResults);
-
 
   // Slice / Show More button
 
@@ -97,7 +95,7 @@ console.log(exploreResults);
       {/* All Results  */}
       <div className="discover-search-results">
 
-          {/* result  */}
+        {/* results */}
         {exploreResultsSliced.map((item, index) => {
           return (
             <Result

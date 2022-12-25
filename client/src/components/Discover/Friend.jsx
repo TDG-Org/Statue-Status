@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 const Friend = ({ avatar, name, isFav }) => {
 
+  // Validate Component's Props 
   Friend.propTypes = {
     avatar: PropTypes.string,
     name: PropTypes.string,
@@ -17,8 +18,6 @@ const Friend = ({ avatar, name, isFav }) => {
       return "";
     } else return <i className="bi bi-bookmark-fill" title="bookmark"></i>;
   }
-
-  console.log(isFriendFav(isFav));
 
   return (
     <li className="friend">

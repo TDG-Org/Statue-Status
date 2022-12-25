@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Images/SVGs 
 import { Planet, Male, Pancake, Bravery } from "../../assets/imgs";

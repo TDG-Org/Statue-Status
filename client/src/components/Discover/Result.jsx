@@ -8,6 +8,7 @@ import { Planet } from "../../assets/imgs";
 
 const Result = ({ avatar, name, statue, reps }) => {
 
+  // Validate Component's Props 
   Result.propTypes = {
     avatar: PropTypes.string,
     name: PropTypes.string,

@@ -222,6 +222,7 @@
   min-width: 275px;
   max-width: 400px;
   max-height: 750px;
+  overflow-y: scroll;
 
   .friends-list {
     padding: 0;
@@ -293,7 +294,6 @@
     }
 
     // Friends 
-
     .discover-user-friends {
        width: 100%;
        max-width: unset;
@@ -309,7 +309,7 @@
           // max-width: unset; 
           margin-bottom: .25rem;
         }
-       }
+      }
     }
   }
 }
@@ -340,7 +340,7 @@
             height: 45px;
             min-width: 45px;
           }
-       }
+        }
       }
     }
   }

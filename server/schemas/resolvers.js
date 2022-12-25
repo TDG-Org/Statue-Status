@@ -65,6 +65,21 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
+        removeProfile: async (parent, { profileId }, context) => {
+            if (context.user) {
+                const profile = await Profile.findOneAndDelete({
+                    _id: profileId,
+                });
+
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { profiles: profile._id } }
+                );
+
+                return profile;
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
     },
 };
 

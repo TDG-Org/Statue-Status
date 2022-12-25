@@ -1,5 +1,8 @@
 import React from "react";
 
+// Sweet Alert 
+import swal from "sweetalert";
+
 // Link 
 import { Link } from "react-router-dom";
 
@@ -60,7 +63,7 @@ const MyAccount = () => {
         });
       });    
   }
-  
+
   return (
     <div className="account-sect settings-sect">
 

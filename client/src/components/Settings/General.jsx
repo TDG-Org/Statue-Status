@@ -1,6 +1,15 @@
 import React from "react";
 
+// Emailjs 
+import emailjs from "@emailjs/browser";
+
 const General = () => {
+
+  // Support Function 
+  const support = () => {
+    swal("Here's the title!", "...and here's the text!");
+  };
+  
   return (
     <div className="general-sect settings-sect">
 

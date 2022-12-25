@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+// Proptypes 
+import PropTypes from "prop-types";
+
 // Images/SVGs 
 import { Planet, Pancake, Brilliance } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
@@ -11,6 +14,8 @@ import { Result } from "./";
 import { exploreResults } from "../../DemoData";
 
 const Explore = () => {
+console.log(exploreResults);
+
 
   // Slice / Show More button
 
@@ -18,7 +23,7 @@ const Explore = () => {
 
     // function to load more ExploreResults Links
     function loadMoreExploreResults() {
-      setDisplayedExploreResultsCount(displayedExploreResultsCount + 5);
+      setDisplayedExploreResultsCount(displayedExploreResultsCount + 25);
   }
   
     // Checks if the limit has been reached to hide show more links button 

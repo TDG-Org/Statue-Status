@@ -1,9 +1,21 @@
 import React from "react";
 
+
+// Proptypes 
+import PropTypes from "prop-types";
+
 // Images/SVGs 
 import { Planet } from "../../assets/imgs";
 
-const Result = () => {
+const Result = ({ avatar, name, statue, reps }) => {
+
+  Result.propTypes = {
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    statue: PropTypes.string,
+    reps: PropTypes.number,
+  };
+
   return (
     <div className="discover-result">
 

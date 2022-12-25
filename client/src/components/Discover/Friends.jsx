@@ -6,6 +6,9 @@ import { Planet, Male, Pancake, Bravery } from "../../assets/imgs";
 // Components
 import { Friend } from "./";
 
+// Demo Data 
+import { myFriends } from "../../DemoData";
+
 const Friends = () => {
 
   // Slice / Show More button
@@ -19,7 +22,7 @@ const Friends = () => {
 
   // Checks if the limit has been reached to hide show more links button 
   function toggleShowMoreFriendsBtn() {
-    let totalNumberOfFriends = Friends.length;
+    let totalNumberOfFriends = myFriends.length;
     if (totalNumberOfFriends <= displayedFriendsCount) {
       setHideMoreFriendsBtn(true);
     } else {
@@ -27,12 +30,28 @@ const Friends = () => {
     }
   }
 
+  // The Social Links that are going to show 
+  const friendsSliced = Friends.slice(0, displayedFriendsCount);
+
   return (
   <div className="discover-user-friends pallet">
      <h4>Friends</h4>
 
     {/* List of friends  */}
-    <ul className="friends-list">
+      <ul className="friends-list">
+        
+      {/* Friend  */}
+      {exploreResultsSliced.map((item, index) => {
+          return (
+            <Friend
+              key={index}
+              avatar={item.resultAvatar}
+              name={item.resultName}
+              statue={item.resultStatue}
+              reps={item.resultsReps}
+            />
+         );
+        })}
 
       {/* Friend  */}
       <li className="friend">

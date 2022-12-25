@@ -200,4 +200,5 @@ export {
   exploreResults,
   natesSocialLinks,
   natesConnections,
+  myFriends,
 };

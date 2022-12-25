@@ -11,6 +11,15 @@ const Friend = ({ avatar, name, isFav }) => {
     isFav: PropTypes.bool,
   };
 
+  // Function to Check if the Friend is a Favorite 
+  function isFriendFav(fav) {
+    if (!fav) {
+      return "";
+    } else return <i className="bi bi-bookmark-fill" title="bookmark"></i>;
+  }
+
+  console.log(isFriendFav(isFav));
+
   return (
     <li className="friend">
       
@@ -18,13 +27,13 @@ const Friend = ({ avatar, name, isFav }) => {
       <div className="friend-left">
         
         {/* Image  */}
-        <img src="" alt="" className="friend-avatar" />
+        <img src={avatar} alt="" className="friend-avatar" />
 
         {/* Name  */}
-        <p className="friend-username">Luke</p>
+        <p className="friend-username">{name}</p>
       
         {/* Is Fav?  */}
-        <i className="bi bi-bookmark-fill" title="bookmark"></i>
+        {isFriendFav(isFav)}
       </div>
       
       {/* More Info Button  */}

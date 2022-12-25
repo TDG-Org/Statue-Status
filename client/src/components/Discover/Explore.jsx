@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// Proptypes 
-import PropTypes from "prop-types";
-
 // Images/SVGs 
-import { Planet, Pancake, Brilliance } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
 
 // Components 

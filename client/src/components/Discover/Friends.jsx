@@ -1,7 +1,10 @@
 import React from "react";
 
 // Images/SVGs 
-import { Planet, Male, Pancake, Bravery, Brilliance } from "../../assets/imgs";
+import { Planet, Male, Pancake, Bravery } from "../../assets/imgs";
+
+// Components
+import { Friend } from "./";
 
 const Friends = () => {
   return (

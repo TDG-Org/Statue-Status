@@ -1,4 +1,13 @@
-import { Pancake, Bravery, Brilliance, Male, Female, Planet, Logo, NatePfp } from "./assets/imgs";
+import {
+  Pancake,
+  Bravery,
+  Brilliance,
+  Male,
+  Female,
+  Planet,
+  Logo,
+  NatePfp
+} from "./assets/imgs";
 
 // Demo Explore Results
 const exploreResults = [

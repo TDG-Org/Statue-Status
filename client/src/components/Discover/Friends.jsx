@@ -10,11 +10,21 @@ const Friends = () => {
 
   // Slice / Show More button
 
-  const [displayedFriendsCount, setDisplayedFriendsCount] = useState(25);
+  const [displayedFriendsCount, setDisplayedFriendsCount] = useState(10);
 
   // function to load more Friends Links
   function loadMoreFriends() {
-    setDisplayedFriendsCount(displayedFriendsCount + 25);
+    setDisplayedFriendsCount(displayedFriendsCount + 30);
+  }
+
+  // Checks if the limit has been reached to hide show more links button 
+  function toggleShowMoreFriendsBtn() {
+    let totalNumberOfFriends = Friends.length;
+    if (totalNumberOfFriends <= displayedFriendsCount) {
+      setHideMoreFriendsBtn(true);
+    } else {
+      setHideMoreFriendsBtn(false);
+    }
   }
 
   return (

@@ -15,23 +15,23 @@ const Explore = () => {
 
   const [displayedExploreResultsCount, setDisplayedExploreResultsCount] = useState(25);
 
-    // function to load more ExploreResults Links
-    function loadMoreExploreResults() {
-      setDisplayedExploreResultsCount(displayedExploreResultsCount + 25);
+  // function to load more ExploreResults Links
+  function loadMoreExploreResults() {
+    setDisplayedExploreResultsCount(displayedExploreResultsCount + 25);
+}
+
+  // Checks if the limit has been reached to hide show more links button 
+  function toggleShowMoreExploreResultsBtn() {
+    let totalNumberOfExploreResults = exploreResults.length;
+    if (totalNumberOfExploreResults <= displayedExploreResultsCount) {
+      setHideMoreExploreResultsBtn(true);
+    } else {
+      setHideMoreExploreResultsBtn(false);
+    }
   }
-  
-    // Checks if the limit has been reached to hide show more links button 
-    function toggleShowMoreExploreResultsBtn() {
-      let totalNumberOfExploreResults = exploreResults.length;
-      if (totalNumberOfExploreResults <= displayedExploreResultsCount) {
-        setHideMoreExploreResultsBtn(true);
-      } else {
-        setHideMoreExploreResultsBtn(false);
-      }
-  }
-  
-    // The Social Links that are going to show 
-    const exploreResultsSliced = exploreResults.slice(0, displayedExploreResultsCount);
+
+  // The Social Links that are going to show 
+  const exploreResultsSliced = exploreResults.slice(0, displayedExploreResultsCount);
 
   // Check Number for SVG 
 

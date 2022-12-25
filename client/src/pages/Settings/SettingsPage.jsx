@@ -10,7 +10,7 @@ import emailjs from "@emailjs/browser";
 import swal from "sweetalert";
 
 // Components 
-import { MyAccount } from "../../components";
+import { MyAccount, General } from "../../components";
 
 const SettingsPage = () => {
 

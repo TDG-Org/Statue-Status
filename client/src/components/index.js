@@ -16,7 +16,7 @@ import { Explore, Friends } from "./Discover";
 import { ProfileStatue } from "./Statue";
 
 // Settings Page 
-import { MyAccount } from "./Settings";
+import { General, MyAccount } from "./Settings";
 
 // Export 
 export {
@@ -26,6 +26,7 @@ export {
   Footer,
   Friends,
   Explore,
+  General,
   MyAccount,
   EditProfile,
   ProfileStatue,

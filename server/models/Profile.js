@@ -8,8 +8,18 @@ const profileSchema = new Schema({
     bio: {
         type: String,
     },
-    profilePicture: {
+    avatar: {
         type: String,
+    },
+    profileAuthor: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    statue:
+    {
+        type: Schema.Types.ObjectId,
+        ref: "Statue",
     },
 });
 

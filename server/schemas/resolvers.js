@@ -14,10 +14,10 @@ const resolvers = {
             const params = username ? { username } : {};
             return Profile.find(params);
         },
-        profile: async (parent, { postId }) => {
+        profile: async (parent, { profileId }) => {
             return Profile.findOne({ _id: profileId });
         },
-        me: async (parent, args, context) => {
+        me: async (parent, context) => {
             if (context.user) {
                 return User.findOne({ _id: context.user._id });
             }
@@ -48,17 +48,34 @@ const resolvers = {
 
             return { token, user };
         },
-        addProfile: async (parent, { name, bio, profilePicture }, context) => {
+        editProfile: async (parent, { name, bio, avatar }, context) => {
             if (context.user) {
                 const profile = await Profile.create({
                     name,
                     bio,
-                    profilePicture,
+                    avatar,
+                    profileAuthor: context.user.username,
                 });
 
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
                     { $addToSet: { profiles: profile._id } }
+                );
+
+                return profile;
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
+        removeProfile: async (parent, { profileId }, context) => {
+            if (context.user) {
+                const profile = await Profile.findOneAndDelete({
+                    _id: profileId,
+                    profileAuthor: context.user.username,
+                });
+
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { profiles: profile._id } }
                 );
 
                 return profile;

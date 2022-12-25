@@ -15,6 +15,9 @@ import { Explore, Friends } from "./Discover";
 // Statue Related 
 import { ProfileStatue } from "./Statue";
 
+// Settings Page 
+import { MyAccount } from "./Settings";
+
 // Export 
 export {
   Nav,
@@ -23,6 +26,7 @@ export {
   Footer,
   Friends,
   Explore,
+  MyAccount,
   EditProfile,
-  ProfileStatue
+  ProfileStatue,
 };

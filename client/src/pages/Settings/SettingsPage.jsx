@@ -12,6 +12,9 @@ import emailjs from "@emailjs/browser";
 // Sweet Alert 
 import swal from "sweetalert";
 
+// Components 
+import { MyAccount } from "../../components";
+
 const SettingsPage = () => {
 
   // Support Function 

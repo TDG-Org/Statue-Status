@@ -12,30 +12,49 @@ import { exploreResults } from "../../DemoData";
 
 const Explore = () => {
 
-  const [numDiscoverResults, setNumDiscoverResults] = useState(0);
+  // Slice / Show More button
 
+  const [displayedExploreResultsCount, setDisplayedExploreResultsCount] = useState(25);
+
+    // function to load more ExploreResults Links
+    function loadMoreExploreResults() {
+      setDisplayedExploreResultsCount(displayedExploreResultsCount + 5);
+  }
+  
+    // Checks if the limit has been reached to hide show more links button 
+    function toggleShowMoreExploreResultsBtn() {
+      let totalNumberOfExploreResults = exploreResults.length;
+      if (totalNumberOfExploreResults <= displayedExploreResultsCount) {
+        setHideMoreExploreResultsBtn(true);
+      } else {
+        setHideMoreExploreResultsBtn(false);
+      }
+  }
+  
+    // The Social Links that are going to show 
+    const exploreResultsSliced = exploreResults.slice(0, displayedExploreResultsCount);
+
+  // Check Number for SVG 
+
+  const [numDiscoverResults, setNumDiscoverResults] = useState(0);
   const numOfDiscoverResults = () => {
     return document.querySelectorAll(".discover-result").length;
   };
-
   // Function to update the state variable 
   function setNumOfDiscoverResults() {
     setNumDiscoverResults(numOfDiscoverResults());
   }
-
   // Function that checks Results to remove SVG 
   function checkResultsAndRemoveSVG() {
     if (numDiscoverResults > 0) {
       document.querySelector(".search-svg").classList.add("hide");
     } else document.querySelector(".search-svg").classList.remove("hide");
   }
-
   // UseEffects 
   useEffect(() => {
     setNumOfDiscoverResults();
     console.log(numDiscoverResults);
   }, [document.querySelectorAll(".discover-result").length]);
-
   useEffect(() => {
     checkResultsAndRemoveSVG();
   });
@@ -73,11 +92,19 @@ const Explore = () => {
       {/* All Results  */}
       <div className="discover-search-results">
 
-        {/* result  */}
+          {/* result  */}
+        {exploreResultsSliced.map((item, index) => {
+          return (
+            <Result
+              key={index}
+              avatar={item.resultAvatar}
+              name={item.resultName}
+              statue={item.resultStatue}
+              reps={item.resultsReps}
+            />
+         );
+        })}
 
-          <Result />
-          <Result />
-          <Result />
           <Result />
           <Result />
           <Result />

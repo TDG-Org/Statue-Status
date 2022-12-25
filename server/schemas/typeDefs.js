@@ -15,6 +15,7 @@ const typeDefs = gql`
     name: String!
     bio: String
     avatar: String
+    profileAuthor: String
   }
 
   type Auth {
@@ -35,6 +36,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     editProfile(name: String!, bio: String!, avatar: String!): Profile
+    removeProfile(profileId: ID!): Profile
   }
 `;
 

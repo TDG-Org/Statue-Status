@@ -54,6 +54,7 @@ const resolvers = {
                     name,
                     bio,
                     avatar,
+                    profileAuthor: context.user.username,
                 });
 
                 await User.findOneAndUpdate(
@@ -69,6 +70,7 @@ const resolvers = {
             if (context.user) {
                 const profile = await Profile.findOneAndDelete({
                     _id: profileId,
+                    profileAuthor: context.user.username,
                 });
 
                 await User.findOneAndUpdate(

@@ -11,6 +11,11 @@ const profileSchema = new Schema({
     avatar: {
         type: String,
     },
+    profileAuthor: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     statue:
     {
         type: Schema.Types.ObjectId,

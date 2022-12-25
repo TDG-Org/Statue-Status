@@ -3,7 +3,14 @@ import React from "react";
 // Proptypes 
 import PropTypes from "prop-types";
 
-const Friend = () => {
+const Friend = ({ avatar, name, isFav }) => {
+
+  Friend.propTypes = {
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isFav: PropTypes.bool,
+  };
+
   return (
     <li className="friend">
       
@@ -11,7 +18,7 @@ const Friend = () => {
       <div className="friend-left">
         
         {/* Image  */}
-        <img src={Planet} alt="" className="friend-avatar" />
+        <img src="" alt="" className="friend-avatar" />
 
         {/* Name  */}
         <p className="friend-username">Luke</p>
@@ -26,7 +33,7 @@ const Friend = () => {
       >
         <i className="bi bi-three-dots-vertical"></i>
       </button>
-      
+
   </li>
   );
 };

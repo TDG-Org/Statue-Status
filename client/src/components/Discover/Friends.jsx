@@ -31,7 +31,7 @@ const Friends = () => {
   }
 
   // The Social Links that are going to show 
-  const friendsSliced = Friends.slice(0, displayedFriendsCount);
+  const friendsSliced = myFriends.slice(0, displayedFriendsCount);
 
   return (
   <div className="discover-user-friends pallet">
@@ -40,17 +40,16 @@ const Friends = () => {
     {/* List of friends  */}
       <ul className="friends-list">
         
-      {/* Friend  */}
-      {exploreResultsSliced.map((item, index) => {
+        {/* Friend  */}
+        {friendsSliced.map((item, index) => {
           return (
             <Friend
               key={index}
-              avatar={item.resultAvatar}
-              name={item.resultName}
-              statue={item.resultStatue}
-              reps={item.resultsReps}
+              avatar={item.friendAvatar}
+              name={item.friendName}
+              isFav={item.friendIsFav}
             />
-         );
+          );
         })}
 
       {/* Friend  */}

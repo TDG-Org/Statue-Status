@@ -9,5 +9,5 @@ export {
   Explore,
   Friends,
   Result,
-  Friend
+  Friend,
 };

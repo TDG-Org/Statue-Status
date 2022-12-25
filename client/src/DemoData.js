@@ -41,6 +41,11 @@ const myFriends = [
     friendName: "Clem",
     friendIsFav: false
   },
+  {
+    friendAvatar: Male,
+    friendName: "Steve",
+    friendIsFav: false
+  },
 ];
 
 // Demo Explore Results
@@ -197,8 +202,8 @@ const data = [
 export {
   data,
   NateData,
+  myFriends,
   exploreResults,
   natesSocialLinks,
   natesConnections,
-  myFriends,
 };

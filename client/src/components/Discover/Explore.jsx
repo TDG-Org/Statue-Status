@@ -1,35 +1,59 @@
 import React, { useState, useEffect } from "react";
 
 // Images/SVGs 
-import { Planet, Pancake, Brilliance } from "../../assets/imgs";
 import Search from "../../assets/svgs/search.svg";
+
+// Components 
+import { Result } from "./";
+
+// Demo Data 
+import { exploreResults } from "../../DemoData";
 
 const Explore = () => {
 
-  const [numDiscoverResults, setNumDiscoverResults] = useState(0);
+  // Slice / Show More button
 
+  const [displayedExploreResultsCount, setDisplayedExploreResultsCount] = useState(25);
+
+  // function to load more ExploreResults Links
+  function loadMoreExploreResults() {
+    setDisplayedExploreResultsCount(displayedExploreResultsCount + 25);
+}
+
+  // Checks if the limit has been reached to hide show more links button 
+  function toggleShowMoreExploreResultsBtn() {
+    let totalNumberOfExploreResults = exploreResults.length;
+    if (totalNumberOfExploreResults <= displayedExploreResultsCount) {
+      setHideMoreExploreResultsBtn(true);
+    } else {
+      setHideMoreExploreResultsBtn(false);
+    }
+  }
+
+  // The Social Links that are going to show 
+  const exploreResultsSliced = exploreResults.slice(0, displayedExploreResultsCount);
+
+  // Check Number for SVG 
+
+  const [numDiscoverResults, setNumDiscoverResults] = useState(0);
   const numOfDiscoverResults = () => {
     return document.querySelectorAll(".discover-result").length;
   };
-
   // Function to update the state variable 
   function setNumOfDiscoverResults() {
     setNumDiscoverResults(numOfDiscoverResults());
   }
-
   // Function that checks Results to remove SVG 
   function checkResultsAndRemoveSVG() {
     if (numDiscoverResults > 0) {
       document.querySelector(".search-svg").classList.add("hide");
     } else document.querySelector(".search-svg").classList.remove("hide");
   }
-
   // UseEffects 
   useEffect(() => {
     setNumOfDiscoverResults();
     console.log(numDiscoverResults);
   }, [document.querySelectorAll(".discover-result").length]);
-
   useEffect(() => {
     checkResultsAndRemoveSVG();
   });
@@ -54,6 +78,7 @@ const Explore = () => {
       </div>
 
       <hr />
+        
       {/* Search Results  */}
       <div className="discover-search-results-label">
         <p>Avatar</p>
@@ -62,103 +87,23 @@ const Explore = () => {
         <p></p>
         <p>Statue</p>
         <p>Reputation</p>
-        </div>
+      </div>
         
-      {/* All Results  */}
+      {/* All Results List  */}
       <div className="discover-search-results">
 
-        {/* result  */}
-          <div className="discover-result">
-
-            {/* Left Result  */}
-            <div className="discover-result-left">
-              {/* Image  */}
-              <div className="discover-result-img-wrapper">
-               <img src={Planet} alt="" />
-              </div>
-              {/* Name  */}
-              <div className="discover-result-name">
-                Christian McIlvenny
-              </div>
-            </div>
-
-            <hr />
-
-            {/* Right Result  */}
-            <div className="discover-result-right">
-              <a href="" className="discover-result-statue-link">
-                Christian NathanielMcIlvenny
-              </a>
-              <div className="discover-result-reps">
-                Reps:
-                <br />
-                <span className="discover-result-rep">1.2k</span>
-              </div>
-            </div>
-
-        </div>
-
-        {/* result  */}
-          <div className="discover-result">
-
-            {/* Left Result  */}
-            <div className="discover-result-left">
-              {/* Image  */}
-              <div className="discover-result-img-wrapper">
-               <img src={Brilliance} alt="" />
-              </div>
-              {/* Name  */}
-              <div className="discover-result-name">
-               Bob Ross
-              </div>
-            </div>
-
-            <hr />
-
-            {/* Right Result  */}
-            <div className="discover-result-right">
-              <a href="" className="discover-result-statue-link">
-                Bobby
-              </a>
-              <div className="discover-result-reps">
-                Reps:
-                <br />
-                <span className="discover-result-rep">1.25k</span>
-              </div>
-            </div>
-
-        </div>
-
-        {/* result  */}
-          <div className="discover-result">
-
-            {/* Left Result  */}
-            <div className="discover-result-left">
-              {/* Image  */}
-              <div className="discover-result-img-wrapper">
-               <img src={Pancake} alt="" />
-              </div>
-              {/* Name  */}
-              <div className="discover-result-name">
-                Michael
-              </div>
-            </div>
-
-            <hr />
-
-            {/* Right Result  */}
-            <div className="discover-result-right">
-              <a href="" className="discover-result-statue-link">
-               Michael Scott
-              </a>
-              <div className="discover-result-reps">
-                Reps:
-                <br />
-                <span className="discover-result-rep">1.15k</span>
-              </div>
-            </div>
-
-        </div>
+        {/* results */}
+        {exploreResultsSliced.map((item, index) => {
+          return (
+            <Result
+              key={index}
+              avatar={item.resultAvatar}
+              name={item.resultName}
+              statue={item.resultStatue}
+              reps={item.resultsReps}
+            />
+         );
+        })}
 
       </div>
 

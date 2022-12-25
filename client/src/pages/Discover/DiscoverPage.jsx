@@ -4,7 +4,6 @@ import React from "react";
 import "./DiscoverPage.scss";
 
 // Images/SVGs 
-import { Planet, Male, Pancake, Bravery, Brilliance } from "../../assets/imgs";
 
 // Components 
 import { Explore, Friends } from "../../components";

@@ -7,7 +7,7 @@
   background-image: url("../../assets/svgs/discoverpage-background.svg");
 
   h3 {
-    margin: 1rem 0 !important;
+    margin: .95rem 0 !important;
   }
 }
 
@@ -20,6 +20,7 @@
 }
 
 .discover-search-sect {
+  max-height: 750px;
   .container {
     width: 100%;
     display: flex;
@@ -108,10 +109,14 @@
     .discover-search-results {
       width: 100%;
       display: flex;
+      max-height: 420px; 
+      overflow-y: scroll;
+      overflow-x: hidden;
       align-items: center;
       margin-bottom: 1.75rem;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
+
       .discover-result {
         width: 90%;
         display: flex;
@@ -175,6 +180,12 @@
         &:hover {
           border: 1px solid $mid-light-clr;
           background-image: linear-gradient(to top, #00000013, #ffffff05);
+
+          .discover-result-img-wrapper {
+            img {
+              border: 1px solid $light-clr;
+            }
+          }
           
           .discover-result-name, 
           .discover-result-reps {
@@ -209,6 +220,9 @@
 .discover-user-friends {
   width: 30%;
   min-width: 275px;
+  max-width: 400px;
+  max-height: 750px;
+  overflow-y: scroll;
 
   .friends-list {
     padding: 0;
@@ -218,11 +232,12 @@
     .friend {
       width: 100%;
       display: flex;
+      max-width: 275px;
       flex-wrap: nowrap;
       border-radius: 8px;
       align-items: center;
       flex-direction: row;
-      padding:.5rem .25rem;
+      padding:.4rem .25rem;
       border: 1px solid transparent;
       justify-content: space-between;
 
@@ -279,20 +294,35 @@
     }
 
     // Friends 
-
     .discover-user-friends {
        width: 100%;
+       max-width: unset;
+
        .friends-list {
          flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-evenly;
         .friend {
           width: 45%;
-          min-width: 280px;
+          min-width: 250px; 
+          // max-width: unset; 
           margin-bottom: .25rem;
         }
-       }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .discover-content {
+    .discover-user-friends {
+       .friends-list {
+        .friend {
+          width: 50%;
+          max-width: 375px;
+        }
+      }
     }
   }
 }
@@ -310,7 +340,7 @@
             height: 45px;
             min-width: 45px;
           }
-       }
+        }
       }
     }
   }

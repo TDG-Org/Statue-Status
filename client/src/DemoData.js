@@ -1,4 +1,98 @@
-import { Pancake, Bravery, Brilliance, Male, Female, Planet, Logo, NatePfp } from "./assets/imgs";
+import {
+  Pancake,
+  Bravery,
+  Brilliance,
+  Male,
+  Female,
+  Planet,
+  Logo,
+  NatePfp
+} from "./assets/imgs";
+
+// Demo Friends 
+const myFriends = [
+  {
+    friendAvatar: Planet,
+    friendName: "Luke",
+    friendIsFav: true
+  },
+  {
+    friendAvatar: Male,
+    friendName: "Jim",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Pancake,
+    friendName: "Pam",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Bravery,
+    friendName: "Dwight",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Brilliance,
+    friendName: "Halp",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Female,
+    friendName: "Clem",
+    friendIsFav: false
+  },
+  {
+    friendAvatar: Male,
+    friendName: "Steve",
+    friendIsFav: false
+  },
+];
+
+// Demo Explore Results
+const exploreResults = [
+  {
+    resultAvatar: Planet,
+    resultName: "TDG Nate",
+    resultStatue: "Christian Nathaniel McIlvenny",
+    resultsReps: 1200
+  },
+  {
+    resultAvatar: Bravery,
+    resultName: "Bobby123",
+    resultStatue: "Bob Ross",
+    resultsReps: 1150
+  },
+  {
+    resultAvatar: Brilliance,
+    resultName: "TDGLU",
+    resultStatue: "Luke McIlveny",
+    resultsReps: 2300
+  },
+  {
+    resultAvatar: Pancake,
+    resultName: "Michael2000",
+    resultStatue: "Michael Scott",
+    resultsReps: 1500
+  },
+  {
+    resultAvatar: Female,
+    resultName: "avni0000patel",
+    resultStatue: "Avni Patel",
+    resultsReps: 1250
+  },
+  {
+    resultAvatar: Logo,
+    resultName: "Train123",
+    resultStatue: "Big",
+    resultsReps: 1233
+  },
+  {
+    resultAvatar: NatePfp,
+    resultName: "nate42445",
+    resultStatue: "Real Nate",
+    resultsReps: 1199
+  },
+];
 
 // Nate's Connections
 const natesConnections = [
@@ -106,8 +200,10 @@ const data = [
 ];
 
 export {
-  NateData,
   data,
+  NateData,
+  myFriends,
+  exploreResults,
   natesSocialLinks,
-  natesConnections
+  natesConnections,
 };

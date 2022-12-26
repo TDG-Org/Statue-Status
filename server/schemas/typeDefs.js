@@ -13,9 +13,20 @@ const typeDefs = gql`
   type Profile {
     _id: ID
     name: String!
-    bio: String
-    avatar: String
-    profileAuthor: String
+    bio: String!
+    avatar: String!
+    profileAuthor: String!
+  }
+
+  type Statue {
+  _id: ID
+  name: String!
+  bio: String!
+  accessories: [Accessories]!
+  socialLinks: [SocialLinks]!
+  connections: [Connections]!
+  customBackground: [customBackground]!
+  statueLink: [statueLink]!
   }
 
   type Auth {
@@ -27,7 +38,7 @@ const typeDefs = gql`
     users: [User]
     user(username: String!): User
     user(userID: ID!): User
-    profiles(username: String): Profile
+    profiles(username: String!): Profile
     profile(profileId: ID!): Profile
     me: User
   }

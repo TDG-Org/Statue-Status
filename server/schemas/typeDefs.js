@@ -16,6 +16,7 @@ const typeDefs = gql`
     bio: String!
     avatar: String!
     profileAuthor: String!
+    statue: Statue!
   }
 
   type Statue {
@@ -40,6 +41,8 @@ const typeDefs = gql`
     user(userID: ID!): User
     profiles(username: String!): Profile
     profile(profileId: ID!): Profile
+    statues(username: String!): Statue
+    statue(statueId: ID!): Statue
     me: User
   }
 
@@ -48,6 +51,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     editProfile(name: String!, bio: String!, avatar: String!): Profile
     removeProfile(profileId: ID!): Profile
+    addStatue
   }
 `;
 

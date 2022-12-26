@@ -16,9 +16,10 @@
 
     .settings-p {
       width: 80%;
-      padding: 0 .5rem;
       margin: 0 auto;
+      padding: 0 .5rem;
       color: $mid-light-clr;
+      text-align: center;
 
       .pass-fff {
         color: $light-clr;
@@ -38,56 +39,56 @@
       flex-direction: column;
     
       .edit-username-sect {
+        gap: .5rem;
+        padding: 1rem;
         display: flex;
+        flex-wrap: nowrap; 
+        position: relative;
         flex-direction: row;
         justify-content: center;
-        flex-wrap: nowrap; 
         margin: .5rem 0 1.25rem 0; 
-        padding: 1rem;
-        gap: .5rem;
-        position: relative;
         border-bottom: .5px solid rgba(52, 52, 52, 0.349);
 
         .display-username {
-          width: 75%;
-          max-width: 515px;
-          padding: .5rem;
           margin: 0;
-          background-color: $mid-dark-clr;
+          width: 75%;
+          padding: .5rem;
+          max-width: 515px;
           border-radius: 8px;
-          border: 1px solid $low-dark-clr;
           cursor: not-allowed;
+          background-color: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
 
           &:before {
-            position: absolute;
-            top: -1.5rem;
             left: 4.5%; 
-            content: "Edit Username";
+            top: -1.5rem;
             padding: .8rem;
             font-size: .9rem;
+            position: absolute;
             color: $mid-light-clr;
+            content: "Edit Username";
           }
         }
 
         .edit-username-btn {
-          border: none;
           margin: 0;
           width: 25%;
-          max-width: 100px;
+          border: none;
           padding: .5rem;
-          background-color: $mid-dark-clr;
+          max-width: 100px;
           border-radius: 8px;
-          border: 1px solid $low-dark-clr;
           transition: all 250ms ease;
+          background-color: $mid-dark-clr;
+          border: 1px solid $low-dark-clr;
 
           i {
             color: $mid-light-clr;
           }
 
           &:hover {
+            color: $light-clr;
             border: 1px solid $second-clr;
             background-color: $low-dark-clr;
-            color: $light-clr;
 
             i {
               color: $light-clr;
@@ -99,46 +100,46 @@
 
     // Edit profile link 
     .edit-profile-link {
-      background: transparent;
-      color: $mid-light-clr;
       width: 45%;
+      padding: .5rem;
       max-width: 325px;
       margin: .2rem auto;
       text-align: center;
-      padding: .5rem;
-      border: 1px solid $low-dark-clr;
+      color: $mid-light-clr;
+      background: transparent;
       transition: all 250ms ease;
+      border: 1px solid $low-dark-clr;
 
       &:hover {
-        border: 1px solid $second-clr;
-        background: $low-dark-clr;
         color: $light-clr;
+        background: $low-dark-clr;
+        border: 1px solid $second-clr;
       }
     }
 
     // Password 
     .account-sect-pass {
       display: flex;
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
 
       // Password Button 
       .change-password-btn {
-        background: transparent;
-        color: $mid-light-clr;
+        padding: .5rem;
         width: 45%;
         max-width: 325px;
         margin: 1rem auto;
         text-align: center;
-        padding: .5rem;
-        border: 1px solid $low-dark-clr;
+        color: $mid-light-clr;
+        background: transparent;
         transition: all 250ms ease;
+        border: 1px solid $low-dark-clr;
   
         &:hover {
-          border: 1px solid $second-clr;
-          background: $low-dark-clr;
           color: $light-clr;
+          background: $low-dark-clr;
+          border: 1px solid $second-clr;
         }
       }
     }
@@ -148,45 +149,45 @@
     // Appearance 
     .appearance-btns {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      align-items: center;
-      margin: 1rem auto;
       padding: .8rem;
-      background: $mid-dark-clr;
+      flex-wrap: wrap;
+      margin: 1rem auto;
       border-radius: 8px; 
+      align-items: center;
+      flex-direction: column;
+      background: $mid-dark-clr;
+      justify-content: space-evenly;
       border: 1px solid $low-dark-clr;
 
       .default-themes, .special-themes {
         display: flex;
-        flex-direction: row;
         margin: .75rem 0;
+        flex-direction: row;
       }
 
       hr {
         width: 100px;
-        color: $mid-light-clr;
         margin: .25rem 0;
+        color: $mid-light-clr;
       }
 
       .theme-btn {
-        padding: .8rem 1rem;
+        display: flex;
         margin: 0 .5rem;
         border-radius: 10px;
-        border: 1px solid transparent;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
         align-items: center;
+        flex-direction: row;
+        padding: .8rem 1rem;
+        justify-content: center;
         transition: all 250ms ease;
+        border: 1px solid transparent;
 
         &:hover {
           border: 1px solid transparent;
 
           label {
-            color: $light-clr;
             cursor: pointer;
+            color: $light-clr;
           }
 
           input {
@@ -207,40 +208,40 @@
       // Light 
       .light-theme-btn {
         &:hover {
-          border-bottom: 1px solid $light-clr;
           border-top: 1px solid $light-clr;
+          border-bottom: 1px solid $light-clr;
         }
       }
 
       // Dark 
       .dark-theme-btn {
         &:hover {
-          border-bottom: 1px solid $mid-light-clr;
           border-top: 1px solid $mid-light-clr;
+          border-bottom: 1px solid $mid-light-clr;
         }
       }
 
       // Red 
       .red-theme-btn {
         &:hover {
-          border-bottom: 1px solid $red-clr;
           border-top: 1px solid $red-clr;
+          border-bottom: 1px solid $red-clr;
         }
       }
 
       // Earth 
       .earth-theme-btn {
         &:hover {
-          border-bottom: 1px solid rgb(255, 230, 155);
           border-top: 1px solid rgb(255, 230, 155);
+          border-bottom: 1px solid rgb(255, 230, 155);
         }
       }
 
       // Blue 
       .blue-theme-btn {
         &:hover {
-          border-bottom: 1px solid $prime-clr;
           border-top: 1px solid $prime-clr;
+          border-bottom: 1px solid $prime-clr;
         }
       }
     }
@@ -252,25 +253,26 @@
       justify-content: center;
 
       .report-bug-btns {
+        gap: 1rem;
         width: 100%;
         display: flex;
-        flex-direction: row;
         padding: 1rem;
+        flex-direction: row;
         justify-content: center;
-        gap: 1rem;
 
-        .report-bug-btn, .support-btn {
-          background: transparent;
-          color: $mid-light-clr;
+        .report-bug-btn,
+         .support-btn {
           width: 30%; 
-          max-width: 325px;
           padding: .5rem;
-          border: 1px solid $low-dark-clr;
+          max-width: 325px;
+          color: $mid-light-clr;
+          background: transparent;
           transition: all 250ms ease;   
+          border: 1px solid $low-dark-clr;
     
           &:hover {
-            background: $low-dark-clr;
             color: $light-clr;
+            background: $low-dark-clr;
           }
         }
         
@@ -293,15 +295,15 @@
     .general-sect-logout {
       display: flex;
       padding: 1rem;
-      justify-content: center;
       flex-direction: column;
+      justify-content: center;
 
       .settings-loggout-btn {
         margin: 1rem auto;
-        text-align: center;
         font-size: 1.1rem;
-        color: $mid-red-clr;
+        text-align: center;
         width: fit-content;
+        color: $mid-red-clr;
 
         i {
           color: $mid-light-clr;
@@ -317,7 +319,6 @@
         }
       }
     }
-
   }
 }
 
@@ -329,7 +330,6 @@
     background-image: url("../../assets/svgs/settingspage-background.svg");
   
     .pallet {
-  
       .settings-p {
         width: 90%;
         text-align: center;
@@ -353,8 +353,8 @@
     flex-direction: column  !important;
 
     button {
-      width: 80% !important;
       margin: 0 auto;
+      width: 80% !important;
     }
   }
 }

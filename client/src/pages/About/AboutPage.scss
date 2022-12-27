@@ -29,8 +29,8 @@
       border-radius: 8px;
       flex-direction: row; 
       justify-content: space-evenly;
-      border: 1px solid rgba(128, 128, 128, 0.181);
       background-color: $mid-dark-clr;
+      border: 1px solid  $low-dark-clr;
 
       p {
         margin: 0;
@@ -57,14 +57,13 @@
     }
 
     .statue-sect-extra {
-      // margin: 0 auto;
       text-align: center; 
     }
   }
 }
 
 .about-intro-sect-content,
- .about-sect-content {
+.about-sect-content {
   gap: 5%; 
   display: flex;
   flex-wrap: nowrap;
@@ -102,9 +101,7 @@
       }
      }
     }
-
   }
-
 }
 
 @media screen and (max-width: 750px) {

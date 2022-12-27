@@ -1,16 +1,14 @@
 import React from "react";
 
 // Components 
-import { Intro, Starter, Statues } from "../../components";
+import {
+  Intro,
+  Starter,
+  Statues
+} from "../../components";
 
 // Styles
 import "./AboutPage.scss";
-
-// Link 
-import { Link } from "react-router-dom";
-
-// images/SVGs 
-import DevProcess from "../../assets/svgs/development-process.svg";
 
 const AboutPage = () => {
   return (
@@ -18,16 +16,17 @@ const AboutPage = () => {
 
       <div className="container">
 
-        {/* Intro Content  */}
+        {/* Intro Section  */}
         <Intro />
 
-        {/* Getting Started  */}
+        {/* Getting Started Section  */}
         <Starter />
 
-        {/* What are Statues? */}
+        {/* What are Statues  Section*/}
         <Statues />
 
-        </div>
+      </div>
+      
     </div>
   );
 };

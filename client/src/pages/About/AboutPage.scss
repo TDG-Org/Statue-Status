@@ -49,6 +49,18 @@
       }
     }
   }
+
+  #statuesSect 
+  .about-sect-content {
+    p {
+      width: 100%;
+    }
+
+    .statue-sect-extra {
+      // margin: 0 auto;
+      text-align: center; 
+    }
+  }
 }
 
 .about-intro-sect-content,

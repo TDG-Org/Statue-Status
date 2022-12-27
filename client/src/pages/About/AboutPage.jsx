@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components 
-import { Intro, Starter } from "../../components";
+import { Intro, Starter, Statues } from "../../components";
 
 // Styles
 import "./AboutPage.scss";
@@ -25,6 +25,7 @@ const AboutPage = () => {
         <Starter />
 
         {/* What are Statues? */}
+        <Statues />
         <div className="about-sect" id="statuesSect">
           <h2>What are Statues?</h2>
           <div className="about-sect-content">

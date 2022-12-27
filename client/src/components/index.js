@@ -19,7 +19,7 @@ import { ProfileStatue } from "./Statue";
 import { General, MyAccount } from "./Settings";
 
 // About Page 
-import { Intro, Starter } from "./About";
+import { Intro, Starter, Statues } from "./About";
 
 // Export 
 export {
@@ -32,6 +32,7 @@ export {
   Explore,
   General,
   Starter,
+  Statues,
   MyAccount,
   EditProfile,
   ProfileStatue,

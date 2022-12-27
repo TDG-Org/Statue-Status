@@ -4,7 +4,10 @@ import React from "react";
 import "./SettingsPage.scss";
 
 // Components 
-import { MyAccount, General } from "../../components";
+import {
+  MyAccount,
+  General
+} from "../../components";
 
 const SettingsPage = () => {
 

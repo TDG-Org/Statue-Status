@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // Components
 import {
@@ -28,7 +28,7 @@ import {
 import "../sass/main.scss"; 
 import "../sass/utils/animations.scss";
 
-// animations 
+// Animations 
 import { RevealY } from "../utils/animations";
 
 const StatueStatus = () => {

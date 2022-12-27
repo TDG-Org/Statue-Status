@@ -7,9 +7,9 @@ import "./DiscoverPage.scss";
 
 // Components 
 import {
-   Explore, 
-   Friends 
-  } from "../../components";
+  Explore,
+  Friends
+} from "../../components";
 
 const DiscoverPage = () => {
 

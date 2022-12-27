@@ -21,6 +21,9 @@ import { ProfileStatue } from "./Statue";
 // Settings Page 
 import { General, MyAccount } from "./Settings";
 
+// About Page 
+import { Intro, Starter, Statues } from "./About";
+
 // Export 
 export {
   Pie,
@@ -28,11 +31,14 @@ export {
   User,
   Aside,
   Chart,
+  Intro,
   Footer,
   Friends,
   Explore,
   General,
   RichList,
+  Starter,
+  Statues,
   MyAccount,
   EditProfile,
   ProfileStatue,

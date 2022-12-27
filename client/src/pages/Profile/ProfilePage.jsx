@@ -1,7 +1,10 @@
 import React from "react";
 
 // Components 
-import { ProfileStatue, EditProfile } from "../../components/";
+import {
+  ProfileStatue,
+  EditProfile
+} from "../../components/";
 
 // Styles
 import "./ProfilePage.scss";

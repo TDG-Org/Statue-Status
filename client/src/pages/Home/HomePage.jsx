@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 // Components
-import { Chart, RichList, Pie } from "../../components/Rich";
+import {
+  Chart,
+  RichList,
+  Pie
+} from "../../components/Rich";
 
 // Time 
 import { format } from "date-fns";

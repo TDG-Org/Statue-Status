@@ -18,11 +18,15 @@ import { ProfileStatue } from "./Statue";
 // Settings Page 
 import { General, MyAccount } from "./Settings";
 
+// About Page 
+import { Intro } from "./About";
+
 // Export 
 export {
   Nav,
   User,
   Aside,
+  Intro,
   Footer,
   Friends,
   Explore,

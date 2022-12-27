@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components 
-import { Intro } from "../../components/About";
+import { Intro } from "../../components";
 
 // Styles
 import "./AboutPage.scss";
@@ -10,7 +10,6 @@ import "./AboutPage.scss";
 import { Link } from "react-router-dom";
 
 // images/SVGs 
-import Ranking from "../../assets/svgs/ranking.svg";
 import DevProcess from "../../assets/svgs/development-process.svg";
 
 const AboutPage = () => {
@@ -19,8 +18,7 @@ const AboutPage = () => {
 
       <div className="container">
 
-        {/* intro  */}
-
+        {/* Intro Content  */}
         <Intro />
 
         {/* Getting Started  */}

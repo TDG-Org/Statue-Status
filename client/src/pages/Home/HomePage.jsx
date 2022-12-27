@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 // Components
-import { Chart, RichList, Pie } from "../../components/Rich";
+import {
+  Chart,
+  RichList,
+  Pie
+} from "../../components/Rich";
+
+// Link 
+import { Link } from "react-router-dom";
 
 // Time 
 import { format } from "date-fns";
@@ -173,6 +180,8 @@ const HomePage = () => {
           <Pie richestData={richestData} />
           
         </div>
+
+        <Link to="/Richest">View All Richest</Link>
         
       </div>
 

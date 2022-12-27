@@ -6,7 +6,10 @@ import "./DiscoverPage.scss";
 // Images/SVGs 
 
 // Components 
-import { Explore, Friends } from "../../components";
+import {
+   Explore, 
+   Friends 
+  } from "../../components";
 
 const DiscoverPage = () => {
 

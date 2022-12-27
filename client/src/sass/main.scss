@@ -93,6 +93,12 @@ p, span, em, li, a, i, div {
 .page-side-wrapper {
   width: 100%;
   height: auto; 
+  overflow: hidden; 
+
+}
+
+.wrapper-page-sect { 
+  width: 100%;
 }
 
 // Page Styles 

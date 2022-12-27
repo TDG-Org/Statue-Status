@@ -17,12 +17,12 @@
 }
 
 .homepage-pallet-chart-bottom {
-  gap: 1.5rem;
+  gap: .65rem;
   display: flex;
-  padding: 1.5rem;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
+  padding: 1.5rem auto;
 
   .homepage-pallet-chart-img-wrapper {
     width: 20%;

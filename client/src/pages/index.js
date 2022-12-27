@@ -1,10 +1,11 @@
 // Core Page Components File to Export as bundle
 
 // Import
-import AboutPage from "./About/AboutPage";
-import DiscoverPage from "./Discover/DiscoverPage";
 import HomePage from "./Home/HomePage";
+import AboutPage from "./About/AboutPage";
 import ProfilePage from "./Profile/ProfilePage";
+import RichestPage from "./Richest/RichestPage";
+import DiscoverPage from "./Discover/DiscoverPage";
 import SettingsPage from "./Settings/SettingsPage";
 
 // Wrapper For Pages 
@@ -12,10 +13,11 @@ import StatueStatus from "./Statue-Status";
 
 // Export
 export {
-  AboutPage,
-  DiscoverPage,
   HomePage,
+  AboutPage,
+  RichestPage,
   ProfilePage,
+  DiscoverPage,
   SettingsPage,
-  StatueStatus
+  StatueStatus,
 };

@@ -16,11 +16,12 @@ import {
 
 // Pages 
 import {
-  AboutPage,
-  DiscoverPage,
   HomePage,
+  AboutPage,
+  RichestPage,
   ProfilePage,
-  SettingsPage
+  DiscoverPage,
+  SettingsPage,
 } from "./index";
 
 // Styles 
@@ -50,6 +51,7 @@ const StatueStatus = () => {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/Richest" element={<RichestPage />} />
           </Routes>
         </div>
 

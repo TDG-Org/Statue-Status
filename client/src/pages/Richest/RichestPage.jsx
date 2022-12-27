@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles 
-import "./PeoplePage.scss";
+import "./RichestPage.scss";
 
 // Images/SVGs
 

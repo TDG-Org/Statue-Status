@@ -4,7 +4,7 @@ import React from "react";
 import RichUser from "./RichUser";
 
 // Styles
-import "../../sass/components/RichList.scss";
+import "../../../sass/components/RichList.scss";
 
 // Props 
 import PropTypes from "prop-types";

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 
 // Components
 import {
+  Pie,
   Chart,
   RichList,
-  Pie
-} from "../../components/Rich";
+} from "../../components";
 
 // Link 
 import { Link } from "react-router-dom";
@@ -168,30 +168,34 @@ const HomePage = () => {
       
       <h2>Top 5 Global</h2>
 
-      <div className="pallet">
+      <div className="container">
 
-        {/* Tabs  */}
+        <div className="pallet">
 
-        <div className="homepage-pallet-chart-bottom">
+          {/* Tabs  */}
 
-        {/* Chart */}
-          <Chart richestData={richestData} />
+          <div className="homepage-pallet-chart-bottom">
 
-          <Pie richestData={richestData} />
+            {/* Chart */}
+            <Chart richestData={richestData} />
+
+            <Pie richestData={richestData} />
+            
+          </div>
+
+          <Link to="/Richest">View All Richest</Link>
           
         </div>
 
-        <Link to="/Richest">View All Richest</Link>
+        <h2>All Individuals</h2>
         
-      </div>
+        <div className="pallet">
 
-      <h2>All Individuals</h2>
-      
-      <div className="pallet">
+          {/* The Richest People List  */}
+          <RichList allRichestData={allRichestData} className="reveal"/>
 
-        {/* The Richest People List  */}
-        <RichList allRichestData={allRichestData} className="reveal"/>
-
+        </div>
+        
       </div>
 
     </div>

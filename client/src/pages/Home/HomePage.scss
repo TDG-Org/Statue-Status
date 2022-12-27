@@ -6,10 +6,10 @@
 .HomePage {
 
   .homepage-title {
-    font-weight: bold;
     font-size: 3rem;
-    letter-spacing: 3px;
+    font-weight: bold;
     text-align: center;
+    letter-spacing: 3px;
     margin: .5rem 0 2rem 0 !important;
     color: rgba(171, 171, 171, 0.324);
   }
@@ -17,22 +17,22 @@
 }
 
 .homepage-pallet-chart-bottom {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  padding: 1.5rem;
   gap: 1.5rem;
+  display: flex;
+  padding: 1.5rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
 
   .homepage-pallet-chart-img-wrapper {
+    width: 20%;
     display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
     flex-direction: row;
     justify-content: end;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 20%;
     flex-wrap: wrap-reverse;
-    margin: 0 auto;
   }
 
   .top-people-img {
@@ -72,8 +72,8 @@
   .top-user {
     width: 100%;
     padding: .25rem;
-    margin: .75rem auto;
     font-size: .9rem;
+    margin: .75rem auto;
   }
 }
 
@@ -84,7 +84,7 @@
   }
 
   .homepage-pallet-chart-bottom {
-    padding: 0rem;
     gap: 0;
+    padding: 0rem;
   }
 }

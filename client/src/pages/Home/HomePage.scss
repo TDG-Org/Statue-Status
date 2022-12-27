@@ -14,6 +14,19 @@
     color: rgba(171, 171, 171, 0.324);
   }
 
+  // View All Button 
+  .view-all-ppl-btn-wrapper {
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+    .view-all-ppl-btn {
+      color: $accent-clr;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+
 }
 
 .homepage-pallet-chart-bottom {

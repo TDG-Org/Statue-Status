@@ -7,7 +7,11 @@ import "./PeoplePage.scss";
 
 const PeoplePage = () => {
   return (
-    <div>PeoplePage</div>
+    <div className="PeoplePage page">
+      <h1>All People</h1>
+      <hr />
+      {/* <h2>Richest</h2>  */}
+    </div>
   );
 };
 

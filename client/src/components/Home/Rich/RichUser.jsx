@@ -4,7 +4,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Images/SVGs 
-import { Brilliance } from "../../assets/imgs";
 
 const RichUser = ({rank, name, money, image, country}) => {
 

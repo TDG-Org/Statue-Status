@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 
 // Components
 import {
+  Pie,
   Chart,
   RichList,
-  Pie
-} from "../../components/Rich";
+} from "../../components";
+
+// Link 
+import { Link } from "react-router-dom";
 
 // Time 
 import { format } from "date-fns";
@@ -14,7 +17,7 @@ import { format } from "date-fns";
 import "./HomePage.scss";
 
 // temp data 
-import { data } from "../../DemoData";
+import { data, allDemoRichestData } from "../../DemoData";
 
 // Funtion that sorts Data my property (money) 
 function compare( a, b ) {
@@ -165,29 +168,61 @@ const HomePage = () => {
       
       <h2>Top 5 Global</h2>
 
-      <div className="pallet">
+      <div className="container">
 
-        {/* Tabs  */}
+        <div className="pallet">
 
-        <div className="homepage-pallet-chart-bottom">
+          {/* Tabs  */}
 
-        {/* Chart */}
-          <Chart richestData={richestData} />
+          <div className="homepage-pallet-chart-bottom">
 
-          <Pie richestData={richestData} />
+            {/* Chart */}
+            <Chart richestData={richestData} />
+
+            <Pie richestData={richestData} />
+            
+          </div>
+
+          {/* View All Button  */}
+          <div className="view-all-ppl-btn-wrapper">
+            <Link
+              to="/richest"
+              className="view-all-ppl-btn"
+            >
+              View All Richest
+            </Link>
+          </div>
+          <div className="view-all-ppl-btn-wrapper">
+            <Link
+              to="/powerful"
+              className="view-all-ppl-btn"
+            >
+              View All Powerful
+            </Link>
+          </div>
+          <div className="view-all-ppl-btn-wrapper">
+            <Link
+              to="/saved"
+              className="view-all-ppl-btn"
+            >
+              View Saved
+            </Link>
+          </div>
           
+        </div>
+
+        <h2>All Individuals</h2>
+        
+        <div className="pallet">
+
+          {/* The Richest People List  */}
+          <RichList allRichestData={allRichestData} className="reveal"/>
+
         </div>
         
       </div>
 
-      <h2>All Individuals</h2>
-      
-      <div className="pallet">
-
-        {/* The Richest People List  */}
-        <RichList allRichestData={allRichestData} className="reveal"/>
-
-      </div>
+      <hr />
 
     </div>
   );

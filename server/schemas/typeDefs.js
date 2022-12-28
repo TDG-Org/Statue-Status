@@ -31,6 +31,7 @@ const typeDefs = gql`
   }
 
   type Accessories {
+    _id: ID
     headline: String!
     birthday: String!
     location: String!
@@ -39,16 +40,19 @@ const typeDefs = gql`
   }
 
   type SocialLinks {
+    _id: ID
     links: String!
   }
 
   type Connections {
+    _id: ID
     avatar: String!
     name: String!
     socialLink: String!
   }
 
   type Customizations {
+    _id: ID
     background: String!
     font: String!
     primaryColor: String!

@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Profile } = require("../models");
+const { User, Profile, Statue } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -95,6 +95,36 @@ const resolvers = {
                 return profile;
             }
             throw new AuthenticationError("You need to be logged in!");
+        },
+        addStatueName: async (parent, { name }, context) => {
+            if (context.profile) {
+                const statue = await Statue.create({
+                    name,
+                });
+
+                await Profile.findOneAndUpdate(
+                    { _id: context.profile._id },
+                    { $addToSet: { statues: statue._id } }
+                );
+
+                return statue;
+            }
+            throw new AuthenticationError("You need a profile!");
+        },
+        addStatueBio: async (parent, { bio }, context) => {
+            if (context.profile) {
+                const statue = await Statue.create({
+                    bio,
+                });
+
+                await Profile.findOneAndUpdate(
+                    { _id: context.profile._id },
+                    { $addToSet: { statues: statue._id } }
+                );
+
+                return statue;
+            }
+            throw new AuthenticationError("You need a profile!");
         },
         removeProfile: async (parent, { profileId }, context) => {
             if (context.user) {

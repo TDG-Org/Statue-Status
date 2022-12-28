@@ -230,9 +230,9 @@
          .company-input,
          .relationship-input {
           flex: 1;
-          min-width: 218px;
           width: 100%;
           border: none;
+          min-width: 218px;
           padding: .35rem 1rem;
           border-radius: 2.75px;
           color: $mid-light-clr;
@@ -278,12 +278,12 @@
         }
 
         .bottom-editable-sect-content-btns {
+          gap: 1.5rem;
           width: 100%;
           display: flex;
           flex-direction: row;
           margin: 2.25rem auto;
           justify-content: center;
-          gap: 1.5rem;
           button {
             color: $mid-light-clr;
             padding: .35rem 1.25rem;
@@ -359,8 +359,8 @@
       padding: .5rem .35rem;
       justify-content: center;
       background: $mid-dark-clr;
-      border: 1px solid $low-dark-clr;
       transition: all 250ms ease-in;
+      border: 1px solid $low-dark-clr;
 
       i {
         color: $mid-light-clr;
@@ -387,15 +387,15 @@
         width: 100%;
         padding: .5rem;
         li {
-          overflow: hidden;
-          display: flex;
-          flex-direction: row;
-          position: relative;
           width: 80%;
+          display: flex;
+          overflow: hidden;
+          position: relative;
           margin: .5rem auto;
           max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
+          flex-direction: row;
           padding: .5rem 1rem;
           background: $mid-dark-clr;
           transition: all 250ms ease-in;
@@ -405,19 +405,19 @@
             display: flex;
             flex-wrap: nowrap;
             text-align: center;
+            align-items: center;
             flex-direction: row;
             color: $mid-light-clr;
             justify-content: flex-start;
-            align-items: center;
             .social-username {
               margin: 0 .2rem;
             }
           }
           .statue-social-x {
-            display: none;
-            position: absolute;
             top: .5rem;
             right: .5rem;
+            display: none;
+            position: absolute;
             &:hover {
               cursor: pointer;
               color: $mid-red-clr;
@@ -454,11 +454,11 @@
         // Adding a New Social 
         .add-social-link-li {
           display: flex;
+          max-height: unset;
+          align-items: center;
+          margin: .75rem auto;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
-          max-height: unset;
-          margin: .75rem auto;
           border: 1px solid $mid-light-clr;
 
           input {
@@ -474,8 +474,8 @@
           .add-social-link-sect,
            .add-social-platform-sect,
            .add-social-username-sect {
+             width: 90%;
             margin: .75rem 0;
-            width: 90%;
           }
 
           .add-social-link,
@@ -490,13 +490,13 @@
           }
 
           .add-social-btns {
+            width: 100%;
             gap: 1.25rem;
             display: flex;
             margin: .75rem 0;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            width: 100%;
             button {
               border: none;
               color: $light-clr;
@@ -580,8 +580,8 @@
 
       // Prime Sect 
       .primary-sect {
-        width: 100%;
         gap: 1rem;
+        width: 100%;
 
         .statue-name,
          .statue-name-edit, 
@@ -655,5 +655,4 @@
       }
     }
   }
-  
 }

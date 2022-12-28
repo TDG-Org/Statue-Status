@@ -25,8 +25,8 @@ const typeDefs = gql`
     bio: String!
     accessories: Accessory!
     socialLinks: [SocialLink]!
-    connections: [Connections]!
-    customizations: Customizations!
+    connections: [Connection]!
+    customizations: Customization!
     statueLink: String!
   }
 
@@ -44,14 +44,14 @@ const typeDefs = gql`
     link: String!
   }
 
-  type Connections {
+  type Connection {
     _id: ID
     avatar: String!
     name: String!
     socialLink: String!
   }
 
-  type Customizations {
+  type Customization {
     _id: ID
     background: String!
     font: String!

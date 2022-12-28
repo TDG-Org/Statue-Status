@@ -18,6 +18,7 @@ import {
 import {
   HomePage,
   AboutPage,
+  SavedPage,
   RichestPage,
   ProfilePage,
   DiscoverPage,
@@ -64,6 +65,9 @@ const StatueStatus = () => {
             {/* Follow Lists Pages */}
             <Route path="/followers" element={<FollowersPage />} />
             <Route path="/following" element={<FollowingPage />} />
+
+            {/* Profile Extend Pages */}
+            <Route path="/saved" element={<SavedPage />} />
 
           </Routes>
         </div>

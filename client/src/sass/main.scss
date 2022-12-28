@@ -156,6 +156,33 @@ p, span, em, li, a, i, div {
   background: linear-gradient(to right, red, purple);
 }
 
+// List Block 
+
+.li-block {
+  width: 90%;
+  display: flex;
+  padding: .5rem;
+  margin: 1rem auto;
+  flex-wrap: nowrap;
+  position: relative;
+  border-radius: 8px;
+  flex-direction: row;
+  align-items: center;
+  transition: all 250ms ease;
+  justify-content: space-between;
+  border: 1px solid $low-dark-clr;
+  background-image: linear-gradient(to top, $mid-dark-clr, $mid-dark-clr);
+
+  &:hover {
+    border: 1px solid $mid-light-clr;
+    background-image: linear-gradient(to top, #00000013, #ffffff05);
+
+    img {
+      filter: contrast(115%);
+      border: 1px solid $prime-clr !important;
+    }
+  }
+}
 
 // Media Queries 
 

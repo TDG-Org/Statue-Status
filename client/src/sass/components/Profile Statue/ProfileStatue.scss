@@ -262,7 +262,6 @@
         }
 
         .relationship-input-other {
-          flex: 2;
           width: 100%;
           border: none;
           min-width: 218px;
@@ -408,7 +407,7 @@
             text-align: center;
             flex-direction: row;
             color: $mid-light-clr;
-            justify-content: start;
+            justify-content: flex-start;
             align-items: center;
             .social-username {
               margin: 0 .2rem;

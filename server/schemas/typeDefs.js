@@ -26,7 +26,7 @@ const typeDefs = gql`
   accessories: Accessories!
   socialLinks: [SocialLinks]!
   connections: [Connections]!
-  customBackground: customBackground!
+  customizations: Customizations!
   statueLink: statueLink!
   }
 
@@ -46,6 +46,13 @@ const typeDefs = gql`
     avatar: String!
     name: String!
     socialLink: String!
+  }
+
+  type Customizations {
+    background: String!
+    font: String!
+    primaryColor: String!
+    secondaryColor: String!
   }
 
   type Auth {

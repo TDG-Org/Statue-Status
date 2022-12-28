@@ -91,6 +91,10 @@ const typeDefs = gql`
     addConnectionAvatar(avatar: String): Connection
     addConnectionName(name: String): Connection
     addConnectionSocialLink(socialLink: String): Connection
+    addCustomizationBackground(background: String): Customization
+    addCustomizationFont(font: String): Customization
+    addCustomizationPrimaryColor(primaryColor: String): Customization
+    addCustomizationSecondaryColor(secondaryColor: String): Customization
   }
 `;
 

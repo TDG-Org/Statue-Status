@@ -24,7 +24,7 @@ const typeDefs = gql`
     name: String!
     bio: String!
     accessories: Accessories!
-    socialLinks: [SocialLinks]!
+    socialLinks: [SocialLink]!
     connections: [Connections]!
     customizations: Customizations!
     statueLink: String!
@@ -39,9 +39,9 @@ const typeDefs = gql`
     relationship: String!
   }
 
-  type SocialLinks {
+  type SocialLink {
     _id: ID
-    links: String!
+    link: String!
   }
 
   type Connections {
@@ -87,6 +87,7 @@ const typeDefs = gql`
     addLocation(location: String): Accessories
     addCompany(company: String): Accessories
     addRelationship(relationship: String): Accessories
+    addSocialLink(link: String): SocialLink
   }
 `;
 

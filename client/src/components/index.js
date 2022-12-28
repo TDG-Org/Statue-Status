@@ -5,6 +5,7 @@ import Nav from "./Nav";
 import User from "./User";
 import Aside from "./Aside";
 import Footer from "./Footer";
+import GoBackBtn from "./GoBackBtn";
 
 // Home Page 
 import { Pie, RichList, Chart } from "./Home";
@@ -42,6 +43,7 @@ export {
   Starter,
   Statues,
   RichList,
+  GoBackBtn,
   MyAccount,
   PowerUser,
   EditProfile,

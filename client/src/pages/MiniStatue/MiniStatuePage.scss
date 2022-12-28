@@ -5,8 +5,14 @@
 
 .MiniStatuePage {
  .go-back-btn {
-  margin: 0;
-  cursor: pointer;
+   margin: 0;
+   cursor: pointer;
+   width: fit-content;
+   color: $mid-light-clr;
+   i {
+   color: $mid-light-clr;
+    margin-right: .5rem;
+   }
   &:hover {
     color: $second-clr;
     i {

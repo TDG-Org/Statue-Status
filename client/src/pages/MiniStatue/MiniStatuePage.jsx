@@ -3,23 +3,17 @@ import React from "react";
 // Styles
 import "./MiniStatuePage.scss";
 
-// Navigation 
-import { useNavigate } from "react-router-dom";
+// Components
+import { GoBackBtn } from "../../components";
 
 const MiniStatuePage = () => {
-
-  const navigate = useNavigate();
-
-  function handleNavigateClick() {
-    navigate(-1);
-  }
 
   return (
     <div className="MiniStatuePage page">
       <h1 className="fade-title">Mini Statue</h1>
 
       <hr />
-      <p onClick={handleNavigateClick} className="go-back-btn"><i className="bi bi-arrow-left"></i> Home</p>
+      <GoBackBtn />
 
       <h2>Elon Musk</h2>
 

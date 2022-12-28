@@ -9,24 +9,35 @@
   width: 100%;
   height: auto;
   display: flex;
+  gap: 1rem;
 
   h2 {
     text-align: start;
     margin-bottom: 1rem;
   }
+  h4 {
+    text-align: start;
+    font-weight: normal;
+  }
 
   // --- Left Side --- 
 
   .mini-statue-card-content {
+    width: 65%;
     display: flex;
     flex-direction: column;
+    padding: .75rem 0;
+    p {
+      margin: 0;
+    }
   }
 
   // --- Right Side --- 
 
   .mini-statue-card-showcase {
+    width: 35%;
     .mini-statue-img {
-      width: 250px;
+      width: 90%;
       height: 250px;
       object-fit:cover;
      }

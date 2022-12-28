@@ -149,6 +149,8 @@ const HomePage = () => {
   function setupInterval(func, interval) {
     setInterval(func, interval);
   }
+
+  // retrieveRichest(); 
   
   useEffect(() => {
     console.log("Calling function retrieveAllRichest");

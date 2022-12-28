@@ -2,7 +2,18 @@ import React from "react";
 
 const SavedPage = () => {
   return (
-    <div>SavedPage</div>
+    <div className="SavedPage page">
+      <h1>Saved</h1>
+
+      <hr />
+
+      {/* Search Tool */}
+
+      {/* Saved List */}
+
+      <hr />
+      
+    </div>
   );
 };
 

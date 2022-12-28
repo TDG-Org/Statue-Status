@@ -179,7 +179,7 @@ const HomePage = () => {
             {/* Chart */}
             <Chart richestData={richestData} />
 
-            <Pie richestData={allDemoRichestData} />
+            <Pie richestData={richestData} />
             
           </div>
 
@@ -198,6 +198,14 @@ const HomePage = () => {
               className="view-all-ppl-btn"
             >
               View All Powerful
+            </Link>
+          </div>
+          <div className="view-all-ppl-btn-wrapper">
+            <Link
+              to="/saved"
+              className="view-all-ppl-btn"
+            >
+              View Saved
             </Link>
           </div>
           

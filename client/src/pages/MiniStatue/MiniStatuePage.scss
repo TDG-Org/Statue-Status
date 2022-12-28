@@ -9,11 +9,27 @@
   width: 100%;
   height: auto;
   display: flex;
- }
 
- .mini-statue-img {
-  width: 250px;
-  height: 250px;
-  object-fit:cover;
+  h2 {
+    text-align: start;
+    margin-bottom: 1rem;
+  }
+
+  // --- Left Side --- 
+
+  .mini-statue-card-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // --- Right Side --- 
+
+  .mini-statue-card-showcase {
+    .mini-statue-img {
+      width: 250px;
+      height: 250px;
+      object-fit:cover;
+     }
+  }
  }
 }

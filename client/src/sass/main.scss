@@ -162,9 +162,9 @@ p, span, em, li, a, i, div {
 // Go Back Button 
 
 .go-back-btn {
-  margin: 0;
   cursor: pointer;
   width: fit-content;
+  margin-bottom: 1rem;
   color: $mid-light-clr;
   i {
     margin-right: .5rem;

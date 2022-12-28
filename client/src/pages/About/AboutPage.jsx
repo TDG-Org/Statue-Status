@@ -27,6 +27,8 @@ const AboutPage = () => {
 
       </div>
       
+      <hr />
+      
     </div>
   );
 };

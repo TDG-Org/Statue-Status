@@ -7,11 +7,13 @@ const PowerfulPage = () => {
   return (
     <div className="PowerfulPage page">
       <h1>Richest People</h1>
+      
       <hr />
 
       <PowerUser />
 
       <hr />
+
     </div>
   );
 };

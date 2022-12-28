@@ -22,6 +22,8 @@ const ProfilePage = () => {
       {/* Profile Statue Section  */}
       <ProfileStatue />
 
+      <hr />
+
     </div>
   );
 };

@@ -49,6 +49,14 @@ a {
   text-decoration: none !important;
 }
 
+.page {
+  hr {
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
+
 textarea {
   outline: none;
   resize: none !important;

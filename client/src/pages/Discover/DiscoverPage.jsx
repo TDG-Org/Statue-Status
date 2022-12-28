@@ -16,6 +16,7 @@ const DiscoverPage = () => {
   return (
     <div className="DiscoverPage page">
       <h1>Discover</h1>
+
       <hr />
       
       <h3>Exploration And Connection</h3>
@@ -28,6 +29,9 @@ const DiscoverPage = () => {
         <Friends />
 
       </div>
+
+      <hr />
+      
     </div>
   );
 };

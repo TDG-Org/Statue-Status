@@ -23,6 +23,8 @@ const SettingsPage = () => {
       {/* General Settings  */}
       <General />
 
+      <hr />
+      
     </div>
   );
 };

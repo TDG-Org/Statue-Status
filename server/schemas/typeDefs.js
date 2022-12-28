@@ -30,6 +30,14 @@ const typeDefs = gql`
   statueLink: statueLink!
   }
 
+  type Accessories {
+    headline: String!
+    birthday: String!
+    location: String!
+    company: String!
+    relationship: String!
+  }
+
   type Auth {
     token: ID!
     user: User

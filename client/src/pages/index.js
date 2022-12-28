@@ -1,5 +1,7 @@
 // Core Page Components File to Export as bundle
 
+import MiniBioPage from "./MiniBio/MiniBioPage";
+
 // Import
 import AboutPage from "./About/AboutPage";
 import DiscoverPage from "./Discover/DiscoverPage";
@@ -18,4 +20,8 @@ export {
   ProfilePage,
   SettingsPage,
   StatueStatus
+};
+
+export {
+  MiniBioPage
 };

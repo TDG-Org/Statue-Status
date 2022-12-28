@@ -1,8 +1,8 @@
 import React from "react";
 
-const MiniBioPage = () => {
+const MiniStatuePage = () => {
   return (
-    <div className="MiniBioPage page">
+    <div className="MiniStatuePage page">
       <h1>A Quick Look at [Person&apos;s Name]</h1>
 
       <p><i className="bi bi-arrow-left"></i> Home</p>
@@ -18,4 +18,4 @@ const MiniBioPage = () => {
   );
 };
 
-export default MiniBioPage;
+export default MiniStatuePage;

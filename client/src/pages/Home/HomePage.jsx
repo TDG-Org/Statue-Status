@@ -194,7 +194,7 @@ const HomePage = () => {
           </div>
           <div className="view-all-ppl-btn-wrapper">
             <Link
-              to="/mini-bio"
+              to="/mini-statue"
               className="view-all-ppl-btn"
             >
               View Person

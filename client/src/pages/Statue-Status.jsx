@@ -21,12 +21,12 @@ import {
   SavedPage,
   RichestPage,
   ProfilePage,
-  MiniBioPage,
   DiscoverPage,
   PowerfulPage,
   SettingsPage,
   FollowersPage,
   FollowingPage,
+  MiniStatuePage,
 } from "./";
 
 // Styles 
@@ -62,7 +62,7 @@ const StatueStatus = () => {
             {/* Home Extend Pages  */}
             <Route path="/richest" element={<RichestPage />} />
             <Route path="/powerful" element={<PowerfulPage />} />
-            <Route path="/mini-bio" element={<MiniBioPage />} />
+            <Route path="/mini-statue" element={<MiniStatuePage />} />
 
             {/* Follow Lists Pages */}
             <Route path="/followers" element={<FollowersPage />} />

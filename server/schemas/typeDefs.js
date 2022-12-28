@@ -20,14 +20,14 @@ const typeDefs = gql`
   }
 
   type Statue {
-  _id: ID
-  name: String!
-  bio: String!
-  accessories: Accessories!
-  socialLinks: [SocialLinks]!
-  connections: [Connections]!
-  customizations: Customizations!
-  statueLink: statueLink!
+    _id: ID
+    name: String!
+    bio: String!
+    accessories: Accessories!
+    socialLinks: [SocialLinks]!
+    connections: [Connections]!
+    customizations: Customizations!
+    statueLink: statueLink!
   }
 
   type Accessories {

@@ -1,8 +1,15 @@
 import React from "react";
 
+// Components 
+import { PowerUser } from "./";
+
 const PowerList = () => {
   return (
-    <div>PowerList</div>
+    <ul>
+
+      <PowerUser />
+
+    </ul>
   );
 };
 

@@ -1,8 +1,8 @@
 // Import
 
 // From Rich Folder 
-import Pie from "./Rich/Pie";
-import Chart from "./Rich/Chart";
+import Pie from "./Pie";
+import Chart from "./Chart";
 import RichList from "./Rich/RichList";
 
 // Export 

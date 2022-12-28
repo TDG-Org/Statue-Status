@@ -6,13 +6,20 @@
 .MiniStatuePage {
  .go-back-btn {
   margin: 0;
+  cursor: pointer;
+  &:hover {
+    color: $second-clr;
+    i {
+      color: $second-clr;
+    }
+  }
  }
 
  .mini-statue-card {
   width: 100%;
   height: auto;
   display: flex;
-  
+
  }
 
  .mini-statue-img {

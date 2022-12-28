@@ -33,7 +33,13 @@ const statueSchema = new Schema({
     ],
     connections: [
         {
-            links: {
+            avatar: {
+                type: String
+            },
+            name: {
+                type: String
+            },
+            socialLink: {
                 type: String
             }
         }

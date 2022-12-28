@@ -38,6 +38,16 @@ const typeDefs = gql`
     relationship: String!
   }
 
+  type SocialLinks {
+    links: String!
+  }
+
+  type connections: {
+    avatar: String!
+    name: String!
+    socialLink: String!
+  }
+
   type Auth {
     token: ID!
     user: User

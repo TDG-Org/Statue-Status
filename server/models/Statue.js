@@ -7,23 +7,50 @@ const statueSchema = new Schema({
     bio: {
         type: String
     },
-    accessories: [
-        {
+    accessories: {
+        headline: {
+            type: String
+        },
+        birthday: {
+            type: String
+        },
+        location: {
+            type: Stirng
+        },
+        company: {
+            type: String
+        },
+        relationship: {
             type: String
         }
-    ],
+    },
     socialLinks: [
         {
-            type: String
+            links: {
+                type: String
+            }
         }
     ],
     connections: [
         {
-            type: String
+            links: {
+                type: String
+            }
         }
     ],
-    customBackground: {
-        type: String
+    customizations: {
+        background: {
+            type: String
+        },
+        font: {
+            type: String
+        },
+        primaryColor: {
+            type: String
+        },
+        secondaryColor: {
+            type: String
+        }
     },
     statueLink: {
         type: String

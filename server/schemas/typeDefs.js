@@ -23,11 +23,11 @@ const typeDefs = gql`
   _id: ID
   name: String!
   bio: String!
-  accessories: [Accessories]!
+  accessories: Accessories!
   socialLinks: [SocialLinks]!
   connections: [Connections]!
-  customBackground: [customBackground]!
-  statueLink: [statueLink]!
+  customBackground: customBackground!
+  statueLink: statueLink!
   }
 
   type Auth {
@@ -51,7 +51,6 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     editProfile(name: String!, bio: String!, avatar: String!): Profile
     removeProfile(profileId: ID!): Profile
-    addStatue
   }
 `;
 

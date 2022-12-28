@@ -186,7 +186,7 @@ const HomePage = () => {
           {/* View All Button  */}
           <div className="view-all-ppl-btn-wrapper">
             <Link
-              to="/Richest"
+              to="/richest"
               className="view-all-ppl-btn"
             >
               View All Richest
@@ -194,7 +194,7 @@ const HomePage = () => {
           </div>
           <div className="view-all-ppl-btn-wrapper">
             <Link
-              to="/Powerful"
+              to="/powerful"
               className="view-all-ppl-btn"
             >
               View All Powerful

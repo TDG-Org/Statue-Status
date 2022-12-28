@@ -8,6 +8,7 @@ import RichestPage from "./Richest/RichestPage";
 import DiscoverPage from "./Discover/DiscoverPage";
 import SettingsPage from "./Settings/SettingsPage";
 import PowerfulPage from "./Powerful/PowerfulPage";
+import { FollowersPage, FollowingPage } from "./Follow";
 
 // Wrapper For Pages 
 import StatueStatus from "./Statue-Status";
@@ -21,5 +22,7 @@ export {
   DiscoverPage,
   SettingsPage,
   PowerfulPage,
+  FollowersPage,
+  FollowingPage,
   StatueStatus,
 };

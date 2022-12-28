@@ -27,7 +27,7 @@ const typeDefs = gql`
     socialLinks: [SocialLinks]!
     connections: [Connections]!
     customizations: Customizations!
-    statueLink: statueLink!
+    statueLink: String!
   }
 
   type Accessories {

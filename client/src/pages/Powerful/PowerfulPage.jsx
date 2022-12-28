@@ -1,8 +1,18 @@
 import React from "react";
 
+// Components
+import { PowerUser } from "../../components";
+
 const PowerfulPage = () => {
   return (
-    <div>PowerfulPage</div>
+    <div className="PowerfulPage page">
+      <h1>Richest People</h1>
+      <hr />
+
+      <PowerUser />
+
+      <hr />
+    </div>
   );
 };
 

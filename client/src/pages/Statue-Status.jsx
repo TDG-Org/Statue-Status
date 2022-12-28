@@ -21,6 +21,7 @@ import {
   RichestPage,
   ProfilePage,
   DiscoverPage,
+  PowerfulPage,
   SettingsPage,
 } from "./index";
 
@@ -52,6 +53,7 @@ const StatueStatus = () => {
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/Richest" element={<RichestPage />} />
+            <Route path="/Powerful" element={<PowerfulPage />} />
           </Routes>
         </div>
 

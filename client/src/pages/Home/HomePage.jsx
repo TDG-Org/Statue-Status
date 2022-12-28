@@ -192,6 +192,14 @@ const HomePage = () => {
               View All Richest
             </Link>
           </div>
+          <div className="view-all-ppl-btn-wrapper">
+            <Link
+              to="/Powerful"
+              className="view-all-ppl-btn"
+            >
+              View All Powerful
+            </Link>
+          </div>
           
         </div>
 

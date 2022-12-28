@@ -24,6 +24,9 @@ import { General, MyAccount } from "./Settings";
 // About Page 
 import { Intro, Starter, Statues } from "./About";
 
+// Powerful Page 
+import { PowerUser } from "./Powerful";
+
 // Export 
 export {
   Pie,
@@ -40,6 +43,7 @@ export {
   Statues,
   RichList,
   MyAccount,
+  PowerUser,
   EditProfile,
   ProfileStatue,
 };

@@ -6,7 +6,7 @@ import "./RichestPage.scss";
 // Images/SVGs
 
 // Demo Data 
-import { data } from "../../DemoData";
+import { allDemoRichestData } from "../../DemoData";
 
 // Components 
 import { RichList } from "../../components";
@@ -18,7 +18,7 @@ const RichestPage = () => {
       <hr />
 
       {/* List Container  */}
-      <RichList allRichestData={data} className="reveal"/>
+      <RichList allRichestData={allDemoRichestData} className="reveal"/>
 
       <hr />
 

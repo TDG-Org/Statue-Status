@@ -17,7 +17,7 @@ import { format } from "date-fns";
 import "./HomePage.scss";
 
 // temp data 
-import { data } from "../../DemoData";
+import { data, allDemoRichestData } from "../../DemoData";
 
 // Funtion that sorts Data my property (money) 
 function compare( a, b ) {
@@ -179,7 +179,7 @@ const HomePage = () => {
             {/* Chart */}
             <Chart richestData={richestData} />
 
-            <Pie richestData={richestData} />
+            <Pie richestData={allDemoRichestData} />
             
           </div>
 

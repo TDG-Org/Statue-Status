@@ -23,14 +23,14 @@ const typeDefs = gql`
     _id: ID
     name: String!
     bio: String!
-    accessories: Accessories!
+    accessories: Accessory!
     socialLinks: [SocialLink]!
     connections: [Connections]!
     customizations: Customizations!
     statueLink: String!
   }
 
-  type Accessories {
+  type Accessory {
     _id: ID
     headline: String!
     birthday: String!
@@ -82,11 +82,11 @@ const typeDefs = gql`
     removeProfile(profileId: ID!): Profile
     addStatueName(name: String): Statue
     addStatueBio(bio: String): Statue
-    addHeadline(headline: String): Accessories
-    addBirthday(birthday: String): Accessories
-    addLocation(location: String): Accessories
-    addCompany(company: String): Accessories
-    addRelationship(relationship: String): Accessories
+    addHeadline(headline: String): Accessory
+    addBirthday(birthday: String): Accessory
+    addLocation(location: String): Accessory
+    addCompany(company: String): Accessory
+    addRelationship(relationship: String): Accessory
     addSocialLink(link: String): SocialLink
   }
 `;

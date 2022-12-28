@@ -7,6 +7,7 @@ import ProfilePage from "./Profile/ProfilePage";
 import RichestPage from "./Richest/RichestPage";
 import DiscoverPage from "./Discover/DiscoverPage";
 import SettingsPage from "./Settings/SettingsPage";
+import PowerfulPage from "./Powerful/PowerfulPage";
 
 // Wrapper For Pages 
 import StatueStatus from "./Statue-Status";
@@ -19,5 +20,6 @@ export {
   ProfilePage,
   DiscoverPage,
   SettingsPage,
+  PowerfulPage,
   StatueStatus,
 };

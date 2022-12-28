@@ -68,9 +68,7 @@ const typeDefs = gql`
     users: [User]
     user(username: String!): User
     user(userID: ID!): User
-    profiles(username: String!): Profile
     profile(profileId: ID!): Profile
-    statues(username: String!): Statue
     statue(statueId: ID!): Statue
     me: User
   }

@@ -5,17 +5,22 @@ import "./RichestPage.scss";
 
 // Images/SVGs
 
+// Demo Data 
+import { data } from "../../DemoData";
+
 // Components 
+import { RichList } from "../../components";
 
 const RichestPage = () => {
   return (
     <div className="RichestPage page">
       <h1>Richest People</h1>
-
       <hr />
 
-      {/* List  */}
+      {/* List Container  */}
+      <RichList allRichestData={data} className="reveal"/>
 
+      <hr />
 
     </div>
   );

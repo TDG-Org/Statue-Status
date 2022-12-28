@@ -88,6 +88,9 @@ const typeDefs = gql`
     addCompany(company: String): Accessory
     addRelationship(relationship: String): Accessory
     addSocialLink(link: String): SocialLink
+    addConnectionAvatar(avatar: String): Connection
+    addConnectionName(name: String): Connection
+    addConnectionSocialLink(socialLink: String): Connection
   }
 `;
 

@@ -21,12 +21,13 @@ import {
   SavedPage,
   RichestPage,
   ProfilePage,
+  MiniBioPage,
   DiscoverPage,
   PowerfulPage,
   SettingsPage,
   FollowersPage,
   FollowingPage,
-} from "./index";
+} from "./";
 
 // Styles 
 import "../sass/main.scss"; 
@@ -61,6 +62,7 @@ const StatueStatus = () => {
             {/* Home Extend Pages  */}
             <Route path="/richest" element={<RichestPage />} />
             <Route path="/powerful" element={<PowerfulPage />} />
+            <Route path="/mini-bio" element={<MiniBioPage />} />
 
             {/* Follow Lists Pages */}
             <Route path="/followers" element={<FollowersPage />} />

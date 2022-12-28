@@ -160,7 +160,7 @@ const HomePage = () => {
 
   return (
     <div className="HomePage page">
-      <h1 className="homepage-title">
+      <h1 className="fade-title">
         {format(new Date(), "EEEE, d MMMM yyyy")}
       </h1>
 

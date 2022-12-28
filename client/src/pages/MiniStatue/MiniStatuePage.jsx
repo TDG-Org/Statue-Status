@@ -1,15 +1,33 @@
 import React from "react";
 
+// Styles
+import "./MiniStatuePage.scss";
+
 const MiniStatuePage = () => {
   return (
     <div className="MiniStatuePage page">
-      <h1>A Quick Look at [Person&apos;s Name]</h1>
+      <h1 className="fade-title">Mini Statue</h1>
 
-      <p><i className="bi bi-arrow-left"></i> Home</p>
       <hr />
+      <p className="go-back-btn"><i className="bi bi-arrow-left"></i> Home</p>
+
+      <h2>Elon Musk</h2>
 
       <div className="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci, aperiam deserunt ipsam ad voluptatibus. Eos saepe sequi officia possimus aliquam in ipsam corrupti delectus maiores placeat neque, omnis vitae.</p>
+
+        <div className="pallet">
+
+          <div className="mini-statue-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci, aperiam deserunt ipsam ad voluptatibus. Eos saepe sequi officia possimus aliquam in ipsam corrupti delectus maiores placeat neque, omnis vitae.</p>
+            <br />
+
+            <img className="mini-statue-img" src="https://static.foxbusiness.com/foxbusiness.com/content/uploads/2022/04/thumbnail_elon-musk-twitter-.jpg" alt="" />
+          </div>
+
+        </div>
+
+        <div className="hello"></div>
+
       </div>
 
       <hr />

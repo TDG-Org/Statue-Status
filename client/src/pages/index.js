@@ -9,8 +9,8 @@ import RichestPage from "./Richest/RichestPage";
 import DiscoverPage from "./Discover/DiscoverPage";
 import SettingsPage from "./Settings/SettingsPage";
 import PowerfulPage from "./Powerful/PowerfulPage";
-import MiniStatuePage from "./MiniStatue/MiniStatuePage";
 import { FollowersPage, FollowingPage } from "./Follow";
+import MiniStatuePage from "./MiniStatue/MiniStatuePage";
 
 // Wrapper For Pages 
 import StatueStatus from "./Statue-Status";

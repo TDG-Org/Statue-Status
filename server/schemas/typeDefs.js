@@ -20,14 +20,43 @@ const typeDefs = gql`
   }
 
   type Statue {
-  _id: ID
-  name: String!
-  bio: String!
-  accessories: [Accessories]!
-  socialLinks: [SocialLinks]!
-  connections: [Connections]!
-  customBackground: [customBackground]!
-  statueLink: [statueLink]!
+    _id: ID
+    name: String!
+    bio: String!
+    accessories: Accessories!
+    socialLinks: [SocialLinks]!
+    connections: [Connections]!
+    customizations: Customizations!
+    statueLink: String!
+  }
+
+  type Accessories {
+    _id: ID
+    headline: String!
+    birthday: String!
+    location: String!
+    company: String!
+    relationship: String!
+  }
+
+  type SocialLinks {
+    _id: ID
+    links: String!
+  }
+
+  type Connections {
+    _id: ID
+    avatar: String!
+    name: String!
+    socialLink: String!
+  }
+
+  type Customizations {
+    _id: ID
+    background: String!
+    font: String!
+    primaryColor: String!
+    secondaryColor: String!
   }
 
   type Auth {
@@ -51,7 +80,6 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     editProfile(name: String!, bio: String!, avatar: String!): Profile
     removeProfile(profileId: ID!): Profile
-    addStatue
   }
 `;
 

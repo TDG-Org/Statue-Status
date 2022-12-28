@@ -23,14 +23,14 @@ const typeDefs = gql`
     _id: ID
     name: String!
     bio: String!
-    accessories: Accessories!
-    socialLinks: [SocialLinks]!
-    connections: [Connections]!
-    customizations: Customizations!
+    accessories: Accessory!
+    socialLinks: [SocialLink]!
+    connections: [Connection]!
+    customizations: Customization!
     statueLink: String!
   }
 
-  type Accessories {
+  type Accessory {
     _id: ID
     headline: String!
     birthday: String!
@@ -39,19 +39,19 @@ const typeDefs = gql`
     relationship: String!
   }
 
-  type SocialLinks {
+  type SocialLink {
     _id: ID
-    links: String!
+    link: String!
   }
 
-  type Connections {
+  type Connection {
     _id: ID
     avatar: String!
     name: String!
     socialLink: String!
   }
 
-  type Customizations {
+  type Customization {
     _id: ID
     background: String!
     font: String!
@@ -68,9 +68,7 @@ const typeDefs = gql`
     users: [User]
     user(username: String!): User
     user(userID: ID!): User
-    profiles(username: String!): Profile
     profile(profileId: ID!): Profile
-    statues(username: String!): Statue
     statue(statueId: ID!): Statue
     me: User
   }
@@ -82,6 +80,21 @@ const typeDefs = gql`
     editProfileBio(bio: String!): Profile
     editProfileAvatar(avatar: String!): Profile
     removeProfile(profileId: ID!): Profile
+    addStatueName(name: String): Statue
+    addStatueBio(bio: String): Statue
+    addHeadline(headline: String): Accessory
+    addBirthday(birthday: String): Accessory
+    addLocation(location: String): Accessory
+    addCompany(company: String): Accessory
+    addRelationship(relationship: String): Accessory
+    addSocialLink(link: String): SocialLink
+    addConnectionAvatar(avatar: String): Connection
+    addConnectionName(name: String): Connection
+    addConnectionSocialLink(socialLink: String): Connection
+    addCustomizationBackground(background: String): Customization
+    addCustomizationFont(font: String): Customization
+    addCustomizationPrimaryColor(primaryColor: String): Customization
+    addCustomizationSecondaryColor(secondaryColor: String): Customization
   }
 `;
 

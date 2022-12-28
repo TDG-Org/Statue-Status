@@ -48,11 +48,41 @@ const resolvers = {
 
             return { token, user };
         },
-        editProfile: async (parent, { name, bio, avatar }, context) => {
+        editProfileName: async (parent, { name }, context) => {
             if (context.user) {
                 const profile = await Profile.create({
                     name,
+                    profileAuthor: context.user.username,
+                });
+
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { profiles: profile._id } }
+                );
+
+                return profile;
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
+        editProfileBio: async (parent, { bio }, context) => {
+            if (context.user) {
+                const profile = await Profile.create({
                     bio,
+                    profileAuthor: context.user.username,
+                });
+
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { profiles: profile._id } }
+                );
+
+                return profile;
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
+        editProfileAvatar: async (parent, { avatar }, context) => {
+            if (context.user) {
+                const profile = await Profile.create({
                     avatar,
                     profileAuthor: context.user.username,
                 });

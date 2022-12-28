@@ -159,6 +159,25 @@ p, span, em, li, a, i, div {
   border: 1px solid $low-dark-clr;
 }
 
+// Go Back Button 
+
+.go-back-btn {
+  margin: 0;
+  cursor: pointer;
+  width: fit-content;
+  color: $mid-light-clr;
+  i {
+    margin-right: .5rem;
+    color: $mid-light-clr;
+  }
+  &:hover {
+    color: $second-clr;
+    i {
+      color: $second-clr;
+    }
+  }
+}
+
 // Alert 
 
 .ss-alert {

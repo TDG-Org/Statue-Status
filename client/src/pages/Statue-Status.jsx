@@ -16,11 +16,16 @@ import {
 
 // Pages 
 import {
-  AboutPage,
-  DiscoverPage,
   HomePage,
+  AboutPage,
+  SavedPage,
+  RichestPage,
   ProfilePage,
-  SettingsPage
+  DiscoverPage,
+  PowerfulPage,
+  SettingsPage,
+  FollowersPage,
+  FollowingPage,
 } from "./index";
 
 // Styles 
@@ -45,11 +50,25 @@ const StatueStatus = () => {
         {/* Every Page with their routes */}
         <div className="wrapper-page-sect">
           <Routes location={location} key={location.pathname}>
+
+            {/* Main Pages */}
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/discover" element={<DiscoverPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/about" element={<AboutPage />} />
+
+            {/* Home Extend Pages  */}
+            <Route path="/richest" element={<RichestPage />} />
+            <Route path="/powerful" element={<PowerfulPage />} />
+
+            {/* Follow Lists Pages */}
+            <Route path="/followers" element={<FollowersPage />} />
+            <Route path="/following" element={<FollowingPage />} />
+
+            {/* Profile Extend Pages */}
+            <Route path="/saved" element={<SavedPage />} />
+
           </Routes>
         </div>
 

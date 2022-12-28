@@ -6,6 +6,9 @@ import User from "./User";
 import Aside from "./Aside";
 import Footer from "./Footer";
 
+// Home Page 
+import { Pie, RichList, Chart } from "./Home";
+
 // Profile Page 
 import { EditProfile } from "./Profile";
 
@@ -21,11 +24,16 @@ import { General, MyAccount } from "./Settings";
 // About Page 
 import { Intro, Starter, Statues } from "./About";
 
+// Powerful Page 
+import { PowerUser } from "./Powerful";
+
 // Export 
 export {
+  Pie,
   Nav,
   User,
   Aside,
+  Chart,
   Intro,
   Footer,
   Friends,
@@ -33,7 +41,9 @@ export {
   General,
   Starter,
   Statues,
+  RichList,
   MyAccount,
+  PowerUser,
   EditProfile,
   ProfileStatue,
 };

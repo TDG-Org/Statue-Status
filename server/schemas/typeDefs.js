@@ -42,7 +42,7 @@ const typeDefs = gql`
     links: String!
   }
 
-  type connections: {
+  type Connections {
     avatar: String!
     name: String!
     socialLink: String!

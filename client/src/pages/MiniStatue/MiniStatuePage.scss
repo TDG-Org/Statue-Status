@@ -6,21 +6,22 @@
 .MiniStatuePage {
 
  .mini-statue-card {
+   gap: 1rem;
   width: 100%;
   height: auto;
   display: flex;
-  gap: 1rem;
 
   header {
+    gap: .5rem;
     display: flex;
     flex-direction: row;
-    // justify-content: center;
     align-items: center;
-    gap: .5rem;
+
     h2 {
       text-align: start;
       margin-bottom: 1rem;
     }
+
     span {
       text-align: center;
       font-size: 1.75rem;
@@ -43,6 +44,7 @@
     display: flex;
     flex-direction: column;
     padding: .75rem 0;
+
     p {
       margin: 0;
     }
@@ -51,30 +53,27 @@
   // --- Right Side --- 
 
   .mini-statue-card-showcase {
-    padding: .75rem 0;
-
-    flex-direction: column;
-    // justify-content: center;
-    display: flex;
-    align-items: center;
     width: 35%;
+    display: flex;
+    padding: .75rem 0;
+    align-items: center;
+    flex-direction: column;
     .mini-statue-img {
-      margin-top: 1rem;
-      border-radius: 8px;
       width: 90%;
       height: 250px;
-      object-fit:cover;
+      margin-top: 1rem;
+      object-fit: cover;
+      border-radius: 8px;
      }
 
      .mini-statue-money {
+       width: 100%;
+       margin: 1rem 0;
       font-size: 1.1rem;
-      width: 100%;
       text-align: center;
-      margin: 1rem 0;
       color: $second-clr;
       span {
       color: $second-clr;
-
       }
      }
   }

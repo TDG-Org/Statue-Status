@@ -13,6 +13,7 @@ const MiniStatuePage = () => {
       <h1 className="fade-title">Mini Statue</h1>
 
       <hr />
+
       <GoBackBtn />
 
       <div className="container">
@@ -52,8 +53,6 @@ const MiniStatuePage = () => {
           </div>
 
         </div>
-
-        <div className="hello"></div>
 
       </div>
 

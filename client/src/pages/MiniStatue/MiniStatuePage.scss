@@ -6,7 +6,7 @@
 .MiniStatuePage {
 
  .mini-statue-card {
-   gap: 1rem;
+  gap: 1rem;
   width: 100%;
   height: auto;
   display: flex;
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: .6rem;
+    margin-bottom: .15rem;
 
     h2 {
       text-align: start;
@@ -49,6 +49,7 @@
 
     p {
       margin: 0;
+      color: rgb(240, 240, 240);
     }
 
     .mini-statue-intro,
@@ -56,6 +57,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+      margin-bottom: 1.25rem;
 
       .mini-statue-about-more-btn {
         margin-top: 1rem;
@@ -116,4 +118,68 @@
      }
   }
  }
+}
+
+// Media Queries 
+
+@media screen and (max-width: 1150px) {
+  .MiniStatuePage {
+    .mini-statue-card {
+      gap: 0;
+      flex-direction: column;
+
+      header {
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .mini-statue-card-content,
+      .mini-statue-card-showcase {
+        padding: 0 1rem;
+        width: 100%;
+
+        .mini-statue-about-more-btn {
+          margin: 1rem auto;
+        }
+
+        .mini-statue-img {
+          min-width: 250px;
+          width: 75%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .MiniStatuePage {
+    .mini-statue-card {
+      // text-align: center; 
+
+      .mini-statue-title {
+        gap: 0;
+        flex-direction: column;
+        h2 {
+          margin-bottom: 0;
+        }
+        i {
+          display: none;
+        }
+        span {
+          font-size: 1.25rem;
+        }
+      }
+
+      h4 {
+        text-align: center;
+      }
+      
+      .mini-statue-card-content,
+      .mini-statue-card-showcase {
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+    }
+  }
 }

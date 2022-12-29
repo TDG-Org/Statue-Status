@@ -34,6 +34,7 @@ const MiniStatueCard = ({ data }) => {
         {/* Country  */}
         <span>United States</span>
       </header>
+      <hr />
       
       {/* Intro  */}
       <div className="mini-statue-intro">
@@ -48,9 +49,7 @@ const MiniStatueCard = ({ data }) => {
           </p>
           <p></p>
           <p></p>
-      </div>
-
-      <hr />
+        </div>
         
       <div className="mini-statue-about">
         <h4>Details</h4>
@@ -68,7 +67,8 @@ const MiniStatueCard = ({ data }) => {
         </p>
           <p className={` ${viewMoreActive ? "" : "hide"}`}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, pariatur quos similique repellat possimus atque impedit delectus aperiam ex tempora error esse aspernatur provident veritatis quasi temporibus nulla. Incidunt, nobis.
-        </p>
+          </p>
+          
         {/* See More  */}
         <a
           onClick={handleViewMoreClick}
@@ -76,8 +76,16 @@ const MiniStatueCard = ({ data }) => {
           href="#"
         >View More
         </a>
+          
+        {/* See Less  */}
+        <a
+          onClick={handleViewMoreClick}
+          className={`mini-statue-about-more-btn ${viewMoreActive ? "" : "hide"}`}
+          href="#"
+        >View Less
+        </a>
 
-      </div>  
+        </div>  
 
     </div>
 

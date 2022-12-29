@@ -3,6 +3,9 @@ import React, { useState } from "react";
 // Proptypes 
 import PropTypes from "prop-types";
 
+// Images/SVGs 
+import { NatePfp } from "../assets/imgs";
+
 const MiniStatueCard = ({ data }) => {
 
   // Validate Component's Props 

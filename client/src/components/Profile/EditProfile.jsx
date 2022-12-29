@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 
 // Link 
 import { Link } from "react-router-dom";
@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { UserInfo, Avatar, Middle } from "./";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery } from "../../assets/imgs";
 
 const EditProfile = () => {
 

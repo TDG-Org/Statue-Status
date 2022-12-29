@@ -21,6 +21,7 @@
 
     h2 {
       text-align: start;
+      width: fit-content;
       margin-bottom: 1rem;
     }
 
@@ -154,13 +155,12 @@
 @media screen and (max-width: 768px) {
   .MiniStatuePage {
     .mini-statue-card {
-      // text-align: center; 
-
       .mini-statue-title {
         gap: 0;
         flex-direction: column;
         h2 {
           margin-bottom: 0;
+          text-align: center;
         }
         i {
           display: none;

@@ -1,6 +1,15 @@
 import React from "react";
 
-const MiniStatueCard = () => {
+// Proptypes 
+import PropTypes from "prop-types";
+
+const MiniStatueCard = ({ data }) => {
+
+  // Validate Component's Props 
+  MiniStatueCard.propTypes = {
+    data: PropTypes.object,
+  };
+  
   return (
     <div className="mini-statue-card">
 

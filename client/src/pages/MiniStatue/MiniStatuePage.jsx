@@ -9,6 +9,12 @@ import {
   MiniStatueCard,
 } from "../../components";
 
+let data = {
+  name: "Nate",
+  company: "TDG",
+  intro: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam corrupti necessitatibus facilis. Quibusdam architecto autem earum ad ex alias provident libero adipisci aut, minima ullam molestias, ratione reprehenderit quam."
+};
+
 const MiniStatuePage = () => {
 
   return (
@@ -23,7 +29,7 @@ const MiniStatuePage = () => {
 
         <div className="pallet">
 
-          <MiniStatueCard />
+          <MiniStatueCard data={data} />
 
         </div>
 

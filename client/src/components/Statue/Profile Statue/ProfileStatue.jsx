@@ -7,7 +7,6 @@ import { ProfileNoStatue, ProfileStatuePrimary, ProfileStatueSecondary } from ".
 import "../../../sass/components/Profile Statue/ProfileStatue.scss";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery, NatePfp } from "../../../assets/imgs";
 
 // Sweet Alert 
 import swal from "sweetalert";

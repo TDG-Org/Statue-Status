@@ -17,7 +17,7 @@ import { format } from "date-fns";
 import "./HomePage.scss";
 
 // temp data 
-import { data, allDemoRichestData } from "../../DemoData";
+import { data } from "../../DemoData";
 
 // Funtion that sorts Data my property (money) 
 function compare( a, b ) {

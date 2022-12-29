@@ -59,11 +59,20 @@ const MiniStatueCard = () => {
       {/* Image  */}
       <img className="mini-statue-img" src="https://static.foxbusiness.com/foxbusiness.com/content/uploads/2022/04/thumbnail_elon-musk-twitter-.jpg" alt="" />
       {/* Data  */}
-      <div className="mini-statue-data">
-        <p className="mini-statue-money">$ <span>139867.256</span></p>
-        <p>Tesla, SpaceX</p>
-        <p>Austin, TX</p>
-      </div>
+      <ul className="mini-statue-data">
+        <li className="mini-statue-money">
+         Net Worth: <span>$139867.256</span> 
+          </li>
+          <li>
+            Richest Rank: <span className="mini-statue-rich-rank">1</span>
+          </li>
+        <li>
+          Tesla, SpaceX
+        </li>
+        <li>
+          Austin, TX
+        </li>
+      </ul>
 
     </div>
 

@@ -81,18 +81,38 @@
       height: 250px;
       margin-top: 1rem;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 8px; 
+      border: 1.5px solid $mid-dark-clr;
      }
 
-     .mini-statue-money {
-       width: 100%;
-       margin: 1rem 0;
-      font-size: 1.1rem;
+    //  Data 
+    .mini-statue-data {
+      display: flex;
+      flex-direction: column;
       text-align: center;
-      color: $second-clr;
+      padding: 0;
+      li {
+        margin-bottom: .75rem;
+        font-size: 1.05rem; 
+      }
+    }
+
+    .mini-statue-money {
+      width: 100%;
+      margin: 1rem 0;
+      text-align: center;
+      // color: $second-clr; 
+      letter-spacing: .8px;  
       span {
       color: $second-clr;
       }
+    }
+
+     .mini-statue-rich-rank {
+      padding: .10rem .7rem;
+      border-radius: 1rem;
+      margin: 0 .5rem;
+      background-color: $low-dark-clr;
      }
   }
  }

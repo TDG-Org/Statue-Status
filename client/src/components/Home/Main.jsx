@@ -74,7 +74,16 @@ const Main = ({ data }) => {
     }, 3000);
   }
 
-  // retrieveRichest(); 
+  // retrieveRichest();
+
+  function setupInterval(func, interval) {
+    setInterval(func, interval);
+  }
+  
+  useEffect(() => {
+    console.log("Calling function retrieveAllRichest");
+    setupInterval(retrieveRichest, 14400000);
+  }, []);
 
   return (
     <div className="pallet">

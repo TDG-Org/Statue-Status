@@ -17,7 +17,7 @@ const MiniStatueCard = ({ data }) => {
 
   // Function to toggle the view more 
   function handleViewMoreClick() {
-    setViewMoreActive(true);
+    setViewMoreActive(!viewMoreActive);
   }
   
   return (
@@ -75,7 +75,7 @@ const MiniStatueCard = ({ data }) => {
           className={`mini-statue-about-more-btn ${viewMoreActive ? "hide" : ""}`}
           href="#"
         >View More
-          </a>
+        </a>
 
       </div>  
 

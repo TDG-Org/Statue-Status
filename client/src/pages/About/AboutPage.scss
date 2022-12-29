@@ -88,7 +88,6 @@
     .container {
       .about-intro-sect-content,
       .about-sect-content {
-       flex-direction: column;
        p {
         width: 80%;
       }
@@ -99,6 +98,9 @@
         min-width: 180px;
         margin: .15rem auto;
       }
+     }
+     .about-sect-content {
+      flex-direction: column-reverse;
      }
     }
   }

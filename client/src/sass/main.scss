@@ -81,19 +81,20 @@ textarea {
   }
 }
 
-
-h1 {
-  font-size: 2.75rem;
-  margin: 2.5rem 0 1rem 0; 
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.3rem;
-}
-h4 {
-  font-weight: normal;
+.page {
+  h1 {
+    font-size: 2.75rem;
+    margin: 2.5rem 0 1rem 0; 
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-family: 'Manrope', sans-serif; 
+  }
 }
 
 p, span, em, li, a, i, div {

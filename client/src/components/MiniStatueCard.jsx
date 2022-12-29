@@ -10,7 +10,7 @@ const MiniStatueCard = ({ data }) => {
 
   // Validate Component's Props 
   MiniStatueCard.propTypes = {
-    data:  PropTypes.oneOfType([
+    data: PropTypes.oneOfType([
       PropTypes.array,
       PropTypes.object
     ]),

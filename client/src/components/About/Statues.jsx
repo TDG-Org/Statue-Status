@@ -7,7 +7,7 @@ const Statues = () => {
   return (
     <div className="about-sect" id="statuesSect">
 
-      <h2>What are Statues?</h2>
+      <h3>What are Statues?</h3>
 
       {/* Content  */}
       <div className="about-sect-content">

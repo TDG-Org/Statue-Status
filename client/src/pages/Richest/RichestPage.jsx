@@ -8,6 +8,12 @@ import "./RichestPage.scss";
 // Demo Data 
 import { allDemoRichestData } from "../../DemoData";
 
+// Function to sort array my money 
+import { moneySorter } from "../../utils/MiniFunc";
+
+// Sorts Data 
+allDemoRichestData.sort( moneySorter ).reverse();
+
 // Components 
 import { RichList, GoBackBtn } from "../../components";
 

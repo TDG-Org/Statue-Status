@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // Components
 import {
   Main,
+  News,
 } from "../../components";
 
 // Time 
@@ -36,9 +37,8 @@ const HomePage = () => {
 
         {/* News Pallet  */}
         <h3>Global Headlines</h3>
-        <div className="pallet">
 
-        </div>
+        <News />
         
       </div>
       <hr />

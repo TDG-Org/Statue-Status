@@ -14,19 +14,11 @@ import "./HomePage.scss";
 // temp data 
 import { data } from "../../DemoData";
 
-// Funtion that sorts Data my property (money) 
-function compare( a, b ) {
-  if ( a.money < b.money ){
-    return -1;
-  }
-  if ( a.money > b.money ){
-    return 1;
-  }
-  return 0;
-}
+// Function to sort array my money 
+import { moneySorter } from "../../utils/MiniFunc";
 
 // Sorts Data 
-data.sort( compare ).reverse();
+data.sort( moneySorter ).reverse();
 
 const HomePage = () => {
 

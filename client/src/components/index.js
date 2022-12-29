@@ -6,6 +6,7 @@ import User from "./User";
 import Aside from "./Aside";
 import Footer from "./Footer";
 import GoBackBtn from "./GoBackBtn";
+import MiniStatueCard from "./MiniStatueCard";
 
 // Home Page 
 import { Pie, RichList, Chart } from "./Home";
@@ -48,4 +49,5 @@ export {
   PowerUser,
   EditProfile,
   ProfileStatue,
+  MiniStatueCard,
 };

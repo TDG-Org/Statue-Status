@@ -4,7 +4,10 @@ import React from "react";
 import "./MiniStatuePage.scss";
 
 // Components
-import { GoBackBtn } from "../../components";
+import {
+  GoBackBtn,
+  MiniStatueCard,
+} from "../../components";
 
 const MiniStatuePage = () => {
 
@@ -19,6 +22,8 @@ const MiniStatuePage = () => {
       <div className="container">
 
         <div className="pallet">
+
+          <MiniStatueCard />
 
           <div className="mini-statue-card">
             <div className="mini-statue-card-content">

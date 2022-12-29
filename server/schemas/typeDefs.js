@@ -91,10 +91,10 @@ const typeDefs = gql`
     addConnectionAvatar(profileId: ID!, avatar: String): Profile
     addConnectionName(profileId: ID!, name: String): Profile
     addConnectionSocialLink(profileId: ID!, socialLink: String): Profile
-    addCustomizationBackground(background: String): Customization
-    addCustomizationFont(font: String): Customization
-    addCustomizationPrimaryColor(primaryColor: String): Customization
-    addCustomizationSecondaryColor(secondaryColor: String): Customization
+    addCustomizationBackground(profileId: ID!, background: String): Profile
+    addCustomizationFont(profileId: ID!, font: String): Profile
+    addCustomizationPrimaryColor(profileId: ID!, primaryColor: String): Profile
+    addCustomizationSecondaryColor(profileId: ID!, secondaryColor: String): Profile
   }
 `;
 

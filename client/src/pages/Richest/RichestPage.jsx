@@ -9,13 +9,14 @@ import "./RichestPage.scss";
 import { allDemoRichestData } from "../../DemoData";
 
 // Components 
-import { RichList } from "../../components";
+import { RichList, GoBackBtn } from "../../components";
 
 const RichestPage = () => {
   return (
     <div className="RichestPage page">
       <h1>Richest People</h1>
       <hr />
+      <GoBackBtn />
 
       {/* List Container  */}
       <RichList allRichestData={allDemoRichestData} className="reveal"/>

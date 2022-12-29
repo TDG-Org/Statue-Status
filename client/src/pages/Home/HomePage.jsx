@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import {
   Pie,
   Chart,
-  RichList,
 } from "../../components";
 
 // Link 

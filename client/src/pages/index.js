@@ -4,6 +4,7 @@
 import HomePage from "./Home/HomePage";
 import AboutPage from "./About/AboutPage";
 import SavedPage from "./Saved/SavedPage";
+import LoginPage from "./Richest/LoginPage";
 import ProfilePage from "./Profile/ProfilePage";
 import RichestPage from "./Richest/RichestPage";
 import DiscoverPage from "./Discover/DiscoverPage";
@@ -19,6 +20,7 @@ import StatueStatus from "./Statue-Status";
 export {
   HomePage,
   AboutPage,
+  LoginPage,
   SavedPage,
   RichestPage,
   ProfilePage,

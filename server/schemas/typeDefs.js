@@ -80,17 +80,17 @@ const typeDefs = gql`
     editProfileBio(bio: String!): Profile
     editProfileAvatar(avatar: String!): Profile
     removeProfile(profileId: ID!): Profile
-    addStatueName(profileId: ID!, name: String): Statue
-    addStatueBio(profileId: ID!, bio: String): Statue
-    addHeadline(headline: String): Accessory
-    addBirthday(birthday: String): Accessory
-    addLocation(location: String): Accessory
-    addCompany(company: String): Accessory
-    addRelationship(relationship: String): Accessory
-    addSocialLink(link: String): SocialLink
-    addConnectionAvatar(avatar: String): Connection
-    addConnectionName(name: String): Connection
-    addConnectionSocialLink(socialLink: String): Connection
+    addStatueName(profileId: ID!, name: String): Profile
+    addStatueBio(profileId: ID!, bio: String): Profile
+    addHeadline(profileId: ID!, headline: String): Profile
+    addBirthday(profileId: ID!, birthday: String): Profile
+    addLocation(profileId: ID!, location: String): Profile
+    addCompany(profileId: ID!, company: String): Profile
+    addRelationship(profileId: ID!, relationship: String): Profile
+    addSocialLink(profileId: ID!, link: String): Profile
+    addConnectionAvatar(profileId: ID!, avatar: String): Profile
+    addConnectionName(profileId: ID!, name: String): Profile
+    addConnectionSocialLink(profileId: ID!, socialLink: String): Profile
     addCustomizationBackground(background: String): Customization
     addCustomizationFont(font: String): Customization
     addCustomizationPrimaryColor(primaryColor: String): Customization

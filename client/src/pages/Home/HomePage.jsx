@@ -205,12 +205,9 @@ const HomePage = () => {
           
         </div>
 
-        <h2>All Individuals</h2>
+        <h2>Global Headlines</h2>
         
         <div className="pallet">
-
-          {/* The Richest People List  */}
-          <RichList allRichestData={allRichestData} className="reveal"/>
 
         </div>
         

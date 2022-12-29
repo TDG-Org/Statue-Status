@@ -2,7 +2,7 @@
 
 module.exports = {
   // Funtion that sorts Data my property (money)
-  moneySorter: () => {
+  moneySorter: (a, b) => {
     if (a.money < b.money) {
       return -1;
     }

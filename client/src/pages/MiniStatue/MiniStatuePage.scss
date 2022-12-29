@@ -11,10 +11,26 @@
   display: flex;
   gap: 1rem;
 
-  h2 {
-    text-align: start;
-    margin-bottom: 1rem;
+  header {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    h2 {
+      text-align: start;
+      margin-bottom: 1rem;
+    }
+    span {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: normal;
+      margin: .5rem 0 .75rem 0; 
+      color: rgb(118, 118, 118);
+      font-family: 'Kanit', sans-serif;
+    }
   }
+
   h4 {
     text-align: start;
     font-weight: normal;
@@ -35,11 +51,31 @@
   // --- Right Side --- 
 
   .mini-statue-card-showcase {
+    padding: .75rem 0;
+
+    flex-direction: column;
+    // justify-content: center;
+    display: flex;
+    align-items: center;
     width: 35%;
     .mini-statue-img {
+      margin-top: 1rem;
+      border-radius: 8px;
       width: 90%;
       height: 250px;
       object-fit:cover;
+     }
+
+     .mini-statue-money {
+      font-size: 1.1rem;
+      width: 100%;
+      text-align: center;
+      margin: 1rem 0;
+      color: $second-clr;
+      span {
+      color: $second-clr;
+
+      }
      }
   }
  }

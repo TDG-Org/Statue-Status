@@ -16,7 +16,10 @@ const Main = ({ data }) => {
 
   // Validate Component's Props 
   Main.propTypes = {
-    data: PropTypes.object,
+    data: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.object
+    ]),
   };
 
   const [richestData, setRichestData] = useState(data);

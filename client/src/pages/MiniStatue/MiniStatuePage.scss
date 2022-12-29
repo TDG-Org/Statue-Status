@@ -10,6 +10,7 @@
   width: 100%;
   height: auto;
   display: flex;
+  transition: all 250ms ease;
 
   header {
     gap: .5rem;
@@ -54,6 +55,16 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+
+      .mini-statue-about-more-btn {
+        padding-left: 1rem;
+        margin-top: 1rem;
+        color: $accent-clr;
+        width: fit-content;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
     }
   }
 

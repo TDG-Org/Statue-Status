@@ -3,10 +3,12 @@ import React from "react";
 const MiniStatueCard = () => {
   return (
     <div className="mini-statue-card">
+
+      {/* Left Side | Content */}
       <div className="mini-statue-card-content">
         
       {/* Title  */}
-        <header className="mini-statue-title">
+      <header className="mini-statue-title">
         {/* Name  */}
         <h2>Elon Musk</h2>
           <i className="bi bi-dash"></i>
@@ -29,33 +31,40 @@ const MiniStatueCard = () => {
           <p></p>
       </div>
 
-        
       <hr />
         
       <div className="mini-statue-about">
         <h4>More About</h4>
-          <p>
-            Musk, who says he&apos;s worried about population collapse, has nine children with three women including triplets and two sets of twins.
-          </p>
-          <p>
-            As a kid in South Africa, Musk taught himself to code; he sold his first game, Blastar, for about $500.
-          </p>
-          <p></p>
-          <p></p>
-          <p></p>
-        <hr />
-        <a href="#">See More</a>
+        <p>
+          Musk, who says he&apos;s worried about population collapse, has nine children with three women including triplets and two sets of twins.
+        </p>
+        <p>
+          As a kid in South Africa, Musk taught himself to code; he sold his first game, Blastar, for about $500.
+        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        {/* See More  */}
+          <a
+            className="mini-statue-about-more-btn"
+            href="#"
+          >See More
+          </a>
       </div>  
 
     </div>
 
-    <div className="mini-statue-card-showcase">
+    {/* Right Side | Showcase */}
+      <div className="mini-statue-card-showcase">
+      {/* Image  */}
       <img className="mini-statue-img" src="https://static.foxbusiness.com/foxbusiness.com/content/uploads/2022/04/thumbnail_elon-musk-twitter-.jpg" alt="" />
-      
-      <p className="mini-statue-money">$ <span>139867.256</span></p>
+      {/* Data  */}
+      <div className="mini-statue-data">
+        <p className="mini-statue-money">$ <span>139867.256</span></p>
+        <p>Tesla, SpaceX</p>
+        <p>Austin, TX</p>
+      </div>
 
-      <p>Tesla, SpaceX</p>
-      <p>Austin, TX</p>
     </div>
 
   </div>

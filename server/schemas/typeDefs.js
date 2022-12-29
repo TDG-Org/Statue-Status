@@ -80,8 +80,8 @@ const typeDefs = gql`
     editProfileBio(bio: String!): Profile
     editProfileAvatar(avatar: String!): Profile
     removeProfile(profileId: ID!): Profile
-    addStatueName(name: String): Statue
-    addStatueBio(bio: String): Statue
+    addStatueName(profileId: ID!, name: String): Statue
+    addStatueBio(profileId: ID!, bio: String): Statue
     addHeadline(headline: String): Accessory
     addBirthday(birthday: String): Accessory
     addLocation(location: String): Accessory

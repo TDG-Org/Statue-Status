@@ -96,35 +96,39 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addStatueName: async (parent, { name }, context) => {
-            if (context.profile) {
-                const statue = await Statue.create({
-                    name,
-                });
-
-                await Profile.findOneAndUpdate(
-                    { _id: context.profile._id },
-                    { $addToSet: { statues: statue._id } }
+        addStatueName: async (parent, { profileId, name }, context) => {
+            if (context.user) {
+                return Profile.findOneAndUpdate(
+                    { _id: profileId },
+                    {
+                        $addToSet: {
+                            statue: { name },
+                        },
+                    },
+                    {
+                        new: true,
+                        runValidators: true,
+                    }
                 );
-
-                return statue;
             }
-            throw new AuthenticationError("You need a profile!");
+            throw new AuthenticationError("You need to be logged in!");
         },
-        addStatueBio: async (parent, { bio }, context) => {
-            if (context.profile) {
-                const statue = await Statue.create({
-                    bio,
-                });
-
-                await Profile.findOneAndUpdate(
-                    { _id: context.profile._id },
-                    { $addToSet: { statues: statue._id } }
+        addStatueBio: async (parent, { profileId, bio }, context) => {
+            if (context.user) {
+                return Profile.findOneAndUpdate(
+                    { _id: profileId },
+                    {
+                        $addToSet: {
+                            statue: { bio },
+                        },
+                    },
+                    {
+                        new: true,
+                        runValidators: true,
+                    }
                 );
-
-                return statue;
             }
-            throw new AuthenticationError("You need a profile!");
+            throw new AuthenticationError("You need to be logged in!");
         },
         removeProfile: async (parent, { profileId }, context) => {
             if (context.user) {

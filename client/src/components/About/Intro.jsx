@@ -6,7 +6,7 @@ import Ranking from "../../assets/svgs/ranking.svg";
 const Intro = () => {
   return (
     <div className="about-sect about-intro-sect" id="introSect">
-      <h1>What is Statue Status?</h1>
+      <h2>What is Statue Status?</h2>
 
       <hr />
 

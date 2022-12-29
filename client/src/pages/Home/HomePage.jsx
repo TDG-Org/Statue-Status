@@ -31,11 +31,11 @@ const HomePage = () => {
       <div className="container">
 
         {/* Main Pallet  */}
-        <h2>Top 5 Global</h2>
+        <h3>Top 5 Global</h3>
         <Main data={data} /> 
 
         {/* News Pallet  */}
-        <h2>Global Headlines</h2>
+        <h3>Global Headlines</h3>
         <div className="pallet">
 
         </div>

@@ -10,7 +10,7 @@ const Starter = () => {
   return (
     <div className="about-sect" id="getStartedSect">
 
-      <h2>Lets Get Started</h2>
+      <h3>Lets Get Started</h3>
 
       {/* Content  */}
       <div className="about-sect-content">

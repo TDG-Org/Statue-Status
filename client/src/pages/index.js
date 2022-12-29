@@ -1,7 +1,5 @@
 // Core Page Components File to Export as bundle
 
-import MiniBioPage from "./MiniBio/MiniBioPage";
-
 // Import
 import HomePage from "./Home/HomePage";
 import AboutPage from "./About/AboutPage";
@@ -12,6 +10,7 @@ import DiscoverPage from "./Discover/DiscoverPage";
 import SettingsPage from "./Settings/SettingsPage";
 import PowerfulPage from "./Powerful/PowerfulPage";
 import { FollowersPage, FollowingPage } from "./Follow";
+import MiniStatuePage from "./MiniStatue/MiniStatuePage";
 
 // Wrapper For Pages 
 import StatueStatus from "./Statue-Status";
@@ -28,9 +27,6 @@ export {
   PowerfulPage,
   FollowersPage,
   FollowingPage,
+  MiniStatuePage,
   StatueStatus,
-};
-
-export {
-  MiniBioPage
 };

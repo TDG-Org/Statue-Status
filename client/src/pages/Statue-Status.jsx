@@ -26,7 +26,8 @@ import {
   SettingsPage,
   FollowersPage,
   FollowingPage,
-} from "./index";
+  MiniStatuePage,
+} from "./";
 
 // Styles 
 import "../sass/main.scss"; 
@@ -61,6 +62,7 @@ const StatueStatus = () => {
             {/* Home Extend Pages  */}
             <Route path="/richest" element={<RichestPage />} />
             <Route path="/powerful" element={<PowerfulPage />} />
+            <Route path="/mini-statue" element={<MiniStatuePage />} />
 
             {/* Follow Lists Pages */}
             <Route path="/followers" element={<FollowersPage />} />

@@ -62,16 +62,29 @@ textarea {
   resize: none !important;
 }
 
-h1, h2, h3, h4 {
-  color: $light-clr;
-  text-align: center;
-  font-weight: bold !important;
-  font-family: 'Kanit', sans-serif;
-  margin: 2.5rem 0 1rem 0 !important; 
+.page {
+  h1, h2, h3, h4 {
+    color: $light-clr;
+    font-weight: bold;
+    text-align: center;
+    margin: .5rem 0 .75rem 0; 
+    font-family: 'Kanit', sans-serif;
+  }
 
+  .fade-title {
+    font-size: 3rem;
+    margin: .5rem 0;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+    color: rgba(171, 171, 171, 0.324);
+  }
 }
+
+
 h1 {
   font-size: 2.75rem;
+  margin: 2.5rem 0 1rem 0; 
 }
 h2 {
   font-size: 2rem;
@@ -80,7 +93,7 @@ h3 {
   font-size: 1.3rem;
 }
 h4 {
-  font-weight: normal !important;
+  font-weight: normal;
 }
 
 p, span, em, li, a, i, div {
@@ -144,6 +157,25 @@ p, span, em, li, a, i, div {
   margin: .75rem 0 3rem 0;
   background-color: $mid-dark-clr;
   border: 1px solid $low-dark-clr;
+}
+
+// Go Back Button 
+
+.go-back-btn {
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: 1rem;
+  color: $mid-light-clr;
+  i {
+    margin-right: .5rem;
+    color: $mid-light-clr;
+  }
+  &:hover {
+    color: $second-clr;
+    i {
+      color: $second-clr;
+    }
+  }
 }
 
 // Alert 

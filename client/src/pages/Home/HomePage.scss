@@ -5,15 +5,6 @@
 
 .HomePage {
 
-  .homepage-title {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 3px;
-    margin: .5rem 0 2rem 0 !important;
-    color: rgba(171, 171, 171, 0.324);
-  }
-
   // View All Button 
   .view-all-ppl-btn-wrapper {
     width: 100%;
@@ -36,34 +27,6 @@
   flex-direction: row;
   align-items: center;
   padding: 1.5rem auto;
-
-  .homepage-pallet-chart-img-wrapper {
-    width: 20%;
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    justify-content: end;
-    flex-wrap: wrap-reverse;
-  }
-
-  .top-people-img {
-    width: 100%;
-    margin: 0 auto; 
-    border-radius: 8px;
-    box-shadow:
-      -10px -10px 0px -3.5px $second-clr,
-      10px 10px 0 -3.5px $prime-clr;
-      transition: all 500ms ease;
-
-      &:hover {
-        filter: contrast(110%);
-        box-shadow:
-          -10px -10px 0px -5px $prime-clr,
-          10px 10px 0 -5px $second-clr;
-      }
-  }
 }
 
 // Media Query 

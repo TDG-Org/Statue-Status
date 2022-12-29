@@ -1,0 +1,119 @@
+// Mini Statue Page SASS file 
+
+// SCSS Variables 
+@import "../../sass/variables.scss";
+
+.MiniStatuePage {
+
+ .mini-statue-card {
+   gap: 1rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  transition: all 250ms ease;
+
+  header {
+    gap: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: .6rem;
+
+    h2 {
+      text-align: start;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: normal;
+      margin: .5rem 0 .75rem 0; 
+      color: rgb(118, 118, 118);
+      font-family: 'Kanit', sans-serif;
+    }
+  }
+
+  h4 {
+    text-align: start;
+    font-weight: normal;
+  }
+
+  // --- Left Side --- 
+
+  .mini-statue-card-content {
+    width: 65%;
+    display: flex;
+    padding: .75rem 0;
+    flex-direction: column;
+
+    p {
+      margin: 0;
+    }
+
+    .mini-statue-intro,
+    .mini-statue-about {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .mini-statue-about-more-btn {
+        margin-top: 1rem;
+        padding-left: 1rem;
+        color: $accent-clr;
+        width: fit-content;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+
+  // --- Right Side --- 
+
+  .mini-statue-card-showcase {
+    width: 35%;
+    display: flex;
+    padding: .75rem 0;
+    align-items: center;
+    flex-direction: column;
+    .mini-statue-img {
+      width: 90%;
+      height: 250px;
+      margin-top: 1rem;
+      object-fit: cover;
+      border-radius: 8px; 
+      border: 1.5px solid $mid-dark-clr;
+     }
+
+    //  Data 
+    .mini-statue-data {
+      padding: 0;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      li {
+        font-size: 1.05rem; 
+        margin-bottom: .75rem;
+      }
+    }
+
+    .mini-statue-money {
+      width: 100%;
+      margin: 1rem 0;
+      text-align: center;
+      letter-spacing: .8px;  
+      span {
+      color: $second-clr;
+      }
+    }
+
+     .mini-statue-rich-rank {
+       margin: 0 .5rem;
+       border-radius: 1rem;
+       padding: .10rem .7rem;
+      background-color: $low-dark-clr;
+     }
+  }
+ }
+}

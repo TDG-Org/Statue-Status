@@ -17,7 +17,7 @@ import { format } from "date-fns";
 import "./HomePage.scss";
 
 // temp data 
-import { data, allDemoRichestData } from "../../DemoData";
+import { data } from "../../DemoData";
 
 // Funtion that sorts Data my property (money) 
 function compare( a, b ) {
@@ -149,6 +149,8 @@ const HomePage = () => {
   function setupInterval(func, interval) {
     setInterval(func, interval);
   }
+
+  // retrieveRichest(); 
   
   useEffect(() => {
     console.log("Calling function retrieveAllRichest");
@@ -160,7 +162,7 @@ const HomePage = () => {
 
   return (
     <div className="HomePage page">
-      <h1 className="homepage-title">
+      <h1 className="fade-title">
         {format(new Date(), "EEEE, d MMMM yyyy")}
       </h1>
 
@@ -194,18 +196,10 @@ const HomePage = () => {
           </div>
           <div className="view-all-ppl-btn-wrapper">
             <Link
-              to="/powerful"
+              to="/mini-statue"
               className="view-all-ppl-btn"
             >
-              View All Powerful
-            </Link>
-          </div>
-          <div className="view-all-ppl-btn-wrapper">
-            <Link
-              to="/saved"
-              className="view-all-ppl-btn"
-            >
-              View Saved
+              View Person
             </Link>
           </div>
           

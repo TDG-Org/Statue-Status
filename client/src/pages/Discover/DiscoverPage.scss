@@ -115,7 +115,7 @@
       align-items: center;
       margin-bottom: 1.75rem;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
 
       .discover-result {
         width: 90%;
@@ -307,7 +307,6 @@
         .friend {
           width: 45%;
           min-width: 250px; 
-          // max-width: unset; 
           margin-bottom: .25rem;
         }
       }

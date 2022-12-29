@@ -9,6 +9,8 @@ import moment from "moment";
 
 // Demo Data 
 import { NateData } from "../../../../DemoData";
+
+// Sweet Alert 
 import swal from "sweetalert";
 
 const ProfileStatueAccessory = () => {

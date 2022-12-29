@@ -215,6 +215,23 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
+        addSocialLink: async (parent, { profileId, link }, context) => {
+            if (context.user) {
+                return Profile.findOneAndUpdate(
+                    { _id: profileId },
+                    {
+                        $addToSet: {
+                            socialLinks: { link },
+                        },
+                    },
+                    {
+                        new: true,
+                        runValidators: true,
+                    }
+                );
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
         removeProfile: async (parent, { profileId }, context) => {
             if (context.user) {
                 const profile = await Profile.findOneAndDelete({

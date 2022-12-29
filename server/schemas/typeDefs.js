@@ -87,7 +87,7 @@ const typeDefs = gql`
     addLocation(profileId: ID!, location: String): Profile
     addCompany(profileId: ID!, company: String): Profile
     addRelationship(profileId: ID!, relationship: String): Profile
-    addSocialLink(link: String): SocialLink
+    addSocialLink(profileId: ID!, link: String): Profile
     addConnectionAvatar(avatar: String): Connection
     addConnectionName(name: String): Connection
     addConnectionSocialLink(socialLink: String): Connection

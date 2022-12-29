@@ -249,6 +249,23 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
+        addConnectionName: async (parent, { profileId, name }, context) => {
+            if (context.user) {
+                return Profile.findOneAndUpdate(
+                    { _id: profileId },
+                    {
+                        $addToSet: {
+                            connections: { name },
+                        },
+                    },
+                    {
+                        new: true,
+                        runValidators: true,
+                    }
+                );
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
         removeProfile: async (parent, { profileId }, context) => {
             if (context.user) {
                 const profile = await Profile.findOneAndDelete({

@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: .6rem;
 
     h2 {
       text-align: start;
@@ -57,8 +58,8 @@
       flex-direction: column;
 
       .mini-statue-about-more-btn {
-        padding-left: 1rem;
         margin-top: 1rem;
+        padding-left: 1rem;
         color: $accent-clr;
         width: fit-content;
         &:hover {
@@ -87,13 +88,13 @@
 
     //  Data 
     .mini-statue-data {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
       padding: 0;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
       li {
-        margin-bottom: .75rem;
         font-size: 1.05rem; 
+        margin-bottom: .75rem;
       }
     }
 
@@ -101,7 +102,6 @@
       width: 100%;
       margin: 1rem 0;
       text-align: center;
-      // color: $second-clr; 
       letter-spacing: .8px;  
       span {
       color: $second-clr;
@@ -109,9 +109,9 @@
     }
 
      .mini-statue-rich-rank {
-      padding: .10rem .7rem;
-      border-radius: 1rem;
-      margin: 0 .5rem;
+       margin: 0 .5rem;
+       border-radius: 1rem;
+       padding: .10rem .7rem;
       background-color: $low-dark-clr;
      }
   }

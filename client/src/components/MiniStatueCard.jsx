@@ -34,7 +34,7 @@ const MiniStatueCard = () => {
       <hr />
         
       <div className="mini-statue-about">
-        <h4>More About</h4>
+        <h4>Details</h4>
         <p>
           Musk, who says he&apos;s worried about population collapse, has nine children with three women including triplets and two sets of twins.
         </p>
@@ -48,7 +48,7 @@ const MiniStatueCard = () => {
           <a
             className="mini-statue-about-more-btn"
             href="#"
-          >See More
+          >View More
           </a>
       </div>  
 

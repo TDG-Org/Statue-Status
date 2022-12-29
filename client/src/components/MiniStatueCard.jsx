@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Proptypes 
 import PropTypes from "prop-types";
+
+// Images/SVGs 
+import { NatePfp } from "../assets/imgs";
 
 const MiniStatueCard = ({ data }) => {
 
@@ -12,6 +15,13 @@ const MiniStatueCard = ({ data }) => {
       PropTypes.object
     ]),
   };
+
+  const [viewMoreActive, setViewMoreActive] = useState(false);
+
+  // Function to toggle the view more 
+  function handleViewMoreClick() {
+    setViewMoreActive(!viewMoreActive);
+  }
   
   return (
     <div className="mini-statue-card">
@@ -27,6 +37,7 @@ const MiniStatueCard = ({ data }) => {
         {/* Country  */}
         <span>United States</span>
       </header>
+      <hr />
       
       {/* Intro  */}
       <div className="mini-statue-intro">
@@ -41,9 +52,7 @@ const MiniStatueCard = ({ data }) => {
           </p>
           <p></p>
           <p></p>
-      </div>
-
-      <hr />
+        </div>
         
       <div className="mini-statue-about">
         <h4>Details</h4>
@@ -53,16 +62,33 @@ const MiniStatueCard = ({ data }) => {
         <p>
           As a kid in South Africa, Musk taught himself to code; he sold his first game, Blastar, for about $500.
         </p>
-        <p></p>
-        <p></p>
-        <p></p>
+          <p className={` ${viewMoreActive ? "" : "hide"}`}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae natus temporibus repellendus voluptatum corrupti odio fugiat cumque? Cupiditate in vitae facilis quam ea dolor exercitationem ab deleniti libero odio?
+        </p>
+          <p className={` ${viewMoreActive ? "" : "hide"}`}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nemo iusto, optio quia voluptatum quo placeat harum beatae unde praesentium facere repellendus distinctio animi aut nihil voluptatibus eaque deleniti voluptatem.
+        </p>
+          <p className={` ${viewMoreActive ? "" : "hide"}`}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, pariatur quos similique repellat possimus atque impedit delectus aperiam ex tempora error esse aspernatur provident veritatis quasi temporibus nulla. Incidunt, nobis.
+          </p>
+          
         {/* See More  */}
-          <a
-            className="mini-statue-about-more-btn"
-            href="#"
-          >View More
-          </a>
-      </div>  
+        <a
+          onClick={handleViewMoreClick}
+          className={`mini-statue-about-more-btn ${viewMoreActive ? "hide" : ""}`}
+          href="#"
+        >View More
+        </a>
+          
+        {/* See Less  */}
+        <a
+          onClick={handleViewMoreClick}
+          className={`mini-statue-about-more-btn ${viewMoreActive ? "" : "hide"}`}
+          href="#"
+        >View Less
+        </a>
+
+        </div>  
 
     </div>
 

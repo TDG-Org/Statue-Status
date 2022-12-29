@@ -9,7 +9,7 @@ import GoBackBtn from "./GoBackBtn";
 import MiniStatueCard from "./MiniStatueCard";
 
 // Home Page 
-import { Pie, RichList, Chart } from "./Home";
+import { Pie, RichList, Chart, Main } from "./Home";
 
 // Profile Page 
 import { EditProfile } from "./Profile";
@@ -34,6 +34,7 @@ export {
   Pie,
   Nav,
   User,
+  Main,
   Aside,
   Chart,
   Intro,

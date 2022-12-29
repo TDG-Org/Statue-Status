@@ -27,7 +27,6 @@ const Main = ({ data }) => {
   // Retrieves Data for Richesting People  
   function retrieveRichest() {
     console.log("Getting Top 5 Richest");
-
     setTimeout(() => {
       fetch(forbesAPILimit, {
         // mode: "no-cors", 
@@ -73,11 +72,43 @@ const Main = ({ data }) => {
         setRichestData(richPeople);
       });
     }, 3000);
-    
   }
 
+  // retrieveRichest(); 
+
   return (
-    <div>Main</div>
+    <div className="pallet">
+
+    {/* Tabs  */}
+
+    <div className="homepage-pallet-chart-bottom">
+
+      {/* Visuals */}
+      <Chart richestData={richestData} />
+      <Pie richestData={richestData} />
+      
+    </div>
+
+    {/* Temporary Page Buttons  */}
+    <div className="view-all-ppl-btn-wrapper">
+      <Link
+        to="/richest"
+        className="view-all-ppl-btn"
+      >
+        View All Richest
+      </Link>
+      </div>
+      
+    <div className="view-all-ppl-btn-wrapper">
+      <Link
+        to="/mini-statue"
+        className="view-all-ppl-btn"
+      >
+        View Person
+      </Link>
+    </div>
+    
+  </div>
   );
 };
 

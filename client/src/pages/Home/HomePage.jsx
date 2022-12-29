@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // Components
 import {
   Pie,
+  Main,
   Chart,
 } from "../../components";
 
@@ -92,15 +93,10 @@ const HomePage = () => {
   function setupInterval(func, interval) {
     setInterval(func, interval);
   }
-
-  // retrieveRichest(); 
   
   useEffect(() => {
     console.log("Calling function retrieveAllRichest");
     setupInterval(retrieveAllRichest, 14400000);
-  
-    console.log("Calling function retrieveRichest");
-    setupInterval(retrieveRichest, 14400000);
   }, []);
 
   return (
@@ -115,38 +111,7 @@ const HomePage = () => {
 
       <div className="container">
 
-        <div className="pallet">
-
-          {/* Tabs  */}
-
-          <div className="homepage-pallet-chart-bottom">
-
-            {/* Chart */}
-            <Chart richestData={richestData} />
-
-            <Pie richestData={richestData} />
-            
-          </div>
-
-          {/* View All Button  */}
-          <div className="view-all-ppl-btn-wrapper">
-            <Link
-              to="/richest"
-              className="view-all-ppl-btn"
-            >
-              View All Richest
-            </Link>
-          </div>
-          <div className="view-all-ppl-btn-wrapper">
-            <Link
-              to="/mini-statue"
-              className="view-all-ppl-btn"
-            >
-              View Person
-            </Link>
-          </div>
-          
-        </div>
+        <Main data={data} /> 
 
         <h2>Global Headlines</h2>
         

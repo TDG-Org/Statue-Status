@@ -82,11 +82,11 @@ const typeDefs = gql`
     removeProfile(profileId: ID!): Profile
     addStatueName(profileId: ID!, name: String): Profile
     addStatueBio(profileId: ID!, bio: String): Profile
-    addHeadline(headline: String): Accessory
-    addBirthday(birthday: String): Accessory
-    addLocation(location: String): Accessory
-    addCompany(company: String): Accessory
-    addRelationship(relationship: String): Accessory
+    addHeadline(profileId: ID!, headline: String): Profile
+    addBirthday(profileId: ID!, birthday: String): Profile
+    addLocation(profileId: ID!, location: String): Profile
+    addCompany(profileId: ID!, company: String): Profile
+    addRelationship(profileId: ID!, relationship: String): Profile
     addSocialLink(link: String): SocialLink
     addConnectionAvatar(avatar: String): Connection
     addConnectionName(name: String): Connection

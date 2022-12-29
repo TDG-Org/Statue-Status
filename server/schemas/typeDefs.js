@@ -88,9 +88,9 @@ const typeDefs = gql`
     addCompany(profileId: ID!, company: String): Profile
     addRelationship(profileId: ID!, relationship: String): Profile
     addSocialLink(profileId: ID!, link: String): Profile
-    addConnectionAvatar(avatar: String): Profile
-    addConnectionName(name: String): Profile
-    addConnectionSocialLink(socialLink: String): Profile
+    addConnectionAvatar(profileId: ID!, avatar: String): Profile
+    addConnectionName(profileId: ID!, name: String): Profile
+    addConnectionSocialLink(profileId: ID!, socialLink: String): Profile
     addCustomizationBackground(background: String): Customization
     addCustomizationFont(font: String): Customization
     addCustomizationPrimaryColor(primaryColor: String): Customization

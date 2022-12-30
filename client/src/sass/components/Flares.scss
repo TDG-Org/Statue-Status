@@ -30,7 +30,7 @@
     list-style: none;
     position: absolute;
     border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(118, 244, 255, 0.2);
     animation: animate 25s linear infinite;
   
   }
@@ -56,6 +56,8 @@
     width: 12px;
     height: 12px;
     animation-delay: 4s;
+    background: rgba(248, 118, 255, 0.2);
+
   }
   
   .flares li:nth-child(4) {
@@ -64,6 +66,7 @@
     height: 13px;
     animation-delay: 0s;
     animation-duration: 18s;
+    background: rgba(248, 118, 255, 0.2);
   }
   
   .flares li:nth-child(5) {
@@ -71,6 +74,7 @@
     width: 6px;
     height: 6px;
     animation-delay: 0s;
+    background: rgba(248, 118, 255, 0.2);
   }
   
   .flares li:nth-child(6) {
@@ -78,6 +82,7 @@
     width: 8px;
     height: 8px;
     animation-delay: 3s;
+    background: rgba(248, 118, 255, 0.2);
   }
   
   .flares li:nth-child(7) {
@@ -93,6 +98,7 @@
     height: 19px;
     animation-delay: 15s;
     animation-duration: 45s;
+    background: rgba(248, 118, 255, 0.2);
   }
   
   .flares li:nth-child(9) {
@@ -109,6 +115,7 @@
     height: 19px;
     animation-delay: 0s;
     animation-duration: 11s;
+    background: rgba(248, 118, 255, 0.2);
   }
 }
 

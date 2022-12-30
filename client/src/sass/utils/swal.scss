@@ -74,19 +74,19 @@
 /* Sweet Alert Icons  */
 
 .swal-icon {
-	background-color: rgba(0, 0, 0, 0.827);
 	gap: 0;
+	background-color: rgba(0, 0, 0, 0.827);
 }
 .swal-icon::after {
-	background-color: rgba(0, 0, 0, 0.827);
+	background-color: rgba(0, 0, 0, 0);
 }
 .swal-icon::before {
-	background-color: rgba(0, 0, 0, 0.827);
+	background-color: rgba(0, 0, 0, 0);
 }
 .swal-icon--success__hide-corners {
 	padding: 0;
 	top: -13px;
 	width: 25px;
 	height: 128px;
-	background-color: rgba(0, 0, 0, 0.827);
+	background-color: rgba(0, 0, 0, 0);
 }

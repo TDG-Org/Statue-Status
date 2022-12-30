@@ -116,7 +116,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
 
@@ -128,7 +128,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
 
@@ -140,7 +140,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
 
@@ -152,7 +152,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
   }

@@ -91,10 +91,10 @@ const typeDefs = gql`
     addStatueConnectionAvatar(statueId: ID!, avatar: String): Statue
     addStatueConnectionName(statueId: ID!, name: String): Statue
     addStatueConnectionSocialLink(statueId: ID!, socialLink: String): Statue
-    addCustomizationBackground(profileId: ID!, background: String): Profile
-    addCustomizationFont(profileId: ID!, font: String): Profile
-    addCustomizationPrimaryColor(profileId: ID!, primaryColor: String): Profile
-    addCustomizationSecondaryColor(profileId: ID!, secondaryColor: String): Profile
+    addStatueCustomizationBackground(statueId: ID!, background: String): Statue
+    addStatueCustomizationFont(statueId: ID!, font: String): Statue
+    addStatueCustomizationPrimaryColor(statueId: ID!, primaryColor: String): Statue
+    addStatueCustomizationSecondaryColor(statueId: ID!, secondaryColor: String): Statue
   }
 `;
 

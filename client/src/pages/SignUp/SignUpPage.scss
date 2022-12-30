@@ -2,3 +2,169 @@
 
 // SCSS Variables 
 @import "../../sass/variables.scss";
+
+.SignUpPage {
+  z-index: 2;
+  position: relative;
+  margin: 0 !important;
+  width: 100% !important;
+  background: rgb(0,111,89);
+  background: linear-gradient(124deg, rgba(0,111,89,1) 0%, rgba(0,46,37,1) 9%, rgba(0,19,15,1) 22%, rgba(0,0,0,1) 78%, rgba(59,0,59,1) 92%, rgba(139,0,97,1) 100%);
+
+  
+  h1 {
+    i {
+      margin-left: .75rem;
+    }
+  }
+
+  .typed-text {
+    margin: 0 auto;
+  }
+
+  .login-page-overlay-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-image: url("../../assets/svgs/loginpage-background.svg");
+  }
+
+  // The Input Wrapper 
+  .signup-inputs-wrapper {
+    width: 90%;
+    display: flex;
+    max-width: 600px;
+    margin: 4.5rem auto;
+    padding: 1.5rem 4rem;
+    flex-direction: column;
+    border: 1px solid $mid-dark-clr;
+    background-color: rgba(0, 0, 0, 0.071);
+
+    .signup-sect {
+      width: 80%;
+      margin: .75rem auto;
+
+      p {
+        font-size: 1rem;
+        color: $second-clr;
+        margin-bottom: .5rem;
+      }
+
+      .signup-input {
+        width: 100%;
+        color: #fff;
+        outline: none;
+        padding: .5rem .10rem;
+        transition: all 250ms ease;
+        border: 1px solid $mid-dark-clr;
+        background-color: rgba(0, 0, 0, 0.152); 
+
+        &:hover {
+        border: 1px solid transparent;
+          border-bottom: 1px solid $accent-clr;
+          background-color: rgba(0, 0, 0, 0);
+        }
+
+        &:focus {
+          border: 1px solid transparent;
+          background-color: transparent;
+          border-bottom: 1px solid $accent-clr !important;
+        }
+
+        &:active {
+          background-color: transparent;
+          border: 1px solid transparent !important;
+        }
+      }
+    }
+
+    // signup Button 
+    .signup-button-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .signup-btn {
+        overflow: hidden; 
+        color: $light-clr;
+        margin: 1rem auto;
+        font-size: 1.1rem;
+        position: relative; 
+        padding: .5rem 2.5rem;
+        border: 1px solid $mid-dark-clr;
+        background-color: rgba(0, 0, 0, 0.152); 
+
+        &:before {
+          top: 0;
+          content: '';
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          transition: all 250ms ease;
+          background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(212, 255, 250, 0.4),
+            transparent
+          );
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: var(--lght-clr);
+          background-color: transparent;
+          box-shadow: 1px 1px 15px 5px rgba(249, 208, 255, 0.114);
+        }
+
+        &:hover:before {
+          left: 100%;
+        }
+      }
+    }
+  }
+  .create-acc-message {
+    text-align: center;
+    margin-top: -2.5rem;
+    margin-bottom: 2.5rem;
+    color: $mid-light-clr;
+
+
+  }
+  .create-acc-btn-wrapper {
+    width: 100%;
+    margin-top: -2rem;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  .create-acc-btn {
+    margin: 0 auto;
+    color: $light-clr;
+    text-align: center;
+    &:hover {
+      color: $accent-clr;  
+      text-decoration: underline !important;
+    }
+  }
+}
+
+// Media Queries 
+
+@media screen and (max-width: 950px) {
+  .signupPage {
+    .signup-inputs-wrapper {
+      padding: 1rem 1rem;
+      .signup-input {
+        width: 90%;
+      }
+      .signup-btn {
+        width: 80%;
+        padding: .5rem .10rem;
+      }
+    }
+  }
+}

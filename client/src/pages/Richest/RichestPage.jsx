@@ -87,13 +87,16 @@ const RichestPage = () => {
   return (
     <div className="RichestPage page">
       <h1>Richest People</h1>
-      <hr />
-      <GoBackBtn />
 
-      {/* List Container  */}
-      <RichList allRichestData={allRichestData} className="reveal"/>
+      <div className="container">
+        <hr />
+        <GoBackBtn />
 
-      <hr />
+        {/* List Container  */}
+        <RichList allRichestData={allRichestData} className="reveal"/>
+
+        <hr />
+      </div>
 
     </div>
   );

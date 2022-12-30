@@ -21,22 +21,17 @@ const MiniStatuePage = () => {
     <div className="MiniStatuePage page">
       <h1 className="fade-title">Mini Statue</h1>
 
-      <hr />
-
-      <GoBackBtn />
-
       <div className="container">
-
+        <hr />
+        <GoBackBtn />
         <div className="pallet">
 
           <MiniStatueCard data={data} />
 
         </div>
 
+        <hr />
       </div>
-
-      <hr />
-
     </div>
   );
 };

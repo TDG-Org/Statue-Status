@@ -5,21 +5,19 @@
 
 .DiscoverPage {
   background-image: url("../../assets/svgs/discoverpage-background.svg");
-
-  h3 {
-    margin: .95rem 0 !important;
-  }
 }
 
 .discover-content {
-  gap: 2.5%;
+  gap: 2.5%; 
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  width: 100% !important;
   justify-content: center;
 }
 
 .discover-search-sect {
+  width: 60%;
   max-height: 750px;
   .container {
     width: 100%;

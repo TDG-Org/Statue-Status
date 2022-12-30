@@ -18,19 +18,23 @@ const DiscoverPage = () => {
       <h1>Discover</h1>
 
       <hr />
+
+      <div className="container">
       
-      <h3>Exploration And Connection</h3>
-      <div className="discover-content">
+        <h3>Exploration And Connection</h3>
+        <div className="discover-content">
 
-        {/* Discovering Search Section  */}
-        <Explore />
+          {/* Discovering Search Section  */}
+          <Explore />
 
-        {/* User's Friends  */}
-        <Friends />
+          {/* User's Friends  */}
+          <Friends />
 
+        </div>
+
+        <hr />
+        
       </div>
-
-      <hr />
       
     </div>
   );

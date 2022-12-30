@@ -249,6 +249,20 @@ p, span, em, li, a, i, div {
     width: 100% !important;
   }
 
+  // titles 
+  .page {
+    h1 {
+      font-size: 2rem;
+      margin: 2rem 0 .75rem 0; 
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
   nav {
     z-index: 2;
   }
@@ -264,7 +278,7 @@ p, span, em, li, a, i, div {
   }
 
   .pallet {
-    margin: .5rem 0; 
+    margin: 1rem 0 1.75rem 0; 
     padding: 1.5rem .5rem;
   }
 }

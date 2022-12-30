@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 // Styles
 import "./LoginPage.scss";
 
-const LoginPage = () => {
+const LoginPage = () => { 
+
   return (
     <div className="LoginPage page">
-      <h1>Login</h1>
-      <hr />
-
-      <div className="container">
-
+      <div className="login-page-overlay-background">
       </div>
-
+      <div className="login-page-overlay-background2">
+      </div>
+     <h1>Login</h1>
     </div>
   );
 };

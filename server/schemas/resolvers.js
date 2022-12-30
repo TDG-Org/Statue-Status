@@ -57,7 +57,7 @@ const resolvers = {
 
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $addToSet: { profiles: profile._id } }
+                    { $addToSet: { profile: profile._id } }
                 );
 
                 return profile;
@@ -73,7 +73,7 @@ const resolvers = {
 
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $addToSet: { profiles: profile._id } }
+                    { $addToSet: { profile: profile._id } }
                 );
 
                 return profile;
@@ -89,7 +89,7 @@ const resolvers = {
 
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $addToSet: { profiles: profile._id } }
+                    { $addToSet: { profile: profile._id } }
                 );
 
                 return profile;

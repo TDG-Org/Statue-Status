@@ -40,50 +40,47 @@ import "../sass/utils/animations.scss";
 import { RevealY } from "../utils/animations";
 
 const StatueStatus = () => {
-
   const location = useLocation();
 
   return (
     <div className="Statue-Status-Wrapper">
+      {location.pathname !== "/mini-statue" ? (
+        <>
+          <Aside />
+          <div className="page-side-wrapper">
+            <div className="wrapper-page-sect">
+              <Routes location={location} key={location.pathname}>
+                {/* Main Pages */}
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/discover" element={<DiscoverPage />} />
+                <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/settings" element={<SettingsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/sign-up" element={<SignUpPage />} />
 
-      {/* Left Side (User Avatar and Navbar)  */}
-      <Aside />
+                {/* Home Extend Pages  */}
+                <Route path="/richest" element={<RichestPage />} />
+                <Route path="/powerful" element={<PowerfulPage />} />
+                <Route path="/mini-statue" element={<MiniStatuePage />} />
 
-      <div className="page-side-wrapper">
+                {/* Follow Lists Pages */}
+                <Route path="/followers" element={<FollowersPage />} />
+                <Route path="/following" element={<FollowingPage />} />
 
-        {/* Every Page with their routes */}
-        <div className="wrapper-page-sect">
-          <Routes location={location} key={location.pathname}>
-
-            {/* Main Pages */}
-            <Route path="/" element={<HomePage />}></Route>
-            <Route path="/discover" element={<DiscoverPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/settings" element={<SettingsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/sign-up" element={<SignUpPage />} />
-
-            {/* Home Extend Pages  */}
-            <Route path="/richest" element={<RichestPage />} />
-            <Route path="/powerful" element={<PowerfulPage />} />
-            <Route path="/mini-statue" element={<MiniStatuePage />} />
-
-            {/* Follow Lists Pages */}
-            <Route path="/followers" element={<FollowersPage />} />
-            <Route path="/following" element={<FollowingPage />} />
-
-            {/* Profile Extend Pages */}
-            <Route path="/saved" element={<SavedPage />} />
-
-          </Routes>
-        </div>
-
-        {/* Footer Section  */}
-        <Footer />
-        
-      </div>
-
+                {/* Profile Extend Pages */}
+                <Route path="/saved" element={<SavedPage />} />
+              </Routes>
+            </div>
+            <Footer />
+          </div>
+        </>
+      ) : (
+        <Routes location={location} key={location.pathname}>
+          {/* Other routes go here */}
+          <Route path="/mini-statue" element={<MiniStatuePage />} />
+        </Routes>
+      )}
     </div>
   );
 };

@@ -18,7 +18,7 @@ let data = {
 const MiniStatuePage = () => {
 
   return (
-    <div className="MiniStatuePage page">
+    <div className="MiniStatuePage page page-full">
       <h1 className="fade-title">Mini Statue</h1>
 
       <hr />

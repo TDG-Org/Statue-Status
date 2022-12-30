@@ -5,8 +5,8 @@
 
 .chart {
   width: 100%; 
-  max-width: 700px;
-  min-width: 400px;
+  max-width: 625px;
+  min-width: 475px;
   margin: 1rem auto;
   border-radius: 8px;
   background-color: #00000077;
@@ -32,9 +32,9 @@
   margin: 0 auto;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin-top: -1.25rem;
+  margin-top: -1rem;
+  padding: 0 1rem 1rem 1rem;
   justify-content: space-evenly;
-  padding: 0 1.8rem 1rem 1.8rem;
 
   .rank-num-1 {
     color: #ebc817 !important; 
@@ -61,7 +61,7 @@
     background-color: rgb(10, 10, 10);
 
     &:hover {
-      cursor: default;
+      cursor: pointer;
       filter: drop-shadow(0px 0px 5px rgb(74, 74, 74));
     }
   }
@@ -70,11 +70,10 @@
 // Pie 
 
 .victory-pie {
-  padding: .8rem;
+  padding: .25rem;
   max-width: 375px;
-  min-width: 280px;
-  margin: 1rem auto;
-  width: 35% !important;
+  min-width: 315px;
+  margin: .25rem auto;
 }
 
 // Media Queries 
@@ -90,7 +89,7 @@
     g {
       text {
         tspan {
-          font-size: 1rem !important;
+          min-width: 60px;
         }
       }
     }
@@ -115,14 +114,19 @@
   }  
 
   // Pie 
-  .victory-pie {
-    margin: .65rem !important;
-    min-width: 215px !important;
-
-    text {
-      tspan {
-        font-size: 1.25rem !important;
+  .page {
+    .victory-pie {
+      margin: 0;
+      padding: 0;
+      min-width: 300px;
+      width: 90% !important;
+  
+      text {
+        tspan {
+          font-size: 1.25rem !important;
+        }
       }
     }
   }
+
 }

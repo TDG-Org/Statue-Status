@@ -19,6 +19,7 @@ import {
   HomePage,
   AboutPage,
   SavedPage,
+  LoginPage,
   RichestPage,
   ProfilePage,
   DiscoverPage,
@@ -58,6 +59,7 @@ const StatueStatus = () => {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/login" element={<LoginPage />} />
 
             {/* Home Extend Pages  */}
             <Route path="/richest" element={<RichestPage />} />

@@ -21,7 +21,7 @@
 }
 
 .homepage-pallet-chart-bottom {
-  gap: .65rem;
+  gap: .0rem;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -36,12 +36,6 @@
   .homepage-pallet-chart-bottom {
     flex-direction: column;
   }
-
-  .victory-pie {
-    margin: 0 auto;
-    padding: 1rem 0;
-  }
-
 }
 
 @media screen and (max-width: 1165px) {

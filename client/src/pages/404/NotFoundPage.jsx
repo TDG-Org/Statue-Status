@@ -8,10 +8,9 @@ import "./NotFoundPage.scss";
 const NotFoundPage = () => {
   return (
     <div className="NotFoundPage page page-full">
-      {/* <h1>404</h1>
-      <hr /> */}
 
       <div className="container">
+        <h1>404</h1>
         <p>Let&apos;s take you back!</p>
       </div>
 

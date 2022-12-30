@@ -6,7 +6,6 @@ import "./LoginPage.scss";
 // Sweet Alert 
 import swal from "sweetalert";
 
-
 // Link 
 import { Link } from "react-router-dom";
 

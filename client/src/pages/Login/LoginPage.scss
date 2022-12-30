@@ -11,6 +11,12 @@
   background: rgb(0,111,89);
   background: linear-gradient(124deg, rgba(0,111,89,1) 0%, rgba(0,46,37,1) 9%, rgba(0,19,15,1) 22%, rgba(0,0,0,1) 78%, rgba(59,0,59,1) 92%, rgba(139,0,97,1) 100%);
 
+  h1 {
+    i {
+      margin-left: .75rem;
+    }
+  }
+
   .typed-text {
     margin: 0 auto;
   }
@@ -121,22 +127,22 @@
     }
   }
   .create-acc-message {
+    text-align: center;
     margin-top: -2.5rem;
     margin-bottom: 2.5rem;
-    text-align: center;
     color: $mid-light-clr;
 
 
   }
   .create-acc-btn-wrapper {
     width: 100%;
-    text-align: center;
     margin-top: -2rem;
+    text-align: center;
     font-size: 1.05rem;
   }
   .create-acc-btn {
-    color: $light-clr;
     margin: 0 auto;
+    color: $light-clr;
     text-align: center;
     &:hover {
       color: $accent-clr;  

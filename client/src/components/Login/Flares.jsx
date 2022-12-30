@@ -1,8 +1,23 @@
 import React from "react";
 
+// Styles
+import "../../sass/components/Flares.scss";
+
 const Flares = () => {
   return (
-    <div>Flares</div>
+    <div className="flares-background">
+      <ul className="flares">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   );
 };
 

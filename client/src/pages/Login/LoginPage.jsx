@@ -4,7 +4,10 @@ import React, { useState, useEffect } from "react";
 import "./LoginPage.scss";
 
 // Components 
-import { TypingText } from "../../components";
+import {
+  Flares,
+  TypingText
+} from "../../components";
 
 const LoginPage = () => { 
 
@@ -77,6 +80,8 @@ const LoginPage = () => {
         </div>
 
       </div>
+
+      <Flares />
 
     </div>
   );

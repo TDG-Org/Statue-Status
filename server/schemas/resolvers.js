@@ -300,14 +300,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addCustomizationFont: async (parent, { profileId, font }, context) => {
+        addStatueCustomizationFont: async (parent, { statueId, font }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            customizations: { font },
-                        },
+                        $push: {
+                            "statue.customizations": { font }
+                        }
                     },
                     {
                         new: true,

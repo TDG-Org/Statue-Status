@@ -128,6 +128,15 @@ const Main = ({ data }) => {
         Login
       </Link>
     </div>
+      
+    <div className="view-all-ppl-btn-wrapper">
+      <Link
+        to="/sign-up"
+        className="view-all-ppl-btn"
+      >
+        Sign Up
+      </Link>
+    </div>
     
   </div>
   );

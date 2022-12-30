@@ -5,6 +5,7 @@ import HomePage from "./Home/HomePage";
 import AboutPage from "./About/AboutPage";
 import SavedPage from "./Saved/SavedPage";
 import LoginPage from "./Login/LoginPage";
+import SignUpPage from "./SignUp/SignUpPage";
 import ProfilePage from "./Profile/ProfilePage";
 import RichestPage from "./Richest/RichestPage";
 import DiscoverPage from "./Discover/DiscoverPage";
@@ -22,6 +23,7 @@ export {
   AboutPage,
   LoginPage,
   SavedPage,
+  SignUpPage,
   RichestPage,
   ProfilePage,
   DiscoverPage,

@@ -10,6 +10,13 @@
   background: rgb(0,111,89);
   background: linear-gradient(124deg, rgba(0,111,89,1) 0%, rgba(0,46,37,1) 9%, rgba(0,19,15,1) 22%, rgba(0,0,0,1) 78%, rgba(59,0,59,1) 92%, rgba(139,0,97,1) 100%);
 
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+  }
+
   .login-page-overlay-background {
     top: 0;
     left: 0;

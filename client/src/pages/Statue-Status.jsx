@@ -24,6 +24,7 @@ import {
   RichestPage,
   ProfilePage,
   DiscoverPage,
+  NotFoundPage,
   PowerfulPage,
   SettingsPage,
   FollowersPage,

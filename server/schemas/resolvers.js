@@ -133,9 +133,7 @@ const resolvers = {
         addStatueAccessoryHeadline: async (parent, { statueId, headline }, context) => {
             if (context.user) {
                 return Statue.findOneAndUpdate(
-                    {
-                        _id: statueId,
-                    },
+                    { _id: statueId },
                     {
                         $push: {
                             "statue.accessories": { headline }
@@ -149,14 +147,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addBirthday: async (parent, { profileId, birthday }, context) => {
+        addStatueAccessoryBirthday: async (parent, { statueId, birthday }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            accessories: { birthday },
-                        },
+                        $push: {
+                            "statue.accessories": { birthday }
+                        }
                     },
                     {
                         new: true,

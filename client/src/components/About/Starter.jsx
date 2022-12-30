@@ -8,9 +8,7 @@ import DevProcess from "../../assets/svgs/development-process.svg";
 
 const Starter = () => {
   return (
-    <div className="about-sect" id="getStartedSect">
-
-      <h3>Lets Get Started</h3>
+    <div className="pallet" id="getStartedSect">
 
       {/* Content  */}
       <div className="about-sect-content">

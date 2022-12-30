@@ -15,16 +15,17 @@ const SettingsPage = () => {
     <div className="SettingsPage page">
       <h1>Settings</h1>
       
-      <hr />
-      
+      <div className="container">
+        <hr />
 
-      {/* Account Section  */}
-      <MyAccount />
+        {/* Account Section  */}
+        <MyAccount />
 
-      {/* General Settings  */}
-      <General />
-
-      <hr />
+        {/* General Settings  */}
+        <General />
+          
+        <hr />
+      </div>
       
     </div>
   );

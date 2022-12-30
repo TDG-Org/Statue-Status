@@ -15,8 +15,8 @@ const General = () => {
 
       <h3><i className="bi bi-tools"></i> General</h3>
 
-      <div className="container">
-        <div className="pallet">
+      <div className="pallet">
+        <div className="container">
 
           {/* Appearance  */}
           <div className="general-sect-appear">
@@ -94,7 +94,7 @@ const General = () => {
             <a href="#" className="settings-loggout-btn">Log Out <i className="bi bi-box-arrow-in-right"></i></a>
           </div>
 
-          </div>
+        </div>
       </div>
     </div>
   );

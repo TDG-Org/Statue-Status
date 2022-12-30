@@ -33,7 +33,7 @@ const LoginPage = () => {
     // Button 
     {
       element: 
-              <div className="login-input-wrapper">
+              <div className="login-button-wrapper">
                 <button className="login-btn">
                   Login
                 </button>

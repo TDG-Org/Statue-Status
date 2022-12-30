@@ -70,7 +70,7 @@
     }
 
     // Login Button 
-    .login-input-wrapper {
+    .login-button-wrapper {
       width: 100%;
       display: flex;
       align-items: center;
@@ -112,6 +112,23 @@
         &:hover:before {
           left: 100%;
         }
+      }
+    }
+  }
+}
+
+// Media Queries 
+
+@media screen and (max-width: 950px) {
+  .LoginPage {
+    .login-inputs-wrapper {
+      padding: 1rem 1rem;
+      .login-input {
+        width: 90%;
+      }
+      .login-btn {
+        width: 80%;
+        padding: .5rem .10rem;
       }
     }
   }

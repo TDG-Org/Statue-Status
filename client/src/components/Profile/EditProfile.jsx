@@ -17,7 +17,6 @@ const EditProfile = () => {
   return (
     <div className="profile-sect">
       <h3>Edit Profile</h3>
-      <div className="container">
         <div className="pallet">
           <div className="container">
             <div className="user-edit">
@@ -31,7 +30,6 @@ const EditProfile = () => {
             <UserInfo />
           </div>
         </div>
-      </div>
     </div>
   );
 };

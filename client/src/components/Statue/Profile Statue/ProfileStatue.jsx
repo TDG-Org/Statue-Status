@@ -39,8 +39,8 @@ const ProfileStatue = () => {
   return (
      <div className="statue-sect">
       <h3>My Statue</h3>
-      <div className="container">
-        <div className="pallet">
+      <div className="pallet">
+        <div className="container">
           
          {/* If No Statue  */}
           <ProfileNoStatue />

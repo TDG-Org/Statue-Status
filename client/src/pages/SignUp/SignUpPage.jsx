@@ -178,9 +178,9 @@ const SignUpPage = () => {
   return (
     <div className="SignUpPage page">
       <h1>Sign Up <i className="bi bi-person-plus-fill"></i></h1>
-      <hr />
 
       <div className="container">
+      <hr />
 
         {/* Typing Text  */}
         <TypingText message={content} />

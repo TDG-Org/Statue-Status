@@ -16,6 +16,7 @@ const SettingsPage = () => {
       <h1>Settings</h1>
       
       <hr />
+      
 
       {/* Account Section  */}
       <MyAccount />

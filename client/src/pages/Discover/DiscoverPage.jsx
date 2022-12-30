@@ -17,10 +17,8 @@ const DiscoverPage = () => {
     <div className="DiscoverPage page">
       <h1>Discover</h1>
 
-      <hr />
-
       <div className="container">
-      
+       <hr />
         <h3>Exploration And Connection</h3>
         <div className="discover-content">
 
@@ -31,9 +29,7 @@ const DiscoverPage = () => {
           <Friends />
 
         </div>
-
         <hr />
-        
       </div>
       
     </div>

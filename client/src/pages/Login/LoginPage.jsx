@@ -68,9 +68,9 @@ const LoginPage = () => {
     <div className="LoginPage page">
 
       <h1>Login <i className="bi bi-box-arrow-in-right"></i></h1>
-      <hr />
 
       <div className="container">
+      <hr />
 
         {/* Typing Text  */}
         <TypingText message={ content } />

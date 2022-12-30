@@ -21,6 +21,7 @@
     height: 100%;
     display: flex;
     margin: 0 auto;
+    cursor: default;
     max-width: unset;
     position: absolute;
     align-items: center;
@@ -44,15 +45,14 @@
       }
 
       i {
-        width: fit-content;
         margin: 0 auto;
-        color:rgb(127, 195, 162);
-
         font-size: 1.75rem;
-        &:hover {
-          cursor: pointer !important;
-        color: $light-clr;
+        width: fit-content;
+        color:rgb(134, 204, 170);
 
+        &:hover {
+          color: $light-clr;
+          cursor: pointer !important;
         }
       }
     }

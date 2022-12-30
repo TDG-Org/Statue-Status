@@ -22,35 +22,34 @@
 
   // The Input Wrapper 
   .login-inputs-wrapper {
-    width: 80%;
-    margin: .75rem auto;
-    max-width: 550px;
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    padding: 1.5rem 4rem;
+    max-width: 600px;
     border-radius: 8px;
+    margin: .75rem auto;
+    padding: 1.5rem 4rem;
+    flex-direction: column;
     border: 1px solid $mid-dark-clr;
-    background-color: $low-tp;
+    background-color: rgba(0, 0, 0, 0.071);
 
     .login-sect {
       width: 80%;
       margin: 0 auto;
 
       p {
+        font-size: 1.1rem;
         color: $second-clr;
         margin-bottom: .5rem;
-        font-size: 1.1rem;
       }
 
       .login-input {
-        outline: none;
-        border: 1px solid $low-dark-clr;
-        // border-bottom: 1px solid ; 
-        color: #fff;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0); 
+        color: #fff;
+        outline: none;
         padding: .5rem .10rem;
         transition: all 250ms ease;
+        border: 1px solid $low-dark-clr;
+        background-color: rgba(0, 0, 0, 0); 
 
         &:hover {
         border: 1px solid transparent;
@@ -59,10 +58,9 @@
         }
 
         &:focus {
-          border: 1px solid transparent !important;
+          border: 1px solid transparent;
           background-color: transparent;
-          border-bottom: 1px solid $accent-clr;
-
+          border-bottom: 1px solid $accent-clr !important;
         }
 
         &:active {
@@ -72,5 +70,4 @@
       }
     }
   }
-
 }

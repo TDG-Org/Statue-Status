@@ -30,7 +30,7 @@
     width: 90%;
     display: flex;
     max-width: 600px;
-    margin: 5rem auto;
+    margin: 4.5rem auto;
     padding: 1.5rem 4rem;
     flex-direction: column;
     border: 1px solid $mid-dark-clr;
@@ -118,6 +118,29 @@
           left: 100%;
         }
       }
+    }
+  }
+  .create-acc-message {
+    margin-top: -2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: $mid-light-clr;
+
+
+  }
+  .create-acc-btn-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: -2rem;
+    font-size: 1.05rem;
+  }
+  .create-acc-btn {
+    color: $light-clr;
+    margin: 0 auto;
+    text-align: center;
+    &:hover {
+      color: $accent-clr;  
+      text-decoration: underline !important;
     }
   }
 }

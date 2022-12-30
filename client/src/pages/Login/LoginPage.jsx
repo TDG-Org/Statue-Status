@@ -3,6 +3,13 @@ import React, { useState, useEffect } from "react";
 // Styles
 import "./LoginPage.scss";
 
+// Sweet Alert 
+import swal from "sweetalert";
+
+
+// Link 
+import { Link } from "react-router-dom";
+
 // Components 
 import {
   Flares,
@@ -77,6 +84,16 @@ const LoginPage = () => {
             key: element.id
           })
         ))}
+        </div>
+
+        <p className="create-acc-message">Don&apos;t have an account?</p>
+        <div className="create-acc-btn-wrapper">
+          <Link
+            className="create-acc-btn"
+            to="/sign-up"
+          >
+            Sign Up
+          </Link>
         </div>
 
       </div>

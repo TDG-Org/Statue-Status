@@ -66,7 +66,7 @@ const SignUpPage = () => {
     // Re-Enter Password 
     {
       element:
-              <div className={`signup-sect ${isPassEmpty ? "hide" : "signup-input-active"}`}>
+              <div className={`signup-sect ${isPassEmpty ? "hide" : ""}`}>
                 <p>Re-Enter Password:</p>
                 <input
                   required
@@ -74,7 +74,7 @@ const SignUpPage = () => {
                   type="password"
                 />
               </div>,
-      id: 3
+      id: 4
     },
     // Button 
     {
@@ -90,7 +90,8 @@ const SignUpPage = () => {
 
   // Function to check if pass is empty to let user reEnter 
   function displayReEnterPass() {
-    if (document.querySelector(".signup-input-pass")?.value != "") {
+    console.log(document.querySelector(".signup-input-pass")?.value);
+    if (document.querySelector(".signup-input-pass")?.value.length >= 6) {
       setIsPassEmpty(false);
     } else setIsPassEmpty(true);
   }

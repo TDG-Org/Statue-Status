@@ -66,7 +66,7 @@
     height: 13px;
     animation-delay: 0s;
     animation-duration: 18s;
-    background: rgba(248, 118, 255, 0.2);
+    // background: rgba(248, 118, 255, 0.2); 
   }
   
   .flares li:nth-child(5) {
@@ -115,6 +115,52 @@
     height: 19px;
     animation-delay: 0s;
     animation-duration: 11s;
+    background: rgba(248, 118, 255, 0.2);
+  }
+
+  // 5 More 
+
+  .flares li:nth-child(11) {
+    left: 93%;
+    width: 19px;
+    height: 19px;
+    animation-delay: 2s;
+    animation-duration: 25s;
+    background: rgba(248, 118, 255, 0.2);
+  }
+
+  .flares li:nth-child(12) {
+    left: 99%;
+    width: 16px;
+    height: 16px;
+    animation-delay: 10s;
+    animation-duration: 16s;
+    background: rgba(248, 118, 255, 0.2);
+  }
+
+  .flares li:nth-child(13) {
+    left: 63.5%;
+    width: 21px;
+    height: 21px;
+    animation-delay: 5s;
+    animation-duration: 12.35s;
+    background: rgba(248, 118, 255, 0.2);
+  }
+
+  .flares li:nth-child(14) {
+    left: 2%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 1s;
+    animation-duration: 30s;
+  }
+
+  .flares li:nth-child(15) {
+    left: 19%;
+    width: 5px;
+    height: 5px;
+    animation-delay: 12s;
+    animation-duration: 11.5s;
     background: rgba(248, 118, 255, 0.2);
   }
 }

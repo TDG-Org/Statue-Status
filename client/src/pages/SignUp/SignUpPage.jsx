@@ -30,7 +30,7 @@ const SignUpPage = () => {
                 <p>Username:</p>
                 <input
                   required
-                  className="signup-input"
+                  className="signup-input signup-input-username"
                   type="text"
                 />
               </div>,
@@ -43,7 +43,7 @@ const SignUpPage = () => {
                 <p>Email:</p>
                 <input
                   required
-                  className="signup-input"
+                  className="signup-input signup-input-email"
                   type="email"
                 />
               </div>,
@@ -80,7 +80,10 @@ const SignUpPage = () => {
     {
       element: 
               <div className="signup-button-wrapper">
-                <button className="signup-btn">
+                <button
+                  onClick={checkSignUpInputs}
+                  className="signup-btn"
+                >
                   Create Account
                 </button>
               </div>,
@@ -94,6 +97,64 @@ const SignUpPage = () => {
     if (document.querySelector(".signup-input-pass")?.value.length >= 6) {
       setIsPassEmpty(false);
     } else setIsPassEmpty(true);
+  }
+
+  // Function to check the inputs before sending the data to the backend 
+  function checkSignUpInputs() {
+
+    // Retrieve all elements 
+    let newUsername = document.querySelector(".signup-input-username")?.value;
+    let newEmail = document.querySelector(".signup-input-email")?.value;
+    let newPassword = document.querySelector(".signup-input-pass")?.value;
+    let ReEnterPass = document.querySelector(".re-enter-pass")?.value;
+
+    // Check Username 
+    if (newUsername === "") {
+      swal({
+        text: "Please add your Username",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1750);
+      return;
+    }
+
+    // Check Email 
+    if (newEmail === "") {
+      swal({
+        text: "Please add your Email",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1750);
+      return;
+    }
+
+    // Check Password 
+    if (newPassword === "") {
+      swal({
+        text: "Please add your Password (6 Characters at least)",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1750);
+      return;
+    }
+
+    // Check ReEnterPass 
+    if (ReEnterPass === "") {
+      swal({
+        text: "Please retype your password",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1750);
+      return;
+    }
   }
 
   const [opacities, setOpacities] = useState(elements.map(() => 0));

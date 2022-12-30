@@ -30,8 +30,15 @@ const LoginPage = () => {
               </div>,
       id: 2
     },
+    // Button 
     {
-      element: <div className="li-block">Element 3</div>, id: 3
+      element: 
+              <div className="login-input-wrapper">
+                <button className="login-btn">
+                  Login
+                </button>
+              </div>,
+      id: 3
     }
   ];
   const [opacities, setOpacities] = useState(elements.map(() => 0));
@@ -44,14 +51,14 @@ const LoginPage = () => {
           newOpacities[index] = 1;
           return newOpacities;
         });
-      }, index * 250);
+      }, index * 325);
     });
   }, []);
 
   return (
     <div className="LoginPage page">
 
-      <h1>Login</h1>
+      <h1>Login <i className="bi bi-box-arrow-in-right"></i></h1>
       <hr />
 
       <div className="container">
@@ -67,12 +74,6 @@ const LoginPage = () => {
             key: element.id
           })
         ))}
-          
-          <div className="login-input-wrapper">
-            <button className="login-btn">
-              Login
-            </button>
-          </div>
         </div>
 
       </div>

@@ -12,9 +12,25 @@ const LoginPage = () => {
 
   // Fading in Elements 
   const elements = [
-    { element: <div className="li-block">Element 1</div>, id: 1 },
-    { element: <div className="li-block">Element 2</div>, id: 2 },
-    { element: <div className="li-block">Element 3</div>, id: 3 }
+    {
+      element:
+              <div className="login-sect">
+                <p>Email:</p>
+                <input className="login-input" type="email" />
+              </div>,
+      id: 1
+    },
+    {
+      element:
+              <div className="login-sect">
+                <p>Password:</p>
+                <input className="login-input" type="password" />
+              </div>,
+      id: 2
+    },
+    {
+      element: <div className="li-block">Element 3</div>, id: 3
+    }
   ];
   const [opacities, setOpacities] = useState(elements.map(() => 0));
 
@@ -41,6 +57,7 @@ const LoginPage = () => {
         {/* Typing Text  */}
         <TypingText message={ content } />
 
+        <div className="login-inputs-wrapper">
         {/* Login Input  */}
         {elements.map((element, index) => (
           React.cloneElement(element.element, {
@@ -48,14 +65,6 @@ const LoginPage = () => {
             key: element.id
           })
         ))}
-
-        <div className="login-inputs-wrapper">
-
-          {/* Email  */}
-          <div className="login-sect">
-            <p>Email:</p>
-            <input className="login-input" type="email" />
-          </div>
           
         </div>
 

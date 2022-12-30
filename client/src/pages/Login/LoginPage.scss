@@ -25,8 +25,8 @@
     width: 90%;
     display: flex;
     max-width: 600px;
-    border-radius: 8px;
-    margin: .75rem auto;
+    // border-radius: 8px;  
+    margin: 5rem auto;
     padding: 1.5rem 4rem;
     flex-direction: column;
     border: 1px solid $mid-dark-clr;
@@ -34,10 +34,10 @@
 
     .login-sect {
       width: 80%;
-      margin: 0 auto;
+      margin: .75rem auto;
 
       p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: $second-clr;
         margin-bottom: .5rem;
       }
@@ -48,7 +48,7 @@
         outline: none;
         padding: .5rem .10rem;
         transition: all 250ms ease;
-        border: 1px solid $low-dark-clr;
+        border: 1px solid $mid-dark-clr;
         background-color: rgba(0, 0, 0, 0); 
 
         &:hover {

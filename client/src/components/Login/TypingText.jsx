@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // Proptypes 
 import PropTypes from "prop-types";
@@ -52,7 +52,7 @@ const TypingText = ({ message }) => {
   }, [typingDone]);
   
   return (
-    <p>{text} {showCursor && <span className="cursor">|</span>}</p>
+    <p className="typed-text">{text} {showCursor && <span className="cursorBlink">|</span>}</p>
   );
 };
 

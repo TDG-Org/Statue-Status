@@ -12,7 +12,7 @@ import MiniStatueCard from "./MiniStatueCard";
 import { Pie, RichList, Chart, Main, News } from "./Home";
 
 // Login Page 
-import { TypingText } from "./Login";
+import { TypingText, Flares } from "./Login";
 
 // Profile Page 
 import { EditProfile } from "./Profile";
@@ -43,6 +43,7 @@ export {
   Chart,
   Intro,
   Footer,
+  Flares,
   Friends,
   Explore,
   General,
@@ -52,6 +53,7 @@ export {
   GoBackBtn,
   MyAccount,
   PowerUser,
+  TypingText,
   EditProfile,
   ProfileStatue,
   MiniStatueCard,

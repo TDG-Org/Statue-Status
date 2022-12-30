@@ -1,17 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // Styles
 import "./LoginPage.scss";
 
 // Components 
-import { TypingText } from "../../components/Login";
+import { TypingText } from "../../components";
 
 const LoginPage = () => { 
 
-  const content = "Welcome to Statue Status! - Nate";
+  const content = "Welcome to Statue Status! 🎉";
 
   // Fading in Elements 
-
   const elements = [
     { element: <div className="li-block">Element 1</div>, id: 1 },
     { element: <div className="li-block">Element 2</div>, id: 2 },
@@ -31,7 +30,6 @@ const LoginPage = () => {
     });
   }, []);
 
-
   return (
     <div className="LoginPage page">
 
@@ -41,7 +39,7 @@ const LoginPage = () => {
       {/* Typing Text  */}
       <TypingText message={ content } />
 
-
+      {/* Login Input  */}
       {elements.map((element, index) => (
         React.cloneElement(element.element, {
           style: { opacity: opacities[index], transition: "opacity 1s" },

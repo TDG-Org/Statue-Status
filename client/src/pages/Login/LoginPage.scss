@@ -20,4 +20,34 @@
     background-image: url("../../assets/svgs/loginpage-background.svg");
   }
 
+  // The Input Wrapper 
+  .login-inputs-wrapper {
+    width: 80%;
+    margin: .75rem auto;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 4rem;
+    border-radius: 8px;
+    border: 1px solid pink;
+
+    .login-sect {
+      width: 80%;
+      border: 1px solid #fff;
+      margin: 0 auto;
+
+      p {
+        color: $accent-clr;
+        margin-bottom: .5rem;
+      }
+
+      .login-input {
+        color: #fff;
+        width: 100%;
+        background-color: $low-tp;
+        padding: .25rem 1.25rem;
+      }
+    }
+  }
+
 }

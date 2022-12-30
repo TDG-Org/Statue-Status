@@ -26,7 +26,7 @@ const LoginPage = () => {
       element:
               <div className="login-sect">
                 <p>Email:</p>
-                <input className="login-input" type="email" />
+                <input required className="login-input" type="email" />
               </div>,
       id: 1
     },
@@ -35,7 +35,7 @@ const LoginPage = () => {
       element:
               <div className="login-sect">
                 <p>Password:</p>
-                <input className="login-input" type="password" />
+                <input required className="login-input" type="password" />
               </div>,
       id: 2
     },

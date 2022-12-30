@@ -28,7 +28,11 @@ const SignUpPage = () => {
       element:
               <div className="signup-sect">
                 <p>Username:</p>
-                <input className="signup-input" type="text" />
+                <input
+                  required
+                  className="signup-input"
+                  type="text"
+                />
               </div>,
       id: 1
     },
@@ -37,7 +41,11 @@ const SignUpPage = () => {
       element:
               <div className="signup-sect">
                 <p>Email:</p>
-                <input className="signup-input" type="email" />
+                <input
+                  required
+                  className="signup-input"
+                  type="email"
+                />
               </div>,
       id: 2
     },
@@ -46,7 +54,25 @@ const SignUpPage = () => {
       element:
               <div className="signup-sect">
                 <p>Password:</p>
-                <input className="signup-input signup-input-pass" type="password" />
+                <input
+            required
+            onChange={displayReEnterPass}
+                  className="signup-input signup-input-pass"
+                  type="password"
+                />
+              </div>,
+      id: 3
+    },
+    // Re-Enter Password 
+    {
+      element:
+              <div className={`signup-sect ${isPassEmpty ? "hide" : "signup-input-active"}`}>
+                <p>Re-Enter Password:</p>
+                <input
+                  required
+                  className="signup-input re-enter-pass"
+                  type="password"
+                />
               </div>,
       id: 3
     },
@@ -58,7 +84,7 @@ const SignUpPage = () => {
                   Create Account
                 </button>
               </div>,
-      id: 4
+      id: 5
     }
   ];
 
@@ -85,7 +111,7 @@ const SignUpPage = () => {
 
   useEffect(() => {
     displayReEnterPass();
-  }, [document.querySelector(".signup-input-pass")?.value]);
+  }, []);
 
   return (
     <div className="SignUpPage page">

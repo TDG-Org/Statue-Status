@@ -33,8 +33,8 @@
   flex-wrap: nowrap;
   flex-direction: row;
   margin-top: -1rem;
-  justify-content: space-evenly;
   padding: 0 1rem 1rem 1rem;
+  justify-content: space-evenly;
 
   .rank-num-1 {
     color: #ebc817 !important; 
@@ -61,7 +61,7 @@
     background-color: rgb(10, 10, 10);
 
     &:hover {
-      cursor: default;
+      cursor: pointer;
       filter: drop-shadow(0px 0px 5px rgb(74, 74, 74));
     }
   }

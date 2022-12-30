@@ -27,10 +27,17 @@ const Pie = ({ richestData }) => {
         style={{
           labels: {
             fontSize: 16,
-            fill: "#fff"
+            fill: "#fff",
+            wordWrap: "wrap"
           }
         }}
-        // categories={{ x: "money", y: "name" }} 
+        text={(datum) => {
+          const words = datum.name.split(" ");
+          if (words.length > 1) {
+            return `${words[0]} ${words[1][0]}.`;
+          }
+          return datum.name;
+        }}
       />
 
     </div>

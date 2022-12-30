@@ -57,11 +57,11 @@ const Chart = ({ richestData }) => {
         {/* X Axis  */}
         <VictoryAxis
           style={{
-            
             axis: {stroke: "#a8a8a8"},
             tickLabels: {
               fill: "#fff",
-              fontSize: 13.5
+              fontSize: 13.5,
+              wordWrap: "wrap"
             } 
           }}
           tickFormat={(x) => {

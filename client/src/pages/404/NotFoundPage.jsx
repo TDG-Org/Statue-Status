@@ -10,8 +10,12 @@ const NotFoundPage = () => {
     <div className="NotFoundPage page page-full">
 
       <div className="container">
-        <h1>404</h1>
-        <p>Let&apos;s take you back!</p>
+        <div className="not-found-text-content">
+          <h1>404</h1>
+          <h4>Hmmm... nothing was found here</h4>
+          <p>Let&apos;s take you back!</p>
+          <i className="bi bi-house-door-fill"></i>
+        </div>
       </div>
 
       <div className="the-not-found-bg-wrapper">

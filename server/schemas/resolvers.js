@@ -198,14 +198,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addRelationship: async (parent, { profileId, relationship }, context) => {
+        addStatueAccessoryRelationship: async (parent, { statueId, relationship }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            accessories: { relationship },
-                        },
+                        $push: {
+                            "statue.accessories": { relationship }
+                        }
                     },
                     {
                         new: true,

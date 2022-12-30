@@ -4,34 +4,34 @@
 @import "../variables.scss";
 
 .flares-background {
-  background: transparent;
-  background: -webkit-linear-gradient(to left, #8f94fb, #370799);
-  width: 100%;
-  height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   z-Index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  background: -webkit-linear-gradient(to left, #8f94fb, #370799);
 
   .flares {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: absolute;
   }
   
   .flares li {
-    position: absolute;
-    display: block;
-    list-style: none;
     width: 15px;
     height: 15px;
+    display: block;
+    bottom: -150px;
+    list-style: none;
+    position: absolute;
     border-radius: 50% !important;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
-    bottom: -150px;
   
   }
   
@@ -112,18 +112,18 @@
   }
 }
 
-@keyframes animate {
+// Animations 
 
+@keyframes animate {
   0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-      border-radius: 0;
+    opacity: 1;
+    border-radius: 0;
+    transform: translateY(0) rotate(0deg);
   }
 
   100% {
-      transform: translateY(-1000px) rotate(720deg);
-      opacity: 0;
-      border-radius: 50%;
+    opacity: 0;
+    border-radius: 50%;
+    transform: translateY(-1000px) rotate(720deg);
   }
-
 }

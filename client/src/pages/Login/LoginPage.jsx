@@ -12,6 +12,7 @@ const LoginPage = () => {
 
   // Fading in Elements 
   const elements = [
+     // Email 
     {
       element:
               <div className="login-sect">
@@ -20,6 +21,7 @@ const LoginPage = () => {
               </div>,
       id: 1
     },
+    // Password 
     {
       element:
               <div className="login-sect">
@@ -66,8 +68,12 @@ const LoginPage = () => {
           })
         ))}
           
+          <div className="login-input-wrapper">
+            <button className="login-btn">
+              Login
+            </button>
+          </div>
         </div>
-
 
       </div>
 

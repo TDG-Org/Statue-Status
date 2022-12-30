@@ -23,11 +23,11 @@ const typeDefs = gql`
     _id: ID
     name: String!
     bio: String!
+    statueLink: String!
     accessories: Accessory!
     socialLinks: [SocialLink]!
     connections: [Connection]!
     customizations: Customization!
-    statueLink: String!
   }
 
   type Accessory {
@@ -82,6 +82,7 @@ const typeDefs = gql`
     removeProfile(profileId: ID!): Profile
     addStatueName(statueId: ID!, name: String): Statue
     addStatueBio(statueId: ID!, bio: String): Statue
+    addStatueStatueLink(statueId: ID!, statueLink: String): Statue
     addStatueAccessoryHeadline(statueId: ID!, headline: String): Statue
     addStatueAccessoryBirthday(statueId: ID!, birthday: String): Statue
     addStatueAccessoryLocation(statueId: ID!, location: String): Statue

@@ -32,7 +32,7 @@ const Chart = ({ richestData }) => {
 
       {/* The Chart  */}
       <VictoryChart
-        domainPadding={26}
+        domainPadding={23}
         animate={{
           duration: 1000,
           onLoad: { duration: 300 }
@@ -48,7 +48,7 @@ const Chart = ({ richestData }) => {
             },
             tickLabels: {
               fill: "#a8a8a8",
-              fontSize: 10
+              fontSize: 12.5
             },
           }}
           tickFormat={(x) => (`${parseInt(x) / 1000000000}${x.toString().length > 9 ? "b" : "" }`)}
@@ -57,11 +57,19 @@ const Chart = ({ richestData }) => {
         {/* X Axis  */}
         <VictoryAxis
           style={{
+            
             axis: {stroke: "#a8a8a8"},
             tickLabels: {
               fill: "#fff",
-              fontSize: 10.75
+              fontSize: 13.5
             } 
+          }}
+          tickFormat={(x) => {
+            const words = x.split(" ");
+            if (words.length > 1) {
+              return `${words[0]} ${words[1][0]}.`;
+            }
+            return x;
           }}
         />
 

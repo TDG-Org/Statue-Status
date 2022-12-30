@@ -77,7 +77,7 @@ const Main = ({ data }) => {
     }, 3000);
   }
 
-  // retrieveRichest();
+  // retrieveRichest(); 
 
   function setupInterval(func, interval) {
     setInterval(func, interval);

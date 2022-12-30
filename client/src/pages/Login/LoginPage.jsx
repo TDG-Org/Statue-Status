@@ -52,10 +52,10 @@ const LoginPage = () => {
         <div className="login-inputs-wrapper">
 
           {/* Email  */}
-        <div className="login-sect">
+          <div className="login-sect">
             <p>Email:</p>
             <input className="login-input" type="email" />
-        </div>
+          </div>
           
         </div>
 

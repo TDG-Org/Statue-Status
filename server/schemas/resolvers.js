@@ -96,10 +96,10 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addStatueName: async (parent, { profileId, name }, context) => {
-            if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+        addStatueName: async (parent, { statueId, name }, context) => {
+            if (context.profile) {
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
                         $addToSet: {
                             statue: { name },

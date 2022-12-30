@@ -3,10 +3,12 @@ import React, { useState, useRef, useEffect } from "react";
 // Styles
 import "./LoginPage.scss";
 
+// Components 
+import { TypingText } from "../../components/Login";
+
 const LoginPage = () => { 
 
-  // Typing Text
-  const content = "Welcome to Statue Status";
+  const content = "Welcome to Statue Status! - Nate";
 
   // Fading in Elements 
 
@@ -35,9 +37,10 @@ const LoginPage = () => {
 
       <h1>Login</h1>
       <hr />
-      <p>{text} {showCursor && <span className="cursor">|</span>}</p>
-      
-      
+
+      {/* Typing Text  */}
+      <TypingText message={ content } />
+
 
       {elements.map((element, index) => (
         React.cloneElement(element.element, {

@@ -11,6 +11,9 @@ import MiniStatueCard from "./MiniStatueCard";
 // Home Page 
 import { Pie, RichList, Chart, Main, News } from "./Home";
 
+// Login Page 
+import { TypingText } from "./Login";
+
 // Profile Page 
 import { EditProfile } from "./Profile";
 

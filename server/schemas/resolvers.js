@@ -249,14 +249,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addConnectionName: async (parent, { profileId, name }, context) => {
+        addStatueConnectionName: async (parent, { statueId, name }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            connections: { name },
-                        },
+                        $push: {
+                            "statue.connections": { name }
+                        }
                     },
                     {
                         new: true,

@@ -130,6 +130,23 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
+        addStatueStatueLink: async (parent, { statueId, statueLink }, context) => {
+            if (context.user) {
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
+                    {
+                        $addToSet: {
+                            statue: { statueLink },
+                        },
+                    },
+                    {
+                        new: true,
+                        runValidators: true,
+                    }
+                );
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
         addStatueAccessoryHeadline: async (parent, { statueId, headline }, context) => {
             if (context.user) {
                 return Statue.findOneAndUpdate(

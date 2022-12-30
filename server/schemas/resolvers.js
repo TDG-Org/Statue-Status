@@ -232,14 +232,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addConnectionAvatar: async (parent, { profileId, avatar }, context) => {
+        addStatueConnectionAvatar: async (parent, { statueId, avatar }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            connections: { avatar },
-                        },
+                        $push: {
+                            "statue.connections": { avatar }
+                        }
                     },
                     {
                         new: true,

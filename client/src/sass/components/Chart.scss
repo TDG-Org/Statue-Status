@@ -70,11 +70,10 @@
 // Pie 
 
 .victory-pie {
-  padding: .8rem;
+  padding: .25rem;
   max-width: 375px;
-  min-width: 300px;
-  margin: 1rem auto;
-  width: 35% !important;
+  min-width: 315px;
+  margin: .25rem auto;
 }
 
 // Media Queries 
@@ -115,14 +114,19 @@
   }  
 
   // Pie 
-  .victory-pie {
-    margin: .65rem !important;
-    min-width: 215px !important;
-
-    text {
-      tspan {
-        font-size: 1.25rem !important;
+  .page {
+    .victory-pie {
+      margin: 0;
+      padding: 0;
+      min-width: 300px;
+      width: 90% !important;
+  
+      text {
+        tspan {
+          font-size: 1.25rem !important;
+        }
       }
     }
   }
+
 }

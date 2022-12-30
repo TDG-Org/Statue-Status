@@ -36,17 +36,31 @@ const LoginPage = () => {
       <h1>Login</h1>
       <hr />
 
-      {/* Typing Text  */}
-      <TypingText message={ content } />
+      <div className="container">
 
-      {/* Login Input  */}
-      {elements.map((element, index) => (
-        React.cloneElement(element.element, {
-          style: { opacity: opacities[index], transition: "opacity 1s" },
-          key: element.id
-        })
-      ))}
-      
+        {/* Typing Text  */}
+        <TypingText message={ content } />
+
+        {/* Login Input  */}
+        {elements.map((element, index) => (
+          React.cloneElement(element.element, {
+            style: { opacity: opacities[index], transition: "opacity 1s" },
+            key: element.id
+          })
+        ))}
+
+        <div className="login-inputs-wrapper">
+
+          {/* Email  */}
+        <div className="login-email">
+          <p>Email:</p>
+        </div>
+          
+        </div>
+
+
+      </div>
+
     </div>
   );
 };

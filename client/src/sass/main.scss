@@ -6,6 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
 // Manrope 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap');
+// Roboto Mono 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&family=Roboto+Mono&display=swap');
 
 // Var Colors 
 @import "./variables.scss";
@@ -189,6 +191,23 @@ p, span, em, li, a, i, div {
   background: linear-gradient(to right, red, purple);
 }
 
+// Cursor Blinker 
+
+.cursorBlink {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.typed-text {
+  width: fit-content;
+  font-size: 1.05rem;
+  padding: .15rem 1rem;
+  background-color: $low-tp;
+  font-family: 'Roboto Mono', monospace;
+}
+
 // List Block 
 
 .li-block {
@@ -230,6 +249,20 @@ p, span, em, li, a, i, div {
     width: 100% !important;
   }
 
+  // titles 
+  .page {
+    h1 {
+      font-size: 2rem;
+      margin: 2rem 0 .75rem 0; 
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
   nav {
     z-index: 2;
   }
@@ -245,7 +278,7 @@ p, span, em, li, a, i, div {
   }
 
   .pallet {
-    margin: .5rem 0; 
+    margin: 1rem 0 1.75rem 0; 
     padding: 1.5rem .5rem;
   }
 }

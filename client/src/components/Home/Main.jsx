@@ -119,6 +119,24 @@ const Main = ({ data }) => {
         View Person
       </Link>
     </div>
+      
+    <div className="view-all-ppl-btn-wrapper">
+      <Link
+        to="/login"
+        className="view-all-ppl-btn"
+      >
+        Login
+      </Link>
+    </div>
+      
+    <div className="view-all-ppl-btn-wrapper">
+      <Link
+        to="/sign-up"
+        className="view-all-ppl-btn"
+      >
+        Sign Up
+      </Link>
+    </div>
     
   </div>
   );

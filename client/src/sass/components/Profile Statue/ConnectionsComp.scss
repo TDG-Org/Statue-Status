@@ -35,8 +35,8 @@
           flex-direction: row;
           align-items: center;
           padding: .2rem .65rem; 
-          border-bottom: 1px solid transparent;
           transition: all 250ms ease-in;
+          border-bottom: 1px solid transparent;
 
           .statue-peer-img-wrapper {
             width: 50px;
@@ -153,15 +153,15 @@
           img {
             width: 55px;
             height: 55px;
+            padding: .1rem;
             border-radius: 50%;
             border: 1px solid $mid-light-clr;
-            padding: .1rem;
           }
 
           .peer-pic-add-btn {
             width: 60%;
-            padding: .25rem;
             border: none;
+            padding: .25rem;
             color: $light-clr;
             padding: .25rem 1rem;
             background: transparent;
@@ -185,10 +185,10 @@
           width: 78%;
           display: flex;
           color: $light-clr;
-          margin: .25rem auto;
           max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
+          margin: .25rem auto;
           padding: .5rem 1rem;
           justify-content: center;
           background: $mid-dark-clr;
@@ -207,10 +207,10 @@
           width: 78%;
           display: flex;
           color: $light-clr;
-          margin: .25rem auto;
           max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
+          margin: .25rem auto;
           padding: .5rem 1rem;
           align-items: center;
           justify-content: center;

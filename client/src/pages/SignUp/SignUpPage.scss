@@ -1,9 +1,9 @@
-// Login Page SASS file 
+// Settings Page SASS file 
 
 // SCSS Variables 
 @import "../../sass/variables.scss";
 
-.LoginPage {
+.SignUpPage {
   z-index: 2;
   position: relative;
   margin: 0 !important;
@@ -11,6 +11,7 @@
   background: rgb(0,111,89);
   background: linear-gradient(124deg, rgba(0,111,89,1) 0%, rgba(0,46,37,1) 9%, rgba(0,19,15,1) 22%, rgba(0,0,0,1) 78%, rgba(59,0,59,1) 92%, rgba(139,0,97,1) 100%);
 
+  
   h1 {
     i {
       margin-left: .75rem;
@@ -32,7 +33,7 @@
   }
 
   // The Input Wrapper 
-  .login-inputs-wrapper {
+  .signup-inputs-wrapper {
     width: 90%;
     display: flex;
     max-width: 600px;
@@ -42,7 +43,7 @@
     border: 1px solid $mid-dark-clr;
     background-color: rgba(0, 0, 0, 0.071);
 
-    .login-sect {
+    .signup-sect {
       width: 80%;
       margin: .75rem auto;
 
@@ -52,7 +53,7 @@
         margin-bottom: .5rem;
       }
 
-      .login-input {
+      .signup-input {
         width: 100%;
         color: #fff;
         outline: none;
@@ -80,14 +81,14 @@
       }
     }
 
-    // Login Button 
-    .login-button-wrapper {
+    // signup Button 
+    .signup-button-wrapper {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      .login-btn {
+      .signup-btn {
         overflow: hidden; 
         color: $light-clr;
         margin: 1rem auto;
@@ -154,13 +155,13 @@
 // Media Queries 
 
 @media screen and (max-width: 950px) {
-  .LoginPage {
-    .login-inputs-wrapper {
+  .signupPage {
+    .signup-inputs-wrapper {
       padding: 1rem 1rem;
-      .login-input {
+      .signup-input {
         width: 90%;
       }
-      .login-btn {
+      .signup-btn {
         width: 80%;
         padding: .5rem .10rem;
       }

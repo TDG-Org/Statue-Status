@@ -7,12 +7,13 @@ import "./NotFoundPage.scss";
 
 const NotFoundPage = () => {
   return (
-    <div className="NotFoundPage">
+    <div className="NotFoundPage page page-full ">
       <h1>Not Found</h1>
       <hr />
 
       <div className="container">
         <p>Let&apos;s take you back!</p>
+
       </div>
     </div>
   );

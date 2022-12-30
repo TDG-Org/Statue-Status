@@ -44,7 +44,9 @@ const StatueStatus = () => {
 
   return (
     <div className="Statue-Status-Wrapper">
-      {location.pathname !== "/mini-statue" ? (
+      { location.pathname !== "/mini-statue" &&
+        location.pathname !== "/404"
+        ? (
         <>
           <Aside />
           <div className="page-side-wrapper">
@@ -76,9 +78,13 @@ const StatueStatus = () => {
           </div>
         </>
       ) : (
+        // Other Routes Go Here 
         <Routes location={location} key={location.pathname}>
-          {/* Other routes go here */}
+          {/* Mini Statue  */}
           <Route path="/mini-statue" element={<MiniStatuePage />} />
+            
+          {/* 404 Page  */}
+          <Route path="/404" element={<NotFoundPage />} />
         </Routes>
       )}
     </div>

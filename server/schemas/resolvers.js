@@ -334,14 +334,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addCustomizationSecondaryColor: async (parent, { profileId, secondaryColor }, context) => {
+        addStatueCustomizationSecondaryColor: async (parent, { statueId, secondaryColor }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            customizations: { secondaryColor },
-                        },
+                        $push: {
+                            "statue.customizations": { secondaryColor }
+                        }
                     },
                     {
                         new: true,

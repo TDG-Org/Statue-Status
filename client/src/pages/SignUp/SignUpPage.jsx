@@ -19,8 +19,19 @@ const SignUpPage = () => {
 
   const content = "Hey, let's get you set up!";
 
+  const [isPassEmpty, setIsPassEmpty] = useState(true);
+
   // Fading in Elements 
   const elements = [
+     // Username 
+    {
+      element:
+              <div className="signup-sect">
+                <p>Username:</p>
+                <input className="signup-input" type="text" />
+              </div>,
+      id: 1
+    },
      // Email 
     {
       element:
@@ -28,28 +39,36 @@ const SignUpPage = () => {
                 <p>Email:</p>
                 <input className="signup-input" type="email" />
               </div>,
-      id: 1
+      id: 2
     },
     // Password 
     {
       element:
               <div className="signup-sect">
                 <p>Password:</p>
-                <input className="signup-input" type="password" />
+                <input className="signup-input signup-input-pass" type="password" />
               </div>,
-      id: 2
+      id: 3
     },
     // Button 
     {
       element: 
               <div className="signup-button-wrapper">
                 <button className="signup-btn">
-                  Create
+                  Create Account
                 </button>
               </div>,
-      id: 3
+      id: 4
     }
   ];
+
+  // Function to check if pass is empty to let user reEnter 
+  function displayReEnterPass() {
+    if (document.querySelector(".signup-input-pass")?.value != "") {
+      setIsPassEmpty(false);
+    } else setIsPassEmpty(true);
+  }
+
   const [opacities, setOpacities] = useState(elements.map(() => 0));
 
   useEffect(() => {
@@ -64,9 +83,13 @@ const SignUpPage = () => {
     });
   }, []);
 
+  useEffect(() => {
+    displayReEnterPass();
+  }, [document.querySelector(".signup-input-pass")?.value]);
+
   return (
     <div className="SignUpPage page">
-      <h1>SignUpPage</h1>
+      <h1>Sign Up <i className="bi bi-person-plus-fill"></i></h1>
       <hr />
 
       <div className="container">
@@ -82,6 +105,16 @@ const SignUpPage = () => {
             key: element.id
           })
         ))}
+        </div>
+
+        <p className="create-acc-message">Already have an account?</p>
+        <div className="create-acc-btn-wrapper">
+          <Link
+            className="create-acc-btn"
+            to="/login"
+          >
+            Login
+          </Link>
         </div>
 
       </div>

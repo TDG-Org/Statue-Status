@@ -215,14 +215,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addSocialLink: async (parent, { profileId, link }, context) => {
+        addStatueSocialLinkLink: async (parent, { statueId, link }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            socialLinks: { link },
-                        },
+                        $push: {
+                            "statue.socialLinks": { link }
+                        }
                     },
                     {
                         new: true,

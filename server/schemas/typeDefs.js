@@ -88,9 +88,9 @@ const typeDefs = gql`
     addStatueAccessoryCompany(statueId: ID!, company: String): Statue
     addStatueAccessoryRelationship(statueId: ID!, relationship: String): Statue
     addStatueSocialLinkLink(statueId: ID!, link: String): Statue
-    addConnectionAvatar(profileId: ID!, avatar: String): Profile
-    addConnectionName(profileId: ID!, name: String): Profile
-    addConnectionSocialLink(profileId: ID!, socialLink: String): Profile
+    addStatueConnectionAvatar(statueId: ID!, avatar: String): Statue
+    addStatueConnectionName(statueId: ID!, name: String): Statue
+    addStatueConnectionSocialLink(statueId: ID!, socialLink: String): Statue
     addCustomizationBackground(profileId: ID!, background: String): Profile
     addCustomizationFont(profileId: ID!, font: String): Profile
     addCustomizationPrimaryColor(profileId: ID!, primaryColor: String): Profile

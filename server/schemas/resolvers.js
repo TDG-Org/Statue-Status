@@ -57,7 +57,7 @@ const resolvers = {
 
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $addToSet: { profiles: profile._id } }
+                    { $addToSet: { profile: profile._id } }
                 );
 
                 return profile;
@@ -73,7 +73,7 @@ const resolvers = {
 
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $addToSet: { profiles: profile._id } }
+                    { $addToSet: { profile: profile._id } }
                 );
 
                 return profile;
@@ -89,17 +89,17 @@ const resolvers = {
 
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $addToSet: { profiles: profile._id } }
+                    { $addToSet: { profile: profile._id } }
                 );
 
                 return profile;
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addStatueName: async (parent, { profileId, name }, context) => {
+        addStatueName: async (parent, { statueId, name }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
                         $addToSet: {
                             statue: { name },
@@ -113,10 +113,10 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addStatueBio: async (parent, { profileId, bio }, context) => {
+        addStatueBio: async (parent, { statueId, bio }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
                         $addToSet: {
                             statue: { bio },
@@ -130,13 +130,13 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addHeadline: async (parent, { profileId, headline }, context) => {
+        addStatueStatueLink: async (parent, { statueId, statueLink }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
                         $addToSet: {
-                            accessories: { headline },
+                            statue: { statueLink },
                         },
                     },
                     {
@@ -147,14 +147,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addBirthday: async (parent, { profileId, birthday }, context) => {
+        addStatueAccessoryHeadline: async (parent, { statueId, headline }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            accessories: { birthday },
-                        },
+                        $push: {
+                            "statue.accessories": { headline }
+                        }
                     },
                     {
                         new: true,
@@ -164,14 +164,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addLocation: async (parent, { profileId, location }, context) => {
+        addStatueAccessoryBirthday: async (parent, { statueId, birthday }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            accessories: { location },
-                        },
+                        $push: {
+                            "statue.accessories": { birthday }
+                        }
                     },
                     {
                         new: true,
@@ -181,14 +181,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addCompany: async (parent, { profileId, company }, context) => {
+        addStatueAccessoryLocation: async (parent, { statueId, location }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            accessories: { company },
-                        },
+                        $push: {
+                            "statue.accessories": { location }
+                        }
                     },
                     {
                         new: true,
@@ -198,14 +198,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addRelationship: async (parent, { profileId, relationship }, context) => {
+        addStatueAccessoryCompany: async (parent, { statueId, company }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            accessories: { relationship },
-                        },
+                        $push: {
+                            "statue.accessories": { company }
+                        }
                     },
                     {
                         new: true,
@@ -215,14 +215,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addSocialLink: async (parent, { profileId, link }, context) => {
+        addStatueAccessoryRelationship: async (parent, { statueId, relationship }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            socialLinks: { link },
-                        },
+                        $push: {
+                            "statue.accessories": { relationship }
+                        }
                     },
                     {
                         new: true,
@@ -232,14 +232,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addConnectionAvatar: async (parent, { profileId, avatar }, context) => {
+        addStatueSocialLinkLink: async (parent, { statueId, link }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            connections: { avatar },
-                        },
+                        $push: {
+                            "statue.socialLinks": { link }
+                        }
                     },
                     {
                         new: true,
@@ -249,14 +249,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addConnectionName: async (parent, { profileId, name }, context) => {
+        addStatueConnectionAvatar: async (parent, { statueId, avatar }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            connections: { name },
-                        },
+                        $push: {
+                            "statue.connections": { avatar }
+                        }
                     },
                     {
                         new: true,
@@ -266,14 +266,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addConnectionSocialLink: async (parent, { profileId, socialLink }, context) => {
+        addStatueConnectionName: async (parent, { statueId, name }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            connections: { socialLink },
-                        },
+                        $push: {
+                            "statue.connections": { name }
+                        }
                     },
                     {
                         new: true,
@@ -283,14 +283,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addCustomizationBackground: async (parent, { profileId, background }, context) => {
+        addStatueConnectionSocialLink: async (parent, { statueId, socialLink }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            customizations: { background },
-                        },
+                        $push: {
+                            "statue.connections": { socialLink }
+                        }
                     },
                     {
                         new: true,
@@ -300,14 +300,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addCustomizationFont: async (parent, { profileId, font }, context) => {
+        addStatueCustomizationBackground: async (parent, { statueId, background }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            customizations: { font },
-                        },
+                        $push: {
+                            "statue.customizations": { background }
+                        }
                     },
                     {
                         new: true,
@@ -317,14 +317,14 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addCustomizationPrimaryColor: async (parent, { profileId, primaryColor }, context) => {
+        addStatueCustomizationFont: async (parent, { statueId, font }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            customizations: { primaryColor },
-                        },
+                        $push: {
+                            "statue.customizations": { font }
+                        }
                     },
                     {
                         new: true,
@@ -334,14 +334,31 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
-        addCustomizationSecondaryColor: async (parent, { profileId, secondaryColor }, context) => {
+        addStatueCustomizationPrimaryColor: async (parent, { statueId, primaryColor }, context) => {
             if (context.user) {
-                return Profile.findOneAndUpdate(
-                    { _id: profileId },
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
                     {
-                        $addToSet: {
-                            customizations: { secondaryColor },
-                        },
+                        $push: {
+                            "statue.customizations": { primaryColor }
+                        }
+                    },
+                    {
+                        new: true,
+                        runValidators: true,
+                    }
+                );
+            }
+            throw new AuthenticationError("You need to be logged in!");
+        },
+        addStatueCustomizationSecondaryColor: async (parent, { statueId, secondaryColor }, context) => {
+            if (context.user) {
+                return Statue.findOneAndUpdate(
+                    { _id: statueId },
+                    {
+                        $push: {
+                            "statue.customizations": { secondaryColor }
+                        }
                     },
                     {
                         new: true,

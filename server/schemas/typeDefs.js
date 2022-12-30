@@ -23,11 +23,11 @@ const typeDefs = gql`
     _id: ID
     name: String!
     bio: String!
+    statueLink: String!
     accessories: Accessory!
     socialLinks: [SocialLink]!
     connections: [Connection]!
     customizations: Customization!
-    statueLink: String!
   }
 
   type Accessory {
@@ -80,21 +80,22 @@ const typeDefs = gql`
     editProfileBio(bio: String!): Profile
     editProfileAvatar(avatar: String!): Profile
     removeProfile(profileId: ID!): Profile
-    addStatueName(profileId: ID!, name: String): Profile
-    addStatueBio(profileId: ID!, bio: String): Profile
-    addHeadline(profileId: ID!, headline: String): Profile
-    addBirthday(profileId: ID!, birthday: String): Profile
-    addLocation(profileId: ID!, location: String): Profile
-    addCompany(profileId: ID!, company: String): Profile
-    addRelationship(profileId: ID!, relationship: String): Profile
-    addSocialLink(profileId: ID!, link: String): Profile
-    addConnectionAvatar(profileId: ID!, avatar: String): Profile
-    addConnectionName(profileId: ID!, name: String): Profile
-    addConnectionSocialLink(profileId: ID!, socialLink: String): Profile
-    addCustomizationBackground(profileId: ID!, background: String): Profile
-    addCustomizationFont(profileId: ID!, font: String): Profile
-    addCustomizationPrimaryColor(profileId: ID!, primaryColor: String): Profile
-    addCustomizationSecondaryColor(profileId: ID!, secondaryColor: String): Profile
+    addStatueName(statueId: ID!, name: String): Statue
+    addStatueBio(statueId: ID!, bio: String): Statue
+    addStatueStatueLink(statueId: ID!, statueLink: String): Statue
+    addStatueAccessoryHeadline(statueId: ID!, headline: String): Statue
+    addStatueAccessoryBirthday(statueId: ID!, birthday: String): Statue
+    addStatueAccessoryLocation(statueId: ID!, location: String): Statue
+    addStatueAccessoryCompany(statueId: ID!, company: String): Statue
+    addStatueAccessoryRelationship(statueId: ID!, relationship: String): Statue
+    addStatueSocialLinkLink(statueId: ID!, link: String): Statue
+    addStatueConnectionAvatar(statueId: ID!, avatar: String): Statue
+    addStatueConnectionName(statueId: ID!, name: String): Statue
+    addStatueConnectionSocialLink(statueId: ID!, socialLink: String): Statue
+    addStatueCustomizationBackground(statueId: ID!, background: String): Statue
+    addStatueCustomizationFont(statueId: ID!, font: String): Statue
+    addStatueCustomizationPrimaryColor(statueId: ID!, primaryColor: String): Statue
+    addStatueCustomizationSecondaryColor(statueId: ID!, secondaryColor: String): Statue
   }
 `;
 

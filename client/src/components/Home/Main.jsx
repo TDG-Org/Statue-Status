@@ -137,6 +137,15 @@ const Main = ({ data }) => {
         Sign Up
       </Link>
     </div>
+      
+    <div className="view-all-ppl-btn-wrapper">
+      <Link
+        to="/404"
+        className="view-all-ppl-btn"
+      >
+        404
+      </Link>
+    </div>
     
   </div>
   );

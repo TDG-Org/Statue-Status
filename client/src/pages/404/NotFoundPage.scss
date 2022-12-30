@@ -4,5 +4,49 @@
 @import "../../sass/variables.scss";
 
 .NotFoundPage {
-  background-image: url("../../assets/imgs/not-found-page.png");
+  background-color: black;
+  padding: 0 !important;
+
+
+
+  .the-not-found-bg-wrapper {
+    position: relative;
+    height: 80vh;
+
+    .not-found-black {
+      position: absolute;
+    }
+
+     .one {
+      top: 0;
+      left: 0;
+      height: 125px !important;
+      width: 100%;
+      background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+      z-index: 2;
+    }
+
+    .two {
+      bottom: 0;
+      right: 0;
+      height: 250px;
+      width: 100%;
+      background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+      z-index: 2;
+
+    }
+
+    .not-fount-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../assets/imgs/not-found-page.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center 25%;
+      // height: 65vh; 
+    }
+  }
 }

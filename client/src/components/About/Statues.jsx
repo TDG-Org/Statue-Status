@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const Statues = () => {
   return (
-    <div className="about-sect" id="statuesSect">
-
-      <h3>What are Statues?</h3>
+    <div className="pallet" id="statuesSect">
 
       {/* Content  */}
       <div className="about-sect-content">

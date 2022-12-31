@@ -116,7 +116,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
 
@@ -128,7 +128,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
 
@@ -140,7 +140,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
 
@@ -152,7 +152,7 @@ const SignUpPage = () => {
       });
       setTimeout(() => {
         swal.close();
-      }, 1750);
+      }, 1250);
       return;
     }
   }
@@ -178,9 +178,9 @@ const SignUpPage = () => {
   return (
     <div className="SignUpPage page">
       <h1>Sign Up <i className="bi bi-person-plus-fill"></i></h1>
-      <hr />
 
       <div className="container">
+      <hr />
 
         {/* Typing Text  */}
         <TypingText message={content} />

@@ -38,8 +38,8 @@ const ProfileStatue = () => {
 
   return (
      <div className="statue-sect">
-     <h3>My Statue</h3>
-     <div className="pallet">
+      <h3>My Statue</h3>
+      <div className="pallet">
         <div className="container">
           
          {/* If No Statue  */}
@@ -65,8 +65,8 @@ const ProfileStatue = () => {
             </button>
           </div>
 
-       </div>
-     </div>
+        </div>
+      </div>
    </div>
   );
 };

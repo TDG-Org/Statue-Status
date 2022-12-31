@@ -14,20 +14,25 @@ const AboutPage = () => {
   return (
     <div className="AboutPage page">
 
+      <h1>Statue Status</h1>
+      
       <div className="container">
+        <hr />
+        <p className="about-extra-space"></p>
 
         {/* Intro Section  */}
         <Intro />
 
-        {/* Getting Started Section  */}
+        {/* Getting Started Section */}
+        <h3>Lets Get Started</h3>
         <Starter />
 
-        {/* What are Statues  Section*/}
+        {/* What are Statues  Section */}
+        <h3>What are Statues?</h3>
         <Statues />
 
+        <hr />
       </div>
-      
-      <hr />
       
     </div>
   );

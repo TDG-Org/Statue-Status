@@ -45,19 +45,31 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Extra */}
+        {/* Credits */}
 
         <div className="footer-sect">
           <h4>Extra</h4>
           <ul className="footer-links">
             <li>
-              <a href="#">Extra</a>
+              <a target="blank"
+                href="https://chat.openai.com/chat"
+              >
+                ChatGPT
+              </a>
             </li>
             <li>
-              <a href="#">Extra</a>
+            <a target="blank"
+                href="https://chat.openai.com/chat"
+              >
+                ChatGPT
+              </a>
             </li>
             <li>
-              <a href="#">Extra</a>
+            <a target="blank"
+                href="https://chat.openai.com/chat"
+              >
+                ChatGPT
+              </a>
             </li>
           </ul>
           </div>

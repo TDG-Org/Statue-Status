@@ -8,8 +8,8 @@
 	display: none;
 	padding: .75rem;
 	cursor: pointer;
-	height: 50px !important;
 	width: 50px !important;
+	height: 50px !important;
 }
 
 .bar {
@@ -22,7 +22,7 @@
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-/* Media Query (Mobile Size)  */
+/* Media Query (Mobile Size) */
 
 @media screen and (max-width: 950px) {
 
@@ -31,7 +31,6 @@
 		padding: .75rem;
 		align-items: center;
 		justify-self: center;
-
 	}
 
 	.hamburger.active .bar:nth-child(2) {

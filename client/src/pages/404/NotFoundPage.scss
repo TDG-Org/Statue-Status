@@ -56,7 +56,6 @@
         }
       }
     }
-
   }
 
   .the-not-found-bg-wrapper {
@@ -86,16 +85,69 @@
       background-image: linear-gradient(to top, rgb(1,1,1), rgba(0, 0, 0, 0) 100%);
     }
 
-  .not-fount-bg {
-    top: 0;
-    left: 0;
-    height: 100%;
-    position: absolute;
-    width: 100% !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 25%;
-    background-image: url("../../assets/imgs/not-found-page.png");
+    .not-fount-bg {
+      top: 0;
+      left: 0;
+      height: 100%;
+      position: absolute;
+      width: 100% !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center 25%;
+      background-image: url("../../assets/imgs/not-found-page.png");
+    }
   }
+
+/* SCSS for the birds */
+.birds-wrapper {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .bird {
+    opacity: 0;
+    width: 10px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.752);
+    animation: fly 30s linear infinite;
+
+  // Animations 
+
+  @keyframes fly {
+    0% {
+      opacity: 1;
+      transform: translateX(-20px);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(1250px);
+    }
+  }
+
+
+    &:nth-of-type(1) {
+      top: 20%;
+      animation-delay: 2s;
+    animation-duration: 26s;
+    }
+
+    &:nth-of-type(2) {
+      top: 22%;
+      animation-delay: 1.75s;
+    animation-duration: 26.9s;
+    }
+
+    &:nth-of-type(3) {
+      top: 21%;
+    animation-duration: 26.5s;
+      animation-delay: 2.75s;
+    }
+   }
   }
 }

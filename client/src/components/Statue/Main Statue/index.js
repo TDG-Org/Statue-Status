@@ -1,7 +1,7 @@
 // Import 
-import Socials from "./Socials";
-import Accessories from "./Accessories";
-import Connections from "./Connections";
+import Socials from "./Secondary/Socials";
+import Accessories from "./Secondary/Accessories";
+import Connections from "./Secondary/Connections";
 import ClientDetails from "./ClientDetails";
 
 // Export 

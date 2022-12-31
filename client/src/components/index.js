@@ -32,6 +32,9 @@ import { Intro, Starter, Statues } from "./About";
 // Powerful Page 
 import { PowerUser } from "./Powerful";
 
+// Statue Page 
+import { Socials, Accessories, Connections } from "./Statue";
+
 // Export 
 export {
   Pie,
@@ -44,6 +47,7 @@ export {
   Intro,
   Footer,
   Flares,
+  Socials,
   Friends,
   Explore,
   General,
@@ -55,6 +59,8 @@ export {
   PowerUser,
   TypingText,
   EditProfile,
+  Connections,
+  Accessories,
   ProfileStatue,
   MiniStatueCard,
 };

@@ -14,7 +14,6 @@
   position: sticky !important;
   justify-content: space-evenly; 
   background-color: $mid-dark-clr;
-  // overflow-y: scroll; 
 
   .container {
     padding: 0;
@@ -22,12 +21,12 @@
   }
 
   .wide-screen-display {
-    padding: .15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
     height: 100%;
+    display: flex;
+    padding: .15rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }
 

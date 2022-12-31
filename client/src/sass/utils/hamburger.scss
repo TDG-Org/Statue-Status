@@ -7,9 +7,9 @@
 	z-index: 6;
 	display: none;
 	padding: .75rem;
+	cursor: pointer;
 	height: 50px !important;
 	width: 50px !important;
-	cursor: pointer;
 }
 
 .bar {
@@ -27,9 +27,8 @@
 @media screen and (max-width: 950px) {
 
 	.hamburger {
-		padding: .75rem;
-
 		display: block;
+		padding: .75rem;
 		align-items: center;
 		justify-self: center;
 

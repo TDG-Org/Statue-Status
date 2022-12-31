@@ -4,9 +4,9 @@
 @import "../variables.scss";
 
 .user-avatar-section {
+  padding: 5% 0;
   display: flex;
   flex-wrap: nowrap;
-  padding: 2.5rem 0;
   flex-direction: column;
 }
 
@@ -95,7 +95,7 @@
 
 .username {
   width: 100%;
-  margin: 1rem 0;
+  margin: .5rem 0;
   color: $mid-light-clr;
 
   .the-at {
@@ -120,7 +120,7 @@
   width: 100%;
   display: flex;
   padding: .15rem;
-  margin-bottom: 1.15rem;
+  margin-bottom: .5rem;
   flex-direction: column;
   border-bottom: 1px solid transparent;
 
@@ -137,7 +137,8 @@
 }
 
 .user-bio {
-  padding: 0rem 1.3rem;
+  margin: 0;
+  padding: 0rem 1.25rem;
 }
 
 // Follow Count 

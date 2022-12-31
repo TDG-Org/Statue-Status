@@ -30,6 +30,8 @@ const Aside = () => {
   return (
     <aside className={`aside-comp ${isActive ? "" : "active"}`}>
       <div className="container">
+
+        {/* Logo  */}
         <div className="nav-logo">
           <Link to="/">
             <img
@@ -40,11 +42,14 @@ const Aside = () => {
           </Link>
         </div>
 
-        {/* User's Avatar and info Section  */}
-        <User />
+        <div className="wide-screen-display">
+          {/* User's Avatar and info Section  */}
+          <User />
 
-        {/* Navbar Section  */}
-        <Nav isActive={isActive} handleToggle={handleToggle}  />
+          {/* Navbar Section  */}
+          <Nav isActive={isActive} handleToggle={handleToggle}  />
+        </div>
+
 
           {/* Hamburger  */}
         <div className={`hamburger ${isActive ? "" : "active"}`} onClick={handleToggle}>
@@ -52,6 +57,7 @@ const Aside = () => {
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
+
       </div>
     </aside>
   );

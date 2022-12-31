@@ -48,8 +48,11 @@ const Footer = () => {
         {/* Credits */}
 
         <div className="footer-sect">
-          <h4>Extra</h4>
+
+          <h4>Credits</h4>
+
           <ul className="footer-links">
+            {/* Jesseokeya's API  */}
             <li>
               <a target="blank"
                 href="https://github.com/jesseokeya/Forbes400"
@@ -57,6 +60,7 @@ const Footer = () => {
                 jesseokeya&apos;s API
               </a>
             </li>
+            {/* Bootstrap Icons  */}
             <li>
             <a target="blank"
                 href="https://icons.getbootstrap.com/"
@@ -64,6 +68,7 @@ const Footer = () => {
                 Bootstrap Icons
               </a>
             </li>
+            {/* OpenAI  */}
             <li>
               <a target="blank"
                 href="https://openai.com/"
@@ -71,6 +76,7 @@ const Footer = () => {
                 OpenAI
               </a>
             </li>
+            {/* haikei  */}
             <li>
               <a target="blank"
                 href="https://haikei.app/"
@@ -78,6 +84,7 @@ const Footer = () => {
                 haikei
               </a>
             </li>
+            {/* IconScout  */}
             <li>
               <a target="blank"
                 href="https://iconscout.com/"
@@ -86,8 +93,9 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          </div>
+
         </div>
+      </div>
 
     </footer>
   );

@@ -29,6 +29,13 @@ const Chart = ({ richestData }) => {
     if (n >= 1e12) return +(n / 1e12).toFixed(1);
   }
 
+  // Function to handle clicks on ranking numbers
+  function handleRankBubbleClick(e) {
+    console.log(`Clicked ranking number: ${e.target.value}`);
+    console.log(e.target.value);
+    // Add your code here to do something when a ranking number is clicked
+  }
+
   return (
     <div className="chart">
 
@@ -100,7 +107,7 @@ const Chart = ({ richestData }) => {
 
       {/* Ranking Bubbles */}
       <ul className="ranking-numbers">
-        <li value="1" className="rank-num rank-num-1">#1</li>
+        <li onClick={handleRankBubbleClick} value="1" className="rank-num rank-num-1">#1</li>
         <li value="2" className="rank-num rank-num-2">#2</li>
         <li value="3" className="rank-num rank-num-3">#3</li>
         <li value="4" className="rank-num">#4</li>

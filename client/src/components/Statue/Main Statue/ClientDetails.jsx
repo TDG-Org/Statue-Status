@@ -6,6 +6,9 @@ import {
   Connections,
 } from "./Secondary";
 
+// Styles
+import "../../../sass/components/Main Statue/ClientDetails.scss";
+
 const ClientDetails = () => {
   return (
     <div className="">

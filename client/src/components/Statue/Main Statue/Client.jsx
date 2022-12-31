@@ -6,6 +6,9 @@ import {
   Picture,
 } from "./Primary";
 
+// Styles
+import "../../../sass/components/Main Statue/Client.scss";
+
 const Client = () => {
   return (
     <div className="">

@@ -16,6 +16,7 @@ import {
 
 // Pages 
 import {
+  DevsPage,
   HomePage,
   AboutPage,
   SavedPage,
@@ -45,7 +46,8 @@ const StatueStatus = () => {
   return (
     <div className="Statue-Status-Wrapper">
       { location.pathname !== "/mini-statue" &&
-        location.pathname !== "/404"
+        location.pathname !== "/404" &&
+        location.pathname !== "/devs"
         ? (
         <>
           <Aside />
@@ -84,7 +86,11 @@ const StatueStatus = () => {
           <Route path="/mini-statue" element={<MiniStatuePage />} />
             
           {/* 404 Page  */}
-          <Route path="/404" element={<NotFoundPage />} />
+            <Route path="/404" element={<NotFoundPage />} />
+            
+          {/* Developers Page  */}
+          <Route path="/devs" element={<DevsPage />} />
+
         </Routes>
       )}
     </div>

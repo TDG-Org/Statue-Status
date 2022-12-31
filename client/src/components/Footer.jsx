@@ -28,7 +28,6 @@ const Footer = () => {
           </li>
         </ul>
 
-
         {/* Links */}
 
         <div className="footer-sect">

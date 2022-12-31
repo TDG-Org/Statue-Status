@@ -3,6 +3,9 @@ import React from "react";
 // Styles
 import "./MiniStatuePage.scss";
 
+// Link 
+import { Link } from "react-router-dom";
+
 // Components
 import {
   GoBackBtn,

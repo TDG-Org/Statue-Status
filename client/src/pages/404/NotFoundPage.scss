@@ -114,14 +114,14 @@
     border-radius: 50%;
     position: absolute;
     animation: fly 30s linear infinite;
-    background-color: rgba(0, 0, 0, 0.752);
+    background-color: rgba(0, 0, 0, 0.875);
 
     &:before {
       content: "";
       display: block;
       width: 3.5px;
       height: 3px;
-      background-color: rgba(0, 0, 0, 0.737);
+      background-color: rgba(0, 0, 0, 0.875);
       border-radius: 5px;
       position: absolute;
     }
@@ -131,7 +131,7 @@
       display: block;
       width: 11px;
       height: 3.25px;
-      background-color: rgba(0, 0, 0, 0.752);
+      background-color: rgba(0, 0, 0, 0.875);
       border-radius: 6px;
       position: absolute;
     }
@@ -144,7 +144,7 @@
     &:after {
       top: -3px;
       left: -1px;
-      transform: rotate(28deg);
+      transform: rotate(29deg);
     }
 
   // Animations 
@@ -164,13 +164,13 @@
     &:nth-of-type(1) {
       top: 20%;
       animation-delay: 2s;
-      animation-duration: 26s;
+      animation-duration: 26.25s;
     }
 
     &:nth-of-type(2) {
-      top: 22%;
+      top: 22.5%;
       animation-delay: 1.75s;
-      animation-duration: 26.9s;
+      animation-duration: 27s;
     }
 
     &:nth-of-type(3) {

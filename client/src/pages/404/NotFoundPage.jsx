@@ -3,6 +3,9 @@ import React from "react";
 // Styles 
 import "./NotFoundPage.scss";
 
+// Link 
+import { Link } from "react-router-dom";
+
 // Images/SVGs
 
 const NotFoundPage = () => {
@@ -15,7 +18,8 @@ const NotFoundPage = () => {
           <h1>404</h1>
           <h4>Hmmm... nothing was found here</h4>
           <p>Let&apos;s take you back!</p>
-          <i className="bi bi-house-door-fill" title="Statue Status"></i>
+          <Link to="/"><i className="bi bi-house-door-fill" title="Statue Status"></i></Link>
+
         </div>
       </div>
 

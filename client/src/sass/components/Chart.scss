@@ -11,8 +11,8 @@
   margin: 1rem auto;
   border-radius: 8px;
   background-color: #00000077;
-  border-top: 1px solid  #222222;
-  border-right: 1px solid #222222;
+  border-left: 2px solid  $low-dark-clr;
+  border-bottom: 2px solid $low-dark-clr;
 
   &:hover {
     cursor: default;

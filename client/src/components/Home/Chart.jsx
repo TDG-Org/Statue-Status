@@ -34,6 +34,10 @@ const Chart = ({ richestData }) => {
     console.log(`Clicked ranking number: ${e.target.value}`);
     console.log(e.target.value);
     // Add your code here to do something when a ranking number is clicked
+
+    // Fetch data from data base to compare and send user to the mini statue 
+
+    
   }
 
   return (
@@ -107,11 +111,42 @@ const Chart = ({ richestData }) => {
 
       {/* Ranking Bubbles */}
       <ul className="ranking-numbers">
-        <li onClick={handleRankBubbleClick} value="1" className="rank-num rank-num-1">#1</li>
-        <li value="2" className="rank-num rank-num-2">#2</li>
-        <li value="3" className="rank-num rank-num-3">#3</li>
-        <li value="4" className="rank-num">#4</li>
-        <li value="5" className="rank-num">#5</li>
+        <li
+          value="1"
+          onClick={handleRankBubbleClick}
+          className="rank-num rank-num-1"
+        >
+          #1
+        </li>
+        <li
+          value="2"
+          onClick={handleRankBubbleClick}
+          className="rank-num rank-num-2"
+        >
+          #2
+        </li>
+        <li
+          value="3"
+          onClick={handleRankBubbleClick}
+          className="rank-num rank-num-3"
+        
+        >
+          #3
+        </li>
+        <li
+          value="4"
+          onClick={handleRankBubbleClick}
+          className="rank-num"
+        >
+          #4
+        </li>
+        <li
+          value="5"
+          onClick={handleRankBubbleClick}
+          className="rank-num"
+        >
+          #5
+        </li>
       </ul>
 
     </div>

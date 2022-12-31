@@ -6,7 +6,10 @@
 .hamburger {
 	z-index: 6;
 	display: none;
+	padding: .75rem;
 	cursor: pointer;
+	height: 50px !important;
+	width: 50px !important;
 }
 
 .bar {
@@ -24,8 +27,11 @@
 @media screen and (max-width: 950px) {
 
 	.hamburger {
-    padding: 0;
 		display: block;
+		padding: .75rem;
+		align-items: center;
+		justify-self: center;
+
 	}
 
 	.hamburger.active .bar:nth-child(2) {

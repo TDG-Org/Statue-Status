@@ -7,15 +7,27 @@
   top: 0;
   left: 0;
   z-index: 5;
-  display: flex;
   height: 100vh;
   min-width: 325px;
   max-width: 375px;
-  align-items: center;
   padding: 1.25rem 1rem;
-  flex-direction: column;
   position: sticky !important;
+  justify-content: space-evenly; 
   background-color: $mid-dark-clr;
+
+  .container {
+    padding: 0;
+    height: 100%; 
+  }
+
+  .wide-screen-display {
+    height: 100%;
+    display: flex;
+    padding: .15rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
 .nav-logo {
@@ -35,7 +47,7 @@
   .aside-comp {
     top: 0;
     left: 0;
-    height: 8vh;
+    height: 65px; 
     max-width: 100%;
     position: sticky;
     padding: 0 1.5rem;
@@ -44,6 +56,7 @@
 		background-color: rgb(0, 0, 0);
 
     .container {
+      padding: 1rem;
       display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
@@ -68,6 +81,7 @@
 
     li {
       margin: 1.5rem 0;
+      font-size: 1.1rem;
     }
   }
 }

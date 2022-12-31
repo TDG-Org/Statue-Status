@@ -8,11 +8,11 @@ nav {
 
   ul {
     margin: 0;
-    padding: .5rem;
+    padding: 0 .5rem;
     text-align: center;
 
     li {
-      margin: .75rem 0;
+      margin: .45rem 0;
 
       .ss-nav-link {
         color: $light-clr; 
@@ -55,6 +55,6 @@ nav {
 
 @media screen and (max-width: 950px) {
   .nav-logo {
-    display: block;
+    display: block; 
   }
 }

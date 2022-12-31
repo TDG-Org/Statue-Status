@@ -3,6 +3,13 @@ import React, { useState, useEffect } from "react";
 // Styles
 import "./StatuePage.scss";
 
+// Components 
+import {
+  Socials,
+  Accessories,
+  Connections
+} from "../../components";
+
 const StatuePage = () => {
   return (
     <div className="StatuePage page page-full">

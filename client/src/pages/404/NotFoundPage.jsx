@@ -8,7 +8,13 @@ import { Link } from "react-router-dom";
 
 // Images/SVGs
 
+// Components 
+import { TypingText } from "../../components";
+
 const NotFoundPage = () => {
+
+  let content = "Hmmm... nothing was found here";
+  
   return (
     <div className="NotFoundPage page page-full">
 
@@ -16,7 +22,7 @@ const NotFoundPage = () => {
       <div className="container">
         <div className="not-found-text-content">
           <h1>404</h1>
-          <h4>Hmmm... nothing was found here</h4>
+          <h4><TypingText message={content} /></h4>
           <p>Let&apos;s take you back!</p>
           <Link to="/"><i className="bi bi-house-door-fill" title="Statue Status"></i></Link>
 

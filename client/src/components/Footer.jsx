@@ -12,9 +12,20 @@ const Footer = () => {
 
       <div className="container">
 
-        <div className='logo'>
-          <h3><a href="#">&#169; 2022 TDG</a></h3>
-        </div>
+        <ul className="footer-sect">
+          <li>
+            <div className="logo">
+              <h3><a href="#">&#169; 2022 TDG</a></h3>
+            </div>  
+          </li>
+          <li>
+            <Link to="devs">Dev Team</Link>
+          </li>
+          <li>
+            <a target="blank" href="https://github.com/TDG-Org/Statue-Status/issues">Create Issue</a>
+          </li>
+        </ul>
+
 
         {/* Links  */}
 

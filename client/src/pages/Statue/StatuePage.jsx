@@ -7,7 +7,7 @@ import "./StatuePage.scss";
 import {
   Socials,
   Accessories,
-  Connections
+  ClientDetails,
 } from "../../components";
 
 const StatuePage = () => {

@@ -5,6 +5,7 @@ import {
   Socials,
   Accessories,
   Connections,
+  ClientDetails,
 } from "./Main Statue";
 
 // Profile Page 
@@ -15,5 +16,6 @@ export {
   Socials,
   Accessories,
   Connections,
-  ProfileStatue
+  ClientDetails,
+  ProfileStatue,
 };

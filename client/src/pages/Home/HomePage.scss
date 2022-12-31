@@ -27,6 +27,7 @@
 .homepage-pallet-chart-bottom {
   gap: .0rem;
   display: flex;
+  overflow: hidden;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;

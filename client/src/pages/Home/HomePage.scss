@@ -18,6 +18,10 @@
     }
   }
 
+  .homepage-main-hr {
+    display: none;
+  }
+
 }
 
 .homepage-pallet-chart-bottom {
@@ -47,9 +51,15 @@
 }
 
 @media screen and (max-width: 950px) {
-  .homepage-pallet-chart-bottom {
-    gap: 0;
-    padding: 0rem;
-    flex-direction: column-reverse;
+  .HomePage {
+    .homepage-main-hr {
+      display: block;
+    }
+
+    .homepage-pallet-chart-bottom {
+      gap: 0;
+      padding: 0rem;
+      flex-direction: column-reverse;
+    }
   }
 }

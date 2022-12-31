@@ -52,23 +52,23 @@ const Footer = () => {
           <ul className="footer-links">
             <li>
               <a target="blank"
-                href="https://chat.openai.com/chat"
+                href="https://github.com/jesseokeya/Forbes400"
               >
-                ChatGPT
+                jesseokeya&apos;s API
               </a>
             </li>
             <li>
             <a target="blank"
-                href="https://chat.openai.com/chat"
+                href="https://icons.getbootstrap.com/"
               >
-                ChatGPT
+                Bootstrap Icons
               </a>
             </li>
             <li>
-            <a target="blank"
-                href="https://chat.openai.com/chat"
+              <a target="blank"
+                href="https://openai.com/"
               >
-                ChatGPT
+                OpenAI
               </a>
             </li>
           </ul>

@@ -131,19 +131,10 @@ const Main = ({ data }) => {
       
     <div className="view-all-ppl-btn-wrapper">
       <Link
-        to="/sign-up"
+        to="/statue"
         className="view-all-ppl-btn"
       >
-        Sign Up
-      </Link>
-    </div>
-      
-    <div className="view-all-ppl-btn-wrapper">
-      <Link
-        to="/404"
-        className="view-all-ppl-btn"
-      >
-        404
+        Statue
       </Link>
     </div>
     

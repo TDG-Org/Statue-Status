@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Styles 
 import "./NotFoundPage.scss";
@@ -14,7 +14,46 @@ import { TypingText } from "../../components";
 const NotFoundPage = () => {
 
   let content = "Hmmm... nothing was found here";
-  
+
+    // Fading in Elements 
+    const elements = [
+      // Username 
+      // Email 
+     {
+       element:
+              <h4>
+                <TypingText message={content} />
+              </h4>,
+       id: 2
+     },
+     // Password 
+     {
+       element:
+              <p>Let&apos;s take you back!</p>,
+       id: 3
+     },
+     // Re-Enter Password 
+     {
+       element:
+              <Link to="/"><i className="bi bi-house-door-fill" title="Statue Status"></i></Link>,
+       id: 4
+     },
+   ];
+
+  const [opacities, setOpacities] = useState(elements.map(() => 0));
+
+  useEffect(() => {
+    elements.forEach((element, index) => {
+      setTimeout(() => {
+        setOpacities(prevOpacities => {
+          const newOpacities = [...prevOpacities];
+          newOpacities[index] = 1;
+          return newOpacities;
+        });
+      }, index * 700);
+    });
+  }, []);
+
   return (
     <div className="NotFoundPage page page-full">
 
@@ -22,10 +61,12 @@ const NotFoundPage = () => {
       <div className="container">
         <div className="not-found-text-content">
           <h1>404</h1>
-          <h4><TypingText message={content} /></h4>
-          <p>Let&apos;s take you back!</p>
-          <Link to="/"><i className="bi bi-house-door-fill" title="Statue Status"></i></Link>
-
+          {elements.map((element, index) => (
+            React.cloneElement(element.element, {
+              style: { opacity: opacities[index], transition: "opacity 1s" },
+              key: element.id
+            })
+          ))}
         </div>
       </div>
 

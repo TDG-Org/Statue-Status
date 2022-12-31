@@ -2,6 +2,7 @@ import React from "react";
 
 // Components 
 import {
+  Socials,
   Accessories,
   Connections,
 } from "./Secondary";
@@ -11,9 +12,17 @@ import "../../../sass/components/Main Statue/ClientDetails.scss";
 
 const ClientDetails = () => {
   return (
-    <div className="">
-      <h2>ClientDetails</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus magni ullam quos ea mollitia debitis nihil autem, aperiam provident nobis exercitationem, eligendi delectus. Dolorem qui praesentium dignissimos delectus aliquid.</p>
+    <div className="statue-details-comp">
+
+      {/* The User's Accossories  */}
+      <Accessories />
+
+      {/* The User's Socials Links  */}
+      <Socials />
+
+      {/* The User's Connections  */}
+      <Connections />
+
     </div>
   );
 };

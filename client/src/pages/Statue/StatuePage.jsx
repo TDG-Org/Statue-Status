@@ -17,7 +17,9 @@ const StatuePage = () => {
       <div className="container">
         <hr />
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quam labore placeat atque qui quibusdam? Praesentium dolorem, eum, omnis iste pariatur soluta iure ex, voluptate numquam possimus necessitatibus commodi placeat.</p>
+        <Client />
+
+        <ClientDetails />
 
         <hr />
       </div>

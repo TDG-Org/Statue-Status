@@ -19,8 +19,9 @@
 
   .chart-title {
     color: $light-clr;
+    padding: 1rem auto;
     font-weight: normal !important;
-    margin-bottom: -3.5rem !important;
+    margin-bottom: -3rem !important;
   }
 }
 
@@ -31,8 +32,8 @@
   display: flex;
   margin: 0 auto;
   flex-wrap: nowrap;
-  flex-direction: row;
   margin-top: -1rem;
+  flex-direction: row;
   padding: 0 1rem 1rem 1rem;
   justify-content: space-evenly;
 

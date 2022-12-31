@@ -28,7 +28,7 @@ const Chart = ({ richestData }) => {
   return (
     <div className="chart">
 
-      <h4 className="chart-title">Individuals</h4>
+      <h4 className="chart-title">Ranking</h4>
 
       {/* The Chart  */}
       <VictoryChart

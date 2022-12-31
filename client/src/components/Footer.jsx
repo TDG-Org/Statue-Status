@@ -12,7 +12,7 @@ const Footer = () => {
 
       <div className="container">
 
-        {/* TDG  */}
+        {/* TDG */}
 
         <ul className="footer-sect">
           <li>
@@ -29,7 +29,7 @@ const Footer = () => {
         </ul>
 
 
-        {/* Links  */}
+        {/* Links */}
 
         <div className="footer-sect">
           <h4>Page</h4>
@@ -46,7 +46,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Extra  */}
+        {/* Extra */}
 
         <div className="footer-sect">
           <h4>Extra</h4>

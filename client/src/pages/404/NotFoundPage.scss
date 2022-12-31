@@ -1,0 +1,190 @@
+// Not Found Page SASS file 
+
+// SCSS Variables 
+@import "../../sass/variables.scss";
+
+.NotFoundPage {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  padding: 0 !important;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .container {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    cursor: default;
+    max-width: unset;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+
+    .not-found-text-content {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+
+      h1 {
+        cursor: default;
+        font-size: 6rem;
+        margin-top: -5rem;
+      }
+
+      h4 {
+        .typed-text {
+          background-color: transparent;
+          font-family: 'Manrope', sans-serif;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      i {
+        margin: 0 auto;
+        font-size: 1.75rem;
+        width: fit-content;
+        color:rgb(134, 204, 170);
+
+        &:hover {
+          color: $light-clr;
+          cursor: pointer !important;
+        }
+      }
+    }
+  }
+
+  .the-not-found-bg-wrapper {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+
+    .not-found-black {
+      position: absolute;
+    }
+
+    .one-black-sec {
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 115px;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.873), rgba(255, 255, 255, 0) 75%);
+    }
+
+    .two-black-sec {
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      height: 420px;
+      background-image: linear-gradient(to top, rgb(1,1,1), rgba(0, 0, 0, 0) 100%);
+    }
+
+    .not-fount-bg {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center 25%;
+      background-image: url("../../assets/imgs/not-found-page.png");
+    }
+  }
+
+/* SCSS for the birds */
+.birds-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+
+  .bird {
+    opacity: 0;
+    width: 15px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    animation: fly 30s linear infinite;
+    background-color: rgba(0, 0, 0, 0.875);
+
+    &:before {
+      height: 3px;
+      content: "";
+      width: 3.5px;
+      display: block;
+      border-radius: 5px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.875);
+    }
+
+    &:after {
+      width: 11px;
+      content: "";
+      display: block;
+      height: 3.25px;
+      border-radius: 6px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.875);
+    }
+
+    &:before {
+      top: 1px;
+      left: 12px;
+    }
+
+    &:after {
+      top: -3px;
+      left: -1px;
+      transform: rotate(29deg);
+    }
+
+  // Animations 
+
+  @keyframes fly {
+    0% {
+      opacity: 1;
+      transform: translateX(-20px);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(1250px);
+    }
+  }
+
+    &:nth-of-type(1) {
+      top: 20%;
+      animation-delay: 2s;
+      animation-duration: 26.25s;
+    }
+
+    &:nth-of-type(2) {
+      top: 22.5%;
+      animation-delay: 1.75s;
+      animation-duration: 27s;
+    }
+
+    &:nth-of-type(3) {
+      top: 21%;
+      animation-delay: 2.75s;
+      animation-duration: 26.5s;
+    }
+   }
+  }
+}

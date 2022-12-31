@@ -139,6 +139,11 @@ p, span, em, li, a, i, div {
   background-position: center center;
 }
 
+.page-full {
+  width: 100%;
+  margin: unset;
+}
+
 .hide {
   display: none !important;
 }

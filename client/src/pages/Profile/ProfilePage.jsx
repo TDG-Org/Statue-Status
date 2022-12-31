@@ -14,15 +14,17 @@ const ProfilePage = () => {
     <div className="ProfilePage page">
       <h1>My Profile</h1>
 
+      <div className="container">
+        <hr />
+
+        {/* Profile Section  */}
+        <EditProfile />
+
+        {/* Profile Statue Section  */}
+        <ProfileStatue />
+          
       <hr />
-
-      {/* Profile Section  */}
-      <EditProfile />
-
-      {/* Profile Statue Section  */}
-      <ProfileStatue />
-
-      <hr />
+      </div>
 
     </div>
   );

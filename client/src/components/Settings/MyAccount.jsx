@@ -56,8 +56,8 @@ const MyAccount = () => {
             });
 
             setTimeout(() => {
-              swal.close();
-            }, 1750);
+              swal.close(); 
+            }, 1250);
 
              console.log(newUsername);
         });
@@ -70,41 +70,41 @@ const MyAccount = () => {
     <h3><i className="bi bi-person-fill"></i> My Account</h3>
 
     <div className="pallet">
-
       <div className="container">
 
-      {/* Username  */}
-      <div className="account-sect-username">
-        <h4>Username</h4>
-        
-        <div className="edit-username-sect">
-          <p className="display-username">TDGNate</p>
-          <button className="edit-username-btn" onClick={updateUsername}>
-            <i className="bi bi-pen"></i>
-          </button>
-          </div>
+        {/* Username  */}
+        <div className="account-sect-username">
+          <h4>Username</h4>
           
-        <Link
-          to="/profile"
-          className="edit-profile-link"
-          >Edit Profile
-        </Link>
-      </div>
-        
-        <hr />
+          <div className="edit-username-sect">
+            <p className="display-username">TDGNate</p>
+            <button className="edit-username-btn" onClick={updateUsername}>
+              <i className="bi bi-pen"></i>
+            </button>
+            </div>
+            
+          <Link
+            to="/profile"
+            className="edit-profile-link"
+            >Edit Profile
+          </Link>
+        </div>
+          
+          <hr />
 
-      {/* Password  */}
-      <div className="account-sect-pass">
+        {/* Password  */}
+        <div className="account-sect-pass">
           <h4>Password</h4>
           
           <p className="settings-p">
             Make sure your password contains <span className="pass-fff">uppercase</span>, <span className="pass-fff">lowercase</span>, <span className="pass-fff">digits</span>, and <span className="pass-fff">special characters</span> to keep your account <span className="pass-fff">safe</span> and <span className="pass-fff">secure</span>.
           </p>
-        
-        <button className="change-password-btn">Change Password</button>
-      </div>
+          
+          <button className="change-password-btn">Change Password</button>
+        </div>
 
       </div>
+        
     </div>
 
   </div>

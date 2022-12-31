@@ -3,6 +3,9 @@ import React from "react";
 // Styles
 import "./MiniStatuePage.scss";
 
+// Link 
+import { Link } from "react-router-dom";
+
 // Components
 import {
   GoBackBtn,
@@ -18,25 +21,20 @@ let data = {
 const MiniStatuePage = () => {
 
   return (
-    <div className="MiniStatuePage page">
+    <div className="MiniStatuePage page page-full">
       <h1 className="fade-title">Mini Statue</h1>
 
-      <hr />
-
-      <GoBackBtn />
-
       <div className="container">
-
+        <hr />
+        <GoBackBtn />
         <div className="pallet">
 
           <MiniStatueCard data={data} />
 
         </div>
 
+        <hr />
       </div>
-
-      <hr />
-
     </div>
   );
 };

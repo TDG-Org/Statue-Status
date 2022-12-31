@@ -28,8 +28,8 @@ const HomePage = () => {
       <h1 className="fade-title">
         {format(new Date(), "EEEE, d MMMM yyyy")}
       </h1>
-      <hr />
       <div className="container">
+      <hr />
 
         {/* Main Pallet  */}
         <h3>Top 5 Global</h3>
@@ -40,8 +40,8 @@ const HomePage = () => {
 
         <News />
         
-      </div>
       <hr />
+      </div>
     </div>
   );
 };

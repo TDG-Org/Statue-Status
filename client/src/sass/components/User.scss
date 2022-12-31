@@ -4,8 +4,8 @@
 @import "../variables.scss";
 
 .user-avatar-section {
-  padding: 5% 0;
   display: flex;
+  padding: .25rem 0;
   flex-wrap: nowrap;
   flex-direction: column;
 }
@@ -67,7 +67,7 @@
 
 .avatar-sect {
   img {
-    width: 128px;
+    width: 125px;
     padding: .35rem;
     border-radius: 50%;
     transition: all 250ms ease;
@@ -127,7 +127,7 @@
   .user-experience p,
   .user-gems p,
   span {
-    margin: .15rem auto;
+    margin: 0 auto .25rem auto;
     color: $mid-light-clr;
   }
 
@@ -138,7 +138,7 @@
 
 .user-bio {
   margin: 0;
-  padding: 0rem 1.25rem;
+  padding: 0rem .75rem;
 }
 
 // Follow Count 

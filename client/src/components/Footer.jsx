@@ -71,6 +71,20 @@ const Footer = () => {
                 OpenAI
               </a>
             </li>
+            <li>
+              <a target="blank"
+                href="https://haikei.app/"
+              >
+                haikei
+              </a>
+            </li>
+            <li>
+              <a target="blank"
+                href="https://iconscout.com/"
+              >
+                IconScout
+              </a>
+            </li>
           </ul>
           </div>
         </div>

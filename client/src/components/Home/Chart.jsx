@@ -1,7 +1,11 @@
 import React from "react";
 
-// Victory 
-import { VictoryBar, VictoryChart, VictoryAxis } from "victory";
+// Victory Graphs
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryAxis
+} from "victory";
 
 // Styles
 import "../../sass/components/Chart.scss";
@@ -94,12 +98,13 @@ const Chart = ({ richestData }) => {
 
       </VictoryChart>
 
+      {/* Ranking Bubbles */}
       <ul className="ranking-numbers">
-        <li className="rank-num rank-num-1">#1</li>
-        <li className="rank-num rank-num-2">#2</li>
-        <li className="rank-num rank-num-3">#3</li>
-        <li className="rank-num ">#4</li>
-        <li className="rank-num ">#5</li>
+        <li value="1" className="rank-num rank-num-1">#1</li>
+        <li value="2" className="rank-num rank-num-2">#2</li>
+        <li value="3" className="rank-num rank-num-3">#3</li>
+        <li value="4" className="rank-num">#4</li>
+        <li value="5" className="rank-num">#5</li>
       </ul>
 
     </div>

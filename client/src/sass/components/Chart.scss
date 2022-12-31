@@ -3,6 +3,7 @@
 // SCSS Variables 
 @import "../variables.scss";
 
+// Chart 
 .chart {
   width: 100%; 
   max-width: 625px;
@@ -58,18 +59,18 @@
     border-radius: 50%;
     color: $mid-light-clr;
     transition: all 250ms ease;
-    border: 1px solid rgb(46, 46, 46);
+    border: 1px solid $low-dark-clr;
     background-color: rgb(10, 10, 10);
 
     &:hover {
       cursor: pointer;
+      background-color: rgba(10, 10, 10, 0.90);
       filter: drop-shadow(0px 0px 5px rgb(208, 255, 239));
     }
   }
 }
 
 // Pie 
-
 .victory-pie {
   padding: .25rem;
   max-width: 375px;

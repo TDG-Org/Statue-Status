@@ -33,7 +33,7 @@ import { Intro, Starter, Statues } from "./About";
 import { PowerUser } from "./Powerful";
 
 // Statue Page 
-import { Socials, Accessories, Connections, ClientDetails } from "./Statue";
+import { Client, ClientDetails } from "./Statue";
 
 // Export 
 export {
@@ -47,7 +47,7 @@ export {
   Intro,
   Footer,
   Flares,
-  Socials,
+  Client,
   Friends,
   Explore,
   General,
@@ -59,8 +59,6 @@ export {
   PowerUser,
   TypingText,
   EditProfile,
-  Connections,
-  Accessories,
   ClientDetails,
   ProfileStatue,
   MiniStatueCard,

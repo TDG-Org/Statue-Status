@@ -26,6 +26,7 @@ const NotFoundPage = () => {
         <div className="not-found-black two"></div>
       </div>
 
+      {/* The Birds  */}
       <div className="birds-wrapper">
         <div className="bird"></div>
         <div className="bird"></div>

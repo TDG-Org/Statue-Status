@@ -100,12 +100,12 @@
 
 /* SCSS for the birds */
 .birds-wrapper {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
 
   .bird {
     opacity: 0;
@@ -113,8 +113,8 @@
     height: 5px;
     border-radius: 50%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.752);
     animation: fly 30s linear infinite;
+    background-color: rgba(0, 0, 0, 0.752);
 
   // Animations 
 
@@ -134,19 +134,19 @@
     &:nth-of-type(1) {
       top: 20%;
       animation-delay: 2s;
-    animation-duration: 26s;
+      animation-duration: 26s;
     }
 
     &:nth-of-type(2) {
       top: 22%;
       animation-delay: 1.75s;
-    animation-duration: 26.9s;
+      animation-duration: 26.9s;
     }
 
     &:nth-of-type(3) {
       top: 21%;
-    animation-duration: 26.5s;
       animation-delay: 2.75s;
+      animation-duration: 26.5s;
     }
    }
   }

@@ -6,8 +6,6 @@ import "./NotFoundPage.scss";
 // Link 
 import { Link } from "react-router-dom";
 
-// Images/SVGs
-
 // Components 
 import { TypingText } from "../../components";
 
@@ -17,8 +15,7 @@ const NotFoundPage = () => {
 
     // Fading in Elements 
     const elements = [
-      // Username 
-      // Email 
+      // The Message 
      {
        element:
               <h4>
@@ -26,13 +23,13 @@ const NotFoundPage = () => {
               </h4>,
        id: 2
      },
-     // Password 
+    //  2nd Message 
      {
        element:
               <p>Let&apos;s take you back!</p>,
        id: 3
      },
-     // Re-Enter Password 
+    //  Link Back to Home 
      {
        element:
               <Link to="/"><i className="bi bi-house-door-fill" title="Statue Status"></i></Link>,
@@ -72,9 +69,9 @@ const NotFoundPage = () => {
 
       {/* The Background  */}
       <div className="the-not-found-bg-wrapper">
-        <div className="not-found-black one"></div>
+        <div className="not-found-black one-black-sec"></div>
         <div className="not-fount-bg "></div>
-        <div className="not-found-black two"></div>
+        <div className="not-found-black two-black-sec"></div>
       </div>
 
       {/* The Birds  */}

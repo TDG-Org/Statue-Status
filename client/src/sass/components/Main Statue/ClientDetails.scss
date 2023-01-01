@@ -68,15 +68,12 @@
     .statue-connection {
       width: 80%;
       gap: .75rem;
-      // max-height: 66.5px; 
       display: flex;
       position: relative;
-      margin: .690rem auto;
-
       flex-direction: row;
       align-items: center;
+      margin: .690rem auto;
       padding: .232rem 1rem;
-
       justify-content: flex-start;
       transition: all 250ms ease-in;
       border-bottom: 1px solid transparent; 
@@ -119,6 +116,5 @@
       border-bottom: 1px solid $mid-light-clr;
     }
   }
-
  }
 }

@@ -7,7 +7,7 @@
   .statue-client-comp {
     width: 100%;
     display: flex;
-    padding: 1rem;
+    padding: .35rem 1rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -32,8 +32,11 @@
 
     // Info 
     .statue-info-wrapper {
+      margin: .7rem auto;
+      background-color: $low-tp;
       width: 65%;
-      padding: .75rem;
+      border-radius: 8px; 
+      padding: .4rem 1rem;
       text-align: center;
 
       p {

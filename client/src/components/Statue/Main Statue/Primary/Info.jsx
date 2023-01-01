@@ -13,7 +13,6 @@ const Info = () => {
       </p>
 
       {/* Other  */}
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quam labore perspiciatis quis impedit odio!</p>
 
     </div>
   );

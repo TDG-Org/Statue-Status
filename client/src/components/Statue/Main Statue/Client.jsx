@@ -1,5 +1,8 @@
 import React from "react";
 
+// Proptypes 
+import PropTypes from "prop-types";
+
 // Components 
 import {
   Info,

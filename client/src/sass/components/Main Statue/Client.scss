@@ -14,16 +14,19 @@
 
     // Image 
     .statue-img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 50%;
       overflow: hidden;
       border: 1px solid $light-clr;
       width: 200px;
       height: 200px;
+      background-color: $low-tp;
 
       img {
-        margin: 0 auto;
-        width: 105%;
-        height: 105%;
+        width: 100%;
+        height: 100%;
       }
     }
   }

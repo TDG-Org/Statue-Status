@@ -16,5 +16,14 @@
       margin-top: 0rem;
       margin-bottom: .75rem;
     }
+
+    // Set Widths for Each Detail Section 
+    .statue-socials-sect,
+    .statue-accessories-sect,
+    .statue-connections-sect {
+      background-color: pink;
+      width: 33.33%;
+    }
+
   }
 }

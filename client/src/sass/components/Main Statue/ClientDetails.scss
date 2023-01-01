@@ -2,3 +2,51 @@
 
 // SCSS Variables 
 @import "../../variables.scss";
+
+.StatuePage {
+ .statue-details-comp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: .35rem 1rem;
+  justify-content: center;
+
+  // Social Links 
+  .statue-socials-sect {
+    margin: 0;
+    width: 100%;
+    padding: .5rem;
+
+    .statue-link {
+      width: 80%;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      margin: .5rem auto;
+      max-height: 66.5px;
+      text-align: center;
+      border-radius: 8px;
+      flex-direction: row;
+      padding: .5rem 1rem;
+      background: $mid-dark-clr;
+      transition: all 250ms ease-in;
+      border: 1px solid $low-dark-clr;
+      a {
+        gap: .5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+        color: $mid-light-clr;
+        justify-content: flex-start;
+        .statue-social-username {
+          margin: 0 .2rem;
+        }
+      }
+    }
+  }
+
+ }
+}

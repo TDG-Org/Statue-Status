@@ -5,7 +5,13 @@ import PropTypes from "prop-types";
 
 const Accessories = () => {
   return (
-    <div>Accessories</div>
+    <div className="statue-accessories-sect">
+
+      <div className="statue-accessory">
+
+      </div>
+
+    </div>
   );
 };
 

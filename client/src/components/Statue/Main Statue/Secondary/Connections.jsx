@@ -5,7 +5,13 @@ import PropTypes from "prop-types";
 
 const Connections = () => {
   return (
-    <div>Connections</div>
+    <div className="statue-connections-sect">
+
+      <div className="statue-peer">
+
+      </div>
+      
+    </div>
   );
 };
 

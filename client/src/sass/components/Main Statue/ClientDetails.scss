@@ -10,7 +10,8 @@
   display: flex;
   flex-direction: row;
   padding: .35rem 1rem;
-  justify-content: space-evenly;
+  align-items: flex-start;
+  justify-content: space-evenly; 
 
   // Social Links 
   .statue-socials-sect {
@@ -73,7 +74,7 @@
       transition: all 250ms ease-in;
       border-bottom: 1px solid transparent; 
       .statue-connection-img-wrapper {
-        width: 50px;
+        width: 42.5px;
         margin: 0 .75rem;
         img {
           width: 100%;
@@ -100,6 +101,9 @@
     padding: .5rem;
 
     .statue-accessory {
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
       width: 75%;
       text-align: center;
       margin: .5rem auto;

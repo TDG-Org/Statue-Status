@@ -16,7 +16,6 @@ const Connections = () => {
       <Connection />
       <Connection />
 
-      
     </div>
   );
 };

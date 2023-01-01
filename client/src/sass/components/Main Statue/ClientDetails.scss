@@ -57,8 +57,8 @@
       width: 80%;
       gap: .75rem;
       display: flex;
-      margin: .25rem auto;
       position: relative;
+      margin: .5rem auto;
       flex-direction: row;
       align-items: center;
       padding: .2rem .65rem; 
@@ -76,10 +76,11 @@
       .statue-connection-name-wrapper {
         .statue-connection-name {
           color: $light-clr;
+          border: 1px solid transparent;
           transition: all 250ms ease-in;
-          &:hover {
-            text-decoration: underline !important;
-          }
+          // &:hover {
+          //   border-bottom: 1px solid $second-clr;
+          // }
         }
       }
       &:hover {

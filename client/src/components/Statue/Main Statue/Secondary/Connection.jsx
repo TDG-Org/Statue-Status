@@ -1,5 +1,8 @@
 import React from "react";
 
+// Proptypes 
+import PropTypes from "prop-types";
+
 // Images/SVGs 
 import { Planet } from "../../../../assets/imgs";
 
@@ -12,14 +15,14 @@ const Connection = () => {
 
         <img
           src={Planet}
-          alt=""
-          title=""
+          alt="Connection"
+          title="Connection"
           className="statue-connection-avatar"
         />
         
       </div>
 
-      {/* Name  */}
+      {/* Name */}
       <div className="statue-connection-name-wrapper">
 
         <a

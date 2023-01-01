@@ -5,12 +5,11 @@
 
 .StatuePage {
  .statue-details-comp {
-   gap: 1rem;
+  gap: 1rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   padding: .35rem 1rem;
-  // align-items: center;  
   justify-content: space-evenly;
 
   // Social Links 
@@ -55,14 +54,15 @@
     width: 100%;
     padding: .5rem;
     .statue-connection {
-      width: 100%;
+      width: 80%;
+      gap: .75rem;
       display: flex;
       margin: .25rem auto;
       position: relative;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
       padding: .2rem .65rem; 
+      justify-content: flex-start;
       transition: all 250ms ease-in;
       border-bottom: 1px solid transparent; 
       .statue-connection-img-wrapper {
@@ -75,12 +75,15 @@
       }
       .statue-connection-name-wrapper {
         .statue-connection-name {
-          color: $mid-light-clr;
+          color: $light-clr;
+          transition: all 250ms ease-in;
           &:hover {
-            color: $second-clr;
             text-decoration: underline !important;
           }
         }
+      }
+      &:hover {
+        border-bottom: 1px solid $mid-light-clr;
       }
     }
   }

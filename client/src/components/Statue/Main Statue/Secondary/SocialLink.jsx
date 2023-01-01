@@ -1,9 +1,13 @@
 import React from "react";
 
+// Proptypes 
+import PropTypes from "prop-types";
+
 const SocialLink = () => {
   return (
     <div className="statue-link">
 
+      {/* Anchor  */}
       <a
         href="#"
         target="_blank"
@@ -22,7 +26,7 @@ const SocialLink = () => {
         </span>
 
       </a>
-      
+
    </div>
   );
 };

@@ -1,0 +1,107 @@
+// Client Bottom Statue Style Sheet 
+
+// SCSS Variables 
+@import "../../variables.scss";
+
+.StatuePage {
+ .statue-details-comp {
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: .35rem 1rem;
+  justify-content: space-evenly;
+
+  // Social Links 
+  .statue-socials-sect {
+    margin: 0;
+    width: 100%;
+    padding: .5rem;
+
+    .statue-link {
+      width: 80%;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      margin: .5rem auto;
+      max-height: 66.5px;
+      text-align: center;
+      border-radius: 8px;
+      flex-direction: row;
+      padding: .5rem 1rem;
+      background: $mid-dark-clr;
+      transition: all 250ms ease-in;
+      border: 1px solid $low-dark-clr;
+      a {
+        gap: .5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+        color: $mid-light-clr;
+        justify-content: flex-start;
+        .statue-social-username {
+          margin: 0 .2rem;
+        }
+      }
+    }
+  }
+
+  // Connections 
+  .statue-connections-sect {
+    margin: 0;
+    width: 100%;
+    padding: .5rem;
+    .statue-connection {
+      width: 80%;
+      gap: .75rem;
+      display: flex;
+      position: relative;
+      margin: .5rem auto;
+      flex-direction: row;
+      align-items: center;
+      padding: .2rem .65rem; 
+      justify-content: flex-start;
+      transition: all 250ms ease-in;
+      border-bottom: 1px solid transparent; 
+      .statue-connection-img-wrapper {
+        width: 50px;
+        margin: 0 .75rem;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .statue-connection-name-wrapper {
+        .statue-connection-name {
+          color: $light-clr;
+          border: 1px solid transparent;
+          transition: all 250ms ease-in;
+        }
+      }
+      &:hover {
+        border-bottom: 1px solid $mid-light-clr;
+      }
+    }
+  }
+
+  // Accessories 
+  .statue-accessories-sect {
+    margin: 0;
+    width: 100%;
+    padding: .5rem;
+
+    .statue-accessory {
+      width: 75%;
+      text-align: center;
+      margin: .5rem auto;
+      padding: .5rem 1rem;
+      border: 1px solid transparent;
+      // background-color: $low-tp; 
+      border-bottom: 1px solid $mid-light-clr;
+    }
+  }
+
+ }
+}

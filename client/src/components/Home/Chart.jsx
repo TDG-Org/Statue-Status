@@ -1,7 +1,11 @@
 import React from "react";
 
-// Victory 
-import { VictoryBar, VictoryChart, VictoryAxis } from "victory";
+// Victory Graphs
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryAxis
+} from "victory";
 
 // Styles
 import "../../sass/components/Chart.scss";
@@ -25,10 +29,21 @@ const Chart = ({ richestData }) => {
     if (n >= 1e12) return +(n / 1e12).toFixed(1);
   }
 
+  // Function to handle clicks on ranking numbers
+  function handleRankBubbleClick(e) {
+    console.log(`Clicked ranking number: ${e.target.value}`);
+    console.log(e.target.value);
+    // Add your code here to do something when a ranking number is clicked
+
+    // Fetch data from data base to compare and send user to the mini statue 
+
+    
+  }
+
   return (
     <div className="chart">
 
-      <h4 className="chart-title">Individuals</h4>
+      <h4 className="chart-title">Ranking</h4>
 
       {/* The Chart  */}
       <VictoryChart
@@ -94,12 +109,44 @@ const Chart = ({ richestData }) => {
 
       </VictoryChart>
 
+      {/* Ranking Bubbles */}
       <ul className="ranking-numbers">
-        <li className="rank-num rank-num-1">#1</li>
-        <li className="rank-num rank-num-2">#2</li>
-        <li className="rank-num rank-num-3">#3</li>
-        <li className="rank-num ">#4</li>
-        <li className="rank-num ">#5</li>
+        <li
+          value="1"
+          onClick={handleRankBubbleClick}
+          className="rank-num rank-num-1"
+        >
+          #1
+        </li>
+        <li
+          value="2"
+          onClick={handleRankBubbleClick}
+          className="rank-num rank-num-2"
+        >
+          #2
+        </li>
+        <li
+          value="3"
+          onClick={handleRankBubbleClick}
+          className="rank-num rank-num-3"
+        
+        >
+          #3
+        </li>
+        <li
+          value="4"
+          onClick={handleRankBubbleClick}
+          className="rank-num"
+        >
+          #4
+        </li>
+        <li
+          value="5"
+          onClick={handleRankBubbleClick}
+          className="rank-num"
+        >
+          #5
+        </li>
       </ul>
 
     </div>

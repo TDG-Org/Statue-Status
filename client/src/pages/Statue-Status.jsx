@@ -22,6 +22,7 @@ import {
   SavedPage,
   LoginPage,
   SignUpPage,
+  StatuePage,
   RichestPage,
   ProfilePage,
   DiscoverPage,
@@ -47,7 +48,8 @@ const StatueStatus = () => {
     <div className="Statue-Status-Wrapper">
       { location.pathname !== "/mini-statue" &&
         location.pathname !== "/404" &&
-        location.pathname !== "/devs"
+        location.pathname !== "/devs" &&
+        location.pathname !== "/statue"
         ? (
         <>
           <Aside />
@@ -81,7 +83,10 @@ const StatueStatus = () => {
         </>
       ) : (
         // Other Routes Go Here 
-        <Routes location={location} key={location.pathname}>
+          <Routes location={location} key={location.pathname}>
+          {/* Statue  */}
+          <Route path="/statue" element={<StatuePage />} />
+
           {/* Mini Statue  */}
           <Route path="/mini-statue" element={<MiniStatuePage />} />
             

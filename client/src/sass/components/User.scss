@@ -28,7 +28,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  max-width: 95px;
+  max-width: 80px;
   max-height: auto;
   position: absolute;
   flex-direction: row;
@@ -37,7 +37,7 @@
 
   .badge {
     padding: 0;
-    width: 32px;
+    width: 25px;
     margin: 4px;
     border-radius: 50%; 
     padding-top: .55rem;
@@ -96,7 +96,9 @@
 .username {
   width: 100%;
   margin: .5rem 0;
-  color: $mid-light-clr;
+  cursor: default;
+  color: $light-clr;
+  pointer-events: none;
 
   .the-at {
     margin-right: .2rem;
@@ -108,9 +110,8 @@
     text-decoration: none;
 
     &:hover {
-      cursor: pointer;
-      color: $second-clr;
-      text-decoration: underline;
+      cursor: default;
+      color: $light-clr;
     }
   }
 }
@@ -127,8 +128,8 @@
   .user-experience p,
   .user-gems p,
   span {
-    margin: 0 auto .25rem auto;
     color: $mid-light-clr;
+    margin: 0 auto .25rem auto;
   }
 
   &:hover {

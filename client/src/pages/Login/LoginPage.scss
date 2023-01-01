@@ -89,10 +89,10 @@
 
       .login-btn {
         overflow: hidden; 
-        color: $light-clr;
         margin: 1rem auto;
         font-size: 1.1rem;
         position: relative; 
+        color: $mid-light-clr;
         padding: .5rem 2.5rem;
         border: 1px solid $mid-dark-clr;
         background-color: rgba(0, 0, 0, 0.152); 
@@ -115,7 +115,7 @@
 
         &:hover {
           cursor: pointer;
-          color: var(--lght-clr);
+          color: $light-clr;
           background-color: transparent;
           box-shadow: 1px 1px 15px 5px rgba(249, 208, 255, 0.114);
         }
@@ -131,8 +131,6 @@
     margin-top: -2.5rem;
     margin-bottom: 2.5rem;
     color: $mid-light-clr;
-
-
   }
   .create-acc-btn-wrapper {
     width: 100%;

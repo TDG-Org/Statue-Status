@@ -1,0 +1,46 @@
+// Statue Page SASS file 
+
+// SCSS Variables 
+@import "../../sass/variables.scss";
+
+.StatuePage {
+  background-image: url("../../assets/imgs/statue-page-background.png");
+  background-position: center 35% !important;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    hr {
+      margin-top: 0rem;
+      margin-bottom: .75rem;
+    }
+
+    h5 {
+      text-align: center;
+    }
+
+    .statue-detail {
+      width: 33.33%; 
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: .5rem 0 2rem 0;
+    }
+
+    // Set Widths for Each Detail Section 
+    .statue-socials-sect,
+    .statue-accessories-sect,
+    .statue-connections-sect {
+      width: 100%; 
+      max-width: 400px;
+      min-height: 300px;
+      border-radius: 8px;
+      background-color: $low-tp;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

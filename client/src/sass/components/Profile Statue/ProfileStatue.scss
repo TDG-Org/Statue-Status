@@ -70,7 +70,7 @@
         border: 1px solid $low-dark-clr;
       }
 
-        // Statue Name 
+      // Statue Name 
       .statue-name-sect {
         gap: 1rem;
         width: 90%;
@@ -203,7 +203,8 @@
           .react-datepicker__header  {
             background: $mid-dark-clr;
 
-            .react-datepicker__day-names .react-datepicker__day-name, .react-datepicker__current-month {
+            .react-datepicker__day-names .react-datepicker__day-name,
+             .react-datepicker__current-month {
               color: $light-clr !important;
             }
           }
@@ -227,8 +228,8 @@
         .headline-input, 
         .the-datepicker, 
         .location-input,
-         .company-input,
-         .relationship-input {
+        .company-input,
+        .relationship-input {
           width: 100%;
           border: none;
           min-width: 218px;
@@ -559,7 +560,7 @@
   }
 }
 
-// Divider 
+// Mobile Divider 
 .smaller-size-screen-display-divider {
   display: none;
 }
@@ -573,7 +574,7 @@
       flex-direction: column;
       justify-content: center;
 
-      // Divider 
+      // Mobile Divider
       .smaller-size-screen-display-divider {
         display: block;
       }

@@ -6,6 +6,7 @@ import HomePage from "./Home/HomePage";
 import AboutPage from "./About/AboutPage";
 import SavedPage from "./Saved/SavedPage";
 import LoginPage from "./Login/LoginPage";
+import StatuePage from "./Statue/StatuePage";
 import SignUpPage from "./SignUp/SignUpPage";
 import NotFoundPage from "./404/NotFoundPage";
 import ProfilePage from "./Profile/ProfilePage";
@@ -27,6 +28,7 @@ export {
   LoginPage,
   SavedPage,
   SignUpPage,
+  StatuePage,
   RichestPage,
   ProfilePage,
   DiscoverPage,

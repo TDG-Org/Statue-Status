@@ -1,7 +1,17 @@
-// Import 
+// Import
+
+// Statue Page 
+import {
+  Client,
+  ClientDetails,
+} from "./Main Statue";
+
+// Profile Page 
 import { ProfileStatue } from "./Profile Statue";
 
 // Export 
 export {
-  ProfileStatue
+  Client,
+  ClientDetails,
+  ProfileStatue,
 };

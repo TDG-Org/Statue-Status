@@ -154,19 +154,19 @@
       transform: rotate(29deg);
     }
 
-  // Animations 
+    // Animations 
 
-  @keyframes fly {
-    0% {
-      opacity: 1;
-      transform: translateX(-20px);
-    }
+    @keyframes fly {
+      0% {
+        opacity: 1;
+        transform: translateX(-20px);
+      }
 
-    100% {
-      opacity: 0;
-      transform: translateX(1250px);
+      100% {
+        opacity: 0;
+        transform: translateX(1250px);
+      }
     }
-  }
 
     &:nth-of-type(1) {
       top: 20%;

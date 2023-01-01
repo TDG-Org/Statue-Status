@@ -8,7 +8,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  // align-items: center; 
   padding: .35rem 1rem;
   justify-content: space-evenly;
 
@@ -43,6 +43,44 @@
         justify-content: flex-start;
         .statue-social-username {
           margin: 0 .2rem;
+        }
+      }
+    }
+  }
+
+  // Connections 
+  .statue-connections-sect {
+    margin: 0;
+    width: 100%;
+    padding: .5rem;
+
+    .statue-connection {
+      width: 80%;
+      display: flex;
+      margin: .25rem;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      padding: .2rem .65rem; 
+      transition: all 250ms ease-in;
+      border-bottom: 1px solid transparent;
+      
+      .statue-connection-img-wrapper {
+        width: 50px;
+        margin: 0 .75rem;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .statue-connection-name-wrapper {
+        .statue-connection-name {
+          color: $mid-light-clr;
+          &:hover {
+            color: $second-clr;
+            text-decoration: underline !important;
+          }
         }
       }
     }

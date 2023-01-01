@@ -23,15 +23,15 @@
       display: flex;
       overflow: hidden;
       position: relative;
-      margin: .5rem auto;
       max-height: 66.5px;
       text-align: center;
-      border-radius: 8px;
+      margin: .75rem auto;
+      border-radius: 20px;
       flex-direction: row;
       padding: .5rem 1rem;
-      background: $mid-dark-clr;
       transition: all 250ms ease-in;
       border: 1px solid $low-dark-clr;
+      background: rgba(0, 0, 0, 0.405);
       a {
         gap: .5rem;
         display: flex;
@@ -40,9 +40,16 @@
         align-items: center;
         flex-direction: row;
         color: $mid-light-clr;
+        transition: all 250ms ease;
         justify-content: flex-start;
         .statue-social-username {
           margin: 0 .2rem;
+        }
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.55);
+        a {
+          color: $light-clr;
         }
       }
     }
@@ -98,7 +105,6 @@
       margin: .5rem auto;
       padding: .5rem 1rem;
       border: 1px solid transparent;
-      // background-color: $low-tp; 
       border-bottom: 1px solid $mid-light-clr;
     }
   }

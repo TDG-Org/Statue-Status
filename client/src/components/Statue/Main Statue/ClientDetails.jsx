@@ -25,18 +25,15 @@ const ClientDetails = () => {
 
       {/* The User's Socials Links  */}
       <div className="statue-detail">
-      <h5>Socials</h5>
-      <Socials />
+        <h5>Socials</h5>
+        <Socials />
       </div>
-
 
       {/* The User's Connections  */}
       <div className="statue-detail">
         <h5>Connections</h5>
-      <Connections />
+        <Connections />
       </div>
-
-
 
     </div>
   );

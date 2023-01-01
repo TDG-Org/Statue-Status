@@ -9,3 +9,7 @@ export const Female = require("./female.png");
 export const Logo = require("./logo.png");
 export const NatePfp = require("./Nate-Portrait.jpg");
 export const TdgWhite = require("./tdg-white.png");
+
+// Pages 
+export const NotFoundBg = require("./not-found-page.png");
+export const StatueBg = require("./statue-page-background.png");

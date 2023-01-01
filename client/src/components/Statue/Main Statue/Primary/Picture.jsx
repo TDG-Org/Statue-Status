@@ -1,8 +1,13 @@
 import React from "react";
 
+// Images/SVGs 
+import { NatePfp } from "../../../../assets/imgs";
+
 const Picture = () => {
   return (
-    <div>Picture</div>
+    <div className="statue-img-wrapper">
+      <img className="statue-img" src={NatePfp} alt="Statue Image" />
+    </div>
   );
 };
 

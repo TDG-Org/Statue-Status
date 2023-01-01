@@ -5,4 +5,10 @@
 
 .StatuePage {
   background-image: url("../../assets/imgs/statue-page-background.png");
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

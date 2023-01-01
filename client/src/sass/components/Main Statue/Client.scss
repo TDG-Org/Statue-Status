@@ -2,3 +2,29 @@
 
 // SCSS Variables 
 @import "../../variables.scss";
+
+.StatuePage {
+  .statue-client-comp {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    // Image 
+    .statue-img-wrapper {
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid $light-clr;
+      width: 200px;
+      height: 200px;
+
+      img {
+        margin: 0 auto;
+        width: 105%;
+        height: 105%;
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@ const StatuePage = () => {
 
         <Client />
 
-        <hr />
+        <hr /> 
 
         <ClientDetails />
 

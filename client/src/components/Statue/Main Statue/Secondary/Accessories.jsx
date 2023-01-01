@@ -7,8 +7,8 @@ const Accessories = () => {
   return (
     <div className="statue-accessories-sect">
 
-      <div className="statue-accessory">
-
+      <div className="statue-accessory statue-accessory-headline">
+        
       </div>
 
     </div>

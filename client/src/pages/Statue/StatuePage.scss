@@ -17,14 +17,28 @@
       margin-bottom: .75rem;
     }
 
+    h5 {
+      text-align: center;
+    }
+
+    .statue-detail {
+      width: 33.33%; 
+      display: flex;
+      flex-direction: column;
+      // justify-content: flex-end;
+      margin: .5rem 0 2rem 0;
+      align-items: center;
+
+    }
+
     // Set Widths for Each Detail Section 
     .statue-socials-sect,
     .statue-accessories-sect,
     .statue-connections-sect {
-      width: 33.33%; 
+      width: 100%; 
       max-width: 400px;
+      min-height: 300px;
       border-radius: 8px;
-      margin-bottom: .8rem;
       background-color: $low-tp;
     }
   }

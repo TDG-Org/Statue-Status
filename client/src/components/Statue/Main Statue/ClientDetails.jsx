@@ -18,13 +18,25 @@ const ClientDetails = () => {
     <div className="statue-details-comp">
 
       {/* The User's Accossories  */}
-      <Accessories />
+      <div className="statue-detail">
+        <h5>Christian</h5>
+        <Accessories />
+      </div>
 
       {/* The User's Socials Links  */}
+      <div className="statue-detail">
+      <h5>Socials</h5>
       <Socials />
+      </div>
+
 
       {/* The User's Connections  */}
+      <div className="statue-detail">
+        <h5>Connections</h5>
       <Connections />
+      </div>
+
+
 
     </div>
   );

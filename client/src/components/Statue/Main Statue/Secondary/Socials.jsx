@@ -13,6 +13,13 @@ const Socials = () => {
       {/* Statue Link  */}
       <SocialLink />
       <SocialLink />
+      <SocialLink />
+      <SocialLink />
+      <SocialLink />
+      <SocialLink />
+      <SocialLink />
+      <SocialLink />
+      <SocialLink />
 
     </div>
   );

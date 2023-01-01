@@ -15,6 +15,13 @@ const Connections = () => {
 
       <Connection />
       <Connection />
+      <Connection />
+      <Connection />
+      <Connection />
+      <Connection />
+      <Connection />
+      <Connection />
+      <Connection />
 
     </div>
   );

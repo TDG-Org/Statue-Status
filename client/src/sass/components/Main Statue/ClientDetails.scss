@@ -9,7 +9,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: .35rem 1rem;
+  padding: .5rem 1rem;
+  padding-bottom: 2rem;
   align-items: flex-start;
   justify-content: space-evenly; 
 
@@ -26,8 +27,8 @@
       position: relative;
       max-height: 66.5px;
       text-align: center;
-      margin: .75rem auto;
-      border-radius: 20px;
+      margin: .8rem auto;
+      border-radius: 2rem;
       flex-direction: row;
       padding: .5rem 1rem;
       transition: all 250ms ease-in;
@@ -43,6 +44,9 @@
         color: $mid-light-clr;
         transition: all 250ms ease;
         justify-content: flex-start;
+        i {
+          font-size: 1.2rem; 
+        }
         .statue-social-username {
           margin: 0 .2rem;
         }
@@ -64,17 +68,20 @@
     .statue-connection {
       width: 80%;
       gap: .75rem;
+      // max-height: 66.5px; 
       display: flex;
       position: relative;
-      margin: .5rem auto;
+      margin: .690rem auto;
+
       flex-direction: row;
       align-items: center;
-      padding: .2rem .65rem; 
+      padding: .232rem 1rem;
+
       justify-content: flex-start;
       transition: all 250ms ease-in;
       border-bottom: 1px solid transparent; 
       .statue-connection-img-wrapper {
-        width: 42.5px;
+        width: 42px;
         margin: 0 .75rem;
         img {
           width: 100%;
@@ -101,12 +108,12 @@
     padding: .5rem;
 
     .statue-accessory {
-      display: flex;
-      flex-direction: row;
-      gap: 1.25rem;
       width: 75%;
+      gap: 1.25rem;
+      display: flex;
       text-align: center;
       margin: .5rem auto;
+      flex-direction: row;
       padding: .5rem 1rem;
       border: 1px solid transparent;
       border-bottom: 1px solid $mid-light-clr;

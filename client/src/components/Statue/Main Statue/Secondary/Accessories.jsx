@@ -19,7 +19,7 @@ const Accessories = () => {
       <div className="statue-accessory statue-accessory-birthday">
         <i className="bi bi-calendar-event"></i>
         <p>
-         Born <span> 04/08/2003 </span> - <span>19</span>
+         <span> 04/08/2003 </span> - <span>19</span>
         </p>
       </div>
 

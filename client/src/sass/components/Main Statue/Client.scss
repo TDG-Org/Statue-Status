@@ -1,0 +1,46 @@
+// Client Top Statue Style Sheet 
+
+// SCSS Variables 
+@import "../../variables.scss";
+
+.StatuePage {
+  .statue-client-comp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: .35rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+
+    // Image 
+    .statue-img-wrapper {
+      width: 175px;
+      display: flex;
+      height: 175px;
+      overflow: hidden;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: $low-tp;
+      border: 2px solid $light-clr;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    // Info 
+    .statue-info-wrapper {
+      width: 65%;
+      margin: .7rem auto;
+      border-radius: 8px; 
+      text-align: center;
+      padding: .4rem 1rem;
+      background-color: $low-tp;
+      p {
+        margin: 0;
+        word-wrap: break-word;
+      }
+    }
+  }
+}

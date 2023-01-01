@@ -38,6 +38,9 @@
       min-height: 300px;
       border-radius: 8px;
       background-color: $low-tp;
+      p {
+        margin: 0;
+      }
     }
   }
 }

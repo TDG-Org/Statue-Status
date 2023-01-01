@@ -86,5 +86,22 @@
     }
   }
 
+  // Accessories 
+  .statue-accessories-sect {
+    margin: 0;
+    width: 100%;
+    padding: .5rem;
+
+    .statue-accessory {
+      width: 75%;
+      text-align: center;
+      margin: .5rem auto;
+      padding: .5rem 1rem;
+      border: 1px solid transparent;
+      // background-color: $low-tp; 
+      border-bottom: 1px solid $mid-light-clr;
+    }
+  }
+
  }
 }

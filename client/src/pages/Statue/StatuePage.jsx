@@ -12,7 +12,9 @@ import {
 const StatuePage = () => {
   return (
     <div className="StatuePage page page-full">
-      <h1>Statue</h1>
+
+      {/* Statue Name  */}
+      <h1>Christian Nathaniel McIlvenny</h1>
 
       <div className="container">
         <hr />

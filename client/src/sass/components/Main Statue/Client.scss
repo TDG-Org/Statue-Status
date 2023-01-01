@@ -14,19 +14,30 @@
 
     // Image 
     .statue-img-wrapper {
+      width: 175px;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
+      height: 175px;
       overflow: hidden;
-      border: 1px solid $light-clr;
-      width: 200px;
-      height: 200px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
       background-color: $low-tp;
+      border: 1px solid $light-clr;
 
       img {
         width: 100%;
         height: 100%;
+      }
+    }
+
+    // Info 
+    .statue-info-wrapper {
+      width: 65%;
+      padding: .75rem;
+      text-align: center;
+
+      p {
+        margin: 0;
       }
     }
   }

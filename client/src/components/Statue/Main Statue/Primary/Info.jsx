@@ -5,7 +5,17 @@ import PropTypes from "prop-types";
 
 const Info = () => {
   return (
-    <div>Info</div>
+    <div className="statue-info-wrapper">
+
+      {/* Bio  */}
+      <p className="statue-bio">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore necessitatibus harum fugiat velit debitis quia et cumque, reprehenderit repudiandae iure totam illum praesentium sapiente? Accusamus explicabo necessitatibus dolor magnam excepturi!
+      </p>
+
+      {/* Other  */}
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quam labore perspiciatis quis impedit odio!</p>
+
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 // Import 
 import Socials from "./Socials";
+import Connection from "./Connection";
 import SocialLink from "./SocialLink";
 import Accessories from "./Accessories";
 import Connections from "./Connections";
@@ -8,6 +9,7 @@ import Connections from "./Connections";
 export {
   Socials,
   SocialLink,
+  Connection,
   Accessories,
   Connections,
 };

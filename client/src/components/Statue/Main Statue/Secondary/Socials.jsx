@@ -12,6 +12,7 @@ const Socials = () => {
 
       {/* Statue Link  */}
       <SocialLink />
+      <SocialLink />
 
     </div>
   );

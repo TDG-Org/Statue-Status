@@ -7,7 +7,22 @@ const Connections = () => {
   return (
     <div className="statue-connections-sect">
 
-      <div className="statue-peer">
+      <div className="statue-connection">
+
+        {/* Image */}
+        <div className="statue-connection-img-wrapper">
+
+          <img
+            src=""
+            alt=""
+            title=""
+            className="statue-connection-avatar"
+          />
+          
+        </div>
+
+
+        {/* Name  */}
 
       </div>
       

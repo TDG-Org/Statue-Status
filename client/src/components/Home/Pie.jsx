@@ -24,7 +24,7 @@ const Pie = ({ richestData }) => {
         }}
         x="name"
         y="money"
-        labelRadius={80}  // Set label radius to 100 pixels
+        labelRadius={85}
         labels={(datum) => {
           const words = datum.datum.name.split(" ");
           if (words.length > 1) {

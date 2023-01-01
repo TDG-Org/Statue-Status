@@ -21,7 +21,9 @@
     .statue-socials-sect,
     .statue-accessories-sect,
     .statue-connections-sect {
-      width: 33.33%;
+      width: 33.33%; 
+      max-width: 400px;
+      border-radius: 8px;
       background-color: $low-tp;
     }
 

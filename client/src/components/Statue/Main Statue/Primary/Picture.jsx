@@ -11,9 +11,9 @@ const Picture = () => {
     <div className="statue-img-wrapper">
 
       <img
-        className="statue-img"
         src={NatePfp}
         alt="Statue Image"
+        className="statue-img"
       />
 
     </div>

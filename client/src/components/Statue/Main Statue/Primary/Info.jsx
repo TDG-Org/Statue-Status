@@ -9,7 +9,7 @@ const Info = () => {
 
       {/* Bio  */}
       <p className="statue-bio">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore necessitatibus harum fugiat velit debitis quia et cumque, reprehenderit repudiandae iure totam illum praesentium sapiente? Accusamus explicabo necessitatibus dolor magnam excepturi!
+        You can just call me Nate! My passion is building applications for clients, team collaboration, problem-solving, and designing.
       </p>
 
       {/* Other  */}

@@ -17,7 +17,7 @@ const StatuePage = () => {
       <h1>Christian Nathaniel McIlvenny</h1>
 
       <div className="container">
-        <hr />
+        {/* <hr />  */}
 
         <Client />
 

@@ -67,6 +67,16 @@ const typeDefs = gql`
     picture: String!
   }
 
+  type Bio {
+    _id: ID
+    bio: String!
+  }
+
+  type Detail {
+    _id: ID
+    detail: String!
+  }
+
   type Auth {
     token: ID!
     user: User

@@ -1,4 +1,4 @@
-// Connections Component 
+// Connections Component for Profile Statue
 
 // SCSS Variables 
 @import "../../variables.scss";
@@ -26,7 +26,7 @@
         flex-direction: row;
         justify-content: center;
 
-        // a peer 
+        // A Peer
         .statue-peer {
           width: 80%;
           display: flex;
@@ -57,9 +57,9 @@
           }
 
           .statue-peer-x {
+            right: .5rem;
             display: none;
             position: absolute;
-            right: .5rem;
             &:hover {
               cursor: pointer;
               color: $mid-red-clr;
@@ -113,15 +113,15 @@
           margin: .75rem 0;
         }
 
-        // The add / cancel buttons 
+        // The Add / Cancel buttons 
         .peer-btns {
+          width: 100%;
           gap: 1.25rem;
           display: flex;
           margin: .75rem 0;
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          width: 100%;
           button {
             border: none;
             color: $light-clr;

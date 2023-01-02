@@ -96,7 +96,8 @@ const Main = ({ data }) => {
     <div className="homepage-pallet-chart-bottom">
 
       {/* Visuals */}
-      <Chart richestData={richestData} />
+        <Chart richestData={richestData} />
+        <hr className="homepage-main-hr"/>
       <Pie richestData={richestData} />
       
     </div>

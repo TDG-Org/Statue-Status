@@ -1,7 +1,9 @@
-/* Sweet Alert Styles  */
+// Sweet Alert Styles 
 
 // SCSS Variables 
 @import "../variables.scss";
+
+// Model 
 
 .swal-modal {
 	padding: 1.5rem .75rem;
@@ -13,8 +15,8 @@
 	}
 
 	.swal-text {
-		text-align: center;
 		color: $light-clr;
+		text-align: center;
 	}
 
 	input {
@@ -30,7 +32,7 @@
 	}
 }
 
-/* Sweet Alert button  */
+// Sweet Alert button  
 
 .swal-button {
 	outline: none;

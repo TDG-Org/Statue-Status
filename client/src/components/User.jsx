@@ -41,7 +41,7 @@ const User = () => {
       <div className="user-avatar-sect-bottom">
 
         {/* Username  */}
-        <h3 className="username"><span className="the-at">@</span><a href="#" id="username">Nate</a></h3>
+        <h3 className="username"><span className="the-at">@</span><a id="username">Nate</a></h3>
 
         <div className="user-data">
           <div className="user-experience">

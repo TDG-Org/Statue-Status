@@ -18,13 +18,14 @@
       width: 80%;
       margin: 0 auto;
       padding: 0 .5rem;
-      color: $mid-light-clr;
       text-align: center;
+      color: $mid-light-clr;
 
       .pass-fff {
         color: $light-clr;
       }
     }
+    
   }
 
   // Main Settings Section 
@@ -98,7 +99,7 @@
       }
     }
 
-    // Edit profile link 
+    // Edit Profile link 
     .edit-profile-link {
       width: 45%;
       padding: .5rem;
@@ -126,8 +127,8 @@
 
       // Password Button 
       .change-password-btn {
-        padding: .5rem;
         width: 45%;
+        padding: .5rem;
         max-width: 325px;
         margin: 1rem auto;
         text-align: center;
@@ -159,7 +160,8 @@
       justify-content: space-evenly;
       border: 1px solid $low-dark-clr;
 
-      .default-themes, .special-themes {
+      .default-themes,
+      .special-themes {
         display: flex;
         margin: .75rem 0;
         flex-direction: row;
@@ -205,7 +207,7 @@
         }
       }
 
-      // Light 
+      // Light Btn
       .light-theme-btn {
         &:hover {
           border-top: 1px solid $light-clr;
@@ -213,7 +215,7 @@
         }
       }
 
-      // Dark 
+      // Dark Btn
       .dark-theme-btn {
         &:hover {
           border-top: 1px solid $mid-light-clr;
@@ -221,7 +223,7 @@
         }
       }
 
-      // Red 
+      // Red Btn
       .red-theme-btn {
         &:hover {
           border-top: 1px solid $red-clr;
@@ -229,7 +231,7 @@
         }
       }
 
-      // Earth 
+      // Earth Btn
       .earth-theme-btn {
         &:hover {
           border-top: 1px solid rgb(255, 230, 155);
@@ -237,7 +239,7 @@
         }
       }
 
-      // Blue 
+      // Blue Btn
       .blue-theme-btn {
         &:hover {
           border-top: 1px solid $prime-clr;
@@ -290,7 +292,7 @@
       }
     } 
     
-    // Loggout 
+    // Logout 
 
     .general-sect-logout {
       display: flex;
@@ -310,7 +312,7 @@
         }
 
         &:hover {
-         color: $red-clr;
+          color: $red-clr;
           text-decoration: underline !important;
 
           i {
@@ -339,10 +341,12 @@
 }
 
 @media screen and (max-width: 575px) {
-  .appearance-btns, button {
+  .appearance-btns,
+  button {
     font-size: .9rem !important;
 
-    .default-themes, .special-themes {
+    .default-themes,
+    .special-themes {
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -350,7 +354,7 @@
 
   .report-bug-btns {
     padding: 1.5rem 0 !important;
-    flex-direction: column  !important;
+    flex-direction: column !important;
 
     button {
       margin: 0 auto;

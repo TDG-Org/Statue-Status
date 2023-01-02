@@ -4,6 +4,7 @@
 @import "../variables.scss";
 
 footer {
+  z-index: 4;
   display: flex;
   padding: 2.5rem 0;
   min-height: 150px;
@@ -11,8 +12,8 @@ footer {
   background-color: rgba(36, 36, 36, 0.068);
 
   .container {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-around;
 
     .footer-sect {
@@ -28,6 +29,11 @@ footer {
         a {
           color: $prime-clr;
           font-size: 1.3rem;
+
+          &:hover {
+           color: $prime-clr;
+           text-decoration: none !important;
+          }
         }
       }
     }

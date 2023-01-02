@@ -1,4 +1,4 @@
-// Settings Page SASS file 
+// Sign Up Page SASS file 
 
 // SCSS Variables 
 @import "../../sass/variables.scss";
@@ -11,7 +11,6 @@
   background: rgb(0,111,89);
   background: linear-gradient(124deg, rgba(0,111,89,1) 0%, rgba(0,46,37,1) 9%, rgba(0,19,15,1) 22%, rgba(0,0,0,1) 78%, rgba(59,0,59,1) 92%, rgba(139,0,97,1) 100%);
 
-  
   h1 {
     i {
       margin-left: .75rem;
@@ -81,7 +80,7 @@
       }
     }
 
-    // signup Button 
+    // Sign Up Button 
     .signup-button-wrapper {
       width: 100%;
       display: flex;
@@ -90,10 +89,10 @@
 
       .signup-btn {
         overflow: hidden; 
-        color: $light-clr;
         margin: 1rem auto;
         font-size: 1.1rem;
         position: relative; 
+        color: $mid-light-clr;
         padding: .5rem 2.5rem;
         border: 1px solid $mid-dark-clr;
         background-color: rgba(0, 0, 0, 0.152); 
@@ -116,7 +115,7 @@
 
         &:hover {
           cursor: pointer;
-          color: var(--lght-clr);
+          color: $light-clr; 
           background-color: transparent;
           box-shadow: 1px 1px 15px 5px rgba(249, 208, 255, 0.114);
         }
@@ -127,20 +126,21 @@
       }
     }
   }
+
   .create-acc-message {
     text-align: center;
     margin-top: -2.5rem;
     margin-bottom: 2.5rem;
     color: $mid-light-clr;
-
-
   }
+
   .create-acc-btn-wrapper {
     width: 100%;
     margin-top: -2rem;
     text-align: center;
     font-size: 1.05rem;
   }
+
   .create-acc-btn {
     margin: 0 auto;
     color: $light-clr;

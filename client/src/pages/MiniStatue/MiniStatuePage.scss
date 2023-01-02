@@ -111,12 +111,12 @@
       }
     }
 
-     .mini-statue-rich-rank {
-       margin: 0 .5rem;
-       border-radius: 1rem;
-       padding: .10rem .7rem;
+    .mini-statue-rich-rank {
+      margin: 0 .5rem;
+      border-radius: 1rem;
+      padding: .10rem .7rem;
       background-color: $low-dark-clr;
-     }
+    }
   }
  }
 }
@@ -136,16 +136,16 @@
       
       .mini-statue-card-content,
       .mini-statue-card-showcase {
-        padding: 0 1rem;
         width: 100%;
+        padding: 0 1rem;
 
         .mini-statue-about-more-btn {
           margin: 1rem auto;
         }
 
         .mini-statue-img {
-          min-width: 250px;
           width: 75%;
+          min-width: 250px;
         }
       }
     }

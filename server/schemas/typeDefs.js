@@ -115,8 +115,8 @@ const typeDefs = gql`
     addStatueCustomizationPrimaryColor(statueId: ID!, primaryColor: String): Statue
     addStatueCustomizationSecondaryColor(statueId: ID!, secondaryColor: String): Statue
     addMiniStatueName(miniStatueId: ID!, name: String): MiniStatue
-    addMiniStatueBio(miniStatueId: ID!, bio: String): MiniStatue
-    addMiniStatueDetail(miniStatueId: ID!, detail: String): MiniStatue
+    addMiniStatueBioBio(miniStatueId: ID!, bio: String): MiniStatue
+    addMiniStatueDetailDetail(miniStatueId: ID!, detail: String): MiniStatue
     addMiniStatuePicture(miniStatueId: ID!, picture: String): MiniStatue
   }
 `;

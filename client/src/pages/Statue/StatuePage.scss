@@ -35,8 +35,7 @@
     .statue-connections-sect {
       width: 100%; 
       max-width: 400px;
-      // min-width: 300px; 
-      min-height: 300px;
+      min-height: 325px;
       border-radius: 8px;
       background-color: $low-tp;
       p {
@@ -44,4 +43,26 @@
       }
     }
   }
+}
+
+// Media Queries 
+
+@media screen and (max-width: 850px) {
+  .StatuePage {
+    .container {
+      .statue-detail {
+        width: 100%; 
+
+        // Set Widths for Each Detail Section 
+        .statue-socials-sect,
+        .statue-accessories-sect,
+        .statue-connections-sect {
+          width: 100%;
+          max-width: unset;
+          min-height: 150px;
+        }
+      }
+    }
+  }
+
 }

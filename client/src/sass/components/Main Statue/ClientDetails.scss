@@ -27,6 +27,7 @@
       overflow: hidden;
       position: relative;
       max-height: 66.5px;
+      max-width: 375px; 
       text-align: center;
       margin: .8rem auto;
       border-radius: 2rem;
@@ -126,29 +127,75 @@
 @media screen and (max-width: 1000px) {
   .StatuePage {
     .statue-details-comp {
+      display: flex;
 
     // Social Links 
     .statue-socials-sect {
       .statue-link {
-        max-height: unset;
         padding: .5rem;
+        max-height: unset;
         border-radius: 16px;
-
         .statue-link-anchor {
           gap: .2rem;
-          justify-content: center;
-          flex-wrap: wrap;
           padding: 0;
+          flex-wrap: wrap;
+          justify-content: center;
           i {
-            font-size: 1.2rem; 
-          }
-          .statue-social-username {
-            width: 100%;
+            font-size: 1.15rem; 
           }
         }
       }
     }
+
+    // Accessories 
     }
   }
 
+}
+
+@media screen and (max-width: 850px) {
+  .StatuePage {
+    .statue-details-comp {
+      display: flex;
+      padding: 0;
+      flex-direction: column;
+
+      // Adjust Order 
+      .statue-detail-social {
+        order: 1;
+      }
+      .statue-detail-accessory {
+        order: 2;
+      }
+      .statue-detail-connection {
+        order: 3;
+      }
+
+      // Social Links 
+      .statue-socials-sect {
+        .statue-link {
+          padding: .5rem;
+          max-height: unset;
+          border-radius: 16px;
+          .statue-link-anchor {
+            gap: .2rem;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            i {
+              font-size: 1.15rem; 
+            }
+          }
+        }
+      }
+
+      // Accessories 
+      .statue-accessories-sect {
+      }
+      
+      // Connections 
+      .statue-connections-sect {
+      }
+    }
+  }
 }

@@ -117,6 +117,7 @@ const typeDefs = gql`
     addMiniStatueName(miniStatueId: ID!, name: String): MiniStatue
     addMiniStatueBio(miniStatueId: ID!, bio: String): MiniStatue
     addMiniStatueDetail(miniStatueId: ID!, detail: String): MiniStatue
+    addMiniStatuePicture(miniStatueId: ID!, picture: String): MiniStatue
   }
 `;
 

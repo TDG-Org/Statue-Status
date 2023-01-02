@@ -12,11 +12,23 @@ const Footer = () => {
 
       <div className="container">
 
-        <div className='logo'>
-          <h3><a href="#">&#169; 2022 TDG</a></h3>
-        </div>
+        {/* TDG */}
 
-        {/* Links  */}
+        <ul className="footer-sect">
+          <li>
+            <div className="logo">
+              <h3><a>&#169; 2022 TDG</a></h3>
+            </div>  
+          </li>
+          <li>
+            <Link to="devs">Dev Team</Link>
+          </li>
+          <li>
+            <a target="blank" href="https://github.com/TDG-Org/Statue-Status/issues">Create Issue</a>
+          </li>
+        </ul>
+
+        {/* Links */}
 
         <div className="footer-sect">
           <h4>Page</h4>
@@ -33,23 +45,57 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Extra  */}
+        {/* Credits */}
 
         <div className="footer-sect">
-          <h4>Extra</h4>
+
+          <h4>Credits</h4>
+
           <ul className="footer-links">
+            {/* Jesseokeya's API */}
             <li>
-              <a href="#">Extra</a>
+              <a target="blank"
+                href="https://github.com/jesseokeya/Forbes400"
+              >
+                jesseokeya&apos;s API
+              </a>
             </li>
+            {/* Bootstrap Icons */}
             <li>
-              <a href="#">Extra</a>
+            <a target="blank"
+                href="https://icons.getbootstrap.com/"
+              >
+                Bootstrap Icons
+              </a>
             </li>
+            {/* OpenAI */}
             <li>
-              <a href="#">Extra</a>
+              <a target="blank"
+                href="https://openai.com/"
+              >
+                OpenAI
+              </a>
+            </li>
+            {/* haikei */}
+            <li>
+              <a target="blank"
+                href="https://haikei.app/"
+              >
+                haikei
+              </a>
+            </li>
+            {/* IconScout */}
+            <li>
+              <a target="blank"
+                href="https://iconscout.com/"
+              >
+                IconScout
+              </a>
             </li>
           </ul>
-          </div>
+
         </div>
+      </div>
 
     </footer>
   );

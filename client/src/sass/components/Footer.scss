@@ -29,6 +29,11 @@ footer {
         a {
           color: $prime-clr;
           font-size: 1.3rem;
+
+          &:hover {
+           color: $prime-clr;
+           text-decoration: none !important;
+          }
         }
       }
     }

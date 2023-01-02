@@ -1,6 +1,7 @@
 // Core Page Components File to Export as bundle
 
 // Import
+import DevsPage from "./Devs/DevsPage";
 import HomePage from "./Home/HomePage";
 import AboutPage from "./About/AboutPage";
 import SavedPage from "./Saved/SavedPage";
@@ -21,6 +22,7 @@ import StatueStatus from "./Statue-Status";
 
 // Export
 export {
+  DevsPage,
   HomePage,
   AboutPage,
   LoginPage,

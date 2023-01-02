@@ -59,6 +59,14 @@ const typeDefs = gql`
     secondaryColor: String!
   }
 
+  type MiniStatue {
+    _id: ID
+    name: String!
+    bios: [Bio]!
+    details: [Detail]!
+    picture: String!
+  }
+
   type Auth {
     token: ID!
     user: User

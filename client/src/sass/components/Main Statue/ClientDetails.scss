@@ -8,6 +8,7 @@
   gap: 1rem;
   width: 100%;
   display: flex;
+  flex-wrap: unset; 
   flex-direction: row;
   padding: .5rem 1rem;
   padding-bottom: 2rem;
@@ -30,7 +31,7 @@
       margin: .8rem auto;
       border-radius: 2rem;
       flex-direction: row;
-      padding: .5rem 1rem;
+      padding: .5rem .75rem;
       transition: all 250ms ease-in;
       border: 1px solid $low-dark-clr;
       background: rgba(0, 0, 0, 0.405);
@@ -81,6 +82,7 @@
         width: 42px;
         margin: 0 .75rem;
         img {
+          min-width: 37.5px;
           width: 100%;
           border-radius: 50%;
         }
@@ -117,4 +119,36 @@
     }
   }
  }
+}
+
+// Media Queries 
+
+@media screen and (max-width: 1000px) {
+  .StatuePage {
+    .statue-details-comp {
+
+    // Social Links 
+    .statue-socials-sect {
+      .statue-link {
+        max-height: unset;
+        padding: .5rem;
+        border-radius: 16px;
+
+        .statue-link-anchor {
+          gap: .2rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 0;
+          i {
+            font-size: 1.2rem; 
+          }
+          .statue-social-username {
+            width: 100%;
+          }
+        }
+      }
+    }
+    }
+  }
+
 }

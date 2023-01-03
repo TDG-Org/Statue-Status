@@ -59,6 +59,24 @@ const typeDefs = gql`
     secondaryColor: String!
   }
 
+  type MiniStatue {
+    _id: ID
+    name: String!
+    bios: [Bio]!
+    details: [Detail]!
+    picture: String!
+  }
+
+  type Bio {
+    _id: ID
+    bio: String!
+  }
+
+  type Detail {
+    _id: ID
+    detail: String!
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -70,6 +88,7 @@ const typeDefs = gql`
     user(userID: ID!): User
     profile(profileId: ID!): Profile
     statue(statueId: ID!): Statue
+    miniStatue(miniStatue: ID!): MiniStatue
     me: User
   }
 
@@ -96,6 +115,10 @@ const typeDefs = gql`
     addStatueCustomizationFont(statueId: ID!, font: String): Statue
     addStatueCustomizationPrimaryColor(statueId: ID!, primaryColor: String): Statue
     addStatueCustomizationSecondaryColor(statueId: ID!, secondaryColor: String): Statue
+    addMiniStatueName(name: String): MiniStatue
+    addMiniStatueBioBio(miniStatueId: ID!, bio: String): MiniStatue
+    addMiniStatueDetailDetail(miniStatueId: ID!, detail: String): MiniStatue
+    addMiniStatuePicture(picture: String): MiniStatue
   }
 `;
 

@@ -18,7 +18,7 @@ const miniStatueSchema = new Schema({
             }
         }
     ],
-    avatar: {
+    picture: {
         type: String
     }
 });

@@ -388,6 +388,10 @@ const resolvers = {
             const miniStatue = await MiniStatue.create({ name });
             return miniStatue;
         },
+        addMiniStatuePicture: async (parent, { picture }) => {
+            const miniStatue = await MiniStatue.create({ picture });
+            return miniStatue;
+        },
     },
 };
 

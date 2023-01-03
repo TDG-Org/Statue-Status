@@ -394,6 +394,12 @@ const resolvers = {
             await miniStatue.save();
             return miniStatue;
         },
+        addMiniStatueDetailDetail: async (parent, { miniStatueId, detail }) => {
+            const miniStatue = await MiniStatue.findById(miniStatueId);
+            miniStatue.details.push({ detail });
+            await miniStatue.save();
+            return miniStatue;
+        },
         addMiniStatuePicture: async (parent, { picture }) => {
             const miniStatue = await MiniStatue.create({ picture });
             return miniStatue;

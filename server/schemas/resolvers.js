@@ -388,6 +388,12 @@ const resolvers = {
             const miniStatue = await MiniStatue.create({ name });
             return miniStatue;
         },
+        addMiniStatueBioBio: async (parent, { miniStatueId, bio }) => {
+            const miniStatue = await MiniStatue.findById(miniStatueId);
+            miniStatue.bios.push({ bio });
+            await miniStatue.save();
+            return miniStatue;
+        },
         addMiniStatuePicture: async (parent, { picture }) => {
             const miniStatue = await MiniStatue.create({ picture });
             return miniStatue;

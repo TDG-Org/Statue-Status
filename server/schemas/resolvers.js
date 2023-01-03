@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Profile, Statue } = require("../models");
+const { User, Profile, Statue, MiniStatue } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -383,6 +383,10 @@ const resolvers = {
                 return profile;
             }
             throw new AuthenticationError("You need to be logged in!");
+        },
+        addMiniStatueName: async (parent, { name }) => {
+            const miniStatue = await MiniStatue.create({ name });
+            return miniStatue;
         },
     },
 };

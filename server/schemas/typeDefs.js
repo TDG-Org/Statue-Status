@@ -114,10 +114,10 @@ const typeDefs = gql`
     addStatueCustomizationFont(statueId: ID!, font: String): Statue
     addStatueCustomizationPrimaryColor(statueId: ID!, primaryColor: String): Statue
     addStatueCustomizationSecondaryColor(statueId: ID!, secondaryColor: String): Statue
-    addMiniStatueName(miniStatueId: ID!, name: String): MiniStatue
+    addMiniStatueName(name: String): MiniStatue
     addMiniStatueBioBio(miniStatueId: ID!, bio: String): MiniStatue
     addMiniStatueDetailDetail(miniStatueId: ID!, detail: String): MiniStatue
-    addMiniStatuePicture(miniStatueId: ID!, picture: String): MiniStatue
+    addMiniStatuePicture(picture: String): MiniStatue
   }
 `;
 

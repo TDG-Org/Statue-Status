@@ -84,16 +84,16 @@ const StatueStatus = () => {
       ) : (
         // Other Routes Go Here 
           <Routes location={location} key={location.pathname}>
-          {/* Statue  */}
+          {/* Statue */}
           <Route path="/statue" element={<StatuePage />} />
 
-          {/* Mini Statue  */}
+          {/* Mini Statue */}
           <Route path="/mini-statue" element={<MiniStatuePage />} />
             
-          {/* 404 Page  */}
+          {/* 404 Page */}
             <Route path="/404" element={<NotFoundPage />} />
             
-          {/* Developers Page  */}
+          {/* Developers Page */}
           <Route path="/devs" element={<DevsPage />} />
 
         </Routes>

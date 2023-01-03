@@ -8,9 +8,12 @@
   gap: 1rem;
   width: 100%;
   display: flex;
+  flex-wrap: unset; 
   flex-direction: row;
-  padding: .35rem 1rem;
-  justify-content: space-evenly;
+  padding: .5rem 1rem;
+  padding-bottom: 2rem;
+  align-items: flex-start;
+  justify-content: space-evenly; 
 
   // Social Links 
   .statue-socials-sect {
@@ -23,15 +26,16 @@
       display: flex;
       overflow: hidden;
       position: relative;
-      margin: .5rem auto;
       max-height: 66.5px;
+      max-width: 375px; 
       text-align: center;
-      border-radius: 8px;
+      margin: .8rem auto;
+      border-radius: 2rem;
       flex-direction: row;
-      padding: .5rem 1rem;
-      background: $mid-dark-clr;
+      padding: .5rem .75rem;
       transition: all 250ms ease-in;
       border: 1px solid $low-dark-clr;
+      background: rgba(0, 0, 0, 0.405);
       a {
         gap: .5rem;
         display: flex;
@@ -40,9 +44,19 @@
         align-items: center;
         flex-direction: row;
         color: $mid-light-clr;
+        transition: all 250ms ease;
         justify-content: flex-start;
+        i {
+          font-size: 1.2rem; 
+        }
         .statue-social-username {
           margin: 0 .2rem;
+        }
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.55);
+        a {
+          color: $light-clr;
         }
       }
     }
@@ -58,17 +72,18 @@
       gap: .75rem;
       display: flex;
       position: relative;
-      margin: .5rem auto;
       flex-direction: row;
       align-items: center;
-      padding: .2rem .65rem; 
+      margin: .690rem auto;
+      padding: .232rem 1rem;
       justify-content: flex-start;
       transition: all 250ms ease-in;
       border-bottom: 1px solid transparent; 
       .statue-connection-img-wrapper {
-        width: 50px;
+        width: 42px;
         margin: 0 .75rem;
         img {
+          min-width: 37.5px;
           width: 100%;
           border-radius: 50%;
         }
@@ -94,14 +109,106 @@
 
     .statue-accessory {
       width: 75%;
+      gap: 1.25rem;
+      display: flex;
       text-align: center;
       margin: .5rem auto;
+      flex-direction: row;
       padding: .5rem 1rem;
       border: 1px solid transparent;
-      // background-color: $low-tp; 
       border-bottom: 1px solid $mid-light-clr;
     }
   }
-
  }
+}
+
+// Media Queries 
+
+@media screen and (max-width: 1000px) {
+  .StatuePage {
+    .statue-details-comp {
+      display: flex;
+
+      // Social Links 
+      .statue-socials-sect {
+        .statue-link {
+          padding: .5rem;
+          max-height: unset;
+          border-radius: 16px;
+          .statue-link-anchor {
+            gap: .2rem;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            i {
+              font-size: 1.15rem; 
+            }
+          }
+        }
+      }
+
+      // Accessories 
+      .statue-accessories-sect {
+        padding: .25rem;
+    
+        .statue-accessory {
+          width: 80%;
+          gap: 1rem;
+          margin: 1rem auto;
+          padding: .25rem .5rem;
+          p {
+            margin: 0 auto;
+          }
+          i {
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+  .StatuePage {
+    .statue-details-comp {
+      display: flex;
+      padding: 0;
+      flex-direction: column;
+
+      // Adjust Order 
+      .statue-detail-social {
+        order: 1;
+      }
+      .statue-detail-accessory {
+        order: 2;
+      }
+      .statue-detail-connection {
+        order: 3;
+      }
+
+      // Social Links 
+      .statue-socials-sect {
+        .statue-link {
+          padding: .5rem;
+          max-height: unset;
+          border-radius: 16px;
+          .statue-link-anchor {
+            gap: .2rem;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            i {
+              font-size: 1.15rem; 
+            }
+          }
+        }
+      }
+
+      // Accessories 
+      
+      // Connections 
+
+    }
+  }
 }

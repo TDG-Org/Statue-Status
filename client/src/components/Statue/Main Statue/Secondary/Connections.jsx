@@ -7,7 +7,6 @@ import PropTypes from "prop-types";
 import { Connection } from "./";
 
 // Images/SVGs 
-import { Planet } from "../../../../assets/imgs";
 
 const Connections = () => {
   return (

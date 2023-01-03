@@ -22,7 +22,7 @@ const SocialLink = () => {
       
         {/* Username */}
         <span className="statue-social-username">
-          TDGNate
+          Christian McIlvenny
         </span>
 
       </a>

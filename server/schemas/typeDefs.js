@@ -88,6 +88,7 @@ const typeDefs = gql`
     user(userID: ID!): User
     profile(profileId: ID!): Profile
     statue(statueId: ID!): Statue
+    miniStatue(miniStatue: ID!): MiniStatue
     me: User
   }
 

@@ -15,17 +15,28 @@ const Footer = () => {
         {/* TDG */}
 
         <ul className="footer-sect">
+
+          {/* Logo */}
           <li>
             <div className="logo">
-              <h3><a>&#169; 2022 TDG</a></h3>
+              <h3>
+                <a>
+                  &#169; 2022 TDG
+                </a>
+              </h3>
             </div>  
           </li>
+
+          {/* Developer Team */}
           <li>
             <Link to="devs">Dev Team</Link>
           </li>
+
+          {/* Create Statue Status issue */}
           <li>
             <a target="blank" href="https://github.com/TDG-Org/Statue-Status/issues">Create Issue</a>
           </li>
+
         </ul>
 
         {/* Links */}
@@ -52,22 +63,16 @@ const Footer = () => {
           <h4>Credits</h4>
 
           <ul className="footer-links">
-            {/* Jesseokeya's API */}
-            <li>
+
+              {/* haikei */}
+              <li>
               <a target="blank"
-                href="https://github.com/jesseokeya/Forbes400"
+                href="https://haikei.app/"
               >
-                jesseokeya&apos;s API
+                haikei
               </a>
             </li>
-            {/* Bootstrap Icons */}
-            <li>
-            <a target="blank"
-                href="https://icons.getbootstrap.com/"
-              >
-                Bootstrap Icons
-              </a>
-            </li>
+
             {/* OpenAI */}
             <li>
               <a target="blank"
@@ -76,14 +81,7 @@ const Footer = () => {
                 OpenAI
               </a>
             </li>
-            {/* haikei */}
-            <li>
-              <a target="blank"
-                href="https://haikei.app/"
-              >
-                haikei
-              </a>
-            </li>
+
             {/* IconScout */}
             <li>
               <a target="blank"
@@ -92,6 +90,25 @@ const Footer = () => {
                 IconScout
               </a>
             </li>
+
+            {/* Bootstrap Icons */}
+            <li>
+            <a target="blank"
+                href="https://icons.getbootstrap.com/"
+              >
+                Bootstrap Icons
+              </a>
+            </li>
+
+            {/* Jesseokeya's API */}
+            <li>
+              <a target="blank"
+                href="https://github.com/jesseokeya/Forbes400"
+              >
+                jesseokeya&apos;s API
+              </a>
+            </li>
+
           </ul>
 
         </div>

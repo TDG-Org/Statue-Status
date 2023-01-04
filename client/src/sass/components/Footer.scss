@@ -5,11 +5,16 @@
 
 footer {
   z-index: 4;
+  width: 100%;
   display: flex;
-  padding: 2.5rem 0;
   min-height: 150px;
+  padding: 2.5rem 0;
+  background-size: cover;
+  background-repeat: no-repeat; 
   justify-content: space-around;
-  background-color: rgba(36, 36, 36, 0.068);
+  background-color: #24242411;
+  background-position: center 90%;
+  background-image: url("../../assets/svgs/footer-comp.svg");
 
   .container {
     width: 100%;
@@ -18,15 +23,20 @@ footer {
 
     .footer-sect {
       h4 {
+        font-weight: bold;
+        color: $prime-clr;
         text-align: start;
         font-size: 1.3rem;
         margin: .5rem 0 !important;
       }
     }
 
+    // Logo 
     .logo {
       h3 {
         a {
+        font-weight: bold;
+
           color: $prime-clr;
           font-size: 1.3rem;
 
@@ -41,14 +51,11 @@ footer {
     ul {
       margin: 0;
       padding: 0;
-
       li {
         a {
           color: $mid-light-clr;
-
           &:hover {
-          color: $second-clr;
-          text-decoration: underline !important;
+          color: $light-clr;
           }
         }
       }
@@ -63,12 +70,14 @@ footer {
     padding: 0 !important;
   }
 
+  // Each Section 
   .footer-sect {
     h4 {
       font-size: 1rem;
     }
   }
 
+  // Logo 
   .logo {
     h3 {
       a {

@@ -15,24 +15,25 @@ import {
   TypingText
 } from "../../components";
 
+// Auth 
 import Auth from "../../utils/auth";
+
+// Mutations
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 
 const SignUpPage = () => {
 
-  // set initial form state
+  // Initial State for Form 
   const [userFormData, setUserFormData] = useState({ username: "", email: "", password: "", repassword: "" });
 
-  // set state for form validation
-  const [validated] = useState(false);
-  // set state for alert
-  const [showAlert, setShowAlert] = useState(false); 
+  // State, Data, and Content
   const [addUser] = useMutation(ADD_USER);
   const content = "Hey, let's get you set up!";
   const [isPassEmpty, setIsPassEmpty] = useState(true);
 
-  const handleInputChange = (event) => {
+  // Function to update state on change, and check password length 
+  function handleInputChange(event) {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
     if (document.querySelector(".signup-input-pass")?.value.length >= 6) {
@@ -40,31 +41,22 @@ const SignUpPage = () => {
     } else setIsPassEmpty(true);
   };
 
-  const handleFormSubmit = async (event) => {
-    console.log(event);
+  // Function to handles Sign Up Submit 
+  async function handleFormSubmit(event) {
     event.preventDefault(); 
-
-    // check if form has everything (as per react-bootstrap docs)
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-    }
-
     try {
-        const { data } = await addUser({
-          variables: { 
-              username: userFormData.username,
-              email: userFormData.email,
-              password: userFormData.password,
-             },
-        });
-
-        Auth.login(data.addUser.token);
+      const { data } = await addUser({
+        variables: { 
+            username: userFormData.username,
+            email: userFormData.email,
+            password: userFormData.password,
+            },
+      });
+      Auth.login(data.addUser.token);
     } catch (error) {
         throw error;
     }
-
+    // Reset State 
     setUserFormData({
         username: "",
         email: "",
@@ -81,13 +73,13 @@ const SignUpPage = () => {
               <div className="signup-sect">
                 <p>Username:</p>
                  <input
+                  required
+                  type="text"
                   name="username"
                   onChange={handleInputChange}
-                  required
                   value={userFormData.username}
                   className="signup-input signup-input-username"
-                  type="text"
-                />
+                  />
               </div>,
       id: 1
     },
@@ -97,12 +89,12 @@ const SignUpPage = () => {
               <div className="signup-sect">
                 <p>Email:</p>
                 <input
-                  value={userFormData.email}
-                  name="email"
-                  onChange={handleInputChange}
                   required
-                  className="signup-input signup-input-email"
                   type="email"
+                  name="email"
+                  value={userFormData.email}
+                  onChange={handleInputChange}
+                  className="signup-input signup-input-email"
                 />
               </div>,
       id: 2
@@ -115,10 +107,10 @@ const SignUpPage = () => {
                  <input
                   required
                   name="password"
-                  value={userFormData.password}
-                  className="signup-input signup-input-pass"
                   type="password"
                   onChange={handleInputChange}
+                  value={userFormData.password}
+                  className="signup-input signup-input-pass"
                 />
               </div>,
       id: 3
@@ -128,12 +120,12 @@ const SignUpPage = () => {
       element:
               <div className={`signup-sect ${isPassEmpty ? "hide" : ""}`}>
                 <p>Re-Enter Password:</p>
-          <input
-                  value={userFormData.repassword}
+                <input
                   required
                   type="password"
                   name="repassword"
                   onChange={handleInputChange}
+                  value={userFormData.repassword}
                   className="signup-input re-enter-pass"
                 />
               </div>,
@@ -144,8 +136,8 @@ const SignUpPage = () => {
       element: 
               <div className="signup-button-wrapper">
                 <button
-                  onClick={checkSignUpInputs}
                   className="signup-btn"
+                  onClick={checkSignUpInputs}
                 >
                   Create Account
                 </button>
@@ -171,7 +163,9 @@ const SignUpPage = () => {
     let newPassword = document.querySelector(".signup-input-pass")?.value;
     let ReEnterPass = document.querySelector(".re-enter-pass")?.value;
 
-    // Check Username 
+    // Check Username
+
+    // Is Empty ?
     if (newUsername === "") {
       swal({
         text: "Please add your Username",
@@ -182,8 +176,21 @@ const SignUpPage = () => {
       }, 1250);
       return;
     }
+    // Check Length (max 20)
+    if (newUsername.length > 20) {
+      swal({
+        text: "Username Limit Reached! 20",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
 
-    // Check Email 
+    // Check Email
+
+    // Is Empty ?
     if (newEmail === "") {
       swal({
         text: "Please add your Email",
@@ -194,11 +201,36 @@ const SignUpPage = () => {
       }, 1250);
       return;
     }
+    // Check If Email is valid
+    let emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    if (emailRegex.test(newEmail) === false) {
+      swal({
+        text: "Invalid Email",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
 
-    // Check Password 
+    // Check Password
+
+    // Is Empty ?
     if (newPassword === "") {
       swal({
-        text: "Please add your Password (6 Characters at least)",
+        text: "Please add your Password (6 Characters minimum)",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
+    // Check Length (Max 6) 
+    if (newPassword.length < 6) {
+      swal({
+        text: "Password must atleast have 6 Characters",
         buttons: false
       });
       setTimeout(() => {
@@ -208,9 +240,22 @@ const SignUpPage = () => {
     }
 
     // Check ReEnterPass 
+
     if (ReEnterPass === "") {
       swal({
         text: "Please retype your password",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
+
+    // Check Both Passwords 
+    if (newPassword !== ReEnterPass) {
+      swal({
+        text: "Passwords do not match...",
         buttons: false
       });
       setTimeout(() => {

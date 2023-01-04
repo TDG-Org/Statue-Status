@@ -24,36 +24,51 @@ import { LOGIN_USER } from "../../utils/mutations";
 
 const LoginPage = () => { 
 
+  // Initial State for Form 
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
-  const [validated] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
+
+  // Mutation, Content, and Error Messages
   const [loginUser] = useMutation(LOGIN_USER);
-  const handleInputChange = (event) => {
+  const content = "Welcome to Statue Status! 🎉";
+  const [emailError, setEmailError ] = useState(false);
+  const [passError, setPassError ] = useState(false);
+
+  // Function to update state on change 
+  function handleInputChange(event) {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-  const handleFormSubmit = async (event) => {
+  // Function to handle Login Submit 
+  async function handleFormSubmit(event) {
     event.preventDefault();
-
-    // check if form has everything (as per react-bootstrap docs)
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-    }
-
     try {
         const { data } = await loginUser({
-            variables: { ...userFormData }
+          variables: {
+            ...userFormData
+          }
         });
-
         Auth.login(data.login.token);
-
     } catch (error) {
-        throw error;
+      // console.log(error.message); 
+      // Check Email & give email error
+      if (error.message == "No user found with this email address") {
+        setEmailError(true);
+        setTimeout(() => {
+          setEmailError(false);
+        }, 1750);
+      }
+      // Check Password & give password error
+      if (error.message == "Incorrect credentials") {
+        setPassError(true);
+        setTimeout(() => {
+          setPassError(false);
+        }, 1750);
+      }
+        // throw error;
+      return;
     }
-
+    // Reset State 
     setUserFormData({
         username: "",
         email: "",
@@ -61,15 +76,13 @@ const LoginPage = () => {
     });
   };
 
-  const content = "Welcome to Statue Status! 🎉";
-
   // Fading in Elements 
   const elements = [
      // Email 
     {
       element:
               <div className="login-sect">
-                <p>Email:</p>
+                <p>Email: <span className={`login-err-message ${emailError ? "" : "hide"}`}>No Account found</span></p>
                   <input
                     required
                     name="email"
@@ -85,7 +98,7 @@ const LoginPage = () => {
     {
       element:
               <div className="login-sect">
-                <p>Password:</p>
+                <p>Password: <span className={`login-err-message ${passError ? "" : "hide"}`}>Wrong Password</span></p>
                 <input
                   required
                   name="password"

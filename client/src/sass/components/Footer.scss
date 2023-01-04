@@ -5,11 +5,16 @@
 
 footer {
   z-index: 4;
+  width: 100%;
   display: flex;
   min-height: 150px;
   padding: 2.5rem 0;
   justify-content: space-around;
-  background-color: rgba(36, 36, 36, 0.068);
+  background-color: #24242411;
+  background-image: url("../../assets/svgs/footer-comp.svg");
+  background-position: center 90%;
+  background-repeat: no-repeat; 
+  background-size: cover;
 
   .container {
     width: 100%;
@@ -18,6 +23,7 @@ footer {
 
     .footer-sect {
       h4 {
+        font-weight: bold;
         color: $prime-clr;
         text-align: start;
         font-size: 1.3rem;
@@ -29,6 +35,8 @@ footer {
     .logo {
       h3 {
         a {
+        font-weight: bold;
+
           color: $prime-clr;
           font-size: 1.3rem;
 

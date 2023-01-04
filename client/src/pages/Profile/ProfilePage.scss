@@ -54,7 +54,9 @@
             position: relative;
             align-items: center;
             justify-content: center;
+            transition: all 250ms ease; 
             border: 1px solid $low-dark-clr;
+
             .avatar-edit-overlay {
               top: 0;
               left: 0;
@@ -313,52 +315,60 @@
 }
 
 @media screen and (max-width: 625px) {
-  .user-edit {
-    gap: 0 !important;
-    flex-direction: column !important;
-    #profileUsername {
-      border-bottom: 1px solid $mid-light-clr;
-    }
-    .edit-bio-btn {
-      margin: 1rem auto !important;
-    }
-    .change-avatar {
-      margin: 0 !important;
-      margin-top: .75rem !important;
-    }
-    .profile-sect-badges {
-      .profile-sect-badge {
-        margin: 0 .5rem !important;
-        img {
-          min-width: 25px !important;
+  .profile-sect {
+    .pallet {
+      .container {
+        .user-edit {
+          gap: 0;
+          flex-direction: column;
+          #profileUsername {
+            margin: 0;
+            border-bottom: 1px solid $mid-light-clr;
+          }
+          .edit-bio-btn {
+            margin: 1rem auto;
+          }
+          .change-avatar {
+            margin: 0 !important;
+          }
+          .profile-sect-badges {
+            .profile-sect-badge {
+              margin: 0 .5rem ;
+              img {
+                min-width: 25px ;
+              }
+            }
+          }
+          .profile-sect-avatar,
+           .text-edit-side {
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+            width: 100% !important;
+            align-items: center !important;
+            #bioTitle {
+              text-align: center;
+              margin: 1rem auto !important;
+            }
+          }
+          .profile-sect-reps,
+           .profile-sect-statue {
+            width: 80% !important;
+            min-width: 80% !important;
+          }
+          .bio-input {
+            min-width: 100% !important;
+          }
+        }
+        .other-user-info {
+          gap: 2rem;
+          padding: .75rem 0 !important;
+          flex-direction: column !important;
+        }
+      
+        .no-statue {
+          text-align: center;
         }
       }
     }
-    .profile-sect-avatar,
-     .text-edit-side {
-      width: 100% !important;
-      align-items: center !important;
-      #bioTitle {
-        text-align: center;
-        margin: 1rem auto !important;
-      }
-    }
-    .profile-sect-reps,
-     .profile-sect-statue {
-      width: 80% !important;
-      min-width: 80% !important;
-    }
-    .bio-input {
-      min-width: 100% !important;
-    }
-  }
-  .other-user-info {
-    gap: 2rem;
-    padding: .75rem 0 !important;
-    flex-direction: column !important;
-  }
-
-  .no-statue {
-    text-align: center;
   }
 }

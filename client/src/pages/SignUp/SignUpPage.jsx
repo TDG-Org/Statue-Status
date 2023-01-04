@@ -15,22 +15,24 @@ import {
   TypingText
 } from "../../components";
 
-// Connection 
+// Auth 
 import Auth from "../../utils/auth";
+
+// Mutations
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 
 const SignUpPage = () => {
 
-  // set initial form state
+  // Initial State for Form 
   const [userFormData, setUserFormData] = useState({ username: "", email: "", password: "", repassword: "" });
 
-  // Mutation 
+  // State, Data, and Content
   const [addUser] = useMutation(ADD_USER);
   const content = "Hey, let's get you set up!";
   const [isPassEmpty, setIsPassEmpty] = useState(true);
 
-  // Function to update state, and to check password length 
+  // Function to update state on change, and check password length 
   function handleInputChange(event) {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
@@ -39,7 +41,7 @@ const SignUpPage = () => {
     } else setIsPassEmpty(true);
   };
 
-  // Function to handles Login Submit 
+  // Function to handles Sign Up Submit 
   async function handleFormSubmit(event) {
     event.preventDefault(); 
     try {

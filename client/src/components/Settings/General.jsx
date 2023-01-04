@@ -7,8 +7,10 @@ const General = () => {
 
   // Support Function 
   const support = () => {
-    swal("Here's the title!", "...and here's the text!");
+    swal("Here's comes the support!!");
   };
+
+  // Add Support Page !!!
   
   return (
     <div className="general-sect settings-sect">
@@ -20,7 +22,7 @@ const General = () => {
 
           {/* Appearance */}
           <div className="general-sect-appear">
-              <h4>Appearance</h4>
+              <h4>Theme</h4>
               
               <div className="appearance-btns">
 
@@ -86,11 +88,12 @@ const General = () => {
 
             </div>
 
-          {/* logout */}
+          {/* logout Section */}
           <div className="general-sect-logout">
             
             <hr />
 
+            {/* Logout */}
             <a href="#" className="settings-loggout-btn">Logout <i className="bi bi-box-arrow-in-right"></i></a>
           </div>
 

@@ -15,6 +15,8 @@ const Footer = () => {
         {/* TDG */}
 
         <ul className="footer-sect">
+
+          {/* Logo */}
           <li>
             <div className="logo">
               <h3>
@@ -24,12 +26,17 @@ const Footer = () => {
               </h3>
             </div>  
           </li>
+
+          {/* Developer Team */}
           <li>
             <Link to="devs">Dev Team</Link>
           </li>
+
+          {/* Create Statue Status issue */}
           <li>
             <a target="blank" href="https://github.com/TDG-Org/Statue-Status/issues">Create Issue</a>
           </li>
+
         </ul>
 
         {/* Links */}
@@ -57,8 +64,8 @@ const Footer = () => {
 
           <ul className="footer-links">
 
-                        {/* haikei */}
-                        <li>
+              {/* haikei */}
+              <li>
               <a target="blank"
                 href="https://haikei.app/"
               >
@@ -84,8 +91,8 @@ const Footer = () => {
               </a>
             </li>
 
-                        {/* Bootstrap Icons */}
-                        <li>
+            {/* Bootstrap Icons */}
+            <li>
             <a target="blank"
                 href="https://icons.getbootstrap.com/"
               >
@@ -93,7 +100,7 @@ const Footer = () => {
               </a>
             </li>
 
-                        {/* Jesseokeya's API */}
+            {/* Jesseokeya's API */}
             <li>
               <a target="blank"
                 href="https://github.com/jesseokeya/Forbes400"
@@ -101,7 +108,7 @@ const Footer = () => {
                 jesseokeya&apos;s API
               </a>
             </li>
-            
+
           </ul>
 
         </div>

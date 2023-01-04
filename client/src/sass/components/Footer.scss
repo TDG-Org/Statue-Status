@@ -9,12 +9,12 @@ footer {
   display: flex;
   min-height: 150px;
   padding: 2.5rem 0;
+  background-size: cover;
+  background-repeat: no-repeat; 
   justify-content: space-around;
   background-color: #24242411;
-  background-image: url("../../assets/svgs/footer-comp.svg");
   background-position: center 90%;
-  background-repeat: no-repeat; 
-  background-size: cover;
+  background-image: url("../../assets/svgs/footer-comp.svg");
 
   .container {
     width: 100%;

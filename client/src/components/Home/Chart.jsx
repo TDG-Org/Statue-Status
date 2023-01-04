@@ -37,7 +37,6 @@ const Chart = ({ richestData }) => {
 
     // Fetch data from data base to compare and send user to the mini statue 
 
-    
   }
 
   return (
@@ -45,7 +44,7 @@ const Chart = ({ richestData }) => {
 
       <h4 className="chart-title">Ranking</h4>
 
-      {/* The Chart  */}
+      {/* The Chart */}
       <VictoryChart
         domainPadding={23}
         animate={{
@@ -54,7 +53,7 @@ const Chart = ({ richestData }) => {
         }}
       >
 
-        {/* Y Axis  */}
+        {/* Y Axis */}
         <VictoryAxis
           dependentAxis
           style={{
@@ -66,10 +65,10 @@ const Chart = ({ richestData }) => {
               fontSize: 12.5
             },
           }}
-          tickFormat={(x) => (`${parseInt(x) / 1000000000}${x.toString().length > 9 ? "b" : "" }`)}
+          tickFormat={(x) => (`${parseInt(x) / 1000000000}${x.toString().length > 9 ? "B" : "" }`)}
         />
 
-        {/* X Axis  */}
+        {/* X Axis */}
         <VictoryAxis
           style={{
             axis: {stroke: "#a8a8a8"},
@@ -88,7 +87,7 @@ const Chart = ({ richestData }) => {
           }}
         />
 
-        {/* Bar  */}
+        {/* Bar */}
         <VictoryBar
           data={richestData}
           style={{

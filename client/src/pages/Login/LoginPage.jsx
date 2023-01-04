@@ -50,29 +50,23 @@ const LoginPage = () => {
         });
         Auth.login(data.login.token);
     } catch (error) {
-      console.log(error.message);
-      // Check and Give Email Error Message 
+      // console.log(error.message); 
+      // Check Email & give email error
       if (error.message == "No user found with this email address") {
-        swal({
-          title: "Uh Oh...",
-          text: "No account found with that email.",
-          buttons: false
-        });
+        setEmailError(true);
         setTimeout(() => {
-          swal.close();
+          setEmailError(false);
         }, 1750);
       }
+      // Check Password & give password error
       if (error.message == "Incorrect credentials") {
-        swal({
-          title: "Uh Oh...",
-          text: "Password incorrect",
-          buttons: false
-        });
+        setPassError(true);
         setTimeout(() => {
-          swal.close();
+          setPassError(false);
         }, 1750);
       }
-        throw error;
+        // throw error;
+      return;
     }
     // Reset State 
     setUserFormData({
@@ -88,7 +82,7 @@ const LoginPage = () => {
     {
       element:
               <div className="login-sect">
-                <p>Email: <span className="login-err-message">No Account found</span></p>
+                <p>Email: <span className={`login-err-message ${emailError ? "" : "hide"}`}>No Account found</span></p>
                   <input
                     required
                     name="email"
@@ -104,7 +98,7 @@ const LoginPage = () => {
     {
       element:
               <div className="login-sect">
-                <p>Password: <span className="login-err-message">Wrong Password</span></p>
+                <p>Password: <span className={`login-err-message ${passError ? "" : "hide"}`}>Wrong Password</span></p>
                 <input
                   required
                   name="password"

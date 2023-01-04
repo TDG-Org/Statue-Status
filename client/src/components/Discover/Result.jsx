@@ -34,7 +34,7 @@ const Result = ({ avatar, name, statue, reps }) => {
         
     </div>
 
-    <hr />
+    {/* <hr />  */}
 
     {/* Right Result  */}
     <div className="discover-result-right">

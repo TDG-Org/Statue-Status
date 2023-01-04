@@ -160,19 +160,21 @@
 
         // Right Result 
         .discover-result-right {
-          gap: 1rem;
+          // gap: 1rem; 
+          width: 50%;
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
         }
 
         .discover-result-name, 
         .discover-result-statue-link,
         .discover-result-reps {
-          margin: 0 .75rem;
+          margin: 0 .5rem; 
           width: fit-content;
           color: $mid-light-clr;
+          text-align: start;
         }
 
         &:hover {

@@ -18,12 +18,14 @@ footer {
 
     .footer-sect {
       h4 {
+        color: $prime-clr;
         text-align: start;
         font-size: 1.3rem;
         margin: .5rem 0 !important;
       }
     }
 
+    // Logo 
     .logo {
       h3 {
         a {
@@ -47,8 +49,8 @@ footer {
           color: $mid-light-clr;
 
           &:hover {
-          color: $second-clr;
-          text-decoration: underline !important;
+          color: $light-clr;
+          // text-decoration: underline !important; 
           }
         }
       }
@@ -63,12 +65,14 @@ footer {
     padding: 0 !important;
   }
 
+  // Each Section 
   .footer-sect {
     h4 {
       font-size: 1rem;
     }
   }
 
+  // Logo 
   .logo {
     h3 {
       a {

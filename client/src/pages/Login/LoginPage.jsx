@@ -48,6 +48,17 @@ const LoginPage = () => {
         });
         Auth.login(data.login.token);
     } catch (error) {
+      console.log(error.message);
+      if (error.message == "No user found with this email address") {
+        swal({
+          title: "Uh Oh...",
+          text: "No account found with that email.",
+          buttons: false
+        });
+        setTimeout(() => {
+          swal.close();
+        }, 1750);
+      }
         throw error;
     }
     // Reset State 

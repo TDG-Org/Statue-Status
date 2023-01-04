@@ -1,8 +1,6 @@
 // Core Components File to Export as bundle
 
 // Import General Components
-import Nav from "./Nav";
-import User from "./User";
 import Aside from "./Aside";
 import Footer from "./Footer";
 import GoBackBtn from "./GoBackBtn";
@@ -34,6 +32,9 @@ import { PowerUser } from "./Powerful";
 
 // Statue Page 
 import { Client, ClientDetails } from "./Statue";
+
+// Components 
+import { Nav, User } from "./Aside Comps";
 
 // Export 
 export {

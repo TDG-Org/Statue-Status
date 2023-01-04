@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
 // Components 
-import Nav from "./Nav";
-import User from "./User";
+import {
+  Nav,
+  User
+} from "./";
 
 // Link 
 import { Link } from "react-router-dom";
@@ -49,7 +51,6 @@ const Aside = () => {
           {/* Navbar Section  */}
           <Nav isActive={isActive} handleToggle={handleToggle}  />
         </div>
-
 
           {/* Hamburger  */}
         <div className={`hamburger ${isActive ? "" : "active"}`} onClick={handleToggle}>

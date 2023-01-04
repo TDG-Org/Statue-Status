@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import "../sass/components/Nav.scss";
+import "../../sass/components/Nav.scss";
 
 // Link 
 import { Link } from "react-router-dom";
@@ -21,55 +21,83 @@ const Nav = ({ isActive, handleToggle }) => {
     <nav className={`nav-comp ${isActive ? "" : "active"}`}>
 
       {/* Personal Section */}
+      
       <ul className="nav-sect">
+
+        {/* Home */}
         <li>
           <Link
             to="/"
+            onClick={handleToggle}
             className="ss-nav-link ss-active"
-            onClick={handleToggle}>Home
+          >
+            Home
           </Link>
         </li>
+
+        {/* Profile */}
         <li>
           <Link
             to="/profile"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Profile
+          >
+            Profile
           </Link>
         </li>
+
+        {/* Discover */}
         <li>
           <Link
             to="/discover"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Discover
+          >
+            Discover
           </Link>
         </li>
+
       </ul>
 
       <hr className="aside-divider" />
 
-      {/* General Section  */}
+      {/* General Section */}
+
       <ul className="ss-nav-sect">
+
+        {/* Settings */}
         <li>
           <Link
-            to="settings"
+            to="/settings"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Settings
+          >
+            Settings
           </Link>
         </li>
+
+        {/* Learn More */}
         <li>
           <Link
-            to="about"
+            to="/about"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Learn More
+          
+          >Learn More
           </Link>
         </li>
+
+        {/* Logout */}
         <li>
           <a
             href="#"
             className="ss-nav-link"
-            id="logoutBtn">Logout
+            id="logoutBtn"
+          >
+            Logout <i className="bi bi-box-arrow-in-right"></i>
           </a>
         </li>
+
       </ul>
 
     </nav>

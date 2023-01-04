@@ -1,13 +1,13 @@
 import React from "react";
 
 // Styles
-import "../sass/components/User.scss";
+import "../../sass/components/User.scss";
 
 // Link 
 import { Link } from "react-router-dom";
 
 // Images/SVGs 
-import { Bravery, Brilliance, Pancake, Planet } from "../assets/imgs";
+import { Bravery, Brilliance, Pancake } from "../../assets/imgs";
 
 const User = () => {
   return (

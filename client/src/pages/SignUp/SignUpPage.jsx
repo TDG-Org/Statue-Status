@@ -219,7 +219,18 @@ const SignUpPage = () => {
     // Is Empty ?
     if (newPassword === "") {
       swal({
-        text: "Please add your Password (6 Characters at least)",
+        text: "Please add your Password (6 Characters minimum)",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
+    // Check Length (Max 6) 
+    if (newPassword.length < 6) {
+      swal({
+        text: "Password must atleast have 6 Characters",
         buttons: false
       });
       setTimeout(() => {
@@ -229,9 +240,22 @@ const SignUpPage = () => {
     }
 
     // Check ReEnterPass 
+
     if (ReEnterPass === "") {
       swal({
         text: "Please retype your password",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
+
+    // Check Both Passwords 
+    if (newPassword !== ReEnterPass) {
+      swal({
+        text: "Passwords do not match...",
         buttons: false
       });
       setTimeout(() => {

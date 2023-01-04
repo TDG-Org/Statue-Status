@@ -15,11 +15,64 @@ import {
   TypingText
 } from "../../components";
 
+import Auth from "../../utils/auth";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../../utils/mutations";
+
 const SignUpPage = () => {
 
+  // set initial form state
+  const [userFormData, setUserFormData] = useState({ username: "", email: "", password: "", repassword: "" });
+  // set state for form validation
+  const [validated] = useState(false);
+  // set state for alert
+  const [showAlert, setShowAlert] = useState(false); 
+  const [addUser] = useMutation(ADD_USER);
   const content = "Hey, let's get you set up!";
-
   const [isPassEmpty, setIsPassEmpty] = useState(true);
+
+  // const handleInputChange = (event) => {
+  //   console.log(event);
+  //   const { name, value } = event.target;
+  //   setUserFormData({ ...userFormData, [name]: value });
+  // };
+  const handleInputChange = (event) => {
+    console.log(event);
+    const { name, value } = event.target;
+    setUserFormData({ ...userFormData, [name]: value });
+    console.log(document.querySelector(".signup-input-pass")?.value);
+    if (document.querySelector(".signup-input-pass")?.value.length >= 6) {
+      setIsPassEmpty(false);
+    } else setIsPassEmpty(true);
+  };
+  const handleFormSubmit = async (event) => {
+      event.preventDefault();
+
+      // check if form has everything (as per react-bootstrap docs)
+      const form = event.currentTarget;
+      if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+      }
+
+      try {
+          const { data } = await addUser({
+              variables: { ...userFormData },
+          });
+
+          Auth.login(data.addUser.token);
+      } catch (error) {
+          throw error;
+      }
+
+      setUserFormData({
+          username: "",
+          email: "",
+          password: "",
+          repassword: "",
+      });
+  }; 
+
 
   // Fading in Elements 
   const elements = [
@@ -28,8 +81,11 @@ const SignUpPage = () => {
       element:
               <div className="signup-sect">
                 <p>Username:</p>
-                <input
+                 <input
+                  name="username"
+                  onChange={handleInputChange}
                   required
+                  value={userFormData.username}
                   className="signup-input signup-input-username"
                   type="text"
                 />
@@ -42,6 +98,9 @@ const SignUpPage = () => {
               <div className="signup-sect">
                 <p>Email:</p>
                 <input
+                  value={userFormData.email}
+                  name="email"
+                  onChange={handleInputChange}
                   required
                   className="signup-input signup-input-email"
                   type="email"
@@ -54,11 +113,13 @@ const SignUpPage = () => {
       element:
               <div className="signup-sect">
                 <p>Password:</p>
-                <input
-            required
-            onChange={displayReEnterPass}
+                 <input
+                  required
+                  name="password"
+                  value={userFormData.password}
                   className="signup-input signup-input-pass"
                   type="password"
+                  onChange={handleInputChange}
                 />
               </div>,
       id: 3
@@ -68,10 +129,13 @@ const SignUpPage = () => {
       element:
               <div className={`signup-sect ${isPassEmpty ? "hide" : ""}`}>
                 <p>Re-Enter Password:</p>
-                <input
+          <input
+                  value={userFormData.repassword}
                   required
-                  className="signup-input re-enter-pass"
                   type="password"
+                  name="repassword"
+                  onChange={handleInputChange}
+                  className="signup-input re-enter-pass"
                 />
               </div>,
       id: 4

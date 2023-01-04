@@ -72,7 +72,7 @@ const MyAccount = () => {
     <div className="pallet">
       <div className="container">
 
-        {/* Username  */}
+        {/* Username */}
         <div className="account-sect-username">
           <h4>Username</h4>
           
@@ -92,15 +92,17 @@ const MyAccount = () => {
           
           <hr />
 
-        {/* Password  */}
+        {/* Password */}
         <div className="account-sect-pass">
           <h4>Password</h4>
           
           <p className="settings-p">
-            Make sure your password contains <span className="pass-fff">uppercase</span>, <span className="pass-fff">lowercase</span>, <span className="pass-fff">digits</span>, and <span className="pass-fff">special characters</span> to keep your account <span className="pass-fff">safe</span> and <span className="pass-fff">secure</span>.
+            Make sure your password contains uppercase, lowercase, digits, andspecial characters to keep your account safe and secure.
           </p>
           
-          <button className="change-password-btn">Change Password</button>
+            <button className="change-password-btn">
+              Change Password
+            </button>
         </div>
 
       </div>

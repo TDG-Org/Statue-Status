@@ -22,6 +22,8 @@ const Nav = ({ isActive, handleToggle }) => {
 
       {/* Personal Section */}
       <ul className="nav-sect">
+
+        {/* Home */}
         <li>
           <Link
             to="/"
@@ -29,6 +31,8 @@ const Nav = ({ isActive, handleToggle }) => {
             onClick={handleToggle}>Home
           </Link>
         </li>
+
+        {/* Profile */}
         <li>
           <Link
             to="/profile"
@@ -36,6 +40,8 @@ const Nav = ({ isActive, handleToggle }) => {
             onClick={handleToggle}>Profile
           </Link>
         </li>
+
+        {/* Discover */}
         <li>
           <Link
             to="/discover"
@@ -43,12 +49,15 @@ const Nav = ({ isActive, handleToggle }) => {
             onClick={handleToggle}>Discover
           </Link>
         </li>
+
       </ul>
 
       <hr className="aside-divider" />
 
-      {/* General Section  */}
+      {/* General Section */}
       <ul className="ss-nav-sect">
+
+        {/* Settings */}
         <li>
           <Link
             to="settings"
@@ -56,6 +65,8 @@ const Nav = ({ isActive, handleToggle }) => {
             onClick={handleToggle}>Settings
           </Link>
         </li>
+
+        {/* Learn More */}
         <li>
           <Link
             to="about"
@@ -63,11 +74,14 @@ const Nav = ({ isActive, handleToggle }) => {
             onClick={handleToggle}>Learn More
           </Link>
         </li>
+
+        {/* Logout */}
         <li>
           <a
             href="#"
             className="ss-nav-link"
-            id="logoutBtn">Logout
+            id="logoutBtn">
+            Logout <i className="bi bi-box-arrow-in-right"></i>
           </a>
         </li>
       </ul>

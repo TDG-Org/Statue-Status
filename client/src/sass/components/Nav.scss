@@ -45,9 +45,19 @@ nav {
 #logoutBtn {
   color: $mid-red-clr;
 
+  i {
+    color: $mid-red-clr;
+    transition: all 250ms ease;
+  }
+
   &:hover {
     color: $red-clr;
     border-bottom: 1px solid $red-clr;
+
+    i {
+      color: $red-clr;
+      border-bottom: 1px solid $red-clr;
+    }
   }
 }
 

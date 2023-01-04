@@ -39,16 +39,19 @@ const Explore = () => {
   const numOfDiscoverResults = () => {
     return document.querySelectorAll(".discover-result").length;
   };
+
   // Function to update the state variable 
   function setNumOfDiscoverResults() {
     setNumDiscoverResults(numOfDiscoverResults());
   }
+
   // Function that checks Results to remove SVG 
   function checkResultsAndRemoveSVG() {
     if (numDiscoverResults > 0) {
       document.querySelector(".search-svg").classList.add("hide");
     } else document.querySelector(".search-svg").classList.remove("hide");
   }
+
   // UseEffects 
   useEffect(() => {
     setNumOfDiscoverResults();
@@ -83,8 +86,6 @@ const Explore = () => {
       <div className="discover-search-results-label">
         <p>Avatar</p>
         <p>Username</p>
-        <p></p>
-        <p></p>
         <p>Statue</p>
         <p>Reputation</p>
       </div>

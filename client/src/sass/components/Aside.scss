@@ -21,12 +21,13 @@
   }
 
   .wide-screen-display {
+    gap: 5.75%; 
     height: 100%;
     display: flex;
     padding: .15rem;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
 

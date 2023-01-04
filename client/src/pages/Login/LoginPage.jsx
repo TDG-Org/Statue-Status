@@ -36,7 +36,6 @@ const LoginPage = () => {
   };
 
   const handleFormSubmit = async (event) => {
-  console.log("hello");
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
@@ -75,6 +74,7 @@ const LoginPage = () => {
                 <p>Email:</p>
                   <input
                     required
+                    name="email"
                     type="email"
                     className="login-input"
                     value={userFormData.email}
@@ -90,6 +90,7 @@ const LoginPage = () => {
                 <p>Password:</p>
                 <input
                   required
+                  name="password"
                   type="password"
                   className="login-input"
                   value={userFormData.password}

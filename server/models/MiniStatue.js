@@ -23,6 +23,6 @@ const miniStatueSchema = new Schema({
     }
 });
 
-const Statue = model("Statue", miniStatueSchema);
+const MiniStatue = model("MiniStatue", miniStatueSchema);
 
-module.exports = Statue;
+module.exports = MiniStatue;

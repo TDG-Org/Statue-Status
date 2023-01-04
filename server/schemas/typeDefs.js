@@ -84,9 +84,9 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(username: String!): User
     user(userID: ID!): User
     profile(profileId: ID!): Profile
+    profiles(username: String!): [Profile]
     statue(statueId: ID!): Statue
     miniStatue(miniStatue: ID!): MiniStatue
     me: User

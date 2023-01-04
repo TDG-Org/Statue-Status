@@ -35,7 +35,8 @@ const LoginPage = () => {
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-const handleFormSubmit = async (event) => {
+  const handleFormSubmit = async (event) => {
+  console.log("hello");
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
@@ -101,7 +102,10 @@ const handleFormSubmit = async (event) => {
     {
       element: 
               <div className="login-button-wrapper">
-                <button className="login-btn">
+                <button
+                  className="login-btn"
+                  onClick={handleFormSubmit}
+                >
                   Login
                 </button>
               </div>,

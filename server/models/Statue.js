@@ -15,7 +15,7 @@ const statueSchema = new Schema({
             type: String
         },
         location: {
-            type: Stirng
+            type: String
         },
         company: {
             type: String

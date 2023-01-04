@@ -258,9 +258,9 @@
         gap: 1rem;
         width: 100%;
         display: flex;
-        padding: 1rem;
         flex-direction: row;
         justify-content: center;
+        padding: 1.25rem 0 0rem 0;
 
         .report-bug-btn,
          .support-btn {
@@ -296,7 +296,6 @@
 
     .general-sect-logout {
       display: flex;
-      padding: 1rem;
       flex-direction: column;
       justify-content: center;
 

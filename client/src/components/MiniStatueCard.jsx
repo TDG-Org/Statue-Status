@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 // Images/SVGs 
-import { NatePfp } from "../assets/imgs";
 
 const MiniStatueCard = ({ data }) => {
 
@@ -105,10 +104,10 @@ const MiniStatueCard = ({ data }) => {
             Richest Rank: <span className="mini-statue-rich-rank">1</span>
           </li>
         <li>
-          Tesla, SpaceX
+          Owns: <span className="mini-statue-owns"> Tesla, SpaceX</span>
         </li>
         <li>
-          Austin, TX
+           Residence: <span></span> Austin, TX
         </li>
       </ul>
 

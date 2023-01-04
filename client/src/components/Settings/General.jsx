@@ -7,8 +7,10 @@ const General = () => {
 
   // Support Function 
   const support = () => {
-    swal("Here's the title!", "...and here's the text!");
+    swal("Here's comes the support!!");
   };
+
+  // Add Support Page !!!
   
   return (
     <div className="general-sect settings-sect">
@@ -18,23 +20,23 @@ const General = () => {
       <div className="pallet">
         <div className="container">
 
-          {/* Appearance  */}
+          {/* Appearance */}
           <div className="general-sect-appear">
-              <h4>Appearance</h4>
+              <h4>Theme</h4>
               
               <div className="appearance-btns">
 
-                {/* default Themes  */}
+                {/* default Themes */}
                 
                 <div className="default-themes">
 
-                  {/* Light  */}
+                  {/* Light */}
                   <div className="light-theme-btn theme-btn">
                     <input type="radio" id="lightTheme" name="theme" value="light"/>
                     <label htmlFor="lightTheme">Light</label>
                   </div>
 
-                  {/* Dark  */}
+                  {/* Dark */}
                   <div className="dark-theme-btn theme-btn">
                     <input type="radio" id="darkTheme" name="theme" value="dark" defaultChecked />
                     <label htmlFor="darkTheme">Dark</label>
@@ -44,23 +46,23 @@ const General = () => {
 
                 <hr />
 
-                {/* Special Theme  */}
+                {/* Special Theme */}
 
                 <div className="special-themes">
 
-                  {/* Red Wine  */}
+                  {/* Red Wine */}
                   <div className="red-theme-btn theme-btn">
                     <input type="radio" id="redTheme" name="theme" value="red" disabled />
                     <label htmlFor="redTheme">Red Wine</label>
                   </div>
 
-                  {/* Earth Tone  */}
+                  {/* Earth Tone */}
                   <div className="earth-theme-btn theme-btn">
                     <input type="radio" id="earthTheme" name="theme" value="earth" disabled />
                     <label htmlFor="earthTheme">Earth Tone</label>
                   </div>
 
-                  {/* Blue Ocean  */}
+                  {/* Blue Ocean */}
                   <div className="blue-theme-btn theme-btn">
                     <input type="radio" id="blueTheme" name="theme" value="blue" disabled />
                     <label htmlFor="blueTheme">Blue Ocean</label>
@@ -73,7 +75,7 @@ const General = () => {
 
             <hr />
 
-            {/* Bugs Section  */}
+            {/* Bugs Section */}
             <div className="report-bug-sect">
               <h4>Report Bug</h4>
 
@@ -86,12 +88,13 @@ const General = () => {
 
             </div>
 
-          {/* logout  */}
+          {/* logout Section */}
           <div className="general-sect-logout">
             
             <hr />
 
-            <a href="#" className="settings-loggout-btn">Log Out <i className="bi bi-box-arrow-in-right"></i></a>
+            {/* Logout */}
+            <a href="#" className="settings-loggout-btn">Logout <i className="bi bi-box-arrow-in-right"></i></a>
           </div>
 
         </div>

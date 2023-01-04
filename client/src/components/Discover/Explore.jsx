@@ -86,8 +86,6 @@ const Explore = () => {
       <div className="discover-search-results-label">
         <p>Avatar</p>
         <p>Username</p>
-        {/* <p></p>  */}
-        {/* <p></p>  */}
         <p>Statue</p>
         <p>Reputation</p>
       </div>

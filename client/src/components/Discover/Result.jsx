@@ -4,7 +4,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Images/SVGs 
-import { Planet } from "../../assets/imgs";
 
 const Result = ({ avatar, name, statue, reps }) => {
 
@@ -19,32 +18,32 @@ const Result = ({ avatar, name, statue, reps }) => {
   return (
     <div className="discover-result">
 
-    {/* Left Result  */}
+    {/* Left Result */}
     <div className="discover-result-left">
         
-      {/* Image  */}
+      {/* Image */}
       <div className="discover-result-img-wrapper">
         <img src={avatar} alt="" />
       </div>
         
-      {/* Name  */}
+      {/* Name */}
       <div className="discover-result-name">
         {name}
       </div>
         
     </div>
 
-    {/* <hr />  */}
+    <hr className="discover-result-mobile"/> 
 
-    {/* Right Result  */}
+    {/* Right Result */}
     <div className="discover-result-right">
         
-      {/* Statue  */}
+      {/* Statue */}
       <a href="" className="discover-result-statue-link">
         {statue}
       </a>
         
-        {/* Reputation  */}
+        {/* Reputation */}
       <div className="discover-result-reps">
         Reps:
         <br />

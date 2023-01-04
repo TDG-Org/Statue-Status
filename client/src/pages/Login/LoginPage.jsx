@@ -49,10 +49,21 @@ const LoginPage = () => {
         Auth.login(data.login.token);
     } catch (error) {
       console.log(error.message);
+      // Check and Give Email Error Message 
       if (error.message == "No user found with this email address") {
         swal({
           title: "Uh Oh...",
           text: "No account found with that email.",
+          buttons: false
+        });
+        setTimeout(() => {
+          swal.close();
+        }, 1750);
+      }
+      if (error.message == "Incorrect credentials") {
+        swal({
+          title: "Uh Oh...",
+          text: "Password incorrect",
           buttons: false
         });
         setTimeout(() => {

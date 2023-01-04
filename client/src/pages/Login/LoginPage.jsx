@@ -15,7 +15,53 @@ import {
   TypingText
 } from "../../components";
 
+// Auth 
+import Auth from "../../utils/auth";
+
+// Mutations
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../../utils/mutations";
+
 const LoginPage = () => { 
+
+  const [userFormData, setUserFormData] = useState({ email: "", password: "" });
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+
+  const [loginUser] = useMutation(LOGIN_USER);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserFormData({ ...userFormData, [name]: value });
+  };
+
+const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    // check if form has everything (as per react-bootstrap docs)
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    try {
+        const { data } = await loginUser({
+            variables: { ...userFormData }
+        });
+
+        Auth.login(data.login.token);
+
+    } catch (error) {
+        throw error;
+    }
+
+    setUserFormData({
+        username: "",
+        email: "",
+        password: "",
+    });
+  };
 
   const content = "Welcome to Statue Status! 🎉";
 
@@ -26,7 +72,13 @@ const LoginPage = () => {
       element:
               <div className="login-sect">
                 <p>Email:</p>
-                <input required className="login-input" type="email" />
+                  <input
+                    required
+                    type="email"
+                    className="login-input"
+                    value={userFormData.email}
+                    onChange={handleInputChange}
+                 />
               </div>,
       id: 1
     },
@@ -35,7 +87,13 @@ const LoginPage = () => {
       element:
               <div className="login-sect">
                 <p>Password:</p>
-                <input required className="login-input" type="password" />
+                <input
+                  required
+                  type="password"
+                  className="login-input"
+                  value={userFormData.password}
+                  onChange={handleInputChange}
+                />
               </div>,
       id: 2
     },

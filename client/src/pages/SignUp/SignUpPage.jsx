@@ -23,6 +23,7 @@ const SignUpPage = () => {
 
   // set initial form state
   const [userFormData, setUserFormData] = useState({ username: "", email: "", password: "", repassword: "" });
+
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
@@ -31,48 +32,46 @@ const SignUpPage = () => {
   const content = "Hey, let's get you set up!";
   const [isPassEmpty, setIsPassEmpty] = useState(true);
 
-  // const handleInputChange = (event) => {
-  //   console.log(event);
-  //   const { name, value } = event.target;
-  //   setUserFormData({ ...userFormData, [name]: value });
-  // };
   const handleInputChange = (event) => {
-    console.log(event);
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
-    console.log(document.querySelector(".signup-input-pass")?.value);
     if (document.querySelector(".signup-input-pass")?.value.length >= 6) {
       setIsPassEmpty(false);
     } else setIsPassEmpty(true);
   };
+
   const handleFormSubmit = async (event) => {
-      event.preventDefault();
+    console.log(event);
+    event.preventDefault(); 
 
-      // check if form has everything (as per react-bootstrap docs)
-      const form = event.currentTarget;
-      if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-      }
+    // check if form has everything (as per react-bootstrap docs)
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
 
-      try {
-          const { data } = await addUser({
-              variables: { ...userFormData },
-          });
+    try {
+        const { data } = await addUser({
+          variables: { 
+              username: userFormData.username,
+              email: userFormData.email,
+              password: userFormData.password,
+             },
+        });
 
-          Auth.login(data.addUser.token);
-      } catch (error) {
-          throw error;
-      }
+        Auth.login(data.addUser.token);
+    } catch (error) {
+        throw error;
+    }
 
-      setUserFormData({
-          username: "",
-          email: "",
-          password: "",
-          repassword: "",
-      });
+    setUserFormData({
+        username: "",
+        email: "",
+        password: "",
+        repassword: "",
+    });
   }; 
-
 
   // Fading in Elements 
   const elements = [
@@ -164,7 +163,7 @@ const SignUpPage = () => {
   }
 
   // Function to check the inputs before sending the data to the backend 
-  function checkSignUpInputs() {
+  function checkSignUpInputs(e) {
 
     // Retrieve all elements 
     let newUsername = document.querySelector(".signup-input-username")?.value;
@@ -219,6 +218,8 @@ const SignUpPage = () => {
       }, 1250);
       return;
     }
+
+    handleFormSubmit(e);
   }
 
   const [opacities, setOpacities] = useState(elements.map(() => 0));

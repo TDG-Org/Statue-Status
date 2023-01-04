@@ -163,7 +163,9 @@ const SignUpPage = () => {
     let newPassword = document.querySelector(".signup-input-pass")?.value;
     let ReEnterPass = document.querySelector(".re-enter-pass")?.value;
 
-    // Check Username 
+    // Check Username
+
+    // Is Empty ?
     if (newUsername === "") {
       swal({
         text: "Please add your Username",
@@ -174,8 +176,21 @@ const SignUpPage = () => {
       }, 1250);
       return;
     }
+    // Check Length (max 20)
+    if (newUsername.length > 20) {
+      swal({
+        text: "Username Limit Reached! 20",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
 
-    // Check Email 
+    // Check Email
+
+    // Is Empty ?
     if (newEmail === "") {
       swal({
         text: "Please add your Email",
@@ -186,8 +201,22 @@ const SignUpPage = () => {
       }, 1250);
       return;
     }
+    // Check If Email is valid
+    let emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    if (emailRegex.test(newEmail) === false) {
+      swal({
+        text: "Invalid Email",
+        buttons: false
+      });
+      setTimeout(() => {
+        swal.close();
+      }, 1250);
+      return;
+    }
 
-    // Check Password 
+    // Check Password
+
+    // Is Empty ?
     if (newPassword === "") {
       swal({
         text: "Please add your Password (6 Characters at least)",

@@ -21,14 +21,17 @@ const Nav = ({ isActive, handleToggle }) => {
     <nav className={`nav-comp ${isActive ? "" : "active"}`}>
 
       {/* Personal Section */}
+      
       <ul className="nav-sect">
 
         {/* Home */}
         <li>
           <Link
             to="/"
+            onClick={handleToggle}
             className="ss-nav-link ss-active"
-            onClick={handleToggle}>Home
+          >
+            Home
           </Link>
         </li>
 
@@ -36,8 +39,10 @@ const Nav = ({ isActive, handleToggle }) => {
         <li>
           <Link
             to="/profile"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Profile
+          >
+            Profile
           </Link>
         </li>
 
@@ -45,8 +50,10 @@ const Nav = ({ isActive, handleToggle }) => {
         <li>
           <Link
             to="/discover"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Discover
+          >
+            Discover
           </Link>
         </li>
 
@@ -55,23 +62,28 @@ const Nav = ({ isActive, handleToggle }) => {
       <hr className="aside-divider" />
 
       {/* General Section */}
+
       <ul className="ss-nav-sect">
 
         {/* Settings */}
         <li>
           <Link
-            to="settings"
+            to="/settings"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Settings
+          >
+            Settings
           </Link>
         </li>
 
         {/* Learn More */}
         <li>
           <Link
-            to="about"
+            to="/about"
+            onClick={handleToggle}
             className="ss-nav-link"
-            onClick={handleToggle}>Learn More
+          
+          >Learn More
           </Link>
         </li>
 
@@ -80,10 +92,12 @@ const Nav = ({ isActive, handleToggle }) => {
           <a
             href="#"
             className="ss-nav-link"
-            id="logoutBtn">
+            id="logoutBtn"
+          >
             Logout <i className="bi bi-box-arrow-in-right"></i>
           </a>
         </li>
+
       </ul>
 
     </nav>

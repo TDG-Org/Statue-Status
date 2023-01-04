@@ -56,7 +56,31 @@ const Footer = () => {
           <h4>Credits</h4>
 
           <ul className="footer-links">
-            {/* Jesseokeya's API */}
+                        {/* haikei */}
+                        <li>
+              <a target="blank"
+                href="https://haikei.app/"
+              >
+                haikei
+              </a>
+            </li>
+            {/* OpenAI */}
+            <li>
+              <a target="blank"
+                href="https://openai.com/"
+              >
+                OpenAI
+              </a>
+            </li>
+            {/* IconScout */}
+            <li>
+              <a target="blank"
+                href="https://iconscout.com/"
+              >
+                IconScout
+              </a>
+            </li>
+                        {/* Jesseokeya's API */}
             <li>
               <a target="blank"
                 href="https://github.com/jesseokeya/Forbes400"
@@ -70,30 +94,6 @@ const Footer = () => {
                 href="https://icons.getbootstrap.com/"
               >
                 Bootstrap Icons
-              </a>
-            </li>
-            {/* OpenAI */}
-            <li>
-              <a target="blank"
-                href="https://openai.com/"
-              >
-                OpenAI
-              </a>
-            </li>
-            {/* haikei */}
-            <li>
-              <a target="blank"
-                href="https://haikei.app/"
-              >
-                haikei
-              </a>
-            </li>
-            {/* IconScout */}
-            <li>
-              <a target="blank"
-                href="https://iconscout.com/"
-              >
-                IconScout
               </a>
             </li>
           </ul>

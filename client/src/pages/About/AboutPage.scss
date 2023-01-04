@@ -36,6 +36,7 @@
     }
 
     .about-link {
+      font-weight: bold;
       color: $second-clr;
       transition: all 200ms ease;
 
@@ -73,6 +74,10 @@
     width: 40%;
     max-width: 325px;
     min-width: 180px;
+    transition: all 250ms ease;
+    &:hover {
+      filter: contrast(115%);
+    }
   }
 }
 

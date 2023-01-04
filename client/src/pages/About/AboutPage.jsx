@@ -14,13 +14,13 @@ const AboutPage = () => {
   return (
     <div className="AboutPage page">
 
-      <h1>Statue Status</h1>
+      <h1>--- Statue Status ---</h1>
       
       <div className="container">
         <hr />
         <p className="about-extra-space"></p>
 
-        {/* Intro Section  */}
+        {/* Intro Section */}
         <Intro />
 
         {/* Getting Started Section */}

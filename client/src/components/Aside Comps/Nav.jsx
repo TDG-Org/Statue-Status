@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import "../sass/components/Nav.scss";
+import "../../sass/components/Nav.scss";
 
 // Link 
 import { Link } from "react-router-dom";

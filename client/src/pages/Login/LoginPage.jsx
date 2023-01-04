@@ -27,9 +27,11 @@ const LoginPage = () => {
   // Initial State for Form 
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
 
-  // Mutation & Content
+  // Mutation, Content, and Error Messages
   const [loginUser] = useMutation(LOGIN_USER);
   const content = "Welcome to Statue Status! 🎉";
+  const [emailError, setEmailError ] = useState(false);
+  const [passError, setPassError ] = useState(false);
 
   // Function to update state on change 
   function handleInputChange(event) {
@@ -86,7 +88,7 @@ const LoginPage = () => {
     {
       element:
               <div className="login-sect">
-                <p>Email:</p>
+                <p>Email: <span className="login-err-message">No Account found</span></p>
                   <input
                     required
                     name="email"
@@ -102,7 +104,7 @@ const LoginPage = () => {
     {
       element:
               <div className="login-sect">
-                <p>Password:</p>
+                <p>Password: <span className="login-err-message">Wrong Password</span></p>
                 <input
                   required
                   name="password"

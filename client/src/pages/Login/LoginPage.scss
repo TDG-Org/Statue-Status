@@ -21,6 +21,12 @@
     margin: 0 auto;
   }
 
+  .login-err-message {
+    font-size: .85rem;
+    margin: 0 .25rem;
+    color: $mid-red-clr;
+  }
+
   .login-page-overlay-background {
     top: 0;
     left: 0;

@@ -22,7 +22,7 @@
     padding: .5rem;
 
     .statue-link {
-      width: 80%;
+      width: 90%;
       display: flex;
       max-width: 375px; 
       overflow: hidden;
@@ -37,7 +37,7 @@
       border: 1px solid $low-dark-clr;
       background: rgba(0, 0, 0, 0.405);
       a {
-        gap: .5rem;
+        gap: .3rem;
         display: flex;
         flex-wrap: nowrap;
         text-align: center;
@@ -50,7 +50,7 @@
           font-size: 1.2rem; 
         }
         .statue-social-username {
-          margin: 0 .2rem;
+          margin: 0rem;
         }
       }
       &:hover {
@@ -68,15 +68,15 @@
     width: 100%;
     padding: .5rem;
     .statue-connection {
-      width: 80%;
-      gap: .75rem;
+      width: 90%;
+      gap: .5rem;
       display: flex;
       position: relative;
       flex-direction: row;
       align-items: center;
       margin: .690rem auto;
-      padding: .232rem 1rem;
-      justify-content: flex-start;
+      padding: .232rem .25rem;
+      justify-content: center;
       transition: all 250ms ease-in;
       border-bottom: 1px solid transparent; 
       .statue-connection-img-wrapper {
@@ -168,7 +168,7 @@
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .StatuePage {
     .statue-details-comp {
       padding: 0;
@@ -207,6 +207,43 @@
       // Accessories 
       
       // Connections 
+      .statue-connections-sect {
+        margin: 0;
+        width: 100%;
+        padding: .5rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        .statue-connection {
+          width: 80%;
+          gap: .5rem;
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          align-items: center;
+          margin: .690rem auto; 
+          padding: .232rem 1rem;
+          justify-content: center;
+          transition: all 250ms ease-in;
+          border-bottom: 1px solid transparent; 
+          .statue-connection-img-wrapper {
+            width: 42px;
+            margin: 0 .75rem;
+            img {
+              width: 100%;
+              min-width: 37.5px;
+              border-radius: 50%;
+            }
+          }
+          .statue-connection-name-wrapper {
+            .statue-connection-name {
+              color: $light-clr;
+              border: 1px solid transparent;
+              transition: all 250ms ease-in;
+            }
+          }
+        }
+      }
 
     }
   }

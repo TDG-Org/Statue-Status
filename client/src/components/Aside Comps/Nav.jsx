@@ -21,7 +21,7 @@ const Nav = ({ isActive, handleToggle }) => {
 
   function logoutFunc(event) {
     event.preventDefault();
-    Auth.logout;
+    Auth.logout();
   }
 
   return (

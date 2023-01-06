@@ -1,4 +1,4 @@
-// Client Bottom Statue Style Sheet 
+// Client Detdails Statue Style Sheet 
 
 // SCSS Variables 
 @import "../../variables.scss";
@@ -24,10 +24,10 @@
     .statue-link {
       width: 80%;
       display: flex;
+      max-width: 375px; 
       overflow: hidden;
       position: relative;
       max-height: 66.5px;
-      max-width: 375px; 
       text-align: center;
       margin: .8rem auto;
       border-radius: 2rem;
@@ -83,8 +83,8 @@
         width: 42px;
         margin: 0 .75rem;
         img {
-          min-width: 37.5px;
           width: 100%;
+          min-width: 37.5px;
           border-radius: 50%;
         }
       }
@@ -152,8 +152,8 @@
         padding: .25rem;
     
         .statue-accessory {
-          width: 80%;
           gap: 1rem;
+          width: 80%;
           margin: 1rem auto;
           padding: .25rem .5rem;
           p {
@@ -166,14 +166,13 @@
       }
     }
   }
-
 }
 
 @media screen and (max-width: 850px) {
   .StatuePage {
     .statue-details-comp {
-      display: flex;
       padding: 0;
+      display: flex;
       flex-direction: column;
 
       // Adjust Order 

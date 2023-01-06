@@ -18,6 +18,8 @@
     }
 
     h5 {
+      cursor: default;
+      font-size: 1.4rem;
       text-align: center;
     }
 
@@ -47,7 +49,7 @@
 
 // Media Queries 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .StatuePage {
     .container {
       .statue-detail {

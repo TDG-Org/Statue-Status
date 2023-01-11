@@ -15,60 +15,69 @@ import Auth from "../../utils/auth";
 const User = () => {
   return (
     <div className="user-avatar-section">
+      {Auth.loggedIn() ? (
+        <>
+          {/* Top Section */}
+          <div className="user-avatar-sect-top">
 
-      {/* Top Section */}
-      <div className="user-avatar-sect-top">
+            {/* badge section */}
+            <ul className="badge-sect">
+              <li className="badge">
+                  <a href="#">
+                    <img src={Brilliance} alt="" />
+                </a>
+              </li>
+              <li className="badge">
+                  <a href="#">
+                    <img src={Bravery} alt="" />
+                </a>
+              </li>
+            </ul>
 
-      {/* badge section */}
-      <ul className="badge-sect">
-        <li className="badge">
-            <a href="#">
-              <img src={Brilliance} alt="" />
-          </a>
-        </li>
-        <li className="badge">
-            <a href="#">
-              <img src={Bravery} alt="" />
-          </a>
-        </li>
-      </ul>
+            {/* Avatar Section */}
+            <Link to="/profile" className="avatar-sect">
+              <img src={Pancake} alt="" />   
+            </Link>
 
-      {/* Avatar Section */}
-      <Link to="/profile" className="avatar-sect">
-          <img src={Pancake} alt="" />   
-      </Link>
-
-      </div>
-
-      {/* Bottom Section */}
-      <div className="user-avatar-sect-bottom">
-
-        {/* Username */}
-        <h3 className="username"><span className="the-at">@</span><a id="username">Nate</a></h3>
-
-        <div className="user-data">
-          <div className="user-experience">
-            <p>Experience: <span>21894</span></p>
           </div>
-          <div className="user-gems">
-            <p>Gems: <span>218</span></p>
+
+        {/* Bottom Section */}
+        <div className="user-avatar-sect-bottom">
+
+          {/* Username */}
+          <h3 className="username"><span className="the-at">@</span><a id="username">Nate</a></h3>
+
+          <div className="user-data">
+            <div className="user-experience">
+              <p>Experience: <span>21894</span></p>
+            </div>
+            <div className="user-gems">
+              <p>Gems: <span>218</span></p>
+            </div>
           </div>
+          
+          {/* User bio section */}
+          <p className="user-bio" id="userBio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam saepe, dolor dolorem pariatur odit rem?
+          </p>
+
+          {/* User's Followers and Following Count */}
+          <div className="follow-count-wrapper">
+            <p className="following-count"><span id="userFollowersCount">287m</span> Followers</p>
+            <p className="following-count"><span id="userFollowingCount">1</span> Following</p>
+          </div>
+
+          {/* Links (Future) */}
+
         </div>
-        
-        {/* User bio section */}
-        <p className="user-bio" id="userBio">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam saepe, dolor dolorem pariatur odit rem?
-        </p>
+        </>
+      ) : (
+          <>
+            
+          </>
+      )}
 
-        {/* User's Followers and Following Count */}
-        <div className="follow-count-wrapper">
-          <p className="following-count"><span id="userFollowersCount">287m</span> Followers</p>
-          <p className="following-count"><span id="userFollowingCount">1</span> Following</p>
-        </div>
-
-        {/* Links (Future) */}
-
-      </div>
+      
 
     </div>
   );

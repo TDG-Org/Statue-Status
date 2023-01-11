@@ -17,7 +17,7 @@ const ProfileStatueSocial = () => {
   const [editStatueSocialLinkActive, setEditStatueSocialLinkActive] = useState(false);
 
   // Official Social Link 
-  const [editStatueSocialLink, setEditStatueSocialLink] = useState(natesSocialLinks);
+  const [editStatueSocialLink, setEditStatueSocialLink] = useState([]);
 
   // Current Social link input 
   const [statueSocialLinkCurrent, setStatueSocialLinkCurrent] = useState(editStatueSocialLink);

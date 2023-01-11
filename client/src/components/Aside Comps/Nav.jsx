@@ -144,7 +144,7 @@ const Nav = ({ isActive, handleToggle }) => {
         </>
       )}
 
-    </nav >
+    </nav>
   );
 };
 

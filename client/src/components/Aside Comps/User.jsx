@@ -73,8 +73,8 @@ const User = () => {
         </>
       ) : (
           <>
+            {/* Logo */}
             <div className="not-logged-in-aside-top">
-              {/* Logo */}
               <div className="statue-status-logo">
                 <img
                   src={Logo}
@@ -84,15 +84,25 @@ const User = () => {
               <h4>Statue Status</h4>
             </div>
 
+            {/* Login or Sign Up  */}
+            <div className="login-user-or-sign-up">
 
+              {/* Login */}
+              <Link
+                to="/login"
+                className="login-button"
+              >
+                Login
+              </Link>
 
-            {/* Login */}
-            <Link
-              to="/login"
-              className="login-button"
-            >
-              Login
-            </Link>
+              {/* Sign Up */}
+              <p>
+                <Link to="/sign-up">
+                  Create an account
+                </Link>
+              </p>
+
+            </div>
 
           </>
       )}

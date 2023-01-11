@@ -30,7 +30,7 @@ const ProfileStatuePrimary = () => {
   const statueNameRef = useRef(null);
   // Editing is active
   const [editStatueNameActive, setEditStatueNameActive] = useState(false);
-  const [editStatueName, setEditStatueName] = useState("Christian McIlvenny");
+  const [editStatueName, setEditStatueName] = useState("");
   // Current Name input 
   const [statueNameCurrent, setStatueNameCurrent] = useState(editStatueName);
   // Toggle function to activate Statue Name edit

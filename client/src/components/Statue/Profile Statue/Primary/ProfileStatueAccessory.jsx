@@ -26,13 +26,13 @@ const ProfileStatueAccessory = () => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   // Final Date 
-  const [finalSelectedDate, setFinalSelectedDate] = useState(NateData.bday);
+  const [finalSelectedDate, setFinalSelectedDate] = useState("");
 
-    // Check if Editing is active
-    const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
+  // Check if Editing is active
+  const [editStatueAccessoryActive, setEditStatueAccessoryActive] = useState(false);
 
   // Other Values 
-  const [accessoriesValues, setAccessoriesValues] = useState(NateData);
+  const [accessoriesValues, setAccessoriesValues] = useState();
 
   // Current Accessory Values input 
   const [accessoriesValuesCurrent, setAccessoriesValuesCurrent] = useState(accessoriesValues);
@@ -70,7 +70,6 @@ const ProfileStatueAccessory = () => {
 
   // Check which elements wants update 
   function updateAccessory(e) {
-
     setFinalSelectedDate(selectedDate);
     setAccessoriesValues(accessoriesValuesCurrent);
     console.log(accessoriesValues);

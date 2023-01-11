@@ -140,11 +140,20 @@ const Nav = ({ isActive, handleToggle }) => {
               </Link>
             </li>
 
+            <li>
+              <Link
+                to="/login"
+                className="ss-nav-link login-button-mobile"
+              >
+                Login
+              </Link>
+            </li>
+
           </ul>
         </>
       )}
 
-    </nav>
+    </nav >
   );
 };
 

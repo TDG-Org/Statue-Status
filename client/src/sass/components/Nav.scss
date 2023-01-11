@@ -121,4 +121,11 @@ nav {
   .nav-logo {
     display: block; 
   }
+
+  .not-logged-in-aside-top {
+    display: none;
+  }
+  .login-user-or-sign-up {
+    display: none;
+  }
 }

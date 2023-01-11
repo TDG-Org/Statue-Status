@@ -40,10 +40,12 @@
 
   // Has Statue 
   .statue {
+    gap: 1rem; 
     width: 100%;
     display: flex;
     padding: .5rem;
     flex-direction: row;
+    justify-content: center;
     hr {
       width: 80%;
       background-color: $mid-light-clr;
@@ -410,15 +412,18 @@
         margin: .75rem 0 .35rem 0 !important;
       }
       .social-list {
-        margin: 0;
+        gap: 0rem;
+        margin: 0; 
+        padding: 0; 
         width: 100%;
-        padding: .5rem;
+        display: flex;
+        flex-direction: column;
         li {
-          width: 80%;
+          width: 78%;
           display: flex;
           overflow: hidden;
           position: relative;
-          margin: .5rem auto;
+          margin: .25rem auto;
           max-height: 66.5px;
           text-align: center;
           border-radius: 8px;
@@ -665,14 +670,15 @@
 
         // Social List 
         .social-list {
+          padding: 0;
           display: flex;
           flex-wrap: wrap;
-          flex-direction: row;
+          flex-direction: column; 
           justify-content: space-evenly;
           li {
-            width: 45%;
+            width: 78%;
             min-width: 285px;
-            margin: .5rem .35rem;
+            margin: .25rem auto;
             a {
               margin: auto auto;
             }

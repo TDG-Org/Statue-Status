@@ -17,10 +17,10 @@ const ProfilePage = () => {
       <div className="container">
         <hr />
 
-        {/* Profile Section  */}
+        {/* Profile Section */}
         <EditProfile />
 
-        {/* Profile Statue Section  */}
+        {/* Profile Statue Section */}
         <ProfileStatue />
           
       <hr />

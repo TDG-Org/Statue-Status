@@ -46,8 +46,14 @@ const ProfileStatuePrimary = () => {
   return (
     <div className="primary-sect">
               
-    {/* Statue Picture */}
-     <img src={NatePfp} alt="" className="statue-img" />
+      {/* Statue Picture */}
+      <div className="statue-img">
+        <img
+          src={NatePfp}
+          alt="Statue Picture"
+        />
+      </div>
+
      
     {/* Statue Name */}
      <div className="statue-name-sect">

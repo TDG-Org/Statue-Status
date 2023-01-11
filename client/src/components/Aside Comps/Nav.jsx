@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 
 import Auth from "../../utils/auth";
 
+// Auth 
 const Nav = ({ isActive, handleToggle }) => {
 
   // Validate Prop 

@@ -10,7 +10,7 @@ const UserInfo = () => {
   return (
     <div className="other-user-info">
 
-    {/* Badges  */}
+    {/* Badges */}
     <div className="profile-sect-badges">
       <div className="profile-sect-badge">
         <img src={Bravery} alt="" />
@@ -26,22 +26,22 @@ const UserInfo = () => {
       </div>
     </div>
 
-    {/* Reputations  */}
+    {/* Reputations */}
     <div className="profile-sect-reps" id="profileSectReps">
       <h4>Reputations</h4>
       <div className="rep">
         <span>+</span>
-        <p id="repCount">1,583</p>
+        <p id="repCount">0</p>
         <i className="bi bi-fire"></i>
       </div>
     </div>
 
-    {/* Reputations  */}
+    {/* Reputations */}
     <div className="profile-sect-statue">
       <h4>Statue</h4>
-      <Link>Christian McIlvenny</Link>
+      <Link>Statue Name</Link>
 
-      {/* If user does not have a statue  */}
+      {/* If user does not have a statue */}
       {/* <p className="no-statue">NA</p>  */}
     </div>
   </div>

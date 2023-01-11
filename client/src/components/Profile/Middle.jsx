@@ -46,16 +46,16 @@ const Middle = () => {
   return (
     <div className="text-edit-side">
 
-      {/* Username  */}
+      {/* Username */}
       <div className="profile-sect-name">
-        <h4 id="profileUsername">TDGNate</h4>
+        <h4 id="profileUsername">Username</h4>
       </div>
 
-      {/* Bio  */}
+      {/* Bio */}
       <div className="profile-sect-bio">
         <h4 id="bioTitle">Bio</h4>
           <textarea
-            placeholder="What interests you? Please tell us more about yourself!"
+            placeholder="Tell us about yourself!"
             type="text"
             className="bio-input"
             defaultValue={editProfileAbout} 
@@ -64,17 +64,17 @@ const Middle = () => {
             onChange={handleProfileAboutInputChange} 
           ></textarea>
 
-        {/* Edit button  */}
+        {/* Edit button */}
           <button
             className={`edit-bio-btn ${editProfileAboutActive ? "hide" : ""}`}
             onClick={handleToggleProfileAbout}
           ><i className="bi bi-pen"></i>
           </button>
 
-          {/* The Save and Cancel Buttons  */}
+          {/* The Save and Cancel Buttons */}
           <div className={`profile-bio-about-btns ${editProfileAboutActive ? "" : "hide"}`}>
 
-            {/* Save button  */}
+            {/* Save button */}
             <button
               className="profile-bio-save"
               onClick={(e) => {
@@ -85,7 +85,7 @@ const Middle = () => {
               Save
             </button>
 
-            {/* Cancel button  */}
+            {/* Cancel button */}
             <button
               className="profile-bio-cancel"
               onClick={() => {

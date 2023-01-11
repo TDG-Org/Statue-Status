@@ -245,14 +245,18 @@ p, span, em, li, a, i, div {
 
 .login-button {
   border: none;
+  color: $light-clr;
   margin: 1rem auto;
   border-radius: 6px;
-  padding: .25rem 1.25rem;
+  padding: .5rem 1.75rem;
+  transition: all 250ms ease;
   background-color: $prime-clr;
+  border: 1px solid transparent;
+  font-size: 1.25rem;
   &:hover {
-    background-color: rgb(47, 148, 255);
-    color: white !important;
-    border-bottom: 1px solid transparent !important;
+    color: white;
+    background-color: rgb(65, 157, 255);
+    border-bottom: 1px solid transparent;
   }
 }
 

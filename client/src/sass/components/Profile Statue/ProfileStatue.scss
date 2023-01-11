@@ -64,9 +64,10 @@
       // Statue Image 
       .statue-img {
         width: 90%;
+        width: 240px;
         padding: .25rem;
-        max-width: 250px;
-        min-width: 175px;
+        // max-width: 250px; 
+        // min-width: 175px; 
         position: relative;
         transition: all 250ms ease;
         border: 1px solid $low-dark-clr;

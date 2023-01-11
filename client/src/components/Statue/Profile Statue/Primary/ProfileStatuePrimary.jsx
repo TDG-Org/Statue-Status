@@ -48,6 +48,9 @@ const ProfileStatuePrimary = () => {
               
       {/* Statue Picture */}
       <div className="statue-img">
+        {/* overlay */}
+        <div className="statue-img-overlay"></div>
+        {/* image */}
         <img
           src={NatePfp}
           alt="Statue Picture"
@@ -67,7 +70,7 @@ const ProfileStatuePrimary = () => {
          onChange={handleStatueNameInputChange} 
        />
 
-       {/* Edit button  */}
+       {/* Edit button */}
        <button
          className={`statue-name-edit ${editStatueNameActive ? "hide" : ""}`}
          onClick={handleToggleStatueName}
@@ -75,10 +78,10 @@ const ProfileStatuePrimary = () => {
           <i className="bi bi-pen"></i>
        </button>
 
-       {/* The Save and Cancel Buttons  */}
+       {/* The Save and Cancel Buttons */}
        <div className="statue-name-edit-btns">
 
-         {/* Save button  */}
+         {/* Save button */}
          <button
            className={`statue-name-save ${editStatueNameActive ? "" : "hide"}`}
            onClick={(e) => {
@@ -89,7 +92,7 @@ const ProfileStatuePrimary = () => {
            Save
          </button>
 
-         {/* Cancel button  */}
+         {/* Cancel button */}
          <button
            className={`statue-name-save ${editStatueNameActive ? "" : "hide"}`}
            onClick={() => {
@@ -105,12 +108,12 @@ const ProfileStatuePrimary = () => {
      </div>
 
      <hr />
-     {/* About Statue Section  */}
+     {/* About Statue Section */}
      <ProfileStatueAbout />
      <hr />
-     {/* Accessory Section  */}
+     {/* Accessory Section */}
      <ProfileStatueAccessory />
-     {/* Badge Section  */}
+     {/* Badge Section */}
      <ProfileStatueBages /> 
 
    </div> 

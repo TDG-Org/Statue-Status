@@ -67,10 +67,27 @@
         padding: .25rem;
         max-width: 250px;
         min-width: 175px;
+        position: relative;
+        transition: all 250ms ease;
         border: 1px solid $low-dark-clr;
+        .statue-img-overlay {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+          position: absolute;
+          background-color: $low-tp;
+        }
         img {
           width: 100%;
           height: 100%;
+        }
+        &:hover {
+          .statue-img-overlay {
+            display: block;
+            cursor: pointer;
+          }
         }
       }
 

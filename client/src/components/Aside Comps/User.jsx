@@ -7,7 +7,7 @@ import "../../sass/components/User.scss";
 import { Link } from "react-router-dom";
 
 // Images/SVGs 
-import { Bravery, Brilliance, Pancake } from "../../assets/imgs";
+import { Bravery, Brilliance, Pancake, Logo } from "../../assets/imgs";
 
 // Auth 
 import Auth from "../../utils/auth";
@@ -73,7 +73,27 @@ const User = () => {
         </>
       ) : (
           <>
-            
+            <div className="not-logged-in-aside-top">
+              {/* Logo */}
+              <div className="statue-status-logo">
+                <img
+                  src={Logo}
+                  alt="Statue Status"
+                />
+              </div>
+              <h4>Statue Status</h4>
+            </div>
+
+
+
+            {/* Login */}
+            <Link
+              to="/login"
+              className="login-button"
+            >
+              Login
+            </Link>
+
           </>
       )}
 

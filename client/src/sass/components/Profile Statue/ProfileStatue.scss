@@ -65,8 +65,12 @@
       .statue-img {
         width: 90%;
         width: 240px;
+        height: 240px;
+        display: flex;
         padding: .25rem;
         position: relative;
+        align-items: center;
+        justify-content: center;
         transition: all 250ms ease;
         border: 1px solid $low-dark-clr;
         .statue-img-overlay {
@@ -84,6 +88,7 @@
         img {
           width: 100%;
           height: 100%;
+          object-fit: cover; 
         }
         &:hover {
           .statue-img-overlay {

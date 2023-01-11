@@ -66,8 +66,6 @@
         width: 90%;
         width: 240px;
         padding: .25rem;
-        // max-width: 250px; 
-        // min-width: 175px; 
         position: relative;
         transition: all 250ms ease;
         border: 1px solid $low-dark-clr;
@@ -78,7 +76,10 @@
           height: 100%;
           display: none;
           position: absolute;
-          background-color: $low-tp;
+          align-items: center;
+          font-weight: bolder;
+          justify-content: center;
+          background: rgba(0, 0, 0, 0.65);
         }
         img {
           width: 100%;
@@ -86,7 +87,7 @@
         }
         &:hover {
           .statue-img-overlay {
-            display: block;
+            display: flex;
             cursor: pointer;
           }
         }

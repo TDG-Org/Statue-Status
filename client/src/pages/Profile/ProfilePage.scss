@@ -64,6 +64,7 @@
               height: 100%;
               display: none;
               position: absolute;
+              font-weight: bolder;
               align-items: center;
               justify-content: center;
               background: rgba(0, 0, 0, 0.65);
@@ -151,7 +152,8 @@
             flex-direction: row;
             transition: all 300ms ease;
 
-            .profile-bio-save, .profile-bio-cancel {
+            .profile-bio-save,
+            .profile-bio-cancel {
               width: 80%;
               min-width: 50px;
               max-width: 205px;
@@ -333,9 +335,9 @@
           }
           .profile-sect-badges {
             .profile-sect-badge {
-              margin: 0 .5rem ;
+              margin: 0 .5rem;
               img {
-                min-width: 25px ;
+                min-width: 25px;
               }
             }
           }

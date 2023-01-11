@@ -58,12 +58,14 @@ const ProfileStatuePrimary = () => {
         onClick={handleStatueImageInputClick}
         className="statue-img"
       >
-        {/* overlay  */}
-        <div className="statue-img-overlay"></div>
-        {/* image */}
+        {/* Overlay */}
+        <div className="statue-img-overlay">
+          Edit
+        </div>
+        {/* Image */}
         <img
-          ref={StatueImageRef}
           src={NatePfp}
+          ref={StatueImageRef}
           alt="Statue Picture"
         />
         <input

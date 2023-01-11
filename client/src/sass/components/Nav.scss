@@ -31,9 +31,9 @@ nav {
 
 .nav-logo {
   display: none;
+  color: $light-clr;
   font-size: 1.5rem;
   font-weight: bold;
-  color: $light-clr;
 
   &:hover {
     color: $second-clr !important;
@@ -42,8 +42,8 @@ nav {
 
 .not-logged-in-aside-top {
   display: flex;
-  margin-bottom: 4.20rem; 
   align-content: center;
+  margin-bottom: 4.20rem;
   flex-direction: column;
   justify-content: center;
 
@@ -77,15 +77,21 @@ nav {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
   p {
+
     a {
       color: $mid-light-clr;
+
       &:hover {
         color: $prime-clr;
         text-decoration: underline !important;
       }
+
     }
+
   }
+
 }
 
 // logout Button

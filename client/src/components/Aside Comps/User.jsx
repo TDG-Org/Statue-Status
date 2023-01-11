@@ -20,7 +20,7 @@ const User = () => {
           {/* Top Section */}
           <div className="user-avatar-sect-top">
 
-            {/* badge section */}
+            {/* Badge */}
             <ul className="badge-sect">
               <li className="badge">
                   <a href="#">
@@ -34,7 +34,7 @@ const User = () => {
               </li>
             </ul>
 
-            {/* Avatar Section */}
+            {/* Avatar */}
             <Link to="/profile" className="avatar-sect">
               <img src={Pancake} alt="" />   
             </Link>
@@ -56,24 +56,22 @@ const User = () => {
             </div>
           </div>
           
-          {/* User bio section */}
+          {/* Bio */}
           <p className="user-bio" id="userBio">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam saepe, dolor dolorem pariatur odit rem?
           </p>
 
-          {/* User's Followers and Following Count */}
+          {/* Followers and Following Count */}
           <div className="follow-count-wrapper">
             <p className="following-count"><span id="userFollowersCount">287m</span> Followers</p>
             <p className="following-count"><span id="userFollowingCount">1</span> Following</p>
           </div>
 
-          {/* Links (Future) */}
-
         </div>
         </>
       ) : (
           <>
-            {/* Logo */}
+            {/* Logo & Name */}
             <div className="not-logged-in-aside-top">
               <div className="statue-status-logo">
                 <img
@@ -84,7 +82,7 @@ const User = () => {
               <h4>Statue Status</h4>
             </div>
 
-            {/* Login or Sign Up  */}
+            {/* Login or Sign Up */}
             <div className="login-user-or-sign-up">
 
               {/* Login */}
@@ -97,7 +95,9 @@ const User = () => {
 
               {/* Sign Up */}
               <p>
-                <Link to="/sign-up">
+                <Link
+                  to="/sign-up"
+                >
                   Create an account
                 </Link>
               </p>

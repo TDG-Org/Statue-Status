@@ -9,7 +9,7 @@ import { natesConnections } from "../../../../DemoData";
 // Components 
 import { ProfileStatuePeer } from "./";
 
-import { Pancake, Brilliance, Bravery, NatePfp, Male } from "../../../../assets/imgs";
+import { Male } from "../../../../assets/imgs";
 
 const ProfileStatueConnections = () => {
 
@@ -19,7 +19,6 @@ const ProfileStatueConnections = () => {
   const connectionsImgRef = useRef();
   const handleConnectionsImageChange = (event) => {
     setConnectionsImage(event.target.files[0]); 
-    // console.log(typeof event.target.files[0]); 
     connectionsImgRef.current.src = URL.createObjectURL(event.target.files[0]);
   };
   const handleConnectionsAvatarInputClick = () => {
@@ -33,7 +32,7 @@ const ProfileStatueConnections = () => {
   const [editStatueConnectionsActive, setEditStatueConnectionsActive] = useState(false);
 
   // Official Connections 
-  const [editStatueConnections, setEditStatueConnections] = useState(natesConnections);
+  const [editStatueConnections, setEditStatueConnections] = useState([]);
 
   // Current Connections input 
   const [statueConnectionsCurrent, setStatueConnectionsCurrent] = useState(editStatueConnections);
@@ -159,8 +158,7 @@ const ProfileStatueConnections = () => {
 
   // On Render, this tracks the social links 
   useEffect(() => {
-    checkConnectionsLimit();
-    // console.log(editStatueConnections); 
+    checkConnectionsLimit(); 
   }, [editStatueConnections]);
 
   // Slice / Show More button
@@ -221,9 +219,9 @@ const ProfileStatueConnections = () => {
       })}
       </div>
 
-      {/* The adding connection section  */}
+      {/* The adding connection section */}
       <div className={`statue-add-connection-section ${editStatueConnectionsActive ? "" : "hide"}`}>
-        {/* peer's picture  */}
+        {/* peer's picture */}
         <div className="peer-pic-sect">
           <p>Person&apos;s Image:</p>
           <div className="peer-pic-sect-content">
@@ -246,7 +244,7 @@ const ProfileStatueConnections = () => {
             </button>
           </div>
         </div>
-        {/* peer's name  */}
+        {/* peer's name */}
         <div className="peer-name-sect">
           <p>Person&apos;s Name:</p>
           <input
@@ -259,7 +257,7 @@ const ProfileStatueConnections = () => {
             className="peer-name-input"
           />
         </div>
-        {/* peer's link  */}
+        {/* peer's link */}
         <div className="peer-link-sect">
           <p>Person&apos;s Social Link (optional):</p>
           <input
@@ -271,9 +269,9 @@ const ProfileStatueConnections = () => {
           />
         </div>
 
-        {/* The cancel and add buttons  */}
+        {/* The cancel and add buttons */}
         <div className="peer-btns">
-          {/* add  */}
+          {/* add */}
           <button
             onClick={() => {
               updateStatueConnections();
@@ -281,7 +279,7 @@ const ProfileStatueConnections = () => {
             className="add-peer-btn">
             Add
           </button>
-          {/* cancel  */}
+          {/* cancel */}
           <button
             onClick={() => {
               handleToggleStatueConnections();
@@ -293,7 +291,7 @@ const ProfileStatueConnections = () => {
         </div>
       </div>
 
-      {/* The add connections button  */}
+      {/* The add connections button */}
       <div
         className={`statue-add-peer-button-wrapper ${editStatueConnectionsActive ? "hide" : "" || limitConnectionsReached ? "hide" : ""}`}
         onClick={handleToggleStatueConnections}  
@@ -302,7 +300,7 @@ const ProfileStatueConnections = () => {
           Add Connections<i className="bi bi-plus-lg"></i>
         </button>
 
-        {/* The More Socials button  */}
+        {/* The More Socials button */}
         <button
           name="showMoreBtn"
           onClick={loadMoreConnections}
@@ -311,7 +309,7 @@ const ProfileStatueConnections = () => {
          <i className="bi bi-chevron-down"></i>
         </button>
 
-        {/* The less Socials button  */}
+        {/* The less Socials button */}
         <button
           name="showLessBtn"
           onClick={loadLessConnections}

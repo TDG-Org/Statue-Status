@@ -33,8 +33,8 @@
           .change-avatar {
             margin: 1rem auto;
             border-radius: 8px;
+            padding: .5rem .5rem; 
             color: $mid-light-clr;
-            padding: .5rem 1.25rem; 
             transition: all 250ms ease-in;
             border: 1px solid $low-dark-clr;
             background-color: $mid-dark-clr;
@@ -64,13 +64,16 @@
               height: 100%;
               display: none;
               position: absolute;
+              font-weight: bolder;
               align-items: center;
               justify-content: center;
               background: rgba(0, 0, 0, 0.65);
             }
+
             .profile-avatar {
               width: 100%;
               height: 100%;
+              object-fit: cover; 
             }
             &:hover {
               border: 1.25px solid $accent-clr;
@@ -151,7 +154,8 @@
             flex-direction: row;
             transition: all 300ms ease;
 
-            .profile-bio-save, .profile-bio-cancel {
+            .profile-bio-save,
+            .profile-bio-cancel {
               width: 80%;
               min-width: 50px;
               max-width: 205px;
@@ -333,9 +337,9 @@
           }
           .profile-sect-badges {
             .profile-sect-badge {
-              margin: 0 .5rem ;
+              margin: 0 .5rem;
               img {
-                min-width: 25px ;
+                min-width: 25px;
               }
             }
           }

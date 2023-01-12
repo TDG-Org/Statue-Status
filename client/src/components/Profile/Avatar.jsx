@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
 // Images/SVGs 
-import { Pancake, Brilliance, Bravery, Male } from "../../assets/imgs";
+import { Male } from "../../assets/imgs";
 
 const Avatar = () => {
 
@@ -32,7 +32,7 @@ const Avatar = () => {
 
       <input type="file" ref={inputProfileAvatarRef} onChange={handleProfileImageChange} hidden />
 
-      {/* Change Avatar button  */}
+      {/* Change Avatar button */}
       <button
         className="change-avatar"
         onClick={handleProfileAvatarInputClick}

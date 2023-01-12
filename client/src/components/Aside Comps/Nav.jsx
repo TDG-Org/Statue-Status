@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useNavigate } from "react-router";
+
 // Styles
 import "../../sass/components/Nav.scss";
 
@@ -21,8 +23,11 @@ const Nav = ({ isActive, handleToggle }) => {
     handleToggle: PropTypes.func.isRequired
   };
 
+  const navigate = useNavigate();
+
   // Logout function 
   function logoutFunc(event) {
+    navigate("/");
     event.preventDefault();
     Auth.logout();
   }
@@ -99,14 +104,14 @@ const Nav = ({ isActive, handleToggle }) => {
 
             {/* Logout */}
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 id="logoutBtn"
                 onClick={logoutFunc}
                 className="ss-nav-link"
               >
                 Logout <i className="bi bi-box-arrow-in-right"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </>

@@ -39,6 +39,13 @@ const LoginPage = () => {
     setUserFormData({ ...userFormData, [name]: value });
   };
 
+  // Check if user Clicks Enter 
+  function handleFormEnterSumbit(event) {
+    if (event.key === "Enter") {
+      handleFormSubmit(event);
+    } else return;
+  }
+
   // Function to handle Login Submit 
   async function handleFormSubmit(event) {
     event.preventDefault();
@@ -104,8 +111,9 @@ const LoginPage = () => {
                   name="password"
                   type="password"
                   className="login-input"
-                  value={userFormData.password}
                   onChange={handleInputChange}
+                  value={userFormData.password}
+                  onKeyUp={handleFormEnterSumbit}
                 />
               </div>,
       id: 2

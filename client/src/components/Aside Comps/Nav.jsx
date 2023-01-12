@@ -9,8 +9,10 @@ import { Link } from "react-router-dom";
 // Props 
 import PropTypes from "prop-types";
 
+// Auth 
 import Auth from "../../utils/auth";
 
+// Auth 
 const Nav = ({ isActive, handleToggle }) => {
 
   // Validate Prop 
@@ -19,6 +21,7 @@ const Nav = ({ isActive, handleToggle }) => {
     handleToggle: PropTypes.func.isRequired
   };
 
+  // Logout function 
   function logoutFunc(event) {
     event.preventDefault();
     Auth.logout();
@@ -98,9 +101,9 @@ const Nav = ({ isActive, handleToggle }) => {
             <li>
               <a
                 href="#"
-                className="ss-nav-link"
                 id="logoutBtn"
                 onClick={logoutFunc}
+                className="ss-nav-link"
               >
                 Logout <i className="bi bi-box-arrow-in-right"></i>
               </a>
@@ -110,6 +113,7 @@ const Nav = ({ isActive, handleToggle }) => {
       ) : (
         <>
           <ul className="nav-sect">
+              
             <li>
               <Link
                 to="/"
@@ -134,15 +138,17 @@ const Nav = ({ isActive, handleToggle }) => {
                 to="/about"
                 onClick={handleToggle}
                 className="ss-nav-link"
-
-              >Learn More
+                >
+                  Learn More
               </Link>
             </li>
 
+            {/* Login */}
             <li>
               <Link
                 to="/login"
-                className="ss-nav-link"
+                onClick={handleToggle}
+                className="ss-nav-link login-button-mobile"
               >
                 Login
               </Link>
@@ -152,7 +158,7 @@ const Nav = ({ isActive, handleToggle }) => {
         </>
       )}
 
-    </nav >
+    </nav>
   );
 };
 

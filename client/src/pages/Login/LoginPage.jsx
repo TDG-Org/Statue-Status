@@ -3,26 +3,26 @@ import React, { useState, useEffect } from "react";
 // Styles
 import "./LoginPage.scss";
 
-// Sweet Alert 
+// Sweet Alert
 import swal from "sweetalert";
 
-// Link 
+// Link
 import { Link } from "react-router-dom";
 
-// Components 
+// Components
 import {
   Flares,
   TypingText
 } from "../../components";
 
-// Auth 
+// Auth
 import Auth from "../../utils/auth";
 
 // Mutations
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 
-const LoginPage = () => { 
+const LoginPage = () => {
 
   // Initial State for Form 
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
@@ -33,20 +33,20 @@ const LoginPage = () => {
   const [emailError, setEmailError ] = useState(false);
   const [passError, setPassError ] = useState(false);
 
-  // Function to update state on change 
+  // Function to update state on change
   function handleInputChange(event) {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-  // Check if user Clicks Enter 
+  // Check if user Clicks Enter
   function handleFormEnterSumbit(event) {
     if (event.key === "Enter") {
       handleFormSubmit(event);
     } else return;
-  }
+  };
 
-  // Function to handle Login Submit 
+  // Function to handle Login Submit
   async function handleFormSubmit(event) {
     event.preventDefault();
     try {
@@ -56,8 +56,7 @@ const LoginPage = () => {
           }
         });
         Auth.login(data.login.token);
-    } catch (error) {
-      // console.log(error.message); 
+    } catch (error) { 
       // Check Email & give email error
       if (error.message == "No user found with this email address") {
         setEmailError(true);
@@ -72,7 +71,6 @@ const LoginPage = () => {
           setPassError(false);
         }, 1750);
       }
-        // throw error;
       return;
     }
     // Reset State 
@@ -83,17 +81,17 @@ const LoginPage = () => {
     });
   };
 
-  // Fading in Elements 
+  // Fading in Elements
   const elements = [
-     // Email 
+    // Email
     {
       element:
               <div className="login-sect">
                 <p>Email: <span className={`login-err-message ${emailError ? "" : "hide"}`}>No Account found</span></p>
                   <input
                     required
-                    name="email"
                     type="email"
+                    name="email"
                     className="login-input"
                     value={userFormData.email}
                     onChange={handleInputChange}
@@ -101,7 +99,7 @@ const LoginPage = () => {
               </div>,
       id: 1
     },
-    // Password 
+    // Password
     {
       element:
               <div className="login-sect">
@@ -118,7 +116,7 @@ const LoginPage = () => {
               </div>,
       id: 2
     },
-    // Button 
+    // Button
     {
       element: 
               <div className="login-button-wrapper">
@@ -132,6 +130,7 @@ const LoginPage = () => {
       id: 3
     }
   ];
+
   const [opacities, setOpacities] = useState(elements.map(() => 0));
 
   useEffect(() => {
@@ -152,26 +151,30 @@ const LoginPage = () => {
       <h1>Login <i className="bi bi-box-arrow-in-right"></i></h1>
 
       <div className="container">
-      <hr />
 
-        {/* Typing Text  */}
+        <hr />
+
+        {/* Typing Text */}
         <TypingText message={ content } />
 
         <div className="login-inputs-wrapper">
-        {/* Login Input  */}
-        {elements.map((element, index) => (
-          React.cloneElement(element.element, {
-            style: { opacity: opacities[index], transition: "opacity 1s" },
-            key: element.id
-          })
-        ))}
+          {/* Login Input */}
+          {elements.map((element, index) => (
+            React.cloneElement(element.element, {
+              style: { opacity: opacities[index], transition: "opacity 1s" },
+              key: element.id
+            })
+          ))}
         </div>
 
-        <p className="create-acc-message">Don&apos;t have an account?</p>
+        <p className="create-acc-message">
+          Don&apos;t have an account?
+        </p>
+
         <div className="create-acc-btn-wrapper">
           <Link
-            className="create-acc-btn"
             to="/sign-up"
+            className="create-acc-btn"
           >
             Sign Up
           </Link>
@@ -179,6 +182,7 @@ const LoginPage = () => {
 
       </div>
 
+      {/* Backgrounds */}
       <Flares />
 
     </div>

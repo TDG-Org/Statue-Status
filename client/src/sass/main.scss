@@ -4,8 +4,10 @@
 
 // Kanit 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+
 // Manrope 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap');
+
 // Roboto Mono 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&family=Roboto+Mono&display=swap');
 
@@ -57,7 +59,6 @@ a {
     margin: 1rem auto;
   }
 }
-
 
 textarea {
   outline: none;
@@ -118,7 +119,6 @@ p, span, em, li, a, i, div {
   width: 100%;
   height: auto; 
   overflow: hidden; 
-
 }
 
 .wrapper-page-sect { 
@@ -163,8 +163,8 @@ p, span, em, li, a, i, div {
   padding: 1rem;
   border-radius: 8px;
   margin: .75rem 0 3rem 0;
-  background-color: $mid-dark-clr;
   border: 1px solid $low-dark-clr;
+  background-color: $mid-dark-clr;
 }
 
 // Go Back Button 
@@ -174,10 +174,12 @@ p, span, em, li, a, i, div {
   width: fit-content;
   margin-bottom: 1rem;
   color: $mid-light-clr;
+
   i {
     margin-right: .5rem;
     color: $mid-light-clr;
   }
+
   &:hover {
     color: $second-clr;
     i {
@@ -189,8 +191,8 @@ p, span, em, li, a, i, div {
 // Alert 
 
 .ss-alert {
-  padding: .8rem;
   margin: 2rem 0;
+  padding: .8rem;
   border-radius: 8px;
   border: 1px solid white !important;
   background: linear-gradient(to right, red, purple);
@@ -206,8 +208,8 @@ p, span, em, li, a, i, div {
 }
 
 .typed-text {
-  width: fit-content;
   font-size: 1.05rem;
+  width: fit-content;
   padding: .15rem 1rem;
   background-color: $low-tp;
   font-family: 'Roboto Mono', monospace;
@@ -254,6 +256,7 @@ p, span, em, li, a, i, div {
   transition: all 250ms ease;
   background-color: $prime-clr;
   border: 1px solid transparent;
+
   &:hover {
     color: white;
     border-bottom: 1px solid transparent;
@@ -273,6 +276,7 @@ p, span, em, li, a, i, div {
   transition: all 250ms ease;
   background-color: $prime-clr;
   border: 1px solid transparent;
+
   &:hover {
     color: white !important;
     background-color: rgb(65, 157, 255);
@@ -284,7 +288,7 @@ p, span, em, li, a, i, div {
 
 @media screen and (max-width: 950px) {
   .Statue-Status-Wrapper {
-    flex-direction: column; 
+    flex-direction: column;
     width: 100% !important;
   }
 
@@ -336,4 +340,5 @@ p, span, em, li, a, i, div {
     padding: 1.5rem .5rem;
     margin: 1rem 0 1.75rem 0; 
   }
+
 }

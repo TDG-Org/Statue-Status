@@ -16,7 +16,14 @@ import "../sass/utils/hamburger.scss";
 // Images/SVGs 
 import { Logo } from "../assets/imgs";
 
+// Auth
+import Auth from "../utils/auth";
+
 const Aside = () => {
+
+  console.log(Auth.getProfile().data.username);
+
+  const userName = Auth.getProfile().data.username;
 
   const [isActive, setActive] = useState(true);
   const handleToggle = (e) => {
@@ -33,7 +40,7 @@ const Aside = () => {
     <aside className={`aside-comp ${isActive ? "" : "active"}`}>
       <div className="container">
 
-        {/* Logo  */}
+        {/* Logo */}
         <div className="nav-logo">
           <Link to="/">
             <img
@@ -45,8 +52,8 @@ const Aside = () => {
         </div>
 
         <div className="wide-screen-display">
-          {/* User's Avatar and info Section  */}
-          <User />
+          {/* User's Avatar and info Section */}
+          <User username={ userName } />
 
           {/* Navbar Section  */}
           <Nav isActive={isActive} handleToggle={handleToggle}  />

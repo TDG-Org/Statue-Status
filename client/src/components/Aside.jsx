@@ -24,7 +24,8 @@ const Aside = () => {
   // console.log(Auth.getProfile().data.username);
 
   const [ userLoggedIn, setUserLoggedIn ] = useState(false);
-  const [ username, setUsername ] = useState("");
+  const [username, setUsername] = useState("");
+  
   // Function to check username 
   function checkName(name) {
     if (name) {
@@ -37,14 +38,13 @@ const Aside = () => {
     if (Auth.loggedIn()) {
       setUserLoggedIn(true);
       checkName(Auth.getProfile().data.username);
+      console.log(Auth.getProfile().data);
     } else setUserLoggedIn(false);
   }
 
   useEffect(() => {
     checkUserLogin();
   }, []);
-
-  // const userName = Auth.getProfile()?.data.username; 
 
   const [isActive, setActive] = useState(true);
   const handleToggle = (e) => {

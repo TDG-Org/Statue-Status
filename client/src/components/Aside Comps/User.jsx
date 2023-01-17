@@ -19,14 +19,12 @@ const User = ({ name }) => {
 
   // Validate Component's Props 
   User.propTypes = {
-    name: PropTypes.any,
+    name: PropTypes.string,
   };
 
   useEffect(() => {
 
   }, []);
-
-  console.log(name); 
   
   return (
     <div className="user-avatar-section">
@@ -61,7 +59,7 @@ const User = ({ name }) => {
 
           {/* Username */}
             <h3 className="username"><span className="the-at">@</span><a id="username">
-              { name } 
+              { name }
             </a></h3>
 
           <div className="user-data">

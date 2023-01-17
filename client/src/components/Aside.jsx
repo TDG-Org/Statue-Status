@@ -21,9 +21,9 @@ import Auth from "../utils/auth";
 
 const Aside = () => {
 
-  console.log(Auth.getProfile().data.username);
+  // console.log(Auth.getProfile().data.username); 
 
-  const userName = Auth.getProfile().data.username;
+  // const userName = Auth.getProfile()?.data.username; 
 
   const [isActive, setActive] = useState(true);
   const handleToggle = (e) => {
@@ -38,6 +38,7 @@ const Aside = () => {
 
   return (
     <aside className={`aside-comp ${isActive ? "" : "active"}`}>
+
       <div className="container">
 
         {/* Logo */}
@@ -52,14 +53,16 @@ const Aside = () => {
         </div>
 
         <div className="wide-screen-display">
-          {/* User's Avatar and info Section */}
-          <User username={ userName } />
 
-          {/* Navbar Section  */}
-          <Nav isActive={isActive} handleToggle={handleToggle}  />
+          {/* User's Avatar and info Section */}
+          <User />
+
+          {/* Navbar Section */}
+          <Nav isActive={isActive} handleToggle={handleToggle} />
+          
         </div>
 
-          {/* Hamburger  */}
+        {/* Hamburger */}
         <div className={`hamburger ${isActive ? "" : "active"}`} onClick={handleToggle}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -67,6 +70,7 @@ const Aside = () => {
         </div>
 
       </div>
+
     </aside>
   );
 };

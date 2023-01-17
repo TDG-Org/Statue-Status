@@ -15,24 +15,18 @@ import { Bravery, Brilliance, Pancake, Logo } from "../../assets/imgs";
 // Auth 
 import Auth from "../../utils/auth";
 
-const User = ({ username }) => {
+const User = ({ name }) => {
 
   // Validate Component's Props 
   User.propTypes = {
-    username: PropTypes.string,
+    name: PropTypes.any,
   };
 
-  const [ name, setName ] = useState(username);
-
-  function checkUsername(username) {
-    if (!username) {
-      setName("");
-    } else setName(name);
-  }
-
   useEffect(() => {
-    checkUsername(username);
+
   }, []);
+
+  console.log(name); 
   
   return (
     <div className="user-avatar-section">
@@ -67,7 +61,7 @@ const User = ({ username }) => {
 
           {/* Username */}
             <h3 className="username"><span className="the-at">@</span><a id="username">
-              {name} 
+              { name } 
             </a></h3>
 
           <div className="user-data">

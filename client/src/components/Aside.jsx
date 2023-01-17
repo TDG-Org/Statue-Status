@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components 
 import {
@@ -21,7 +21,28 @@ import Auth from "../utils/auth";
 
 const Aside = () => {
 
-  // console.log(Auth.getProfile().data.username); 
+  // console.log(Auth.getProfile().data.username);
+
+  const [ userLoggedIn, setUserLoggedIn ] = useState(false);
+  const [ username, setUsername ] = useState("");
+  // Function to check username 
+  function checkName(name) {
+    if (name) {
+      setUsername(name);
+    } else return "";
+  }
+
+  // Function to check if the user is logged in 
+  function checkUserLogin() {
+    if (Auth.loggedIn()) {
+      setUserLoggedIn(true);
+      checkName(Auth.getProfile().data.username);
+    } else setUserLoggedIn(false);
+  }
+
+  useEffect(() => {
+    checkUserLogin();
+  }, []);
 
   // const userName = Auth.getProfile()?.data.username; 
 
@@ -30,9 +51,7 @@ const Aside = () => {
 
     // if the screen size is mobile, then apply the active class 
     if (window.innerWidth < 950) {
-
       setActive(!isActive);
-
     };
   };
 
@@ -55,10 +74,13 @@ const Aside = () => {
         <div className="wide-screen-display">
 
           {/* User's Avatar and info Section */}
-          <User />
+          <User name={ username } />
 
           {/* Navbar Section */}
-          <Nav isActive={isActive} handleToggle={handleToggle} />
+          <Nav
+            isActive={isActive}
+            userLoggedIn={userLoggedIn}
+            handleToggle={handleToggle} />
           
         </div>
 

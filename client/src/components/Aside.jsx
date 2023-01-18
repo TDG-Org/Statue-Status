@@ -19,9 +19,13 @@ import { Logo } from "../assets/imgs";
 // Auth
 import Auth from "../utils/auth";
 
+// Mutations
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+
 const Aside = () => {
 
-  // console.log(Auth.getProfile().data.username);
+  const [loginUser] = useMutation(LOGIN_USER);
 
   const [ userLoggedIn, setUserLoggedIn ] = useState(false);
   const [username, setUsername] = useState("");

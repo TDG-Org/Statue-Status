@@ -4,7 +4,10 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
     Query: {
-        users: async () => {
+        users: async (parent, { search }) => {
+            if (search) {
+                return User.find({ username: new RegExp(search) });
+            }
             return User.find();
         },
         user: async (parent, { username }) => {

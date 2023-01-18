@@ -13,19 +13,6 @@ export const QUERY_USER_BY_ID = gql`
   }
 `;
 
-export const QUERY_USER_BY_USERNAME = gql`
-  query userByUsername($username: String!) {
-    user(username: $username) {
-      _id
-      username
-      email
-      profile {
-        _id
-      }
-    }
-  }
-`;
-
 export const QUERY_USERS_BY_SEARCH = gql`
   query usersBySearch($search: String!) {
     users(search: $search) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components 
 import {
@@ -16,24 +16,55 @@ import "../sass/utils/hamburger.scss";
 // Images/SVGs 
 import { Logo } from "../assets/imgs";
 
+// Auth
+import Auth from "../utils/auth";
+
+// Mutations
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+
 const Aside = () => {
+
+  const [loginUser] = useMutation(LOGIN_USER);
+
+  const [ userLoggedIn, setUserLoggedIn ] = useState(false);
+  const [username, setUsername] = useState("");
+  
+  // Function to check username 
+  function checkName(name) {
+    if (name) {
+      setUsername(name);
+    } else return "";
+  }
+
+  // Function to check if the user is logged in 
+  function checkUserLogin() {
+    if (Auth.loggedIn()) {
+      setUserLoggedIn(true);
+      checkName(Auth.getProfile().data.username);
+      console.log(Auth.getProfile().data);
+    } else setUserLoggedIn(false);
+  }
+
+  useEffect(() => {
+    checkUserLogin();
+  }, []);
 
   const [isActive, setActive] = useState(true);
   const handleToggle = (e) => {
 
     // if the screen size is mobile, then apply the active class 
     if (window.innerWidth < 950) {
-
       setActive(!isActive);
-
     };
   };
 
   return (
     <aside className={`aside-comp ${isActive ? "" : "active"}`}>
+
       <div className="container">
 
-        {/* Logo  */}
+        {/* Logo */}
         <div className="nav-logo">
           <Link to="/">
             <img
@@ -45,14 +76,19 @@ const Aside = () => {
         </div>
 
         <div className="wide-screen-display">
-          {/* User's Avatar and info Section  */}
-          <User />
 
-          {/* Navbar Section  */}
-          <Nav isActive={isActive} handleToggle={handleToggle}  />
+          {/* User's Avatar and info Section */}
+          <User name={ username } />
+
+          {/* Navbar Section */}
+          <Nav
+            isActive={isActive}
+            userLoggedIn={userLoggedIn}
+            handleToggle={handleToggle} />
+          
         </div>
 
-          {/* Hamburger  */}
+        {/* Hamburger */}
         <div className={`hamburger ${isActive ? "" : "active"}`} onClick={handleToggle}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -60,6 +96,7 @@ const Aside = () => {
         </div>
 
       </div>
+
     </aside>
   );
 };

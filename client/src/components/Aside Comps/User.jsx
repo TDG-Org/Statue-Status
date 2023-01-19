@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Styles
 import "../../sass/components/User.scss";
+
+// Proptypes 
+import PropTypes from "prop-types";
 
 // Link 
 import { Link } from "react-router-dom";
@@ -12,7 +15,17 @@ import { Bravery, Brilliance, Pancake, Logo } from "../../assets/imgs";
 // Auth 
 import Auth from "../../utils/auth";
 
-const User = () => {
+const User = ({ name }) => {
+
+  // Validate Component's Props 
+  User.propTypes = {
+    name: PropTypes.string,
+  };
+
+  useEffect(() => {
+
+  }, []);
+  
   return (
     <div className="user-avatar-section">
       {Auth.loggedIn() ? (
@@ -45,7 +58,9 @@ const User = () => {
         <div className="user-avatar-sect-bottom">
 
           {/* Username */}
-          <h3 className="username"><span className="the-at">@</span><a id="username">Nate</a></h3>
+            <h3 className="username"><span className="the-at">@</span><a id="username">
+              { name }
+            </a></h3>
 
           <div className="user-data">
             <div className="user-experience">

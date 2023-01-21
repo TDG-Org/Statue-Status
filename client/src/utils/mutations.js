@@ -41,3 +41,12 @@ export const EDIT_PROFILE_BIO = gql`
     }
   }
 `;
+
+export const EDIT_PROFILE_AVATAR = gql`
+  mutation editProfileAvatar($avatar: String!) {
+    editProfileAvatar(avatar: $avatar) {
+      _id
+      avatar
+    }
+  }
+`;

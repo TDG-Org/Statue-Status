@@ -32,3 +32,12 @@ export const EDIT_PROFILE_NAME = gql`
     }
   }
 `;
+
+export const EDIT_PROFILE_BIO = gql`
+  mutation editProfileBio($bio: String!) {
+    editProfileBio(bio: $bio) {
+      _id
+      bio
+    }
+  }
+`;

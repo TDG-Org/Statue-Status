@@ -23,3 +23,30 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const EDIT_PROFILE_NAME = gql`
+  mutation editProfileName($name: String!) {
+    editProfileName(name: $name) {
+      _id
+      name
+    }
+  }
+`;
+
+export const EDIT_PROFILE_BIO = gql`
+  mutation editProfileBio($bio: String!) {
+    editProfileBio(bio: $bio) {
+      _id
+      bio
+    }
+  }
+`;
+
+export const EDIT_PROFILE_AVATAR = gql`
+  mutation editProfileAvatar($avatar: String!) {
+    editProfileAvatar(avatar: $avatar) {
+      _id
+      avatar
+    }
+  }
+`;

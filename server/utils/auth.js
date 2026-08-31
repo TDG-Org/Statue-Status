@@ -1,6 +1,12 @@
 const jwt = require("jsonwebtoken");
 
-const secret = "mysecretssshhhhhhh";
+const secret = process.env.JWT_SECRET;
+
+if (!secret) {
+    throw new Error(
+        "JWT_SECRET is not set. Copy .env.example to server/.env and set JWT_SECRET before starting the server."
+    );
+}
 const expiration = "2h";
 
 module.exports = {
